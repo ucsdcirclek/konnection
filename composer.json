@@ -1,0 +1,47 @@
+{
+	"name": "ucsdcirclek/konnection",
+	"description": "A platform to organize the information and events of service organizations.",
+	"keywords": ["cms", "kiwanis"],
+	"license": "GPL-3.0+",
+	"authors": [
+        {
+            "name": "Joseph Le",
+            "email": "josephle@me.com",
+            "homepage": "http://josephle.me",
+            "role": "Project Leader & Developer"
+        }
+    ],
+	"require": {
+		"laravel/framework": "4.2.*"
+	},
+	"require-dev": {
+		"way/generators": "2.*"
+	},
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/controllers",
+			"app/models",
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php"
+		]
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-create-project-cmd": [
+			"php artisan key:generate"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "stable"
+}
