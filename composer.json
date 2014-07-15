@@ -9,9 +9,10 @@
             "email": "josephle@me.com",
             "homepage": "http://josephle.me",
             "role": "Project Leader & Developer"
-
+	},
+	{
 	    "name": "Alex Tang"
-	    "emaiL": "alt020@ucsd.edu"
+	    "email": "alt020@ucsd.edu"
 	    "role": "Backend Engineer"
         }
     ],
