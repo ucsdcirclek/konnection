@@ -4,4 +4,4 @@ UCSD Circle K Konnection is built using the Laravel framework to serve the needs
 
 ### License
 
-UCSD Circle K Konnection is open-sourced software licensed under the [GNU GPL v3.0 License](http://opensource.org/licenses/GPL-3.0)
+UCSD Circle K Konnection is open-sourced software licensed under the [MIT](http://opensource.org/licenses/MIT)

@@ -2,7 +2,7 @@
 	"name": "ucsdcirclek/konnection",
 	"description": "A platform to organize the information and events of service organizations.",
 	"keywords": ["cms", "kiwanis"],
-	"license": "GPL-3.0+",
+	"license": "MIT",
 	"authors": [
         {
             "name": "Joseph Le",
