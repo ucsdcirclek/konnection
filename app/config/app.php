@@ -123,7 +123,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
-        'Cartalyst\Sentry\SentryServiceProvider',
+        'Zizaco\Confide\ConfideServiceProvider',
+        'Zizaco\Entrust\EntrustServiceProvider',
 
 	),
 
@@ -192,7 +193,8 @@ return array(
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
         'Debugbar'          => 'Barryvdh\Debugbar\Facade',
-        'Sentry'            => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+        'Confide'           => 'Zizaco\Confide\ConfideFacade',
+        'Entrust'           => 'Zizaco\Entrust\EntrustFacade',
 
 	),
 
