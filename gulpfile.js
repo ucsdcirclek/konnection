@@ -14,7 +14,14 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     filesize = require('gulp-filesize'),
     gulpif = require('gulp-if'),
+    neat = require('node-neat').includePaths,
     argv = require('yargs').argv;
+
+var paths = {
+  scss: 'app/assets/stylesheets/**/*.scss',
+  js: 'app/assets/javascripts/**/*.js',
+  img: 'app/assets/images/**/*',
+};
 
 gulp.task('default', ['clean'], function() {
     gulp.start('styles', 'scripts', 'images');
@@ -24,19 +31,21 @@ gulp.task('watch', function() {
   livereload.listen();
 
   // Watch .scss files
-  gulp.watch('app/assets/stylesheets/**/*.scss', ['styles']);
+  gulp.watch(paths.scss, ['styles']);
 
   // Watch .js files
-  gulp.watch('app/assets/javascripts/**/*.js', ['scripts']);
+  gulp.watch(paths.js, ['scripts']);
 
   // Watch image files
-  gulp.watch('app/assets/images/**/*', ['images']);
+  gulp.watch(paths.img, ['images']);
 
 });
 
 gulp.task('styles', function() {
-  return gulp.src('app/assets/stylesheets/**/*.scss')
-    .pipe(sass())
+  return gulp.src(paths.scss)
+    .pipe(sass({
+      includePaths: ['styles'].concat(neat)
+    }))
     .pipe(autoprefixer({ cascade: true }))
     .pipe(gulp.dest('public/assets/css'))
     .pipe(gulpif(argv.production, minifycss()))
@@ -47,7 +56,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('app/assets/javascripts/**/*.js')
+  return gulp.src(paths.js)
     // .pipe(jshint('.jshintrc'))
     // .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
@@ -62,7 +71,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src('app/assets/images/**/*')
+  return gulp.src(paths.img)
     .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
     .pipe(gulp.dest('public/assets/img'))
     .pipe(notify({ message: 'Processing of images complete' }))
