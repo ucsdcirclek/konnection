@@ -15,16 +15,21 @@ use Zizaco\Entrust\HasRole;
  * @property boolean $confirmed
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\User whereId($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereUsername($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereEmail($value) 
- * @method static \Illuminate\Database\Query\Builder|\User wherePassword($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereConfirmationCode($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereConfirmed($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereCreatedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereUpdatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\User whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereUsername($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereEmail($value)
+ * @method static \Illuminate\Database\Query\Builder|\User wherePassword($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereConfirmationCode($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereConfirmed($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereUpdatedAt($value)
  */
-class User extends ConfideUser {
+class User extends ConfideUser
+{
     use HasRole;
 
+    public function activities()
+    {
+        return $this->hasMany('Activity');
+    }
 }
