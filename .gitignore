@@ -1,3 +1,4 @@
+/app/config/local/*
 /bootstrap/compiled.php
 /vendor
 composer.phar
@@ -6,6 +7,7 @@ composer.phar
 .DS_Store
 Thumbs.db
 /public/assets
+_ide_helper.php
 
 # Logs
 logs
