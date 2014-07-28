@@ -33,6 +33,8 @@ class Activity extends Ardent
 
     use SoftDeletingTrait;
 
+    public $autoHydrateEntityFromInput = true;
+
     public static $relationsData = array(
 //        'event'         =>  array(self::HAS_ONE, 'Event'),
 //        'registration'  =>  array(self::HAS_ONE, 'Registration'),
@@ -46,8 +48,7 @@ class Activity extends Ardent
         'service_hours' => 'numeric',
         'leadership_hours' => 'numeric',
         'fellowship_hours' => 'numeric',
-        'mileage' => 'numeric',
-        'notes' => 'alpha_dash',
+        'mileage' => 'numeric'
     );
 
     protected $guarded = array('id');
@@ -159,7 +160,7 @@ class Activity extends Ardent
      */
     public function setNotesAttribute($value)
     {
-        $this->attributes['notes'] = $value;
+        $this->attributes['notes'] = strip_tags($value);
     }
 
 }
