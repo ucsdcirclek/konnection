@@ -20,7 +20,10 @@
 	"require-dev": {
 		"way/generators": "2.*",
         "barryvdh/laravel-debugbar": "1.x",
-		"barryvdh/laravel-ide-helper": "1.*"
+		"barryvdh/laravel-ide-helper": "1.*",
+        "doctrine/dbal": "~2.3",
+        "fzaninotto/faker": "v1.3.0",
+        "phpdocumentor/phpdocumentor": "2.*"
 	},
 	"autoload": {
 		"classmap": [

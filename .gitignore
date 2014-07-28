@@ -8,6 +8,7 @@ composer.phar
 Thumbs.db
 /public/assets
 _ide_helper.php
+/docs
 
 # Logs
 logs
