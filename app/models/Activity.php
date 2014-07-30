@@ -8,8 +8,8 @@ use LaravelBook\Ardent\Ardent;
  *
  * @property-read \User $user
  * @property float $service_hours
- * @property float $leadership_hours
- * @property float $fellowship_hours
+ * @property float $admin_hours
+ * @property float $social_hours
  * @property float $mileage
  * @property mixed $notes
  * @property integer $id
@@ -46,8 +46,8 @@ class Activity extends Ardent
 //        'reg_id'            =>  'required|exists:registrations,id',
         'user_id' => 'required|exists:users,id',
         'service_hours' => 'numeric',
-        'leadership_hours' => 'numeric',
-        'fellowship_hours' => 'numeric',
+        'admin_hours' => 'numeric',
+        'social_hours' => 'numeric',
         'mileage' => 'numeric'
     );
 
@@ -84,43 +84,43 @@ class Activity extends Ardent
     }
 
     /**
-     * Returns leadership hours
+     * Returns admin hours
      *
      * @return float
      */
-    public function getLeadershipHoursAttribute()
+    public function getAdminHoursAttribute()
     {
-        return $this->leadership_hours;
+        return $this->admin_hours;
     }
 
     /**
-     * Set leadership hours
+     * Set admin hours
      *
      * @param $value
      */
-    public function setLeadershipHoursAttribute($value)
+    public function setAdminHoursAttribute($value)
     {
-        $this->attributes['leadership_hours'] = floatval($value);
+        $this->attributes['admin_hours'] = floatval($value);
     }
 
     /**
-     * Returns fellowship hours
+     * Returns social hours
      *
      * @return float
      */
     public function getFellowshipHoursAttribute()
     {
-        return $this->fellowship_hours;
+        return $this->social_hours;
     }
 
     /**
-     * Set fellowship hours
+     * Set social hours
      *
      * @param $value
      */
     public function setFellowshipHoursAttribute($value)
     {
-        $this->attributes['fellowship_hours'] = floatval($value);
+        $this->attributes['social_hours'] = floatval($value);
     }
 
     /**

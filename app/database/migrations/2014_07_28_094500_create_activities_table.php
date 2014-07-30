@@ -19,8 +19,8 @@ class CreateActivitiesTable extends Migration
                 $table->increments('id')->unsigned();
                 $table->integer('user_id')->unsigned()->index();
                 $table->float('service_hours')->default(0.0);
-                $table->float('leadership_hours')->default(0.0);
-                $table->float('fellowship_hours')->default(0.0);
+                $table->float('admin_hours')->default(0.0);
+                $table->float('social_hours')->default(0.0);
                 $table->float('mileage')->default(0.0);
                 $table->text('notes')->nullable();
                 $table->softDeletes();

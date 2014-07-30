@@ -14,8 +14,8 @@ class ActivitiesTableSeeder extends Seeder
                 array(
                     'user_id' => $index,
                     'service_hours' => $faker->randomDigit,
-                    'leadership_hours' => $faker->randomDigit,
-                    'fellowship_hours' => $faker->randomDigit,
+                    'admin_hours' => $faker->randomDigit,
+                    'social_hours' => $faker->randomDigit,
                     'mileage' => $faker->randomDigit,
                     'notes' => $faker->paragraph,
                 )

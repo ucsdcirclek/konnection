@@ -58,8 +58,8 @@ class ActivityTest extends \Codeception\TestCase\Test
                 $activity = new Activity;
                 $activity->user_id = $this->user_id;
                 $activity->service_hours = 12.0;
-                $activity->leadership_hours = 12.0;
-                $activity->fellowship_hours = 12.0;
+                $activity->admin_hours = 12.0;
+                $activity->social_hours = 12.0;
                 $activity->mileage = 12.0;
                 verify_that($activity->save());
                 $this->tester->seeRecord('activities', array(
