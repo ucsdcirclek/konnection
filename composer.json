@@ -25,7 +25,9 @@
         "fzaninotto/faker": "v1.3.0",
         "phpdocumentor/phpdocumentor": "2.*",
         "phpunit/phpunit": "~4.1",
-		"codeception/codeception": "~2.0"
+		"codeception/codeception": "~2.0",
+		"codeception/specify": "*",
+		"codeception/verify": "*"
 	},
 	"autoload": {
 		"classmap": [
