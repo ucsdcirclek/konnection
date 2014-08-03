@@ -2,7 +2,7 @@
 
 use Faker\Factory as Faker;
 
-class ActivitiesTableSeeder extends Seeder
+class ActivityLogTableSeeder extends Seeder
 {
 
     public function run()

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateActivitiesTable extends Migration
+class CreateActivityLogTable extends Migration
 {
 
     /**
@@ -14,7 +14,7 @@ class CreateActivitiesTable extends Migration
     public function up()
     {
         Schema::create(
-            'activities',
+            'activity_log',
             function (Blueprint $table) {
                 $table->increments('id')->unsigned();
                 $table->integer('user_id')->unsigned()->index();
@@ -40,7 +40,7 @@ class CreateActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('activities');
+        Schema::drop('activity_log');
     }
 
 }

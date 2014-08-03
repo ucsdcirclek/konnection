@@ -33,6 +33,8 @@ class Activity extends Ardent
 
     use SoftDeletingTrait;
 
+    protected $table = 'activity_log';
+
     public $autoHydrateEntityFromInput = true;
 
     public static $relationsData = array(
