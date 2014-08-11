@@ -1,6 +1,7 @@
 <?php
 
 use LaravelBook\Ardent\Ardent;
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 /**
  * The Activity class contains a single record of a user's activity
@@ -40,7 +41,7 @@ class Activity extends Ardent
     public static $relationsData = array(
 //        'event'         =>  array(self::HAS_ONE, 'Event'),
 //        'registration'  =>  array(self::HAS_ONE, 'Registration'),
-        'user' => array(self::HAS_ONE, 'User'),
+        'user' => array(self::BELONGS_TO, 'User'),
     );
 
     public static $rules = array(
@@ -54,16 +55,6 @@ class Activity extends Ardent
     );
 
     protected $guarded = array('id');
-
-    /**
-     * Returns the user the activty belongs to
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function user()
-    {
-        return $this->belongsTo('User');
-    }
 
     /**
      * Returns service hours
