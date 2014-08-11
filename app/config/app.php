@@ -196,6 +196,7 @@ return array(
         'Debugbar'          => 'Barryvdh\Debugbar\Facade',
         'Confide'           => 'Zizaco\Confide\ConfideFacade',
         'Entrust'           => 'Zizaco\Entrust\EntrustFacade',
+        'Carbon'            => 'Carbon\Carbon',
 
 	),
 
