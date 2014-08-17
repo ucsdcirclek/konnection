@@ -18,16 +18,16 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
  * @property string $deleted_at
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\Activity whereId($value) 
- * @method static \Illuminate\Database\Query\Builder|\Activity whereUserId($value) 
- * @method static \Illuminate\Database\Query\Builder|\Activity whereServiceHours($value) 
- * @method static \Illuminate\Database\Query\Builder|\Activity whereLeadershipHours($value) 
- * @method static \Illuminate\Database\Query\Builder|\Activity whereFellowshipHours($value) 
- * @method static \Illuminate\Database\Query\Builder|\Activity whereMileage($value) 
- * @method static \Illuminate\Database\Query\Builder|\Activity whereNotes($value) 
- * @method static \Illuminate\Database\Query\Builder|\Activity whereDeletedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\Activity whereCreatedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\Activity whereUpdatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereServiceHours($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereLeadershipHours($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereFellowshipHours($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereMileage($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereNotes($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereDeletedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereUpdatedAt($value)
  */
 class Activity extends Ardent
 {
@@ -39,8 +39,12 @@ class Activity extends Ardent
     public $autoHydrateEntityFromInput = true;
 
     public static $relationsData = array(
-//        'event'         =>  array(self::HAS_ONE, 'Event'),
 //        'registration'  =>  array(self::HAS_ONE, 'Registration'),
+        'event' => array(
+            self::BELONGS_TO,
+            'CalendarEvent',
+            'foreignKey' => 'event_id'
+        ),
         'user' => array(self::BELONGS_TO, 'User'),
     );
 

@@ -46,6 +46,10 @@ class CalendarEvent extends Ardent
 
     public static $relationsData = array(
 //        'registrations'     => array(self::HAS_MANY, 'Registration'),
+        'activities' => array(
+            self::HAS_MANY,
+            'Activity'
+        ),
         'tags' => array(
             self::BELONGS_TO_MANY,
             'EventTag',
