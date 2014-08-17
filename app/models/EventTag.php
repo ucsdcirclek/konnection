@@ -13,13 +13,13 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
  * @property string $deleted_at
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\EventTag whereId($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventTag whereName($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventTag whereAbbreviation($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventTag whereDescription($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventTag whereDeletedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventTag whereCreatedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventTag whereUpdatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\EventTag whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventTag whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventTag whereAbbreviation($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventTag whereDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventTag whereDeletedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventTag whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventTag whereUpdatedAt($value)
  */
 class EventTag extends Ardent
 {
@@ -28,9 +28,14 @@ class EventTag extends Ardent
 
     public $autoHydrateEntityFromInput = true;
 
-//    public static $relationsData = array(
-//        'events'         =>  array(self::BELONGS_TO_MANY, 'Event')
-//    );
+    public static $relationsData = array(
+        'events' => array(
+            self::BELONGS_TO_MANY,
+            'CalendarEvent',
+            'table' => 'events_assigned_tags',
+            'pivotKeys' => array('event_id', 'tag_id')
+        ),
+    );
 
     public static $rules = array(
         'name' => 'required',
@@ -38,16 +43,6 @@ class EventTag extends Ardent
     );
 
     protected $guarded = array('id');
-
-    /**
-     * Returns the events with the assigned tag
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-//    public function events()
-//    {
-//        return $this->belongsToMany('Event', 'event_assigned_tags');
-//    }
 
     /**
      * Returns tag name
