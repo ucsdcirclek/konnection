@@ -9,60 +9,36 @@ class EventCategory extends Ardent
     use SoftDeletingTrait;
 
     public static $relationsData = array(
-        'user' => array(self::HAS_ONE, 'User'),
+        'events' => array(self::BELONGS_TO_MANY,'Event')
     );
 
     public static $rules = array(
-        'idEventCat' =>  'required|exists:events,id',
-        'nameEventCat'  =>  'required',
-        'descrEventCat' => 'required',
+       'name' => 'required',
+       'description' => 'required'
+
+       //Did you say this wasn't needed or that should only be 'required?'
+       'event_id' => 'required'
       
     );
 
     protected $guarded = array('id');
 
-   
-    public function user()
-    {
-        return $this->belongsTo('User');
-    }
+    //Let me know what to add, Is the below commented out code below what you want
+    //for accessors? or just no accessors in this file? 
 
-    /
-    public function getEventCategoryId()
+/*
+    public function getEventID()
     {
-        return $this->idEventCat;
+        return ucwords(this->'event_id')
     }
+*/
 
-  
-    public function setEventCategoryId($event_cat_id)
-    {
-        $this->attributes['idEventCat'] = $event_cat_id;
-    }
+
+}
+
 
     
-    public function getEventCategoryName()
-    {
-        return $this->nameEventCat;
-    }
-
-  
-    public function setEventCategoryName($name)
-    {
-        $this->attributes['nameEventCat'] = $name;
-    }
-
-   
-    public function getEventCategoryDescription()
-    {
-        return $this->descrEventCat;
-    }
-
-   
-    public function setPhotographerStatus($describe)
-    {
-        $this->attributes['descrEventCat'] = $describe;
-    }
-
+    
    
    
     
