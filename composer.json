@@ -20,7 +20,9 @@
 		"laravel/framework": "4.2.*",
         "zizaco/confide": "3.2.x",
         "zizaco/entrust": "1.2.x",
-		"guzzlehttp/guzzle": "~4.0"
+		"guzzlehttp/guzzle": "~4.0",
+		"gathercontent/laravel-fractal": "dev-master",
+		"dingo/api": "0.*"
 	},
 	"require-dev": {
 		"way/generators": "2.*",
