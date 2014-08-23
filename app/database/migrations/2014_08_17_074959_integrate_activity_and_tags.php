@@ -12,7 +12,7 @@ class IntegrateActivityAndTags extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('events_assigned_tags', function(Blueprint $table)
+		Schema::create('events_assigned_tags', function(Blueprint $table)
 		{
             $table->integer('event_id')->unsigned();
             $table->integer('tag_id')->unsigned();
@@ -41,6 +41,7 @@ class IntegrateActivityAndTags extends Migration {
 		Schema::drop('events_assigned_tags');
         Schema::table('activity_log', function(Blueprint $table)
         {
+            $table->dropForegin('activity_log_event_id_foreign');
             $table->dropColumn('event_id');
         });
 	}
