@@ -2,6 +2,7 @@
 
 use Zizaco\Confide\ConfideUser;
 use Zizaco\Entrust\HasRole;
+use Dingo\Api\Transformer\TransformableInterface;
 
 /**
  * User
@@ -24,12 +25,17 @@ use Zizaco\Entrust\HasRole;
  * @method static \Illuminate\Database\Query\Builder|\User whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\User whereUpdatedAt($value)
  */
-class User extends ConfideUser
+class User extends ConfideUser implements TransformableInterface
 {
     use HasRole;
 
     public function activities()
     {
         return $this->hasMany('Activity');
+    }
+
+    public function getTransformer()
+    {
+        return new UserTransformer;
     }
 }

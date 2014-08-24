@@ -16,14 +16,14 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-/* Authentication Routes */
-Route::get( 'register',                     'UserController@create');
-Route::post('register',                     'UserController@store');
-Route::get( 'register/confirm/{code}',      'UserController@confirm');
-Route::get( 'login',                        'UserController@login');
-Route::post('login',                        'UserController@do_login');
-Route::get( 'login/forgot',                 'UserController@forgot_password');
-Route::post('login/forgot',                 'UserController@do_forgot_password');
-Route::get( 'login/reset/{token}',          'UserController@reset_password');
-Route::post('login/reset',                  'UserController@do_reset_password');
-Route::get( 'logout',                       'UserController@logout');
+Route::api(['version' => 'v1', 'prefix' => ''], function()
+{
+    /* User system */
+    Route::resource('users',                    'UsersController');
+    Route::get( 'register',                     'UsersController@create');
+    Route::get( 'register/confirm/{code}',      'UsersController@confirm');
+    Route::post('login',                        'UsersController@login');
+    Route::post('login/forgot',                 'UsersController@forgot_password');
+    Route::post('login/reset',                  'UsersController@do_reset_password');
+    Route::get( 'logout',                       'UsersController@logout');
+});
