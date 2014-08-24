@@ -24,7 +24,7 @@ class IntegrateActivityAndTags extends Migration {
 		});
         Schema::table('activity_log', function(Blueprint $table)
         {
-            $table->integer('event_id')->unsigned()->nullable();
+            $table->integer('event_id')->unsigned()->nullable()->after('user_id');
             $table->foreign('event_id')
                 ->references('id')->on('events')
                 ->onDelete('cascade');
@@ -41,7 +41,7 @@ class IntegrateActivityAndTags extends Migration {
 		Schema::drop('events_assigned_tags');
         Schema::table('activity_log', function(Blueprint $table)
         {
-            $table->dropForegin('activity_log_event_id_foreign');
+            $table->dropForeign('activity_log_event_id_foreign');
             $table->dropColumn('event_id');
         });
 	}
