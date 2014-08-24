@@ -67,6 +67,8 @@ class CalendarEvent extends Ardent
         'creator_id' => 'required|exists:users,id'
     );
 
+    protected $guarded = array('id');
+
     /**
      * Sets title of event
      * @param $title
