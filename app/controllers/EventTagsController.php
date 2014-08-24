@@ -59,9 +59,9 @@ class EventTagsController extends \BaseController {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
 
-        $event_tag->name = Input::get('username');
-        $event_tag->abbreviation = Input::get('username');
-        $event_tag->description = Input::get('event_location');
+        $event_tag->name = Input::get('name');
+        $event_tag->abbreviation = Input::get('abbreviation');
+        $event_tag->description = Input::get('description');
         $event_tag->updateUniques();
 
         return $event_tag;
