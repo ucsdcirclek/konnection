@@ -93,4 +93,9 @@ class EventTag extends Ardent
     {
         $this->attributes['description'] = strip_tags($value);
     }
+
+    public function getTransformer()
+    {
+        return new EventTransformer;
+    }
 }

@@ -29,4 +29,7 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
 
     /* Events */
     Route::resource('events',                   'EventsController');
+
+    /* Event Tags */
+    Route::resource('event_tags',               'EventTagsController');
 });
