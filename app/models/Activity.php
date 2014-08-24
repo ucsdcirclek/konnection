@@ -61,16 +61,6 @@ class Activity extends Ardent
     protected $guarded = array('id');
 
     /**
-     * Returns service hours
-     *
-     * @return float
-     */
-    public function getServiceHoursAttribute()
-    {
-        return $this->service_hours;
-    }
-
-    /**
      * Sets service hours
      *
      * @param $value
@@ -79,17 +69,6 @@ class Activity extends Ardent
     {
         $this->attributes['service_hours'] = floatval($value);
     }
-
-    /**
-     * Returns admin hours
-     *
-     * @return float
-     */
-    public function getAdminHoursAttribute()
-    {
-        return $this->admin_hours;
-    }
-
     /**
      * Set admin hours
      *
@@ -98,16 +77,6 @@ class Activity extends Ardent
     public function setAdminHoursAttribute($value)
     {
         $this->attributes['admin_hours'] = floatval($value);
-    }
-
-    /**
-     * Returns social hours
-     *
-     * @return float
-     */
-    public function getFellowshipHoursAttribute()
-    {
-        return $this->social_hours;
     }
 
     /**
@@ -121,16 +90,6 @@ class Activity extends Ardent
     }
 
     /**
-     * Returns mileage of driver(if applicable)
-     *
-     * @return float
-     */
-    public function getMileageAttribute()
-    {
-        return $this->mileage;
-    }
-
-    /**
      * Set mileage
      *
      * @param $value
@@ -138,16 +97,6 @@ class Activity extends Ardent
     public function setMileageAttribute($value)
     {
         $this->attributes['mileage'] = floatval($value);
-    }
-
-    /**
-     * Returns notes of the activity
-     *
-     * @return mixed
-     */
-    public function getNotesAttribute()
-    {
-        return $this->notes;
     }
 
     /**

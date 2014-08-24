@@ -51,7 +51,7 @@ class EventTag extends Ardent
      */
     public function getNameAttribute($value)
     {
-        return ucwords($this->name);
+        return ucwords($value);
     }
 
     /**
@@ -69,9 +69,9 @@ class EventTag extends Ardent
      *
      * @param $value
      */
-    public function getAbbreviationAttribute()
+    public function getAbbreviationAttribute($value)
     {
-        return strtoupper($this->abbreviation);
+        return strtoupper($value);
     }
 
     /**
