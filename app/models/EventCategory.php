@@ -17,7 +17,7 @@ class EventCategory extends Ardent
        'description' => 'required'
 
        //Did you say this wasn't needed or that should only be 'required?'
-       'event_id' => 'required'
+       //'event_id' => 'required'
       
     );
 

@@ -24,9 +24,9 @@ class EventRegistration extends Ardent
     *Also I tested the boolval() for when passing in elements for the setters and i would get errors.
     */
     public static $parameters = array(
-        'idEvent' =>  'required|exists:events,id',
-        'idReg'  =>  'required|exists:registrations,id',
-        'idUser' => 'required|exists:users,id',
+        'event_id' =>  'required|exists:events,id',
+        'registration_id'  =>  'required|exists:registrations,id',
+        'user_id' => 'required|exists:users,id',
         'guest_status' => 'numeric',
         'driver_status' => 'numeric',
         'passenger_number' => 'numeric', //number of people driver can take
@@ -36,11 +36,11 @@ class EventRegistration extends Ardent
 
     protected $guarded = array('id');
 
-   
+   /*
     public function user()
     {
         return $this->belongsTo('User');
-    }
+    }*/
 
     
     public function getGuestStatus()
