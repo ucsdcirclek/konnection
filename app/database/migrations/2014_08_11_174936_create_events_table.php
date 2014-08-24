@@ -28,8 +28,7 @@ class CreateEventsTable extends Migration
                 $table->softDeletes();
                 $table->timestamps();
                 $table->foreign('creator_id')
-                    ->references('id')->on('users')
-                    ->onDelete('cascade');
+                    ->references('id')->on('users');
             }
         );
     }
