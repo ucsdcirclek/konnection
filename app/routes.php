@@ -32,4 +32,7 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
 
     /* Event Tags */
     Route::resource('event_tags',               'EventTagsController');
+
+    /* Activity Log */
+    Route::resource('activity',                 'ActivitiesController');
 });

@@ -109,4 +109,8 @@ class Activity extends Ardent
         $this->attributes['notes'] = strip_tags($value);
     }
 
+    public function getTransformer()
+    {
+        return new ActivityTransformer;
+    }
 }
