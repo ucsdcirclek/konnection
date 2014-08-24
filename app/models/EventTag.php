@@ -96,6 +96,6 @@ class EventTag extends Ardent
 
     public function getTransformer()
     {
-        return new EventTransformer;
+        return new EventTagTransformer;
     }
 }
