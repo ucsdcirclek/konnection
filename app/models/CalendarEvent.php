@@ -104,4 +104,9 @@ class CalendarEvent extends Ardent
     {
         $this->attributes['meeting_location'] = strip_tags($meeting_location);
     }
+
+    public function getTransformer()
+    {
+        return new EventTransformer;
+    }
 }

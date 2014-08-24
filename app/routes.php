@@ -26,4 +26,7 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
     Route::post('login/forgot',                 'UsersController@forgot_password');
     Route::post('login/reset',                  'UsersController@do_reset_password');
     Route::get( 'logout',                       'UsersController@logout');
+
+    /* Events */
+    Route::resource('events',                   'EventsController');
 });
