@@ -68,6 +68,15 @@ class CalendarEvent extends Ardent
     );
 
     /**
+     * Sets title of event
+     * @param $title
+     */
+    public function setTitleAttribute($title)
+    {
+        $this->attributes['title'] = strip_tags($title);
+    }
+
+    /**
      * Sets description of event
      * @param $description
      */

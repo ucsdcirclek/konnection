@@ -18,6 +18,7 @@ class CreateEventsTable extends Migration
             function (Blueprint $table) {
                 $table->increments('id');
                 $table->integer('creator_id')->unsigned();
+                $table->string('title');
                 $table->text('description')->nullable();
                 $table->string('event_location')->nullable();
                 $table->string('meeting_location')->nullable();
