@@ -29,10 +29,11 @@ class User extends ConfideUser implements TransformableInterface
 {
     use HasRole;
 
-    public function activities()
-    {
-        return $this->hasMany('Activity');
-    }
+    public static $relationsData = array(
+        'activities' => array(self::HAS_MANY, 'Activity'),
+        'events_created' => array(self::HAS_MANY, 'CalendarEvent'),
+        'registrations' => array(self::HAS_MANY, 'EventRegistration'),
+    );
 
     public function getTransformer()
     {
