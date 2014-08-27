@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://ucsdcki.org',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -126,7 +126,8 @@ return array(
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Zizaco\Confide\ConfideServiceProvider',
         'Zizaco\Entrust\EntrustServiceProvider',
-        'Dingo\Api\ApiServiceProvider'
+        'Dingo\Api\ApiServiceProvider',
+        'Rocketeer\RocketeerServiceProvider'
 
 	),
 
@@ -199,7 +200,8 @@ return array(
         'Confide'           => 'Zizaco\Confide\ConfideFacade',
         'Entrust'           => 'Zizaco\Entrust\EntrustFacade',
         'Carbon'            => 'Carbon\Carbon',
-        'API'               => 'Dingo\Api\Facades\API'
+        'API'               => 'Dingo\Api\Facades\API',
+        'Rocketeer'         => 'Rocketeer\Facades\Rocketeer',
 
 	),
 

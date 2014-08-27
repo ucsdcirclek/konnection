@@ -22,7 +22,8 @@
         "zizaco/entrust": "1.2.x",
 		"guzzlehttp/guzzle": "~4.0",
 		"gathercontent/laravel-fractal": "dev-master",
-		"dingo/api": "0.*"
+		"dingo/api": "0.*",
+		"anahkiasen/rocketeer": "*"
 	},
 	"require-dev": {
 		"way/generators": "2.*",
