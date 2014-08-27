@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateEventCategory extends Migration
+class CreateEventCategoriesTable extends Migration
 {
 
     /*Run Migration*/
@@ -11,26 +11,22 @@ class CreateEventCategory extends Migration
     {
         //Was unsure when to make something "unsigned" or "nulable" as you did.  
         Schema::create(
-            'event_category',
+            'event_categories',
             function (Blueprint $table) {
-
-
+                $table->increments('id');
                 $table->string('name');
                 $table->text('description')->nullable();
                 $table->softDeletes();
-                //$table->timestamps();
-                $table->foreign('creator_id')
-                    ->references('id')->on('users')
-                    ->onDelete('cascade');
-                                        }
-                         );
+                $table->timestamps();
+            }
+        );
     }
 
 
     /*Reverse Migrations*/
     public function down()
     {
-        Schema::drop('event_category');
+        Schema::drop('event_categories');
     }
 
 }
