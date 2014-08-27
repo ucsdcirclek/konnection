@@ -39,7 +39,6 @@ class Activity extends Ardent
     public $autoHydrateEntityFromInput = true;
 
     public static $relationsData = array(
-//        'registration'  =>  array(self::HAS_ONE, 'Registration'),
         'event' => array(
             self::BELONGS_TO,
             'CalendarEvent',
@@ -49,9 +48,8 @@ class Activity extends Ardent
     );
 
     public static $rules = array(
-//        'event_id'          =>  'required|exists:events,id',
-//        'reg_id'            =>  'required|exists:registrations,id',
         'user_id' => 'required|exists:users,id',
+        'event_id' => 'required|exists:events,id',
         'service_hours' => 'numeric',
         'admin_hours' => 'numeric',
         'social_hours' => 'numeric',
@@ -69,6 +67,7 @@ class Activity extends Ardent
     {
         $this->attributes['service_hours'] = floatval($value);
     }
+
     /**
      * Set admin hours
      *

@@ -45,11 +45,9 @@ class CalendarEvent extends Ardent
     public $autoHydrateEntityFromInput = true;
 
     public static $relationsData = array(
-//        'registrations'     => array(self::HAS_MANY, 'Registration'),
-        'activities' => array(
-            self::HAS_MANY,
-            'Activity'
-        ),
+        'category' => array(self::BELONGS_TO, 'EventCategory'),
+        'registrations' => array(self::HAS_MANY, 'EventRegistration'),
+        'activities' => array(self::HAS_MANY, 'Activity'),
         'tags' => array(
             self::BELONGS_TO_MANY,
             'EventTag',

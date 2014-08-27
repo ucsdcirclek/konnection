@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
  *
  * @property-write mixed $name
  * @property-write mixed $description
+ * @property integer $id
+ * @property string $deleted_at
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @method static \Illuminate\Database\Query\Builder|\EventCategory whereId($value) 
+ * @method static \Illuminate\Database\Query\Builder|\EventCategory whereName($value) 
+ * @method static \Illuminate\Database\Query\Builder|\EventCategory whereDescription($value) 
+ * @method static \Illuminate\Database\Query\Builder|\EventCategory whereDeletedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\EventCategory whereCreatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\EventCategory whereUpdatedAt($value) 
  */
 class EventCategory extends Ardent
 {
