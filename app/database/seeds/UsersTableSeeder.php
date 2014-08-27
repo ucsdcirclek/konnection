@@ -11,26 +11,29 @@ class UsersTableSeeder extends Seeder
 
         DB::table('users')->delete();
 
-        User::create(
-            array(
-                'username' => 'testuser',
-                'email' => 'test@test.com',
-                'password' => 'test1234',
-                'password_confirmation' => 'test1234',
-                'confirmed' => 1,
-            )
-        );
+        $officerRole = Role::find(2);
+        $memberRole = Role::find(3);
+
+        $user = new User;
+
+        $user->username = 'testuser';
+        $user->email = 'test@test.com';
+        $user->password = 'test1234';
+        $user->password_confirmation = 'test1234';
+        $user->confirmed = 1;
+        $user->save();
+
+        User::find($user->id)->attachRole($officerRole);
 
         for ($i = 0; $i < 10; $i++) {
-            User::create(
-                array(
-                    'username' => $faker->userName,
-                    'email' => $faker->email,
-                    'password' => 'test1234',
-                    'password_confirmation' => 'test1234',
-                    'confirmed' => 1,
-                )
-            );
+            $user->username = $faker->userName;
+            $user->email = $faker->email;
+            $user->password = 'test1234';
+            $user->password_confirmation = 'test1234';
+            $user->confirmed = 1;
+            $user->save();
+
+            User::find($user->id)->attachRole($memberRole);
         }
     }
 
