@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "54ffc7edac31d54cc4f1d0512240629b",
+    "hash": "7157f5adc84f75328a9817ca6b547711",
     "packages": [
         {
             "name": "anahkiasen/rocketeer",
@@ -76,6 +76,93 @@
                 "ssh"
             ],
             "time": "2014-06-05 20:04:06"
+        },
+        {
+            "name": "asm89/stack-cors",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asm89/stack-cors.git",
+                "reference": "2d77e77251a434e4527315313a672f5801b29fa2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asm89/stack-cors/zipball/2d77e77251a434e4527315313a672f5801b29fa2",
+                "reference": "2d77e77251a434e4527315313a672f5801b29fa2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Asm89\\Stack": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander",
+                    "email": "iam.asm89@gmail.com"
+                }
+            ],
+            "description": "Cross-origin resource sharing library and stack middleware",
+            "homepage": "https://github.com/asm89/stack-cors",
+            "keywords": [
+                "cors",
+                "stack"
+            ],
+            "time": "2014-07-28 07:22:35"
+        },
+        {
+            "name": "barryvdh/laravel-cors",
+            "version": "v0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-cors.git",
+                "reference": "2da8858a8b8792f4dabd337bd59252a88914699d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/2da8858a8b8792f4dabd337bd59252a88914699d",
+                "reference": "2da8858a8b8792f4dabd337bd59252a88914699d",
+                "shasum": ""
+            },
+            "require": {
+                "asm89/stack-cors": "0.2.x",
+                "illuminate/support": "~4.1",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Cors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application",
+            "keywords": [
+                "api",
+                "cors",
+                "crossdomain",
+                "laravel"
+            ],
+            "time": "2014-06-11 07:05:53"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -285,16 +372,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gathercontent/laravel-fractal.git",
-                "reference": "1eb19d86efc673b39e3248dd5be91cf63c73367c"
+                "reference": "821d071614079bb7ff3aa857afb7fb9f433c27a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gathercontent/laravel-fractal/zipball/1eb19d86efc673b39e3248dd5be91cf63c73367c",
-                "reference": "1eb19d86efc673b39e3248dd5be91cf63c73367c",
+                "url": "https://api.github.com/repos/gathercontent/laravel-fractal/zipball/821d071614079bb7ff3aa857afb7fb9f433c27a0",
+                "reference": "821d071614079bb7ff3aa857afb7fb9f433c27a0",
                 "shasum": ""
             },
             "require": {
-                "league/fractal": "0.8.*",
+                "league/fractal": "~0.8",
                 "php": ">=5.3.0"
             },
             "require-dev": {
@@ -321,7 +408,7 @@
                 "fractal",
                 "laravel"
             ],
-            "time": "2014-07-20 20:45:50"
+            "time": "2014-08-26 08:01:14"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -831,16 +918,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "9b42a1aec56011c2ac4d75c0ddad0794762344fc"
+                "reference": "2b60366be6dcb9f9cd3e244ab25eb98eaea99551"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/9b42a1aec56011c2ac4d75c0ddad0794762344fc",
-                "reference": "9b42a1aec56011c2ac4d75c0ddad0794762344fc",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/2b60366be6dcb9f9cd3e244ab25eb98eaea99551",
+                "reference": "2b60366be6dcb9f9cd3e244ab25eb98eaea99551",
                 "shasum": ""
             },
             "require": {
@@ -873,7 +960,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2014-07-18 03:44:47"
+            "time": "2014-08-26 03:18:44"
         },
         {
             "name": "nikic/php-parser",
@@ -2039,69 +2126,45 @@
             "time": "2014-07-28 13:20:46"
         },
         {
-            "name": "zizaco/confide",
-            "version": "3.2.5",
+            "name": "tappleby/laravel-auth-token",
+            "version": "0.3.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Zizaco/confide.git",
-                "reference": "0d83c8e0c00edf07cf31df067f29cf0546e093eb"
+                "url": "https://github.com/tappleby/laravel-auth-token.git",
+                "reference": "af564e69cce893d3488337b89224ef6a013d0ff8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/confide/zipball/0d83c8e0c00edf07cf31df067f29cf0546e093eb",
-                "reference": "0d83c8e0c00edf07cf31df067f29cf0546e093eb",
+                "url": "https://api.github.com/repos/tappleby/laravel-auth-token/zipball/af564e69cce893d3488337b89224ef6a013d0ff8",
+                "reference": "af564e69cce893d3488337b89224ef6a013d0ff8",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "~4.1",
-                "laravelbook/ardent": "~2.4",
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "illuminate/auth": "~4.1",
-                "illuminate/database": "~4.1",
-                "mockery/mockery": "~0.8"
-            },
-            "suggest": {
-                "zizaco/entrust": "add Role-based Permissions to Laravel 4"
+                "mockery/mockery": "0.8.*",
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2-dev"
-                }
-            },
             "autoload": {
                 "classmap": [
-                    "src/migrations",
-                    "src/commands"
+                    "src/migrations"
                 ],
                 "psr-0": {
-                    "Zizaco\\Confide": "src/"
+                    "Tappleby\\AuthToken": "src/",
+                    "Tappleby\\Support": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
             "authors": [
                 {
-                    "name": "Zizaco Zizuini",
-                    "email": "zizaco@gmail.com",
-                    "homepage": "http://www.zizaco.net"
-                },
-                {
-                    "name": "Andrew Elkins",
-                    "homepage": "http://www.andrewelkins.com"
+                    "name": "Terry Appleby",
+                    "email": "terry.appleby@gmail.com"
                 }
             ],
-            "description": "Confide is an authentication solution for Laravel 4",
-            "keywords": [
-                "auth",
-                "illuminate",
-                "laravel"
-            ],
-            "time": "2014-07-20 15:28:36"
+            "time": "2014-06-22 17:04:38"
         },
         {
             "name": "zizaco/entrust",
@@ -2172,16 +2235,16 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v1.6.7",
+            "version": "v1.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "ccf9ababfb2b5ddbf8c3ece2ca3fc9989b11ec0d"
+                "reference": "6668cf335a7b6461debbedc9ed95f2f3784eb537"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/ccf9ababfb2b5ddbf8c3ece2ca3fc9989b11ec0d",
-                "reference": "ccf9ababfb2b5ddbf8c3ece2ca3fc9989b11ec0d",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/6668cf335a7b6461debbedc9ed95f2f3784eb537",
+                "reference": "6668cf335a7b6461debbedc9ed95f2f3784eb537",
                 "shasum": ""
             },
             "require": {
@@ -2219,20 +2282,20 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2014-08-09 20:41:59"
+            "time": "2014-08-27 08:56:54"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
-            "version": "v1.11.2",
+            "version": "v1.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "19aa77ac49ab4ea859196c692618c56de3bb7e01"
+                "reference": "9a67d9132f0e2b9ed5d668aaa8a2ebc7d4dd6d49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/19aa77ac49ab4ea859196c692618c56de3bb7e01",
-                "reference": "19aa77ac49ab4ea859196c692618c56de3bb7e01",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/9a67d9132f0e2b9ed5d668aaa8a2ebc7d4dd6d49",
+                "reference": "9a67d9132f0e2b9ed5d668aaa8a2ebc7d4dd6d49",
                 "shasum": ""
             },
             "require": {
@@ -2282,7 +2345,7 @@
                 "phpstorm",
                 "sublime"
             ],
-            "time": "2014-08-12 12:34:30"
+            "time": "2014-08-26 08:54:34"
         },
         {
             "name": "cilex/cilex",
@@ -3468,29 +3531,29 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "804c17d20d938a1d3c425307189e65f49b53231e"
+                "reference": "f0cb3bd7eddef40adcc1a1aaeaf569ceb3164532"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/804c17d20d938a1d3c425307189e65f49b53231e",
-                "reference": "804c17d20d938a1d3c425307189e65f49b53231e",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/f0cb3bd7eddef40adcc1a1aaeaf569ceb3164532",
+                "reference": "f0cb3bd7eddef40adcc1a1aaeaf569ceb3164532",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "doctrine/collections": "1.*"
+                "doctrine/collections": "1.*",
+                "phpunit/phpunit": "~4.1"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "DeepCopy": "src/",
-                    "DeepCopyTest": "tests/"
+                "psr-4": {
+                    "DeepCopy\\": "src/DeepCopy/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3506,20 +3569,20 @@
                 "object",
                 "object graph"
             ],
-            "time": "2014-03-21 12:53:08"
+            "time": "2014-08-29 00:01:20"
         },
         {
             "name": "ocramius/instantiator",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/Instantiator.git",
-                "reference": "a7abbb5fc9df6e7126af741dd6c140d1a7369435"
+                "reference": "e24a12178906ff2e7471b8aaf3a0eb789b59f881"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/Instantiator/zipball/a7abbb5fc9df6e7126af741dd6c140d1a7369435",
-                "reference": "a7abbb5fc9df6e7126af741dd6c140d1a7369435",
+                "url": "https://api.github.com/repos/Ocramius/Instantiator/zipball/e24a12178906ff2e7471b8aaf3a0eb789b59f881",
+                "reference": "e24a12178906ff2e7471b8aaf3a0eb789b59f881",
                 "shasum": ""
             },
             "require": {
@@ -3561,7 +3624,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2014-08-14 15:10:55"
+            "time": "2014-08-25 14:48:16"
         },
         {
             "name": "ocramius/lazy-map",
@@ -4623,16 +4686,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.2.2",
+            "version": "4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a33fa68ece9f8c68589bfc2da8d2794e27b820bc"
+                "reference": "3985cd437c1da2934421c99e54ebdf24f0362a7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a33fa68ece9f8c68589bfc2da8d2794e27b820bc",
-                "reference": "a33fa68ece9f8c68589bfc2da8d2794e27b820bc",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3985cd437c1da2934421c99e54ebdf24f0362a7a",
+                "reference": "3985cd437c1da2934421c99e54ebdf24f0362a7a",
                 "shasum": ""
             },
             "require": {
@@ -4693,7 +4756,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-08-18 05:12:30"
+            "time": "2014-08-28 13:38:26"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

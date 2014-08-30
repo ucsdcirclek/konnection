@@ -18,12 +18,13 @@
     ],
 	"require": {
 		"laravel/framework": "4.2.*",
-        "zizaco/confide": "3.2.x",
         "zizaco/entrust": "1.2.x",
 		"guzzlehttp/guzzle": "~4.0",
 		"gathercontent/laravel-fractal": "dev-master",
 		"dingo/api": "0.*",
-		"anahkiasen/rocketeer": "*"
+		"anahkiasen/rocketeer": "*",
+		"tappleby/laravel-auth-token": "0.3.*",
+		"barryvdh/laravel-cors": "0.2.x"
 	},
 	"require-dev": {
 		"way/generators": "2.*",
@@ -45,7 +46,8 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php",
-            "app/transformers"
+            "app/transformers",
+            "app/security"
 		]
 	},
 	"scripts": {

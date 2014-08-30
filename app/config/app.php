@@ -126,7 +126,9 @@ return array(
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Zizaco\Entrust\EntrustServiceProvider',
         'Dingo\Api\ApiServiceProvider',
-        'Rocketeer\RocketeerServiceProvider'
+        'Rocketeer\RocketeerServiceProvider',
+        'Tappleby\AuthToken\AuthTokenServiceProvider',
+        'Barryvdh\Cors\CorsServiceProvider',
 
 	),
 
@@ -200,6 +202,7 @@ return array(
         'Carbon'            => 'Carbon\Carbon',
         'API'               => 'Dingo\Api\Facades\API',
         'Rocketeer'         => 'Rocketeer\Facades\Rocketeer',
+        'AuthToken'         => 'Tappleby\Support\Facades\AuthToken'
 
 	),
 
