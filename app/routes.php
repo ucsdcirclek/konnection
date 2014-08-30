@@ -39,8 +39,11 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
 Route::api(['version' => 'v1', 'prefix' => ''], function()
 {
     /* User system */
+    Route::get('auth', 'Tappleby\AuthToken\AuthTokenController@index');
+    Route::post('auth', 'Tappleby\AuthToken\AuthTokenController@store');
+    Route::delete('auth', 'Tappleby\AuthToken\AuthTokenController@destroy');
     Route::get( 'register',                     'UsersController@store');
     Route::get( 'register/confirm/{code}',      'UsersController@confirm');
-    Route::post('login/forgot',                 'UsersController@remind');
-    Route::post('login/reset',                  'UsersController@reset');
+    Route::post('users/forgot',                 'UsersController@remind');
+    Route::post('users/reset',                  'UsersController@reset');
 });
