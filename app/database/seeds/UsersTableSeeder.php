@@ -14,24 +14,34 @@ class UsersTableSeeder extends Seeder
         $officerRole = Role::find(2);
         $memberRole = Role::find(3);
 
-        $user = new User;
-
-        $user->username = 'testuser';
-        $user->email = 'test@test.com';
-        $user->password = 'test1234';
-        $user->password_confirmation = 'test1234';
-        $user->confirmed = 1;
-        $user->save();
+        $user = User::create(
+            array(
+                'username' => 'testuser',
+                'first_name' => 'Test',
+                'last_name' => 'User',
+                'email' => 'test@test.com',
+                'password' => 'test1234',
+                'password_confirmation' => 'test1234',
+                'confirmation_code' => md5(uniqid(mt_rand(), true)),
+                'confirmed' => 1
+            )
+        );
 
         User::find($user->id)->attachRole($officerRole);
 
         for ($i = 0; $i < 10; $i++) {
-            $user->username = $faker->userName;
-            $user->email = $faker->email;
-            $user->password = 'test1234';
-            $user->password_confirmation = 'test1234';
-            $user->confirmed = 1;
-            $user->save();
+            $user = User::create(
+                array(
+                    'username' => str_replace('.', "", $faker->unique()->userName),
+                    'first_name' => $faker->firstName,
+                    'last_name' => $faker->lastName,
+                    'email' => $faker->unique()->email,
+                    'password' => 'test1234',
+                    'password_confirmation' => 'test1234',
+                    'confirmation_code' => md5(uniqid(mt_rand(), true)),
+                    'confirmed' => 1
+                )
+            );
 
             User::find($user->id)->attachRole($memberRole);
         }

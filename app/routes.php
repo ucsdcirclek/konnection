@@ -16,16 +16,14 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::api(['version' => 'v1', 'prefix' => ''], function()
+/* Protected Routes */
+Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
 {
     /* User system */
-    Route::resource('users',                    'UsersController');
-    Route::get( 'register',                     'UsersController@create');
-    Route::get( 'register/confirm/{code}',      'UsersController@confirm');
-    Route::post('login',                        'UsersController@login');
-    Route::post('login/forgot',                 'UsersController@forgot_password');
-    Route::post('login/reset',                  'UsersController@do_reset_password');
-    Route::get( 'logout',                       'UsersController@logout');
+    Route::resource('users',                    'UsersController', array('except' => array('update', 'destroy')));
+    Route::patch('users',                       'UsersController@update');
+    Route::patch('users',                       'UsersController@destroy');
+
 
     /* Events */
     Route::resource('events',                   'EventsController');
@@ -35,4 +33,14 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
 
     /* Activity Log */
     Route::resource('activity',                 'ActivitiesController');
+});
+
+/* Public Routes */
+Route::api(['version' => 'v1', 'prefix' => ''], function()
+{
+    /* User system */
+    Route::get( 'register',                     'UsersController@store');
+    Route::get( 'register/confirm/{code}',      'UsersController@confirm');
+    Route::post('login/forgot',                 'UsersController@remind');
+    Route::post('login/reset',                  'UsersController@reset');
 });

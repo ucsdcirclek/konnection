@@ -24,33 +24,20 @@ class UsersController extends \BaseController
     public function store()
     {
         $user = new User;
-
-        $user->username = Input::get('username');
-        $user->email = Input::get('email');
-        $user->password = Input::get('password');
-
-        // The password confirmation will be removed from model
-        // before saving. This field will be used in Ardent's
-        // auto validation.
-        $user->password_confirmation = Input::get('password_confirmation');
-
-        // Save if valid. Password field will be hashed before save
         $user->save();
 
-        if (!$user->getKey()) {
-            // Get validation errors (see Ardent package)
+        if (!$user->id) {
             $error = $user->errors()->all(':message');
 
             throw new Dingo\Api\Exception\StoreResourceFailedException('Could not create new user.', $error);
         }
 
-        // Redirect with success message, You may replace "Lang::get(..." for your custom message.
         return User::find($user->id);
     }
 
     /**
      * Display the specified resource.
-     * GET /user/{id}
+     * GET /users/{id}
      *
      * @param  int $id
      * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|static
@@ -67,16 +54,16 @@ class UsersController extends \BaseController
 
     /**
      * Update the specified resource in storage.
-     * PUT /user/{id}
+     * PUT /users
      *
      * @param  int $id
      * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|static
      * @throws Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      */
-    public function update($id)
+    public function update()
     {
         try {
-            $user = User::findOrFail($id);
+            $user = User::findOrFail(Auth::id());
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
@@ -91,16 +78,16 @@ class UsersController extends \BaseController
 
     /**
      * Remove the specified resource from storage.
-     * DELETE /user/{id}
+     * DELETE /users/{id}
      *
      * @param  int $id
      * @return \Illuminate\Http\Response
      * @throws Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      */
-    public function destroy($id)
+    public function destroy()
     {
         try {
-            $user = User::findOrFail($id);
+            $user = User::findOrFail(API::user()->id());
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
@@ -127,94 +114,54 @@ class UsersController extends \BaseController
     }
 
     /**
-     * Attempt to send change password link to the given email
+     * Handle a POST request to remind a user of their password.
      *
-     * @return \Illuminate\Http\Response
-     * @throws Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     * @return Response
      */
-    public function forgot_password()
+    public function remind()
     {
-        if (!Confide::forgotPassword(Input::get('email'))) {
-            throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException('User not found!');
-        }
-
-        return Response::make(null, 204);
-    }
-
-    /**
-     * Attempt change password of the user
-     *
-     * @return \Illuminate\Http\Response
-     * @throws Symfony\Component\HttpKernel\Exception\ConflictHttpException
-     */
-    public function reset_password()
-    {
-        $input = array(
-            'token' => Input::get('token'),
-            'password' => Input::get('password'),
-            'password_confirmation' => Input::get('password_confirmation'),
-        );
-
-        // By passing an array with the token, password and confirmation
-        if (!Confide::resetPassword($input)) {
-            throw new Symfony\Component\HttpKernel\Exception\ConflictHttpException('There was an issue with your
+        switch ($response = Password::remind(Input::only('email'))) {
+            case Password::INVALID_USER:
+                throw new Symfony\Component\HttpKernel\Exception\ConflictHttpException('There was an issue with your
             password!');
-        }
 
-        return Response::make(null, 204);
+            case Password::REMINDER_SENT:
+                return Response::make(null, 204);
+        }
     }
 
     /**
-     * Attempt to do login
+     * Handle a POST request to reset a user's password.
      *
+     * @return Response
      */
-    public function login()
+    public function reset()
     {
-        $input = array(
-            'email' => Input::get('email'), // May be the username too
-            'username' => Input::get('email'), // so we have to pass both
-            'password' => Input::get('password'),
-            'remember' => Input::get('remember'),
+        $credentials = Input::only(
+            'email',
+            'password',
+            'password_confirmation',
+            'token'
         );
 
-        // If you wish to only allow login from confirmed users, call logAttempt
-        // with the second parameter as true.
-        // logAttempt will check if the 'email' perhaps is the username.
-        // Get the value from the config file instead of changing the controller
-        if (Confide::logAttempt($input, Config::get('confide::signup_confirm'))) {
-            // Redirect the user to the URL they were trying to access before
-            // caught by the authentication filter IE Redirect::guest('user/login').
-            // Otherwise fallback to '/'
-            // Fix pull #145
-            return Response::make(null, 204);
-        } else {
-            $user = new User;
+        $response = Password::reset(
+            $credentials,
+            function ($user, $password) {
+                $user->password = Hash::make($password);
 
-            // Check if there was too many login attempts
-            if (Confide::isThrottled($input)) {
-                throw new Symfony\Component\HttpKernel\Exception\TooManyRequestsHttpException(Lang::get(
-                    'confide::confide.alerts.too_many_attempts'
-                ));
-            } elseif ($user->checkUserExists($input) and !$user->isConfirmed($input)) {
-                throw new Symfony\Component\HttpKernel\Exception\ConflictHttpException(Lang::get(
-                    'confide::confide.alerts.not_confirmed'
-                ));
-            } else {
-                throw new Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException(Lang::get(
-                    'confide::confide.alerts.wrong_credentials'
-                ));
+                $user->save();
             }
+        );
+
+        switch ($response) {
+            case Password::INVALID_PASSWORD:
+            case Password::INVALID_TOKEN:
+            case Password::INVALID_USER:
+                throw new Symfony\Component\HttpKernel\Exception\ConflictHttpException('There was an issue with your
+            password!');
+
+            case Password::PASSWORD_RESET:
+                return Response::make(null, 204);
         }
-    }
-
-    /**
-     * Log the user out of the application.
-     *
-     */
-    public function logout()
-    {
-        Confide::logout();
-
-        return Response::make(null, 204);
     }
 }

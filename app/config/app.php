@@ -124,7 +124,6 @@ return array(
         'Way\Generators\GeneratorsServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
-        'Zizaco\Confide\ConfideServiceProvider',
         'Zizaco\Entrust\EntrustServiceProvider',
         'Dingo\Api\ApiServiceProvider',
         'Rocketeer\RocketeerServiceProvider'
@@ -197,7 +196,6 @@ return array(
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
         'Debugbar'          => 'Barryvdh\Debugbar\Facade',
-        'Confide'           => 'Zizaco\Confide\ConfideFacade',
         'Entrust'           => 'Zizaco\Entrust\EntrustFacade',
         'Carbon'            => 'Carbon\Carbon',
         'API'               => 'Dingo\Api\Facades\API',

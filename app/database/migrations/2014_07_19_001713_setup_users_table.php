@@ -1,7 +1,10 @@
 <?php
 use Illuminate\Database\Migrations\Migration;
 
-class ConfideSetupUsersTable extends Migration {
+/**
+ * Converted from Zizaco/Confide
+ */
+class SetupUsersTable extends Migration {
 
     /**
      * Run the migrations.
@@ -14,9 +17,12 @@ class ConfideSetupUsersTable extends Migration {
         Schema::create('users', function($table)
         {
             $table->increments('id');
-            $table->string('username');
-            $table->string('email');
+            $table->string('username')->unique();
+            $table->string('email')->unique();
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('password');
+            $table->rememberToken();
             $table->string('confirmation_code');
             $table->boolean('confirmed')->default(false);
             $table->timestamps();
