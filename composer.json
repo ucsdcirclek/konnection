@@ -23,8 +23,7 @@
 		"gathercontent/laravel-fractal": "dev-master",
 		"dingo/api": "0.*",
 		"anahkiasen/rocketeer": "*",
-		"tappleby/laravel-auth-token": "0.3.*",
-		"barryvdh/laravel-cors": "0.2.x"
+		"tappleby/laravel-auth-token": "0.3.*"
 	},
 	"require-dev": {
 		"way/generators": "2.*",

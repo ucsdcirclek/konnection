@@ -5,10 +5,10 @@ UCSD Circle K Konnection is built using the Laravel framework to serve the needs
 ### Packages Used
 
 #### Production
-* [zizaco/confide](https://github.com/Zizaco/confide) - User management
 * [zizaco/entrust](https://github.com/Zizaco/entrust) - Roles and permissions
 * [dingo/api](https://github.com/dingo/api) - API
 * [anahkiasen/rocketeer](http://rocketeer.autopergamene.eu) - Deployment
+* [tappleby/laravel-auth-token](https://github.com/tappleby/laravel-auth-token) - Auth token system
 
 #### Development
 * [way/generators](https://github.com/JeffreyWay/Laravel-4-Generators)
