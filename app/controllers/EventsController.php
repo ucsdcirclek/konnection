@@ -4,13 +4,26 @@ class EventsController extends \BaseController
 {
 
     /**
-     * Display a listing of events
+     * Display a listing of events.
+     * Can accept a "from" and "to" date parameter.
      *
      * @return Response
      */
     public function index()
     {
-        return CalendarEvent::paginate(10);
+        if (Input::get('from') && Input::get('to')) {
+            $range = array();
+
+            // Add "From" date to query
+            $range[] = Carbon\Carbon::createFromFormat(Carbon::ISO8601, Input::get('from'))->toDateTimeString();
+
+            // Add "To" date to query
+            $range[] = Carbon\Carbon::createFromFormat(Carbon::ISO8601, Input::get('to'))->toDateTimeString();
+
+            return CalendarEvent::whereBetween('start_time', $range)->get();
+        } else {
+            return CalendarEvent::paginate(10);
+        }
     }
 
     /**
