@@ -40,7 +40,7 @@ class PostsController extends \BaseController
 
         $post->title = Input::get('title');
         $post->content = Input::get('content');
-        $post->category = Input::get('category');
+        $post->category = Input::get('category_id');
         $post->updateUniques();
 
         return $post;

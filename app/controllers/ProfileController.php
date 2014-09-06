@@ -21,7 +21,7 @@ class ProfileController extends \BaseController
 	public function show($id)
 	{
 		try {
-			return Profile::findOrFail($id)
+			return Profile::findOrFail($id);
 		} catch(Illuminate\Database\Eloquent\ModelNotFoundException $e) {
 			throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
 		}	
@@ -57,8 +57,7 @@ class ProfileController extends \BaseController
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
-		
-		$profile->user_id = Input::get('user_id');
+
 		$profile->bio = Input::get('bio');
 		$profile->college = Input::get('college');
 		$profile->updateUniques();

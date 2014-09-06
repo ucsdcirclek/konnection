@@ -38,8 +38,8 @@ class PostCategoriesController extends \BaseController
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
 
-        $post_cat->title = Input::get('username');
-        $post_cat->description = Input::get('username');
+        $post_cat->title = Input::get('title');
+        $post_cat->description = Input::get('description');
         $post_cat->updateUniques();
 
         return $post_cat;
