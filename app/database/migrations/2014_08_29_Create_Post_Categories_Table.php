@@ -10,13 +10,13 @@ class CreatePostCategoriesTable extends Migration
         Schema::create('post_categories',function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('title');
-                $table->text('description')->nullable();
+                $table->text('description');
             }
         );
     }
     public function down()
     {
-        Schema::drop('post');
+        Schema::drop('post_categories');
     }
 
 }
