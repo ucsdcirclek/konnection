@@ -6,47 +6,54 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
 /**
  * Post Model
  *
+ * @property integer $id
+ * @property integer $user_id
+ * @property integer $category_id
+ * @property string $title
+ * @property string $content
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @method static \Illuminate\Database\Query\Builder|\Post whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Post whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Post whereCategoryId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Post whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\Post whereContent($value)
+ * @method static \Illuminate\Database\Query\Builder|\Post whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Post whereUpdatedAt($value)
  */
-
 class Post extends Ardent
 {
 
-	public static $relationsData = array(
-		'user'=>array(self::BELONGS_TO, 'User'), 
-		'category'=>array(self::BELONGS_TO, 'PostCategory')
-		);
+    public static $relationsData = array(
+        'author' => array(self::BELONGS_TO, 'User', 'foreign_key' => 'author_id'),
+        'category' => array(self::BELONGS_TO, 'PostCategory', 'foreign_key' => 'category_id')
+    );
 
-/**
- *from Asana, At minimum: 
- *Author User ID
- *Post Title 
- *content
- *Post Category
- */
-public static $rules = array(
-	'user_id'=>'required|exist:users,id',
-	'title'=> 'required',
-	'content'=>'required',
-	'category'=> 'required|exist:categories'
-	);
+    /**
+     *from Asana, At minimum:
+     *Author User ID
+     *Post Title
+     *content
+     *Post Category
+     */
+    public static $rules = array(
+        'author_id' => 'required|exist:users,id',
+        'category_id' => 'required|exist:post_categories,id',
+        'title' => 'required',
+        'content' => 'required'
+    );
 
-protected $guarded = array('id');
+    protected $guarded = array('id');
 
 
-public function setTitleAttribute($p_title)
-{
-	$this->attributes['title'] = ucwords(strip_tags($p_title));
-}
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['title'] = ucwords(strip_tags($value));
+    }
 
-public function setContentAttribute($p_content)
-{
-	$this->attributes['content'] = $p_content;
-}
-
-public function setCategoryAttribute($p_cat)
-{
-	$this->attributes['category'] = strip_tags($p_cat);
-}
-
+    public function setContentAttribute($value)
+    {
+        $this->attributes['content'] = $value;
+    }
 
 }

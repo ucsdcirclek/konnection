@@ -6,42 +6,37 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
 /**
  * Profile Model
  *
+ * @property-write mixed $bio
+ * @property-write mixed $college
+ * @property integer $user_id
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereUserId($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereCollege($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereBio($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereCreatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereUpdatedAt($value) 
  */
-
 class Profile extends Ardent
 {
 
-	public static $relationsData = array(
-		'user'=>array(self::BELONGS_TO, 'User'), 
-		);
+    public static $relationsData = array(
+        'user' => array(self::BELONGS_TO, 'User')
+    );
 
-/**
- *from Asana, At minimum: 
- *User Id
- *Bio
- *College
- */
-public static $rules = array(
-	'bio'=> 'required',
-	'college'=>'required'
-	);
+    protected $guarded = array('user_id');
 
-protected $guarded = array('id');
+    protected $primaryKey = 'user_id';
 
-public function setBioAttribute($graphy)
-{
-	$this->attributes['bio'] = strip_tags($graphy);
-}
+    public function setBioAttribute($value)
+    {
+        $this->attributes['bio'] = strip_tags($value);
+    }
 
-public function setCollegeAttribute($warren)
-{
-	$this->attributes['college'] = ucwords(strip_tags($warren));
-}
-
-
-
-
-
+    public function setCollegeAttribute($value)
+    {
+        $this->attributes['college'] = ucwords(strip_tags($value));
+    }
 
 
 }

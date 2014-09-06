@@ -41,10 +41,11 @@ class PostCategoriesController extends \BaseController
         $post_cat->title = Input::get('username');
         $post_cat->description = Input::get('username');
         $post_cat->updateUniques();
+
         return $post_cat;
     }
 
-    
+
     public function destroy($id)
     {
         try {

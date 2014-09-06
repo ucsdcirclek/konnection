@@ -24,24 +24,23 @@ class EventCategoriesController extends \BaseController
     {
         try {
             return EventCategory::findOrFail($id);
-        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e)
-            { 
+        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
-            }
+        }
     }
 
     public function update($id)
     {
         try {
             $event_cat = EventCategory::findOrFail($id);
-        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) 
-            {
+        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
-            }
+        }
 
         $event_cat->name = Input::get('name');
         $event_cat->description = Input::get('description');
         $event_cat->updateUniques();
+
         return $event_cat;
     }
 
@@ -50,10 +49,9 @@ class EventCategoriesController extends \BaseController
     {
         try {
             $event_cat = EventCategory::findOrFail($id);
-        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e)
-            {
-                throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
-            }
+        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
+        }
 
         $event_cat->delete();
 

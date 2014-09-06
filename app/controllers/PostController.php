@@ -20,6 +20,7 @@ class PostsController extends \BaseController
 
         return Post::find($post->id);
     }
+
     public function show($id)
     {
         try {
@@ -41,6 +42,7 @@ class PostsController extends \BaseController
         $post->content = Input::get('content');
         $post->category = Input::get('category');
         $post->updateUniques();
+
         return $post;
     }
 
