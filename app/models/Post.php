@@ -6,21 +6,14 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
 /**
  * Post Model
  *
- * @property integer $id
- * @property integer $author_id
  */
 
 class Post extends Ardent
 {
 
-	protected $table = 'post'
-
 	public static $relationsData = array(
 		'user'=>array(self::BELONGS_TO, 'User'), 
-		'category'=>array(self::HAS_MANY, 'PostCategory')
-
-		//vvvvvvShould this be added here? or possible somewhere else like Activity?
-		//'post' => array(self::BELONGS_TO,'Post', 'foreignKey'=>'post_id')
+		'category'=>array(self::BELONGS_TO, 'PostCategory')
 		);
 
 /**
@@ -31,33 +24,29 @@ class Post extends Ardent
  *Post Category
  */
 public static $rules = array(
-	'user_id'=>'required|exist:user,id',
+	'user_id'=>'required|exist:users,id',
 	'title'=> 'required',
 	'content'=>'required',
-	'category'=> 'required'
+	'category'=> 'required|exist:categories'
 	);
 
 protected $guarded = array('id');
 
-//Setters. lmk if you want any deleted/added
-//tried to match the names to the setters created in other files
-public function setPostTitleAttribute($p_title)
+
+public function setTitleAttribute($p_title)
 {
 	$this->attributes['title'] = ucwords(strip_tags($p_title));
 }
 
-public function setPostCategoryAttribute($p_content)
+public function setContentAttribute($p_content)
 {
-	$this->attributes['content'] = strip_tags($p_content);
+	$this->attributes['content'] = $p_content;
 }
 
-public function setPostCategoryAttribute($p_cat)
+public function setCategoryAttribute($p_cat)
 {
 	$this->attributes['category'] = strip_tags($p_cat);
 }
-
-
-
 
 
 }
