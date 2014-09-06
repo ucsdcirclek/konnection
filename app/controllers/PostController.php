@@ -10,7 +10,7 @@ class PostsController extends \BaseController
 
     public function store()
     {
-        $post = new CalendarEvent;
+        $post = new Post;
 
         if (!$post->save()) {
             $error = $post->errors()->all(':message');

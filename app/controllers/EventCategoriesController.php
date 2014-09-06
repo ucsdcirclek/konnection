@@ -33,7 +33,7 @@ class EventCategoriesController extends \BaseController
     public function update($id)
     {
         try {
-            $event_cat = CalendarEvent::findOrFail($id);
+            $event_cat = EventCategory::findOrFail($id);
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) 
             {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
@@ -49,7 +49,7 @@ class EventCategoriesController extends \BaseController
     public function destroy($id)
     {
         try {
-            $event_cat = CalendarEvent::findOrFail($id);
+            $event_cat = EventCategory::findOrFail($id);
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e)
             {
                 throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
