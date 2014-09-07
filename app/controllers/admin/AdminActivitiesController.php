@@ -1,6 +1,6 @@
 <?php
 
-class ActivitiesController extends \BaseController {
+class AdminActivitiesController extends \BaseController {
 
     /**
      * Display a listing of event tags
