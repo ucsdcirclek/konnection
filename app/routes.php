@@ -27,15 +27,14 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
     /* Event Tags */
     Route::resource('event_tags',               'EventTagsController');
 
-    /* Activity Log */
-    Route::resource('activity',                 'ActivitiesController');
-
+    
     /* Administration */
     /* Events */
     Route::group(array('prefix' => 'admin', 'before' => 'manage_system'), function()
     {
         Route::resource('users',                'AdminUsersController');
         Route::resource('events',               'AdminEventsController');
+        Route::resource('activity',             'AdminActivitiesController');
     });
 
 
