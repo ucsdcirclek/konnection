@@ -24,15 +24,20 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
     Route::patch('users',                       'UsersController@update');
     Route::patch('users',                       'UsersController@destroy');
 
-
-    /* Events */
-    Route::resource('events',                   'EventsController');
-
     /* Event Tags */
     Route::resource('event_tags',               'EventTagsController');
 
     /* Activity Log */
     Route::resource('activity',                 'ActivitiesController');
+
+    /* Administration */
+    /* Events */
+    Route::group(array('prefix' => 'admin', 'before' => 'manage_system'), function()
+    {
+        Route::resource('events',               'AdminEventsController');
+    });
+
+
 });
 
 /* Public Routes */
@@ -46,4 +51,7 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
     Route::get( 'register/confirm/{code}',      'UsersController@confirm');
     Route::post('users/forgot',                 'UsersController@remind');
     Route::post('users/reset',                  'UsersController@reset');
+
+    /* Events */
+    Route::resource('events',                   'EventsController', array('except' => array('store', 'update', 'destroy')));
 });
