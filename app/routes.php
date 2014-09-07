@@ -34,6 +34,7 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
     /* Events */
     Route::group(array('prefix' => 'admin', 'before' => 'manage_system'), function()
     {
+        Route::resource('users',                'AdminUsersController');
         Route::resource('events',               'AdminEventsController');
     });
 
