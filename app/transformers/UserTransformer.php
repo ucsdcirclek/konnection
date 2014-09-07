@@ -7,12 +7,7 @@ class UserTransformer extends League\Fractal\TransformerAbstract
     {
         return array(
             'id' => (int)$user->id,
-            'username' => $user->username,
-            'email' => $user->email,
-            'confirmation_code' => $user->confirmation_code,
-            'confirmed' => (bool)$user->confirmed,
-            'created_at' => $user->created_at,
-            'updated_at' => $user->updated_at
+            'username' => $user->username
         );
     }
 
