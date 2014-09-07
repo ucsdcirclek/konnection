@@ -24,16 +24,14 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
     Route::patch('users',                       'UsersController@update');
     Route::patch('users',                       'UsersController@destroy');
 
-    /* Event Tags */
-    Route::resource('event_tags',               'EventTagsController');
 
-    
     /* Administration */
     /* Events */
     Route::group(array('prefix' => 'admin', 'before' => 'manage_system'), function()
     {
         Route::resource('users',                'AdminUsersController');
         Route::resource('events',               'AdminEventsController');
+        Route::resource('event_tags',           'AdminEventTagsController');
         Route::resource('activity',             'AdminActivitiesController');
     });
 
@@ -54,4 +52,7 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
 
     /* Events */
     Route::resource('events',                   'EventsController', array('except' => array('store', 'update', 'destroy')));
+
+    /* Event Tags */
+    Route::resource('event_tags',               'EventTagsController',  array('except' => array('store', 'update', 'destroy')));
 });
