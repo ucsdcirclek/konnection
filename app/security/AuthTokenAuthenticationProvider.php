@@ -57,6 +57,8 @@ class AuthTokenAuthenticationProvider extends Provider {
             throw new UnauthorizedHttpException('AuthToken', 'Invalid authentication credentials.');
         }
 
+        Auth::setUser($user);
+
         return $user;
     }
 

@@ -88,3 +88,14 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+/* Custom Filters */
+/* Managerial Permission */
+Route::filter('manage_system', function()
+{
+    if (!Entrust::can('manage_system'))
+    {
+        throw new Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException('You are not an administrator!');
+    }
+});
