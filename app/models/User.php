@@ -60,6 +60,8 @@ class User extends Ardent implements UserInterface, RemindableInterface, Transfo
         'activities' => array(self::HAS_MANY, 'Activity'),
         'events_created' => array(self::HAS_MANY, 'CalendarEvent'),
         'registrations' => array(self::HAS_MANY, 'EventRegistration'),
+        'profile' => array(self::HAS_ONE, 'Profile'),
+        'posts' => array(self::HAS_MANY, 'Post')
     );
 
     public static $rules = array(
@@ -68,6 +70,12 @@ class User extends Ardent implements UserInterface, RemindableInterface, Transfo
         'password' => 'required|min:6|confirmed',
         'password_confirmation' => 'min:6',
     );
+
+    public function afterCreate($user) {
+        $profile = new Profile;
+        $profile->user_id = $user->id;
+        $profile->forceSave();
+    }
 
     /**
      * The attributes excluded from the model's JSON form.
