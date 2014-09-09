@@ -30,6 +30,7 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
     {
         Route::resource('users',                'AdminUsersController');
         Route::resource('events',               'AdminEventsController');
+        Route::resource('event_categories',     'AdminEventCategoriesController');
         Route::resource('event_tags',           'AdminEventTagsController');
         Route::resource('activity',             'AdminActivitiesController');
         Route::resource('posts',                'AdminPostsController');
@@ -56,6 +57,9 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
 
     /* Event Tags */
     Route::resource('event_tags',               'EventTagsController',  array('except' => array('store', 'update', 'destroy')));
+
+    /* Event Categories */
+    Route::resource('event_categories',          'EventCategoriesController', array('except' => array('store', 'update', 'destroy')));
 
     /* Posts */
     Route::resource('posts',                    'PostsController', array('except' => array('store', 'update', 'destroy')));
