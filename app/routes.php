@@ -33,6 +33,7 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
         Route::resource('event_tags',           'AdminEventTagsController');
         Route::resource('activity',             'AdminActivitiesController');
         Route::resource('posts',                'AdminPostsController');
+        Route::resource('post_categories',      'AdminPostCategoriesController');
     });
 
 
@@ -58,4 +59,7 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
 
     /* Posts */
     Route::resource('posts',                    'PostsController', array('except' => array('store', 'update', 'destroy')));
+
+    /* Posts */
+    Route::resource('post_categories',          'PostCategoriesController', array('except' => array('store', 'update', 'destroy')));
 });
