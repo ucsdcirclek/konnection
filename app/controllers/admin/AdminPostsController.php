@@ -1,12 +1,7 @@
 <?php
 
-class PostsController extends \BaseController
+class AdminPostsController extends \PostController
 {
-
-    public function index()
-    {
-        return Post::paginate(10);
-    }
 
     public function store()
     {
@@ -19,15 +14,6 @@ class PostsController extends \BaseController
         }
 
         return Post::find($post->id);
-    }
-
-    public function show($id)
-    {
-        try {
-            return Post::findOrFail($id);
-        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
-            throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
-        }
     }
 
     public function update($id)
