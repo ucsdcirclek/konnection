@@ -20,7 +20,7 @@ return array(
 	),
 
 	'mandrill' => array(
-		'secret' => '',
+		'secret' => $_ENV['MAIL_PASS'],
 	),
 
 	'stripe' => array(
