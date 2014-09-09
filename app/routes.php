@@ -27,6 +27,9 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
     /* Profiles */
     Route::post('profiles',                     'ProfilesController@update');
 
+    /* CERF */
+    Route::post('events/{id}/report',           'EventsController@report');
+
 
     /* Administration */
     Route::group(array('prefix' => 'admin', 'before' => 'manage_system'), function()

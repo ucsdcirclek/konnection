@@ -41,4 +41,45 @@ class EventsController extends \BaseController
         }
     }
 
+    /**
+     * CERF an event
+     *
+     * @param $id
+     * @return mixed
+     * @throws Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     */
+    public function report($id)
+    {
+        try {
+            $event = CalendarEvent::findOrFail($id);
+        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
+        }
+
+        $activities = Input::get('activities');
+
+        foreach ($activities as $activity) {
+            $user_id = $activity['user_id'];
+            $service_hours = $activity['service_hours'];
+            $admin_hours = $activity['admin_hours'];
+            $social_hours = $activity['social_hours'];
+            $mileage = $activity['mileage'];
+            $notes = $activity['notes'];
+
+            Activity::create(
+                array(
+                    'user_id' => $user_id,
+                    'event_id' => $event->id,
+                    'service_hours' => $service_hours,
+                    'admin_hours' => $admin_hours,
+                    'social_hours' => $social_hours,
+                    'mileage' => $mileage,
+                    'notes' => $notes,
+                )
+            );
+        }
+
+        return $event->activities;
+    }
+
 }
