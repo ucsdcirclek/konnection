@@ -1,6 +1,6 @@
 <?php
 
-class ProfileController extends \BaseController
+class AdminProfileController extends \ProfileController
 {
 	/**
 	 * Display a listing of profile tags

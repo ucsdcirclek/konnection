@@ -24,11 +24,15 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
     Route::patch('users',                       'UsersController@update');
     Route::patch('users',                       'UsersController@destroy');
 
+    /* Profiles */
+    Route::post('profiles',                     'ProfilesController@update');
+
 
     /* Administration */
     Route::group(array('prefix' => 'admin', 'before' => 'manage_system'), function()
     {
         Route::resource('users',                'AdminUsersController');
+        Route::resource('profiles',             'AdminProfilesController');
         Route::resource('events',               'AdminEventsController');
         Route::resource('event_categories',     'AdminEventCategoriesController');
         Route::resource('event_tags',           'AdminEventTagsController');
@@ -59,11 +63,15 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
     Route::resource('event_tags',               'EventTagsController',  array('except' => array('store', 'update', 'destroy')));
 
     /* Event Categories */
-    Route::resource('event_categories',          'EventCategoriesController', array('except' => array('store', 'update', 'destroy')));
+    Route::resource('event_categories',         'EventCategoriesController', array('except' => array('store', 'update', 'destroy')));
 
     /* Posts */
     Route::resource('posts',                    'PostsController', array('except' => array('store', 'update', 'destroy')));
 
-    /* Posts */
+    /* Post Categories */
     Route::resource('post_categories',          'PostCategoriesController', array('except' => array('store', 'update', 'destroy')));
+
+    /* Profiles */
+    Route::get('profiles',                      'ProfilesController@index');
+    Route::get('profiles/{id}',                 'ProfilesController@show');
 });
