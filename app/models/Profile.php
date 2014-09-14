@@ -21,12 +21,10 @@ class Profile extends Ardent
 {
 
     public static $relationsData = array(
-        'user' => array(self::BELONGS_TO, 'User')
+        'user' => array(self::BELONGS_TO, 'User', 'foreign_key' => 'id')
     );
 
-    protected $guarded = array('user_id');
-
-    protected $primaryKey = 'user_id';
+    protected $guarded = array('id');
 
     public function setBioAttribute($value)
     {

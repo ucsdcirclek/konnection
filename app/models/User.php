@@ -73,7 +73,7 @@ class User extends Ardent implements UserInterface, RemindableInterface, Transfo
 
     public function afterCreate($user) {
         $profile = new Profile;
-        $profile->user_id = $user->id;
+        $profile->id = $user->id;
         $profile->forceSave();
     }
 

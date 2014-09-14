@@ -8,11 +8,11 @@ class CreateProfilesTable extends Migration
     public function up()
     {  
         Schema::create('profiles',function (Blueprint $table) {
-                $table->integer('user_id')->unsigned();
+                $table->integer('id')->unsigned();
                 $table->string('college')->nullable();
                 $table->text('bio')->nullable();
                 $table->timestamps();
-                $table->foreign('user_id')
+                $table->foreign('id')
                     ->references('id')->on('users')
                     ->onDelete('cascade');
             }
