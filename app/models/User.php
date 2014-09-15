@@ -77,6 +77,8 @@ class User extends Ardent implements UserInterface, RemindableInterface, Transfo
         $profile->forceSave();
     }
 
+    protected $with = array('roles');
+
     /**
      * The attributes excluded from the model's JSON form.
      *
