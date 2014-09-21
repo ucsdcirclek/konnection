@@ -16,6 +16,12 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+/* Transformers */
+API::transform('Activity', 'ActivityTransformer');
+API::transform('EventTag', 'EventTagTransformer');
+API::transform('CalendarEvent', 'EventTransformer');
+API::transform('User', 'UserTransformer');
+
 /* Protected Routes */
 Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
 {
