@@ -19,6 +19,7 @@ Route::get('/', function()
 /* Transformers */
 API::transform('Activity', 'ActivityTransformer');
 API::transform('EventTag', 'EventTagTransformer');
+API::transform('EventRegistration', 'EventRegistrationTransformer');
 API::transform('CalendarEvent', 'EventTransformer');
 API::transform('User', 'UserTransformer');
 
