@@ -13,8 +13,8 @@ class EventRegistrationTransformer extends League\Fractal\TransformerAbstract
             'guest_status' => $registration->guest_status,
             'driver_status' => (bool)$registration->driver_status,
             'passengers' => $registration->passengers,
-            'created_at' => $registration->created_at,
-            'updated_at' => $registration->updated_at
+            'created_at' => $registration->created_at->toISO8601String(),
+            'updated_at' => $registration->updated_at->toISO8601String()
         );
     }
 
