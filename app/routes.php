@@ -68,6 +68,8 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
 
     /* Events */
     Route::resource('events',                   'EventsController', array('except' => array('store', 'update', 'destroy')));
+    Route::resource('events.registrations',     'EventRegistrationsController', array('except' => array('store',
+            'update', 'destroy')));
 
     /* Event Tags */
     Route::resource('event_tags',               'EventTagsController',  array('except' => array('store', 'update', 'destroy')));
