@@ -17,6 +17,15 @@ class AdminEventsController extends \EventsController
 
         $event = new CalendarEvent;
 
+        $event->creator_id = Auth::id();
+        $event->title = Input::get('username');
+        $event->description = Input::get('username');
+        $event->event_location = Input::get('event_location');
+        $event->meeting_location = Input::get('meeting_location');
+        $event->start_time = Input::get('start_time');
+        $event->end_time = Input::get('end_time');
+        $event->close_time = Input::get('close_time');
+
         if (!$event->save()) {
             $error = $event->errors()->all(':message');
 

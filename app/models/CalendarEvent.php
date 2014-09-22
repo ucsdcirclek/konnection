@@ -103,6 +103,21 @@ class CalendarEvent extends Ardent
         $this->attributes['meeting_location'] = strip_tags($meeting_location);
     }
 
+    public function setStartTimeAttribute($value)
+    {
+        $this->attributes['start_time'] = Carbon\Carbon::createFromFormat(Carbon\Carbon::ISO8601, $value);
+    }
+
+    public function setEndTimeAttribute($value)
+    {
+        $this->attributes['end_time'] = Carbon\Carbon::createFromFormat(Carbon\Carbon::ISO8601, $value);
+    }
+
+    public function setCloseTimeAttribute($value)
+    {
+        $this->attributes['close_time'] = Carbon\Carbon::createFromFormat(Carbon\Carbon::ISO8601, $value);
+    }
+
     public function getTransformer()
     {
         return new EventTransformer;
