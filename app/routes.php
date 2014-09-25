@@ -23,6 +23,7 @@ API::transform('EventRegistration', 'EventRegistrationTransformer');
 API::transform('CalendarEvent', 'EventTransformer');
 API::transform('User', 'UserTransformer');
 API::transform('Post', 'PostTransformer');
+API::transform('PostCategory', 'PostCategoryTransformer');
 
 /* Protected Routes */
 Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
