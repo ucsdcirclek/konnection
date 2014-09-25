@@ -127,7 +127,9 @@ return array(
         'Zizaco\Entrust\EntrustServiceProvider',
         'Dingo\Api\ApiServiceProvider',
         'Rocketeer\RocketeerServiceProvider',
-        'Tappleby\AuthToken\AuthTokenServiceProvider'
+        'Tappleby\AuthToken\AuthTokenServiceProvider',
+        'Barryvdh\Cors\CorsServiceProvider',
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 
 	),
 

@@ -9,6 +9,7 @@ UCSD Circle K Konnection is built using the Laravel framework to serve the needs
 * [dingo/api](https://github.com/dingo/api) - API
 * [anahkiasen/rocketeer](http://rocketeer.autopergamene.eu) - Deployment
 * [tappleby/laravel-auth-token](https://github.com/tappleby/laravel-auth-token) - Auth token system
+* [cviebrock/eloquent-sluggable](https://github.com/cviebrock/eloquent-sluggable) - Slug generation system
 
 #### Development
 * [way/generators](https://github.com/JeffreyWay/Laravel-4-Generators)
