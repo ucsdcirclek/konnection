@@ -16,6 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
 class PostCategory extends Ardent
 {
 
+    public $timestamps = false;
+
     public static $relationsData = array(
         'posts' => array(self::HAS_MANY, 'Post')
     );

@@ -9,14 +9,14 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts',function (Blueprint $table) {
                 $table->increments('id');
-                $table->integer('user_id')->unsigned()->index();
+                $table->integer('author_id')->unsigned()->index();
                 $table->integer('category_id')->unsigned();
                 $table->string('title');
                 $table->text('content');
                 $table->timestamps();
                 $table->foreign('category_id')
                     ->references('id')->on('post_categories');
-                $table->foreign('user_id')
+                $table->foreign('author_id')
                     ->references('id')->on('users');
             }
         );

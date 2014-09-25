@@ -37,8 +37,8 @@ class Post extends Ardent
      *Post Category
      */
     public static $rules = array(
-        'author_id' => 'required|exist:users,id',
-        'category_id' => 'required|exist:post_categories,id',
+        'author_id' => 'required|exists:users,id',
+        'category_id' => 'required|exists:post_categories,id',
         'title' => 'required',
         'content' => 'required'
     );
