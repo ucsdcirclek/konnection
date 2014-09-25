@@ -26,9 +26,9 @@ class EventsTableSeeder extends Seeder
                     'description' => $faker->text,
                     'event_location' => $faker->address,
                     'meeting_location' => $faker->streetName,
-                    'start_time' => $start_time,
-                    'end_time' => $end_time,
-                    'close_time' => $close_time
+                    'start_time' => $start_time->format(DateTime::ISO8601),
+                    'end_time' => $end_time->format(DateTime::ISO8601),
+                    'close_time' => $close_time->format(DateTime::ISO8601)
                 )
             );
         }

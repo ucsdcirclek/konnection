@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call('EventTagsTableSeeder');
         $this->call('EventsTableSeeder');
         $this->call('EventRegistrationsTableSeeder');
+        $this->call('PostCategoriesTableSeeder');
+        $this->call('PostsTableSeeder');
     }
 
 }
