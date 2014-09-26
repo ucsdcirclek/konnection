@@ -22,6 +22,7 @@ class SetupUsersTable extends Migration {
             $table->string('first_name');
             $table->string('last_name');
             $table->string('password');
+            $table->string('facebook_id')->nullable();
             $table->rememberToken();
             $table->string('confirmation_code');
             $table->boolean('confirmed')->default(false);
