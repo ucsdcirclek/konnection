@@ -53,6 +53,25 @@ class UsersController extends \BaseController
     }
 
     /**
+     * Display the specified resource.
+     * GET /users/{id}
+     *
+     * @param  int $id
+     * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|static
+     * @throws Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     */
+    public function showSelf()
+    {
+        try {
+            $array = [];
+            $array['data'] = User::findOrFail(API::user()->id)->toArray();
+            return $array;
+        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
+        }
+    }
+
+    /**
      * Update the specified resource in storage.
      * PUT /users
      *
@@ -60,18 +79,34 @@ class UsersController extends \BaseController
      * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|static
      * @throws Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      */
-    public function update()
+    public function updateSelf()
     {
         try {
-            $user = User::findOrFail(Auth::id());
+            $user = API::user();
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
 
-        $user->username = Input::get('username');
-        $user->email = Input::get('email');
+        foreach (Input::all() as $key => $value) {
+            if(!is_null($value)) $user->{$key} = $value;
+        }
 
-        $user->updateUniques();
+        $rules = array(
+            'username' => 'alpha_dash|unique:users',
+            'email' => 'email|unique:users'
+        );
+
+        if (!is_null(Input::get('password'))) {
+            $rules['password'] = 'min:6|confirmed';
+            $rules['password_confirmation'] = 'min:6';
+        }
+
+        $user->updateUniques($rules);
+
+        if ($error = $user->errors()->all(':message'))
+        {
+            throw new Dingo\Api\Exception\StoreResourceFailedException('Could not update user.', $error);
+        }
 
         return $user;
     }
@@ -84,10 +119,10 @@ class UsersController extends \BaseController
      * @return \Illuminate\Http\Response
      * @throws Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      */
-    public function destroy()
+    public function destroySelf()
     {
         try {
-            $user = User::findOrFail(API::user()->id());
+            $user = API::user();
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }

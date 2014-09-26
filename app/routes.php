@@ -30,8 +30,9 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
 {
     /* User system */
     Route::resource('users',                    'UsersController', array('except' => array('update', 'destroy')));
-    Route::patch('users',                       'UsersController@update');
-    Route::patch('users',                       'UsersController@destroy');
+    Route::get('self',                          'UsersController@showSelf');
+    Route::patch('self',                        'UsersController@updateSelf');
+    Route::delete('self',                       'UsersController@destroySelf');
 
     /* Profiles */
     Route::post('profiles',                     'ProfilesController@update');
