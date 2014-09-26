@@ -35,7 +35,7 @@ class ProfilesController extends \BaseController
 	 */
 	public function update(){
 		try{
-		    $profile = Profile::findOrFail(Auth::id());
+		    $profile = Profile::findOrFail(API::user()->id);
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
