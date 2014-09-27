@@ -37,8 +37,11 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
     /* Profiles */
     Route::post('profiles',                     'ProfilesController@update');
 
+    /* Events */
     /* CERF */
     Route::post('events/{id}/report',           'EventsController@report');
+    /* Registration */
+    Route::post('events/{id}/register',         'EventsController@register');
 
 
     /* Administration */

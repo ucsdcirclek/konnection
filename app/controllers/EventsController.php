@@ -41,6 +41,23 @@ class EventsController extends \BaseController
         }
     }
 
+    public function register($id)
+    {
+        $registration = new EventRegistration;
+
+        $registration->user_id = API::user()->id;
+        $registration->event_id = $id;
+        $registration->passengers = is_null(Input::get('passengers')) ? 0 : Input::get('passengers');
+
+        if (!$registration->save()) {
+            $error = $registration->errors()->all(':message');
+
+            throw new Dingo\Api\Exception\StoreResourceFailedException('Could not register user for event.', $error);
+        }
+
+        return EventRegistration::find($registration->id);
+    }
+
     /**
      * CERF an event
      *
