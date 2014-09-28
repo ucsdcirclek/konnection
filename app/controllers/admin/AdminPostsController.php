@@ -1,6 +1,6 @@
 <?php
 
-class AdminPostsController extends \PostController
+class AdminPostsController extends \PostsController
 {
 
     public function store()
