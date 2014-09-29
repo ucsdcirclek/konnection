@@ -11,14 +11,14 @@ class EventsController extends \BaseController
      */
     public function index()
     {
-        if (Input::get('from') && Input::get('to')) {
+        if (Input::get('start') && Input::get('end')) {
             $range = array();
 
             // Add "From" date to query
-            $range[] = Carbon\Carbon::createFromFormat(Carbon::ISO8601, Input::get('from'))->toDateTimeString();
+            $range[] = Carbon\Carbon::createFromFormat('Y-m-d', Input::get('start'))->toDateTimeString();
 
             // Add "To" date to query
-            $range[] = Carbon\Carbon::createFromFormat(Carbon::ISO8601, Input::get('to'))->toDateTimeString();
+            $range[] = Carbon\Carbon::createFromFormat('Y-m-d', Input::get('end'))->toDateTimeString();
 
             return CalendarEvent::whereBetween('start_time', $range)->get();
         } else {
