@@ -18,8 +18,8 @@ class AdminEventsController extends \EventsController
         $event = new CalendarEvent;
 
         $event->creator_id = API::user()->id;
-        $event->title = Input::get('username');
-        $event->description = Input::get('username');
+        $event->title = Input::get('title');
+        $event->description = Input::get('description');
         $event->event_location = Input::get('event_location');
         $event->meeting_location = Input::get('meeting_location');
         $event->start_time = Input::get('start_time');
