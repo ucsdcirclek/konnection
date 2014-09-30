@@ -15,10 +15,10 @@ class EventsController extends \BaseController
             $range = array();
 
             // Add "From" date to query
-            $range[] = Carbon\Carbon::createFromFormat('Y-m-d', Input::get('start'))->toDateTimeString();
+            $range[] = Carbon\Carbon::createFromFormat(\Carbon\Carbon::ISO8601, Input::get('start'))->toDateTimeString();
 
             // Add "To" date to query
-            $range[] = Carbon\Carbon::createFromFormat('Y-m-d', Input::get('end'))->toDateTimeString();
+            $range[] = Carbon\Carbon::createFromFormat(\Carbon\Carbon::ISO8601, Input::get('end'))->toDateTimeString();
 
             return CalendarEvent::whereBetween('start_time', $range)->get();
         } else {
