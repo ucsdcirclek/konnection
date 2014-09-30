@@ -41,6 +41,23 @@ class EventsController extends \BaseController
         }
     }
 
+    /**
+     * Display the person of contact
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function contact($id)
+    {
+        try {
+            $event = CalendarEvent::findOrFail($id);
+        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
+        }
+        $array['data'] = $event->creator->toArray();
+        return $array;
+    }
+
     public function register($id)
     {
         $registration = new EventRegistration;
