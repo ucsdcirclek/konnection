@@ -72,9 +72,14 @@ class User extends Ardent implements UserInterface, RemindableInterface, Transfo
     );
 
     public function afterCreate($user) {
+        // Create profile
         $profile = new Profile;
         $profile->id = $user->id;
         $profile->forceSave();
+
+        // Add default role
+        $memberRole = Role::find(3);
+        $user->attachRole($memberRole);
     }
 
     protected $with = array('roles');
