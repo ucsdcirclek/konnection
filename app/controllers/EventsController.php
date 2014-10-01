@@ -15,7 +15,8 @@ class EventsController extends \BaseController
             $range = array();
 
             // Add "From" date to query
-            $range[] = Carbon\Carbon::createFromFormat(\Carbon\Carbon::ISO8601, Input::get('start'))->toDateTimeString();
+            $range[] = Carbon\Carbon::createFromFormat(\Carbon\Carbon::ISO8601, Input::get('start'))->toDateTimeString(
+            );
 
             // Add "To" date to query
             $range[] = Carbon\Carbon::createFromFormat(\Carbon\Carbon::ISO8601, Input::get('end'))->toDateTimeString();
@@ -55,6 +56,7 @@ class EventsController extends \BaseController
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
         $array['data'] = $event->creator->toArray();
+
         return $array;
     }
 
@@ -73,6 +75,17 @@ class EventsController extends \BaseController
         }
 
         return EventRegistration::find($registration->id);
+    }
+
+    public function unregister($id)
+    {
+        $registration = EventRegistration::whereEventId($id)->whereUserId(API::user()->id);
+
+        if ($registration->delete()) {
+            return Response::make(null, 204);
+        }
+
+        throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
     }
 
     /**

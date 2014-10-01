@@ -42,6 +42,7 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
     Route::post('events/{id}/report',           'EventsController@report');
     /* Registration */
     Route::post('events/{id}/register',         'EventsController@register');
+    Route::post('events/{id}/unregister',       'EventsController@unregister');
 
 
     /* Administration */
