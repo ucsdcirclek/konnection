@@ -77,6 +77,23 @@ class EventsController extends \BaseController
         return EventRegistration::find($registration->id);
     }
 
+    public function updateRegister($id)
+    {
+        $registration = EventRegistration::whereEventId($id)->whereUserId(API::user()->id)->first();
+
+        $registration->photographer_status = Input::get('photographer_status');
+        $registration->driver_status = Input::get('driver_status');
+        $registration->passengers = Input::get('passengers');
+
+        $registration->updateUniques();
+
+        if ($error = $registration->errors()->all(':message')) {
+            throw new Dingo\Api\Exception\StoreResourceFailedException('Could not update registration.', $error);
+        }
+
+        return EventRegistration::find($registration->id);
+    }
+
     public function unregister($id)
     {
         $registration = EventRegistration::whereEventId($id)->whereUserId(API::user()->id);
