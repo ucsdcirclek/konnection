@@ -77,6 +77,26 @@ class EventsController extends \BaseController
         return EventRegistration::find($registration->id);
     }
 
+    public function guestRegister($id)
+    {
+        $registration = new GuestRegistration;
+
+        $registration->event_id = $id;
+        $registration->first_name = Input::get('first_name');
+        $registration->last_name = Input::get('last_name');
+        $registration->phone = Input::get('phone');
+        $registration->driver_status = is_null(Input::get('driver_status')) ? 0 : Input::get('driver_status');
+        $registration->passengers = is_null(Input::get('passengers')) ? 0 : Input::get('passengers');
+
+        if (!$registration->save()) {
+            $error = $registration->errors()->all(':message');
+
+            throw new Dingo\Api\Exception\StoreResourceFailedException('Could not register user for event.', $error);
+        }
+
+        return GuestRegistration::find($registration->id);
+    }
+
     public function updateRegister($id)
     {
         $registration = EventRegistration::whereEventId($id)->whereUserId(API::user()->id)->first();
