@@ -20,6 +20,7 @@ Route::get('/', function()
 API::transform('Activity', 'ActivityTransformer');
 API::transform('EventTag', 'EventTagTransformer');
 API::transform('EventRegistration', 'EventRegistrationTransformer');
+API::transform('GuestRegistration', 'GuestRegistrationTransformer');
 API::transform('CalendarEvent', 'EventTransformer');
 API::transform('User', 'UserTransformer');
 API::transform('Post', 'PostTransformer');
@@ -78,6 +79,8 @@ Route::api(['version' => 'v1', 'prefix' => ''], function()
     /* Events */
     Route::resource('events',                   'EventsController', array('except' => array('store', 'update', 'destroy')));
     Route::resource('events.registrations',     'EventRegistrationsController', array('except' => array('store',
+            'update', 'destroy')));
+    Route::resource('events.guests',            'GuestRegistrationsController', array('except' => array('store',
             'update', 'destroy')));
     Route::get('events/{id}/contact',           'EventsController@contact');
     Route::post('events/{id}/registerGuest',    'EventsController@guestRegister');

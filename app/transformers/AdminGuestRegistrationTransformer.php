@@ -1,17 +1,15 @@
 <?php
 
-class AdminEventRegistrationTransformer extends League\Fractal\TransformerAbstract
+class AdminGuestRegistrationTransformer extends League\Fractal\TransformerAbstract
 {
 
-    public function transform(EventRegistration $registration)
+    public function transform(guestRegistration $registration)
     {
         return array(
             'id' => (int)$registration->id,
-            'user_id' => (int)$registration->user_id,
             'name' => "{$registration->user->first_name} {$registration->user->last_name}",
             'phone' => $registration->user->phone,
             'event_id' => (int)$registration->event_id,
-            'chair_status' => (bool)$registration->chair_status,
             'driver_status' => (bool)$registration->driver_status,
             'passengers' => $registration->passengers,
             'created_at' => $registration->created_at->toISO8601String(),

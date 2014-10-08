@@ -11,7 +11,6 @@ class EventRegistrationTransformer extends League\Fractal\TransformerAbstract
             'name' => "{$registration->user->first_name} {$registration->user->last_name}",
             'event_id' => (int)$registration->event_id,
             'chair_status' => (bool)$registration->chair_status,
-            'guest_status' => $registration->guest_status,
             'driver_status' => (bool)$registration->driver_status,
             'passengers' => $registration->passengers,
             'created_at' => $registration->created_at->toISO8601String(),
