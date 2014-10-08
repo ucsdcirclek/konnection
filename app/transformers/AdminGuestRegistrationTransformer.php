@@ -7,8 +7,8 @@ class AdminGuestRegistrationTransformer extends League\Fractal\TransformerAbstra
     {
         return array(
             'id' => (int)$registration->id,
-            'name' => "{$registration->user->first_name} {$registration->user->last_name}",
-            'phone' => $registration->user->phone,
+            'name' => "{$registration->first_name} {$registration->last_name}",
+            'phone' => $registration->phone,
             'event_id' => (int)$registration->event_id,
             'driver_status' => (bool)$registration->driver_status,
             'passengers' => $registration->passengers,
