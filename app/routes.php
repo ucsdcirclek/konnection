@@ -54,6 +54,7 @@ Route::api(['version' => 'v1', 'prefix' => '', 'protected' => true], function()
         Route::resource('profiles',             'AdminProfilesController');
         Route::resource('events',               'AdminEventsController');
         Route::resource('events.registrations', 'AdminEventRegistrationsController');
+        Route::resource('events.guests',        'AdminGuestRegistrationsController');
         Route::resource('event_categories',     'AdminEventCategoriesController');
         Route::resource('event_tags',           'AdminEventTagsController');
         Route::resource('activity',             'AdminActivitiesController');
