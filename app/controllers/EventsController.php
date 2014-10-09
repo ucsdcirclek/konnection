@@ -62,6 +62,16 @@ class EventsController extends \BaseController
 
     public function register($id)
     {
+        try {
+            $event = CalendarEvent::findOrFail($id);
+        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
+        }
+
+        if (Carbon::now() > $event->close_time) {
+            throw new Dingo\Api\Exception\StoreResourceFailedException('Could not register user for event.');
+        }
+
         $registration = new EventRegistration;
 
         $registration->user_id = API::user()->id;
@@ -79,6 +89,16 @@ class EventsController extends \BaseController
 
     public function guestRegister($id)
     {
+        try {
+            $event = CalendarEvent::findOrFail($id);
+        } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
+        }
+
+        if (Carbon::now() > $event->close_time) {
+            throw new Dingo\Api\Exception\StoreResourceFailedException('Could not register user for event.');
+        }
+        
         $registration = new GuestRegistration;
 
         $registration->event_id = $id;
