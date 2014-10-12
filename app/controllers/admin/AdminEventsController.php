@@ -48,16 +48,17 @@ class AdminEventsController extends \EventsController
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
-
-        $event->title = Input::get('title');
-        $event->description = Input::get('description');
-        $event->event_location = Input::get('event_location');
-        $event->meeting_location = Input::get('meeting_location');
-        $event->start_time = Input::get('start_time');
-        $event->end_time = Input::get('end_time');
-        $event->close_time = Input::get('close_time');
+        
+        foreach (Input::all() as $key => $value) {
+            if(!is_null($value)) $event->{$key} = $value;
+        }
 
         $event->updateUniques();
+
+        if ($error = $event->errors()->all(':message'))
+        {
+            throw new Dingo\Api\Exception\StoreResourceFailedException('Could not update event.', $event);
+        }
 
         return $event;
     }
