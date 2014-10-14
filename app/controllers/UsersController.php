@@ -93,7 +93,8 @@ class UsersController extends \BaseController
 
         $rules = array(
             'username' => 'alpha_dash|unique:users',
-            'email' => 'email|unique:users'
+            'email' => 'email|unique:users',
+            'avatar_url' => 'url'
         );
 
         if (!is_null(Input::get('password'))) {

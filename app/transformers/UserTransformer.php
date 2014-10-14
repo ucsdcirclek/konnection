@@ -7,7 +7,8 @@ class UserTransformer extends League\Fractal\TransformerAbstract
     {
         return array(
             'id' => (int)$user->id,
-            'username' => $user->username
+            'username' => $user->username,
+            'avatar_url' => $user->avatar_url
         );
     }
 

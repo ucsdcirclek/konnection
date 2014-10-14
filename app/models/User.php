@@ -69,6 +69,7 @@ class User extends Ardent implements UserInterface, RemindableInterface, Transfo
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6|confirmed',
         'password_confirmation' => 'min:6',
+        'avatar_url' => 'url'
     );
 
     public function afterCreate($user) {
