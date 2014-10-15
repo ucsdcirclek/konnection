@@ -25,7 +25,8 @@
 		"anahkiasen/rocketeer": "*",
 		"tappleby/laravel-auth-token": "0.3.*",
 		"barryvdh/laravel-cors": "0.2.x",
-		"cviebrock/eloquent-sluggable": "2.*"
+		"cviebrock/eloquent-sluggable": "2.*",
+		"codesleeve/laravel-stapler": "1.0.*"
 	},
 	"require-dev": {
 		"way/generators": "2.*",

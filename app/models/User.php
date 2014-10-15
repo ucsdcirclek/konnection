@@ -8,6 +8,8 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 use Dingo\Api\Transformer\TransformableInterface;
 use LaravelBook\Ardent\Ardent;
 use Zizaco\Entrust\HasRole;
+use Codesleeve\Stapler\ORM\StaplerableInterface;
+use Codesleeve\Stapler\ORM\EloquentTrait;
 
 /**
  * User
@@ -36,10 +38,21 @@ use Zizaco\Entrust\HasRole;
  * @method static \Illuminate\Database\Query\Builder|\User whereCreatedAt($value) 
  * @method static \Illuminate\Database\Query\Builder|\User whereUpdatedAt($value) 
  */
-class User extends Ardent implements UserInterface, RemindableInterface, TransformableInterface
+class User extends Ardent implements UserInterface, RemindableInterface, TransformableInterface, StaplerableInterface
 {
 
-    use UserTrait, RemindableTrait, HasRole;
+    use UserTrait, RemindableTrait, HasRole, EloquentTrait;
+
+    public function __construct(array $attributes = array()) {
+        $this->hasAttachedFile('avatar', [
+                'styles' => [
+                    'medium' => '200x200',
+                    'thumb' => '100x100'
+                ]
+            ]);
+
+        parent::__construct($attributes);
+    }
 
     /**
      * The database table used by the model.
@@ -68,8 +81,7 @@ class User extends Ardent implements UserInterface, RemindableInterface, Transfo
         'username' => 'required|alpha_dash|unique:users',
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6|confirmed',
-        'password_confirmation' => 'min:6',
-        'avatar_url' => 'url'
+        'password_confirmation' => 'min:6'
     );
 
     public function afterCreate($user) {

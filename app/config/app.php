@@ -130,6 +130,7 @@ return array(
         'Tappleby\AuthToken\AuthTokenServiceProvider',
         'Barryvdh\Cors\CorsServiceProvider',
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+        'Codesleeve\LaravelStapler\LaravelStaplerServiceProvider'
 
 	),
 

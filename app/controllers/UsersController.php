@@ -88,13 +88,19 @@ class UsersController extends \BaseController
         }
 
         foreach (Input::all() as $key => $value) {
+            if ($key == 'avatar') {
+                $data = explode(',', Input::get('avatar'));
+                $path = storage_path() . '/avatar.png';
+                file_put_contents($path, base64_decode($data[1]));
+                $value = $path;
+            }
+
             if(!is_null($value)) $user->{$key} = $value;
         }
 
         $rules = array(
             'username' => 'alpha_dash|unique:users',
-            'email' => 'email|unique:users',
-            'avatar_url' => 'url'
+            'email' => 'email|unique:users'
         );
 
         if (!is_null(Input::get('password'))) {

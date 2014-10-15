@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c9e2dfc47d117e30c030a597c1964d6e",
+    "hash": "d27df9f32b1f25f0ab9e62055db29ed5",
     "packages": [
         {
             "name": "anahkiasen/rocketeer",
@@ -212,6 +212,109 @@
             "time": "2014-03-12 00:05:31"
         },
         {
+            "name": "codesleeve/laravel-stapler",
+            "version": "v1.0.02",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CodeSleeve/laravel-stapler.git",
+                "reference": "07829c711fe34e306893b2a7c7697d59766dafe0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CodeSleeve/laravel-stapler/zipball/07829c711fe34e306893b2a7c7697d59766dafe0",
+                "reference": "07829c711fe34e306893b2a7c7697d59766dafe0",
+                "shasum": ""
+            },
+            "require": {
+                "codesleeve/stapler": "1.0.*",
+                "laravel/framework": "4.*|5.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-4": {
+                    "Codesleeve\\LaravelStapler\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Travis Bennett",
+                    "email": "tandrewbennett@hotmail.com"
+                }
+            ],
+            "description": "Easy file upload management for the Laravel Framework.",
+            "keywords": [
+                "aws",
+                "file",
+                "laravel",
+                "paperclip",
+                "s3",
+                "stapler",
+                "upload"
+            ],
+            "time": "2014-09-28 02:28:55"
+        },
+        {
+            "name": "codesleeve/stapler",
+            "version": "v1.0.02",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CodeSleeve/stapler.git",
+                "reference": "6d60a8cc6ceaf20935b0ece191e2812890a3a8c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CodeSleeve/stapler/zipball/6d60a8cc6ceaf20935b0ece191e2812890a3a8c0",
+                "reference": "6d60a8cc6ceaf20935b0ece191e2812890a3a8c0",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "v1.0",
+                "imagine/imagine": "~0.5.0",
+                "php": ">=5.4",
+                "symfony/http-foundation": "~2.3"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "2.4.*@dev",
+                "illuminate/config": "~4",
+                "illuminate/database": "~4",
+                "mockery/mockery": "0.8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Codesleeve\\Stapler\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Travis Bennett",
+                    "email": "tandrewbennett@hotmail.com"
+                }
+            ],
+            "description": "Elegant and simple ORM-based file upload package for php.",
+            "keywords": [
+                "aws",
+                "file",
+                "orm",
+                "paperclip",
+                "s3",
+                "upload"
+            ],
+            "time": "2014-09-27 19:15:58"
+        },
+        {
             "name": "cviebrock/eloquent-sluggable",
             "version": "2.0.3",
             "source": {
@@ -358,6 +461,70 @@
                 "restful"
             ],
             "time": "2014-08-19 10:44:01"
+        },
+        {
+            "name": "doctrine/inflector",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/inflector.git",
+                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/54b8333d2a5682afdc690060c1cf384ba9f47f08",
+                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Inflector\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "https://github.com/schmittjoh",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "inflection",
+                "pluarlize",
+                "singuarlize",
+                "string"
+            ],
+            "time": "2013-01-10 21:49:15"
         },
         {
             "name": "filp/whoops",
@@ -578,6 +745,58 @@
                 "stream"
             ],
             "time": "2014-08-17 21:15:53"
+        },
+        {
+            "name": "imagine/imagine",
+            "version": "v0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/avalanche123/Imagine.git",
+                "reference": "f64ec666baaa800edcbf237db41121a569230709"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/f64ec666baaa800edcbf237db41121a569230709",
+                "reference": "f64ec666baaa800edcbf237db41121a569230709",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "sami/sami": "dev-master"
+            },
+            "suggest": {
+                "ext-gd": "to use the GD implementation",
+                "ext-gmagick": "to use the Gmagick implementation",
+                "ext-imagick": "to use the Imagick implementation"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Imagine": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com",
+                    "homepage": "http://avalanche123.com"
+                }
+            ],
+            "description": "Image processing for PHP 5.3",
+            "homepage": "http://imagine.readthedocs.org/",
+            "keywords": [
+                "drawing",
+                "graphics",
+                "image manipulation",
+                "image processing"
+            ],
+            "time": "2013-07-10 17:25:36"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -3021,70 +3240,6 @@
                 "queryobject"
             ],
             "time": "2014-01-01 16:43:57"
-        },
-        {
-            "name": "doctrine/inflector",
-            "version": "v1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/inflector.git",
-                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/54b8333d2a5682afdc690060c1cf384ba9f47f08",
-                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Inflector\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
-                }
-            ],
-            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "inflection",
-                "pluarlize",
-                "singuarlize",
-                "string"
-            ],
-            "time": "2013-01-10 21:49:15"
         },
         {
             "name": "doctrine/lexer",
