@@ -14,10 +14,10 @@ class AddAvatarFieldsToUsersTable extends Migration {
 	{	
 		Schema::table('users', function(Blueprint $table) {		
 			
-			$table->string('avatar_file_name')->nullable();
-			$table->integer('avatar_file_size')->nullable();
-			$table->string('avatar_content_type')->nullable();
-			$table->timestamp('avatar_updated_at')->nullable();
+			$table->string('avatar_file_name')->nullable()->after('phone');
+			$table->integer('avatar_file_size')->nullable()->after('avatar_file_name');
+			$table->string('avatar_content_type')->nullable()->after('avatar_file_size');
+			$table->timestamp('avatar_updated_at')->nullable()->after('avatar_content_type');
 
 		});
 
