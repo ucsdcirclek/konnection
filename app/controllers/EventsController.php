@@ -56,6 +56,7 @@ class EventsController extends \BaseController
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
         $array['data'] = $event->creator->toArray();
+        $array['data']['avatar'] = Request::root() . $event->creator->avatar->url();
 
         return $array;
     }
