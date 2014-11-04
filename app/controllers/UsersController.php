@@ -63,9 +63,10 @@ class UsersController extends \BaseController
     public function showSelf()
     {
         try {
+            $user = User::findOrFail(API::user()->id);
             $array = [];
-            $array['data'] = User::findOrFail(API::user()->id)->toArray();
-            $array['data']['avatar'] = Request::root() . $event->creator->avatar->url();
+            $array['data'] = $user->toArray();
+            $array['data']['avatar'] = Request::root() $user->avatar->url();
             return $array;
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
