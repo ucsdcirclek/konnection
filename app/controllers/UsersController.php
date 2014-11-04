@@ -66,7 +66,7 @@ class UsersController extends \BaseController
             $user = User::findOrFail(API::user()->id);
             $array = [];
             $array['data'] = $user->toArray();
-            $array['data']['avatar'] = Request::root() $user->avatar->url();
+            $array['data']['avatar'] = Request::root() . $user->avatar->url();
             return $array;
         } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
