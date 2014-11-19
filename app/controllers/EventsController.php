@@ -122,10 +122,9 @@ class EventsController extends \BaseController
     {
         $registration = EventRegistration::whereEventId($id)->whereUserId(API::user()->id)->first();
 
-        $registration->writer_status = Input::get('writer_status');
-        $registration->photographer_status = Input::get('photographer_status');
-        $registration->driver_status = Input::get('driver_status');
-        $registration->passengers = Input::get('passengers');
+        foreach (Input::all() as $key => $value) {
+            if(!is_null($value)) $registration->{$key} = $value;
+        }
 
         $registration->updateUniques();
 

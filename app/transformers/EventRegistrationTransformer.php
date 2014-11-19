@@ -15,6 +15,8 @@ class EventRegistrationTransformer extends League\Fractal\TransformerAbstract
             'event_id' => (int)$registration->event_id,
             'chair_status' => (bool)$registration->chair_status,
             'driver_status' => (bool)$registration->driver_status,
+            'photographer_status' => (bool)$registration->photographer_status,
+            'writer_status' => (bool)$registration->writer_status,
             'passengers' => $registration->passengers,
             'created_at' => $registration->created_at->toISO8601String(),
             'updated_at' => $registration->updated_at->toISO8601String()
