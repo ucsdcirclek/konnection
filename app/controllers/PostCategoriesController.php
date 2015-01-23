@@ -5,7 +5,7 @@ class PostCategoriesController extends \BaseController
 
     public function index()
     {
-        return PostCategory::paginate(10);
+        return PostCategory::all();
     }
 
     public function show($id)
