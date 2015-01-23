@@ -7,6 +7,11 @@ class AdminPostsController extends \PostsController
     {
         $post = new Post;
 
+        $post->author_id = API::user()->id;
+        $post->category_id = Input::get('category_id');
+        $post->title = Input::get('title');
+        $post->content = Input::get('content');
+
         if (!$post->save()) {
             $error = $post->errors()->all(':message');
 
