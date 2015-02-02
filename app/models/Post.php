@@ -20,6 +20,8 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
  * @method static \Illuminate\Database\Query\Builder|\Post whereContent($value)
  * @method static \Illuminate\Database\Query\Builder|\Post whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Post whereUpdatedAt($value)
+ * @property integer $author_id
+ * @method static \Illuminate\Database\Query\Builder|\Post whereAuthorId($value)
  */
 class Post extends Ardent
 {

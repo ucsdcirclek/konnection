@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
  * @property integer $id
  * @property string $title
  * @property string $description
- * @method static \Illuminate\Database\Query\Builder|\PostCategory whereId($value) 
- * @method static \Illuminate\Database\Query\Builder|\PostCategory whereTitle($value) 
- * @method static \Illuminate\Database\Query\Builder|\PostCategory whereDescription($value) 
+ * @method static \Illuminate\Database\Query\Builder|\PostCategory whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\PostCategory whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\PostCategory whereDescription($value)
  */
 class PostCategory extends Ardent
 {

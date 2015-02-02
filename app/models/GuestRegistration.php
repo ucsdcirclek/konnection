@@ -14,15 +14,15 @@ use LaravelBook\Ardent\Ardent;
  * @property integer $passengers
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereId($value) 
- * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereEventId($value) 
- * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereFirstName($value) 
- * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereLastName($value) 
- * @method static \Illuminate\Database\Query\Builder|\GuestRegistration wherePhone($value) 
- * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereDriverStatus($value) 
- * @method static \Illuminate\Database\Query\Builder|\GuestRegistration wherePassengers($value) 
- * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereCreatedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereUpdatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereEventId($value)
+ * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereFirstName($value)
+ * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereLastName($value)
+ * @method static \Illuminate\Database\Query\Builder|\GuestRegistration wherePhone($value)
+ * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereDriverStatus($value)
+ * @method static \Illuminate\Database\Query\Builder|\GuestRegistration wherePassengers($value)
+ * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\GuestRegistration whereUpdatedAt($value)
  */
 class GuestRegistration extends Ardent {
     public static $relationsData = array(

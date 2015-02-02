@@ -26,17 +26,27 @@ use Codesleeve\Stapler\ORM\EloquentTrait;
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\Config::get('entrust::role[] $roles
- * @method static \Illuminate\Database\Query\Builder|\User whereId($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereUsername($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereEmail($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereFirstName($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereLastName($value) 
- * @method static \Illuminate\Database\Query\Builder|\User wherePassword($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereRememberToken($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereConfirmationCode($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereConfirmed($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereCreatedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\User whereUpdatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\User whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereUsername($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereEmail($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereFirstName($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereLastName($value)
+ * @method static \Illuminate\Database\Query\Builder|\User wherePassword($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereRememberToken($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereConfirmationCode($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereConfirmed($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereUpdatedAt($value)
+ * @property string $phone
+ * @property string $avatar_file_name
+ * @property integer $avatar_file_size
+ * @property string $avatar_content_type
+ * @property string $avatar_updated_at
+ * @method static \Illuminate\Database\Query\Builder|\User wherePhone($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereAvatarFileName($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereAvatarFileSize($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereAvatarContentType($value)
+ * @method static \Illuminate\Database\Query\Builder|\User whereAvatarUpdatedAt($value)
  */
 class User extends Ardent implements UserInterface, RemindableInterface, TransformableInterface, StaplerableInterface
 {

@@ -28,6 +28,10 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
  * @method static \Illuminate\Database\Query\Builder|\CalendarEvent whereDeletedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\CalendarEvent whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\CalendarEvent whereUpdatedAt($value)
+ * @property string $title
+ * @property-write mixed $open_time
+ * @method static \Illuminate\Database\Query\Builder|\CalendarEvent whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\CalendarEvent whereOpenTime($value) 
  */
 class CalendarEvent extends Ardent
 {

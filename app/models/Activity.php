@@ -28,6 +28,11 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
  * @method static \Illuminate\Database\Query\Builder|\Activity whereDeletedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Activity whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Activity whereUpdatedAt($value)
+ * @property integer $event_id
+ * @property-write mixed $fellowship_hours
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereEventId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereAdminHours($value)
+ * @method static \Illuminate\Database\Query\Builder|\Activity whereSocialHours($value)
  */
 class Activity extends Ardent
 {

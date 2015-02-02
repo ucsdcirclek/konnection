@@ -11,11 +11,13 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
  * @property integer $user_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\Profile whereUserId($value) 
- * @method static \Illuminate\Database\Query\Builder|\Profile whereCollege($value) 
- * @method static \Illuminate\Database\Query\Builder|\Profile whereBio($value) 
- * @method static \Illuminate\Database\Query\Builder|\Profile whereCreatedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\Profile whereUpdatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereCollege($value)
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereBio($value)
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereUpdatedAt($value)
+ * @property integer $id
+ * @method static \Illuminate\Database\Query\Builder|\Profile whereId($value)
  */
 class Profile extends Ardent
 {

@@ -17,17 +17,19 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
  * @property string $deleted_at
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereId($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereUserId($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereEventId($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereChairStatus($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereGuestStatus($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration wherePhotographerStatus($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereDriverStatus($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration wherePassengers($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereDeletedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereCreatedAt($value) 
- * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereUpdatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereEventId($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereChairStatus($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereGuestStatus($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration wherePhotographerStatus($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereDriverStatus($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration wherePassengers($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereDeletedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereUpdatedAt($value)
+ * @property boolean $writer_status
+ * @method static \Illuminate\Database\Query\Builder|\EventRegistration whereWriterStatus($value)
  */
 class EventRegistration extends Ardent
 {
