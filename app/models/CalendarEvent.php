@@ -39,6 +39,7 @@ class CalendarEvent extends Ardent
     protected $dates = array(
         'start_time',
         'end_time',
+        'open_time',
         'close_time'
     );
 
@@ -88,7 +89,7 @@ class CalendarEvent extends Ardent
 
     /**
      * Sets meeting location
-     * @param $location_meet
+     * @param $meeting_location
      */
     public function setMeetingLocationAttribute($meeting_location)
     {
@@ -103,6 +104,11 @@ class CalendarEvent extends Ardent
     public function setEndTimeAttribute($value)
     {
         $this->attributes['end_time'] = Carbon\Carbon::createFromFormat(Carbon\Carbon::ISO8601, $value);
+    }
+
+    public function setOpenTimeAttribute($value)
+    {
+        $this->attributes['open_time'] = Carbon\Carbon::createFromFormat(Carbon\Carbon::ISO8601, $value);
     }
 
     public function setCloseTimeAttribute($value)

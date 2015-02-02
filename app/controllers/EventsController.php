@@ -61,6 +61,12 @@ class EventsController extends \BaseController
         return $array;
     }
 
+    /**
+     * Registers user for event
+     *
+     * @param $id
+     * @return \LaravelBook\Ardent\Ardent|\LaravelBook\Ardent\Collection
+     */
     public function register($id)
     {
         try {
@@ -69,10 +75,13 @@ class EventsController extends \BaseController
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
 
-        if (Carbon::now() > $event->close_time) {
-            throw new Dingo\Api\Exception\StoreResourceFailedException('Could not register user for event.');
+        // Make sure event is open for registration
+        if (Carbon::now() < $event->open_time || Carbon::now() > $event->close_time) {
+            throw new Dingo\Api\Exception\StoreResourceFailedException('The user is not allowed to register for this
+            event at this time.');
         }
 
+        // Register user
         $registration = new EventRegistration;
 
         $registration->user_id = API::user()->id;
@@ -88,6 +97,12 @@ class EventsController extends \BaseController
         return EventRegistration::find($registration->id);
     }
 
+    /**
+     * Registers guest for event
+     *
+     * @param $id
+     * @return \LaravelBook\Ardent\Ardent|\LaravelBook\Ardent\Collection
+     */
     public function guestRegister($id)
     {
         try {
@@ -96,10 +111,12 @@ class EventsController extends \BaseController
             throw new Symfony\Component\HttpKernel\Exception\NotFoundHttpException($e->getMessage());
         }
 
-        if (Carbon::now() > $event->close_time) {
+        // Make sure event is open for registration
+        if (Carbon::now() < $event->open_time || Carbon::now() > $event->close_time) {
             throw new Dingo\Api\Exception\StoreResourceFailedException('Could not register user for event.');
         }
-        
+
+        // Register guest
         $registration = new GuestRegistration;
 
         $registration->event_id = $id;
@@ -118,6 +135,12 @@ class EventsController extends \BaseController
         return GuestRegistration::find($registration->id);
     }
 
+    /**
+     * Edit registration
+     *
+     * @param $id
+     * @return \LaravelBook\Ardent\Ardent|\LaravelBook\Ardent\Collection
+     */
     public function updateRegister($id)
     {
         $registration = EventRegistration::whereEventId($id)->whereUserId(API::user()->id)->first();
@@ -135,6 +158,12 @@ class EventsController extends \BaseController
         return EventRegistration::find($registration->id);
     }
 
+    /**
+     * Unregister user for event
+     *
+     * @param $id
+     * @return \Illuminate\Http\Response
+     */
     public function unregister($id)
     {
         $registration = EventRegistration::whereEventId($id)->whereUserId(API::user()->id);
