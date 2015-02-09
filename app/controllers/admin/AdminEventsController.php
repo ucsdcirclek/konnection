@@ -24,7 +24,7 @@ class AdminEventsController extends \EventsController
         $event->meeting_location = Input::get('meeting_location');
         $event->start_time = Input::get('start_time');
         $event->end_time = Input::get('end_time');
-        $event->open_time = Input::get('close_time');
+        $event->open_time = Input::get('open_time');
         $event->close_time = Input::get('close_time');
 
         if (!$event->save()) {
