@@ -40,12 +40,12 @@ class MigrateMongo extends Command
     {
         $mongo = DB::getMongoClient()->konnection;
 
-        // Users
-        // Fetch all users
-        $users = User::all();
+        /* Users */
         $userIds = [];
 
-        foreach ($users as $user) {
+        $this->info('Starting migration of users...');
+
+        foreach (User::with('profile')->get() as $user) {
             // Insert into Mongo
             $newUser = \App\Mongo\User::create(
                 [
@@ -57,7 +57,9 @@ class MigrateMongo extends Command
                     'profile' => [
                         'firstName' => $user->first_name,
                         'lastName' => $user->last_name,
-                        'phone' => $user->phone
+                        'phone' => $user->phone,
+                        'college' => $user->profile->college,
+                        'bio' => $user->profile->bio
                     ],
                     'services' => [
                         'password' => [
@@ -71,6 +73,86 @@ class MigrateMongo extends Command
             // Store ID for reference
             $userIds[$user->id] = $newUser->id;
         }
+
+        $this->info('Migrated ' . count($userIds) . ' users');
+
+//        /* Events */
+//        $eventIds = [];
+//
+//        $this->info('Starting migration of events...');
+//
+//        foreach (CalendarEvent::with(['registrations', 'guests'])->get() as $event) {
+//            /* Registrations */
+//            $registrations = [];
+//            foreach ($event->registrations as $reg) {
+//                $registrations[] = [
+//                    'user' => $reg->user_id,
+//                    'chair' => (bool)$reg->chair_status,
+//                    'photographer' => (bool)$reg->photographer_status,
+//                    'writer' => (bool)$reg->writer_status,
+//                    'driver' => (bool)$reg->driver_status,
+//                    'createdAt' => $reg->created_at
+//                ];
+//            }
+//
+//            foreach ($event->guests as $reg) {
+//                $registrations[] = [
+//                    'user' => [
+//                        'name' => $reg->first_name . ' ' . $reg->last_name,
+//                        'phone' => $reg->phone
+//                    ],
+//                    'createdAt' => $reg->created_at
+//                ];
+//            }
+//
+//            $this->info('Migrated ' . count($registrations) . ' registrations');
+//
+//            // Insert into Mongo
+//            $newEvent = \App\Mongo\CalendarEvent::create(
+//                [
+//                    'title' => $event->title,
+//                    'description' => $event->description,
+//                    'eventLocation' => $event->event_location,
+//                    'meetingLocation' => $event->meeting_location,
+//                    'startTime' => $event->start_time,
+//                    'endTime' => $event->end_time,
+//                    'openTime' => $event->open_time,
+//                    'closeTime' => $event->close_time,
+//                    'createdBy' => $userIds[$event->creator_id],
+//                    'registrations' => $registrations,
+//                    'createdAt' => $event->created_at
+//                ]
+//            );
+//
+//            $eventIds[$event->id] = $newEvent->id;
+//        }
+//
+//        $this->info('Migrated ' . count($eventIds) . ' events');
+//
+//
+//        /* Posts */
+//        $this->info('Starting migration of posts...');
+//
+//        $postCount = 0;
+//
+//        foreach(Post::with(['author', 'category'])->get() as $post){
+//            \App\Mongo\Post::create(
+//                [
+//                    'title' => $post->title,
+//                    'body' => $post->content,
+//                    'category' => $post->category->name,
+//                    'createdAt' => $post->created_at
+//                ]
+//            );
+//
+//            $postCount++;
+//        }
+//
+//        $this->info('Migrated ' . $postCount . ' posts');
+
+
+        /* Finish */
+        $this->info('Finished migration');
     }
 
     /**
