@@ -130,7 +130,8 @@ return array(
         'Tappleby\AuthToken\AuthTokenServiceProvider',
         'Barryvdh\Cors\CorsServiceProvider',
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
-        'Codesleeve\LaravelStapler\LaravelStaplerServiceProvider'
+        'Codesleeve\LaravelStapler\LaravelStaplerServiceProvider',
+        'Jenssegers\Mongodb\MongodbServiceProvider',
 
 	),
 
@@ -204,7 +205,8 @@ return array(
         'Carbon'            => 'Carbon\Carbon',
         'API'               => 'Dingo\Api\Facades\API',
         'Rocketeer'         => 'Rocketeer\Facades\Rocketeer',
-        'AuthToken'         => 'Tappleby\Support\Facades\AuthToken'
+        'AuthToken'         => 'Tappleby\Support\Facades\AuthToken',
+        'Moloquent'       => 'Jenssegers\Mongodb\Model',
 
 	),
 
