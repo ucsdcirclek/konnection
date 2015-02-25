@@ -83,7 +83,7 @@ class User extends Ardent implements UserInterface, RemindableInterface, Transfo
         'activities' => array(self::HAS_MANY, 'Activity'),
         'events_created' => array(self::HAS_MANY, 'CalendarEvent'),
         'registrations' => array(self::HAS_MANY, 'EventRegistration'),
-        'profile' => array(self::HAS_ONE, 'Profile'),
+        'profile' => array(self::HAS_ONE, 'Profile', 'otherKey' => 'id', 'foreignKey' => 'id'),
         'posts' => array(self::HAS_MANY, 'Post')
     );
 

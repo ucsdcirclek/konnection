@@ -23,7 +23,7 @@ class Profile extends Ardent
 {
 
     public static $relationsData = array(
-        'user' => array(self::BELONGS_TO, 'User', 'foreign_key' => 'id')
+        'user' => array(self::BELONGS_TO, 'User', 'foreignKey' => 'id')
     );
 
     protected $guarded = array('id');
