@@ -86,8 +86,8 @@ return array(
         'mongodb' => array(
             'driver'   => 'mongodb',
             'host'     => 'localhost',
-            'port'     => 27017,
-            'database' => 'konnection'
+            'port'     => 3001,
+            'database' => 'meteor'
         ),
 
 	),

@@ -31,6 +31,18 @@ class MigrateMongo extends Command
         parent::__construct();
     }
 
+    private function getRandomString($length = 17)
+    {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $string = '';
+
+        for ($i = 0; $i < $length; $i++) {
+            $string .= $characters[mt_rand(0, strlen($characters) - 1)];
+        }
+
+        return $string;
+    }
+
     /**
      * Execute the console command.
      *
@@ -45,31 +57,33 @@ class MigrateMongo extends Command
 
         foreach (User::with('profile')->get() as $user) {
             // Insert into Mongo
-            $newUser = \App\Mongo\User::create(
+            $newUser = new \App\Mongo\User;
+            $newUser->_id = $this->getRandomString();
+            $newUser->username = $user->username;
+            $newUser->emails = [
                 [
-                    'username' => $user->username,
-                    'emails' => [
-                        'address' => $user->email,
-                        'verified' => true
-                    ],
-                    'profile' => [
-                        'firstName' => $user->first_name,
-                        'lastName' => $user->last_name,
-                        'phone' => $user->phone,
-                        'college' => $user->profile->college,
-                        'bio' => $user->profile->bio
-                    ],
-                    'services' => [
-                        'password' => [
-                            'bcrypt' => $user->password
-                        ]
-                    ],
-                    'createdAt' => new MongoDate($user->created_at->getTimestamp())
+                    'address' => $user->email,
+                    'verified' => true
                 ]
-            );
+            ];
+            $newUser->profile = [
+                'firstName' => $user->first_name,
+                'lastName' => $user->last_name,
+                'phone' => $user->phone,
+                'college' => $user->profile->college,
+                'bio' => $user->profile->bio
+            ];
+            $newUser->services = [
+                'password' => [
+                    'bcrypt' => str_replace("$2y$", "$2a$", $user->password)
+                ]
+            ];
+            $newUser->createdAt = new MongoDate($user->created_at->getTimestamp());
+
+            $newUser->save();
 
             // Store ID for reference
-            $userIds[$user->id] = new MongoId($newUser->id);
+            $userIds[$user->id] = $newUser->id;
         }
 
         $this->info('Migrated ' . count($userIds) . ' users');
@@ -81,25 +95,26 @@ class MigrateMongo extends Command
 
         foreach (CalendarEvent::all() as $event) {
             // Insert into Mongo
-            $eventFields = [
-                'title' => $event->title,
-                'description' => $event->description,
-                'eventLocation' => $event->event_location,
-                'meetingLocation' => $event->meeting_location,
-                'startTime' => new MongoDate($event->start_time->getTimestamp()),
-                'endTime' => new MongoDate($event->end_time->getTimestamp()),
-                'openTime' => !empty($event->open_time) ? new MongoDate($event->open_time->getTimestamp()) : null,
-                'closeTime' => new MongoDate($event->close_time->getTimestamp()),
-                'createdBy' => $userIds[$event->creator_id],
-                'createdAt' => new MongoDate($event->created_at->getTimestamp())
-            ];
+            $newEvent = new \App\Mongo\CalendarEvent;
+            $newEvent->_id = $this->getRandomString();
+            $newEvent->title = $event->title;
+            $newEvent->description = $event->description;
+            $newEvent->eventLocation = $event->event_location;
+            $newEvent->meetingLocation = $event->meeting_location;
+            $newEvent->startTime = new MongoDate($event->start_time->getTimestamp());
+            $newEvent->endTime = new MongoDate($event->end_time->getTimestamp());
+            $newEvent->openTime = !empty($event->open_time) ? new MongoDate($event->open_time->getTimestamp()) : null;
+            $newEvent->closeTime = new MongoDate($event->close_time->getTimestamp());
+            $newEvent->createdBy = $userIds[$event->creator_id];
+            $newEvent->createdAt = new MongoDate($event->created_at->getTimestamp());
 
-            if(!isset($event->open_time))
-                unset($eventFields['openTime']);
+            if (!isset($event->open_time)) {
+                unset($newEvent['openTime']);
+            }
 
-            $newEvent = \App\Mongo\CalendarEvent::create($eventFields);
+            $newEvent->save();
 
-            $eventIds[$event->id] = new MongoId($newEvent->id);
+            $eventIds[$event->id] = $newEvent->id;
         }
 
         $this->info('Migrated ' . count($eventIds) . ' events');
@@ -111,24 +126,28 @@ class MigrateMongo extends Command
         foreach (EventRegistration::all() as $reg) {
             $roles = [];
 
-            if($reg->photographer_status)
+            if ($reg->photographer_status) {
                 $roles[] = 'photographer';
-            if($reg->writer_status)
+            }
+            if ($reg->writer_status) {
                 $roles[] = 'writer';
-            if($reg->driver_status)
+            }
+            if ($reg->driver_status) {
                 $roles[] = 'driver';
+            }
 
-            $newReg = [
-                'user' => $userIds[$reg->user_id],
-                'event' => $eventIds[$reg->event_id]
-            ];
+            $registration = new \App\Mongo\EventRegistration;
+            $registration->_id = $this->getRandomString();
+            $registration->user = $userIds[$reg->user_id];
+            $registration->event = $eventIds[$reg->event_id];
 
-            if(!empty($roles))
-                $newReg['roles'] = $roles;
+            if (!empty($roles)) {
+                $registration->roles = $roles;
+            }
 
-            $newReg['createdAt'] = new MongoDate($reg->created_at->getTimestamp());
+            $registration->createdAt = new MongoDate($reg->created_at->getTimestamp());
 
-            \App\Mongo\EventRegistration::create($newReg);
+            $registration->save();
 
             $regCount++;
         }
@@ -138,16 +157,16 @@ class MigrateMongo extends Command
         $this->info('Starting migration of guest event registrations...');
         $regCount = 0;
         foreach (GuestRegistration::all() as $reg) {
-            $newReg = [
-                'guest' => [
-                    'name' => $reg->first_name . ' ' . $reg->last_name,
-                    'phone' => $reg->phone
-                ],
-                'event' => $eventIds[$reg->event_id],
-                'createdAt' => new MongoDate($reg->created_at->getTimestamp())
+            $registration = new \App\Mongo\EventRegistration;
+            $registration->_id = $this->getRandomString();
+            $registration->guest = [
+                'name' => $reg->first_name . ' ' . $reg->last_name,
+                'phone' => $reg->phone
             ];
+            $registration->event = $eventIds[$reg->event_id];
+            $registration->createdAt = new MongoDate($reg->created_at->getTimestamp());
 
-            \App\Mongo\EventRegistration::create($newReg);
+            $registration->save();
 
             $regCount++;
         }
@@ -160,16 +179,16 @@ class MigrateMongo extends Command
 
         $postCount = 0;
 
-        foreach(Post::with(['author', 'category'])->get() as $post){
-            \App\Mongo\Post::create(
-                [
-                    'title' => $post->title,
-                    'body' => $post->content,
-                    'category' => $post->category->name,
-                    'createdBy' => $userIds[$post->author->id],
-                    'createdAt' => new MongoDate($post->created_at->getTimestamp())
-                ]
-            );
+        foreach (Post::with(['author', 'category'])->get() as $post) {
+            $newPost = new \App\Mongo\Post;
+            $newPost->_id = $this->getRandomString();
+            $newPost->title = $post->title;
+            $newPost->body = $post->content;
+            $newPost->category = $post->category->name;
+            $newPost->createdBy = $userIds[$post->author->id];
+            $newPost->createdAt = new MongoDate($post->created_at->getTimestamp());
+
+            $newPost->save();
 
             $postCount++;
         }
