@@ -145,6 +145,13 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+        /*
+         * Package Service Providers...
+         */
+        'Zizaco\Entrust\EntrustServiceProvider',
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+
+
 	],
 
 	/*
@@ -192,6 +199,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+        'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 
 	],
 
