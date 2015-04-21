@@ -150,6 +150,7 @@ return [
          */
         'Zizaco\Entrust\EntrustServiceProvider',
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 
 
 	],
