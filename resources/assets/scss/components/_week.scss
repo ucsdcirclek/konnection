@@ -1,0 +1,71 @@
+ul.week {
+  @include row(table);
+
+  > li.featured {
+    background-color: $red;
+    color: white;
+
+    h5 {
+      color: white;
+      border-bottom: 1px solid white;
+    }
+
+    .title {
+      font-size: 1em;
+    }
+
+    .info {
+      text-align: center;
+    }
+  }
+
+  > li:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  > li:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  > li {
+    @include span-columns(2 of 8);
+    @include pad();
+    background-color: white;
+    border-right: 1px dotted $light-gray;
+
+    h5 {
+      text-align: center;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $light-gray;
+    }
+
+    .title {
+      font-size: .9em;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 0;
+
+      a {
+        @extend a;
+        color: $dark-gray;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    .date {
+      text-align: center;
+      font-style: italic;
+      font-size: .8em;
+    }
+
+    .info {
+      font-size: .7em;
+    }
+
+  }
+}

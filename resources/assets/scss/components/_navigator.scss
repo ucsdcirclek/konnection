@@ -1,0 +1,55 @@
+.navigator {
+  @include span-columns(12);
+  background-color: #fff;
+
+  .selections {
+    @include span-columns(3);
+    min-height: 80vh;
+    background-color: #fff;
+    padding: .55em;
+    text-align: center;
+
+    h3 {
+      font-size: 1em;
+      padding-bottom: 5px;
+      border-bottom: 2px solid $light-gray;
+      margin: .5em;
+      margin-top: 1em;
+    }
+
+    ul li {
+      margin: auto .5em;
+      text-align: left;
+      padding-bottom: .2em;
+      border-bottom: 1px dotted $light-gray;
+      margin-bottom: .2em;
+
+      a {
+        @extend a;
+        color: $dark-gray;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+  }
+
+  .viewport {
+    @include span-columns(9);
+    @include omega;
+    border-left: 1px solid $light-gray;
+    padding: 1em;
+    background-color: $cream;
+    min-height: 80vh;
+  }
+
+  a {
+    color: $red;
+  }
+
+  a:hover {
+    color: lighten($red, 10%);
+  }
+}

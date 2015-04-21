@@ -1,0 +1,68 @@
+.slider {
+  $slider-background: $dark-gray;
+
+  background-color: $slider-background;
+
+  li {
+    min-height: 300px;
+  }
+
+  .content {
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .4);
+    height: 300px;
+    max-width: 400px;
+    padding: 1em;
+
+    * {
+      color: white;
+    }
+
+    a {
+      color: white;
+      border-bottom: 1px solid white;
+
+      &:hover {
+        color: darken(white, 3%);
+        border-bottom: 1px solid darken(white, 3%);
+      }
+    }
+
+    .text {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .carousel-slider {
+    background-color: $slider-background;
+  }
+
+  .rn-carousel-container {
+    padding-top: 20px;
+    background-color: $slider-background;
+
+    .rn-carousel-indicator {
+      background-color: $slider-background;
+      color: $light-gray;
+      span {
+        -webkit-transition: color .2s ease-out;
+        transition: color .2s ease-out;
+        padding: 0 5px;
+        color: $medium-gray;
+      }
+      .active {
+        color: white;
+      }
+    }
+
+
+    .rn-carousel-sliders {
+      background: $slider-background;
+    }
+  }
+
+}
+

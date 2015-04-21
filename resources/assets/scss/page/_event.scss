@@ -1,0 +1,104 @@
+#event {
+  @include span-columns(12);
+
+  #navigator {
+    @include span-columns(3);
+    min-height: 80vh;
+    border-right: 1px solid $light-gray;
+    padding: 1em;
+    background-color: #fff;
+    padding: .55em;
+    text-align: center;
+
+    h3 {
+      font-size: 1em;
+      padding-bottom: 5px;
+      border-bottom: 2px solid $light-gray;
+      margin: .5em;
+      margin-top: 1em;
+    }
+
+    ul li {
+      margin: auto .5em;
+      text-align: left;
+      padding-bottom: .2em;
+      border-bottom: 1px dotted $light-gray;
+      margin-bottom: .2em;
+    }
+
+  }
+
+  #viewport {
+    @include span-columns(9);
+    @include omega;
+    padding: 1em;
+  }
+}
+
+#viewport {
+  .head {
+    @include span-columns(12);
+    display: block;
+    border-bottom: 1px solid $light-gray;
+
+    .event-info {
+      @include span-columns(8);
+    }
+
+    .signup {
+      @include span-columns(4);
+
+      button {
+        float: right;
+      }
+    }
+
+    p {
+      font-weight: bold;
+    }
+  }
+
+
+  .left {
+    @include span-columns(8);
+    padding-top: .8em;
+    border-right: 1px solid $light-gray;
+  }
+
+  .right {
+    @include span-columns(4);
+    padding-top: .8em;
+    text-align: center;
+
+    .chair {
+      text-align: center;
+    }
+
+    .oi[data-glyph] {
+      padding-top: 2px;
+      padding-left: 10px;
+      float: left;
+    }
+
+    li {
+      vertical-align: middle;
+    }
+  }
+
+  .registrations {
+    border-top: 1px solid $light-gray;
+    margin-top: 1em;
+    padding-top: 1em;
+    @include span-columns(12);
+
+    ul li {
+      @include span-columns(2);
+      @include omega(6n);
+    }
+  }
+
+  h4 {
+    margin-bottom: .5em;
+  }
+
+}

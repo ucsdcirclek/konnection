@@ -1,0 +1,64 @@
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  @include outer-container;
+  background: url('../images/treesbg.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: $light-green;
+  height: 100%;
+  min-width: em(700);
+  margin: 0 auto;
+}
+
+#container{
+  @include span-columns(12);
+  background: $cream;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 2em;
+}
+
+.wrapper {
+  padding: 5%;
+}
+
+#header-image {
+  @include span-columns(12);
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+
+  h1 {
+    line-height: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+#loading-bar {
+  .bar {
+    background: $red;
+  }
+
+  .peg {
+    -moz-box-shadow: $red 1px 0 6px 1px;
+    -ms-box-shadow: $red 1px 0 6px 1px;
+    -webkit-box-shadow: $red 1px 0 6px 1px;
+    box-shadow: $red 1px 0 6px 1px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+
+  .spinner-icon {
+    border-top-color:  $red;
+    border-left-color: $red;
+  }
+}
+
+

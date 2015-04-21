@@ -1,0 +1,19 @@
+#admin-link {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  padding: .5em;
+  padding-left: 1em;
+  color: #fff;
+  border-bottom-left-radius: 2em;
+
+  a {
+    @extend a;
+    color: #fff;
+
+    &:hover {
+      color: darken(#fff, 5%);
+    }
+  }
+}

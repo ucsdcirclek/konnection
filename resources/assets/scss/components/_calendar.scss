@@ -1,0 +1,72 @@
+.calendar {
+  margin: 2%;
+
+  table {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .fc-day-header {
+    background-color: $green;
+    color: white;
+    font-weight: 400;
+    padding: 10px;
+  }
+//
+  .fc-day {
+    @include transition(background-color 0.1s linear);
+    background: white;
+    &:hover {
+      background: #eee;
+    }
+  }
+//
+//  .fc-event-hori {
+//    @include transition(background-color 0.1s linear);
+//    background-color: $red;
+//    color: $white;
+//    padding-left: 5px;
+//    padding-right: 5px;
+//    border-color: $light-gray;
+//    cursor: pointer;
+//
+//    &:hover {
+//      background-color: darken($red, 5%);
+//    }
+//
+//    &.fc-event-end {
+//      border-top-right-radius: 10px;
+//      border-bottom-right-radius: 10px;
+//    }
+//
+//    &.fc-event-start {
+//      border-top-left-radius: 10px;
+//      border-bottom-left-radius: 10px;
+//    }
+//  }
+//
+
+  .fc-content {
+    padding: 0 1px;
+    word-wrap: break-word;
+  }
+
+  button:hover {
+    color: #333;
+    background-color: #e6e6e6;
+  }
+
+  .fc-other-month {
+    background: #F2F2F2;
+  }
+
+  .fc-day-number {
+    background-color: $green;
+    top:20px;
+    padding:4px;
+    margin: 5px;
+    font-weight:bold;
+    font-size: 12px;
+    width:25px;
+  }
+}

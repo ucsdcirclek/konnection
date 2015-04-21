@@ -1,0 +1,73 @@
+.avatar {
+  text-align: center;
+
+  .avatar-wrapper {
+    float: left;
+    position: relative;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .overlay {
+    position:absolute; /* absolute position (so we can position it where we want)*/
+    bottom:0px; /* position will be on bottom */
+    left: 0px;
+    width: 100%;
+
+    * {
+      float: left;
+      padding: 2px;
+      display: inline-block;
+      border-radius: 50%;
+      font-size: .6em;
+      width: auto;
+      background-color: white;
+      color: $red;
+      text-align: center;
+      margin-right: 1px;
+    }
+  }
+
+  .name {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  &.large {
+    img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
+
+  &.small {
+    img {
+      width: 75px;
+      height: 75px;
+    }
+
+    .name {
+      font-size: .8em;
+    }
+  }
+
+
+
+  .info {
+    line-height: 1em;
+    padding-top: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+}

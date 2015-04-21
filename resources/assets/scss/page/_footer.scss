@@ -1,0 +1,27 @@
+footer {
+  @include outer-container;
+
+  #logos {
+    @include span-columns(6 of 16);
+    @include shift(5 of 16);
+    margin-bottom: 1em;
+
+    .logo {
+      @include span-columns(2 of 6);
+      @include omega(3n);
+    }
+  }
+
+  p {
+    @include span-columns(6);
+    @include shift(3);
+
+    text-align: center;
+    color: white;
+
+    &#credits {
+      font-size: .8em;
+    }
+  }
+
+}

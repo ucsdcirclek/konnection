@@ -1,0 +1,99 @@
+#content {
+  #main {
+    @include span-columns(8);
+    padding: 20px 10px 10px 10px;
+    height: 100%;
+
+    h2 {
+      margin-top: .2em;
+      padding-top: .3em;
+      padding-bottom: .3em;
+      margin-bottom: .3em;
+      border-bottom: 1px solid $light-gray;
+    }
+  }
+
+  #sidebar {
+    @include span-columns(4);
+    @include omega();
+    @include reset-display;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    h2 {
+      padding-bottom: .3em;
+      margin-bottom: .3em;
+      border-bottom: 1px solid $light-gray;
+    }
+  }
+
+  .social-media {
+    text-align: center;
+    margin-top: 1em;
+    color: $red;
+
+    a {
+      @extend a;
+      color: $red;
+      margin: 1em;
+
+      &:hover {
+        color: darken($red, 5%);
+      }
+    }
+
+    i {
+      color: $base-font-color;
+
+      &:hover {
+        color: darken($base-font-color, 5%);
+      }
+    }
+  }
+
+  .button-text {
+    color: #ffffff;
+  }
+
+  .pulse-repeat {
+    animation: pulse 1s infinite;
+  }
+
+  #announcements {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+
+    h3, h4, h5, h6 {
+      color: $base-font-color;
+    }
+
+    h3 {
+      border-bottom: 2px dotted $light-gray;
+
+      small {
+        color: $medium-gray;
+        font-size: .7em;
+      }
+    }
+
+    .date {
+      font-style: italic;
+      color: $medium-gray;
+    }
+
+    article {
+      border-bottom: 2px solid $light-gray;
+      padding: 5px 0;
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}

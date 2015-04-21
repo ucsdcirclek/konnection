@@ -1,0 +1,25 @@
+.btn-group {
+  display: inline-block;
+
+  button {
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  & > button:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+
+  & > button:first-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & > button:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom: 0;
+  }
+
+}
