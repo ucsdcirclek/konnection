@@ -113,8 +113,7 @@ class EventsController extends \BaseController
 
         // Make sure event is open for registration
         if (Carbon::now() < $event->open_time || Carbon::now() > $event->close_time) {
-            throw new Dingo\Api\Exception\StoreResourceFailedException('The user is not allowed to register for this
-            event at this time.');
+            throw new Dingo\Api\Exception\StoreResourceFailedException('Could not register user for event.');
         }
 
         // Register guest
