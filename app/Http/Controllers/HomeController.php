@@ -1,36 +1,42 @@
 <?php namespace App\Http\Controllers;
 
-class HomeController extends Controller {
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
-	/*
-	|--------------------------------------------------------------------------
-	| Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders your application's "dashboard" for users that
-	| are authenticated. Of course, you are free to change or remove the
-	| controller as you wish. It is just here to get your app started!
-	|
-	*/
+use Illuminate\Http\Request;
 
-	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}
+use App\Event;
+use App\Post;
+use App\Slide;
 
-	/**
-	 * Show the application dashboard to the user.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		return view('home');
-	}
+class HomeController extends Controller
+{
+
+    public function index()
+    {
+        // Get events
+        $events = Event::whereBetween(
+            [
+                Carbon::now()->startOfDay(),
+                Carbon::now()->addDays(2)->endOfDay()
+            ]
+        )
+            ->sortBy('start_time')
+            ->get()
+            ->groupBy(
+                function ($date) {
+                    return Carbon::parse($date->start_time)->format('l'); // grouping data by day
+                }
+            );
+
+        // Get posts
+        $posts = Post::latest()->take(3)->get();
+
+        // Get slides
+        $slides = Slide::all();
+
+        return view('pages.home', compact('events', 'posts', 'slides'));
+    }
 
 }
