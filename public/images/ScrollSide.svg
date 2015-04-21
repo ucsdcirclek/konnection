@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="50px" height="110px" viewBox="0 0 50 110" enable-background="new 0 0 50 110" xml:space="preserve">
+<polygon fill="#937643" points="26.887,88.85 41.68,88.85 41.68,75.721 "/>
+<polygon fill="#D8BD83" points="43.761,74.875 26.887,75.082 26.887,88.85 "/>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="3.26" y="4" width="44.813" height="102.938"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<path clip-path="url(#SVGID_2_)" fill="#D2B978" d="M6.634,62.219c0,0-0.844,8.436,6.75,11.812
+			c7.593,3.377,30.373,0.844,30.373,0.844v-22.78H6.634V62.219z"/>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_3_" x="3.26" y="4" width="44.813" height="102.938"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  overflow="visible"/>
+		</clipPath>
+		<path clip-path="url(#SVGID_4_)" fill="#F3E199" d="M24.354,7.376c0,0-0.844-3.375-10.125-3.375
+			C4.947,4.001,3.26,9.064,3.26,9.064L6.634,64.75c0,0,5.063-10.123,13.5-10.123c6.752,0,5.062,4.219,5.062,4.219L24.354,7.376z"/>
+	</g>
+</g>
+<rect x="22.457" y="9.359" fill="#F3E199" width="23.284" height="50"/>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_5_" x="3.26" y="4" width="44.813" height="102.938"/>
+		</defs>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  overflow="visible"/>
+		</clipPath>
+		<path clip-path="url(#SVGID_6_)" fill="#937643" d="M17.604,54.895v8.434c0,0,8.436,0,8.436-5.059
+			C26.04,53.205,17.604,54.895,17.604,54.895"/>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_7_" x="3.26" y="4" width="44.813" height="102.938"/>
+		</defs>
+		<clipPath id="SVGID_8_">
+			<use xlink:href="#SVGID_7_"  overflow="visible"/>
+		</clipPath>
+		<path clip-path="url(#SVGID_8_)" fill="#967B4A" d="M32.791,88.713v10.021c0,4.561,4.558,8.203,4.558,8.203
+			s-1.823-6.379-0.912-10.936c0.912-4.557,5.466-7.289,5.466-7.289H32.791z"/>
+	</g>
+</g>
+</svg>
