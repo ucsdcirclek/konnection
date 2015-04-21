@@ -35,8 +35,58 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     protected $with = array('roles');
 
-//    public function activity() {
-//        return $this->hasMany('App\Activity');
-//    }
+    /**
+     * Relationships
+     */
+
+    /**
+     * User's activity log
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function activities()
+    {
+        return $this->hasMany('App\Activity');
+    }
+
+    /**
+     * Events the user has created
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function events_created()
+    {
+        return $this->hasMany('App\Event');
+    }
+
+    /**
+     * Events user has registered for
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function event_registrations()
+    {
+        return $this->hasMany('App\EventRegistrations');
+    }
+
+    /**
+     * User's profile
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function profile()
+    {
+        return $this->hasOne('App\Profile');
+    }
+
+    /**
+     * Posts the user has created
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
 
 }
