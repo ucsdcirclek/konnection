@@ -1,6 +1,8 @@
 <?php
 
-use Faker\Factory as Faker;
+use Illuminate\Database\Seeder;
+
+use App\PostCategory;
 
 class PostCategoriesTableSeeder extends Seeder
 {

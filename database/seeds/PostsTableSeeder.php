@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Database\Seeder;
+
 use Faker\Factory as Faker;
+
+use App\Post;
 
 class PostsTableSeeder extends Seeder
 {

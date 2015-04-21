@@ -1,7 +1,10 @@
 <?php
 
-// Composer: "fzaninotto/faker": "v1.3.0"
+use Illuminate\Database\Seeder;
+
 use Faker\Factory as Faker;
+
+use App\EventRegistration;
 
 class EventRegistrationsTableSeeder extends Seeder
 {
@@ -17,8 +20,7 @@ class EventRegistrationsTableSeeder extends Seeder
             EventRegistration::create(
                 array(
                     'user_id' => $i,
-                    'event_id' => $i,
-                    'chair_status' => 1
+                    'event_id' => $i
                 )
             );
         }

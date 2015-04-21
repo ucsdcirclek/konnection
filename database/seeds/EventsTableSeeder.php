@@ -1,7 +1,10 @@
 <?php
 
-// Composer: "fzaninotto/faker": "v1.3.0"
+use Illuminate\Database\Seeder;
+
 use Faker\Factory as Faker;
+
+use App\Event;
 
 class EventsTableSeeder extends Seeder
 {
@@ -18,8 +21,9 @@ class EventsTableSeeder extends Seeder
             $end_time->add(new DateInterval('PT10H'));
             $close_time = new DateTime((string) date_format($start_time, 'Y-m-d H:i:s'));
             $close_time->sub(new DateInterval('P10D'));
+            $open_time = new DateTime();
 
-            CalendarEvent::create(
+            Event::create(
                 array(
                     'creator_id' => 1,
                     'title' => $faker->sentence,
@@ -28,7 +32,8 @@ class EventsTableSeeder extends Seeder
                     'meeting_location' => $faker->streetName,
                     'start_time' => $start_time->format(DateTime::ISO8601),
                     'end_time' => $end_time->format(DateTime::ISO8601),
-                    'close_time' => $close_time->format(DateTime::ISO8601)
+                    'close_time' => $close_time->format(DateTime::ISO8601),
+                    'open_time' => $open_time
                 )
             );
         }

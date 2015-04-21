@@ -1,5 +1,10 @@
 <?php
 
+use Illuminate\Database\Seeder;
+
+use App\Role;
+use App\Permission;
+
 class EntrustSeeder extends Seeder
 {
 

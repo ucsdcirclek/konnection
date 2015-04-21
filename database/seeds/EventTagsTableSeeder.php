@@ -1,14 +1,14 @@
 <?php
 
-use Faker\Factory as Faker;
+use Illuminate\Database\Seeder;
+
+use App\EventTag;
 
 class EventTagsTableSeeder extends Seeder
 {
 
     public function run()
     {
-        $faker = Faker::create();
-
         $tags = array(
             array(
                 'Community Service',
