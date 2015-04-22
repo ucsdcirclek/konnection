@@ -21,24 +21,6 @@ class Event extends Model
         'open_time',
         'close_time'
     );
-    
-    public static $relationsData = array(
-        'category' => array(self::BELONGS_TO, 'EventCategory'),
-        'registrations' => array(self::HAS_MANY, 'EventRegistration', 'foreignKey' => 'event_id'),
-        'guests' => array(self::HAS_MANY, 'GuestRegistration', 'foreignKey' => 'event_id'),
-        'activities' => array(self::HAS_MANY, 'Activity'),
-        'tags' => array(
-            self::BELONGS_TO_MANY,
-            'EventTag',
-            'table' => 'events_assigned_tags',
-            'pivotKeys' => array('tag_id', 'event_id')
-        ),
-        'creator' => array(
-            self::BELONGS_TO,
-            'User',
-            'foreign_key' => 'creator_id'
-        ),
-    );
 
     protected $guarded = array('id');
 

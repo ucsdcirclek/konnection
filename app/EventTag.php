@@ -13,15 +13,6 @@ class EventTag extends Model
 
     use SoftDeletes;
 
-    public static $relationsData = array(
-        'events' => array(
-            self::BELONGS_TO_MANY,
-            'CalendarEvent',
-            'table' => 'events_assigned_tags',
-            'pivotKeys' => array('event_id', 'tag_id')
-        ),
-    );
-
     public static $rules = array(
         'name' => 'required',
         'abbreviation' => 'required|max:3|alpha_num'

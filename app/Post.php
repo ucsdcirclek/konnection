@@ -10,11 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
 
-    public static $relationsData = array(
-        'author' => array(self::BELONGS_TO, 'User', 'foreign_key' => 'author_id'),
-        'category' => array(self::BELONGS_TO, 'PostCategory', 'foreign_key' => 'category_id')
-    );
-
     /**
      *from Asana, At minimum:
      *Author User ID

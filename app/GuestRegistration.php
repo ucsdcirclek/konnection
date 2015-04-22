@@ -8,9 +8,6 @@ use Illuminate\Database\Eloquent\Model;
  * When a guest registers, a GuestRegistration model is created.
  */
 class GuestRegistration extends Model {
-    public static $relationsData = array(
-        'event' => array(self::BELONGS_TO, 'CalendarEvent', 'foreignKey' => 'event_id', 'table' => 'events')
-    );
 
     public static $rules = array(
         'event_id' => 'required|exists:events,id',

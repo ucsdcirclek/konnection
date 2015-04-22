@@ -13,11 +13,6 @@ class EventRegistration extends Model
 
     use SoftDeletes;
 
-    public static $relationsData = array(
-        'user' => array(self::BELONGS_TO, 'User'),
-        'event' => array(self::BELONGS_TO, 'CalendarEvent', 'foreignKey' => 'event_id', 'table' => 'events')
-    );
-
     public static $rules = array(
         'user_id' => 'required|exists:users,id',
         'event_id' => 'required|exists:events,id',

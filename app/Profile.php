@@ -10,10 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
 
-    public static $relationsData = array(
-        'user' => array(self::BELONGS_TO, 'User', 'foreign_key' => 'id')
-    );
-
     protected $guarded = array('id');
 
     /**
