@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index()
     {
         // Get events
-        $events = Event::whereBetween(
+        $days = Event::whereBetween(
             [
                 Carbon::now()->startOfDay(),
                 Carbon::now()->addDays(2)->endOfDay()
@@ -36,7 +36,7 @@ class HomeController extends Controller
         // Get slides
         $slides = Slide::all();
 
-        return view('pages.home', compact('events', 'posts', 'slides'));
+        return view('pages.home', compact('days', 'posts', 'slides'));
     }
 
 }
