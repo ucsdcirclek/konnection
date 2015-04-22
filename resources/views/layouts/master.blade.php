@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="{{ elixir("css/main.css") }}">
-    <script src="{{ elixir("js/vendor/modernizr-2.8.3.min.js")}} "></script>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -72,13 +71,13 @@
     <footer>
         <div id="logos">
             <div class="logo">
-                <a target="_blank" href="http://circlek.org"><img src="{{ elixir('images/logos/cki.png') }}"></a>
+                <a target="_blank" href="http://circlek.org"><img src="{{ asset('images/logos/cki.png') }}"></a>
             </div>
             <div class="logo">
-                <a target="_blank" href="http://cnhcirclek.org"><img src="{{ elixir('images/logos/cnh.png') }}"></a>
+                <a target="_blank" href="http://cnhcirclek.org"><img src="{{ asset('images/logos/cnh.png') }}"></a>
             </div>
             <div class="logo">
-                <a target="_blank" href="http://paradise.cnhcirclek.org/"><img src="{{ elixir('images/logos/paradise.png') }}"></a>
+                <a target="_blank" href="http://paradise.cnhcirclek.org/"><img src="{{ asset('images/logos/paradise.png') }}"></a>
             </div>
         </div>
 
