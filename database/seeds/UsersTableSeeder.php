@@ -26,7 +26,6 @@ class UsersTableSeeder extends Seeder
                 'last_name' => 'User',
                 'email' => 'test@test.com',
                 'password' => 'test1234',
-                'password_confirmation' => 'test1234',
                 'confirmation_code' => md5(uniqid(mt_rand(), true)),
                 'confirmed' => 1
             )
@@ -42,7 +41,6 @@ class UsersTableSeeder extends Seeder
                     'last_name' => $faker->lastName,
                     'email' => $faker->unique()->email,
                     'password' => 'test1234',
-                    'password_confirmation' => 'test1234',
                     'confirmation_code' => md5(uniqid(mt_rand(), true)),
                     'confirmed' => 1
                 )
