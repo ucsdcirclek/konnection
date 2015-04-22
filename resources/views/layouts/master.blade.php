@@ -50,8 +50,8 @@
                     </li>
                     <li class="nav-link"><a href="">contact</a></li>
                     @if (! Auth::check())
-                    <li class="nav-link"><a href="">login</a></li>
-                    <li class="nav-link"><a href="">register</a></li>
+                    <li class="nav-link"><a href="{{ url('/auth/login') }}">login</a></li>
+                    <li class="nav-link"><a href="{{ url('/auth/register') }}">register</a></li>
                     @else
                     <li class="nav-link"><a href="">settings</a></li>
                     @endif
