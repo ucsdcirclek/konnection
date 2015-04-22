@@ -63,7 +63,7 @@
                                 <p class="title"><a href="#">{{ $event->title }}</a></p>
 
                                 <p class="date">
-                                    {{ $event->start_time->format('g:iA to ')}}
+                                    {{ $event->start_time->format('g:iA \\t\\o ')}}
                                     {{ $event->end_time->format('g:iA') }}
                                 </p>
                             </li>
@@ -83,7 +83,7 @@
                     <p class="date">{{ $post->created_at->format('l, F n, Y') }}</p>
 
                     <p>
-                        {!! $post->body !!}
+                        {!! $post->content !!}
                     </p>
                 </article>
                 @endforeach

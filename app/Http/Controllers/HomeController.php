@@ -15,15 +15,17 @@ class HomeController extends Controller
 
     public function index()
     {
+
         // Get events
         $days = Event::whereBetween(
+            'start_time',
             [
                 Carbon::now()->startOfDay(),
                 Carbon::now()->addDays(2)->endOfDay()
             ]
         )
-            ->sortBy('start_time')
             ->get()
+            ->sortBy('start_time')
             ->groupBy(
                 function ($date) {
                     return Carbon::parse($date->start_time)->format('l'); // grouping data by day
