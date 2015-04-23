@@ -33,7 +33,7 @@
                             <li><a href="">Club</a></li>
                         </ul>
                     </li>
-                    <li class="nav-link"><a href="{{-- TODO: link to events --}}">calendar</a></li>
+                    <li class="nav-link"><a href="{{ url('/calendar') }}">calendar</a></li>
                     <li class="nav-link more"><a href="">district</a>
                         <ul class="submenu">
                             <li><a href="">About</a></li>
