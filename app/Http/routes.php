@@ -12,6 +12,12 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('calendar', 'EventsController@index');
+
+Route::group(['namespace' => 'Api', 'prefix' => 'api'], function()
+{
+    Route::get('events', 'EventsController@index');
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
