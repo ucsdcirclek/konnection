@@ -237,7 +237,7 @@
           top: -10px;
           left: -13px;
           width: em(144px);
-          content: url(../images/Ribbon.svg);
+          content: url(/images/Ribbon.svg);
         }
       }
 
@@ -266,7 +266,7 @@
   #corner-left {
     position:absolute;
     display: none;
-    background:url("../images/ScrollSide.svg") no-repeat 0 0;
+    background:url("/images/ScrollSide.svg") no-repeat 0 0;
     top:-9.5px;
     left:-45px;
     width:110px;
@@ -282,7 +282,7 @@
   #corner-right {
     position:absolute;
     display: none;
-    background:url("../images/ScrollSideR.svg") no-repeat 0 0;
+    background:url("/images/ScrollSideR.svg") no-repeat 0 0;
     top: -9.5px;
     right:-102px;
     width:110px;

@@ -5,7 +5,7 @@ html {
 
 body {
   @include outer-container;
-  background: url('../images/treesbg.jpg');
+  background: url('/images/treesbg.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: $light-green;
