@@ -152,6 +152,7 @@ return [
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
+        'Codesleeve\LaravelStapler\Providers\L5ServiceProvider'
 
 
 	],
