@@ -24,6 +24,33 @@ class Event extends Model
 
     protected $guarded = array('id');
 
+
+    /**
+     * Functions
+     */
+
+    /**
+     * Checks whether or not the event is open for registration
+     *
+     * @return bool
+     */
+    public function isOpen()
+    {
+        return Carbon::now() > $this->open_time && Carbon::now() < $this->close_time;
+    }
+
+    /**
+     * Checks whether or not the user is registered for the event
+     *
+     * @param $id User ID
+     * @return bool
+     */
+    public function isRegistered($id)
+    {
+        return (bool) $this->registrations()->where('user_id', '=', $id)->first();
+    }
+
+
     /**
      * Relationships
      */
