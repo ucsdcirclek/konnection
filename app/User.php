@@ -12,7 +12,23 @@ use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract, StaplerableInterface {
 
-	use Authenticatable, CanResetPassword, EntrustUserTrait, EloquentTrait;
+	use Authenticatable, CanResetPassword, EloquentTrait, EntrustUserTrait;
+
+    public static function boot()
+    {
+        parent::boot();
+
+        // Hack for Entrust because it doesn't have a boot method
+        static::deleting(function($user) {
+            if (!method_exists(Config::get('auth.model'), 'bootSoftDeletingTrait')) {
+                $user->roles()->sync([]);
+            }
+
+            return true;
+        });
+
+        static::bootStapler();
+    }
 
     public function __construct(array $attributes = array()) {
         $this->hasAttachedFile('avatar', [
