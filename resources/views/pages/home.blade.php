@@ -2,41 +2,36 @@
 
 @section('content')
     <div class="slider">
-        <ul>
-            <li style="background: url(images/slider/key2college.jpg); background-position: center; background-size: cover;">
-                <div class="content">
-                    <div class="text">
-                        <h2>Key 2 College</h2>
-                        <br/>
+        <div style="background: url(images/slider/key2college.jpg); background-position: center; background-size: cover;">
+            <div class="content">
+                <div class="text">
+                    <h2>Key 2 College</h2>
+                    <br/>
 
-                        <p>UCSD Circle K International cordially invites you to its annual Key2College, an event for high school
-                            students to learn more about the magical world of college here at UC San Diego. You can expect a helpful
-                            workshops, tours, performances and cool raffle prizes!</p>
+                    <p>UCSD Circle K International cordially invites you to its annual Key2College, an event for high school students to learn more about the magical world of college here at UC San Diego. You can expect a helpful workshops, tours, performances and cool raffle prizes!</p>
 
-                        <p><a
-                                    target="_blank"
-                                    href="https://www.facebook.com/events/1759938677564708/">Visit the event page</a></p>
-                    </div>
+                    <p><a
+                                target="_blank"
+                                href="https://www.facebook.com/events/1759938677564708/">Visit the event page</a></p>
                 </div>
-            </li>
+            </div>
+        </div>
 
-            <li style="background: url(images/slider/aboard.png); background-position: center; background-size: cover;">
-                <div class="content">
-                    <div class="text">
-                        <h2>Apply for Appointed Board</h2>
-                        <br/>
+        <div style="background: url(images/slider/aboard.png); background-position: center; background-size: cover;">
+            <div class="content">
+                <div class="text">
+                    <h2>Apply for Appointed Board</h2>
+                    <br/>
 
-                        <p>Make a difference in the club and an even bigger difference in the community by applying to be on board!
-                            As a member of board, the future of our club is in YOUR hands!</p>
+                    <p>Make a difference in the club and an even bigger difference in the community by applying to be on board! As a member of board, the future of our club is in YOUR hands!</p>
 
-                        <p><a
-                                    target="_blank"
-                                    href="http://bit.ly/ucsdckiaboardapp">Download the application</a></p>
-                    </div>
+                    <p><a
+                                target="_blank"
+                                href="http://bit.ly/ucsdckiaboardapp">Download the application</a></p>
                 </div>
-            </li>
+            </div>
+        </div>
 
-        </ul>
     </div>
 
     <div id="content">
@@ -50,7 +45,8 @@
                     <p class="date">February 22</p>
 
                     <p class="info">
-                        The Alpha Project is a nonprofit, human services organization that serves over 4,000 men, women, and
+                        The Alpha Project is a nonprofit, human services organization that serves over 4,000 men, women,
+                        and
                         children each day. We will assist them by serving dinner to the homeless!
                     </p>
                 </li>
@@ -59,19 +55,19 @@
                         <h5>{{$day}}</h5>
                         <ul>
                             @foreach ($events as $event)
-                            <li>
-                                <p class="title">
-                                    <a href="{{ action('EventsController@show', $event->slug) }}">
-                                        {{ $event->title }}
-                                    </a>
-                                </p>
+                                <li>
+                                    <p class="title">
+                                        <a href="{{ action('EventsController@show', $event->slug) }}">
+                                            {{ $event->title }}
+                                        </a>
+                                    </p>
 
-                                <p class="date">
-                                    {{ $event->start_time->format('g:iA \\t\\o ')}}
-                                    {{ $event->end_time->format('g:iA') }}
-                                </p>
-                            </li>
-                                @endforeach
+                                    <p class="date">
+                                        {{ $event->start_time->format('g:iA \\t\\o ')}}
+                                        {{ $event->end_time->format('g:iA') }}
+                                    </p>
+                                </li>
+                            @endforeach
                         </ul>
                     </li>
                 @endforeach
@@ -81,15 +77,15 @@
 
             <div id="announcements">
                 @foreach ($posts as $post)
-                <article>
-                    <h3>{{ $post->title }}</h3>
+                    <article>
+                        <h3>{{ $post->title }}</h3>
 
-                    <p class="date">{{ $post->created_at->format('l, F n, Y') }}</p>
+                        <p class="date">{{ $post->created_at->format('l, F n, Y') }}</p>
 
-                    <p>
-                        {!! $post->content !!}
-                    </p>
-                </article>
+                        <p>
+                            {!! $post->content !!}
+                        </p>
+                    </article>
                 @endforeach
             </div>
 
@@ -98,14 +94,14 @@
         <div id="sidebar">
             <div>
                 @if (Auth::check())
-                <h2>Welcome, {{ Auth::user()->first_name }}!</h2>
+                    <h2>Welcome, {{ Auth::user()->first_name }}!</h2>
                 @else
-                <h2>Welcome!</h2>
+                    <h2>Welcome!</h2>
 
-                <p>
-                    If you have account, please <a href="#">login</a>. If you do not, you are invited to <a
-                            href="#">register</a>!
-                </p>
+                    <p>
+                        If you have account, please <a href="#">login</a>. If you do not, you are invited to <a
+                                href="#">register</a>!
+                    </p>
                 @endif
             </div>
             <button ui-sref="membership" class="pulse-repeat red">Become a Member</button>
@@ -123,9 +119,10 @@
 
             <br/>
 
-            <a class="twitter-timeline" href="https://twitter.com/UCSDCircleK" data-widget-id="562119802261495808">Tweets by
+            <a class="twitter-timeline" href="https://twitter.com/UCSDCircleK" data-widget-id="562119802261495808">Tweets
+                by
                 @UCSDCircleK</a>
-            <script>!function(d, s, id) {
+            <script>!function (d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
                     if (!d.getElementById(id)) {
                         js = d.createElement(s);

@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+  $('.slider').slick({
+    autoplay: true
+  });
+
   $('.calendar').fullCalendar({
     class: 'calendar',
     columnFormat: {
