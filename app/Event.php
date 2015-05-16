@@ -2,6 +2,8 @@
 
 use Carbon\Carbon;
 
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -10,10 +12,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *
  * Events that end up on the calendar
  */
-class Event extends Model
+class Event extends Model implements SluggableInterface
 {
 
-    use SoftDeletes;
+    use SoftDeletes, SluggableTrait;
+
+    protected $sluggable = array(
+        'build_from' => 'title',
+        'save_to'    => 'slug',
+    );
 
     protected $dates = array(
         'start_time',

@@ -47,9 +47,9 @@ class EventsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($slug)
 	{
-        $event = Event::findOrFail($id);
+        $event = Event::findBySlug($slug);
         $event->load('creator', 'registrations', 'guests');
 
         // Look for events in the upcoming week
