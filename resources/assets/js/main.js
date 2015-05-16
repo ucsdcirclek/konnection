@@ -32,6 +32,7 @@ $(document).ready(function () {
               title: event.title,
               start: event.start_time,
               end: event.end_time,
+              url: '/events/' + event.slug,
               backgroundColor: '#8B1C23',
               borderColor: '#8B1C23'
             });
