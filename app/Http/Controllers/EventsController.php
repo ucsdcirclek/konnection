@@ -58,7 +58,14 @@ class EventsController extends Controller {
             Carbon::now()->addWeek()
         ];
 
-        $upcoming_events = Event::whereBetween('start_time', $range)->get();
+        $upcoming_events = Event::whereBetween('start_time', $range)
+            ->get()
+            ->sortBy('start_time')
+            ->groupBy(
+                function ($date) {
+                    return Carbon::parse($date->start_time)->format('l'); // grouping data by day
+                }
+            );
 
 		return view('pages.event', compact('event', 'upcoming_events'));
 	}

@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('calendar', 'EventsController@index');
+Route::get('events/{id}', 'EventsController@show');
 
 Route::group(['namespace' => 'Api', 'prefix' => 'api'], function()
 {
