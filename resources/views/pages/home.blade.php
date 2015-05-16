@@ -60,7 +60,11 @@
                         <ul>
                             @foreach ($events as $event)
                             <li>
-                                <p class="title"><a href="#">{{ $event->title }}</a></p>
+                                <p class="title">
+                                    <a href="{{ action('EventsController@show', $event->slug) }}">
+                                        {{ $event->title }}
+                                    </a>
+                                </p>
 
                                 <p class="date">
                                     {{ $event->start_time->format('g:iA \\t\\o ')}}
