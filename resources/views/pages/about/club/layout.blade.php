@@ -4,13 +4,13 @@
 <div id="about" class="wrapper">
   <h1>About Circle K</h1><br />
   <div id="sidebar">
-    <div class="page"><a >General</a></div>
+    <div class="page"><a href="{{ url('about/club/general') }}">General</a></div>
     <hr>
-    <div class="page"><a >Board</a></div>
+    <div class="page"><a href="{{ url('about/club/board') }}">Board</a></div>
     <hr>
-    <div class="page"><a >Structure</a></div>
+    <div class="page"><a href="{{ url('about/club/causes') }}">Causes</a></div>
     <hr>
-    <div class="page"><a >Tenets</a></div>
+    <div class="page"><a href="{{ url('about/club/tenets') }}">Tenets</a></div>
   </div>
   <br /><br />
   <div id="main">

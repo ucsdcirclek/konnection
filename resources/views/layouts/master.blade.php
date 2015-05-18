@@ -27,18 +27,18 @@
             <div class="nav">
                 <div id="corner-left"></div>
                 <ul class="centered-navigation-menu">
-                    <li class="nav-link"><a href="/">home</a></li>
+                    <li class="nav-link"><a href="{{ url('/') }}">home</a></li>
                     <li class="nav-link more"><a href="javascript:void(0)">about</a>
                         <ul class="submenu">
-                            <li><a href="">Circle K</a></li>
-                            <li><a href="">Division</a></li>
-                            <li><a href="">Club</a></li>
+                            <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
+                            <li><a href="{{ url('about/division') }}">Division</a></li>
+                            <li><a href="{{ url('about/club') }}">Club</a></li>
                         </ul>
                     </li>
                     <li class="nav-link"><a href="{{ url('/calendar') }}">calendar</a></li>
                     <li class="nav-link more"><a href="">district</a>
                         <ul class="submenu">
-                            <li><a href="">About</a></li>
+                            <li><a href="{{ url('about/district') }}">About</a></li>
                             <li><a target="_blank" href="http://dcon.cnhcirclek.org/">DCON</a></li>
                             <li><a target="_blank" href="http://ftc.cnhcirclek.org/">FTC</a></li>
                             <li><a target="_blank" href="http://www.cnhcirclek.org/event/7-crazy_kompetition_for_infants_south/">CKI
