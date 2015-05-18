@@ -40,6 +40,7 @@ Route::group(['prefix' => 'about'], function()
     Route::get('division', function() { return view('pages.about.division'); });
     Route::get('membership', function() { return view('pages.about.membership'); });
 });
+Route::get('contact', function() { return view('pages.contact'); });
 
 /**
  * API routes

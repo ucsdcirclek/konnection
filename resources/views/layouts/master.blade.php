@@ -51,7 +51,7 @@
                             <li><a target="_blank" href="http://www.sdsucirclek.com">SDSU Circle K</a></li>
                         </ul>
                     </li>
-                    <li class="nav-link"><a href="">contact</a></li>
+                    <li class="nav-link"><a href="{{ url('contact') }}">contact</a></li>
                     @if (! Auth::check())
                     <li class="nav-link"><a href="{{ url('/auth/login') }}">login</a></li>
                     <li class="nav-link"><a href="{{ url('/auth/register') }}">register</a></li>
