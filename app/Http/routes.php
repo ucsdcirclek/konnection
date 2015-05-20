@@ -25,6 +25,18 @@ Route::group(['middleware' => 'auth'], function()
 });
 
 /**
+ * Admin Areas
+ */
+Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function()
+{
+    Route::get('/', function() { return view('pages.admin.home'); });
+    Route::get('events/create', 'EventsController@create');
+    Route::post('events/create', 'EventsController@store');
+    Route::get('events/update/{slug}', 'EventsController@edit');
+    Route::post('events/update/{slug}', 'EventsController@update');
+});
+
+/**
  * Static pages
  */
 Route::group(['prefix' => 'about'], function()

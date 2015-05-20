@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateEventRequest;
+use App\Http\Requests\UpdateEventRequest;
 
 use Carbon\Carbon;
 
@@ -28,7 +30,7 @@ class EventsController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('pages.admin.events.create');
 	}
 
 	/**
@@ -36,9 +38,22 @@ class EventsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateEventRequest $req)
 	{
-		//
+        $input = $req->all();
+
+        // Set default close time if needed
+        if(!isset($input['close_time']))
+            $input['close_time'] = $input['start_time'];
+
+        // Set default open time if needed
+        if(!isset($input['open_time']))
+            $input['open_time'] = Carbon::now();
+
+        // Create event
+        $event = Event::create($input);
+
+        return redirect()->action('EventsController@show', $event->slug);
 	}
 
 	/**
@@ -76,9 +91,10 @@ class EventsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($slug)
 	{
-		//
+        $event = Event::findBySlug($slug);
+		return view('pages.admin.events.update', compact('event'));
 	}
 
 	/**
@@ -87,9 +103,10 @@ class EventsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(UpdateEventRequest $req, $slug)
 	{
-		//
+        Event::findBySlug($slug)->update($req->all());
+        return redirect()->action('EventsController@show', $slug);
 	}
 
 	/**
