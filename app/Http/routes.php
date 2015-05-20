@@ -16,6 +16,15 @@ Route::get('calendar', 'EventsController@index');
 Route::get('events/{id}', 'EventsController@show');
 
 /**
+ * Authenticated Areas
+ */
+Route::group(['middleware' => 'auth'], function()
+{
+    Route::get('settings', 'UsersController@edit');
+    Route::post('settings', 'UsersController@update');
+});
+
+/**
  * Static pages
  */
 Route::group(['prefix' => 'about'], function()

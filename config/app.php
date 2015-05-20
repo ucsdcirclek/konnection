@@ -152,7 +152,8 @@ return [
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
-        'Codesleeve\LaravelStapler\Providers\L5ServiceProvider'
+        'Codesleeve\LaravelStapler\Providers\L5ServiceProvider',
+        'Collective\Html\HtmlServiceProvider',
 
 
 	],
@@ -204,6 +205,8 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
         'Entrust' => 'Zizaco\Entrust\EntrustFacade',
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
+        'Form' => 'Collective\Html\FormFacade',
+        'Html' => 'Collective\Html\HtmlFacade',
 
 	],
 
