@@ -17,7 +17,7 @@ class UsersController extends Controller {
     public function edit()
     {
         $user = \Auth::user();
-        return view('pages.settings.main', compact('user'));
+        return view('pages.settings.account', compact('user'));
     }
 
 	/**
