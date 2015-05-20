@@ -32,6 +32,8 @@ class UsersController extends Controller {
 		$input = $req->only('avatar', 'password', 'email', 'first_name', 'last_name');
 
         // Update user
+        \Auth::user()->update($input);
+
         return redirect()->action('UsersController@edit')
             ->with('message', 'Your profile has been updated.');
 	}
