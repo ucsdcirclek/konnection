@@ -156,22 +156,22 @@ class Event extends Model implements SluggableInterface
 
     public function setStartTimeAttribute($value)
     {
-        $this->attributes['start_time'] = Carbon::createFromFormat(Carbon::ISO8601, $value);
+        $this->attributes['start_time'] = Carbon::parse($value);
     }
 
     public function setEndTimeAttribute($value)
     {
-        $this->attributes['end_time'] = Carbon::createFromFormat(Carbon::ISO8601, $value);
+        $this->attributes['end_time'] = Carbon::parse($value);
     }
 
     public function setOpenTimeAttribute($value)
     {
-        $this->attributes['open_time'] = Carbon::createFromFormat(Carbon::ISO8601, $value);
+        $this->attributes['open_time'] = Carbon::parse($value);
     }
 
     public function setCloseTimeAttribute($value)
     {
-        $this->attributes['close_time'] = Carbon::createFromFormat(Carbon::ISO8601, $value);
+        $this->attributes['close_time'] = Carbon::parse($value);
     }
 
 }
