@@ -42,6 +42,8 @@ class EventsController extends Controller {
 	{
         $input = $req->all();
 
+        $input['creator_id'] = \Auth::id(); // Set creator ID by default
+
         // Set default close time if needed
         if(!isset($input['close_time']))
             $input['close_time'] = $input['start_time'];
