@@ -5,7 +5,7 @@
         <div class="selections">
             <h3>Posts</h3>
             <ul>
-                <li><a href="">Create Post</a></li>
+                <li><a href="{{ action('PostsController@create') }}">Create Post</a></li>
             </ul>
 
             <h3>Events</h3>

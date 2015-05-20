@@ -30,10 +30,16 @@ Route::group(['middleware' => 'auth'], function()
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function()
 {
     Route::get('/', function() { return view('pages.admin.home'); });
+
+    // Events
     Route::get('events/create', 'EventsController@create');
     Route::post('events/create', 'EventsController@store');
     Route::get('events/update/{slug}', 'EventsController@edit');
     Route::post('events/update/{slug}', 'EventsController@update');
+
+    // Posts
+    Route::get('posts/create', 'PostsController@create');
+    Route::post('posts/create', 'PostsController@store');
 });
 
 /**
