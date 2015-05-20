@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-    @include('pages.settings.nav')
-
     <div id="settings" class="wrapper">
         <h2>Account Settings</h2>
         @if (count($errors) > 0)
@@ -40,6 +38,9 @@
 
         <label for="last_name">Last Name</label>
         {!! \Form::text('last_name') !!}
+
+        <label for="avatar">Avatar</label>
+        {!! \Form::file('avatar') !!}
 
         {!! \Form::submit('Save Settings', ['class' => 'button']) !!}
 

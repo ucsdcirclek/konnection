@@ -29,7 +29,7 @@ class UsersController extends Controller {
 	public function update(UpdateUserRequest $req)
 	{
         // Only take acceptable input
-		$input = $req->only('password', 'email', 'first_name', 'last_name');
+		$input = $req->only('avatar', 'password', 'email', 'first_name', 'last_name');
 
         // Update user
         return redirect()->action('UsersController@edit')

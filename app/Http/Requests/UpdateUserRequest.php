@@ -25,7 +25,8 @@ class UpdateUserRequest extends Request {
 			'email' => 'sometimes|required|email',
             'password_confirmation' => 'confirmed',
             'first_name' => 'sometimes|required',
-            'last_name' => 'sometimes|required'
+            'last_name' => 'sometimes|required',
+            'avatar' => 'image'
 		];
 	}
 
