@@ -13,13 +13,13 @@ class AuthorizedAdmin {
 	 */
 	public function handle($request, Closure $next)
 	{
-        if(!\Auth::user()->hasRole('Administrator'))
+        if(\Auth::user()->hasRole('Officer') || \Auth::user()->hasRole('Administrator'))
         {
-            \Log::warning('A user has attempted to access the administration area and failed.');
-            return response('Unauthorized.', 401);
+            return $next($request);
         }
 
-		return $next($request);
+        \Log::warning('A user has attempted to access the administration area and failed.');
+        return response('Unauthorized.', 401);
 	}
 
 }
