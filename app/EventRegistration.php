@@ -13,16 +13,6 @@ class EventRegistration extends Model
 
     use SoftDeletes;
 
-    public static $rules = array(
-        'user_id' => 'required|exists:users,id',
-        'event_id' => 'required|exists:events,id',
-        'chair_status' => 'boolean',
-        'guest_status' => 'boolean',
-        'photographer_status' => 'boolean',
-        'driver_status' => 'boolean',
-        'passengers' => 'numeric' //number of people driver can take
-    );
-
     protected $guarded = array('id');
 
     /**

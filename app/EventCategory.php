@@ -13,11 +13,6 @@ class EventCategory extends Model
 
     use SoftDeletes;
 
-    public static $rules = array(
-        'name' => 'required',
-        'description' => 'required'
-    );
-
     protected $guarded = array('id');
 
     /**

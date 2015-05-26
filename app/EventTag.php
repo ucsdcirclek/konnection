@@ -13,11 +13,6 @@ class EventTag extends Model
 
     use SoftDeletes;
 
-    public static $rules = array(
-        'name' => 'required',
-        'abbreviation' => 'required|max:3|alpha_num'
-    );
-
     protected $guarded = array('id');
 
 

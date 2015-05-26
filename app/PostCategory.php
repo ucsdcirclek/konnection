@@ -12,11 +12,6 @@ class PostCategory extends Model
 
     public $timestamps = false;
 
-    public static $rules = array(
-        'title' => 'required',
-		'description'=> 'required'
-    );
-
     protected $guarded = array('id');
 
     /**

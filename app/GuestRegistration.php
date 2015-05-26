@@ -9,12 +9,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class GuestRegistration extends Model {
 
-    public static $rules = array(
-        'event_id' => 'required|exists:events,id',
-        'driver_status' => 'boolean',
-        'passengers' => 'numeric' //number of people driver can take
-    );
-
     protected $guarded = array('id');
 
     /**

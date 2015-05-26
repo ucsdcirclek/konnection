@@ -10,20 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
 
-    /**
-     *from Asana, At minimum:
-     *Author User ID
-     *Post Title
-     *content
-     *Post Category
-     */
-    public static $rules = array(
-        'author_id' => 'required|exists:users,id',
-        'category_id' => 'required|exists:post_categories,id',
-        'title' => 'required',
-        'content' => 'required'
-    );
-
     protected $guarded = array('id');
 
     /**
