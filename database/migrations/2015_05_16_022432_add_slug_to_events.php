@@ -16,6 +16,12 @@ class AddSlugToEvents extends Migration {
         {
             $table->string('slug')->after('creator_id');
         });
+
+        // Set any missing slugs
+        foreach (\App\Event::all() as $event)
+        {
+            $event->sluggify();
+        }
 	}
 
 	/**
