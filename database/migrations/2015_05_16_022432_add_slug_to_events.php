@@ -20,7 +20,7 @@ class AddSlugToEvents extends Migration {
         // Set any missing slugs
         foreach (\App\Event::all() as $event)
         {
-            $event->sluggify();
+            $event->resluggify();
         }
 	}
 
