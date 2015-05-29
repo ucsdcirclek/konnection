@@ -74,7 +74,7 @@ $(document).ready(function () {
   $('#unregister-btn').click(function(event) {
     // Unregister user
     $.ajax({
-      url: '/api/events/'+findSlug()+'/registrations/self/delete',
+      url: '/api/events/'+findSlug()+'/registrations/self',
       type: 'DELETE'
     });
 
