@@ -122,7 +122,7 @@ $(document).ready(function () {
 
     // Change button
     var self = $(this);
-    self.attr('disabled');
+    self.prop('disabled', true);
   });
 
   $('#photograph-btn').click(function(event) {
@@ -137,7 +137,7 @@ $(document).ready(function () {
 
     // Change button
     var self = $(this);
-    self.attr('disabled');
+    self.prop('disabled', true);
   });
 
   $('#write-btn').click(function(event) {
@@ -152,7 +152,7 @@ $(document).ready(function () {
 
     // Change button
     var self = $(this);
-    self.attr('disabled');
+    self.prop('disabled', true);
   });
 
 
