@@ -77,7 +77,8 @@ Route::group(['namespace' => 'Api', 'prefix' => 'api'], function()
     Route::get('events', 'EventsController@index');
 
     // Registrations
-    Route::post('events/{slug}/registrations', 'EventRegistrationsController@store');
+    Route::post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
+    Route::delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@destroy');
 });
 
 Route::controllers([

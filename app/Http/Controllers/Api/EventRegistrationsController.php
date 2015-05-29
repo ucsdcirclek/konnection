@@ -107,9 +107,19 @@ class EventRegistrationsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($slug, $id)
 	{
-		//
+        if($id == 'self')
+        {
+            if(\Auth::check())
+            {
+                EventRegistration::where('user_id', '=', Auth::id())->destroy();
+            }
+        }
+        else
+        {
+            EventRegistration::destroy($id);
+        }
 	}
 
 }
