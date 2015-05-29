@@ -37,7 +37,7 @@
                             <li><a href="{{ url('about/club') }}">Club</a></li>
                         </ul>
                     </li>
-                    <li class="nav-link"><a href="{{ url('/calendar') }}">calendar</a></li>
+                    <li class="nav-link"><a href="{{ url('/events') }}">calendar</a></li>
                     <li class="nav-link more"><a href="">district</a>
                         <ul class="submenu">
                             <li><a href="{{ url('about/district') }}">About</a></li>
