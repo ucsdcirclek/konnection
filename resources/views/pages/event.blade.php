@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    {{ $event->slug }}
+@endsection
+
 @section('content')
     <div id="event">
 
@@ -97,17 +101,17 @@
                     <h4>Who's going</h4>
                     <ul>
                         @foreach($event->registrations as $registration)
-                        <li class="avatar small">
+                            <li class="avatar small">
 
-                            <div class="avatar-wrapper">
-                                <img src="{{ $registration->user->avatar->url() }}">
+                                <div class="avatar-wrapper">
+                                    <img src="{{ $registration->user->avatar->url() }}">
 
-                            </div>
+                                </div>
 
 
-                            <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
+                                <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
 
-                        </li>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
@@ -129,19 +133,19 @@
                     <p class="info">{{ $event->creator->phone }}</p>
                 </div>
                 @if($event->isRegistered(Auth::id()))
-                <div>
-                    <h6>Volunteer to be a:</h6>
+                    <div>
+                        <h6>Volunteer to be a:</h6>
 
-                    <div class="btn-group">
-                        <button id="drive-btn" type="button"><i class="fa fa-car"></i> Driver</button>
-                        <br/>
-                        <button id="photograph-btn" type="button"><i class="fa fa-camera"></i>
-                            Photographer
-                        </button>
-                        <br/>
-                        <button id="write-btn" type="button"><i class="fa fa-pencil"></i> Writer</button>
+                        <div class="btn-group">
+                            <button id="drive-btn" type="button"><i class="fa fa-car"></i> Driver</button>
+                            <br/>
+                            <button id="photograph-btn" type="button"><i class="fa fa-camera"></i>
+                                Photographer
+                            </button>
+                            <br/>
+                            <button id="write-btn" type="button"><i class="fa fa-pencil"></i> Writer</button>
+                        </div>
                     </div>
-                </div>
                 @endif
 
 

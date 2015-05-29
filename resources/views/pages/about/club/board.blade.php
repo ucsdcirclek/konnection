@@ -1,5 +1,9 @@
 @extends('pages.about.club.layout')
 
+@section('title')
+    Board
+@endsection
+
 @section('about-content')
     <div data-content="President &nbsp; Deborah Diaz" class="image">
         <img src="{{ asset('images/board/Deborah.jpg') }}" />

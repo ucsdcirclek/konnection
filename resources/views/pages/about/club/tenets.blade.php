@@ -1,5 +1,9 @@
 @extends('pages.about.club.layout')
 
+@section('title')
+    Tenets
+@endsection
+
 @section('about-content')
     <p>Circle K International follows three core tenets:</p>
 

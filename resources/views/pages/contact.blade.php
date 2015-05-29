@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Contact
+@endsection
+
 @section('content')
     <div class="wrapper">
         <h1>Contact us!</h1><br />

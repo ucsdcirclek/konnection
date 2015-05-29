@@ -1,5 +1,9 @@
 @extends('pages.about.circlek.layout')
 
+@section('title')
+    History
+@endsection
+
 @section('about-content')
     <p>CKI began in 1936 as a Kiwanis club service project to provide an opportunity for capable, ambitious, and
         worthy young men to acquire a college education by assisting them, where necessary, with their financial

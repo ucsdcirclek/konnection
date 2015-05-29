@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Home
+@endsection
+
 @section('content')
     <div class="slider">
         <div style="background: url(images/slider/key2college.jpg); background-position: center; background-size: cover;">

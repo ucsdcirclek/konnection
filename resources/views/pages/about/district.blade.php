@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    District
+@endsection
+
 @section('content)
     <div class="wrapper">
         <h1>About Our District</h1><br />

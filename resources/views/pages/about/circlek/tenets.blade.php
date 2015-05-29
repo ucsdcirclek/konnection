@@ -1,5 +1,9 @@
 @extends('pages.about.circlek.layout')
 
+@section('title')
+    Tenets
+@endsection
+
 @section('about-content')
     <h4>Service</h4>
     <p>Weekly service events are held by UCSD Circle K, during the week, as well as on weekends. You do not have to be a

@@ -1,5 +1,9 @@
 @extends('pages.about.circlek.layout')
 
+@section('title')
+    Circle K
+@endsection
+
 @section('about-content')
     <div id="main">
         <h4>Overview</h4>

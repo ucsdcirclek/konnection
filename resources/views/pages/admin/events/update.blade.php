@@ -1,5 +1,9 @@
 @extends('pages.admin.layout')
 
+@section('title')
+    Update Event
+@endsection
+
 @section('admin-content')
     <div id="event-create" class="wrapper">
         <h2>Update an Event</h2>

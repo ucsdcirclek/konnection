@@ -1,5 +1,9 @@
 @extends('pages.about.club.layout')
 
+@section('title')
+    Our Club
+@endsection
+
 @section('about-content')
 
     <h4>Overview</h4>

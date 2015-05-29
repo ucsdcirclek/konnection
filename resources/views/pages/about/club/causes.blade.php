@@ -1,5 +1,9 @@
 @extends('pages.about.club.layout')
 
+@section('title')
+    Causes
+@endsection
+
 @section('about-content')
     <p>UCSD Circle K has many causes to which it offers aid or donates money. </p>
     <h4>Service</h4>

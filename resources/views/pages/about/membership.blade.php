@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Membership
+@endsection
+
 @section('content)
     <div id="about" class="wrapper">
         <h1>Become a Member</h1><br />

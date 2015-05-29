@@ -1,5 +1,9 @@
 @extends('pages.about.circlek.layout')
 
+@section('title')
+    Structure
+@endsection
+
 @section('about-content')
     <p>CKI operates on an international, sub-regional, district, divisional, and club level. More than 13,000 members
         make up about 500 clubs in 30 districts and 17 nations, including Antigua, Australia, Bahamas, Barbados, Canada,
