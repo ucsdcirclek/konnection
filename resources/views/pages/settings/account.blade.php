@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Settings
+@endsection
+
 @section('content')
     <div id="settings" class="wrapper">
         <h2>Account Settings</h2>
