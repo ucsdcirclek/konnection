@@ -73,7 +73,7 @@ $(document).ready(function () {
 
   $('#register-btn').click(function(event) {
     // Register user
-    $.post('/api/events/'+findSlug()+'/create');
+    $.post('/api/events/'+findSlug()+'/registrations/create');
 
     // Change button
     this.attr('id','unregister-btn');
