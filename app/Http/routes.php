@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('calendar', 'EventsController@index');
+Route::get('events', 'EventsController@index');
 Route::get('events/{id}', 'EventsController@show');
 
 /**
