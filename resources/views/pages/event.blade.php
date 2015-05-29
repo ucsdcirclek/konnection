@@ -128,7 +128,7 @@
 
                     <p class="info">{{ $event->creator->phone }}</p>
                 </div>
-                @if(!$event->isRegistered(Auth::id()))
+                @if($event->isRegistered(Auth::id()))
                 <div>
                     <h6>Volunteer to be a:</h6>
 

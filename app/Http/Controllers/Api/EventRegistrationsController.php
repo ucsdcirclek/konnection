@@ -100,15 +100,16 @@ class EventRegistrationsController extends Controller
 
         if ($id == 'self' && \Auth::check()) {
             $reg = EventRegistration::where('user_id', '=', \Auth::id())
-                ->where('event_id', '=', $event->id)->get();
+                ->where('event_id', '=', $event->id)
+                ->update(\Request::all());
         } else {
-            $reg = EventRegistration::find($id);
+            $reg = EventRegistration::find($id)->update(\Request::all());
         }
 
-        if($reg->update(\Request::all()))
-            return $reg;
+        if ($reg)
+            return response('Registration updated!');
         else
-            return abort(500, 'Could not update the registration!');
+            abort(409, 'There was an issue updating the registration');
     }
 
     /**

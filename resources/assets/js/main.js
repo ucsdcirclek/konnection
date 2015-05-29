@@ -110,6 +110,54 @@ $(document).ready(function () {
     $('#guestRegistration').remove();
   });
 
+  $('#drive-btn').click(function(event) {
+    // Register user
+    $.ajax({
+      url: '/api/events/'+findSlug()+'/registrations/self',
+      type: 'PATCH',
+      data: {
+        driver_status: 1
+      }
+    });
+
+    // Change button
+    var self = $(this);
+    self.attr('disabled');
+  });
+
+  $('#photograph-btn').click(function(event) {
+    // Register user
+    $.ajax({
+      url: '/api/events/'+findSlug()+'/registrations/self',
+      type: 'PATCH',
+      data: {
+        photographer_status: 1
+      }
+    });
+
+    // Change button
+    var self = $(this);
+    self.attr('disabled');
+  });
+
+  $('#write-btn').click(function(event) {
+    // Register user
+    $.ajax({
+      url: '/api/events/'+findSlug()+'/registrations/self',
+      type: 'PATCH',
+      data: {
+        writer_status: 1
+      }
+    });
+
+    // Change button
+    var self = $(this);
+    self.attr('disabled');
+  });
+
+
+
+
   /*
    * Misc.
    */
