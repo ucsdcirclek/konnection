@@ -18,8 +18,8 @@ class EventsTableSeeder extends Seeder
 
         for ($i = 0; $i < 10; $i++) {
             $start_time = Carbon::instance($faker->dateTimeBetween('now', '3 days'));
-            $end_time = Carbon::now()->addHours(3);
-            $close_time = Carbon::now()->subDay();
+            $end_time = Carbon::instance($start_time)->addHours(3);
+            $close_time = $end_time;
             $open_time = Carbon::now();
 
             Event::create(
