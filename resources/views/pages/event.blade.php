@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    {{ $event->slug }}
+    {{ $event->title }}
 @endsection
 
 @section('content')
