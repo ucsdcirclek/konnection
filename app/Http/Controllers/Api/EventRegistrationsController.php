@@ -54,14 +54,14 @@ class EventRegistrationsController extends Controller {
         {
             // Register as guest
             $input = \Request::all();
-            $input->event_id = $event->id;
+            $input['event_id'] = $event->id;
             $reg = GuestRegistration::create($input);
         }
         else {
             // Register as user
             $input = \Request::all();
-            $input->user_id = \Auth::id();
-            $input->event_id = $event->id;
+            $input['user_id'] = \Auth::id();
+            $input['event_id'] = $event->id;
             $reg = EventRegistration::create($input);
         }
 
@@ -113,7 +113,7 @@ class EventRegistrationsController extends Controller {
         {
             if(\Auth::check())
             {
-                EventRegistration::where('user_id', '=', Auth::id())->destroy();
+                EventRegistration::where('user_id', '=', \Auth::id())->destroy();
             }
         }
         else
