@@ -41,6 +41,7 @@ $(document).ready(function () {
           start: start.toISOString(),
           end: end.toISOString()
         },
+        timezone: 'local',
         success: function(doc) {
           var events = [];
 

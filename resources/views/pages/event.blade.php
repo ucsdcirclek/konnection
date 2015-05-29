@@ -6,13 +6,12 @@
 
 @section('content')
     <div id="event">
-
         <div id="navigator" style="border-bottom-left-radius: 10px;">
             @foreach($upcoming_events as $day => $events)
                 <ul>
                     <h3>{{ $day }}</h3>
-                    @foreach($events as $event)
-                        <li><a href="#">{{ $event->title }}</a></li>
+                    @foreach($events as $u_event)
+                        <li><a href="#">{{ $u_event->title }}</a></li>
                     @endforeach
                 </ul>
                 <br/>
