@@ -1,9 +1,15 @@
 $(document).ready(function () {
 
+  /*
+   * Homepage
+   */
   $('.slider').slick({
     autoplay: true
   });
 
+  /*
+   * Calendar
+   */
   $('.calendar').fullCalendar({
     class: 'calendar',
     columnFormat: {
@@ -48,6 +54,54 @@ $(document).ready(function () {
     }
   });
 
+  /*
+   * Event
+   */
+  function findSlug() {
+    var path = window.location.pathname;
+    return path.substr(path.lastIndexOf("/") + 1);
+  }
+
+  $('#register-btn').click(function(event) {
+    // Register user
+    $.post('/api/events/'+findSlug()+'/create');
+
+    // Change button
+    this.attr('id','unregister-btn');
+    this.html('<i class="fa fa-close"></i> Signup');
+  });
+
+  $('#unregister-btn').click(function(event) {
+    // Unregister user
+    $.ajax({
+      url: '/api/events/'+findSlug()+'/registrations/self/delete',
+      type: 'DELETE'
+    });
+
+    // Change button
+    this.attr('id','register-btn');
+    this.html('<i class="fa fa-check"></i> Signup');
+  });
+
+  $('#registerGuest').submit(function(event) {
+    event.preventDefault();
+
+    var $form = $(this);
+
+    var data = {
+      first_name: $form.find( "input[name='firstName']" ).val(),
+      last_name: $form.find( "input[name='lastName']" ).val(),
+      phone: $form.find( "input[name='phone']" ).val(),
+    };
+
+    $.post('/api/events/'+findSlug()+'/registrations/create', data);
+
+    $('#guestRegistration').remove();
+  });
+
+  /*
+   * Misc.
+   */
   $('.editor').editable({inlineMode: false});
 
 });
