@@ -113,7 +113,7 @@ class EventRegistrationsController extends Controller {
         {
             if(\Auth::check())
             {
-                EventRegistration::where('user_id', '=', \Auth::id())->destroy();
+                EventRegistration::where('user_id', '=', \Auth::id())->delete();
             }
         }
         else

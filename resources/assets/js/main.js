@@ -76,8 +76,9 @@ $(document).ready(function () {
     $.post('/api/events/'+findSlug()+'/registrations/create');
 
     // Change button
-    this.attr('id','unregister-btn');
-    this.html('<i class="fa fa-close"></i> Signup');
+    var self = $(this);
+    self.attr('id','unregister-btn');
+    self.html('<i class="fa fa-close"></i> Signup');
   });
 
   $('#unregister-btn').click(function(event) {
@@ -88,8 +89,9 @@ $(document).ready(function () {
     });
 
     // Change button
-    this.attr('id','register-btn');
-    this.html('<i class="fa fa-check"></i> Signup');
+    var self = $(this);
+    self.attr('id','register-btn');
+    self.html('<i class="fa fa-check"></i> Signup');
   });
 
   $('#registerGuest').submit(function(event) {
