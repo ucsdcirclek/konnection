@@ -91,7 +91,7 @@ $(document).ready(function () {
     var data = {
       first_name: $form.find( "input[name='firstName']" ).val(),
       last_name: $form.find( "input[name='lastName']" ).val(),
-      phone: $form.find( "input[name='phone']" ).val(),
+      phone: $form.find( "input[name='phone']" ).val()
     };
 
     $.post('/api/events/'+findSlug()+'/registrations/create', data);
