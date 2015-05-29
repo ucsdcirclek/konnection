@@ -32,7 +32,6 @@ $(document).ready(function () {
       week: 'Week',
       day: 'Day'
     },
-    ignoreTimezone: false,
     events: function(start, end, timezone, callback) {
       $.ajax({
         url: '/api/events',
