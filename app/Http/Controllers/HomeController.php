@@ -20,7 +20,7 @@ class HomeController extends Controller
         $days = Event::whereBetween(
             'start_time',
             [
-                Carbon::now('America/Los_Angeles')->startOfDay(),
+                Carbon::now('America/Los_Angeles'),
                 Carbon::now('America/Los_Angeles')->addDays(2)->endOfDay()
             ]
         )
