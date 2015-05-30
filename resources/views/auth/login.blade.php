@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Login
+@endsection
+
 @section('content')
     <div id="login" class="wrapper">
         <div id="login-form">

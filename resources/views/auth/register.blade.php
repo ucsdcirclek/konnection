@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Register
+@endsection
+
 @section('content')
     <div class="wrapper">
         <h2>Let's get registered!</h2>

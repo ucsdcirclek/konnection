@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Reset Password
+@endsection
+
 @section('content')
     <div class="wrapper">
         <h2>Reset Password</h2>
