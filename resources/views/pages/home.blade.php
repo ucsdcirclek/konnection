@@ -6,32 +6,38 @@
 
 @section('content')
     <div class="slider">
-        <div style="background: url(images/slider/key2college.jpg); background-position: center; background-size: cover;">
+
+      <div style="background: url(images/slider/tech_team.png); background-position: right; background-size: contain; background-repeat: no-repeat; background-color: white; ">
             <div class="content">
                 <div class="text">
-                    <h2>Key 2 College</h2>
+                    <h2>Tech Team Applications</h2>
                     <br/>
+                    <p>
+                      Have some great ideas on how to improve this website? Looking to develop real-world technical skills? Join
+                      the Tech Team! The Tech Team works to improve the visual elements and enhance the user experience of the
+                      site. Prior experience is preferred.
+                    </p>
 
-                    <p>UCSD Circle K International cordially invites you to its annual Key2College, an event for high school students to learn more about the magical world of college here at UC San Diego. You can expect a helpful workshops, tours, performances and cool raffle prizes!</p>
-
-                    <p><a
-                                target="_blank"
-                                href="https://www.facebook.com/events/1759938677564708/">Visit the event page</a></p>
+                    <p>
+                      <a target="_blank" href="http://bit.ly/UCSDCKITechTeamApp">Visit the event page</a>
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div style="background: url(images/slider/aboard.png); background-position: center; background-size: cover;">
+      <div style="background: url(images/slider/week10gbm.jpg); background-position: center; background-size: cover;">
             <div class="content">
                 <div class="text">
-                    <h2>Apply for Appointed Board</h2>
+                    <h2>Week 10 GBM</h2>
                     <br/>
+                    <p>
+                      Come out to the last GBM of the quarter before summer break! This time, match up with your big for
+                      an extra raffle ticket. Don't forget to bring post-it notes to write nice notes to your friends!
+                    </p>
 
-                    <p>Make a difference in the club and an even bigger difference in the community by applying to be on board! As a member of board, the future of our club is in YOUR hands!</p>
-
-                    <p><a
-                                target="_blank"
-                                href="http://bit.ly/ucsdckiaboardapp">Download the application</a></p>
+                    <p>
+                      <a target="_blank" href="http://ucsdcki.org/events/week-10-gbm-1">Visit the event page</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -44,14 +50,14 @@
                 <li class="featured">
                     <h5>Featured</h5>
 
-                    <p class="title">Alpha Project Food Distribution</p>
+                    <p class="title">Triton 5K</p>
 
-                    <p class="date">February 22</p>
+                    <p class="date">June 6</p>
 
                     <p class="info">
-                        The Alpha Project is a nonprofit, human services organization that serves over 4,000 men, women,
-                        and
-                        children each day. We will assist them by serving dinner to the homeless!
+                      Help out at the annual Triton 5K! The Triton 5K is a 3.1-mile race around campus, ending at the Track and
+                      Field stadium where there will be a festival with food vendors, live entertainment, and the annual Junior
+                      Trition Run.
                     </p>
                 </li>
                 @foreach ($days as $day => $events)
@@ -108,10 +114,10 @@
                     </p>
                 @endif
             </div>
-            <button ui-sref="membership" class="pulse-repeat red">Become a Member</button>
+            <a class="button red" ui-sref="membership">Become a Member</a>
             <br/>
             <br/>
-            <a class="button red" href="http://bit.ly/ucsdckiaboardapp" target="_blank">Apply for Appointed Board</a>
+            <a class="button red" href="http://bit.ly/UCSDCKITechTeamApp" target="_blank">Apply for the Tech Team</a>
 
             <h2 style="margin-top: 10px;">Social Media</h2>
 

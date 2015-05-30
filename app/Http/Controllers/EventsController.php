@@ -13,34 +13,48 @@ use App\Event;
 
 class EventsController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
+  /**
+   * Display a listing of the resource.
+   *
+   * @return Response
+   */
+  public function index()
+  {
         return view('pages.calendar');
     }
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return view('pages.admin.events.create');
-	}
+  /**
+   * Show the form for creating a new resource.
+   *
+   * @return Response
+   */
+  public function create()
+  {
+    return view('pages.admin.events.create');
+  }
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store(CreateEventRequest $req)
-	{
+  /**
+   * Store a newly created resource in storage.
+   *
+   * @return Response
+   */
+  public function store(CreateEventRequest $req)
+  {
         $input = $req->all();
+
+        // Ensures database times are always in UTC.
+        foreach($input as $key => $value) {
+
+          // Ensures only time fields are changed.
+          if (!strpos($key, 'time')) continue;
+
+          // Converts time from PST to UTC.
+          $pst = new Carbon($value, 'America/Los_Angeles');
+          $utc = $pst->setTimezone('UTC');
+
+          // Sets date/time string back into values for database.
+          $input[$key] = $utc->toDateTimeString();
+        }
 
         $input['creator_id'] = \Auth::id(); // Set creator ID by default
 
@@ -56,16 +70,16 @@ class EventsController extends Controller {
         $event = Event::create($input);
 
         return redirect()->action('EventsController@show', $event->slug);
-	}
+  }
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($slug)
-	{
+  /**
+   * Display the specified resource.
+   *
+   * @param  int  $id
+   * @return Response
+   */
+  public function show($slug)
+  {
         $event = Event::findBySlug($slug);
         $event->load('creator', 'registrations', 'guests');
 
@@ -86,42 +100,42 @@ class EventsController extends Controller {
                 }
             );
 
-		return view('pages.event', compact('event', 'upcoming_events'));
-	}
+    return view('pages.event', compact('event', 'upcoming_events'));
+  }
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($slug)
-	{
+  /**
+   * Show the form for editing the specified resource.
+   *
+   * @param  int  $id
+   * @return Response
+   */
+  public function edit($slug)
+  {
         $event = Event::findBySlug($slug);
-		return view('pages.admin.events.update', compact('event'));
-	}
+    return view('pages.admin.events.update', compact('event'));
+  }
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update(UpdateEventRequest $req, $slug)
-	{
+  /**
+   * Update the specified resource in storage.
+   *
+   * @param  int  $id
+   * @return Response
+   */
+  public function update(UpdateEventRequest $req, $slug)
+  {
         Event::findBySlug($slug)->update($req->all());
         return redirect()->action('EventsController@show', $slug);
-	}
+  }
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
+  /**
+   * Remove the specified resource from storage.
+   *
+   * @param  int  $id
+   * @return Response
+   */
+  public function destroy($id)
+  {
+    //
+  }
 
 }

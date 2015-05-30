@@ -3,3 +3,11 @@
 .env
 composer.lock
 _ide_helper.php
+
+/storage/debugbar/
+/public/css/main.css
+/public/css/main.css.map
+/public/js/main.js
+/public/js/main.js.map
+/public/build
+.idea/
