@@ -27,9 +27,9 @@
                 <div class="event-info">
                     <h2>{{ $event->title }}</h2>
                     <ul>
-                        <li><strong>{{ $event->start_time->format('l, F j, Y') }}</strong></li>
+                        <li><strong>{{ $event->start_time->setTimezone('America/Los_Angeles')->format('l, F j, Y') }}</strong></li>
                         <li><strong>
-                                {{ $event->start_time->format('g:ia') }} to {{ $event->end_time->format('g:ia') }}
+                                {{ $event->start_time->setTimezone('America/Los_Angeles')->format('g:ia') }} to {{ $event->setTimezone('America/Los_Angeles')->end_time->format('g:ia') }}
                             </strong></li>
                         @if($event->event_location)
                             <li>{{ $event->event_location }}</li>@endif

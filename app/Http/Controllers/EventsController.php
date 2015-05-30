@@ -80,7 +80,9 @@ class EventsController extends Controller {
             ->sortBy('start_time')
             ->groupBy(
                 function ($date) {
-                    return Carbon::parse($date->start_time)->format('l'); // grouping data by day
+                    return Carbon::parse($date->start_time)->timezone('UTC')
+                        ->setTimezone('America/Los_Angeles')
+                        ->format('l'); // grouping data by day
                 }
             );
 
