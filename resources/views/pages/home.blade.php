@@ -67,8 +67,8 @@
                                     </p>
 
                                     <p class="date">
-                                        {{ $event->start_time->format('g:iA \\t\\o ')}}
-                                        {{ $event->end_time->format('g:iA') }}
+                                        {{ $event->start_time->setTimezone('America/Los_Angeles')->format('g:iA \\t\\o ')}}
+                                        {{ $event->end_time->setTimezone('America/Los_Angeles')->format('g:iA') }}
                                     </p>
                                 </li>
                             @endforeach
@@ -84,7 +84,7 @@
                     <article>
                         <h3>{{ $post->title }}</h3>
 
-                        <p class="date">{{ $post->created_at->format('l, F n, Y') }}</p>
+                        <p class="date">{{ $post->created_at->setTimezone('America/Los_Angeles')->format('l, F n, Y') }}</p>
 
                         <p>
                             {!! $post->content !!}
