@@ -41,7 +41,6 @@ $(document).ready(function () {
           start: start.toISOString(),
           end: end.toISOString()
         },
-        timezone: 'local',
         success: function(doc) {
           var events = [];
 
@@ -49,8 +48,8 @@ $(document).ready(function () {
             events.push({
               id: event.id,
               title: event.title,
-              start: event.start_time,
-              end: event.end_time,
+              start: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"), // Convert from server UTC to local
+              end: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"),
               url: '/events/' + event.slug,
               backgroundColor: '#8B1C23',
               borderColor: '#8B1C23'
