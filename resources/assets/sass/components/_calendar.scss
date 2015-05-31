@@ -69,4 +69,16 @@
     font-size: 12px;
     width:25px;
   }
+
+  .fc-event-container {
+    word-wrap: break-word;
+  }
+
+  .fc-title {
+    word-wrap: break-word;
+  }
+
+  .fc-day-grid-event > .fc-content {
+    white-space: inherit;
+  }
 }
