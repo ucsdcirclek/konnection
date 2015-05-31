@@ -21,6 +21,7 @@ $(document).ready(function () {
    */
   $('.calendar').fullCalendar({
     class: 'calendar',
+    height: 'auto',
     columnFormat: {
       month: 'dddd',    // Monday, Wednesday, etc
       week: 'dddd, MMM dS', // Monday 9/7
