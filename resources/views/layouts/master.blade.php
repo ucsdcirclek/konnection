@@ -73,6 +73,12 @@
         </div>
     </header>
 
+    @if(Auth::check() && Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator'))
+    <div id="admin-link">
+        <a href="{{ url('admin') }}">Admin</a>
+    </div>
+    @endif
+
     <div id="header-image">
         <h1><img alt="UCSD Circle K" src="{{ asset('images/header.jpg') }}"></h1>
     </div>
