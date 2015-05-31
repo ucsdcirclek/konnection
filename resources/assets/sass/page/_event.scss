@@ -1,3 +1,7 @@
+button {
+  font-family: $base-font-family;
+}
+
 #event {
   @include span-columns(12);
 

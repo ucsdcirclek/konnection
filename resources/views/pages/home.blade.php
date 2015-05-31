@@ -19,7 +19,7 @@
                     </p>
 
                     <p>
-                      <a target="_blank" href="http://bit.ly/UCSDCKITechTeamApp">Visit the event page</a>
+                      <a target="_blank" href="http://bit.ly/UCSDCKITechTeamApp">Tech Team Application</a>
                     </p>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <h2>Week 10 GBM</h2>
                     <br/>
                     <p>
-                      Come out to the last GBM of the quarter before summer break! This time, match up with your big for
+                      Come out to the last GBM of the quarter before summer break! This time, match with your big for
                       an extra raffle ticket. Don't forget to bring post-it notes to write nice notes to your friends!
                     </p>
 
