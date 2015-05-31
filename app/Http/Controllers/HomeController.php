@@ -28,7 +28,7 @@ class HomeController extends Controller
             ->sortBy('start_time')
             ->groupBy(
                 function ($date) {
-                    return Carbon::parse($date->start_time, 'America/Los_Angeles')->format('l'); // grouping data by day
+                    return Carbon::parse($date->start_time, 'UTC')->format('l'); // grouping data by day
                 }
             );
 
