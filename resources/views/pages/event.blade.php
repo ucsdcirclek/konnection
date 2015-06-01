@@ -1,8 +1,9 @@
 @extends('layouts.master')
 
-@section('title')
-    {{ $event->title }}
-@endsection
+@section('title', $event->title)
+
+{{-- Take description, cut it down, and add ellipses --}}
+@section('description', substr($event->description, 156) . '...')
 
 @section('content')
     <div id="event">
