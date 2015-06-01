@@ -3,7 +3,7 @@
 @section('title', $event->title)
 
 {{-- Take description, cut it down, and add ellipses --}}
-@section('description', substr($event->description, 156) . '...')
+@section('description', substr(strip_tags($event->description), 0, 156) . '...')
 
 @section('content')
     <div id="event">
