@@ -12,7 +12,7 @@
                 <ul>
                     <h3>{{ $day }}</h3>
                     @foreach($events as $u_event)
-                        <li><a href="#">{{ $u_event->title }}</a></li>
+                        <li><a href="{{ action('EventsController@show', $u_event->slug) }}">{{ $u_event->title }}</a></li>
                     @endforeach
                 </ul>
                 <br/>
