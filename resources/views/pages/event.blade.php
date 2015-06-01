@@ -151,6 +151,14 @@
                     </div>
                 @endif
 
+                @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
+                        <h6>Admin</h6>
+                        <div class="btn-group">
+                            <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
+                                Edit Event
+                            </a>
+                        </div>
+                @endif
 
             </div>
 
