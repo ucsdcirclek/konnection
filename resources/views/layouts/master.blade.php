@@ -121,14 +121,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/1.2.7/js/froala_editor.min.js"></script>
 <script src="{{ elixir('js/main.js') }}"></script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-    //    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    //            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    //        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    //        e.src='https://www.google-analytics.com/analytics.js';
-    //        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    //    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    if (document.location.hostname.indexOf("ucsdcki.org") != -1 || document.location.hostname.indexOf("www.ucsdcki.org") != -1) {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-49573028-1', 'auto');
+        ga('send', 'pageview');
+    }
 </script>
 
 </body>
