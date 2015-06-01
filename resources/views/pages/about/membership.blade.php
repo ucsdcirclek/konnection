@@ -4,7 +4,7 @@
     Membership
 @endsection
 
-@section('content)
+@section('content')
     <div id="about" class="wrapper">
         <h1>Become a Member</h1><br />
         <p>We're really excited that you've decided to become a part of UCSD Circle K! To become a member,

@@ -4,7 +4,7 @@
     District
 @endsection
 
-@section('content)
+@section('content')
     <div class="wrapper">
         <h1>About Our District</h1><br />
         <p>

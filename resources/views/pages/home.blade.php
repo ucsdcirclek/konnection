@@ -114,7 +114,7 @@
                     </p>
                 @endif
             </div>
-            <a class="button red" ui-sref="membership">Become a Member</a>
+            <a class="button red" href="{{ url('about/membership') }}">Become a Member</a>
             <br/>
             <br/>
             <a class="button red" href="http://bit.ly/UCSDCKITechTeamApp" target="_blank">Apply for the Tech Team</a>
