@@ -1,8 +1,9 @@
 @extends('layouts.master')
 
-@section('title')
-    {{ $event->title }}
-@endsection
+@section('title', $event->title)
+
+{{-- Take description, cut it down, and add ellipses --}}
+@section('description', substr(strip_tags($event->description), 0, 156) . '...')
 
 @section('content')
     <div id="event">
@@ -11,7 +12,7 @@
                 <ul>
                     <h3>{{ $day }}</h3>
                     @foreach($events as $u_event)
-                        <li><a href="#">{{ $u_event->title }}</a></li>
+                        <li><a href="{{ action('EventsController@show', $u_event->slug) }}">{{ $u_event->title }}</a></li>
                     @endforeach
                 </ul>
                 <br/>
@@ -151,6 +152,14 @@
                     </div>
                 @endif
 
+                @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
+                        <h6>Admin</h6>
+                        <div class="btn-group">
+                            <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
+                                Edit Event
+                            </a>
+                        </div>
+                @endif
 
             </div>
 

@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
-@section('title')
-    Home
+@section('title', 'Home')
+
+@section('description')
+    Established in 1977, Circle K International at UCSD is a community service organization offering service, social and leadership opportunities.
 @endsection
 
 @section('content')
