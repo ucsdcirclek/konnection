@@ -7,6 +7,23 @@
 @section('content')
     <div class="slider">
 
+      <div style="background: url(images/slider/spammusubi.jpg); background-position: center; background-size: cover">
+          <div class="content">
+              <div class="text">
+                <h2>Spam Musubi Fundraiser</h2>
+                <br/>
+                <p>
+                  Come help out at our quarterly spam musubi fundraiser! The fundraiser will be held Monday through
+                  Thursday of finals week, and tasks include setting up, cooking, delivering, and cleaning up.
+                </p>
+
+                <p>
+                  <a target="_blank" href="http://ucsdcki.org/events/super-study-spam-musubi-fundraiser">Visit the event page</a>
+                </p>
+              </div>
+          </div>
+      </div>
+
       <div style="background: url(images/slider/tech_team.png); background-position: right; background-size: contain; background-repeat: no-repeat; background-color: white; ">
             <div class="content">
                 <div class="text">
@@ -20,23 +37,6 @@
 
                     <p>
                       <a target="_blank" href="http://bit.ly/UCSDCKITechTeamApp">Tech Team Application</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-      <div style="background: url(images/slider/week10gbm.jpg); background-position: center; background-size: cover;">
-            <div class="content">
-                <div class="text">
-                    <h2>Week 10 GBM</h2>
-                    <br/>
-                    <p>
-                      Come out to the last GBM of the quarter before summer break! This time, match with your big for
-                      an extra raffle ticket. Don't forget to bring post-it notes to write nice notes to your friends!
-                    </p>
-
-                    <p>
-                      <a target="_blank" href="http://ucsdcki.org/events/week-10-gbm-1">Visit the event page</a>
                     </p>
                 </div>
             </div>
