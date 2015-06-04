@@ -4,7 +4,7 @@
 <div id="about" class="wrapper">
   <h1>About Circle K</h1><br />
   <div id="sidebar">
-    <div class="page"><a href="{{ url('about/club/general') }}">General</a></div>
+    <div class="page"><a href="{{ url('about/club') }}">General</a></div>
     <hr>
     <div class="page"><a href="{{ url('about/club/board') }}">Board</a></div>
     <hr>
@@ -18,4 +18,3 @@
   </div>
 </div>
 @endsection
-
