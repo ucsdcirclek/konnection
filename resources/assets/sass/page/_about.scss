@@ -89,14 +89,14 @@
   */
 
   .page {
-    color: $green;
+    color: $light-blue;
     text-align: center;
 
     &.active {
       width: auto;
       height: 50px;
-      background: $light-green;
-      color: $red;
+      background: $dark-gray;
+      color: $light-blue;
       text-align: center;
       line-height: 50px;
     }
@@ -105,10 +105,9 @@
 }
 
 a {
-  color: $green;
+  color: $medium-gray;
 }
 
 a:hover {
-  color: $brown;
+  color: $dark-gray;
 }
-

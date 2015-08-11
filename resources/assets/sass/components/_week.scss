@@ -2,7 +2,7 @@ ul.week {
   @include row(table);
 
   > li.featured {
-    background-color: $red;
+    background-color: $emphasis-color;
     color: white;
 
     h5 {
