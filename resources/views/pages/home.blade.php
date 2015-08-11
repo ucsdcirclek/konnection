@@ -9,6 +9,7 @@
 @section('content')
     <div class="slider">
 
+{{--
       <div style="background: url(images/slider/spammusubi.jpg); background-position: center; background-size: cover">
           <div class="content">
               <div class="text">
@@ -25,6 +26,7 @@
               </div>
           </div>
       </div>
+--}}
 
       <div style="background: url(images/slider/tech_team.png); background-position: right; background-size: contain; background-repeat: no-repeat; background-color: white; ">
             <div class="content">
@@ -124,9 +126,9 @@
             <h2 style="margin-top: 10px;">SOCIAL MEDIA</h2>
 
             <div class="social-media">
-                <a href="https://facebook.com/ucsdcirclek"><i class="fa fa-3x fa-facebook-square"></i></a>
-                <a href="http://instagram.com/ucsdcirclek"><i class="fa fa-3x fa-instagram"></i></a>
-                <a href="http://ucsdcirclek.tumblr.com/"><i class="fa fa-3x fa-tumblr-square"></i></a>
+                <a href="https://facebook.com/ucsdcirclek"><i class="fa fa-2x fa-facebook-square"></i></a>
+                <a href="http://instagram.com/ucsdcirclek"><i class="fa fa-2x fa-instagram"></i></a>
+                <a href="http://ucsdcirclek.tumblr.com/"><i class="fa fa-2x fa-tumblr-square"></i></a>
             </div>
 
             <br/>
