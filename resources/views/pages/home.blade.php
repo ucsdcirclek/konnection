@@ -13,7 +13,7 @@
       <div style="background: url(images/slider/spammusubi.jpg); background-position: center; background-size: cover">
           <div class="content">
               <div class="text">
-                <h2>SPAM MUSUBI FUNDRAISER</h2>
+                <h2>Spam Musubi Fundraiser</h2>
                 <br/>
                 <p>
                   Come help out at our quarterly spam musubi fundraiser! The fundraiser will be held Monday through
@@ -31,7 +31,7 @@
       <div style="background: url(images/slider/tech_team.png); background-position: right; background-size: contain; background-repeat: no-repeat; background-color: white; ">
             <div class="content">
                 <div class="text">
-                    <h2>TECH TEAM APPLICATIONS</h2>
+                    <h2>Tech Team Applications</h2>
                     <br/>
                     <p>
                       Have some great ideas on how to improve this website? Looking to develop real-world technical skills? Join
@@ -52,7 +52,7 @@
         <div id="main">
             <ul class="week">
                 <li class="featured">
-                    <h5>FEATURED</h5>
+                    <h5>Featured</h5>
 
                     <p class="title">Triton 5K</p>
 
@@ -87,7 +87,7 @@
                 @endforeach
             </ul>
 
-            <h2>ANNOUNCEMENTS</h2>
+            <h2>Announcements</h2>
 
             <div id="announcements">
                 @foreach ($posts as $post)
@@ -123,7 +123,7 @@
             <br/>
             <a class="button emphasis" href="http://bit.ly/UCSDCKITechTeamApp" target="_blank">Apply for the Tech Team</a>
 
-            <h2 style="margin-top: 10px;">SOCIAL MEDIA</h2>
+            <h2 style="margin-top: 10px;">Social Media</h2>
 
             <div class="social-media">
                 <a href="https://facebook.com/ucsdcirclek"><i class="fa fa-2x fa-facebook-square"></i></a>

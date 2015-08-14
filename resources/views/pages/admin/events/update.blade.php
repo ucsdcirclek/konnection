@@ -11,32 +11,32 @@
 
         {!! Form::model($event, ['action' => ['EventsController@update', $event->slug]]) !!}
 
-            <label for="title">Title</label>
+        <label for="title">Title</label>
         {!! Form::text('title') !!}
 
-            <label for="description">Description</label>
+        <label for="description">Description</label>
         {!! Form::textarea('description', $event->description, array('class'=>'editor')) !!}
 
-            <label for="event_location">Event Location</label>
+        <label for="event_location">Event Location</label>
         {!! Form::text('event_location') !!}
 
-            <label for="meeting_location">Meeting Location</label>
+        <label for="meeting_location">Meeting Location</label>
         {!! Form::text('meeting_location') !!}
 
-            <label for="start_time">Event Start</label>
+        <label for="start_time">Event Start</label>
         {!! Form::date('start_time') !!}
 
-            <label for="end_time">Event End</label>
+        <label for="end_time">Event End</label>
         {!! Form::date('end_time') !!}
 
-            <label for="open_time">Signup Open</label>
+        <label for="open_time">Signup Open</label>
         {!! Form::date('open_time') !!}
 
-            <label for="close_time">Signup Close</label>
+        <label for="close_time">Signup Close</label>
         {!! Form::date('close_time') !!}
 
-            <br/>
-            <br/>
+        <br/>
+        <br/>
 
         {!! Form::submit('Update', ['class' => 'button']) !!}
         {!! Form::close() !!}
