@@ -24,16 +24,16 @@
         {!! Form::text('meeting_location') !!}
 
         <label for="start_time">Event Start</label>
-        {!! Form::date('start_time') !!}
+        {!! Form::text('start_time', '', array('placeholder'=>'yyyy-mm-dd hh:mm')) !!}
 
         <label for="end_time">Event End</label>
-        {!! Form::date('end_time') !!}
+        {!! Form::text('end_time', '', array('placeholder'=>'yyyy-mm-dd hh:mm')) !!}
 
         <label for="open_time">Signup Open</label>
-        {!! Form::date('open_time') !!}
+        {!! Form::text('open_time', '', array('placeholder'=>'yyyy-mm-dd hh:mm')) !!}
 
         <label for="close_time">Signup Close</label>
-        {!! Form::date('close_time') !!}
+        {!! Form::text('close_time', '', array('placeholder'=>'yyyy-mm-dd hh:mm')) !!}
 
         <br/>
         <br/>

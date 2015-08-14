@@ -75,6 +75,11 @@
                 <td>social@ucsdcki.org</td>
             </tr>
             <tr>
+                <td>Adrian Cruz</td>
+                <td>Spirit Chair</td>
+                <td>spirit@ucsdcki.org</td>
+            </tr>
+            <tr>
                 <td>Brian Tan</td>
                 <td>Technology Chair</td>
                 <td>technology@ucsdcki.org</td>
