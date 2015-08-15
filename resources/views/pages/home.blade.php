@@ -9,7 +9,6 @@
 @section('content')
     <div class="slider">
 
-{{--
       <div style="background: url(images/slider/spammusubi.jpg); background-position: center; background-size: cover">
           <div class="content">
               <div class="text">
@@ -26,7 +25,6 @@
               </div>
           </div>
       </div>
---}}
 
       <div style="background: url(images/slider/tech_team.png); background-position: right; background-size: contain; background-repeat: no-repeat; background-color: white; ">
             <div class="content">
@@ -110,7 +108,7 @@
                 @if (Auth::check())
                     <h2>Welcome, {{ Auth::user()->first_name }}!</h2>
                 @else
-                    <h2>WELCOME!</h2>
+                    <h2>Welcome!</h2>
 
                     <p>
                         If you have account, please <a href="#">login</a>. If you do not, you are invited to <a
