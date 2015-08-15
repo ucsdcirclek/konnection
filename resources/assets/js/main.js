@@ -52,8 +52,8 @@ $(document).ready(function () {
               start: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"), // Convert from server UTC to local
               end: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"),
               url: '/events/' + event.slug,
-              backgroundColor: '#8B1C23',
-              borderColor: '#8B1C23'
+              backgroundColor: '#104891',
+              borderColor: '#104891'
             });
           });
 
@@ -155,8 +155,14 @@ $(document).ready(function () {
     self.prop('disabled', true);
   });
 
+  /*
+   * Date and time picker on event create and update pages.
+   */
 
-
+  $('.datetime').datetimepicker({
+    format: 'l, F j, Y g:i A',    // Expresses date in readable format.
+    step: 30                      // Sets times in timepicker at increments of 30 minutes.
+  });
 
   /*
    * Misc.

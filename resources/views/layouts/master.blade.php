@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/1.2.7/css/froala_editor.min.css">
     <link rel="stylesheet" href="{{ elixir("css/main.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor/jquery.datetimepicker.css') }}" />
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -31,9 +32,11 @@
             <a href="" class="centered-navigation-menu-button" id="js-mobile-menu">MENU</a>
 
             <div class="nav">
-                <div id="corner-left"></div>
+
                 <ul class="centered-navigation-menu">
+
                     <li class="nav-link"><a href="{{ url('/') }}">home</a></li>
+
                     <li class="nav-link more"><a href="javascript:void(0)">about</a>
                         <ul class="submenu">
                             <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
@@ -41,7 +44,9 @@
                             <li><a href="{{ url('about/club') }}">Club</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-link"><a href="{{ url('/events') }}">calendar</a></li>
+
                     <li class="nav-link more"><a href="">district</a>
                         <ul class="submenu">
                             <li><a href="{{ url('about/district') }}">About</a></li>
@@ -52,13 +57,16 @@
                                     South</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-link more"><a target="_blank" href="http://www.kiwanis.org/">kiwanis</a>
                         <ul class="submenu">
                             <li><a target="_blank" href="http://www.kiwanisclublajolla.org/">La Jolla Kiwanis</a></li>
                             <li><a target="_blank" href="http://www.sdsucirclek.com">SDSU Circle K</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-link"><a href="{{ url('contact') }}">contact</a></li>
+
                     @if (! Auth::check())
                         <li class="nav-link"><a href="{{ url('/auth/login') }}">login</a></li>
                         <li class="nav-link"><a href="{{ url('/auth/register') }}">register</a></li>
@@ -66,8 +74,9 @@
                         <li class="nav-link"><a href="{{ url('settings') }}">settings</a></li>
                         <li class="nav-link"><a href="{{ url('/auth/logout') }}">logout</a></li>
                     @endif
+
                 </ul>
-                <div id="corner-right"></div>
+
             </div>
 
         </div>
@@ -80,7 +89,7 @@
     @endif
 
     <div id="header-image">
-        <h1><img alt="UCSD Circle K" src="{{ asset('images/header.jpg') }}"></h1>
+        <h1><img alt="UCSD Circle K" src="{{ asset('images/bannerplaceholder.png') }}"></h1>
     </div>
     {{-- End Header --}}
 
@@ -120,6 +129,7 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/1.2.7/js/froala_editor.min.js"></script>
 <script src="{{ elixir('js/main.js') }}"></script>
+<script src="{{ asset('js/vendor/jquery.datetimepicker.js') }}"></script>
 
 <script>
     if (document.location.hostname.indexOf("ucsdcki.org") != -1 || document.location.hostname.indexOf("www.ucsdcki.org") != -1) {

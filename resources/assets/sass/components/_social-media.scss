@@ -1,0 +1,23 @@
+.social-media {
+  margin: 0.5em 0;
+
+  a {
+    i {
+      color: $medium-gray;
+      border: 2px solid $medium-gray;
+      border-radius: 50%;
+      padding: 0.5em;
+      position: relative;
+      transition: background .1s ease-in;
+
+      &:hover {
+         background: $medium-gray;
+         color: white;
+      }
+
+      &:not(:first-child){
+         margin-left: 0.5em;
+      }
+    }
+  }
+}

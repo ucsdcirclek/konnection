@@ -116,17 +116,17 @@
                     </p>
                 @endif
             </div>
-            <a class="button red" href="{{ url('about/membership') }}">Become a Member</a>
+            <a class="button emphasis" href="{{ url('about/membership') }}">Become a Member</a>
             <br/>
             <br/>
-            <a class="button red" href="http://bit.ly/UCSDCKITechTeamApp" target="_blank">Apply for the Tech Team</a>
+            <a class="button emphasis" href="http://bit.ly/UCSDCKITechTeamApp" target="_blank">Apply for the Tech Team</a>
 
             <h2 style="margin-top: 10px;">Social Media</h2>
 
             <div class="social-media">
-                <a href="https://facebook.com/ucsdcirclek"><i class="fa fa-3x fa-facebook-square"></i></a>
-                <a href="http://instagram.com/ucsdcirclek"><i class="fa fa-3x fa-instagram"></i></a>
-                <a href="http://ucsdcirclek.tumblr.com/"><i class="fa fa-3x fa-tumblr-square"></i></a>
+                <a href="https://facebook.com/ucsdcirclek"><i class="fa fa-2x fa-facebook-square"></i></a>
+                <a href="http://instagram.com/ucsdcirclek"><i class="fa fa-2x fa-instagram"></i></a>
+                <a href="http://ucsdcirclek.tumblr.com/"><i class="fa fa-2x fa-tumblr-square"></i></a>
             </div>
 
             <br/>
