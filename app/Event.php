@@ -109,7 +109,7 @@ class Event extends Model implements SluggableInterface
      */
     public function tags()
     {
-        return $this->belongsToMany('App\Tag', 'events_assigned_tags');
+        return $this->belongsToMany('App\EventTag', 'events_assigned_tags', 'event_id', 'tag_id');
     }
 
     /**
