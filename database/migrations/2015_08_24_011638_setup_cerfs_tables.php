@@ -5,17 +5,17 @@ use Illuminate\Database\Migrations\Migration;
 
 class SetupCerfsTables extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
         // Handles all CERFs.
-		Schema::create('cerfs', function(Blueprint $table)
-		{
-			$table->increments('id');
+        Schema::create('cerfs', function(Blueprint $table)
+        {
+            $table->increments('id');
             $table->integer('event_id')->unsigned();
             $table->string('chair');
             $table->string('reporter');                         // Person who fills out CERFs.
@@ -29,13 +29,13 @@ class SetupCerfsTables extends Migration {
             $table->text('reflection')->nullable();             // How to improve event?
 
             $table->softDeletes();
-			$table->timestamps();
+            $table->timestamps();
 
             $table->foreign('event_id')
-                  ->references('id')
-                  ->on('users')
-                  ->onDelete('cascade');
-		});
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+        });
 
         // Handles Kiwanis family attendance section of CERF.
         Schema::create('kiwanis_attendees', function(Blueprint $table)
@@ -49,9 +49,9 @@ class SetupCerfsTables extends Migration {
             $table->timestamps();
 
             $table->foreign('cerf_id')
-                  ->references('id')
-                  ->on('cerfs')
-                  ->onDelete('cascade');
+                ->references('id')
+                ->on('cerfs')
+                ->onDelete('cascade');
         });
 
         // Handles home club attendance section of CERF.
@@ -61,22 +61,26 @@ class SetupCerfsTables extends Migration {
             $table->float('traveling_hours')->default(0.0)->after('planning_hours');
         });
 
-        // To reorganize tags into Service, Leadership, Fellowship, and Miscellaneous categories.
         Schema::table('event_tags', function(Blueprint $table)
         {
-            $table->string('category')->after('description');
-        });
-	}
+            $table->integer('category_id')->unsigned()->after('id');
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('event_categories')
+                ->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
         Schema::drop('kiwanis_attendees');
-		Schema::drop('cerfs');
+        Schema::drop('cerfs');
 
         Schema::table('activity_log', function(Blueprint $table)
         {
@@ -86,8 +90,8 @@ class SetupCerfsTables extends Migration {
 
         Schema::table('event_tags', function(Blueprint $table)
         {
-            $table->dropColumn('category');
+            $table->dropForeign('event_tags_category_id_foreign');
+            $table->dropColumn('category_id');
         });
-	}
-
+    }
 }

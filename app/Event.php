@@ -122,6 +122,10 @@ class Event extends Model implements SluggableInterface
         return $this->belongsTo('App\User', 'creator_id');
     }
 
+    public function cerf() {
+        return $this->hasOne('App\Cerf');
+    }
+
     /**
      * Sets title of event
      * @param $title

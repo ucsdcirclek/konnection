@@ -18,9 +18,25 @@ class EventCategory extends Model
     /**
      * Relationships
      */
+
+    /**
+     * An event category has many events.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function events()
     {
         return $this->hasMany('App\Event');
+    }
+
+    /**
+     * An event category has many associated event tags.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tags()
+    {
+        return $this->hasMany('App\EventTag', 'category_id');
     }
 
     /**
