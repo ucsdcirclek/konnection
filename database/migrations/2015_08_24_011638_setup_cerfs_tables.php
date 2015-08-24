@@ -66,9 +66,9 @@ class SetupCerfsTables extends Migration {
             $table->integer('category_id')->unsigned()->after('id');
 
             $table->foreign('category_id')
-                ->references('id')
-                ->on('event_categories')
-                ->onDelete('cascade');
+                  ->references('id')
+                  ->on('event_categories')
+                  ->onDelete('cascade');
         });
     }
 
