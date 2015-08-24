@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
                 'first_name' => 'Test',
                 'last_name' => 'User',
                 'email' => 'test@test.com',
-                'password' => Hash::make('test1234'),
+                'password' => Hash::make('test'),
                 'confirmation_code' => md5(uniqid(mt_rand(), true)),
                 'confirmed' => 1
             )

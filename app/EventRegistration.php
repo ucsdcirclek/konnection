@@ -15,6 +15,9 @@ class EventRegistration extends Model
 
     protected $guarded = array('id');
 
+    // TODO Enforce that passengers should be 0 if driver_status is false.
+    // TODO Enforce that no two registrations have an identical user_id and event_id combination.
+
     /**
      * Relationships
      */

@@ -16,6 +16,7 @@ class Activity extends Model {
 
     protected $guarded = array('id');
 
+    // TODO Make custom validator rule to enforce unique user_id and event_id combinations.
 
     /**
      * Relationships
