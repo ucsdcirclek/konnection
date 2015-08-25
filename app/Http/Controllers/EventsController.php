@@ -13,6 +13,7 @@ use App\Event;
 
 class EventsController extends Controller
 {
+    // TODO Form fields for creating and updating events should have default values.
 
     /**
      * Display a listing of the resource.

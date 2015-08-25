@@ -18,8 +18,12 @@ class CerfsTableSeeder extends Seeder {
         $event_ids = Event::all()->lists('id');
         shuffle($event_ids);
 
-        // Each CERF should only have one event.
-        foreach ($event_ids as $event_id) {
+        // TODO Events have many CERFs, so make sure to update seeder accordingly.
+
+        // Each CERF should only have one event. Some events do not have an associated CERF.
+        for ($counter = 0; $counter < 10; $counter++) {
+            $event_id = $event_ids[$counter];
+
             Cerf::create(
                 array(
                     'event_id' => $event_id,

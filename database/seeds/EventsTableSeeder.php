@@ -19,10 +19,11 @@ class EventsTableSeeder extends Seeder
 
         $user_ids = User::all()->lists('id');
 
-        for ($i = 0; $i < 10; $i++) {
+        // Creates events associated with CERFs.
+        for ($i = 0; $i < 15; $i++) {
             $rand_user_id = $user_ids[array_rand($user_ids)];
 
-            $start_time = Carbon::instance($faker->dateTimeBetween('now', '10 days'));
+            $start_time = Carbon::instance($faker->dateTimeBetween('now', '15 days'));
             $end_time = Carbon::instance($start_time)->addHours(3);
             $close_time = $end_time;
             $open_time = Carbon::now();

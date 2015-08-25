@@ -33,7 +33,7 @@ class SetupCerfsTables extends Migration {
 
             $table->foreign('event_id')
                 ->references('id')
-                ->on('users')
+                ->on('events')
                 ->onDelete('cascade');
         });
 

@@ -25,68 +25,13 @@
 <![endif]-->
 
 <div id="main">
+
     {{-- Header --}}
-    <header class="centered-navigation">
-        <div class="centered-navigation-wrapper">
 
-            <a href="" class="centered-navigation-menu-button" id="js-mobile-menu">MENU</a>
+    {{-- Navigation bar --}}
+    @include('layouts.navbar')
 
-            <div class="nav">
-
-                <ul class="centered-navigation-menu">
-
-                    <li class="nav-link"><a href="{{ url('/') }}">home</a></li>
-
-                    <li class="nav-link more"><a href="javascript:void(0)">about</a>
-                        <ul class="submenu">
-                            <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
-                            <li><a href="{{ url('about/division') }}">Division</a></li>
-                            <li><a href="{{ url('about/club') }}">Club</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-link"><a href="{{ url('/events') }}">calendar</a></li>
-
-                    <li class="nav-link more"><a href="">district</a>
-                        <ul class="submenu">
-                            <li><a href="{{ url('about/district') }}">About</a></li>
-                            <li><a target="_blank" href="http://dcon.cnhcirclek.org/">DCON</a></li>
-                            <li><a target="_blank" href="http://ftc.cnhcirclek.org/">FTC</a></li>
-                            <li><a target="_blank"
-                                   href="http://www.cnhcirclek.org/event/7-crazy_kompetition_for_infants_south/">CKI
-                                    South</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-link more"><a target="_blank" href="http://www.kiwanis.org/">kiwanis</a>
-                        <ul class="submenu">
-                            <li><a target="_blank" href="http://www.kiwanisclublajolla.org/">La Jolla Kiwanis</a></li>
-                            <li><a target="_blank" href="http://www.sdsucirclek.com">SDSU Circle K</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-link"><a href="{{ url('contact') }}">contact</a></li>
-
-                    @if (! Auth::check())
-                        <li class="nav-link"><a href="{{ url('/auth/login') }}">login</a></li>
-                        <li class="nav-link"><a href="{{ url('/auth/register') }}">register</a></li>
-                    @else
-                        <li class="nav-link"><a href="{{ url('settings') }}">settings</a></li>
-                        <li class="nav-link"><a href="{{ url('/auth/logout') }}">logout</a></li>
-                    @endif
-
-                </ul>
-
-            </div>
-
-        </div>
-    </header>
-
-    @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
-    <div id="admin-link">
-        <a href="{{ url('admin') }}">Admin</a>
-    </div>
-    @endif
+    @include('layouts.admin')
 
     <div id="header-image">
         <h1><img alt="UCSD Circle K" src="{{ asset('images/bannerplaceholder.png') }}"></h1>
@@ -97,27 +42,7 @@
         @yield('content')
     </div>
 
-    {{-- Footer --}}
-    <footer>
-        <div id="logos">
-            <div class="logo">
-                <a target="_blank" href="http://circlek.org"><img src="{{ asset('images/logos/cki.png') }}"></a>
-            </div>
-            <div class="logo">
-                <a target="_blank" href="http://cnhcirclek.org"><img src="{{ asset('images/logos/cnh.png') }}"></a>
-            </div>
-            <div class="logo">
-                <a target="_blank" href="http://paradise.cnhcirclek.org/"><img
-                            src="{{ asset('images/logos/paradise.png') }}"></a>
-            </div>
-        </div>
-
-        <p>© 2014-2015 UC San Diego Circle K International.</p>
-
-        <p id="credits">Designed and developed by Joseph Le with contributions from Jamie Santos, John Gamboa,
-            Michael Mullen, and Alex Tang. Assets by Jamie Santos.</p>
-    </footer>
-    {{-- End Footer --}}
+    @include('layouts.footer')
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

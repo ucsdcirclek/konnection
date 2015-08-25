@@ -5,7 +5,29 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\Event;
+
 class CerfsController extends Controller {
+
+    // TODO Add authentication checks to all actions.
+    // TODO Remember to use eager loading when passing data to views.
+
+    /**
+     * Display events that require CERFs.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function select() {
+
+        // Finds all events that do not have any associated CERFs.
+        $event_ids_without_cerfs = Event::select('events.id')
+                                        ->leftJoin('cerfs', 'events.id', '=', 'cerfs.event_id')
+                                        ->whereNull('cerfs.id')->get();
+
+        $events_without_cerfs = Event::find($event_ids_without_cerfs->toArray());
+
+        return view('pages.cerfs.select', compact('events_without_cerfs'));
+    }
 
 	/**
 	 * Display a listing of the resource.
@@ -14,7 +36,7 @@ class CerfsController extends Controller {
 	 */
 	public function index()
 	{
-		//
+        return view('pages.cerfs.index');
 	}
 
 	/**
@@ -34,7 +56,7 @@ class CerfsController extends Controller {
 	 */
 	public function store()
 	{
-		//
+        // TODO Remember to assign reporter_id foreign key based on currently signed in user.
 	}
 
 	/**

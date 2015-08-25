@@ -1,0 +1,33 @@
+#cerf-header {
+  @include fill-parent;
+  height: 120px;
+  background-color: $emphasis-color;
+  text-align: center;
+
+  h1 {
+    color: white;
+    line-height: 120px;
+  }
+}
+
+#event-section {
+  @include outer-container;
+  height: 400px;
+
+  p {
+    @include span-columns(3);
+  }
+}
+
+#event-table {
+  @include span-columns(9);
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.event-cell {
+  @include span-columns(3 of 9);
+  @include omega;
+  height: 100px;
+  text-align: center;
+}
