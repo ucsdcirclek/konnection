@@ -27,6 +27,7 @@ class SetupCerfsTables extends Migration {
             $table->text('strengths')->nullable();
             $table->text('weaknesses')->nullable();
             $table->text('reflection')->nullable();             // How to improve event?
+            $table->boolean('approved');
 
             $table->softDeletes();
             $table->timestamps();

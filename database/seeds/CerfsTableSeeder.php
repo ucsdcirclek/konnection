@@ -36,7 +36,8 @@ class CerfsTableSeeder extends Seeder {
                     'summary' => $faker->text,
                     'strengths' => $faker->text,
                     'weaknesses' => $faker->text,
-                    'reflection' => $faker->text
+                    'reflection' => $faker->text,
+                    'approved' => false
                 )
             );
         }

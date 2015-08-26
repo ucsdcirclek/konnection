@@ -19,7 +19,7 @@
 
                 <li class="nav-link"><a href="{{ url('/events') }}">calendar</a></li>
 
-                <li class="nav-link"><a href="{{ url('/cerfs/select') }}">cerfs</a></li>
+                <li class="nav-link"><a href="{{ url('/cerfs/overview') }}">cerfs</a></li>
 
                 <li class="nav-link more"><a href="">district</a>
                     <ul class="submenu">

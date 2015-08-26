@@ -104,10 +104,7 @@
                             <li class="avatar small">
 
                                 <div class="avatar-wrapper">
-                                    <img src="{{ str_is($registration->user->avatar->url(), '/avatars/original/missing.png')
-                                                 ? 'https://www.drupal.org/files/profile_default.jpg'
-                                                 : $registration->user->avatar->url() }}">
-
+                                    <img src="{{ $registration->user->avatar->url() }}">
                                 </div>
 
 
@@ -128,9 +125,7 @@
                     <div class="image">
 
                     </div>
-                    <img src="{{ str_is($event->creator->avatar->url(), '/avatars/original/missing.png')
-                                 ? 'https://www.drupal.org/files/profile_default.jpg'
-                                 : $event->creator->avatar->url() }}">
+                    <img src="{{ $event->creator->avatar->url() }}">
 
                     <p class="name">{{ $event->creator->first_name }} {{$event->creator->last_name}}</p>
 

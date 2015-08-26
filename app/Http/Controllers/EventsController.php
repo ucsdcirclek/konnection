@@ -86,6 +86,8 @@ class EventsController extends Controller
      */
     public function show($slug)
     {
+        // TODO Add a comments feed for each event.
+
         $event = Event::findBySlug($slug);
         $event->load('creator', 'registrations', 'guests');
 

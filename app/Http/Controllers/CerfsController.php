@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Event;
+use App\User;
 
 class CerfsController extends Controller {
 
@@ -17,20 +18,27 @@ class CerfsController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function select() {
+    public function overview() {
 
-        // Finds all events that do not have any associated CERFs.
+        // TODO Either lazy load CERFs or paginate.
+
+        // Finds IDs of all events that do not have an associated CERF.
         $event_ids_without_cerfs = Event::select('events.id')
                                         ->leftJoin('cerfs', 'events.id', '=', 'cerfs.event_id')
                                         ->whereNull('cerfs.id')->get();
 
+        // Retrieves events without CERFs based on ID. Casts to array to pass to foreach loop in view.
         $events_without_cerfs = Event::find($event_ids_without_cerfs->toArray());
 
-        return view('pages.cerfs.select', compact('events_without_cerfs'));
+        return view('pages.cerfs.overview', compact('events_without_cerfs'));
+    }
+
+    public function select() {
+
     }
 
 	/**
-	 * Display a listing of the resource.
+	 * Display all CERFs.
 	 *
 	 * @return Response
 	 */
@@ -40,7 +48,8 @@ class CerfsController extends Controller {
 	}
 
 	/**
-	 * Show the form for creating a new resource.
+	 * Show multi-page form for creating a new CERF.
+     * Event details automatically filled in from previous overview page.
 	 *
 	 * @return Response
 	 */

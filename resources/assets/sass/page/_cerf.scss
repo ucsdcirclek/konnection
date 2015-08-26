@@ -1,3 +1,5 @@
+// Header at top of page.
+
 #cerf-header {
   @include fill-parent;
   height: 120px;
@@ -10,24 +12,66 @@
   }
 }
 
-#event-section {
-  @include outer-container;
-  height: 400px;
+// Section containing events. to be CERFed.
 
-  p {
-    @include span-columns(3);
+#cerf-selection {
+  background-color: $lightest-gray;
+
+  #event-section {
+    @include outer-container;
+    height: 400px;
+
+    .section-sidebar {
+      @include span-columns(3);
+    }
+
+    #event-table {
+      @include span-columns(9);
+
+      background-color: $light-gray;
+
+      height: 500;
+      overflow-y: scroll;
+
+      a {
+        color: $base-font-color;
+
+        &:hover {
+
+          .event-cell {
+            background-color: $dark-blue;
+            color: $white;
+
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+
+        .event-cell {
+          @include span-columns(3 of 9);
+          @include omega;
+          @include pad(10px);
+
+          height: 250;
+          text-align: center;
+
+          overflow-y: scroll;
+
+          .avatar.small {
+            img {
+              float: left;
+            }
+          }
+
+          .cerf-description {
+            float: left;
+            padding-top: 25px;
+          }
+        }
+      }
+    }
   }
 }
 
-#event-table {
-  @include span-columns(9);
-  height: 400px;
-  overflow-y: scroll;
-}
-
-.event-cell {
-  @include span-columns(3 of 9);
-  @include omega;
-  height: 100px;
-  text-align: center;
-}
