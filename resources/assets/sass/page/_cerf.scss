@@ -28,9 +28,7 @@
     #event-table {
       @include span-columns(9);
 
-      background-color: $light-gray;
-
-      height: 500;
+      height: 500px;
       overflow-y: scroll;
 
       a {
@@ -54,8 +52,10 @@
           @include omega;
           @include pad(10px);
 
-          height: 250;
+          height: 250px;
           text-align: center;
+
+          background-color: $light-gray;
 
           overflow-y: scroll;
 

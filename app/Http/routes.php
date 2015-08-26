@@ -92,4 +92,5 @@ Route::controllers([
  */
 
 Route::get('cerfs/overview', 'CerfsController@overview');
+Route::get('cerfs/select/{id}', 'CerfsController@select');
 Route::resource('cerfs', 'CerfsController');

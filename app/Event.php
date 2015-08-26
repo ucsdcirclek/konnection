@@ -178,4 +178,5 @@ class Event extends Model implements SluggableInterface
         $this->attributes['close_time'] = Carbon::parse($value);
     }
 
+    // TODO Consider adding get mutators for event times.
 }

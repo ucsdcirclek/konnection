@@ -19,7 +19,7 @@
                 <div id="event-table">
 
                     @foreach ($events_without_cerfs as $event)
-                        <a href="">
+                        <a href="{{ action('CerfsController@select', [$event->id]) }}">
                             <div class="event-cell">
 
 

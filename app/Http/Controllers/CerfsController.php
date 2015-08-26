@@ -2,6 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
 
@@ -18,14 +20,15 @@ class CerfsController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function overview() {
-
-        // TODO Either lazy load CERFs or paginate.
+    public function overview()
+    {
+        // TODO Only check events created after the CERFs system is implemented.
 
         // Finds IDs of all events that do not have an associated CERF.
         $event_ids_without_cerfs = Event::select('events.id')
                                         ->leftJoin('cerfs', 'events.id', '=', 'cerfs.event_id')
-                                        ->whereNull('cerfs.id')->get();
+                                        ->whereNull('cerfs.id')
+                                        ->get();
 
         // Retrieves events without CERFs based on ID. Casts to array to pass to foreach loop in view.
         $events_without_cerfs = Event::find($event_ids_without_cerfs->toArray());
@@ -33,8 +36,15 @@ class CerfsController extends Controller {
         return view('pages.cerfs.overview', compact('events_without_cerfs'));
     }
 
-    public function select() {
-
+    /**
+     * Redirects to CERF creation form with details of event to be CERFed.
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function select($id)
+    {
+        return Redirect::to('cerfs/create')->with('event_id', $id);
     }
 
 	/**
@@ -47,15 +57,19 @@ class CerfsController extends Controller {
         return view('pages.cerfs.index');
 	}
 
-	/**
-	 * Show multi-page form for creating a new CERF.
+    /**
+     * Show multi-page form for creating a new CERF.
      * Event details automatically filled in from previous overview page.
-	 *
-	 * @return Response
-	 */
+     *
+     * @param $event
+     * @return Response
+     */
 	public function create()
 	{
-		//
+        $event_id = Session::get('event_id');
+        $event = Event::find($event_id);
+
+        return view('pages.cerfs.create', compact('event'));
 	}
 
 	/**
