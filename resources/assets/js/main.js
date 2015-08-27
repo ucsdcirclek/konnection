@@ -164,6 +164,17 @@ $(document).ready(function () {
     step: 30                      // Sets times in timepicker at increments of 30 minutes.
   });
 
+  /**
+   * Chair search popup on CerfsController@create.
+   */
+
+  $('.search-popup-link').magnificPopup({
+    type: 'inline',
+
+    removalDelay: 500,
+    mainClass: 'mfp-move-horizontal',
+  });
+
   /*
    * Misc.
    */

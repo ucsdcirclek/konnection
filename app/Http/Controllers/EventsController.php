@@ -168,7 +168,7 @@ class EventsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // TODO Add delete functionality to events.
     }
 
 }

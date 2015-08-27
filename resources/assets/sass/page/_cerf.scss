@@ -19,7 +19,7 @@
 
   #event-section {
     @include outer-container;
-    height: 400px;
+    height: 500px;
 
     .section-sidebar {
       @include span-columns(3);
@@ -72,6 +72,31 @@
         }
       }
     }
+  }
+}
+
+// CERF creation form.
+
+#event-summary {
+  height: 300px;
+
+  .description {
+    @include span-columns(8);
+
+    h1 {
+      text-align: center;
+    }
+
+    .half {
+      @include span-columns(4 of 8);
+
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+
+  .chair.avatar.large {
+    @include span-columns(4);
   }
 }
 

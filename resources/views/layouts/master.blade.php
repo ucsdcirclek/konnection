@@ -17,6 +17,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/1.2.7/css/froala_editor.min.css">
     <link rel="stylesheet" href="{{ elixir("css/main.css") }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor/jquery.datetimepicker.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor/popup.css') }}" />
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -55,6 +56,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/1.2.7/js/froala_editor.min.js"></script>
 <script src="{{ elixir('js/main.js') }}"></script>
 <script src="{{ asset('js/vendor/jquery.datetimepicker.js') }}"></script>
+<script src="{{ asset('js/vendor/popup.min.js') }}"></script>
 
 <script>
     if (document.location.hostname.indexOf("ucsdcki.org") != -1 || document.location.hostname.indexOf("www.ucsdcki.org") != -1) {

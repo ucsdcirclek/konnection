@@ -63,6 +63,8 @@ class SetupCerfsTables extends Migration {
         // Handles home club attendance section of CERF.
         Schema::table('activity_log', function(Blueprint $table)
         {
+            // TODO Make user_id nullable to allow for members without an account who attended an event.
+
             $table->float('planning_hours')->default(0.0)->after('service_hours');
             $table->float('traveling_hours')->default(0.0)->after('planning_hours');
         });

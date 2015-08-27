@@ -44,7 +44,10 @@ class CerfsController extends Controller {
      */
     public function select($id)
     {
-        return Redirect::to('cerfs/create')->with('event_id', $id);
+        // Uses Session::put instead of flashing to avoid create form crash when refreshed.
+        Session::put('event_id', $id);
+
+        return Redirect::to('cerfs/create');
     }
 
 	/**
@@ -66,10 +69,17 @@ class CerfsController extends Controller {
      */
 	public function create()
 	{
-        $event_id = Session::get('event_id');
-        $event = Event::find($event_id);
+        // Gets ID of event put into session by @select.
+        $event = Event::find(Session::get('event_id'));
 
-        return view('pages.cerfs.create', compact('event'));
+        $chair = null;
+
+        // Finds chair of event.
+        if (!is_null($event->chair_id)) {
+            $chair = Event::find($event->chair_id);
+        }
+
+        return view('pages.cerfs.create', compact('event', 'chair'));
 	}
 
 	/**
