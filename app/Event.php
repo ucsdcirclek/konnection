@@ -122,6 +122,20 @@ class Event extends Model implements SluggableInterface
         return $this->belongsTo('App\User', 'creator_id');
     }
 
+    /**
+     * Chair of the event.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function chair() {
+        return $this->belongsTo('App\User', 'chair_id');
+    }
+
+    /**
+     * CERF associated with this event.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function cerfs() {
         return $this->hasMany('App\Cerf');
     }

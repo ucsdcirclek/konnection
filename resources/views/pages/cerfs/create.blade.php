@@ -4,8 +4,12 @@
 
 @section('content')
 
+    <div id="cerf-header">
+        <h1>Club Event Report Forms</h1>
+    </div>
+
     <div class="wrapper">
-        <h1>Creating a CERF for "{{ $event->title }}"</h1>
+        <h1>{{ $event->title }}</h1>
     </div>
 
 @endsection
