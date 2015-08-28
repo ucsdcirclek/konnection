@@ -14,7 +14,6 @@ $base-border-radius: em(3);
 
 // Colors
 $beige: #F3E199;
-$brown: #5E4950;
 $cream: #FAF4E4;
 $light-green: #D6D292;
 $light-red: #FBE3E4;
@@ -29,24 +28,30 @@ $lightest-gray: #f3f3f3;
 $light-gray: #DDD;
 $medium-gray: #999;
 $dark-gray: #333;
-$turquoise: #66D7EE;
-$light-blue: #3080E8;
-$dark-blue: #104891;
 
-// Background Color
-$base-background-color: $light-green;
+$yellow: #ECFEAA;
+$brown: #4D2C19;
+$lightest-green: #DDEAE9;
+$light-green: #6DA592;
+$medium-green: #243E36;
+$dark-green: #1D2623;
+$very-dark-green: #021810;
+
+// Background Colors
+$base-background-color: $very-dark-green;
+$home-background-color: $lightest-gray;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $medium-gray;
+$base-accent-color: $medium-green;
 $header-font-color: $base-accent-color;
 
 // Link Colors
-$base-link-color: $base-accent-color;
+$base-link-color: $red;
 $hover-link-color: darken($base-accent-color, 15);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
-$emphasis-color: $dark-blue;
+$emphasis-color: $brown;
 
 // Border color
 $base-border-color: $light-gray;

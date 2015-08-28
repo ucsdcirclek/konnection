@@ -89,7 +89,7 @@
     @endif
 
     <div id="header-image">
-        <h1><img alt="UCSD Circle K" src="{{ asset('images/bannerplaceholder.png') }}"></h1>
+        <h1><img alt="UCSD Circle K" src="{{ asset('images/banner.jpg') }}"></h1>
     </div>
     {{-- End Header --}}
 

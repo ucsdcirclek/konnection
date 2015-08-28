@@ -5,10 +5,7 @@ html {
 
 body {
   @include outer-container;
-  // background: url('/images/treesbg.jpg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: $light-gray;
+  background: $base-background-color url('/images/background.jpg') no-repeat fixed;
   height: 100%;
   min-width: em(700);
   margin: 0 auto;
@@ -16,7 +13,7 @@ body {
 
 #container{
   @include span-columns(12);
-  background: $lightest-gray;
+  background: $home-background-color;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-bottom: 2em;

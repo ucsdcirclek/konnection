@@ -89,14 +89,14 @@
   */
 
   .page {
-    color: $light-blue;
+    color: $light-gray;
     text-align: center;
 
     &.active {
       width: auto;
       height: 50px;
       background: $dark-gray;
-      color: $light-blue;
+      color: $medium-gray;
       text-align: center;
       line-height: 50px;
     }
