@@ -1,0 +1,102 @@
+// Header at top of page.
+
+#cerf-header {
+  @include fill-parent;
+  height: 120px;
+  background-color: $emphasis-color;
+  text-align: center;
+
+  h1 {
+    color: white;
+    line-height: 120px;
+  }
+}
+
+// Section containing events. to be CERFed.
+
+#cerf-selection {
+  background-color: $lightest-gray;
+
+  #event-section {
+    @include outer-container;
+    height: 500px;
+
+    .section-sidebar {
+      @include span-columns(3);
+    }
+
+    #event-table {
+      @include span-columns(9);
+
+      height: 500px;
+      overflow-y: scroll;
+
+      a {
+        color: $base-font-color;
+
+        &:hover {
+
+          .event-cell {
+            background-color: $emphasis-color;
+            color: $white;
+
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+
+        .event-cell {
+          @include span-columns(3 of 9);
+          @include omega;
+          @include pad(10px);
+
+          height: 250px;
+          text-align: center;
+
+          background-color: $light-gray;
+
+          overflow-y: scroll;
+
+          .avatar.small {
+            img {
+              float: left;
+            }
+          }
+
+          .cerf-description {
+            float: left;
+            padding-top: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// CERF creation form.
+
+#event-summary {
+  height: 300px;
+
+  .description {
+    @include span-columns(8);
+
+    h1 {
+      text-align: center;
+    }
+
+    .half {
+      @include span-columns(4 of 8);
+
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+
+  .chair.avatar.large {
+    @include span-columns(4);
+  }
+}
+

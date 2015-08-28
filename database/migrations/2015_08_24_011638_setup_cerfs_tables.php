@@ -17,8 +17,7 @@ class SetupCerfsTables extends Migration {
         {
             $table->increments('id');
             $table->integer('event_id')->unsigned();
-            $table->string('chair');
-            $table->string('reporter');                         // Person who fills out CERFs.
+            $table->integer('reporter_id')->unsigned();
             $table->decimal('amount_raised')->default(0.00);
             $table->decimal('amount_spent')->default(0.00);
             $table->decimal('net_profit')->default(0.00);;
@@ -27,14 +26,21 @@ class SetupCerfsTables extends Migration {
             $table->text('strengths')->nullable();
             $table->text('weaknesses')->nullable();
             $table->text('reflection')->nullable();             // How to improve event?
+            $table->boolean('approved');
 
             $table->softDeletes();
             $table->timestamps();
 
+            // TODO Reconsider onDelete behavior for CERFs.
+
             $table->foreign('event_id')
                 ->references('id')
-                ->on('users')
+                ->on('events')
                 ->onDelete('cascade');
+
+            $table->foreign('reporter_id')
+                  ->references('id')
+                  ->on('users');
         });
 
         // Handles Kiwanis family attendance section of CERF.
@@ -57,6 +63,8 @@ class SetupCerfsTables extends Migration {
         // Handles home club attendance section of CERF.
         Schema::table('activity_log', function(Blueprint $table)
         {
+            // TODO Make user_id nullable to allow for members without an account who attended an event.
+
             $table->float('planning_hours')->default(0.0)->after('service_hours');
             $table->float('traveling_hours')->default(0.0)->after('planning_hours');
         });
@@ -69,6 +77,15 @@ class SetupCerfsTables extends Migration {
                   ->references('id')
                   ->on('event_categories')
                   ->onDelete('cascade');
+        });
+
+        Schema::table('events', function(Blueprint $table)
+        {
+            $table->integer('chair_id')->unsigned()->nullable()->after('creator_id');
+
+            $table->foreign('chair_id')
+                  ->references('id')
+                  ->on('users');
         });
     }
 
@@ -92,6 +109,12 @@ class SetupCerfsTables extends Migration {
         {
             $table->dropForeign('event_tags_category_id_foreign');
             $table->dropColumn('category_id');
+        });
+
+        Schema::table('events', function(Blueprint $table)
+        {
+            $table->dropForeign('events_chair_id_foreign');
+            $table->dropColumn('chair_id');
         });
     }
 }

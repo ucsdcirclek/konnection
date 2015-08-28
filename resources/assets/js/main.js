@@ -164,6 +164,68 @@ $(document).ready(function () {
     step: 30                      // Sets times in timepicker at increments of 30 minutes.
   });
 
+  /**
+   * Chair search popup on CerfsController@create.
+   */
+
+  $('.search-popup-link').magnificPopup({
+    type: 'inline',
+    closeBtnInside: false,
+
+    callbacks: {
+      open: function() {
+
+        // Hackish autofocus; can't set autofocus HTML attribute and there is no afterOpen callback.
+        setTimeout(function() {
+          $('#search-input').focus();
+        }, 500);
+      }
+    },
+
+    removalDelay: 500,
+    mainClass: 'mfp-move-horizontal'
+  });
+
+  /**
+   * Search functions.
+   */
+
+  var timeoutID;
+
+  window.searchUsers = function() {
+
+    var searchAndDisplayResults = function() {
+
+      // Gets user input.
+      var input = $('#search-input').val();
+
+      if (input.length > 0) {
+
+        // Posts to UsersController@search with user input and fills in div with results.
+        $.post('/users/search', {input: input}, function(markup) {
+          $('#search-results').html(markup);
+        })
+      }
+    };
+
+    // Finds results when user finishes typing.
+    setTimeout(searchAndDisplayResults, 500);
+  }
+
+  window.resetTimer = function() {
+    clearTimeout(timeoutID);
+  }
+
+  $('#search-input').keydown(window.searchUsers);
+  $('#search-input').keyup(window.resetTimer);
+
+  // Popup loaded with AJAX, so cannot use jQuery native click() function.
+  $('#search-results').on('click', 'a', function(event) {
+    event.preventDefault();
+
+    $.magnificPopup.close();
+  });
+
   /*
    * Misc.
    */

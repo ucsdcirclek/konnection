@@ -86,3 +86,13 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+/**
+ * CERF routes
+ */
+
+Route::get('cerfs/overview', 'CerfsController@overview');
+Route::get('cerfs/select/{id}', 'CerfsController@select');
+Route::resource('cerfs', 'CerfsController');
+
+Route::post('users/search', 'UsersController@search');

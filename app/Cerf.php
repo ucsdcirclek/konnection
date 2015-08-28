@@ -34,5 +34,15 @@ class Cerf extends Model
     {
         return $this->belongsTo('App\Event');
     }
+
+    /**
+     * User who filled out this CERF.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function reporter()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
 

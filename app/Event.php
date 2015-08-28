@@ -122,8 +122,22 @@ class Event extends Model implements SluggableInterface
         return $this->belongsTo('App\User', 'creator_id');
     }
 
-    public function cerf() {
-        return $this->hasOne('App\Cerf');
+    /**
+     * Chair of the event.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function chair() {
+        return $this->belongsTo('App\User', 'chair_id');
+    }
+
+    /**
+     * CERF associated with this event.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function cerfs() {
+        return $this->hasMany('App\Cerf');
     }
 
     /**
@@ -178,4 +192,5 @@ class Event extends Model implements SluggableInterface
         $this->attributes['close_time'] = Carbon::parse($value);
     }
 
+    // TODO Consider adding get mutators for event times.
 }
