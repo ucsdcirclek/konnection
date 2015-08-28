@@ -34,7 +34,7 @@ class HomeController extends Controller
             );
 
         // Get posts
-        $posts = Post::latest()->take(3)->get();
+        $posts = Post::latest()->take(2)->get();
 
         // Get slides
         $slides = Slide::all();

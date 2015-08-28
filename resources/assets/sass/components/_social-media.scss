@@ -1,23 +1,54 @@
-.social-media {
-  margin: 0.5em 0;
+// Social media column on home page.
 
-  a {
-    i {
-      color: $medium-gray;
-      border: 2px solid $medium-gray;
-      border-radius: 50%;
-      padding: 0.5em;
-      position: relative;
-      transition: background .1s ease-in;
+#social-media-column {
+  position: fixed;
+  top: 40%;
+  right: 0;
 
-      &:hover {
-         background: $medium-gray;
-         color: white;
+  div {
+    background-color: $medium-green;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    vertical-align: bottom;
+
+    a {
+      color: white;
+
+      i {
+        line-height: 60px;
       }
+    }
 
-      &:not(:first-child){
-         margin-left: 0.5em;
-      }
+    &:hover {
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  .facebook-box {
+    &:hover {
+      background-color: $facebook;
+    }
+  }
+
+  .tumblr-box {
+    &:hover {
+      background-color: $tumblr;
+    }
+  }
+
+  .instagram-box {
+    &:hover {
+      background-color: $instagram;
+    }
+  }
+
+  .twitter-box {
+    &:hover {
+      background-color: $twitter;
     }
   }
 }

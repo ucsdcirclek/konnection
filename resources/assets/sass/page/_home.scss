@@ -1,6 +1,6 @@
 #content {
   #main {
-    @include span-columns(8);
+
     padding: 20px 10px 10px 10px;
     height: 100%;
 
@@ -13,43 +13,12 @@
     }
   }
 
-  #sidebar {
-    @include span-columns(4);
-    @include omega();
-    @include reset-display;
-    height: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    h2 {
-      padding-bottom: .3em;
-      margin-bottom: .3em;
-      border-bottom: 1px solid $light-gray;
-    }
+  #week-view, #announcements-view {
+    @include fill-parent;
   }
 
-  .social-media {
-    text-align: center;
-    margin-top: 1em;
-    color: $red;
-
-    a {
-      @extend a;
-      color: $red;
-      margin: 1em;
-
-      &:hover {
-        color: darken($red, 5%);
-      }
-    }
-
-    i {
-      color: $base-font-color;
-
-      &:hover {
-        color: darken($base-font-color, 5%);
-      }
-    }
+  #week-view {
+    padding: 20px 20px 20px 20px;
   }
 
   .button-text {
@@ -60,9 +29,31 @@
     animation: pulse 1s infinite;
   }
 
+  #announcements-view {
+    background-color: $lightest-green;
+
+    padding: 20px 40px 20px 40px;
+
+    div:first-child {
+      @include fill-parent;
+
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+      height: 90px;
+      background-color: $emphasis-color;
+      text-align: center;
+
+      h2 {
+        color: white;
+        line-height: 90px;
+      }
+    }
+  }
+
   #announcements {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 10px;
 
     h3, h4, h5, h6 {
@@ -70,7 +61,8 @@
     }
 
     h3 {
-      border-bottom: 2px dotted $light-gray;
+      padding-top: 10px;
+      text-align: center;
 
       small {
         color: $medium-gray;
@@ -79,6 +71,7 @@
     }
 
     .date {
+      text-align: center;
       font-style: italic;
       color: $medium-gray;
     }

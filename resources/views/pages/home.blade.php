@@ -42,12 +42,18 @@
                     </p>
                 </div>
             </div>
-        </div>
+      </div>
+    </div>
 
+    <div id="social-media-column">
+        <div class="facebook-box"><a href="#"><i class="fa fa-2x fa-facebook"></i></a></div>
+        <div class="tumblr-box"><a href="#"><i class="fa fa-2x fa-tumblr"></i></a></div>
+        <div class="instagram-box"><a href="#"><i class="fa fa-2x fa-instagram"></i></a></div>
+        <div class="twitter-box"><a href="#"><i class="fa fa-2x fa-twitter"></i></a></div>
     </div>
 
     <div id="content">
-        <div id="main">
+        <div id="week-view">
             <ul class="week">
                 <li class="featured">
                     <h5>Featured</h5>
@@ -59,7 +65,7 @@
                     <p class="info">
                       Help out at the annual Triton 5K! The Triton 5K is a 3.1-mile race around campus, ending at the Track and
                       Field stadium where there will be a festival with food vendors, live entertainment, and the annual Junior
-                      Trition Run.
+                      Triton Run.
                     </p>
                 </li>
                 @foreach ($days as $day => $events)
@@ -84,8 +90,10 @@
                     </li>
                 @endforeach
             </ul>
+        </div>
 
-            <h2>Announcements</h2>
+        <div id="announcements-view">
+            <div><h2>Announcements</h2></div>
 
             <div id="announcements">
                 @foreach ($posts as $post)
@@ -100,49 +108,7 @@
                     </article>
                 @endforeach
             </div>
-
         </div>
 
-        <div id="sidebar">
-            <div>
-                @if (Auth::check())
-                    <h2>Welcome, {{ Auth::user()->first_name }}!</h2>
-                @else
-                    <h2>Welcome!</h2>
-
-                    <p>
-                        If you have account, please <a href="#">login</a>. If you do not, you are invited to <a
-                                href="#">register</a>!
-                    </p>
-                @endif
-            </div>
-            <a class="button emphasis" href="{{ url('about/membership') }}">Become a Member</a>
-            <br/>
-            <br/>
-            <a class="button emphasis" href="http://bit.ly/UCSDCKITechTeamApp" target="_blank">Apply for the Tech Team</a>
-
-            <h2 style="margin-top: 10px;">Social Media</h2>
-
-            <div class="social-media">
-                <a href="https://facebook.com/ucsdcirclek"><i class="fa fa-2x fa-facebook-square"></i></a>
-                <a href="http://instagram.com/ucsdcirclek"><i class="fa fa-2x fa-instagram"></i></a>
-                <a href="http://ucsdcirclek.tumblr.com/"><i class="fa fa-2x fa-tumblr-square"></i></a>
-            </div>
-
-            <br/>
-
-            <a class="twitter-timeline" href="https://twitter.com/UCSDCircleK" data-widget-id="562119802261495808">Tweets
-                by
-                @UCSDCircleK</a>
-            <script>!function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = p + "://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, "script", "twitter-wjs");</script>
-        </div>
     </div>
 @endsection
