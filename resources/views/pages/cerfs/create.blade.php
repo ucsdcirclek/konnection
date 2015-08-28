@@ -33,7 +33,7 @@
 
                 <div><a href="#search-popup" class="search-popup-link button emphasis" data-effect="mfp-move-horizontal">Change</a></div>
 
-                @include('pages.cerfs.search')
+                @include('search.search')
 
             </div>
         </div>

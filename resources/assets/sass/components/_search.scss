@@ -1,11 +1,71 @@
+// Each result displayed in result list.
+
+#search-popup {
+  overflow: scroll;
+}
+
+#search-results {
+
+  a {
+    color: $base-font-color;
+
+    &:hover {
+
+      .result.avatar.small {
+        background-color: $emphasis-color;
+        color: $white;
+
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .result {
+    height: 85px;
+    text-align: center;
+
+    overflow-y: scroll;
+
+    .result-avatar {
+
+    }
+
+    div {
+      padding: 5px;
+    }
+
+    img {
+      float: left;
+      padding-right: 10px;
+    }
+
+    .result-description {
+
+      div:first-child {
+        padding-left: 30px;
+        float:left;
+      }
+
+      div:nth-child(2) {
+        padding-right: 40px;
+        float: right;
+      }
+    }
+  }
+}
+
 // Search form for user search on CERF creation form.
 
 .user-search {
   position: relative;
   background: #FFF;
   padding: 20px;
+  height: 400px;
   width:auto;
-  max-width: 500px;
+  max-width: 700px;
   margin: 20px auto;
 }
 
