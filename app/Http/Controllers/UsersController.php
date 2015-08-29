@@ -10,6 +10,12 @@ use App\Http\Requests\UpdateUserRequest;
 use Illuminate\Support\Facades\Input;
 use Illuminate\View\View;
 
+use Imagine\Image\Point;
+use Imagine\Image\Box;
+use Imagine\Gd\Imagine;
+
+use File;
+
 class UsersController extends Controller {
 
     /**
@@ -55,8 +61,58 @@ class UsersController extends Controller {
         // Update user
         \Auth::user()->update($input);
 
+        if (!is_null($input['avatar'])) $this->cropAvatar();
+
         return redirect()->action('UsersController@edit')
             ->with('message', 'Your profile has been updated.');
 	}
 
+    /**
+     * Crops avatar image to square and corrects orientation.
+     *
+     * @return void
+     */
+    private function cropAvatar() {
+
+        // Image manipulation class part of codesleeve/laravel-stapler.
+        $imagine = new Imagine();
+
+        // Gets full path of uploaded avatar, creates Imagine object to manipulate image.
+        $avatarPath = \Auth::user()->avatar->url();
+        $image =  $imagine->open(public_path() . $avatarPath);
+
+        // Native EXIF read function to determine dimension and orientations.
+        $exifData = exif_read_data(public_path() . $avatarPath);
+        $width = $exifData['ExifImageWidth'];
+        $height = $exifData['ExifImageLength'];
+
+        // Crops off top and  bottom for tall images.
+        if ($height > $width) {
+            $start = ($height - $width) / 2;
+            $image->crop(new Point(0, $start), new Box($width, $width));
+        }
+
+        // Crops off sides for wide images.
+        else {
+            $start = ($width - $height) / 2;
+            $image->crop(new Point($start, 0), new Box($height, $height));
+        }
+
+        // Adjusts orientation depending on EXIF orientation data.
+        switch($exifData['Orientation']) {
+            case 3:
+                $image->rotate(180);
+                break;
+            case 6:
+                $image->rotate(90);
+                break;
+            case 8:
+                $image->rotate(-90);
+                break;
+        }
+
+        // Replaces original avatar and ensures previous image is deleted.
+        File::delete(public_path() . $avatarPath);
+        $image->save(public_path() . $avatarPath);
+    }
 }

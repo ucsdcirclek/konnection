@@ -23,7 +23,7 @@
             </div>
         @endif
 
-        {!! \Form::model($user, ['action' => 'UsersController@update']) !!}
+        {!! \Form::model($user, ['action' => 'UsersController@update', 'files' => true]) !!}
 
         <label for="username">Username</label>
         {!! \Form::text('username', $user->username, ['disabled']) !!}
