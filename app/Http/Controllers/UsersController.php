@@ -11,6 +11,7 @@ use Imagine\Image\Box;
 use Imagine\Gd\Imagine;
 
 use File;
+use \PHPExif\Reader\Reader;
 
 class UsersController extends Controller {
 
@@ -60,8 +61,10 @@ class UsersController extends Controller {
         $avatarPath = \Auth::user()->avatar->url();
         $image =  $imagine->open(public_path() . $avatarPath);
 
-        // Native EXIF read function to determine dimension and orientations.
-        $exifData = exif_read_data(public_path() . $avatarPath);
+        // Reads EXIF data with a wrapper around native exif_read_data() PHP function.
+        $reader = Reader::factory(Reader::TYPE_NATIVE);
+        $exifData = $reader->getExifFromFile(public_path() . $avatarPath)->getRawData();
+
         $width = $exifData['ExifImageWidth'];
         $height = $exifData['ExifImageLength'];
 
