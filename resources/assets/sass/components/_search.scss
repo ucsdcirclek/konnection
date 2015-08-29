@@ -1,7 +1,13 @@
 // Each result displayed in result list.
 
-#search-popup {
+.search-popup {
   overflow: scroll;
+}
+
+.avatar.small {
+  div > a.search-popup-link.button.emphasis {
+    color: white;
+  }
 }
 
 #search-results {

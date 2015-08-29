@@ -35,6 +35,18 @@
         <label for="close_time">Signup Close</label>
         {!! Form::text('close_time', '', array('class'=>'datetime')) !!}
 
+        <label for="chair_id">Event Chair</label>
+        {!! Form::hidden('chair_id', null, array('class' => 'chair-selection')) !!}
+
+        <div class="avatar small">
+            <p><strong>No chair</strong></p>
+            <img src="/avatars/original/missing.png">
+
+            <div><a href=".search-popup" class="search-popup-link button emphasis" data-effect="mfp-move-horizontal">Change</a></div>
+
+            @include('search.search', array('selectClass' => 'chair-select'))
+        </div>
+
         <br/>
         <br/>
 

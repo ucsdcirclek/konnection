@@ -44,6 +44,12 @@ class EventsController extends Controller
     {
         $input = $req->all();
 
+        // Makes sure chair_id enters database as an integer or null if left empty.
+        strcmp($input['chair_id'], "") == 0 ? $input['chair_id'] = null
+                                            : $input['chair_id'] = (int) $input['chair_id'];
+
+        // TODO Make chair_id field null if chair was not specified.
+
         // Ensures database times are always in UTC.
         foreach ($input as $key => $value) {
 

@@ -31,9 +31,9 @@
                     <img src="{{ $chair->avatar->url() }}">
                 @endif
 
-                <div><a href="#search-popup" class="search-popup-link button emphasis" data-effect="mfp-move-horizontal">Change</a></div>
+                <div><a href=".search-popup" class="search-popup-link button emphasis" data-effect="mfp-move-horizontal">Change</a></div>
 
-                @include('search.search')
+                @include('search.search', array('selectClass' => 'cerf-select'))
 
             </div>
         </div>

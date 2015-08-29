@@ -52,8 +52,8 @@ $(document).ready(function () {
               start: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"), // Convert from server UTC to local
               end: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"),
               url: '/events/' + event.slug,
-              backgroundColor: '#104891',
-              borderColor: '#104891'
+              backgroundColor: '#243E36',
+              borderColor: '#243E36'
             });
           });
 
@@ -216,12 +216,29 @@ $(document).ready(function () {
     clearTimeout(timeoutID);
   }
 
+  window.setChair = function(id, url, name) {
+
+    $('.chair-selection').val(id);
+
+    $('.avatar > p').html(function() {
+      return '<strong>Event Chair: </strong>' + name;
+    })
+
+    $('.avatar > img').attr('src', url);
+  }
+
   $('#search-input').keydown(window.searchUsers);
   $('#search-input').keyup(window.resetTimer);
 
   // Popup loaded with AJAX, so cannot use jQuery native click() function.
   $('#search-results').on('click', 'a', function(event) {
     event.preventDefault();
+
+    var id = $(this).find('.result-description').attr('userId');
+    var url = $(this).find('.result-avatar > img').attr('src');
+    var name = $(this).find('.result-description > div:first-child').text();
+
+    window.setChair(id, url, name);
 
     $.magnificPopup.close();
   });
@@ -230,5 +247,4 @@ $(document).ready(function () {
    * Misc.
    */
   $('.editor').editable({inlineMode: false});
-
 });
