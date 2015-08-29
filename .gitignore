@@ -3,6 +3,8 @@
 .env
 composer.lock
 _ide_helper.php
+.idea/
+.DS_Store
 
 /storage/debugbar/
 /public/css/main.css
@@ -10,4 +12,4 @@ _ide_helper.php
 /public/js/main.js
 /public/js/main.js.map
 /public/build
-.idea/
+/public/system
