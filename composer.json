@@ -12,7 +12,7 @@
     ],
 	"require": {
 		"laravel/framework": "5.0.*",
-		"guzzlehttp/guzzle": "~4.0",
+		"guzzlehttp/guzzle": "~5.0",
 		"zizaco/entrust": "dev-laravel-5",
 		"cviebrock/eloquent-sluggable": ">=3.0.0-alpha",
 		"codesleeve/laravel-stapler": "dev-feature/l5-compatibility",

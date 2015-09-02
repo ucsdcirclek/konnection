@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => null, 'name' => null],
+	'from' => ['address' => 'noreply@ucsdcki.org', 'name' => 'UCSD Circle K'],
 
 	/*
 	|--------------------------------------------------------------------------
