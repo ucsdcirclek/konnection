@@ -95,6 +95,12 @@ class EventsController extends Controller
         // TODO Add a comments feed for each event.
 
         $event = Event::findBySlug($slug);
+
+        // Check if exists
+        if (!$event) {
+            abort(404);
+        }
+
         $event->load('creator', 'registrations', 'guests');
 
         // Look for events in the upcoming week
