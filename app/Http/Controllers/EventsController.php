@@ -86,8 +86,14 @@ class EventsController extends Controller
     public function show($slug)
     {
         $event = Event::findBySlug($slug);
-        $event->load('creator', 'registrations', 'guests');
 
+        // Check if exists
+        if (!$event) {
+            abort(404);
+        }
+
+        $event->load('creator', 'registrations', 'guests');
+        
         // Look for events in the upcoming week
         $range = [
             Carbon::now(),
