@@ -1,21 +1,16 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
+	"name": "ucsdcirclek/konnection",
+	"description": "This project is UCSD Circle K's official website.",
+	"keywords": ["ucsd", "circle k", "kiwanis"],
 	"license": "MIT",
 	"type": "project",
-    "repositories": [
-      {
-        "type": "vcs",
-        "url": "https://github.com/Pixelindustries/laravel-stapler"
-      }
-    ],
+  	"homepage": "http://ucsdcki.org",
 	"require": {
-		"laravel/framework": "5.0.*",
-		"guzzlehttp/guzzle": "~5.0",
+		"laravel/framework": "5.1.*",
+	  	"guzzlehttp/guzzle": "~5.3|~6.0",
 		"zizaco/entrust": "dev-laravel-5",
-		"cviebrock/eloquent-sluggable": ">=3.0.0-alpha",
-		"codesleeve/laravel-stapler": "dev-feature/l5-compatibility",
+		"cviebrock/eloquent-sluggable": "~3.0",
+		"codesleeve/laravel-stapler": "dev-master",
 		"laravelcollective/html": "~5.0",
 		"miljar/php-exif": "~0.5.0"
 	},
