@@ -16,10 +16,10 @@ class CerfsTableSeeder extends Seeder {
         DB::table('cerfs')->delete();
 
         // Gets array of event IDs.
-        $event_ids = Event::all()->lists('id');
+        $event_ids = Event::all()->lists('id')->toArray();
         shuffle($event_ids);
 
-        $user_ids = User::all()->lists('id');
+        $user_ids = User::all()->lists('id')->toArray();
         shuffle($user_ids);
 
         // TODO Events have many CERFs, so make sure to update seeder accordingly.

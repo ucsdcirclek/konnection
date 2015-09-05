@@ -18,8 +18,8 @@ class ActivityLogTableSeeder extends Seeder
         DB::table('activity_log')->delete();
 
         // Gets an array with event IDs and an array with user IDs.
-        $event_ids = Event::all()->lists('id');
-        $user_ids = User::all()->lists('id');
+        $event_ids = Event::all()->lists('id')->toArray();
+        $user_ids = User::all()->lists('id')->toArray();
 
         for ($counter = 0; $counter < 30; $counter++) {
 
