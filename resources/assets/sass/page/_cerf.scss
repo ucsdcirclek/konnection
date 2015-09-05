@@ -1,3 +1,13 @@
+//region Global CERF views
+
+.section-instructions {
+  margin: 20px 30px 20px 30px;
+}
+
+//endregion
+
+//region Top header
+
 // Header at top of page.
 
 #cerf-header {
@@ -11,6 +21,10 @@
     line-height: 120px;
   }
 }
+
+//endregion
+
+//region Overview page
 
 // Section containing events. to be CERFed.
 
@@ -75,6 +89,10 @@
   }
 }
 
+//endregion
+
+//region Event summary on CERF creation form
+
 // CERF creation form.
 
 #event-summary {
@@ -100,12 +118,12 @@
   }
 }
 
+//endregion
+
+//region Member attendance table
+
 #member-attendance-section {
   background-color: $lightest-green;
-
-  .section-instructions {
-    margin: 20px 30px 20px 30px;
-  }
 
   table {
     table-layout: fixed;
@@ -135,3 +153,127 @@
   }
 }
 
+//endregion
+
+//region Event tags tables
+
+#event-tags-section {
+  h3 {
+    text-align: center;
+  }
+
+  .wrapper {
+    .tags-table {
+      &:first-of-type {
+        .tags-table-header {
+          background-color: $brown;
+        }
+
+        .tags-content-row {
+          background-color: lighten($brown, 70%);
+        }
+      }
+
+      &:nth-of-type(2) {
+        .tags-table-header {
+          background-color: $gold;
+        }
+
+        .tags-content-row {
+          background-color: lighten($gold, 30%);
+        }
+      }
+
+      &:nth-of-type(3) {
+        .tags-table-header {
+          background-color: $blue;
+        }
+
+        .tags-content-row {
+          background-color: lighten($blue, 50%);
+        }
+      }
+
+      &:nth-of-type(4) {
+        .tags-table-header {
+          background-color: $purple;
+        }
+
+        .tags-content-row {
+          background-color: lighten($purple, 55%);
+        }
+      }
+    }
+  }
+}
+
+.tags-table {
+  margin-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+
+  .tags-table-header {
+    height: 90px;
+    overflow: scroll;
+    //background-color: $brown;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    h4, small {
+      vertical-align: middle;
+      color: white;
+    }
+
+    h4 {
+      line-height: 90px;
+      padding-left: 30px;
+      @include span-columns(3);
+    }
+
+    small {
+      padding-right: 20px;
+      padding-top: 15px;
+      @include span-columns(9);
+    }
+  }
+
+  .tags-content-row {
+    padding-top: 30px;
+    overflow: hidden;
+
+    //background-color: lighten($brown, 70%);
+
+    div:first-child {
+      @include span-columns(1);
+      text-align: center;
+    }
+
+    div:nth-child(2) {
+      @include span-columns(3);
+    }
+
+    div:nth-child(3) {
+      @include span-columns(8);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+//endregion
+
+//region Submit button
+
+#submit-cerf-section {
+  text-align: center;
+
+  div {
+    background-color: $light-green;
+  }
+}
+
+//endregion

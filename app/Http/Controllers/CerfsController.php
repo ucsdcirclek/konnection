@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 use App\Event;
-use App\User;
+use App\EventTag;
 use App\EventRegistration;
+use App\User;
 use Auth;
 
 class CerfsController extends Controller {
@@ -90,7 +91,14 @@ class CerfsController extends Controller {
         // TODO Customize checkbox for each registration.
         $registrations = EventRegistration::where('event_id', $event->id)->get();
 
-        return view('pages.cerfs.create', compact('event', 'chair', 'registrations'));
+        // Gets tags to display in form.
+        $service_tags = EventTag::where('category_id', 1)->get();
+        $admin_tags = EventTag::where('category_id', 2)->get();
+        $social_tags = EventTag::where('category_id', 3)->get();
+        $misc_tags = EventTag:: where('category_id', 4)->get();
+
+        return view('pages.cerfs.create', compact('event', 'chair', 'registrations', 'service_tags', 'admin_tags',
+                                                  'social_tags', 'misc_tags'));
 	}
 
     /**
