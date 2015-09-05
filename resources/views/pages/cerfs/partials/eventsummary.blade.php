@@ -6,7 +6,7 @@
     <div class="wrapper">
 
         <div class="description">
-            <h1>{{ $event->title }}</h1>
+            <h1><span class="light-emphasis">Creating CERF for: </span>{{ $event->title }}</h1>
 
             <p class="half"><strong>Date:</strong> {{ $event->start_time->setTimezone('America/Los_Angeles')->format('F n, Y') }}</p>
             <p class="half"><strong>Location:</strong> {{ $event->event_location }}</p>

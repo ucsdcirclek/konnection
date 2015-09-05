@@ -16,6 +16,12 @@
 
     @include('pages.cerfs.partials.eventtags')
 
+    @include('pages.cerfs.partials.kiwanisattendance')
+
+    @include('pages.cerfs.partials.fundraising')
+
+    @include('pages.cerfs.partials.commentary')
+
    <div id="submit-cerf-section">
        <div class="wrapper">
            {!! Form::submit('Submit CERF') !!}

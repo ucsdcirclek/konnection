@@ -314,7 +314,29 @@ $(document).ready(function () {
     $(this).parents().eq(2).remove();
 
     event.preventDefault();
-  })
+  });
+
+  $('#kiwanis-attendance-section').on('click', '.remove-kiwanis-attendee-button > div', function(event) {
+    console.log('remove kiwanis attendee');
+    $(this).parents().eq(2).remove();
+
+    event.preventDefault();
+  });
+
+  $('#kiwanis-attendance-section').on('click', '.add-kiwanis-attendee-button > div', function(event) {
+    console.log('add kiwanis attendee');
+
+    var lastRow = $('#kiwanis-attendance-section').find('table tr:last');
+
+    lastRow.after('' +
+      '<tr>' +
+        '<td><input name="kiwanis_club_name[]" type="text" class="kiwanis-club-name"></td>' +
+        '<td><input name="num_members[]" type="number"></td>' +
+        '<td><a href="#" class="remove-kiwanis-attendee-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
+      '</tr>');
+
+    event.preventDefault();
+  });
 
   // Adds new row for attendee with empty form fields.
   $('.search-popup').on('click', '#not-listed', function(event) {
