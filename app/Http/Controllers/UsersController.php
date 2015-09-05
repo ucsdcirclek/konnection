@@ -36,6 +36,15 @@ class UsersController extends Controller {
         return view('search.users', compact('user_results'));
     }
 
+    public function current() {
+
+        // TODO Make users API for AJAX requests instead of using controller methods
+        if (Request::ajax()) {
+            $user = \Auth::user();
+            return json_encode($user);
+        }
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -131,6 +131,11 @@
 
                     <p class="info">{{ $event->creator->phone }}</p>
                 </div>
+
+                @if(Auth::check())
+                    <button id="chair-event-btn" type="button">Chair Event</button>
+                @endif
+
                 @if($event->isRegistered(Auth::id()))
                     <div>
                         <h6>Volunteer to be a:</h6>

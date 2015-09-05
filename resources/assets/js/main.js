@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  var genericFailMessage = 'Something went wrong! Please report this incident to technology@ucsdcki.org';
+
   //region Ajax setup
 
   $.ajaxSetup({
@@ -73,6 +75,8 @@ $(document).ready(function () {
     return path.substr(path.lastIndexOf("/") + 1);
   }
 
+  // TODO Add success/failure callbacks to button AJAX calls
+
   $('#register-btn').click(function(event) {
     // Register user
     $.post('/api/events/'+findSlug()+'/registrations/create');
@@ -110,6 +114,39 @@ $(document).ready(function () {
     $.post('/api/events/'+findSlug()+'/registrations/create', data);
 
     $('#guestRegistration').remove();
+  });
+
+  window.updateChair = function(id) {
+    console.log('updating chair with user id ' + id);
+
+    $.ajax({
+
+    })
+  }
+
+  $('#chair-event-btn').click(function(event) {
+    console.log('chair event button clicked');
+
+    var urlField = $('.chair.avatar').find('img');
+    var nameField = $('.chair.avatar').find('.name');
+    var infoField = $('.chair.avatar').find('.info');
+
+    $.get('/users/current', function(data) {
+      var currentUser = $.parseJSON(data);
+
+      console.log(currentUser);
+
+      var name = currentUser.first_name + ' ' + currentUser.last_name;
+      var phone = currentUser.phone;
+
+      nameField.text(name);
+      phone ? infoField.text(phone) : infoField.text('');
+
+      window.updateChair(currentUser.id);
+    })
+      .fail(function() {
+        alert(genericFailMessage);
+      });
   });
 
   $('#drive-btn').click(function(event) {
@@ -348,10 +385,7 @@ $(document).ready(function () {
 
     $('#member-attendance-section').find('table tr:last').after('' +
       '<tr>' +
-        '<td>attended</td>' +
-        '<td>avatar</td>' +
-        '<td>name</td>' +
-        '<td>email</td>' +
+        '<td></td>' +
       '</tr>');
   });
 

@@ -22,6 +22,7 @@ Route::group(['middleware' => 'auth'], function()
 {
     Route::get('settings', 'UsersController@edit');
     Route::post('settings', 'UsersController@update');
+    Route::get('/users/current', 'UsersController@current');
 });
 
 /**
