@@ -13,8 +13,8 @@ class EventRegistrationsTableSeeder extends Seeder
     {
         DB::table('event_registrations')->delete();
 
-        $event_ids = Event::all()->lists('id');
-        $user_ids = User::all()->lists('id');
+        $event_ids = Event::all()->lists('id')->toArray();
+        $user_ids = User::all()->lists('id')->toArray();
 
         for ($counter = 0; $counter < 50; $counter++) {
 

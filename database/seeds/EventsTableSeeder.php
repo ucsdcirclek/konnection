@@ -17,7 +17,7 @@ class EventsTableSeeder extends Seeder
 
         DB::table('events')->delete();
 
-        $user_ids = User::all()->lists('id');
+        $user_ids = User::all()->lists('id')->toArray();
 
         // Creates events associated with CERFs.
         for ($i = 0; $i < 15; $i++) {

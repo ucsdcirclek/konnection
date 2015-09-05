@@ -14,7 +14,7 @@ class KiwanisAttendeesTableSeeder extends Seeder {
 
         $faker = Faker::create();
 
-        $cerf_ids = Cerf::all()->lists('id');
+        $cerf_ids = Cerf::all()->lists('id')->toArray();
 
         for ($counter = 0; $counter < 30; $counter++) {
             $rand_cerf_id = $cerf_ids[array_rand($cerf_ids)];
