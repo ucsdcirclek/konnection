@@ -100,3 +100,38 @@
   }
 }
 
+#member-attendance-section {
+  background-color: $lightest-green;
+
+  .section-instructions {
+    margin: 20px 30px 20px 30px;
+  }
+
+  table {
+    table-layout: fixed;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  tr {
+
+    td {
+      height: 100px;
+    }
+
+    td:first-child {
+      overflow-x: scroll;
+    }
+
+    td:nth-child(8) {
+      text-align: center;
+    }
+
+    td:nth-child(n+2):nth-child(-n+6) {
+      padding-right: 20px;
+    }
+  }
+}
+

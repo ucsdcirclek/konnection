@@ -2,7 +2,7 @@
 
     {!! Form::text(null, null, array('id' => 'search-input', 'class' => 'form-control', 'placeholder' => 'search for user')) !!}
 
-    <div id="search-results" class="{{ $selectClass }}">
+    <div id="search-results">
 
     </div>
 </div>

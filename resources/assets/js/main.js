@@ -1,24 +1,25 @@
 $(document).ready(function () {
-  /*
-   * Setup
-   */
+
+  //region Ajax setup
+
   $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
   });
 
+  //endregion
 
-  /*
-   * Homepage
-   */
+  //region Homepage carousel configuration
+
   $('.slider').slick({
     autoplay: true
   });
 
-  /*
-   * Calendar
-   */
+  //endregion
+
+  //region Calendar plugin configuration
+
   $('.calendar').fullCalendar({
     class: 'calendar',
     height: 'auto',
@@ -63,9 +64,10 @@ $(document).ready(function () {
     }
   });
 
-  /*
-   * Event
-   */
+  //endregion
+
+  //region Event display and driver, writer, photographer buttons
+
   function findSlug() {
     var path = window.location.pathname;
     return path.substr(path.lastIndexOf("/") + 1);
@@ -111,6 +113,7 @@ $(document).ready(function () {
   });
 
   $('#drive-btn').click(function(event) {
+
     // Register user
     $.ajax({
       url: '/api/events/'+findSlug()+'/registrations/self',
@@ -155,18 +158,18 @@ $(document).ready(function () {
     self.prop('disabled', true);
   });
 
-  /*
-   * Date and time picker on event create and update pages.
-   */
+  //endregion
+
+  //region Date and time picker configuration
 
   $('.datetime').datetimepicker({
     format: 'l, F j, Y g:i A',    // Expresses date in readable format.
     step: 30                      // Sets times in timepicker at increments of 30 minutes.
   });
 
-  /**
-   * Chair search popup on CerfsController@create.
-   */
+  //endregion
+
+  //region Popup plugin configuration and customization
 
   $('.search-popup-link').magnificPopup({
     type: 'inline',
@@ -179,6 +182,11 @@ $(document).ready(function () {
         setTimeout(function() {
           $('#search-input').focus();
         }, 500);
+      },
+
+      beforeClose: function() {
+        $('#not-listed').remove();
+        $('#search-results').removeClass('attendee-select');
       }
     },
 
@@ -186,9 +194,21 @@ $(document).ready(function () {
     mainClass: 'mfp-move-horizontal'
   });
 
-  /**
-   * Search functions.
-   */
+  // Check classes to customize popup
+  $('.search-popup-link').click(function() {
+
+    if ($(this).hasClass('user-optional')) {
+      $('#search-input').after('<a href="#" id="not-listed">User not listed?</a>');
+      $('#search-results').addClass('attendee-select');
+    }
+    else if ($(this).hasClass('user-not-optional')) {
+      $('#search-results').addClass('chair-select');
+    }
+  });
+
+  //endregion
+
+  //region Search functions and popup actions
 
   var timeoutID;
 
@@ -216,9 +236,16 @@ $(document).ready(function () {
     clearTimeout(timeoutID);
   }
 
+  /**
+   * Sets chair name, image, and hidden form input with relevant
+   *
+   * @param id
+   * @param url
+   * @param name
+   */
   window.setChair = function(id, url, name) {
 
-    $('.chair-selection').val(id);
+    $('.chair-field').val(id);
 
     $('.avatar > p').html(function() {
       return '<strong>Event Chair: </strong>' + name;
@@ -227,24 +254,91 @@ $(document).ready(function () {
     $('.avatar > img').attr('src', url);
   }
 
+  /**
+   * Adds another row to member attendee table.
+   *
+   * @param id
+   * @param name
+   */
+  window.addAttendeeRow = function(id, name) {
+
+    // TODO Add validation to ensure that each row is unique
+    $('#member-attendance-section').find('table tr:last').after('' +
+      '<tr>' +
+        '<input class="attendee-field" name="attendee_id[]" type="hidden" value=' + id + '>' +
+        '<td>' + name + '</td>' +
+        '<td><input name="service_hours[' + id +']" type="number" value="0"></td>' +
+        '<td><input name="planning_hours[' + id +']" type="number" value="0"></td>' +
+        '<td><input name="traveling_hours[' + id +']" type="number" value="0"></td>' +
+        '<td><input name="admin_hours[' + id +']" type="number" value="0"></td>' +
+        '<td><input name="social_hours[' + id +']" type="number" value="0"></td>' +
+        '<td><input name="mileage[' + id +']" type="number" value="0"></td>' +
+        '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
+      '</tr>');
+  }
+
+  // Searches users only when keydown events have finished (when user finishes typing)
   $('#search-input').keydown(window.searchUsers);
   $('#search-input').keyup(window.resetTimer);
 
-  // Popup loaded with AJAX, so cannot use jQuery native click() function.
+  // Popup loaded with AJAX, so cannot use jQuery native click() function
   $('#search-results').on('click', 'a', function(event) {
     event.preventDefault();
 
+    // Updates UI with info from search result
     var id = $(this).find('.result-description').attr('userId');
     var url = $(this).find('.result-avatar > img').attr('src');
     var name = $(this).find('.result-description > div:first-child').text();
 
-    window.setChair(id, url, name);
+    // For adding attendees to member attendance table
+    if ($('#search-results').hasClass('attendee-select')) {
+      console.log('add new table to member attendance table')
+      window.addAttendeeRow(id, name);
+    }
+
+    // For selecting event chair
+    else if ($('#search-results').hasClass('chair-select')) {
+      console.log('change chair selection');
+      window.setChair(id, url, name);
+    }
 
     $.magnificPopup.close();
   });
 
-  /*
-   * Misc.
-   */
+  //endregion
+
+  //region CERF form functions
+
+  $('#attendance-table').on('click', '.remove-registration-button > div', function(event) {
+    console.log('anchored click event to handle');
+    $(this).parents().eq(2).remove();
+
+    event.preventDefault();
+  })
+
+  // Adds new row for attendee with empty form fields.
+  $('.search-popup').on('click', '#not-listed', function(event) {
+    event.preventDefault();
+
+    console.log('insert empty form values');
+
+    $.magnificPopup.close();
+
+    $('#member-attendance-section').find('table tr:last').after('' +
+      '<tr>' +
+        '<td>attended</td>' +
+        '<td>avatar</td>' +
+        '<td>name</td>' +
+        '<td>email</td>' +
+      '</tr>');
+  });
+
+  //endregion
+
+  //region Miscellaneous
+
   $('.editor').editable({inlineMode: false});
+
+  //endregion
+
 });

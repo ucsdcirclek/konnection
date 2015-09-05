@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateCerfRequest;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
@@ -9,11 +10,18 @@ use Illuminate\Http\Request;
 
 use App\Event;
 use App\User;
+use App\EventRegistration;
+use Auth;
 
 class CerfsController extends Controller {
 
-    // TODO Add authentication checks to all actions.
     // TODO Remember to use eager loading when passing data to views.
+
+    public function __construct() {
+
+        // All CERF actions require user to be logged in.
+        $this->middleware('auth');
+    }
 
     /**
      * Display events that require CERFs.
@@ -72,24 +80,33 @@ class CerfsController extends Controller {
         // Gets ID of event put into session by @select.
         $event = Event::find(Session::get('event_id'));
 
+        // View renders blank chair profile if chair cannot be found.
         $chair = null;
 
         // Finds chair of event.
-        if (!is_null($event->chair_id)) {
-            $chair = Event::find($event->chair_id);
-        }
+        if (!is_null($event->chair_id)) $chair = Event::find($event->chair_id);
 
-        return view('pages.cerfs.create', compact('event', 'chair'));
+        // TODO Remove avatar display in registrations table when viewport becomes smaller.
+        // TODO Customize checkbox for each registration.
+        $registrations = EventRegistration::where('event_id', $event->id)->get();
+
+        return view('pages.cerfs.create', compact('event', 'chair', 'registrations'));
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param CreateCerfRequest $request
+     * @return Response
+     * @internal param $CreateCerfRequest
+     */
+	public function store(CreateCerfRequest $request)
 	{
         // TODO Remember to assign reporter_id foreign key based on currently signed in user.
+
+        dd($request->all());
+
+        return redirect('pages.cerfs.overview');
 	}
 
 	/**

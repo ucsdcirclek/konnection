@@ -5,7 +5,7 @@ html {
 
 body {
   @include outer-container;
-  background: $base-background-color url('/images/background.jpg') no-repeat fixed;
+  background: $base-background-color url('/images/kelp.jpg') no-repeat fixed;
   height: 100%;
   min-width: em(700);
   margin: 0 auto;
