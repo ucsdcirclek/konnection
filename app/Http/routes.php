@@ -76,6 +76,7 @@ Route::get('contact', function() { return view('pages.contact'); });
 Route::group(['namespace' => 'Api', 'prefix' => 'api'], function()
 {
     Route::get('events', 'EventsController@index');
+    Route::patch('events/{slug}', 'EventsController@update');
 
     // Registrations
     Route::post('events/{slug}/registrations/create', 'EventRegistrationsController@store');

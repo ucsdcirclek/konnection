@@ -117,11 +117,22 @@ $(document).ready(function () {
   });
 
   window.updateChair = function(id) {
-    console.log('updating chair with user id ' + id);
+
+    console.log('slug is: ' + findSlug() + ' and id is: ' + id);
 
     $.ajax({
-
+      url: '/api/events/' + findSlug(),
+      type: 'PATCH',
+      data: {
+        chair_id: id
+      }
     })
+      .fail(function() {
+        alert(genericFailMessage);
+      })
+      .done(function(data) {
+        console.log('chair updated!');
+      });
   }
 
   $('#chair-event-btn').click(function(event) {
@@ -133,8 +144,6 @@ $(document).ready(function () {
 
     $.get('/users/current', function(data) {
       var currentUser = $.parseJSON(data);
-
-      console.log(currentUser);
 
       var name = currentUser.first_name + ' ' + currentUser.last_name;
       var phone = currentUser.phone;
@@ -235,7 +244,7 @@ $(document).ready(function () {
   $('.search-popup-link').click(function() {
 
     if ($(this).hasClass('user-optional')) {
-      $('#search-input').after('<a href="#" id="not-listed">User not listed?</a>');
+      $('#search-input').after('<a href="#" id="not-listed">Not a paid member?</a>');
       $('#search-results').addClass('attendee-select');
     }
     else if ($(this).hasClass('user-not-optional')) {
@@ -385,7 +394,14 @@ $(document).ready(function () {
 
     $('#member-attendance-section').find('table tr:last').after('' +
       '<tr>' +
-        '<td></td>' +
+        '<td><input type="text" name="unpaid_attendee[]"></td>' +
+        '<td><input type="number" name="unpaid_service_hours[]"></td>' +
+        '<td><input type="number" name="unpaid_planning_hours[]"></td>' +
+        '<td><input type="number" name="unpaid_traveling_hours[]"></td>' +
+        '<td><input type="number" name="unpaid_admin_hours[]"></td>' +
+        '<td><input type="number" name="unpaid_social_hours[]"></td>' +
+        '<td><input type="number" name="unpaid_mileage[]"></td>' +
+        '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
       '</tr>');
   });
 

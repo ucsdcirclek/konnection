@@ -39,7 +39,7 @@ class UsersController extends Controller {
     public function current() {
 
         // TODO Make users API for AJAX requests instead of using controller methods
-        if (Request::ajax()) {
+        if (\Request::ajax()) {
             $user = \Auth::user();
             return json_encode($user);
         }

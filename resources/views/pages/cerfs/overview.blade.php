@@ -24,8 +24,15 @@
 
 
                                 <div class="avatar small">
-                                    <img src="{{ $event->creator->avatar->url() }}">
-                                    <small>Event created by {{ $event->creator->first_name }}</small>
+
+                                    @if (is_null($event->chair))
+                                        <img src="{{ $event->creator->avatar->url() }}">
+                                        <small>Event created by {{ $event->creator->first_name }}</small>
+                                    @else
+                                        <img src="{{ $event->chair->avatar->url() }}">
+                                        <small><strong>Event chair: </strong>{{ $event->creator->first_name }}</small>
+                                    @endif
+
                                 </div>
 
                                 <div class="cerf-description">
