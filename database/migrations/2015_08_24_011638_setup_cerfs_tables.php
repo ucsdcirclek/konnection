@@ -31,12 +31,9 @@ class SetupCerfsTables extends Migration {
             $table->softDeletes();
             $table->timestamps();
 
-            // TODO Reconsider onDelete behavior for CERFs.
-
             $table->foreign('event_id')
                 ->references('id')
-                ->on('events')
-                ->onDelete('cascade');
+                ->on('events');
 
             $table->foreign('reporter_id')
                   ->references('id')
@@ -60,10 +57,29 @@ class SetupCerfsTables extends Migration {
                 ->onDelete('cascade');
         });
 
+        // Cannot add and drop columns in same migration, so separate migrations
+        Schema::table('activity_log', function(Blueprint $table) {
+            $table->dropForeign('activity_log_user_id_foreign');
+            $table->dropColumn('user_id');
+
+            $table->dropForeign('activity_log_event_id_foreign');
+            $table->dropColumn('event_id');
+        });
+
         // Handles home club attendance section of CERF.
         Schema::table('activity_log', function(Blueprint $table)
         {
-            // TODO Make user_id nullable to allow for members without an account who attended an event.
+            $table->integer('user_id')->unsigned()->index()->nullable()->after('id');
+            $table->foreign('user_id')
+                  ->references('id')
+                  ->on('users')
+                  ->onDelete('cascade');
+
+            $table->integer('cerf_id')->unsigned()->after('user_id');
+            $table->foreign('cerf_id')
+                  ->references('id')
+                  ->on('cerfs')
+                  ->onDelete('cascade');
 
             $table->float('planning_hours')->default(0.0)->after('service_hours');
             $table->float('traveling_hours')->default(0.0)->after('planning_hours');
@@ -87,6 +103,10 @@ class SetupCerfsTables extends Migration {
                   ->references('id')
                   ->on('users');
         });
+
+        Schema::table('events_assigned_tags', function(Blueprint $table) {
+            $table->primary(['event_id', 'tag_id']);
+        });
     }
 
     /**
@@ -96,14 +116,23 @@ class SetupCerfsTables extends Migration {
      */
     public function down()
     {
-        Schema::drop('kiwanis_attendees');
-        Schema::drop('cerfs');
-
         Schema::table('activity_log', function(Blueprint $table)
         {
+            $table->dropForeign('activity_log_cerf_id_foreign');
+            $table->dropColumn('cerf_id');
             $table->dropColumn('planning_hours');
             $table->dropColumn('traveling_hours');
         });
+
+        Schema::table('activity_log', function(Blueprint $table) {
+            $table->integer('event_id')->unsigned()->nullable()->after('user_id');
+            $table->foreign('event_id')
+                  ->references('id')->on('events')
+                  ->onDelete('cascade');
+        });
+
+        Schema::drop('kiwanis_attendees');
+        Schema::drop('cerfs');
 
         Schema::table('event_tags', function(Blueprint $table)
         {
