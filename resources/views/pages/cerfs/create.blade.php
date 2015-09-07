@@ -10,6 +10,18 @@
 
     {!! Form::open(['action' => 'CerfsController@store']) !!}
 
+    @if (count($errors) > 0)
+        <div class="wrapper">
+            <div class="flash-error">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    @endif
+
     @include('pages.cerfs.partials.eventsummary')
 
     @include('pages.cerfs.partials.memberattendance')

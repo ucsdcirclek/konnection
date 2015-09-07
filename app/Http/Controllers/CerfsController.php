@@ -85,9 +85,11 @@ class CerfsController extends Controller {
         $chair = null;
 
         // Finds chair of event.
-        if (!is_null($event->chair_id)) $chair = Event::find($event->chair_id);
+        if (!is_null($event->chair_id)) {
+            $chair = User::find($event->chair_id);
 
-        // TODO Remove avatar display in registrations table when viewport becomes smaller.
+        }
+
         // TODO Customize checkbox for each registration.
         $registrations = EventRegistration::where('event_id', $event->id)->get();
 

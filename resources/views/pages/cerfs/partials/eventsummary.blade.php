@@ -1,7 +1,6 @@
 <div id="event-summary">
 
     {!! Form::hidden('event_id', $event->id) !!}
-    {!! Form::hidden('chair_id', null, array('class' => 'chair-field')) !!}
 
     <div class="wrapper">
 
@@ -15,12 +14,13 @@
         <div class="chair avatar large">
 
             @if (is_null($chair))
+                {!! Form::hidden('chair_id', null, array('class' => 'chair-field')) !!}
                 <p><strong>No chair</strong></p>
 
                 <img src="/avatars/original/missing.png">
             @else
-                <p><strong>Chair:</strong></p>
-                <p>{{ $chair->first_name }}</p>
+                {!! Form::hidden('chair_id', $chair->id, array('class' => 'chair-field')) !!}
+                <p><strong>Chair: </strong>{{ $chair->first_name }}</p>
 
                 <img src="{{ $chair->avatar->url() }}">
             @endif
