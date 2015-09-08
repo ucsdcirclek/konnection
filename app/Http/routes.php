@@ -98,3 +98,12 @@ Route::get('cerfs/select/{id}', 'CerfsController@select');
 Route::resource('cerfs', 'CerfsController');
 
 Route::post('users/search', 'UsersController@search');
+
+Route::resource('tag', 'TagsController',
+                ['only' => ['create', 'store']]);
+
+Route::resource('activity', 'ActivitiesController',
+                ['only' => ['create', 'store']]);
+
+Route::resource('kiwanisAttendee', 'KiwanisAttendeesController',
+                ['only' => ['create', 'store']]);

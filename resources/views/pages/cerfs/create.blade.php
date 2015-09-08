@@ -4,35 +4,16 @@
 
 @section('content')
 
+    {{--
     <div id="cerf-header">
         <h1>Club Event Report Forms</h1>
     </div>
 
     {!! Form::open(['action' => 'CerfsController@store']) !!}
 
-    @if (count($errors) > 0)
-        <div class="wrapper">
-            <div class="flash-error">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
-    @endif
-
-    @include('pages.cerfs.partials.eventsummary')
-
     @include('pages.cerfs.partials.memberattendance')
 
-    @include('pages.cerfs.partials.eventtags')
-
     @include('pages.cerfs.partials.kiwanisattendance')
-
-    @include('pages.cerfs.partials.fundraising')
-
-    @include('pages.cerfs.partials.commentary')
 
    <div id="submit-cerf-section">
        <div class="wrapper">
@@ -40,5 +21,25 @@
            {!! Form::close() !!}
        </div>
    </div>
+   --}}
+
+    @include('pages.cerfs.partials.header')
+
+    {!! Form::open(['action' => 'CerfsController@store']) !!}
+
+        @include('errors.errors')
+
+        @include('pages.cerfs.partials.eventsummary')
+
+        @include('pages.cerfs.partials.fundraising')
+
+        @include('pages.cerfs.partials.commentary')
+
+    <div class="continue-form">
+       <div class="wrapper">
+           {!! Form::submit('Continue') !!}
+           {!! Form::close() !!}
+       </div>
+    </div>
 
 @endsection

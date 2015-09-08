@@ -308,20 +308,45 @@ $(document).ready(function () {
    */
   window.addAttendeeRow = function(id, name) {
 
-    // TODO Add validation to ensure that each row is unique
+
+    console.log('adding attendee row');
+
     $('#member-attendance-section').find('table tr:last').after('' +
       '<tr>' +
-        '<input class="attendee-field" name="attendee_id[]" type="hidden" value=' + id + '>' +
+        '<input class="attendee-field" name="user_id[]" type="hidden" value=' + id + '>' +
+        '<input  name="name[]" type="hidden" value=' + name + '>' +
         '<td>' + name + '</td>' +
-        '<td><input name="service_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="planning_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="traveling_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="admin_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="social_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="mileage[' + id +']" type="number" value="0"></td>' +
+        '<td><input name="service_hours[]" type="number" value="0"></td>' +
+        '<td><input name="planning_hours[]" type="number" value="0"></td>' +
+        '<td><input name="traveling_hours[]" type="number" value="0"></td>' +
+        '<td><input name="admin_hours[]" type="number" value="0"></td>' +
+        '<td><input name="social_hours[]" type="number" value="0"></td>' +
+        '<td><input name="mileage[]" type="number" value="0"></td>' +
         '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
       '</tr>');
   }
+
+  // Adds new row for attendee with empty form fields.
+  $('.search-popup').on('click', '#not-listed', function(event) {
+    event.preventDefault();
+
+    console.log('insert empty form values');
+
+    $.magnificPopup.close();
+
+    $('#member-attendance-section').find('table tr:last').after('' +
+      '<tr>' +
+        '<input name="user_id[]" type="hidden" value=null>' +
+        '<td><input type="text" name="name[]"></td>' +
+        '<td><input type="number" name="service_hours[]"></td>' +
+        '<td><input type="number" name="planning_hours[]"></td>' +
+        '<td><input type="number" name="traveling_hours[]"></td>' +
+        '<td><input type="number" name="admin_hours[]"></td>' +
+        '<td><input type="number" name="social_hours[]"></td>' +
+        '<td><input type="number" name="mileage[]"></td>' +
+        '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
+      '</tr>');
+  });
 
   // Searches users only when keydown events have finished (when user finishes typing)
   $('#search-input').keydown(window.searchUsers);
@@ -338,7 +363,7 @@ $(document).ready(function () {
 
     // For adding attendees to member attendance table
     if ($('#search-results').hasClass('attendee-select')) {
-      console.log('add new table to member attendance table')
+      console.log('add new row to member attendance table')
       window.addAttendeeRow(id, name);
     }
 
@@ -382,27 +407,6 @@ $(document).ready(function () {
       '</tr>');
 
     event.preventDefault();
-  });
-
-  // Adds new row for attendee with empty form fields.
-  $('.search-popup').on('click', '#not-listed', function(event) {
-    event.preventDefault();
-
-    console.log('insert empty form values');
-
-    $.magnificPopup.close();
-
-    $('#member-attendance-section').find('table tr:last').after('' +
-      '<tr>' +
-        '<td><input type="text" name="unpaid_attendee[]"></td>' +
-        '<td><input type="number" name="unpaid_service_hours[]"></td>' +
-        '<td><input type="number" name="unpaid_planning_hours[]"></td>' +
-        '<td><input type="number" name="unpaid_traveling_hours[]"></td>' +
-        '<td><input type="number" name="unpaid_admin_hours[]"></td>' +
-        '<td><input type="number" name="unpaid_social_hours[]"></td>' +
-        '<td><input type="number" name="unpaid_mileage[]"></td>' +
-        '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
-      '</tr>');
   });
 
   //endregion
