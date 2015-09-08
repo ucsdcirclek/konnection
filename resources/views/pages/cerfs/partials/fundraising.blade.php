@@ -22,9 +22,9 @@
             </div>
         </div>
 
-        <div class="funds-usage">
-            {!! Form::label('funds_usage', 'How will the funds be used?', array('autocapitalize' => 'none')) !!}
-            {!! Form::textarea('funds_usage') !!}
+        <div class="funds-purpose">
+            {!! Form::label('funds_purpose', 'How will the funds be used?', array('autocapitalize' => 'none')) !!}
+            {!! Form::textarea('funds_purpose') !!}
         </div>
     </div>
 </div>

@@ -81,6 +81,9 @@ class SetupCerfsTables extends Migration {
                   ->on('cerfs')
                   ->onDelete('cascade');
 
+            $table->string('name')->after('cerf_id');
+            $table->boolean('approved')->after('mileage');
+
             $table->float('planning_hours')->default(0.0)->after('service_hours');
             $table->float('traveling_hours')->default(0.0)->after('planning_hours');
         });
@@ -105,7 +108,7 @@ class SetupCerfsTables extends Migration {
         });
 
         Schema::table('events_assigned_tags', function(Blueprint $table) {
-            $table->primary(['event_id', 'tag_id']);
+            $table->boolean('approved');
         });
     }
 
@@ -120,6 +123,8 @@ class SetupCerfsTables extends Migration {
         {
             $table->dropForeign('activity_log_cerf_id_foreign');
             $table->dropColumn('cerf_id');
+            $table->dropColumn('name');
+            $table->dropColumn('approved');
             $table->dropColumn('planning_hours');
             $table->dropColumn('traveling_hours');
         });
@@ -130,9 +135,6 @@ class SetupCerfsTables extends Migration {
                   ->references('id')->on('events')
                   ->onDelete('cascade');
         });
-
-        Schema::drop('kiwanis_attendees');
-        Schema::drop('cerfs');
 
         Schema::table('event_tags', function(Blueprint $table)
         {
@@ -145,5 +147,12 @@ class SetupCerfsTables extends Migration {
             $table->dropForeign('events_chair_id_foreign');
             $table->dropColumn('chair_id');
         });
+
+        Schema::table('events_assigned_tags', function(Blueprint $table) {
+            $table->dropColumn('approved');
+        });
+
+        Schema::drop('kiwanis_attendees');
+        Schema::drop('cerfs');
     }
 }

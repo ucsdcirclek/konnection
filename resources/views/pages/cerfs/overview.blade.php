@@ -30,7 +30,7 @@
                                         <small>Event created by {{ $event->creator->first_name }}</small>
                                     @else
                                         <img src="{{ $event->chair->avatar->url() }}">
-                                        <small><strong>Event chair: </strong>{{ $event->creator->first_name }}</small>
+                                        <small><strong>Event chair: </strong>{{ $event->chair->first_name }}</small>
                                     @endif
 
                                 </div>

@@ -17,13 +17,13 @@ class DatabaseSeeder extends Seeder
         $this->call('UsersTableSeeder');
         $this->call('EventsTableSeeder');
         $this->call('EventRegistrationsTableSeeder');
-        $this->call('PostCategoriesTableSeeder');
-        $this->call('PostsTableSeeder');
         $this->call('EventCategoriesTableSeeder');
         $this->call('EventTagsTableSeeder');
-        $this->call('CerfsTableSeeder');
-        $this->call('ActivityLogTableSeeder');
-        $this->call('KiwanisAttendeesTableSeeder');
+        //$this->call('PostCategoriesTableSeeder');
+        //$this->call('PostsTableSeeder');
+        //$this->call('CerfsTableSeeder');
+        //$this->call('ActivityLogTableSeeder');
+        //$this->call('KiwanisAttendeesTableSeeder');
     }
 
 }
