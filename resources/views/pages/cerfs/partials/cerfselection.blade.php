@@ -21,7 +21,7 @@
 
                             <div class="cerf-description">
                                 <p>CERF for: <strong>{{ $cerf->event->title }}</strong></p>
-                                <small>Occured on {{ $cerf->event->end_time->setTimezone('America/Los_Angeles')->format('l, F j, Y') }}</small>
+                                <small>Occurred on {{ $cerf->event->end_time->setTimezone('America/Los_Angeles')->format('l, F j, Y') }}</small>
                             </div>
                         </div>
                     </a>

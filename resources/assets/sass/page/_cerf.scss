@@ -6,6 +6,7 @@
 
 .light-emphasis { color: $light-green }
 .light-gray { background-color: $lightest-gray }
+.gray { background-color: $light-gray }
 .light-green { background-color: $lightest-green }
 .light-yellow { background-color: lighten($gold, 30%) }
 
@@ -117,7 +118,7 @@
 
 // CERF creation form.
 
-#event-summary {
+.event-summary {
   height: 300px;
 
   .description {
@@ -373,6 +374,19 @@
 
   div {
     background-color: $light-green;
+  }
+}
+
+//endregion
+
+//region Show view
+
+.attendees-listing {
+  overflow: auto;
+  background-color: $lightest-green;
+
+  table {
+    margin-bottom: 50px;
   }
 }
 

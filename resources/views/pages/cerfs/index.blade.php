@@ -8,10 +8,10 @@
 
     @unless($pendingCerfs->isEmpty())
         <div>
-        @include('pages.cerfs.partials.cerfselection', ['title' => 'Pending CERFs',
-                                                    'message' => 'To the right are CERFs that are pending approval.',
-                                                    'cerfs' => $pendingCerfs,
-                                                    'color' => 'yellow'])
+            @include('pages.cerfs.partials.cerfselection', ['title' => 'Pending CERFs',
+                                                        'message' => 'To the right are CERFs that are pending approval.',
+                                                        'cerfs' => $pendingCerfs,
+                                                        'color' => 'yellow'])
         </div>
     @else
         <div class="empty-section light-yellow">

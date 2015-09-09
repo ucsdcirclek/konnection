@@ -8,6 +8,7 @@
 
     <div class="cerf-selection light-gray">
         <div class="wrapper">
+            <h1>Recent Events</h1>
 
             <div class="selection-subsection">
 
@@ -17,7 +18,7 @@
 
                 <div class="selection-table">
 
-                    @foreach ($events_without_cerfs as $event)
+                    @foreach ($eventsWithoutCerfs as $event)
                         <a href="{{ action('CerfsController@select', [$event->id]) }}">
                             <div class="selection-cell green">
 
@@ -45,4 +46,16 @@
         </div>
     </div>
 
+    @unless($userCerfs ->isEmpty())
+        <div class="gray">
+            @include('pages.cerfs.partials.cerfselection', ['title' => 'Pending CERFs',
+                                                    'message' => 'To the right are your CERFs that are pending approval.',
+                                                    'cerfs' => $userCerfs,
+                                                    'color' => 'yellow'])
+        </div>
+    @else
+        <div class="empty-section light-yellow">
+            <h3>You have not written any CERFs.</h3>
+        </div>
+    @endunless
 @endsection

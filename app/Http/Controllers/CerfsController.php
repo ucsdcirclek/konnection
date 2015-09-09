@@ -3,23 +3,26 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateCerfRequest;
+use App\Http\Requests\ShowCerfRequest;
 use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
 
+use App\Activity;
 use App\Cerf;
 use App\Event;
+use App\KiwanisAttendee;
 use App\User;
 use Auth;
 
 class CerfsController extends Controller {
 
-    // TODO Remember to use eager loading when passing data to views.
-
     public function __construct() {
 
         // All CERF actions require user to be logged in.
         $this->middleware('auth');
+
+        $this->middleware('admin', ['only' => ['index']]);
     }
 
     /**
@@ -32,7 +35,7 @@ class CerfsController extends Controller {
         // TODO Only check events created after the CERFs system is implemented.
 
         // Finds IDs of all events that do not have an associated CERF.
-        $event_ids_without_cerfs = Event::select('events.id')
+        $eventIdsWithoutCerfs = Event::select('events.id')
                                         ->leftJoin('cerfs', 'events.id', '=', 'cerfs.event_id')
                                         ->whereNull('cerfs.id')
                                         ->get();
@@ -40,9 +43,11 @@ class CerfsController extends Controller {
         // TODO Modify or make new query so that events with pending CERFs are also retrieved.
 
         // Retrieves events without CERFs based on ID. Casts to array to pass to foreach loop in view.
-        $events_without_cerfs = Event::find($event_ids_without_cerfs->toArray());
+        $eventsWithoutCerfs = Event::find($eventIdsWithoutCerfs->toArray());
 
-        return view('pages.cerfs.overview', compact('events_without_cerfs'));
+        $userCerfs = Cerf::where('reporter_id', Auth::id())->where('approved', false)->get();
+
+        return view('pages.cerfs.overview', compact('eventsWithoutCerfs', 'userCerfs'));
     }
 
     /**
@@ -135,17 +140,33 @@ class CerfsController extends Controller {
         return redirect()->action('TagsController@create');
 	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+    /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
 	public function show($id)
 	{
         $cerf = Cerf::find($id);
-        
-        return view('pages.cerfs.show', compact('cerf'));
+
+        if (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator') || Auth::id() === $cerf->user_id) {
+
+            $activities = Activity::where('cerf_id', $cerf->id)->get();
+            $kiwanisAttendees = KiwanisAttendee::where('cerf_id', $cerf->id)->get();
+
+            $service_hours_sum = $activities->sum('service_hours') + $activities->sum('planning_hours') + $activities->sum('traveling_hours');
+            $admin_hours_sum = $activities->sum('admin_hours');
+            $social_hours_sum = $activities->sum('social_hours');
+
+            // TODO Add cerf_id to events_assigned_tags pivot table to get appropriate tags for each CERF.
+
+            return view('pages.cerfs.show', compact('cerf', 'activities', 'kiwanisAttendees',
+                                                    'service_hours_sum', 'admin_hours_sum', 'social_hours_sum'));
+        }
+        else {
+            redirect()->action('CerfsController@overview');
+        }
 	}
 
 	/**

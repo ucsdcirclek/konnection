@@ -1,4 +1,4 @@
-<div id="event-summary">
+<div class="event-summary">
 
     {!! Form::hidden('event_id', $event->id) !!}
 

@@ -114,7 +114,7 @@ class Event extends Model implements SluggableInterface
          * CERFs pending approval for an event, tags relation only returns the
          * tags listed in an approved CERF.
          */
-        return $this->belongsToMany('App\EventTag', 'events_assigned_tags', 'event_id', 'tag_id')->where('approved', true);
+        return $this->belongsToMany('App\EventTag', 'events_assigned_tags', 'event_id', 'tag_id');
     }
 
     /**
