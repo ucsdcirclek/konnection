@@ -3,25 +3,23 @@
 @section('title', 'Choose Event')
 
 @section('content')
-    <div id="cerf-header">
-        <h1>Club Event Report Forms</h1>
-    </div>
 
-    <div id="cerf-selection">
+    @include('pages.cerfs.partials.header')
+
+    <div class="cerf-selection light-gray">
         <div class="wrapper">
 
-            <div id="event-section">
+            <div class="selection-subsection">
 
                 <div class="section-sidebar">
                     <p><strong>Pick an event!</strong> The events to the right are events that do not have a CERF filled out yet.</p>
                 </div>
 
-                <div id="event-table">
+                <div class="selection-table">
 
                     @foreach ($events_without_cerfs as $event)
                         <a href="{{ action('CerfsController@select', [$event->id]) }}">
-                            <div class="event-cell">
-
+                            <div class="selection-cell green">
 
                                 <div class="avatar small">
 

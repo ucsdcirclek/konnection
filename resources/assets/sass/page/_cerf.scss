@@ -4,8 +4,18 @@
   margin: 20px 30px 20px 30px;
 }
 
-.light-emphasis {
-  color: $light-green;
+.light-emphasis { color: $light-green }
+.light-gray { background-color: $lightest-gray }
+.light-green { background-color: $lightest-green }
+.light-yellow { background-color: lighten($gold, 30%) }
+
+.empty-section {
+  height: 200px;
+
+  h3 {
+    line-height: 200px;
+    text-align: center;
+  }
 }
 
 //endregion
@@ -32,10 +42,13 @@
 
 // Section containing events. to be CERFed.
 
-#cerf-selection {
-  background-color: $lightest-gray;
+.cerf-selection {
 
-  #event-section {
+  h1 {
+    padding-bottom: 30px;
+  }
+
+  .selection-subsection {
     @include outer-container;
     height: 500px;
 
@@ -43,7 +56,7 @@
       @include span-columns(3);
     }
 
-    #event-table {
+    .selection-table {
       @include span-columns(9);
 
       height: 500px;
@@ -54,8 +67,11 @@
 
         &:hover {
 
-          .event-cell {
-            background-color: $emphasis-color;
+          .green { background-color: $emphasis-color }
+          .yellow { background-color: $gold }
+          .blue { background-color: $blue }
+
+          .selection-cell {
             color: $white;
 
             -webkit-transition: all 0.2s ease-in-out;
@@ -65,15 +81,17 @@
           }
         }
 
-        .event-cell {
+        .green { background-color: $lightest-green; }
+        .yellow { background-color: lighten($gold, 30%); }
+        .blue { background-color: lighten($blue, 50%); }
+
+        .selection-cell {
           @include span-columns(3 of 9);
           @include omega;
           @include pad(10px);
 
           height: 250px;
           text-align: center;
-
-          background-color: $lightest-green;
 
           overflow-y: scroll;
 

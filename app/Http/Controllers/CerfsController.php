@@ -66,7 +66,10 @@ class CerfsController extends Controller {
 	 */
 	public function index()
 	{
-        return view('pages.cerfs.index');
+        $pendingCerfs = Cerf::where('approved', false)->get();
+        $approvedCerfs = Cerf::where('approved', true)->get();
+
+        return view('pages.cerfs.index', compact('pendingCerfs', 'approvedCerfs'));
 	}
 
     /**
@@ -140,7 +143,9 @@ class CerfsController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+        $cerf = Cerf::find($id);
+        
+        return view('pages.cerfs.show', compact('cerf'));
 	}
 
 	/**
