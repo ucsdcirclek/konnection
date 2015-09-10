@@ -1,6 +1,8 @@
 <?php namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Support\MessageBag;
 
 class CreateCerfRequest extends Request {
 
@@ -26,4 +28,10 @@ class CreateCerfRequest extends Request {
 		];
 	}
 
+    public function messages()
+    {
+        return [
+            'chair_id.required' => 'The event chair is missing.'
+        ];
+    }
 }

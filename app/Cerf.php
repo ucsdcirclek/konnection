@@ -16,7 +16,7 @@ class Cerf extends Model
     // Relationships.
 
     /**
-     * A CERF has many Kiwanis Family Club attendees.}
+     * A CERF has many Kiwanis Family Club attendees.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */

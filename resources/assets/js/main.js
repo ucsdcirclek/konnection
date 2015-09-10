@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  var genericFailMessage = 'Something went wrong! Please report this incident to technology@ucsdcki.org';
+
   //region Ajax setup
 
   $.ajaxSetup({
@@ -73,6 +75,8 @@ $(document).ready(function () {
     return path.substr(path.lastIndexOf("/") + 1);
   }
 
+  // TODO Add success/failure callbacks to button AJAX calls
+
   $('#register-btn').click(function(event) {
     // Register user
     $.post('/api/events/'+findSlug()+'/registrations/create');
@@ -110,6 +114,48 @@ $(document).ready(function () {
     $.post('/api/events/'+findSlug()+'/registrations/create', data);
 
     $('#guestRegistration').remove();
+  });
+
+  window.updateChair = function(id) {
+
+    console.log('slug is: ' + findSlug() + ' and id is: ' + id);
+
+    $.ajax({
+      url: '/api/events/' + findSlug(),
+      type: 'PATCH',
+      data: {
+        chair_id: id
+      }
+    })
+      .fail(function() {
+        alert(genericFailMessage);
+      })
+      .done(function(data) {
+        console.log('chair updated!');
+      });
+  }
+
+  $('#chair-event-btn').click(function(event) {
+    console.log('chair event button clicked');
+
+    var urlField = $('.chair.avatar').find('img');
+    var nameField = $('.chair.avatar').find('.name');
+    var infoField = $('.chair.avatar').find('.info');
+
+    $.get('/users/current', function(data) {
+      var currentUser = $.parseJSON(data);
+
+      var name = currentUser.first_name + ' ' + currentUser.last_name;
+      var phone = currentUser.phone;
+
+      nameField.text(name);
+      phone ? infoField.text(phone) : infoField.text('');
+
+      window.updateChair(currentUser.id);
+    })
+      .fail(function() {
+        alert(genericFailMessage);
+      });
   });
 
   $('#drive-btn').click(function(event) {
@@ -198,7 +244,7 @@ $(document).ready(function () {
   $('.search-popup-link').click(function() {
 
     if ($(this).hasClass('user-optional')) {
-      $('#search-input').after('<a href="#" id="not-listed">User not listed?</a>');
+      $('#search-input').after('<a href="#" id="not-listed">Not a paid member?</a>');
       $('#search-results').addClass('attendee-select');
     }
     else if ($(this).hasClass('user-not-optional')) {
@@ -262,20 +308,45 @@ $(document).ready(function () {
    */
   window.addAttendeeRow = function(id, name) {
 
-    // TODO Add validation to ensure that each row is unique
+
+    console.log('adding attendee row');
+
     $('#member-attendance-section').find('table tr:last').after('' +
       '<tr>' +
-        '<input class="attendee-field" name="attendee_id[]" type="hidden" value=' + id + '>' +
+        '<input class="attendee-field" name="user_id[]" type="hidden" value=' + id + '>' +
+        '<input  name="name[]" type="hidden" value=' + name + '>' +
         '<td>' + name + '</td>' +
-        '<td><input name="service_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="planning_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="traveling_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="admin_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="social_hours[' + id +']" type="number" value="0"></td>' +
-        '<td><input name="mileage[' + id +']" type="number" value="0"></td>' +
+        '<td><input name="service_hours[]" type="number" value="0"></td>' +
+        '<td><input name="planning_hours[]" type="number" value="0"></td>' +
+        '<td><input name="traveling_hours[]" type="number" value="0"></td>' +
+        '<td><input name="admin_hours[]" type="number" value="0"></td>' +
+        '<td><input name="social_hours[]" type="number" value="0"></td>' +
+        '<td><input name="mileage[]" type="number" value="0"></td>' +
         '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
       '</tr>');
   }
+
+  // Adds new row for attendee with empty form fields.
+  $('.search-popup').on('click', '#not-listed', function(event) {
+    event.preventDefault();
+
+    console.log('insert empty form values');
+
+    $.magnificPopup.close();
+
+    $('#member-attendance-section').find('table tr:last').after('' +
+      '<tr>' +
+        '<input name="user_id[]" type="hidden" value=null>' +
+        '<td><input type="text" name="name[]"></td>' +
+        '<td><input type="number" name="service_hours[]"></td>' +
+        '<td><input type="number" name="planning_hours[]"></td>' +
+        '<td><input type="number" name="traveling_hours[]"></td>' +
+        '<td><input type="number" name="admin_hours[]"></td>' +
+        '<td><input type="number" name="social_hours[]"></td>' +
+        '<td><input type="number" name="mileage[]"></td>' +
+        '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
+      '</tr>');
+  });
 
   // Searches users only when keydown events have finished (when user finishes typing)
   $('#search-input').keydown(window.searchUsers);
@@ -292,7 +363,7 @@ $(document).ready(function () {
 
     // For adding attendees to member attendance table
     if ($('#search-results').hasClass('attendee-select')) {
-      console.log('add new table to member attendance table')
+      console.log('add new row to member attendance table')
       window.addAttendeeRow(id, name);
     }
 
@@ -314,23 +385,28 @@ $(document).ready(function () {
     $(this).parents().eq(2).remove();
 
     event.preventDefault();
-  })
+  });
 
-  // Adds new row for attendee with empty form fields.
-  $('.search-popup').on('click', '#not-listed', function(event) {
+  $('#kiwanis-attendance-section').on('click', '.remove-kiwanis-attendee-button > div', function(event) {
+    console.log('remove kiwanis attendee');
+    $(this).parents().eq(2).remove();
+
     event.preventDefault();
+  });
 
-    console.log('insert empty form values');
+  $('#kiwanis-attendance-section').on('click', '.add-kiwanis-attendee-button > div', function(event) {
+    console.log('add kiwanis attendee');
 
-    $.magnificPopup.close();
+    var lastRow = $('#kiwanis-attendance-section').find('table tr:last');
 
-    $('#member-attendance-section').find('table tr:last').after('' +
+    lastRow.after('' +
       '<tr>' +
-        '<td>attended</td>' +
-        '<td>avatar</td>' +
-        '<td>name</td>' +
-        '<td>email</td>' +
+        '<td><input name="kiwanis_club_name[]" type="text" class="kiwanis-club-name"></td>' +
+        '<td><input name="num_members[]" type="number"></td>' +
+        '<td><a href="#" class="remove-kiwanis-attendee-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
       '</tr>');
+
+    event.preventDefault();
   });
 
   //endregion

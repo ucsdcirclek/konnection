@@ -41,6 +41,7 @@ class UsersTableSeeder extends Seeder
                     'last_name' => $faker->lastName,
                     'email' => $faker->unique()->email,
                     'password' => Hash::make('test1234'),
+                    'phone' => $faker->phoneNumber,
                     'confirmation_code' => md5(uniqid(mt_rand(), true)),
                     'confirmed' => 1
                 )

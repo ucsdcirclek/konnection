@@ -101,7 +101,7 @@ class EventsController extends Controller
             abort(404);
         }
 
-        $event->load('creator', 'registrations', 'guests');
+        $event->load('creator', 'chair', 'registrations', 'guests');
 
         // Look for events in the upcoming week
         $range = [

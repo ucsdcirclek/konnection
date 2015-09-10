@@ -22,6 +22,16 @@ Route::group(['middleware' => 'auth'], function()
 {
     Route::get('settings', 'UsersController@edit');
     Route::post('settings', 'UsersController@update');
+    Route::get('/users/current', 'UsersController@current');
+
+    Route::resource('tag', 'TagsController',
+        ['only' => ['create', 'store']]);
+
+    Route::resource('activity', 'ActivitiesController',
+        ['only' => ['create', 'store']]);
+
+    Route::resource('kiwanisAttendee', 'KiwanisAttendeesController',
+        ['only' => ['create', 'store']]);
 });
 
 /**
@@ -75,6 +85,7 @@ Route::get('contact', function() { return view('pages.contact'); });
 Route::group(['namespace' => 'Api', 'prefix' => 'api'], function()
 {
     Route::get('events', 'EventsController@index');
+    Route::patch('events/{slug}', 'EventsController@update');
 
     // Registrations
     Route::post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
@@ -94,5 +105,7 @@ Route::controllers([
 Route::get('cerfs/overview', 'CerfsController@overview');
 Route::get('cerfs/select/{id}', 'CerfsController@select');
 Route::resource('cerfs', 'CerfsController');
+
+Route::get('cerfs/approve/{id}', 'CerfsController@approve');
 
 Route::post('users/search', 'UsersController@search');
