@@ -37,13 +37,12 @@ class CerfsController extends Controller {
     {
         // TODO Only check events created after the CERFs system is implemented.
 
-        // Finds IDs of all events that do not have an associated CERF.
+        // Finds IDs of all events that do not have an associated approved CERF.
         $eventIdsWithoutCerfs = Event::select('events.id')
                                         ->leftJoin('cerfs', 'events.id', '=', 'cerfs.event_id')
                                         ->whereNull('cerfs.id')
+                                        ->orWhere('cerfs.approved', false)
                                         ->get();
-
-        // TODO Modify or make new query so that events with pending CERFs are also retrieved.
 
         // Retrieves events without CERFs based on ID. Casts to array to pass to foreach loop in view.
         $eventsWithoutCerfs = Event::find($eventIdsWithoutCerfs->toArray());
@@ -199,12 +198,13 @@ class CerfsController extends Controller {
 		//
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @param UpdateCerfRequest $request
+     * @return Response
+     */
 	public function update($id, UpdateCerfRequest $request)
 	{
         //
@@ -220,8 +220,9 @@ class CerfsController extends Controller {
 	{
         /*
          * Model delete() method does not result in cascade deleting as
-         * specified in the database migration while the raw SQL query does
-         * result in cascade deleting. Possible Laravel bug?
+         * specified in the database migration, but the raw SQL query does
+         * result in cascade deleting. Possible Laravel bug? Raw SQL queries
+         * below do not soft delete.
          */
         DB::statement('delete from cerfs where id=' . $id);
 

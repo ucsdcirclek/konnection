@@ -172,7 +172,7 @@
         </div>
     </div>
 
-    @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
+    @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')) && !$cerf->approved)
         <div class="admin-cerf-show">
             <div>
                 <button class="emphasis"><a href="{{ action('CerfsController@approve', ['id' => $cerf->id]) }}">Approve CERF</a></button>
