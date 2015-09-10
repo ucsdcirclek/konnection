@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateCerfRequest;
 use App\Http\Requests\ShowCerfRequest;
+use App\Http\Requests\UpdateCerfRequest;
 use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
@@ -15,6 +16,7 @@ use App\EventCategory;
 use App\KiwanisAttendee;
 use App\User;
 use Auth;
+use DB;
 
 class CerfsController extends Controller {
 
@@ -23,7 +25,7 @@ class CerfsController extends Controller {
         // All CERF actions require user to be logged in.
         $this->middleware('auth');
 
-        $this->middleware('admin', ['only' => ['index']]);
+        $this->middleware('admin', ['only' => ['index', 'destroy', 'approve']]);
     }
 
     /**
@@ -182,7 +184,8 @@ class CerfsController extends Controller {
             if ($activity->mileage > 0) $drivers[$activity->name] = $activity->mileage;
 
         return view('pages.cerfs.show', compact('cerf', 'activities', 'kiwanisAttendees',
-            'serviceHoursSum', 'adminHoursSum', 'socialHoursSum', 'tagCategories', 'drivers'));
+                                                'serviceHoursSum', 'adminHoursSum', 'socialHoursSum',
+                                                'tagCategories', 'drivers'));
 	}
 
 	/**
@@ -202,9 +205,9 @@ class CerfsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, UpdateCerfRequest $request)
 	{
-		//
+        //
 	}
 
 	/**
@@ -215,7 +218,42 @@ class CerfsController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+        /*
+         * Model delete() method does not result in cascade deleting as
+         * specified in the database migration while the raw SQL query does
+         * result in cascade deleting. Possible Laravel bug?
+         */
+        DB::statement('delete from cerfs where id=' . $id);
+
+        /*
+         * Also delete the event-tag relations that were submitted when this
+         * CERF was submitted.
+         */
+        DB::statement('delete from events_assigned_tags where cerf_id=' . $id);
+
+        return redirect()->action('CerfsController@overview');
 	}
 
+    /**
+     * Approves a CERF by deleting all other pending CERFs for the same event.
+     *
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function approve($id)
+    {
+        $cerf = Cerf::find($id);
+        $cerf->update(['approved' => true]);
+
+        $otherCerfs = Cerf::where('event_id', $cerf->event_id)->where('approved', false)->get();
+
+        foreach($otherCerfs as $cerf) {
+
+            // See comments in CerfsController@destroy.
+            DB::statement('delete from cerfs where id=' . $cerf->id);
+            DB::statement('delete from events_assigned_tags where cerf_id=' . $cerf->id);
+        }
+
+        return redirect()->action('CerfsController@overview');
+    }
 }

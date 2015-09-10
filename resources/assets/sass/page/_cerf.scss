@@ -436,11 +436,22 @@
   height: 100px;
   background-color: $lightest-gray;
 
-  a {
+  div {
+    @include span-columns(6);
     text-align: center;
     line-height: 100px;
-    @include span-columns(6);
-    @include omega();
+
+    a {
+      color: white;
+    }
+  }
+
+
+
+  button {
+    a {
+      color: white;
+    }
   }
 }
 

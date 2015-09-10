@@ -174,8 +174,17 @@
 
     @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
         <div class="admin-cerf-show">
-            <a href="#"><div class="button emphasis">Approve CERF</div></a>
-            <a href="#"><div class="button danger">Reject CERF</div></a>
+            <div>
+                <button class="emphasis"><a href="{{ action('CerfsController@approve', ['id' => $cerf->id]) }}">Approve CERF</a></button>
+            </div>
+
+            <div>
+                <div class="danger">
+                    {!! Form::open(['method' => 'DELETE', 'route' => ['cerfs.destroy', $cerf->id]]) !!}
+                    {!! Form::submit('Reject CERF', ['class' => 'danger']) !!}
+                    {!! Form::close() !!}
+                </div>
+            </div>
         </div>
     @endif
 

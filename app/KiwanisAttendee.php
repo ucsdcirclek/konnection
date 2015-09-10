@@ -5,8 +5,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class KiwanisAttendee extends Model {
 
-    use SoftDeletes;
-
     protected $guarded = ['id'];
 
     // Relationships.
