@@ -49,10 +49,19 @@ class ActivitiesController extends Controller
 
         foreach($input['user_id'] as $index => $user_id)
         {
+            $name = $input['name'][$index];
+            $id = null;
+
+            if($input['user_id'][$index] !== 'null') {
+                $currentUser = User::find($user_id);
+                $name = $currentUser->first_name . ' ' . $currentUser->last_name;
+                $id = $user_id;
+            }
+
             $activityAttributes = [
-                'user_id' => $input['user_id'][$index] === 'null' ? null : $user_id,
+                'user_id' => $id,
                 'cerf_id' => session()->get('cerf_id'),
-                'name' => $input['name'][$index],
+                'name' => $name,
                 'service_hours' => $input['service_hours'][$index],
                 'planning_hours' => $input['planning_hours'][$index],
                 'traveling_hours' => $input['traveling_hours'][$index],

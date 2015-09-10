@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Activity;
 use App\Cerf;
 use App\Event;
+use App\EventCategory;
 use App\KiwanisAttendee;
 use App\User;
 use Auth;
@@ -150,23 +151,38 @@ class CerfsController extends Controller {
 	{
         $cerf = Cerf::find($id);
 
-        if (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator') || Auth::id() === $cerf->user_id) {
-
-            $activities = Activity::where('cerf_id', $cerf->id)->get();
-            $kiwanisAttendees = KiwanisAttendee::where('cerf_id', $cerf->id)->get();
-
-            $service_hours_sum = $activities->sum('service_hours') + $activities->sum('planning_hours') + $activities->sum('traveling_hours');
-            $admin_hours_sum = $activities->sum('admin_hours');
-            $social_hours_sum = $activities->sum('social_hours');
-
-            // TODO Add cerf_id to events_assigned_tags pivot table to get appropriate tags for each CERF.
-
-            return view('pages.cerfs.show', compact('cerf', 'activities', 'kiwanisAttendees',
-                                                    'service_hours_sum', 'admin_hours_sum', 'social_hours_sum'));
-        }
-        else {
+        if (!(Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator') || Auth::id() === $cerf->user_id))
             redirect()->action('CerfsController@overview');
+
+        $activities = Activity::where('cerf_id', $cerf->id)->get();
+        $kiwanisAttendees = KiwanisAttendee::where('cerf_id', $cerf->id)->get();
+
+        $serviceHoursSum = $activities->sum('service_hours') + $activities->sum('planning_hours') + $activities->sum('traveling_hours');
+        $adminHoursSum = $activities->sum('admin_hours');
+        $socialHoursSum = $activities->sum('social_hours');
+
+        $event = $cerf->event;
+        $tagCategories = [];
+
+        for ($index = 1; $index <= 4; $index++) {
+
+            $currentTags = [];
+            $tags = $event->tags()->where('cerf_id', $cerf->id)->where('category_id', $index)->get();
+
+            foreach($tags as $tag) {
+                array_push($currentTags, $tag->name . ' (' . $tag->abbreviation . ')');
+            }
+
+            $tagCategories[EventCategory::find($index)->name] = $currentTags;
         }
+
+        $drivers = [];
+
+        foreach($activities as $activity)
+            if ($activity->mileage > 0) $drivers[$activity->name] = $activity->mileage;
+
+        return view('pages.cerfs.show', compact('cerf', 'activities', 'kiwanisAttendees',
+            'serviceHoursSum', 'adminHoursSum', 'socialHoursSum', 'tagCategories', 'drivers'));
 	}
 
 	/**

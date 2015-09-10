@@ -16,4 +16,8 @@ input[type="submit"],
       background-color: darken($emphasis-color, 5%);
     }
   }
+
+  &.danger {
+    background-color: $red;
+  }
 }

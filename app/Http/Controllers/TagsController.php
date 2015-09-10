@@ -84,9 +84,10 @@ class TagsController extends Controller
              * CERF form is the only way for a user to associate an event with
              * a tag.
              */
-            DB::statement('insert into events_assigned_tags (event_id, tag_id, approved) values (' .
+            DB::statement('insert into events_assigned_tags (event_id, tag_id, cerf_id, approved) values (' .
                 session()->get('event_id') . ', ' .
                 $tag->id . ', ' .
+                session()->get('cerf_id') . ', ' .
                 'false);');
         }
 

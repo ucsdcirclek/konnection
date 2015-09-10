@@ -390,4 +390,58 @@
   }
 }
 
+.tags-listing {
+  overflow: auto;
+  margin-bottom: 50px;
+
+  .category {
+    border-radius: 5px;
+
+    h4, p, li {
+      padding: 10px 10px 10px 10px;
+    }
+
+    @include span-columns(3);
+
+    min-height: 50px;
+    margin-top: 30px;
+
+    &:nth-child(2) {
+      background-color: lighten($brown, 70%);
+    }
+
+    &:nth-child(3) {
+      background-color: lighten($gold, 30%);
+    }
+
+    &:nth-child(4) {
+      background-color: lighten($blue, 50%);
+    }
+
+    &:nth-child(5) {
+      background-color: lighten($purple, 55%);
+    }
+  }
+}
+
+.drivers-listing, .comment-listing {
+  background-color: $lightest-green;
+}
+
+.comment-listing > h3 {
+  margin-top: 100px;
+}
+
+.admin-cerf-show {
+  height: 100px;
+  background-color: $lightest-gray;
+
+  a {
+    text-align: center;
+    line-height: 100px;
+    @include span-columns(6);
+    @include omega();
+  }
+}
+
 //endregion

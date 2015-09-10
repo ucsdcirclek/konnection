@@ -108,6 +108,11 @@ class SetupCerfsTables extends Migration {
         });
 
         Schema::table('events_assigned_tags', function(Blueprint $table) {
+            $table->integer('cerf_id')->unsigned();
+            $table->foreign('cerf_id')
+                  ->references('id')
+                  ->on('users');
+
             $table->boolean('approved');
         });
     }
@@ -148,7 +153,11 @@ class SetupCerfsTables extends Migration {
             $table->dropColumn('chair_id');
         });
 
-        Schema::table('events_assigned_tags', function(Blueprint $table) {
+        Schema::table('events_assigned_tags', function(Blueprint $table)
+        {
+            $table->dropForeign('events_assigned_tags_cerf_id_foreign');
+            $table->dropColumn('cerf_id');
+
             $table->dropColumn('approved');
         });
 
