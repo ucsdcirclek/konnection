@@ -23,6 +23,15 @@ Route::group(['middleware' => 'auth'], function()
     Route::get('settings', 'UsersController@edit');
     Route::post('settings', 'UsersController@update');
     Route::get('/users/current', 'UsersController@current');
+
+    Route::resource('tag', 'TagsController',
+        ['only' => ['create', 'store']]);
+
+    Route::resource('activity', 'ActivitiesController',
+        ['only' => ['create', 'store']]);
+
+    Route::resource('kiwanisAttendee', 'KiwanisAttendeesController',
+        ['only' => ['create', 'store']]);
 });
 
 /**
@@ -100,12 +109,3 @@ Route::resource('cerfs', 'CerfsController');
 Route::get('cerfs/approve/{id}', 'CerfsController@approve');
 
 Route::post('users/search', 'UsersController@search');
-
-Route::resource('tag', 'TagsController',
-                ['only' => ['create', 'store']]);
-
-Route::resource('activity', 'ActivitiesController',
-                ['only' => ['create', 'store']]);
-
-Route::resource('kiwanisAttendee', 'KiwanisAttendeesController',
-                ['only' => ['create', 'store']]);

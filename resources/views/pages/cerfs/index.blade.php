@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('pages.cerfs.partials.header')
+    @include('layouts.header', array('headerTitle' => 'Club Event Report Forms'))
 
     @unless($pendingCerfs->isEmpty())
         <div>
@@ -20,7 +20,7 @@
     @endunless
 
     @unless($approvedCerfs->isEmpty())
-        <div class="light-green">
+        <div class="gray">
             @include('pages.cerfs.partials.cerfselection', ['title' => 'Approved CERFs',
                                                         'message' => 'To the right are CERFs that have been recently approved!',
                                                         'cerfs' => $approvedCerfs,

@@ -40,7 +40,7 @@ class CreateActivityRequest extends Request
                 $otherAttendees = $otherAttendees . $otherAttendee . ',';
             }
             $otherAttendees = rtrim($otherAttendees, ',');
-            $rules['attendee_id.' . $thisKey] = 'not_in:' . $otherAttendees;
+            $rules['user_id.' . $thisKey] = 'not_in:' . $otherAttendees;
         }
 
         return $rules;
@@ -49,7 +49,7 @@ class CreateActivityRequest extends Request
     public function messages()
     {
         return [
-            'attendee_id.required' => 'The event has to have at least one attendee.',
+            'user_id.required' => 'The event has to have at least one attendee.',
         ];
     }
 
@@ -61,7 +61,7 @@ class CreateActivityRequest extends Request
 
         foreach($errors as $index => $error)
         {
-            if (fnmatch('The selected attendee id.* is invalid.', $error)) {
+            if (fnmatch('The selected user id.* is invalid.', $error)) {
 
                 // Removes from array; can still iterate through array with foreach
                 unset($errors[$index]);

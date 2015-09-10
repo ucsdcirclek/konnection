@@ -3,7 +3,7 @@
         <h3>Commentary</h3>
 
         <p class="section-instructions">
-            Almost done! In this final section, please provide some commentary and reflections on the event.
+            Please provide some commentary and reflections on this event.
         </p>
 
         <div class="commentary-info">

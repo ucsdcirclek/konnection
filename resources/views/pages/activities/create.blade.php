@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('pages.cerfs.partials.header')
+    @include('layouts.header', array('headerTitle' => 'Club Event Report Forms'))
 
     <div id="member-attendance-section">
 

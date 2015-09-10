@@ -25,7 +25,7 @@
 
 // Header at top of page.
 
-#cerf-header {
+.page-header {
   @include fill-parent;
   height: 120px;
   background-color: $emphasis-color;
@@ -424,7 +424,7 @@
   }
 }
 
-.drivers-listing, .comment-listing {
+.drivers-listing, .comment-listing, .fundraising-listing {
   background-color: $lightest-green;
 }
 

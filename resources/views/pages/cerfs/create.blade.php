@@ -23,7 +23,7 @@
    </div>
    --}}
 
-    @include('pages.cerfs.partials.header')
+    @include('layouts.header', array('headerTitle' => 'Club Event Report Forms'))
 
     {!! Form::open(['action' => 'CerfsController@store']) !!}
 
