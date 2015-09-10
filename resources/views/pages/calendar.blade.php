@@ -7,5 +7,7 @@
 @endsection
 
 @section('content')
+    @include('layouts.header', array('headerTitle' => 'Calendar'))
+
     <div class="calendar"></div>
 @endsection

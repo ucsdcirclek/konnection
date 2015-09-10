@@ -9,6 +9,8 @@
 @section('content')
     <div class="slider">
 
+
+        {{--
       <div style="background: url(images/slider/spammusubi.jpg); background-position: center; background-size: cover">
           <div class="content">
               <div class="text">
@@ -25,31 +27,23 @@
               </div>
           </div>
       </div>
+      --}}
 
-      <div style="background: url(images/slider/tech_team.png); background-position: right; background-size: contain; background-repeat: no-repeat; background-color: white; ">
-            <div class="content">
-                <div class="text">
-                    <h2>Tech Team Applications</h2>
-                    <br/>
-                    <p>
-                      Have some great ideas on how to improve this website? Looking to develop real-world technical skills? Join
-                      the Tech Team! The Tech Team works to improve the visual elements and enhance the user experience of the
-                      site. Prior experience is preferred.
-                    </p>
+        <div class="empty-content">
+            <img src="/images/slider/fallrush.jpg">
 
-                    <p>
-                      <a target="_blank" href="http://bit.ly/UCSDCKITechTeamApp">Tech Team Application</a>
-                    </p>
-                </div>
+            <div class="text">
+                <h3>Fall Rush 2015</h3>
+                <p>Check out the rush events <a href="/events">here!</a></p>
             </div>
-      </div>
+        </div>
     </div>
 
     <div id="social-media-column">
-        <div class="facebook-box"><a href="#"><i class="fa fa-2x fa-facebook"></i></a></div>
-        <div class="tumblr-box"><a href="#"><i class="fa fa-2x fa-tumblr"></i></a></div>
-        <div class="instagram-box"><a href="#"><i class="fa fa-2x fa-instagram"></i></a></div>
-        <div class="twitter-box"><a href="#"><i class="fa fa-2x fa-twitter"></i></a></div>
+        <div class="facebook-box"><a href="https://www.facebook.com/ucsdcirclek"><i class="fa fa-2x fa-facebook"></i></a></div>
+        <div class="tumblr-box"><a href="http://ucsdcirclek.tumblr.com"><i class="fa fa-2x fa-tumblr"></i></a></div>
+        <div class="instagram-box"><a href="https://instagram.com/ucsdcirclek"><i class="fa fa-2x fa-instagram"></i></a></div>
+        <div class="twitter-box"><a href="https://twitter.com/ucsdcirclek"><i class="fa fa-2x fa-twitter"></i></a></div>
     </div>
 
     <div id="content">

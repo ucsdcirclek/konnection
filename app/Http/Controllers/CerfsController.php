@@ -44,6 +44,8 @@ class CerfsController extends Controller {
                                         ->orWhere('cerfs.approved', false)
                                         ->get();
 
+        // TODO Paginate events that need to be CERFed.
+
         // Retrieves events without CERFs based on ID. Casts to array to pass to foreach loop in view.
         $eventsWithoutCerfs = Event::find($eventIdsWithoutCerfs->toArray());
 
@@ -74,6 +76,8 @@ class CerfsController extends Controller {
 	public function index()
 	{
         $pendingCerfs = Cerf::where('approved', false)->get();
+
+        // TODO Add filter for approved CERFs.
         $approvedCerfs = Cerf::where('approved', true)->get();
 
         return view('pages.cerfs.index', compact('pendingCerfs', 'approvedCerfs'));
@@ -82,9 +86,8 @@ class CerfsController extends Controller {
     /**
      * Show form for creating a new CERF.
      * Event details automatically filled in from previous overview page.
-     *
-     * @param $event
      * @return Response
+     * @internal param $event
      */
 	public function create()
 	{
