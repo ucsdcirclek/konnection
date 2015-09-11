@@ -4,6 +4,15 @@
   position: fixed;
   top: 40%;
   right: 0;
+  z-index: 99;
+
+  a {
+      color: white;
+
+      i {
+        line-height: 60px;
+      }
+  }
 
   div {
     background-color: $medium-green;
@@ -12,13 +21,7 @@
     text-align: center;
     vertical-align: bottom;
 
-    a {
-      color: white;
 
-      i {
-        line-height: 60px;
-      }
-    }
 
     &:hover {
       -webkit-transition: all 0.2s ease-in-out;

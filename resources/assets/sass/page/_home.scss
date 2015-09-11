@@ -13,7 +13,75 @@
     }
   }
 
-  #week-view, #announcements-view {
+  #welcome-view {
+    @include fill-parent;
+    @include row(table);
+
+    @include sharp-gradient($lightest-green, $light-green); // genius
+
+    overflow: hidden;
+
+    .text {
+      @include span-columns(8);
+      @include pad();
+
+      padding: 10px 10px 10px 10px;
+
+      transform: skewX(-20deg);
+      * { transform: skewX(20deg) }
+
+      margin-right: 0;
+
+      .right {
+        text-align: right;
+      }
+
+      .center {
+
+        a {
+          color: $light-green;
+
+          &:hover {
+            color: $medium-green;
+          }
+        }
+
+        text-align: center;
+      }
+    }
+
+    h3 {
+      color: $emphasis-color;
+      padding-left: 30px;
+      padding-bottom: 5px;
+    }
+
+    .links {
+      @include span-columns(4);
+      @include reset-display;
+      @include pad();
+
+      background-color: $light-green;
+
+      transform: skewX(-20deg);
+
+      div {
+        transform: skewX(20deg);
+        text-align: center;
+
+        &:nth-child(2) {
+          margin-top: 20px;
+          padding-left: 50px;
+        }
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  #week-view, #announcements-view, #welcome-view {
     @include fill-parent;
   }
 

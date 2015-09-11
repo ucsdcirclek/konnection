@@ -7,6 +7,7 @@
 @endsection
 
 @section('content')
+
     <div class="slider">
 
 
@@ -40,13 +41,37 @@
     </div>
 
     <div id="social-media-column">
-        <div class="facebook-box"><a href="https://www.facebook.com/ucsdcirclek"><i class="fa fa-2x fa-facebook"></i></a></div>
-        <div class="tumblr-box"><a href="http://ucsdcirclek.tumblr.com"><i class="fa fa-2x fa-tumblr"></i></a></div>
-        <div class="instagram-box"><a href="https://instagram.com/ucsdcirclek"><i class="fa fa-2x fa-instagram"></i></a></div>
-        <div class="twitter-box"><a href="https://twitter.com/ucsdcirclek"><i class="fa fa-2x fa-twitter"></i></a></div>
+        <a href="https://www.facebook.com/ucsdcirclek"><div class="facebook-box"><i class="fa fa-2x fa-facebook"></i></div></a>
+        <a href="http://ucsdcirclek.tumblr.com"><div class="tumblr-box"><i class="fa fa-2x fa-tumblr"></i></div></a>
+        <a href="https://instagram.com/ucsdcirclek"><div class="instagram-box"><i class="fa fa-2x fa-instagram"></i></div></a>
+        <a href="https://twitter.com/ucsdcirclek"><div class="twitter-box"><i class="fa fa-2x fa-twitter"></i></div></a>
     </div>
 
     <div id="content">
+
+        @unless(Auth::check())
+            <div id="welcome-view">
+                <div class="text">
+                    <h3>Welcome to UCSD Circle K!</h3>
+
+                    <p>
+                        Circle K International is the <strong>largest service organization in the world</strong>, with
+                        over <span class="light-emphasis">13,000</span> members worldwide who have served a total of
+                        <span class="light-emphasis">199,327</span> hours of service.
+                    </p>
+
+                    <br/>
+
+                    <p class="center"><a href="/about/circlek">Learn more about our club here!</a></p>
+                </div>
+
+                <div class="links">
+                    <div><button><a href="/about/membership">Become a member</a></button></div>
+                    <div><button><a href="/auth/login">Login</a></button></div>
+                </div>
+            </div>
+        @endunless
+
         <div id="week-view">
             <ul class="week">
                 <li class="featured">
