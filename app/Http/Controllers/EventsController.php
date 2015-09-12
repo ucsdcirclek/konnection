@@ -10,6 +10,7 @@ use App\Http\Requests\UpdateEventRequest;
 use Carbon\Carbon;
 
 use App\Event;
+use App\EventType;
 
 class EventsController extends Controller
 {
@@ -22,7 +23,9 @@ class EventsController extends Controller
      */
     public function index()
     {
-        return view('pages.calendar');
+        $types = EventTYpe::all()->lists('name');
+
+        return view('pages.calendar', compact('types'));
     }
 
     /**
@@ -47,8 +50,6 @@ class EventsController extends Controller
         // Makes sure chair_id enters database as an integer or null if left empty.
         strcmp($input['chair_id'], "") == 0 ? $input['chair_id'] = null
                                             : $input['chair_id'] = (int) $input['chair_id'];
-
-        // TODO Make chair_id field null if chair was not specified.
 
         // Ensures database times are always in UTC.
         foreach ($input as $key => $value) {

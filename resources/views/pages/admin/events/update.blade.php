@@ -35,6 +35,16 @@
         <label for="close_time">Signup Close</label>
         {!! Form::text('close_time', '', array('class'=>'datetime')) !!}
 
+        <label for="type_id">What kind of event is this?</label>
+        <ul>
+            <li>{!! Form::radio('type_id', 1) !!} Service</li>
+            <li>{!! Form::radio('type_id', 2) !!} Social</li>
+            <li>{!! Form::radio('type_id', 3) !!} Committee</li>
+            <li>{!! Form::radio('type_id', 4) !!} Kiwanis</li>
+            <li>{!! Form::radio('type_id', 5) !!} Fundraising</li>
+            <li>{!! Form::radio('type_id', 6) !!} Division/District</li>
+        </ul>
+
         <br/>
         <br/>
 
