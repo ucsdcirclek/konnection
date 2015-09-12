@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call('EntrustSeeder');
         $this->call('UsersTableSeeder');
+        $this->call('CalendarEventTypesTableSeeder');
         $this->call('EventsTableSeeder');
         $this->call('EventRegistrationsTableSeeder');
         $this->call('EventCategoriesTableSeeder');

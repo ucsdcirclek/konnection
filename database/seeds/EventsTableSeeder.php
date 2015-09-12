@@ -31,6 +31,7 @@ class EventsTableSeeder extends Seeder
             Event::create(
                 array(
                     'creator_id' => $rand_user_id,
+                    'type_id' => mt_rand(1, 6),
                     'title' => ucwords(implode(' ', $faker->words(3))),
                     'description' => $faker->text,
                     'event_location' => $faker->address,
