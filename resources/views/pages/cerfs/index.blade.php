@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('layouts.header', array('headerTitle' => 'Club Event Report Forms'))
+    @include('layouts.header', array('headerTitle' => 'Administration Panel'))
 
     @unless($pendingCerfs->isEmpty())
         <div>

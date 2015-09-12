@@ -36,6 +36,7 @@
         {!! Form::text('close_time', '', array('class'=>'datetime')) !!}
 
         <label for="chair_id">Event Chair</label>
+        <p>(optional)</p>
         {!! Form::hidden('chair_id', null, array('class' => 'chair-field')) !!}
 
         <div class="avatar small">
@@ -46,6 +47,17 @@
 
             @include('search.search', array('selectClass' => 'chair-select'))
         </div>
+
+        <label for="type_id">What kind of event is this?</label>
+        <p>(optional)</p>
+        <ul>
+            <li>{!! Form::radio('type_id', 1) !!} Service</li>
+            <li>{!! Form::radio('type_id', 2) !!} Social</li>
+            <li>{!! Form::radio('type_id', 3) !!} Committee</li>
+            <li>{!! Form::radio('type_id', 4) !!} Kiwanis</li>
+            <li>{!! Form::radio('type_id', 5) !!} Fundraising</li>
+            <li>{!! Form::radio('type_id', 6) !!} Division/District</li>
+        </ul>
 
         <br/>
         <br/>
