@@ -22,6 +22,46 @@ $(document).ready(function () {
 
   //region Calendar plugin configuration
 
+  window.setEventColor = function(type_id) {
+
+    var color = '#999';
+
+    switch (type_id) {
+
+      //Service
+      case 1:
+        color = '#6DA592';
+        break;
+
+      // Social
+      case 2:
+        color = '#4A7B9D';
+        break;
+
+      // Committee
+      case 3:
+        color = '#93ACB5';
+        break;
+
+      // Kiwanis
+      case 4:
+        color = '#A898B3';
+        break;
+
+      // Fundraising
+      case 5:
+        color = '#759936';
+        break;
+
+      // Division/District
+      case 6:
+        color = '#CEB28A';
+        break;
+    }
+
+    return color;
+  }
+
   $('.calendar').fullCalendar({
     class: 'calendar',
     height: 'auto',
@@ -55,8 +95,8 @@ $(document).ready(function () {
               start: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"), // Convert from server UTC to local
               end: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"),
               url: '/events/' + event.slug,
-              backgroundColor: '#243E36',
-              borderColor: '#243E36'
+              backgroundColor: window.setEventColor(event.type_id),
+              borderColor: window.setEventColor(event.type_id)
             });
           });
 

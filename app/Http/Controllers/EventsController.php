@@ -10,6 +10,7 @@ use App\Http\Requests\UpdateEventRequest;
 use Carbon\Carbon;
 
 use App\Event;
+use App\EventType;
 
 class EventsController extends Controller
 {
@@ -22,7 +23,9 @@ class EventsController extends Controller
      */
     public function index()
     {
-        return view('pages.calendar');
+        $types = EventTYpe::all()->lists('name');
+
+        return view('pages.calendar', compact('types'));
     }
 
     /**
