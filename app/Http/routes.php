@@ -40,6 +40,12 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
     // Posts
     Route::get('posts/create', 'PostsController@create');
     Route::post('posts/create', 'PostsController@store');
+
+    // Slides
+    Route::get('slides', 'SlidesController@index');
+    Route::get('slides/create', 'SlidesController@create');
+    Route::post('slides/create', 'SlidesController@store');
+    Route::delete('slides/{id}', 'SlidesController@delete');
 });
 
 /**

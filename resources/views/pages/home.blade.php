@@ -9,40 +9,24 @@
 @section('content')
     <div class="slider">
 
-      <div style="background: url(images/slider/spammusubi.jpg); background-position: center; background-size: cover">
-          <div class="content">
-              <div class="text">
-                <h2>Spam Musubi Fundraiser</h2>
-                <br/>
-                <p>
-                  Come help out at our quarterly spam musubi fundraiser! The fundraiser will be held Monday through
-                  Thursday of finals week, and tasks include setting up, cooking, delivering, and cleaning up.
-                </p>
+        @foreach($slides as $slide)
+            <div style="background: url({{ asset($slide->image->url()) }}); background-position: center; background-size:
+                    cover">
+                <div class="content">
+                    <div class="text">
+                        <h2>{{ $slide->title }}</h2>
+                        <br/>
+                        <p>
+                            {{ $slide->body }}
+                        </p>
 
-                <p>
-                  <a target="_blank" href="http://ucsdcki.org/events/super-study-spam-musubi-fundraiser">Visit the event page</a>
-                </p>
-              </div>
-          </div>
-      </div>
-
-      <div style="background: url(images/slider/tech_team.png); background-position: right; background-size: contain; background-repeat: no-repeat; background-color: white; ">
-            <div class="content">
-                <div class="text">
-                    <h2>Tech Team Applications</h2>
-                    <br/>
-                    <p>
-                      Have some great ideas on how to improve this website? Looking to develop real-world technical skills? Join
-                      the Tech Team! The Tech Team works to improve the visual elements and enhance the user experience of the
-                      site. Prior experience is preferred.
-                    </p>
-
-                    <p>
-                      <a target="_blank" href="http://bit.ly/UCSDCKITechTeamApp">Tech Team Application</a>
-                    </p>
+                        <p>
+                            <a target="_blank" href="{{ $slide->link }}">Learn more</a>
+                        </p>
+                    </div>
                 </div>
             </div>
-      </div>
+        @endforeach
     </div>
 
     <div id="social-media-column">
