@@ -80,6 +80,11 @@ Route::group(['prefix' => 'about'], function()
 Route::get('contact', function() { return view('pages.contact'); });
 
 /**
+ * Service bulletin route
+ */
+Route::get('bulletin', 'PostsController@bulletin');
+
+/**
  * API routes
  */
 Route::group(['namespace' => 'Api', 'prefix' => 'api'], function()

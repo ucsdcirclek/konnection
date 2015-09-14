@@ -114,7 +114,7 @@
         <div id="announcements-view">
             <div><h2>Announcements</h2></div>
 
-            <div id="announcements">
+            <div class="announcements">
                 @foreach ($posts as $post)
                     <article>
                         <h3>{{ $post->title }}</h3>

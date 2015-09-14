@@ -118,43 +118,43 @@
       }
     }
   }
+}
 
-  #announcements {
-    background-color: white;
-    border-radius: 3px;
-    padding: 10px;
+.announcements {
+  background-color: white;
+  border-radius: 3px;
+  padding: 10px;
 
-    h3, h4, h5, h6 {
-      color: $base-font-color;
-    }
+  h3, h4, h5, h6 {
+    color: $base-font-color;
+  }
 
-    h3 {
-      padding-top: 10px;
-      text-align: center;
+  h3 {
+    padding-top: 10px;
+    text-align: center;
 
-      small {
-        color: $medium-gray;
-        font-size: .7em;
-      }
-    }
-
-    .date {
-      text-align: center;
-      font-style: italic;
+    small {
       color: $medium-gray;
+      font-size: .7em;
+    }
+  }
+
+  .date {
+    text-align: center;
+    font-style: italic;
+    color: $medium-gray;
+  }
+
+  article {
+    border-bottom: 2px solid $light-gray;
+    padding: 5px 0;
+
+    &:first-of-type {
+      padding-top: 0;
     }
 
-    article {
-      border-bottom: 2px solid $light-gray;
-      padding: 5px 0;
-
-      &:first-of-type {
-        padding-top: 0;
-      }
-
-      &:last-of-type {
-        border-bottom: none;
-      }
+    &:last-of-type {
+      border-bottom: none;
     }
   }
 }

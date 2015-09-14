@@ -14,10 +14,15 @@
                         <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
                         <li><a href="{{ url('about/division') }}">Division</a></li>
                         <li><a href="{{ url('about/club') }}">Club</a></li>
+                        <li><a target="_blank" href="http://www.kiwanis.org">Kiwanis</a></li>
+                        <li><a target="_blank" href="http://www.kiwanisclublajolla.org/">La Jolla Kiwanis</a></li>
+                        <li><a target="_blank" href="http://www.sdsucirclek.com">SDSU Circle K</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-link"><a href="{{ url('/events') }}">calendar</a></li>
+
+                <li class="nav-link"><a href="{{ url('/bulletin') }}">bulletin</a></li>
 
                 <li class="nav-link"><a href="{{ url('/cerfs/overview') }}">cerfs</a></li>
 
@@ -29,13 +34,6 @@
                         <li><a target="_blank"
                                href="http://www.cnhcirclek.org/event/7-crazy_kompetition_for_infants_south/">CKI
                                 South</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-link more"><a target="_blank" href="http://www.kiwanis.org/">kiwanis</a>
-                    <ul class="submenu">
-                        <li><a target="_blank" href="http://www.kiwanisclublajolla.org/">La Jolla Kiwanis</a></li>
-                        <li><a target="_blank" href="http://www.sdsucirclek.com">SDSU Circle K</a></li>
                     </ul>
                 </li>
 
