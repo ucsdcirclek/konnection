@@ -25,7 +25,7 @@ class PostsTableSeeder extends Seeder
                         'author_id' => $rand_user_id,
                         'category_id' => $category_id,
                         'title' => $faker->sentence(6),
-                        'content' => $faker->text
+                        'content' => implode(' ', $faker->paragraphs(5))
                     )
                 );
 
