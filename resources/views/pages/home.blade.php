@@ -55,17 +55,16 @@
     <div id="content">
         <div id="week-view">
             <ul class="week">
+
                 <li class="featured">
                     <h5>Featured</h5>
 
-                    <p class="title">Triton 5K</p>
+                    <p class="title">{{ $featured->event->title }}</p>
 
-                    <p class="date">June 6</p>
+                    <p class="date">{{ $featured->event->start_time->format('F j') }}</p>
 
                     <p class="info">
-                      Help out at the annual Triton 5K! The Triton 5K is a 3.1-mile race around campus, ending at the Track and
-                      Field stadium where there will be a festival with food vendors, live entertainment, and the annual Junior
-                      Triton Run.
+                      {{ $featured->summary }}
                     </p>
                 </li>
                 @foreach ($days as $day => $events)
