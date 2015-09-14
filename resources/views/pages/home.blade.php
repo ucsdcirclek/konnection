@@ -68,24 +68,30 @@
                       Triton Run.
                     </p>
                 </li>
-                @foreach ($days as $day => $events)
+                @foreach ($upcoming as $day => $events)
                     <li>
                         <h5>{{$day}}</h5>
                         <ul>
-                            @foreach ($events as $event)
-                                <li>
-                                    <p class="title">
-                                        <a href="{{ action('EventsController@show', $event->slug) }}">
-                                            {{ $event->title }}
-                                        </a>
-                                    </p>
+                            @if ($events)
+                                @foreach ($events as $event)
+                                    <li>
+                                        <p class="title">
+                                            <a href="{{ action('EventsController@show', $event->slug) }}">
+                                                {{ $event->title }}
+                                            </a>
+                                        </p>
 
-                                    <p class="date">
-                                        {{ $event->start_time->setTimezone('America/Los_Angeles')->format('g:iA \\t\\o ')}}
-                                        {{ $event->end_time->setTimezone('America/Los_Angeles')->format('g:iA') }}
-                                    </p>
+                                        <p class="date">
+                                            {{ $event->start_time->setTimezone('America/Los_Angeles')->format('g:iA \\t\\o ')}}
+                                            {{ $event->end_time->setTimezone('America/Los_Angeles')->format('g:iA') }}
+                                        </p>
+                                    </li>
+                                @endforeach
+                            @else
+                                <li>
+                                    <p class="title">No events!</p>
                                 </li>
-                            @endforeach
+                            @endif
                         </ul>
                     </li>
                 @endforeach
