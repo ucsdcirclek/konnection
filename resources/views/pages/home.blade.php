@@ -10,33 +10,8 @@
 
     <div class="slider">
 
-
-        {{--
-      <div style="background: url(images/slider/spammusubi.jpg); background-position: center; background-size: cover">
-          <div class="content">
-              <div class="text">
-                <h2>Spam Musubi Fundraiser</h2>
-                <br/>
-                <p>
-                  Come help out at our quarterly spam musubi fundraiser! The fundraiser will be held Monday through
-                  Thursday of finals week, and tasks include setting up, cooking, delivering, and cleaning up.
-                </p>
-
-                <p>
-                  <a target="_blank" href="http://ucsdcki.org/events/super-study-spam-musubi-fundraiser">Visit the event page</a>
-                </p>
-              </div>
-          </div>
-      </div>
-      --}}
-
         <div class="empty-content">
-            <img src="/images/slider/fallrush.jpg">
-
-            <div class="text">
-                <h3>Fall Rush 2015</h3>
-                <p>Check out the rush events <a href="/events">here!</a></p>
-            </div>
+            <a href="https://www.facebook.com/events/770936166385069/"><img src="/images/slider/fallrush.jpg"></a>
         </div>
     </div>
 
@@ -62,7 +37,7 @@
 
                     <br/>
 
-                    <p class="center"><a href="/about/circlek">Learn more about our club here!</a></p>
+                    <p class="center"><a href="/events">Check out some of our events!</a></p>
                 </div>
 
                 <div class="links">

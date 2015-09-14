@@ -11,9 +11,9 @@
             <strong>Welcome to the service bulletin!</strong> This bulletin is
             a way to promote service events that cannot be placed on the
             calendar since events listed on the bulletin typically require the
-            help of individuals rather than groups. Although these
-            opportunities may require an application or orientation process,
-            these events are usually much more interesting!
+            help of individuals rather than groups. These opportunities may
+            require an application or orientation process, and are usually very
+            interesting!
         </p>
 
         @if ($posts->isEmpty())
