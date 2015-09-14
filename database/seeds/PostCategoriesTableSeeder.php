@@ -36,6 +36,13 @@ class PostCategoriesTableSeeder extends Seeder
                 'description' => 'Fellowship updates'
             )
         );
+
+        PostCategory::create(
+            array(
+                'title' => 'Bulletin',
+                'description' => 'Service bulletin'
+            )
+        );
     }
 
 }

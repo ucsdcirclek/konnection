@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
         $this->call('EventRegistrationsTableSeeder');
         $this->call('EventCategoriesTableSeeder');
         $this->call('EventTagsTableSeeder');
-        //$this->call('PostCategoriesTableSeeder');
-        //$this->call('PostsTableSeeder');
+        $this->call('PostCategoriesTableSeeder');
+        $this->call('PostsTableSeeder');
         //$this->call('CerfsTableSeeder');
         //$this->call('ActivityLogTableSeeder');
         //$this->call('KiwanisAttendeesTableSeeder');
