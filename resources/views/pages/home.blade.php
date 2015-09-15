@@ -7,14 +7,27 @@
 @endsection
 
 @section('content')
-
     <div class="slider">
 
-        <div class="empty-content">
-            <a href="https://www.facebook.com/events/770936166385069/"><img src="/images/slider/fallrush.jpg"></a>
-        </div>
-    </div>
+        @foreach($slides as $slide)
+        <div style="background: url({{ asset($slide->image->url()) }}); background-position: center; background-size:
+                cover">
+            <div class="content">
+                <div class="text">
+                    <h2>{{ $slide->title }}</h2>
+                    <br/>
+                    <p>
+                        {{ $slide->body }}
+                    </p>
 
+                    <p>
+                        <a target="_blank" href="{{ $slide->link }}">Learn more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
     <div id="social-media-column">
         <a href="https://www.facebook.com/ucsdcirclek"><div class="facebook-box"><i class="fa fa-2x fa-facebook"></i></div></a>
         <a href="http://ucsdcirclek.tumblr.com"><div class="tumblr-box"><i class="fa fa-2x fa-tumblr"></i></div></a>
@@ -46,6 +59,7 @@
                 </div>
             </div>
         @endunless
+    </div>
 
         <div id="week-view">
             <ul class="week">

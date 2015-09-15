@@ -19,6 +19,12 @@
             <ul>
                 <li><a href="{{ action('CerfsController@index') }}">See Pending CERFs</a></li>
             </ul>
+
+            <h3>Slides</h3>
+            <ul>
+                <li><a href="{{ action('SlidesController@index') }}">List Slides</a></li>
+                <li><a href="{{ action('SlidesController@create') }}">Create Slide</a></li>
+            </ul>
         </div>
 
         <div class="viewport">

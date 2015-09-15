@@ -37,7 +37,7 @@ class HomeController extends Controller
         $posts = Post::where('category_id', '!=', 5)->latest()->take(2)->get();
 
         // Get slides
-        $slides = Slide::all();
+        $slides = Slide::all()->sortBy('priority');
 
         return view('pages.home', compact('days', 'posts', 'slides'));
     }
