@@ -3,6 +3,8 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\SaveFeaturedEventRequest;
+use Cache;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateEventRequest;
 use App\Http\Requests\UpdateEventRequest;
@@ -15,6 +17,9 @@ use App\EventType;
 class EventsController extends Controller
 {
     // TODO Form fields for creating and updating events should have default values.
+
+    const FEATURED_EVENT_ID_KEY = 'featured-event:id';
+    const FEATURED_EVENT_SUMMARY_KEY = 'featured-event:summary';
 
     /**
      * Display a listing of the resource.
@@ -187,6 +192,24 @@ class EventsController extends Controller
         else {
             return redirect('back')->withErrors('Cannot delete event!');
         }
+    }
+
+    public function feature(Request $request, $slug)
+    {
+        $event = Event::findBySlug($slug);
+        return view('pages.admin.events.feature', compact('event'));
+    }
+
+    public function saveFeaturedEvent(SaveFeaturedEventRequest $request)
+    {
+        $event = $request->get('event');
+        $summary = $request->get('summary');
+
+        // Save settings
+        Cache::forever(self::FEATURED_EVENT_ID_KEY, $event);
+        Cache::forever(self::FEATURED_EVENT_SUMMARY_KEY, $summary);
+
+        return redirect('/');
     }
 
 }

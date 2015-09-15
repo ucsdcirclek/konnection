@@ -47,6 +47,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
     Route::get('events/{slug}/update', 'EventsController@edit');
     Route::post('events/{slug}/update', 'EventsController@update');
     Route::delete('events/{slug}', 'EventsController@delete');
+    Route::get('events/{slug}/feature', 'EventsController@feature');
+    Route::post('events/{slug}/feature', 'EventsController@saveFeaturedEvent');
 
     // Posts
     Route::get('posts/create', 'PostsController@create');
