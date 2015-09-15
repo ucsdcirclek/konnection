@@ -19,27 +19,29 @@
                 <div class="selection-table">
 
                     @foreach ($eventsWithoutCerfs as $event)
-                        <a href="{{ action('CerfsController@select', [$event->id]) }}">
-                            <div class="selection-cell green">
+                        @if ($event->start_time > $oldestAllowed && $event->end_time < $newestAllowed)
+                            <a href="{{ action('CerfsController@select', [$event->id]) }}">
+                                <div class="selection-cell green">
 
-                                <div class="avatar small">
+                                    <div class="avatar small">
 
-                                    @if (is_null($event->chair))
-                                        <img src="{{ $event->creator->avatar->url() }}">
-                                        <small>Event created by {{ $event->creator->first_name }}</small>
-                                    @else
-                                        <img src="{{ $event->chair->avatar->url() }}">
-                                        <small><strong>Event chair: </strong>{{ $event->chair->first_name }}</small>
-                                    @endif
+                                        @if (is_null($event->chair))
+                                            <img src="{{ $event->creator->avatar->url() }}">
+                                            <small>Event created by {{ $event->creator->first_name }}</small>
+                                        @else
+                                            <img src="{{ $event->chair->avatar->url() }}">
+                                            <small><strong>Event chair: </strong>{{ $event->chair->first_name }}</small>
+                                        @endif
 
+                                    </div>
+
+                                    <div class="cerf-description">
+                                        <p><strong>{{ $event->title }}</strong></p>
+                                        <p>{{ $event->end_time->setTimezone('America/Los_Angeles')->format('l, F j, Y') }}</p>
+                                    </div>
                                 </div>
-
-                                <div class="cerf-description">
-                                    <p><strong>{{ $event->title }}</strong></p>
-                                    <p>{{ $event->end_time->setTimezone('America/Los_Angeles')->format('l, F j, Y') }}</p>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        @endif
                     @endforeach
                 </div>
             </div>

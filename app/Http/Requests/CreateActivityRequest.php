@@ -25,7 +25,8 @@ class CreateActivityRequest extends Request
     public function rules()
     {
         $rules = [
-            'user_id' => 'required'
+            'user_id' => 'required',
+            'name' => 'required'
         ];
 
         $this->request->has('user_id') ? $attendees = $this->request->get('user_id') : $attendees = [];
@@ -43,6 +44,12 @@ class CreateActivityRequest extends Request
             $rules['user_id.' . $thisKey] = 'not_in:' . $otherAttendees;
         }
 
+        $this->request->has('name') ? $names = $this->request->get('name') : $names = [];
+
+        foreach($names as $index => $name) {
+            $rules['name.' . $index] = 'required';
+        }
+
         return $rules;
     }
 
@@ -56,6 +63,7 @@ class CreateActivityRequest extends Request
     public function formatErrors(Validator $validator)
     {
         $repeatedAttendee = false;
+        $emptyNames = false;
 
         $errors = $validator->errors()->all();
 
@@ -67,10 +75,16 @@ class CreateActivityRequest extends Request
                 unset($errors[$index]);
                 $repeatedAttendee = true;
             }
+
+            else if (fnmatch('The name.* field is required.', $error)) {
+                unset($errors[$index]);
+                $emptyNames = true;
+            }
         }
 
         // Pushes more descriptive error message onto array
         if ($repeatedAttendee) array_push($errors, 'The same attendee has been entered in the attendance list more than once.');
+        if ($emptyNames) array_push($errors, 'One of the names of the listed attendees has not been provided.');
 
         return $errors;
     }

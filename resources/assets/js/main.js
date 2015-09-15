@@ -378,12 +378,12 @@ $(document).ready(function () {
       '<tr>' +
         '<input name="user_id[]" type="hidden" value=null>' +
         '<td><input type="text" name="name[]"></td>' +
-        '<td><input type="number" name="service_hours[]"></td>' +
-        '<td><input type="number" name="planning_hours[]"></td>' +
-        '<td><input type="number" name="traveling_hours[]"></td>' +
-        '<td><input type="number" name="admin_hours[]"></td>' +
-        '<td><input type="number" name="social_hours[]"></td>' +
-        '<td><input type="number" name="mileage[]"></td>' +
+        '<td><input type="number" name="service_hours[]" value="0"></td>' +
+        '<td><input type="number" name="planning_hours[]" value="0"></td>' +
+        '<td><input type="number" name="traveling_hours[]" value="0"></td>' +
+        '<td><input type="number" name="admin_hours[]" value="0"></td>' +
+        '<td><input type="number" name="social_hours[]" value="0"></td>' +
+        '<td><input type="number" name="mileage[]" value="0"></td>' +
         '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
       '</tr>');
   });

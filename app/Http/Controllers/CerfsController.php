@@ -16,6 +16,7 @@ use App\EventCategory;
 use App\KiwanisAttendee;
 use App\User;
 use Auth;
+use Carbon\Carbon;
 use DB;
 
 class CerfsController extends Controller {
@@ -35,14 +36,16 @@ class CerfsController extends Controller {
      */
     public function overview()
     {
-        // TODO Only check events created after the CERFs system is implemented.
+        // Ensures only events created after implementation of online CERFs system are checked.
+        $oldestAllowed = Carbon::createFromDate(2015, 9, 1, 'UTC');
+        $newestAllowed = Carbon::now();
 
         // Finds IDs of all events that do not have an associated approved CERF.
         $eventIdsWithoutCerfs = Event::select('events.id')
-                                        ->leftJoin('cerfs', 'events.id', '=', 'cerfs.event_id')
-                                        ->whereNull('cerfs.id')
-                                        ->orWhere('cerfs.approved', false)
-                                        ->get();
+                                     ->leftJoin('cerfs', 'events.id', '=', 'cerfs.event_id')
+                                     ->whereNull('cerfs.id')
+                                     ->orWhere('cerfs.approved', false)
+                                     ->get();
 
         // TODO Paginate events that need to be CERFed.
 
@@ -51,7 +54,7 @@ class CerfsController extends Controller {
 
         $userCerfs = Cerf::where('reporter_id', Auth::id())->where('approved', false)->get();
 
-        return view('pages.cerfs.overview', compact('eventsWithoutCerfs', 'userCerfs'));
+        return view('pages.cerfs.overview', compact('eventsWithoutCerfs', 'userCerfs', 'oldestAllowed', 'newestAllowed'));
     }
 
     /**

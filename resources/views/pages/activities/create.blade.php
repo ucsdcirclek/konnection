@@ -36,7 +36,7 @@
                     @foreach($registrations as $registration)
                         <tr>
                             <input class="attendee-field" name="user_id[]" type="hidden" value="{{ $registration->user->id }}">
-                            <input name="name[]" type="hidden" value="{{ $registration->user->name }}">
+                            <input name="name[]" type="hidden" value="{{ $registration->user->first_name . ' ' . $registration->user->last_name }}">
 
                             {{-- <td><div class="avatar small"><img src="{{ $registration->user->avatar->url() }}"></div></td> --}}
                             <td>{{ $registration->user->first_name }} {{ $registration->user->last_name }}</td>
