@@ -4,7 +4,6 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-
     /**
      * Run the database seeds.
      *
@@ -16,12 +15,16 @@ class DatabaseSeeder extends Seeder
 
         $this->call('EntrustSeeder');
         $this->call('UsersTableSeeder');
-        $this->call('ActivityLogTableSeeder');
-        $this->call('EventTagsTableSeeder');
+        $this->call('CalendarEventTypesTableSeeder');
         $this->call('EventsTableSeeder');
         $this->call('EventRegistrationsTableSeeder');
+        $this->call('EventCategoriesTableSeeder');
+        $this->call('EventTagsTableSeeder');
         $this->call('PostCategoriesTableSeeder');
         $this->call('PostsTableSeeder');
+        //$this->call('CerfsTableSeeder');
+        //$this->call('ActivityLogTableSeeder');
+        //$this->call('KiwanisAttendeesTableSeeder');
     }
 
 }

@@ -9,11 +9,15 @@ input[type="submit"],
   vertical-align: middle;
   white-space: nowrap;
 
-  &.red {
-    background-color: $red;
+  &.emphasis {
+    background-color: $emphasis-color;
 
     &:hover {
-      background-color: darken($red, 5%);
+      background-color: darken($emphasis-color, 5%);
     }
+  }
+
+  &.danger {
+    background-color: $red;
   }
 }

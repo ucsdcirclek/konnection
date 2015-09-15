@@ -77,9 +77,19 @@ class EventsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($slug)
 	{
-		//
+        $event = Event::findBySlug($slug);
+        $chair_id = (int) \Request::get('chair_id');
+
+        if (\Auth::id() === $chair_id) {
+            $result = $event->update(array('chair_id' => $chair_id));
+        }
+
+        if ($result)
+            return response('Event chair updated!');
+        else
+            abort(409, 'There was an issue updating the registration.');
 	}
 
 	/**

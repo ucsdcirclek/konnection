@@ -10,9 +10,11 @@ use App\Http\Requests\UpdateEventRequest;
 use Carbon\Carbon;
 
 use App\Event;
+use App\EventType;
 
 class EventsController extends Controller
 {
+    // TODO Form fields for creating and updating events should have default values.
 
     /**
      * Display a listing of the resource.
@@ -21,7 +23,9 @@ class EventsController extends Controller
      */
     public function index()
     {
-        return view('pages.calendar');
+        $types = EventTYpe::all()->lists('name');
+
+        return view('pages.calendar', compact('types'));
     }
 
     /**
@@ -42,6 +46,10 @@ class EventsController extends Controller
     public function store(CreateEventRequest $req)
     {
         $input = $req->all();
+
+        // Makes sure chair_id enters database as an integer or null if left empty.
+        strcmp($input['chair_id'], "") == 0 ? $input['chair_id'] = null
+                                            : $input['chair_id'] = (int) $input['chair_id'];
 
         // Ensures database times are always in UTC.
         foreach ($input as $key => $value) {
@@ -85,6 +93,8 @@ class EventsController extends Controller
      */
     public function show($slug)
     {
+        // TODO Add a comments feed for each event.
+
         $event = Event::findBySlug($slug);
 
         // Check if exists
@@ -92,8 +102,8 @@ class EventsController extends Controller
             abort(404);
         }
 
-        $event->load('creator', 'registrations', 'guests');
-        
+        $event->load('creator', 'chair', 'registrations', 'guests');
+
         // Look for events in the upcoming week
         $range = [
             Carbon::now(),
@@ -171,7 +181,7 @@ class EventsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // TODO Add delete functionality to events.
     }
 
 }

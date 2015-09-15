@@ -2,7 +2,7 @@ ul.week {
   @include row(table);
 
   > li.featured {
-    background-color: $red;
+    background-color: $emphasis-color;
     color: white;
 
     h5 {
@@ -33,7 +33,6 @@ ul.week {
     @include span-columns(2 of 8);
     @include pad();
     background-color: white;
-    border-right: 1px dotted $light-gray;
 
     h5 {
       text-align: center;

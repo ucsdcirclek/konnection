@@ -21,13 +21,22 @@ class EventTag extends Model
      */
 
     /**
+     * A tag belongs to an event category.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category() {
+        return $this->belongsTo('App\EventCategory');
+    }
+
+    /**
      * Events belonging to tag
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function events()
     {
-        return $this->belongsToMany('App\Event', 'events_assigned_tags');
+        return $this->belongsToMany('App\Event', 'events_assigned_tags', 'tag_id', 'event_id');
     }
 
 

@@ -1,0 +1,12 @@
+@mixin sharp-gradient($color1, $color2) {
+  
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$color1+0,ddeae9+71,243e36+74,243e36+100 */
+  background: rgb(221,234,233); /* Old browsers */
+  background: -moz-linear-gradient(left,  $color1 0%, $color1 71%, $color2 74%, $color2 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color1), color-stop(71%,$color1), color-stop(74%,$color2), color-stop(100%,$color2)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  $color1 0%,$color1 71%,$color2 74%,$color2 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  $color1 0%,$color1 71%,$color2 74%,$color2 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  $color1 0%,$color1 71%,$color2 74%,$color2 100%); /* IE10+ */
+  background: linear-gradient(to right,  $color1 0%,$color1 71%,$color2 74%,$color2 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='#243e36',GradientType=1 ); /* IE6-9 */
+}

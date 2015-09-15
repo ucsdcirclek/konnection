@@ -85,7 +85,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      */
     public function events_created()
     {
-        return $this->hasMany('App\Event');
+        return $this->hasMany('App\Event', 'creator_id');
+    }
+
+    public function events_chaired()
+    {
+        return $this->hasMany('App\Event', 'chair_id');
     }
 
     /**
@@ -116,6 +121,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function posts()
     {
         return $this->hasMany('App\Post');
+    }
+
+    /**
+     * CERFs the user has created.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function cerfs()
+    {
+        return $this->hasMany('App\Cerf');
     }
 
 }

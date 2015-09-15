@@ -2,25 +2,35 @@
 
 use Illuminate\Database\Seeder;
 
-use Faker\Factory as Faker;
-
 use App\EventRegistration;
+use App\Event;
+use App\User;
 
 class EventRegistrationsTableSeeder extends Seeder
 {
 
     public function run()
     {
-        $faker = Faker::create();
-
         DB::table('event_registrations')->delete();
 
-        for ($i = 1; $i <= 10; $i++) {
+        $event_ids = Event::all()->lists('id')->toArray();
+        $user_ids = User::all()->lists('id')->toArray();
+
+        for ($counter = 0; $counter < 50; $counter++) {
+
+            $rand_event_id = $event_ids[array_rand($event_ids)];
+            $rand_user_id = $user_ids[array_rand($user_ids)];
+
+            if (EventRegistration::where('user_id', '=', $rand_user_id)
+                                 ->where('event_id', '=', $rand_event_id)
+                                 ->exists()) {
+                continue;
+            }
 
             EventRegistration::create(
                 array(
-                    'user_id' => $i,
-                    'event_id' => $i
+                    'user_id' => $rand_user_id,
+                    'event_id' => $rand_event_id
                 )
             );
         }

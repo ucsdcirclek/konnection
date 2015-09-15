@@ -1,14 +1,16 @@
 .centered-navigation {
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
-  $centered-navigation-background: $beige;
-  $centered-navigation-background-hover: $red;
-  $centered-navigation-color: $brown;
-  $centered-navigation-color-hover: $red;
+
+  $centered-navigation-background: $medium-green;         // Background color of navigation bar.
+  $centered-navigation-background-hover: $medium-green;   // Background color of dropdowns.
+  $centered-navigation-color: $white;                     // Color of navigation links.
+  $centered-navigation-color-hover: $light-gray;          // Color of of navigation links on hover.
+
   $centered-navigation-font-family: $script;
   $centered-navigation-height: 48px;
   $centered-navigation-item-padding: 1em;
-  $centered-navigation-submenu-color: $beige;
+  $centered-navigation-submenu-color: $red;        // TODO Figure out what the hell this is
   $centered-navigation-submenu-padding: 1em;
   $centered-navigation-submenu-width: em(144px);
   $centered-navigation-item-nudge: 2.2em;
@@ -231,14 +233,6 @@
           border-bottom-left-radius: $base-border-radius;
           border-bottom-right-radius: $base-border-radius;
         }
-
-        &:last-child:after {
-          position: relative;
-          top: -10px;
-          left: -13px;
-          width: em(144px);
-          content: url(/images/Ribbon.svg);
-        }
       }
 
       a {
@@ -249,7 +243,7 @@
         color: white;
 
         &:hover {
-          background-color: $beige;
+          background-color: $dark-green;
         }
 
         @include media($horizontal-bar-mode) {
@@ -259,39 +253,6 @@
           width: $centered-navigation-submenu-width;
         }
       }
-    }
-  }
-
-  //Side Images
-  #corner-left {
-    position:absolute;
-    display: none;
-    background:url("/images/ScrollSide.svg") no-repeat 0 0;
-    top:-9.5px;
-    left:-45px;
-    width:110px;
-    height:150px;
-    text-indent:-9999px;
-    z-index:999;
-
-    @include media($medium-screen) {
-      display: initial;
-    }
-  }
-
-  #corner-right {
-    position:absolute;
-    display: none;
-    background:url("/images/ScrollSideR.svg") no-repeat 0 0;
-    top: -9.5px;
-    right:-102px;
-    width:110px;
-    height:150px;
-    text-indent:-9999px;
-    z-index:-1;
-
-    @include media($medium-screen) {
-      display: initial;
     }
   }
 }

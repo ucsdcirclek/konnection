@@ -16,7 +16,6 @@ class Activity extends Model {
 
     protected $guarded = array('id');
 
-
     /**
      * Relationships
      */

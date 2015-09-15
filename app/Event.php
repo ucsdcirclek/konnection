@@ -109,7 +109,12 @@ class Event extends Model implements SluggableInterface
      */
     public function tags()
     {
-        return $this->belongsToMany('App\Tag', 'events_assigned_tags');
+        /*
+         * In order to avoid duplicate tags listed when there are multiple
+         * CERFs pending approval for an event, tags relation only returns the
+         * tags listed in an approved CERF.
+         */
+        return $this->belongsToMany('App\EventTag', 'events_assigned_tags', 'event_id', 'tag_id');
     }
 
     /**
@@ -120,6 +125,24 @@ class Event extends Model implements SluggableInterface
     public function creator()
     {
         return $this->belongsTo('App\User', 'creator_id');
+    }
+
+    /**
+     * Chair of the event.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function chair() {
+        return $this->belongsTo('App\User', 'chair_id');
+    }
+
+    /**
+     * CERF associated with this event.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function cerfs() {
+        return $this->hasMany('App\Cerf');
     }
 
     /**
@@ -174,4 +197,5 @@ class Event extends Model implements SluggableInterface
         $this->attributes['close_time'] = Carbon::parse($value);
     }
 
+    // TODO Consider adding get mutators for event times.
 }

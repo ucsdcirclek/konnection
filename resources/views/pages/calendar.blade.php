@@ -7,5 +7,19 @@
 @endsection
 
 @section('content')
+
+    @include('layouts.header', array('headerTitle' => 'Calendar'))
+
+    <div id="legend">
+        <div class="types-table">
+
+            @foreach($types as $name)
+                <div>
+                    <strong>{{ $name }}</strong>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
     <div class="calendar"></div>
 @endsection

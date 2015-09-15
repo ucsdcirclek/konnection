@@ -41,15 +41,15 @@
     @include omega;
     border-left: 1px solid $light-gray;
     padding: 1em;
-    background-color: $cream;
+    background-color: $lightest-gray;
     min-height: 80vh;
   }
 
   a {
-    color: $red;
+    color: $emphasis-color;
   }
 
   a:hover {
-    color: lighten($red, 10%);
+    color: lighten($emphasis-color, 10%);
   }
 }
