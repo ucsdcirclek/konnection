@@ -176,12 +176,17 @@ class EventsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param $slug
      * @return Response
      */
-    public function destroy($id)
+    public function delete($slug)
     {
-        // TODO Add delete functionality to events.
+        if (Event::findBySlugOrFail($slug)->delete()) {
+            return redirect()->action('EventsController@index');
+        }
+        else {
+            return redirect('back')->withErrors('Cannot delete event!');
+        }
     }
 
 }
