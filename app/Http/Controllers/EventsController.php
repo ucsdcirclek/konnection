@@ -205,6 +205,8 @@ class EventsController extends Controller
         $event = $request->get('event');
         $summary = $request->get('summary');
 
+        $summary = substr(strip_tags($summary), 0, 160) . '...';
+
         // Save settings
         Cache::forever(self::FEATURED_EVENT_ID_KEY, $event);
         Cache::forever(self::FEATURED_EVENT_SUMMARY_KEY, $summary);
