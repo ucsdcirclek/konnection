@@ -7,12 +7,28 @@
 @endsection
 
 @section('content')
-
     <div class="slider">
-
         <div class="empty-content">
             <a href="https://www.facebook.com/events/770936166385069/"><img src="/images/slider/fallrush.jpg"></a>
         </div>
+        @foreach($slides as $slide)
+        <div style="background: url({{ asset($slide->image->url()) }}); background-position: center; background-size:
+                cover">
+            <div class="content">
+                <div class="text">
+                    <h2>{{ $slide->title }}</h2>
+                    <br/>
+                    <p>
+                        {{ $slide->body }}
+                    </p>
+
+                    <p>
+                        <a target="_blank" href="{{ $slide->link }}">Learn more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        @endforeach
     </div>
 
     <div id="social-media-column">
@@ -49,37 +65,42 @@
 
         <div id="week-view">
             <ul class="week">
+
                 <li class="featured">
                     <h5>Featured</h5>
 
-                    <p class="title">Triton 5K</p>
+                    <p class="title">{{ $featured->event->title }}</p>
 
-                    <p class="date">June 6</p>
+                    <p class="date">{{ $featured->event->start_time->format('F j') }}</p>
 
                     <p class="info">
-                      Help out at the annual Triton 5K! The Triton 5K is a 3.1-mile race around campus, ending at the Track and
-                      Field stadium where there will be a festival with food vendors, live entertainment, and the annual Junior
-                      Triton Run.
+                      {{ $featured->summary }}
                     </p>
                 </li>
-                @foreach ($days as $day => $events)
+                @foreach ($upcoming as $day => $events)
                     <li>
                         <h5>{{$day}}</h5>
                         <ul>
-                            @foreach ($events as $event)
-                                <li>
-                                    <p class="title">
-                                        <a href="{{ action('EventsController@show', $event->slug) }}">
-                                            {{ $event->title }}
-                                        </a>
-                                    </p>
+                            @if ($events)
+                                @foreach ($events as $event)
+                                    <li>
+                                        <p class="title">
+                                            <a href="{{ action('EventsController@show', $event->slug) }}">
+                                                {{ $event->title }}
+                                            </a>
+                                        </p>
 
-                                    <p class="date">
-                                        {{ $event->start_time->setTimezone('America/Los_Angeles')->format('g:iA \\t\\o ')}}
-                                        {{ $event->end_time->setTimezone('America/Los_Angeles')->format('g:iA') }}
-                                    </p>
+                                        <p class="date">
+                                            {{ $event->start_time->setTimezone('America/Los_Angeles')->format('g:iA \\t\\o ')}}
+                                            {{ $event->end_time->setTimezone('America/Los_Angeles')->format('g:iA') }}
+                                        </p>
+                                    </li>
+                                @endforeach
+                            @else
+                                <li>
+                                    <p class="title">No events!</p>
                                 </li>
-                            @endforeach
+                            @endif
                         </ul>
                     </li>
                 @endforeach

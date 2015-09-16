@@ -164,6 +164,13 @@
                             <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
                                 Edit Event
                             </a>
+                            <a class="button" href="{{ action('EventsController@feature', $event->slug) }}">
+                                Feature Event
+                            </a>
+                            {!! Form::open(['action' => ['EventsController@delete', $event->slug], 'method' =>
+                            'delete']) !!}
+                            {{ Form::submit('Delete Event') }}
+                            {!! Form::close() !!}
                         </div>
                 @endif
 

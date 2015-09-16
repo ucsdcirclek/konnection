@@ -46,10 +46,19 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
     Route::post('events/create', 'EventsController@store');
     Route::get('events/{slug}/update', 'EventsController@edit');
     Route::post('events/{slug}/update', 'EventsController@update');
+    Route::delete('events/{slug}', 'EventsController@delete');
+    Route::get('events/{slug}/feature', 'EventsController@feature');
+    Route::post('events/{slug}/feature', 'EventsController@saveFeaturedEvent');
 
     // Posts
     Route::get('posts/create', 'PostsController@create');
     Route::post('posts/create', 'PostsController@store');
+
+    // Slides
+    Route::get('slides', 'SlidesController@index');
+    Route::get('slides/create', 'SlidesController@create');
+    Route::post('slides/create', 'SlidesController@store');
+    Route::delete('slides/{id}', 'SlidesController@delete');
 });
 
 /**
