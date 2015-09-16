@@ -169,7 +169,7 @@
                             </a>
                             {!! Form::open(['action' => ['EventsController@delete', $event->slug], 'method' =>
                             'delete']) !!}
-                            {{ Form::submit('Delete Event') }}
+                            {!! Form::submit('Delete Event') !!}
                             {!! Form::close() !!}
                         </div>
                 @endif
