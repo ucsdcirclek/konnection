@@ -205,7 +205,12 @@ class EventsController extends Controller
         $event = $request->get('event');
         $summary = $request->get('summary');
 
-        $summary = substr(strip_tags($summary), 0, 160) . '...';
+        $summary = strip_tags($summary);
+
+        // Cut off if larger than 160
+        if (strlen($summary) > 160) {
+            $summary = substr($summary, 0, 160) . '...';
+        }
 
         // Save settings
         Cache::forever(self::FEATURED_EVENT_ID_KEY, $event);
