@@ -12,6 +12,14 @@ ul.week {
 
     .title {
       font-size: 1em;
+
+      a {
+        color: white;
+
+        &:hover {
+          color: darken(white, 20%);
+        }
+      }
     }
 
     .info {

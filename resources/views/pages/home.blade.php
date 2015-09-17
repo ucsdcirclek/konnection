@@ -69,7 +69,11 @@
                 <li class="featured">
                     <h5>Featured</h5>
 
-                    <p class="title">{{ $featured->event->title }}</p>
+                    <p class="title">
+                        <a href="{{ action('EventsController@show', $featured->event->slug) }}">
+                            {{ $featured->event->title }}
+                        </a>
+                    </p>
 
                     <p class="date">{{ $featured->event->start_time->format('F j') }}</p>
 
