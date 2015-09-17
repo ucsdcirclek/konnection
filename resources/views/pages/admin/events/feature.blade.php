@@ -16,8 +16,8 @@
         <label for="event-title">Event Title</label>
         {!! Form::text('event-title', $event->title, ['disabled']) !!}
 
-        <label for="summary">Summary</label>
-        {!! Form::textarea('summary', null, array('class'=>'editor')) !!}
+        <label for="summary">Summary <small>160 characters max</small></label>
+        {!! Form::textarea('summary', null, array('id'=> 'featuredEventEditor')) !!}
 
         <br/>
         <br/>

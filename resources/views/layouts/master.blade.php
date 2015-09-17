@@ -53,7 +53,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/1.2.7/js/froala_editor.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/1.2.8/js/froala_editor.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/1.2.8/js/plugins/char_counter.min.js"></script>
 <script src="{{ elixir('js/main.js') }}"></script>
 <script src="{{ asset('js/vendor/jquery.datetimepicker.js') }}"></script>
 <script src="{{ asset('js/vendor/popup.min.js') }}"></script>

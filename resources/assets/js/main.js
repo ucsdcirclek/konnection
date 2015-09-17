@@ -454,6 +454,7 @@ $(document).ready(function () {
   //region Miscellaneous
 
   $('.editor').editable({inlineMode: false});
+  $('#featuredEventEditor').editable({maxCharacters: 160, inlineMode: false});
 
   //endregion
 
