@@ -60,6 +60,13 @@ class EventRegistrationsController extends Controller
             $input = \Request::all();
             $input['user_id'] = \Auth::id();
             $input['event_id'] = $event->id;
+
+            if (EventRegistration::where('user_id', $input['user_id'])
+                ->where('event_id', $input['event_id'])
+                ->first()) {
+                abort(422, 'User is already registered for this event!');
+            };
+
             $reg = EventRegistration::create($input);
         }
 

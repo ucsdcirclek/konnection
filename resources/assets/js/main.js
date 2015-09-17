@@ -114,30 +114,45 @@ $(document).ready(function () {
     var path = window.location.pathname;
     return path.substr(path.lastIndexOf("/") + 1);
   }
-
-  // TODO Add success/failure callbacks to button AJAX calls
-
+  
   $('#register-btn').click(function(event) {
-    // Register user
-    $.post('/api/events/'+findSlug()+'/registrations/create');
-
-    // Change button
     var self = $(this);
-    self.attr('id','unregister-btn');
-    self.html('<i class="fa fa-close"></i> Signup');
+    self.html('<i class="fa fa-circle-o-notch fa-spin"></i> Signup');
+
+    // Register user
+    $.ajax({
+      type: 'POST',
+      url: '/api/events/'+findSlug()+'/registrations/create',
+      success: function() {
+        // Change button
+        self.attr('id','unregister-btn');
+        self.html('<i class="fa fa-close"></i> Signup');
+      },
+      error: function() {
+        self.html('<i class="fa fa-check"></i> Signup');
+        alert('An error occurred and we were unable to sign you up for the event!');
+      }
+    });
   });
 
   $('#unregister-btn').click(function(event) {
+    var self = $(this);
+    self.html('<i class="fa fa-circle-o-notch fa-spin"></i> Signup');
+
     // Unregister user
     $.ajax({
       url: '/api/events/'+findSlug()+'/registrations/self',
-      type: 'DELETE'
+      type: 'DELETE',
+      success: function() {
+        // Change button
+        self.attr('id','register-btn');
+        self.html('<i class="fa fa-check"></i> Signup');
+      },
+      error: function() {
+        self.html('<i class="fa fa-close"></i> Signup');
+        alert('An error occurred and we were unable to remove your signup for the event!');
+      }
     });
-
-    // Change button
-    var self = $(this);
-    self.attr('id','register-btn');
-    self.html('<i class="fa fa-check"></i> Signup');
   });
 
   $('#registerGuest').submit(function(event) {
