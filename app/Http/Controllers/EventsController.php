@@ -219,4 +219,18 @@ class EventsController extends Controller
         return redirect('/');
     }
 
+    public function registrations($slug)
+    {
+        $event = Event::findBySlug($slug);
+
+        // Check if exists
+        if (!$event) {
+            abort(404);
+        }
+
+        $registrations = $event->allRegistrations();
+
+        return view('pages.admin.events.registrations', compact('event', 'registrations'));
+    }
+
 }

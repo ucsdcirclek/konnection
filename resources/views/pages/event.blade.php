@@ -164,6 +164,9 @@
                             <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
                                 Edit Event
                             </a>
+                            <a class="button" href="{{ action('EventsController@registrations', $event->slug) }}">
+                                View Registrations
+                            </a>
                             <a class="button" href="{{ action('EventsController@feature', $event->slug) }}">
                                 Feature Event
                             </a>

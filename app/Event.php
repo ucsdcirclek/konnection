@@ -146,6 +146,40 @@ class Event extends Model implements SluggableInterface
     }
 
     /**
+     * Returns all registrations as a single uniform collection, sorted by registration date.
+     *
+     * @return \Illuminate\Support\Collection
+     */
+    public function allRegistrations() {
+        $registrations = $this->registrations()->getResults();
+
+        $guests = $this->guests()->getResults();
+
+        $results = [];
+
+        foreach ($registrations as $registration) {
+            $results[] = [
+                'name' => $registration->user->first_name . ' ' . $registration->user->last_name,
+                'avatar' => $registration->user->avatar->url(),
+                'phone' => $registration->user->phone,
+                'created_at' => $registration->created_at
+            ];
+        }
+
+        foreach ($guests as $guest) {
+            $results[] = [
+                'name' => $guest->first_name . ' ' . $guest->last_name,
+                'phone' => $guest->phone,
+                'created_at' => $guest->created_at
+            ];
+        }
+
+        $results = collect($results)->sortBy('created_at');
+
+        return $results;
+    }
+
+    /**
      * Sets title of event
      * @param $title
      */
