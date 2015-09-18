@@ -43,8 +43,8 @@ class HomeController extends Controller
         $events = Event::whereBetween(
             'start_time',
             [
-                Carbon::now('America/Los_Angeles'),
-                Carbon::now('America/Los_Angeles')->addDays(2)->endOfDay()
+                Carbon::now('America/Los_Angeles')->setTimezone('UTC'),
+                Carbon::now('America/Los_Angeles')->addDays(2)->endOfDay()->setTimezone('UTC')
             ]
         )
             ->get()
