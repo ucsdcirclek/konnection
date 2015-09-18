@@ -17,7 +17,7 @@
                 </ul>
                 <br/>
             @endforeach
-            <button>Back to Calendar</button>
+            <a href="{{ action('EventsController@index') }}">Back to Calendar</a>
         </div>
 
 
