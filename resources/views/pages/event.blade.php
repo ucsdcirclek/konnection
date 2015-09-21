@@ -105,6 +105,17 @@
 
                                 <div class="avatar-wrapper">
                                     <img src="{{ $registration->user->avatar->url() }}">
+
+                                    {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
+                                    <div class="overlay">
+                                        @if ($registration->driver_status)
+                                            <i class="fa fa-car"></i>
+                                        @elseif ($registration->writer_status)
+                                            <i class="fa fa-pencil"></i>
+                                        @elseif ($registration->photographer_status)
+                                            <i class="fa fa-camera"></i>
+                                        @endif
+                                    </div>
                                 </div>
 
 
