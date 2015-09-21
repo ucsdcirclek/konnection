@@ -190,7 +190,23 @@ $(document).ready(function () {
   }
 
   $('#chair-event-btn').click(function(event) {
+    event.preventDefault();
+
+    $(this).hide();
+    $('.confirm').show();
+  })
+
+  $('#reject-chair').click(function(event) {
+    event.preventDefault();
+
+    $('#chair-event-btn').show();
+    $('.confirm').hide();
+  })
+
+  $('#confirm-chair').click(function(event) {
     console.log('chair event button clicked!');
+
+    $('.confirm').hide();
 
     var urlField = $('.chair.avatar').find('img');
     var nameField = $('.chair.avatar').find('.name');
@@ -210,6 +226,8 @@ $(document).ready(function () {
       .fail(function() {
         alert(genericFailMessage);
       });
+
+    $('#chair-event-btn').show();
   });
 
   $('#drive-btn').click(function(event) {
