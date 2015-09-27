@@ -40,6 +40,10 @@ class Activity extends Model {
         return $this->belongsTo('App\User');
     }
 
+    public function cerf()
+    {
+        return $this->belongsTo('App\Cerf');
+    }
 
     /**
      * Mutators
