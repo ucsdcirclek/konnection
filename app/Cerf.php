@@ -25,6 +25,11 @@ class Cerf extends Model
         return $this->hasMany('App\KiwanisAttendee');
     }
 
+    public function activityLogs()
+    {
+        return $this->hasMany('App\Activity');
+    }
+
     /**
      * A CERF has one associated event.
      *

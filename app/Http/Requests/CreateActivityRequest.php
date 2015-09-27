@@ -29,17 +29,25 @@ class CreateActivityRequest extends Request
             'name' => 'required'
         ];
 
+        // Reverts to empty array if user_id array in request does not exist
         $this->request->has('user_id') ? $attendees = $this->request->get('user_id') : $attendees = [];
 
+        // Iterates through array of user IDs
         foreach($attendees as $thisKey => $attendee) {
             $otherAttendees = '';
 
-            foreach($attendees as $otherKey => $otherAttendee) {
-                if ($thisKey === $otherKey || is_null($attendees[$thisKey]) || is_null($attendees[$otherKey]))
-                    continue;
+            if ($attendees[$thisKey] === "null") continue;
 
-                $otherAttendees = $otherAttendees . $otherAttendee . ',';
+            /*
+             * For each user ID in the original user ID array, this loop
+             * iterates through all other user IDs to make sure that each user
+             * ID is unique in the member attendance list.
+             */
+            foreach($attendees as $otherKey => $otherAttendee) {
+                if ($thisKey !== $otherKey && $attendees[$otherKey] !== "null")
+                    $otherAttendees = $otherAttendees . $otherAttendee . ',';
             }
+
             $otherAttendees = rtrim($otherAttendees, ',');
             $rules['user_id.' . $thisKey] = 'not_in:' . $otherAttendees;
         }
