@@ -12,14 +12,15 @@
 
         <h2>Step 1: Complete the Membership Form</h2>
         <p>We'll need some basic information about you as well as some interesting points about you to sort you into one
-            of the three families this year. Just download the form, fill it out and turn it in!</p>
-        <a class="button" target="_blank" href="/api/uploads/Membership%20Form%202014-2015.pdf">Download the Form</a>
+            of the three families this year. Just fill out this form and submit it!</p>
+
+            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/c2eEtB">Membership Application</a>
 
         <br />
 
         <h2>Step 2: Submit your Dues</h2>
         <p>Membership for the year costs only $40.
-            <strong>Turn this amount in check/cash along with your membership form.</strong>
+            <strong>Turn this amount in check (payable to UCSD Circle K)/cash/Venmo (UCSDCircleK).</strong>
             Some of the benefits you'll receive are:</p>
         <ul>
             <li>A free club t-shirt</li>
