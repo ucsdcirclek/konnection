@@ -110,4 +110,15 @@ button {
     margin-bottom: .5em;
   }
 
+  .confirm {
+    display: none;
+  }
+
+  .confirmation {
+    background-color: $light-green;
+  }
+
+  .rejection {
+    background-color: $red;
+  }
 }

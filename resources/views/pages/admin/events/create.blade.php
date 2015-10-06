@@ -6,6 +6,8 @@
 
 @section('admin-content')
     <div id="event-create" class="wrapper">
+        @include ('errors.errors');
+
         <h2>Create an Event</h2>
         <br/>
 

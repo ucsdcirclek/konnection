@@ -24,8 +24,10 @@ class CreateEventRequest extends Request {
 		return [
             'start_time' => 'required|date',
             'end_time' => 'required|date',
+            'start_time' => 'before:end_time',
             'open_time' => 'date',
             'close_time' => 'date',
+            'open_time' => 'before:close_time'
 		];
 	}
 

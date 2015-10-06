@@ -114,7 +114,7 @@ $(document).ready(function () {
     var path = window.location.pathname;
     return path.substr(path.lastIndexOf("/") + 1);
   }
-  
+
   $('#register-btn').click(function(event) {
     var self = $(this);
     self.html('<i class="fa fa-circle-o-notch fa-spin"></i> Signup');
@@ -124,6 +124,8 @@ $(document).ready(function () {
       type: 'POST',
       url: '/api/events/'+findSlug()+'/registrations/create',
       success: function() {
+        location.reload();
+
         // Change button
         self.attr('id','unregister-btn');
         self.html('<i class="fa fa-close"></i> Signup');
@@ -144,6 +146,8 @@ $(document).ready(function () {
       url: '/api/events/'+findSlug()+'/registrations/self',
       type: 'DELETE',
       success: function() {
+        location.reload();
+
         // Change button
         self.attr('id','register-btn');
         self.html('<i class="fa fa-check"></i> Signup');
@@ -173,8 +177,6 @@ $(document).ready(function () {
 
   window.updateChair = function(id) {
 
-    console.log('slug is: ' + findSlug() + ' and id is: ' + id);
-
     $.ajax({
       url: '/api/events/' + findSlug(),
       type: 'PATCH',
@@ -184,14 +186,27 @@ $(document).ready(function () {
     })
       .fail(function() {
         alert(genericFailMessage);
-      })
-      .done(function(data) {
-        console.log('chair updated!');
       });
   }
 
   $('#chair-event-btn').click(function(event) {
-    console.log('chair event button clicked');
+    event.preventDefault();
+
+    $(this).hide();
+    $('.confirm').show();
+  })
+
+  $('#reject-chair').click(function(event) {
+    event.preventDefault();
+
+    $('#chair-event-btn').show();
+    $('.confirm').hide();
+  })
+
+  $('#confirm-chair').click(function(event) {
+    console.log('chair event button clicked!');
+
+    $('.confirm').hide();
 
     var urlField = $('.chair.avatar').find('img');
     var nameField = $('.chair.avatar').find('.name');
@@ -211,9 +226,12 @@ $(document).ready(function () {
       .fail(function() {
         alert(genericFailMessage);
       });
+
+    $('#chair-event-btn').show();
   });
 
   $('#drive-btn').click(function(event) {
+    $(this).html('<i class="fa fa-circle-o-notch fa-spin"></i>');
 
     // Register user
     $.ajax({
@@ -222,6 +240,10 @@ $(document).ready(function () {
       data: {
         driver_status: 1
       }
+    }).done(function() {
+      location.reload();
+    }).fail(function() {
+      alert(genericFailMessage);
     });
 
     // Change button
@@ -230,6 +252,8 @@ $(document).ready(function () {
   });
 
   $('#photograph-btn').click(function(event) {
+    $(this).html('<i class="fa fa-circle-o-notch fa-spin"></i>');
+
     // Register user
     $.ajax({
       url: '/api/events/'+findSlug()+'/registrations/self',
@@ -237,6 +261,10 @@ $(document).ready(function () {
       data: {
         photographer_status: 1
       }
+    }).done(function() {
+      location.reload();
+    }).fail(function() {
+      alert(genericFailMessage);
     });
 
     // Change button
@@ -245,6 +273,8 @@ $(document).ready(function () {
   });
 
   $('#write-btn').click(function(event) {
+    $(this).html('<i class="fa fa-circle-o-notch fa-spin"></i>');
+
     // Register user
     $.ajax({
       url: '/api/events/'+findSlug()+'/registrations/self',
@@ -252,6 +282,10 @@ $(document).ready(function () {
       data: {
         writer_status: 1
       }
+    }).done(function() {
+      location.reload();
+    }).fail(function() {
+      alert(genericFailMessage);
     });
 
     // Change button
@@ -363,9 +397,6 @@ $(document).ready(function () {
    */
   window.addAttendeeRow = function(id, name) {
 
-
-    console.log('adding attendee row');
-
     $('#member-attendance-section').find('table tr:last').after('' +
       '<tr>' +
         '<input class="attendee-field" name="user_id[]" type="hidden" value=' + id + '>' +
@@ -384,8 +415,6 @@ $(document).ready(function () {
   // Adds new row for attendee with empty form fields.
   $('.search-popup').on('click', '#not-listed', function(event) {
     event.preventDefault();
-
-    console.log('insert empty form values');
 
     $.magnificPopup.close();
 
@@ -418,13 +447,11 @@ $(document).ready(function () {
 
     // For adding attendees to member attendance table
     if ($('#search-results').hasClass('attendee-select')) {
-      console.log('add new row to member attendance table')
       window.addAttendeeRow(id, name);
     }
 
     // For selecting event chair
     else if ($('#search-results').hasClass('chair-select')) {
-      console.log('change chair selection');
       window.setChair(id, url, name);
     }
 
@@ -436,22 +463,18 @@ $(document).ready(function () {
   //region CERF form functions
 
   $('#attendance-table').on('click', '.remove-registration-button > div', function(event) {
-    console.log('anchored click event to handle');
     $(this).parents().eq(2).remove();
 
     event.preventDefault();
   });
 
   $('#kiwanis-attendance-section').on('click', '.remove-kiwanis-attendee-button > div', function(event) {
-    console.log('remove kiwanis attendee');
     $(this).parents().eq(2).remove();
 
     event.preventDefault();
   });
 
   $('#kiwanis-attendance-section').on('click', '.add-kiwanis-attendee-button > div', function(event) {
-    console.log('add kiwanis attendee');
-
     var lastRow = $('#kiwanis-attendance-section').find('table tr:last');
 
     lastRow.after('' +
