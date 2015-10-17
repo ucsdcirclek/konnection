@@ -26,7 +26,7 @@ class EventsController extends Controller {
         // Add "To" date to query
         $range[] = Carbon::parse($request->input('end'))->toDateTimeString();
 
-        return Event::whereBetween('start_time', $range)->get();
+        return Event::whereBetween('start_time', $range)->where('hidden', false)->get();
     }
 
 	/**

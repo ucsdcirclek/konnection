@@ -56,8 +56,19 @@ class CreateActivityRequest extends Request
 
         foreach($names as $index => $name) {
             $rules['name.' . $index] = 'required';
+
+            $rules['service_hours.' . $index] = 'numeric|min:0';
+            $rules['planning_hours.' . $index] = 'numeric|min:0';
+            $rules['traveling_hours.' . $index] = 'numeric|min:0';
+            $rules['admin_hours.' . $index] = 'numeric|min:0';
+            $rules['social_hours.' . $index] = 'numeric|min:0';
+            $rules['mileage.' . $index] = 'numeric|min:0';
         }
 
+        /*
+         * All arrays of hours are of the same length, so can iterate through
+         * all in a single loop.
+         */
         return $rules;
     }
 
