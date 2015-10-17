@@ -14,6 +14,8 @@
 
                 <div class="section-sidebar">
                     <p><strong>Pick an event!</strong> The events to the right are events that do not have a CERF filled out yet.</p>
+                    <br/>
+                    <a href="{{ action('CerfsController@select') }}">CERFing an event not on the calendar?</a>
                 </div>
 
                 <div class="selection-table">

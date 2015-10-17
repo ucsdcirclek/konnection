@@ -24,7 +24,7 @@ class CreateCerfRequest extends Request {
 	public function rules()
 	{
 		return [
-            'chair_id' => 'required'
+            'chair_id' => 'required',
 		];
 	}
 
