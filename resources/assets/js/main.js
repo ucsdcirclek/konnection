@@ -402,12 +402,12 @@ $(document).ready(function () {
         '<input class="attendee-field" name="user_id[]" type="hidden" value=' + id + '>' +
         '<input  name="name[]" type="hidden" value=' + name + '>' +
         '<td>' + name + '</td>' +
-        '<td><input name="service_hours[]" type="number" value="0"></td>' +
-        '<td><input name="planning_hours[]" type="number" value="0"></td>' +
-        '<td><input name="traveling_hours[]" type="number" value="0"></td>' +
-        '<td><input name="admin_hours[]" type="number" value="0"></td>' +
-        '<td><input name="social_hours[]" type="number" value="0"></td>' +
-        '<td><input name="mileage[]" type="number" value="0"></td>' +
+        '<td><input name="service_hours[]" type="number" value="0" step="0.25" min="0"></td>' +
+        '<td><input name="planning_hours[]" type="number" value="0" step="0.25" min="0"></td>' +
+        '<td><input name="traveling_hours[]" type="number" value="0" step="0.25" min="0"></td>' +
+        '<td><input name="admin_hours[]" type="number" value="0" step="0.25" min="0"></td>' +
+        '<td><input name="social_hours[]" type="number" value="0" step="0.25" min="0"></td>' +
+        '<td><input name="mileage[]" type="number" value="0" step="0.25" min="0"></td>' +
         '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
       '</tr>');
   }
@@ -422,12 +422,12 @@ $(document).ready(function () {
       '<tr>' +
         '<input name="user_id[]" type="hidden" value=null>' +
         '<td><input type="text" name="name[]"></td>' +
-        '<td><input type="number" name="service_hours[]" value="0"></td>' +
-        '<td><input type="number" name="planning_hours[]" value="0"></td>' +
-        '<td><input type="number" name="traveling_hours[]" value="0"></td>' +
-        '<td><input type="number" name="admin_hours[]" value="0"></td>' +
-        '<td><input type="number" name="social_hours[]" value="0"></td>' +
-        '<td><input type="number" name="mileage[]" value="0"></td>' +
+        '<td><input type="number" name="service_hours[]" value="0" step="0.25" min="0"></td>' +
+        '<td><input type="number" name="planning_hours[]" value="0" step="0.25" min="0"></td>' +
+        '<td><input type="number" name="traveling_hours[]" value="0" step="0.25" min="0"></td>' +
+        '<td><input type="number" name="admin_hours[]" value="0" step="0.25" min="0"></td>' +
+        '<td><input type="number" name="social_hours[]" value="0" step="0.25" min="0"></td>' +
+        '<td><input type="number" name="mileage[]" value="0" step="0.25" min="0"></td>' +
         '<td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>' +
       '</tr>');
   });

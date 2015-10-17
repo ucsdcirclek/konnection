@@ -41,12 +41,12 @@
                             {{-- <td><div class="avatar small"><img src="{{ $registration->user->avatar->url() }}"></div></td> --}}
                             <td>{{ $registration->user->first_name }} {{ $registration->user->last_name }}</td>
 
-                            <td><input name="service_hours[]" type="number" value="0"></td>
-                            <td><input name="planning_hours[]" type="number" value="0"></td>
-                            <td><input name="traveling_hours[]" type="number" value="0"></td>
-                            <td><input name="admin_hours[]" type="number" value="0"></td>
-                            <td><input name="social_hours[]" type="number" value="0"></td>
-                            <td><input name="mileage[]" type="number" value="0"></td>
+                            <td><input name="service_hours[]" type="number" value="0" step="0.25" min="0"></td>
+                            <td><input name="planning_hours[]" type="number" value="0" step="0.25" min="0"></td>
+                            <td><input name="traveling_hours[]" type="number" value="0" step="0.25" min="0"></td>
+                            <td><input name="admin_hours[]" type="number" value="0" step="0.25" min="0"></td>
+                            <td><input name="social_hours[]" type="number" value="0" step="0.25" min="0"></td>
+                            <td><input name="mileage[]" type="number" value="0" step="0.25" min="0"></td>
 
                             <td><a href="#" class="remove-registration-button"><div class="button emphasis"><i class="fa fa-times"></i></div></a></td>
                         </tr>
