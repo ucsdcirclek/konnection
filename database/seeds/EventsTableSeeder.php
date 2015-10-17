@@ -23,7 +23,7 @@ class EventsTableSeeder extends Seeder
         for ($i = 0; $i < 35; $i++) {
             $rand_user_id = $user_ids[array_rand($user_ids)];
 
-            $start_time = Carbon::instance($faker->dateTimeBetween('now', '20 days'));
+            $start_time = Carbon::instance($faker->dateTimeBetween('5 days ago', '20 days'));
             $end_time = Carbon::instance($start_time)->addHours(3);
             $close_time = $end_time;
             $open_time = Carbon::now();

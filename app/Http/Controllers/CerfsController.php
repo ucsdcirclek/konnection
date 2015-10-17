@@ -96,14 +96,24 @@ class CerfsController extends Controller {
 	{
         // Gets ID of event put into session by @select.
         $event = Event::find(Session::get('event_id'));
+        session()->forget('hidden');
 
         // View renders blank chair profile if chair cannot be found.
         $chair = null;
 
+        // Event ID to be CERFed is typically flashed to the session. If this
+        // value does not exist, then the user intends to create a CERF for an
+        // event that does not yet exist.
+        if (!$event) {
+
+            // Creates an event not on the calendar that has a CERF.
+            session()->put('hidden', 'true');
+            return view('pages.cerfs.create', compact('chair'));
+        }
+
         // Finds chair of event.
         if (!is_null($event->chair_id)) {
             $chair = User::find($event->chair_id);
-
         }
 
         return view('pages.cerfs.create', compact('event', 'chair'));
@@ -120,12 +130,53 @@ class CerfsController extends Controller {
 	{
         $input = $request->all();
 
-        /*
-         * Finds event for current CERF and updates chair according to CERF
-         * form.
-         */
-        $event = Event::find($input['event_id']);
-        $event->update(array('chair_id' => $input['chair_id']));
+        $event = null;
+
+        if (session()->has('hidden'))
+        {
+            // Extra validation for when events are created via CERF form.
+            $this->validate($request, [
+                'start_time' => 'required|date|before:end_time',
+                'end_time' => 'required|date'
+            ]);
+
+            /*
+             * Creates event with minimal fields since an event made via the
+             * CERF form should only be recorded for MRFs, and not placed on
+             * the calendar.
+             */
+            $event = Event::create(array(
+                'chair_id' => $input['chair_id'],
+                'creator_id' => Auth::check(),
+                'title' => $input['title'],
+                'description' => 'Event that is not on the calendar. Recorded for administrative purposes.',
+                'event_location' => $input['event_location'],
+                'start_time' => $input['start_time'],
+                'end_time' => $input['end_time'],
+                'hidden' => true
+            ));
+
+            // Removes all fields irrelevant to creating a CERF.
+            unset($input['chair_id'],
+                  $input['title'],
+                  $input['event_location'],
+                  $input['start_time'],
+                  $input['end_time']);
+
+            $input['event_id'] = $event->id;
+        }
+        else
+        {
+            /*
+             * Finds event for current CERF and updates chair according to CERF
+             * form.
+             */
+            $event = Event::find($input['event_id']);
+            $event->update(array('chair_id' => $input['chair_id']));
+
+            // Request contains start and end times to satisfy validation.
+            unset($input['start_time'], $input['end_time']);
+        }
 
         /*
          * Removes chair_id attribute from input before creating CERF since
@@ -142,7 +193,7 @@ class CerfsController extends Controller {
          * tags, activities, and Kiwanis attendees based on current event and
          * CERF.
          */
-        session()->put('event_id', $input['event_id']);
+        session()->put('event_id', $event->id);
         session()->put('cerf_id', $cerf->id);
 
         return redirect()->action('TagsController@create');
