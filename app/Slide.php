@@ -18,4 +18,9 @@ class Slide extends Model implements StaplerableInterface
 
 	protected $guarded = array('id');
 
+    // Mutators
+
+    public function setBodyAttribute($body) {
+        $this->attributes['body'] = strip_tags($body);
+    }
 }

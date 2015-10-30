@@ -24,8 +24,6 @@ class CreateSlideRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required',
-            'body' => 'required',
             'link' => 'required|url',
             'image' => 'required|image'
         ];
