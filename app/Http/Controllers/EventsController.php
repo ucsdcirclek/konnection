@@ -112,7 +112,7 @@ class EventsController extends Controller
         // Look for events in the upcoming week
         $range = [
             Carbon::now(),
-            Carbon::now()->addWeek()
+            Carbon::now()->addDays(6)
         ];
 
         $upcoming_events = Event::whereBetween('start_time', $range)
