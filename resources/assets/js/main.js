@@ -93,7 +93,7 @@ $(document).ready(function () {
               id: event.id,
               title: event.title,
               start: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"), // Convert from server UTC to local
-              end: moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"),
+              end: moment.tz(event.end_time, "UTC").tz("America/Los_Angeles"),
               url: '/events/' + event.slug,
               backgroundColor: window.setEventColor(event.type_id),
               borderColor: window.setEventColor(event.type_id)

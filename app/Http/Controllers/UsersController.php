@@ -71,10 +71,17 @@ class UsersController extends Controller {
         // Update user
         \Auth::user()->update($input);
 
-        if (!is_null($input['avatar'])) $this->cropAvatar();
+        $cropSucceeded = true;
 
-        return redirect()->action('UsersController@edit')
-            ->with('message', 'Your profile has been updated.');
+        if (!is_null($input['avatar'])) $cropSucceeded = $this->cropAvatar();
+
+        if ($cropSucceeded) {
+            return redirect()->action('UsersController@edit')
+                ->with('message', 'Your profile has been updated.');
+        } else {
+            return redirect()->action('UsersController@edit')
+                ->withErrors(['error', 'Image type not supported! Please try a different image.']);
+        }
 	}
 
     /**
@@ -95,8 +102,26 @@ class UsersController extends Controller {
         $reader = Reader::factory(Reader::TYPE_NATIVE);
         $exifData = $reader->getExifFromFile(public_path() . $avatarPath)->getRawData();
 
-        $width = $exifData['ExifImageWidth'];
-        $height = $exifData['ExifImageLength'];
+        $width = NULL;
+        $height = NULL;
+
+        if (array_key_exists('ExifImageWidth', $exifData) && array_key_exists('ExifImageLength')) {
+            $width = $exifData['ExifImageWidth'];
+            $height = $exifData['ExifImageLength'];
+        }
+
+        // Sometimes the image will not have all EXIF data. Instead, it might
+        // have an automatically computed width and height.
+        else if (array_key_exists('COMPUTED', $exifData)) {
+            $width = $exifData['COMPUTED']['Width'];
+            $height = $exifData['COMPUTED']['Height'];
+        }
+
+        // If the image has no height or width values, then redirect back to
+        // settings page with an error message.
+        else {
+            return false;
+        }
 
         // Crops off top and  bottom for tall images.
         if ($height > $width) {
@@ -110,14 +135,25 @@ class UsersController extends Controller {
             $image->crop(new Point($start, 0), new Box($height, $height));
         }
 
+        // In case image does not have all EXIF data, including orientation.
+        // Setting EXIF orientation to 1 stores the image as it is originally
+        // oriented.
+        if (!array_key_exists('Orientation', $exifData)) $exifData['Orientation'] = 1;
+
         // Adjusts orientation depending on EXIF orientation data.
         switch($exifData['Orientation']) {
+
+            // Rotates image if it is upside down.
             case 3:
                 $image->rotate(180);
                 break;
+
+            // Rotates image 90 degrees to the right.
             case 6:
                 $image->rotate(90);
                 break;
+
+            // Rotates image 90 degrees to the left.
             case 8:
                 $image->rotate(-90);
                 break;
@@ -126,5 +162,7 @@ class UsersController extends Controller {
         // Replaces original avatar and ensures previous image is deleted.
         File::delete(public_path() . $avatarPath);
         $image->save(public_path() . $avatarPath);
+
+        return true;
     }
 }

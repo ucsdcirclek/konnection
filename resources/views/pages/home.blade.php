@@ -8,26 +8,20 @@
 
 @section('content')
     <div class="slider">
-        <div class="empty-content">
-            <a href="https://www.facebook.com/events/770936166385069/"><img src="/images/slider/fallrush.jpg"></a>
-        </div>
         @foreach($slides as $slide)
-        <div style="background: url({{ asset($slide->image->url()) }}); background-position: center; background-size:
-                cover">
-            <div class="content">
-                <div class="text">
-                    <h2>{{ $slide->title }}</h2>
-                    <br/>
-                    <p>
-                        {{ $slide->body }}
-                    </p>
-
-                    <p>
-                        <a target="_blank" href="{{ $slide->link }}">Learn more</a>
-                    </p>
+            @if (empty($slide->title) || empty($slide->body))
+                <div class="slider-content">
+                    <a href="{{ $slide->link }}"><img src="{{ asset($slide->image->url()) }}"></a>
                 </div>
-            </div>
-        </div>
+            @else
+                <div class="slider-content">
+                    <div class="text">
+                        <h3>{{ $slide->title }}</h3>
+                        <p>{{ $slide->body }}</p>
+                    </div>
+                    <a href="{{ $slide->link }}"><img src="{{ asset($slide->image->url()) }}"></a>
+                </div>
+            @endif
         @endforeach
     </div>
 

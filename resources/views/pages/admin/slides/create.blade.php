@@ -3,6 +3,10 @@
 @section('admin-content')
     <div class="wrapper create-form">
         <h2>Create a Slide</h2>
+        <p>
+            For a slider with just an image without a text overlay, leave the
+            title and body input fields blank.
+        </p>
         <br/>
 
         {!! Form::open(['action' => 'SlidesController@store', 'files' => true]) !!}
