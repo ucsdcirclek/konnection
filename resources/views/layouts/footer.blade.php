@@ -14,6 +14,8 @@
 
     <p>© 2014-2015 UC San Diego Circle K International.</p>
 
+    {{--
     <p id="credits">Designed and developed by Joseph Le with contributions from Jamie Santos, John Gamboa,
         Michael Mullen, and Alex Tang. Assets by Jamie Santos.</p>
+    --}}
 </footer>
