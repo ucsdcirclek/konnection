@@ -6,8 +6,12 @@
   <div id="sidebar">
     <div class="page"><a href="{{ url('about/club') }}">General</a></div>
     <hr>
+
+    {{--
     <div class="page"><a href="{{ url('about/club/board') }}">Board</a></div>
     <hr>
+    --}}
+
     <div class="page"><a href="{{ url('about/club/causes') }}">Causes</a></div>
     <hr>
     <div class="page"><a href="{{ url('about/club/tenets') }}">Tenets</a></div>

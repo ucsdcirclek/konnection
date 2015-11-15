@@ -26,7 +26,7 @@
                     <article>
                         <h3 class="light-emphasis">{{ $post->title }}</h3>
 
-                        <p class="date">{{ $post->created_at->setTimezone('America/Los_Angeles')->format('l, F n, Y') }}</p>
+                        <p class="date">{{ $post->created_at->setTimezone('America/Los_Angeles')->format('l, F j, Y') }}</p>
 
                         <p>
                             {!! $post->content !!}

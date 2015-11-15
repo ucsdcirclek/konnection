@@ -11,7 +11,7 @@
            <div class="description">
                <h1><span class="light-emphasis">Showing CERF for: </span>{{ $cerf->event->title }}</h1>
 
-               <p class="half"><strong>Date:</strong> {{ $cerf->event->start_time->setTimezone('America/Los_Angeles')->format('F n, Y') }}</p>
+               <p class="half"><strong>Date:</strong> {{ $cerf->event->start_time->setTimezone('America/Los_Angeles')->format('F j, Y') }}</p>
                <p class="half"><strong>Location:</strong> {{ $cerf->event->event_location }}</p>
            </div>
 

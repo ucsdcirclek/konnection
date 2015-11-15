@@ -149,6 +149,8 @@
     border-bottom: 2px solid $light-gray;
     padding: 5px 0;
 
+    overflow-wrap: break-word;
+
     &:first-of-type {
       padding-top: 0;
     }
