@@ -34,26 +34,28 @@
 
     <div id="content">
 
-        <div id="welcome-view">
-            <div class="text">
-                <h3>Welcome to UCSD Circle K!</h3>
+        @unless(Auth::check()))
+            <div id="welcome-view">
+                <div class="text">
+                    <h3>Welcome to UCSD Circle K!</h3>
 
-                <p>
-                    Circle K International is the <strong>largest service organization in the world</strong>, with
-                    over <span class="light-emphasis">13,000</span> members worldwide who have served a total of
-                    <span class="light-emphasis">199,327</span> hours of service.
-                </p>
+                    <p>
+                        Circle K International is the <strong>largest service organization in the world</strong>, with
+                        over <span class="light-emphasis">13,000</span> members worldwide who have served a total of
+                        <span class="light-emphasis">199,327</span> hours of service.
+                    </p>
 
-                <br/>
+                    <br/>
 
-                <p class="center"><a href="/events">Check out some of our events!</a></p>
+                    <p class="center"><a href="/events">Check out some of our events!</a></p>
+                </div>
+
+                <div class="links">
+                    <div><button><a href="/about/membership">Become a member</a></button></div>
+                    <div><button><a href="/auth/login">Login</a></button></div>
+                </div>
             </div>
-
-            <div class="links">
-                <div><button><a href="/about/membership">Become a member</a></button></div>
-                <div><button><a href="/auth/login">Login</a></button></div>
-            </div>
-        </div>
+        @endunless
 
         <div id="week-view">
             <ul class="week">

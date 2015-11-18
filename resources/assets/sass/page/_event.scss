@@ -44,6 +44,7 @@ button {
     @include span-columns(12);
     display: block;
     border-bottom: 1px solid $light-gray;
+    overflow-wrap: break-word;
 
     .event-info {
       @include span-columns(8);
@@ -67,6 +68,7 @@ button {
     @include span-columns(8);
     padding-top: .8em;
     border-right: 1px solid $light-gray;
+    overflow-wrap: break-word;
   }
 
   .right {
