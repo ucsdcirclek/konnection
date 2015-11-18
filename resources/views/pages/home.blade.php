@@ -34,7 +34,7 @@
 
     <div id="content">
 
-        @unless(Auth::check()))
+        @unless(Auth::check())
             <div id="welcome-view">
                 <div class="text">
                     <h3>Welcome to UCSD Circle K!</h3>
