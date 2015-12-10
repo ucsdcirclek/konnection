@@ -129,6 +129,8 @@
 
 
             <div class="right">
+                @include ('errors.errors')
+
                 <div class="chair avatar large">
                     <h5>Person of Contact</h5>
                     <br/>
@@ -190,6 +192,16 @@
                             'delete']) !!}
                             {!! Form::submit('Delete Event') !!}
                             {!! Form::close() !!}
+
+                            @if($event->isOpen())
+                                {!! Form::model($event, array('action' => array('EventsController@update', $event->slug), 'method' => 'POST')) !!}
+                                {!! Form::hidden('close_time', Carbon\Carbon::now()) !!}
+                                {!! Form::submit('Close sign-ups') !!}
+                            @else
+                                {!! Form::model($event, array('action' => array('EventsController@update', $event->slug), 'method' => 'POST')) !!}
+                                {!! Form::hidden('open_time', Carbon\Carbon::now()) !!}
+                                {!! Form::submit('Open sign-ups') !!}
+                            @endif
                         </div>
                 @endif
 

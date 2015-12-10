@@ -157,11 +157,36 @@ class EventsController extends Controller
     {
         $input = $req->all();
 
+        $event = Event::findBySlug($slug);
+
+        // Handles opening and closing of sign-ups.
+        if (array_key_exists('open_time', $input)) {
+            if ($input['open_time'] > $event->end_time) {
+                return redirect()->action('EventsController@show', $slug)
+                                 ->withErrors('Cannot open sign-ups for an event that has already happened!');
+            }
+
+            // If the sign-up button shows up, and the event's close time is
+            // later than the current time, then makes the new open time to
+            // be current time (probably happens when the admin wants to open
+            // sign-ups earlier than expected when creating the event).
+            if ($event->close_time <= $input['open_time']) {
+
+                // However, if the admin is opening the event after it has already
+                // closed, then we should also update the close time, since the
+                // close time should not be before the open time (also keeps
+                // Event::isOpen() working).
+                $input['close_time'] = $event->end_time;
+            }
+        }
+
         // Ensures database times are always in UTC.
         foreach ($input as $key => $value) {
 
-            // Ensures only time fields are changed.
-            if (!strpos($key, 'time')) {
+            // Ensures only time fields are changed. Open time and close times
+            // are already handled above.
+            if (!strpos($key, 'time') || strcmp($key, 'open_time')
+                                      || strcmp($key, 'close_time')) {
                 continue;
             }
 
@@ -173,7 +198,7 @@ class EventsController extends Controller
             $input[$key] = $utc->toDateTimeString();
         }
 
-        Event::findBySlug($slug)->update($input);
+        $event->update($input);
 
         return redirect()->action('EventsController@show', $slug);
     }
