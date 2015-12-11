@@ -6,7 +6,7 @@
 
 @section('admin-content')
     <div id="event-create" class="wrapper">
-        @include ('errors.errors');
+        @include ('errors.errors')
 
         <h2>Create an Event</h2>
         <br/>
@@ -32,9 +32,11 @@
         {!! Form::text('end_time', '', array('class'=>'datetime')) !!}
 
         <label for="open_time">Signup Open</label>
+        <p>(optional, defaults to now)</p>
         {!! Form::text('open_time', '', array('class'=>'datetime')) !!}
 
         <label for="close_time">Signup Close</label>
+        <p>(optional, defaults to event start time)</p>
         {!! Form::text('close_time', '', array('class'=>'datetime')) !!}
 
         <label for="chair_id">Event Chair</label>
