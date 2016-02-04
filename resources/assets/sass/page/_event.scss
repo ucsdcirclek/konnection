@@ -76,11 +76,6 @@ button {
     padding-top: .8em;
     text-align: center;
 
-    #chair-event-btn {
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-
     .chair {
       text-align: center;
     }
@@ -110,17 +105,5 @@ button {
 
   h4 {
     margin-bottom: .5em;
-  }
-
-  .confirm {
-    display: none;
-  }
-
-  .confirmation {
-    background-color: $light-green;
-  }
-
-  .rejection {
-    background-color: $red;
   }
 }

@@ -82,7 +82,6 @@
                                                 Signup
                                             </button>
                                         </form>
-                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -150,15 +149,6 @@
                     @endif
 
                 </div>
-
-                @if(Auth::check())
-                    <button id="chair-event-btn" type="button">Chair Event</button>
-                    <div class="confirm">
-                        <p>Are you sure?</p>
-                        <button id="confirm-chair" class="confirmation" type="button">Yes</button>
-                        <button id="reject-chair" class="rejection" type="button">No</button>
-                    </div>
-                @endif
 
                 @if($event->isRegistered(Auth::id()))
                     <div>
