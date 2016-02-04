@@ -15,8 +15,8 @@ class PostsTableSeeder extends Seeder
 
         $user_ids = User::all()->lists('id')->toArray();
 
-        foreach (range(1,4) as $category_id) {
-            for ($counter = 0; $counter < 5; $counter++) {
+        foreach (range(1,5) as $category_id) {
+            for ($counter = 0; $counter < 10; $counter++) {
 
                 $rand_user_id = $user_ids[array_rand($user_ids)];
 
