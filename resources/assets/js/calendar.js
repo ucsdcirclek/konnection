@@ -77,7 +77,6 @@ $(function() {
           var events = [];
 
           _.forEach(doc.data, function(event) {
-            console.log(moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"));
             events.push({
               id: event.id,
               title: event.title,
@@ -88,7 +87,6 @@ $(function() {
               borderColor: window.setEventColor(event.type_id)
             });
           });
-          console.log(events);
 
           callback(events);
         },

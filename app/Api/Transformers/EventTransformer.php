@@ -19,12 +19,12 @@ class EventTransformer extends TransformerAbstract
             'description' => $event->description,
             'event_location' => $event->event_location,
             'meeting_location' => $event->meeting_location,
-            'start_time' => $event->start_time,
-            'end_time' => $event->end_time,
-            'open_time' => $event->open_time,
-            'close_time' => $event->close_time,
+            'start_time' => $event->start_time->toDateTimeString(),
+            'end_time' => $event->end_time->toDateTimeString(),
+            'open_time' => $event->open_time->toDateTimeString(),
+            'close_time' => $event->close_time->toDateTimeString(),
             'hidden' => (int) $event->hidden,
-            'created_at' => $event->created_at
+            'created_at' => $event->created_at->toDateTimeString()
         );
     }
 }
