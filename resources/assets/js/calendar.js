@@ -76,7 +76,8 @@ $(function() {
         success: function(doc) {
           var events = [];
 
-          _.forEach(doc, function(event) {
+          _.forEach(doc.data, function(event) {
+            console.log(moment.tz(event.start_time, "UTC").tz("America/Los_Angeles"));
             events.push({
               id: event.id,
               title: event.title,
@@ -87,8 +88,13 @@ $(function() {
               borderColor: window.setEventColor(event.type_id)
             });
           });
+          console.log(events);
 
           callback(events);
+        },
+        error: function(error) {
+          alert(appConstants.GENERIC_FAIL_MESSAGE);
+          console.log(error);
         }
       });
     }

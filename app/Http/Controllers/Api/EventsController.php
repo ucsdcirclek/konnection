@@ -20,8 +20,7 @@ class EventsController extends Controller {
         $range = [];
 
         // Add "From" date to query
-        $range[] = Carbon::parse($request->input('start'))->toDateTimeString(
-        );
+        $range[] = Carbon::parse($request->input('start'))->toDateTimeString();
 
         // Add "To" date to query
         $range[] = Carbon::parse($request->input('end'))->toDateTimeString();
