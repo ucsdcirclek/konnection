@@ -137,6 +137,8 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 
+        Dingo\Api\Provider\LaravelServiceProvider::class,
+
 		/*
 		 * Application Service Providers...
 		 */
@@ -210,7 +212,8 @@ return [
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
-
+        'API' => 'Dingo\Api\Facade\API',
+        'APIRoute' => 'Dingo\Api\Facade\Route'
 	],
 
 ];
