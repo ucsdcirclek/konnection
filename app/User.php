@@ -83,12 +83,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function events_created()
+    public function createdEvents()
     {
         return $this->hasMany('App\Event', 'creator_id');
     }
 
-    public function events_chaired()
+    public function chairedEvents()
     {
         return $this->hasMany('App\Event', 'chair_id');
     }
@@ -98,9 +98,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function event_registrations()
+    public function registrations()
     {
-        return $this->hasMany('App\EventRegistrations');
+        return $this->hasMany('App\EventRegistration');
     }
 
     /**

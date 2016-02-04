@@ -48,6 +48,7 @@ class EventTag extends Model
      * Returns tag name
      *
      * @param $value
+     * @return string
      */
     public function getNameAttribute($value)
     {
@@ -68,6 +69,8 @@ class EventTag extends Model
      * Returns abbreviation of tag name
      *
      * @param $value
+     * @return string
+     * @return string
      */
     public function getAbbreviationAttribute($value)
     {

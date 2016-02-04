@@ -62,41 +62,10 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
     Route::delete('slides/{id}', 'SlidesController@delete');
 });
 
-/**
- * Static pages
- */
-Route::group(['prefix' => 'about'], function()
-{
-    Route::group(['prefix' => 'circlek'], function()
-    {
-       Route::get('/', function() { return view('pages.about.circlek.general'); });
-       Route::get('history', function() { return view('pages.about.circlek.history'); });
-       Route::get('structure', function() { return view('pages.about.circlek.structure'); });
-       Route::get('tenets', function() { return view('pages.about.circlek.tenets'); });
-    });
-
-    Route::group(['prefix' => 'club'], function()
-    {
-        Route::get('/', function() { return view('pages.about.club.general'); });
-        Route::get('board', function() { return view('pages.about.club.board'); });
-        Route::get('causes', function() { return view('pages.about.club.causes'); });
-        Route::get('tenets', function() { return view('pages.about.club.tenets'); });
-    });
-
-    Route::get('district', function() { return view('pages.about.district'); });
-    Route::get('division', function() { return view('pages.about.division'); });
-    Route::get('membership', function() { return view('pages.about.membership'); });
-});
-Route::get('contact', function() { return view('pages.contact'); });
-
-/**
- * Service bulletin route
- */
+// Service bulletin.
 Route::get('bulletin', 'PostsController@bulletin');
 
-/**
- * API routes
- */
+// API routes.
 Route::group(['namespace' => 'Api', 'prefix' => 'api'], function()
 {
     Route::get('events', 'EventsController@index');
@@ -113,14 +82,38 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-/**
- * CERF routes
- */
 
+// Routes for the CERF form, list, and detail views.
 Route::get('cerfs/overview', 'CerfsController@overview');
 Route::get('cerfs/select/{id}', 'CerfsController@select');
 Route::resource('cerfs', 'CerfsController');
 
 Route::get('cerfs/approve/{id}', 'CerfsController@approve');
 
+// TODO Should have an API endpoint instead of hacking one here.
 Route::post('users/search', 'UsersController@search');
+
+// Static pages.
+Route::group(['prefix' => 'about'], function()
+{
+    Route::group(['prefix' => 'circlek'], function()
+    {
+        Route::get('/', function() { return view('pages.about.circlek.general'); });
+        Route::get('history', function() { return view('pages.about.circlek.history'); });
+        Route::get('structure', function() { return view('pages.about.circlek.structure'); });
+        Route::get('tenets', function() { return view('pages.about.circlek.tenets'); });
+    });
+
+    Route::group(['prefix' => 'club'], function()
+    {
+        Route::get('/', function() { return view('pages.about.club.general'); });
+        Route::get('board', function() { return view('pages.about.club.board'); });
+        Route::get('causes', function() { return view('pages.about.club.causes'); });
+        Route::get('tenets', function() { return view('pages.about.club.tenets'); });
+    });
+
+    Route::get('district', function() { return view('pages.about.district'); });
+    Route::get('division', function() { return view('pages.about.division'); });
+    Route::get('membership', function() { return view('pages.about.membership'); });
+});
+Route::get('contact', function() { return view('pages.contact'); });
