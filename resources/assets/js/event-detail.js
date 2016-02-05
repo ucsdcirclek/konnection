@@ -23,7 +23,7 @@ $(function() {
     $.ajax({
       type: 'POST',
       url: appConstants.EVENT_LIST_ENDPOINT+findSlug()+'/registrations/create',
-      success: function() {
+      success: function(data) {
         location.reload();
 
         // Change button
@@ -74,20 +74,6 @@ $(function() {
 
     $('#guestRegistration').remove();
   });
-
-  window.updateChair = function(id) {
-
-    $.ajax({
-        url: appConstants.EVENT_LIST_ENDPOINT + findSlug(),
-        type: 'PATCH',
-        data: {
-          chair_id: id
-        }
-      })
-      .fail(function() {
-        alert(appConstants.GENERIC_FAIL_MESSAGE);
-      });
-  };
 
 
   $('#drive-btn').click(function(event) {

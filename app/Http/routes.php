@@ -113,19 +113,13 @@ Route::get('contact', function() { return view('pages.contact'); });
 $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', function($api) {
+
+    // Event list route.
     $api->get('events', 'App\Api\Controllers\EventsController@index');
+
+    // Event registrations routes.
+    $api->post('events/{slug}/registrations/create', 'App\Api\Controllers\EventRegistrationsController@store');
+    $api->patch('events/{slug}/registrations/{id}', 'App\Api\Controllers\EventRegistrationsController@update');
+    $api->delete('events/{slug}/registrations/{id}', 'App\Api\Controllers\EventRegistrationsController@delete');
 });
 
-/*
-// API routes.
-Route::group(['namespace' => 'Api', 'prefix' => 'api'], function()
-{
-    Route::get('events', 'EventsController@index');
-    Route::patch('events/{slug}', 'EventsController@update');
-
-    // Registrations
-    Route::post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
-    Route::patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
-    Route::delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@destroy');
-});
-*/
