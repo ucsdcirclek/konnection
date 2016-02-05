@@ -38,7 +38,7 @@ class CerfsController extends Controller {
     {
         // Ensures only events created after implementation of online CERFs system are checked.
         $newestAllowed = Carbon::now();
-        $oldestAllowed = $newestAllowed->subMonth();
+        $oldestAllowed = Carbon::now()->subMonth();
 
         // Finds IDs of all events that do not have an associated approved CERF.
         $eventIdsWithoutCerfs = Event::select('events.id')

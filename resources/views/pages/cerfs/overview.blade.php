@@ -21,7 +21,7 @@
                 <div class="selection-table">
 
                     @foreach ($eventsWithoutCerfs as $event)
-                        @if ($event->start_time > $oldestAllowed && $event->end_time < $newestAllowed)
+                        @if ($event->start_time > $oldestAllowed && $event->start_time < $newestAllowed)
                             <a href="{{ action('CerfsController@select', [$event->id]) }}">
                                 <div class="selection-cell green">
 

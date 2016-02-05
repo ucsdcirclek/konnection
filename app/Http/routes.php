@@ -5,9 +5,8 @@
 | Application Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
+| Listed below are the routes for the main website, including static pages,
+| admin areas, and other areas that require authentication.
 |
 */
 
@@ -15,9 +14,12 @@ Route::get('/', 'HomeController@index');
 Route::get('events', 'EventsController@index');
 Route::get('events/{id}', 'EventsController@show');
 
-/**
- * Authenticated Areas
- */
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
+
+// Authenticated areas.
 Route::group(['middleware' => 'auth'], function()
 {
     Route::get('settings', 'UsersController@edit');
@@ -32,11 +34,13 @@ Route::group(['middleware' => 'auth'], function()
 
     Route::resource('kiwanisAttendee', 'KiwanisAttendeesController',
         ['only' => ['create', 'store']]);
+
+    Route::post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
+    Route::patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
+    Route::delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@destroy');
 });
 
-/**
- * Admin Areas
- */
+// Admin areas.
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function()
 {
     Route::get('/', function() { return view('pages.admin.home'); });
@@ -64,24 +68,6 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
 
 // Service bulletin.
 Route::get('bulletin', 'PostsController@bulletin');
-
-// API routes.
-Route::group(['namespace' => 'Api', 'prefix' => 'api'], function()
-{
-    Route::get('events', 'EventsController@index');
-    Route::patch('events/{slug}', 'EventsController@update');
-
-    // Registrations
-    Route::post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
-    Route::patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
-    Route::delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@destroy');
-});
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
-
 
 // Routes for the CERF form, list, and detail views.
 Route::get('cerfs/overview', 'CerfsController@overview');
@@ -117,3 +103,51 @@ Route::group(['prefix' => 'about'], function()
     Route::get('membership', function() { return view('pages.about.membership'); });
 });
 Route::get('contact', function() { return view('pages.contact'); });
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Listed below are the routes for the API.
+|
+*/
+
+// Gets an instance of the API router in order to create endpoints.
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', function($api) {
+
+    $api->group(['namespace' => 'App\Api\Controllers', 'middleware' => 'cors'], function($api) {
+        // Routes that are accessible by anonymous visitors to the site. These
+        // routes should only be using safe methods (i.e. GET, HEAD, OPTIONS).
+
+        // Authentication routes.
+        $api->post('auth/login', 'AuthController@authenticate');
+        $api->post('auth/register', 'AuthController@register');
+
+        // Event resource routes.
+        $api->get('events', 'EventsController@index');
+        $api->post('events/event_range', 'EventsController@getEventsInRange');
+        $api->post('events/event_date', 'EventsController@getEventsOnDate');
+        $api->get('events/{slug}/registrations', 'EventRegistrationsController@index');
+
+        // Post resource routes.
+        $api->get('posts', 'PostsController@index');
+
+        $api->group(['before' => 'jwt.auth', 'middleware' => 'jwt.refresh'], function($api) {
+            // Routes that are only available under authentication. All
+            // requests made to these routes require a valid JWT.
+
+            // Gets user corresponding to JWT.
+            $api->get('auth/current_user', 'AuthController@getAuthenticatedUser');
+
+            // Event registration resource routes.
+            $api->post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
+            $api->patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
+            $api->delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@destroy');
+        });
+
+    });
+});
+

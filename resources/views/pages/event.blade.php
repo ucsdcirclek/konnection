@@ -45,10 +45,13 @@
                         {{-- Show guest registration link if not logged in --}}
                         @if(Auth::check())
                             @if(!$event->isRegistered(Auth::id()))
-                                <button id="register-btn"><i class="fa fa-check"></i> Signup
-                                </button>
+                                {!! Form::open(array('action' => array('EventRegistrationsController@store', 'slug' => $event->slug, 'id' => 'self'))) !!}
+                                {!! Form::button('<i class="fa fa-check"></i> Sign up', array('type' => 'submit', 'id' => 'register-btn')) !!}
+                                {!! Form::close() !!}
                             @else
-                                <button id="unregister-btn"><i class="fa fa-close"></i> Signup</button>
+                                {!! Form::open(array('action' => array('EventRegistrationsController@destroy', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'delete')) !!}
+                                {!! Form::button('<i class="fa fa-close"></i> Sign up', array('type' => 'submit', 'id' => 'unregister-btn')) !!}
+                                {!! Form::close() !!}
                             @endif
                         @else
                             <div class="modal">
@@ -155,13 +158,20 @@
                         <h6>Volunteer to be a:</h6>
 
                         <div class="btn-group">
-                            <button id="drive-btn" type="button"><i class="fa fa-car"></i> Driver</button>
-                            <br/>
-                            <button id="photograph-btn" type="button"><i class="fa fa-camera"></i>
-                                Photographer
-                            </button>
-                            <br/>
-                            <button id="write-btn" type="button"><i class="fa fa-pencil"></i> Writer</button>
+                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
+                            {!! Form::hidden('driver_status', 1) !!}
+                            {!! Form::button('<i class="fa fa-car"></i> Driver', array('type' => 'submit', 'id' => 'drive-btn')) !!}
+                            {!! Form::close() !!}
+
+                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
+                            {!! Form::hidden('photographer_status', 1) !!}
+                            {!! Form::button('<i class="fa fa-camera"></i> Photographer', array('type' => 'submit', 'id' => 'photograph-btn')) !!}
+                            {!! Form::close() !!}
+
+                            {!! Form::open(array('method' => 'patch', 'action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'))) !!}
+                            {!! Form::hidden('writer_status', 1) !!}
+                            {!! Form::button('<i class="fa fa-pencil"></i> Writer', array('type' => 'submit', 'id' => 'write-btn')) !!}
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 @endif

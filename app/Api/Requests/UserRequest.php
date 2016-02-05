@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Api\Requests;
+
+use Dingo\Api\Http\FormRequest;
+
+class UserRequest extends FormRequest
+{
+    /**
+     * Determines if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return true;
+    }
+    /**
+     * Gets validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'username' => 'required|max:255|unique:users',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|confirmed|min:6',
+        ];
+    }
+}

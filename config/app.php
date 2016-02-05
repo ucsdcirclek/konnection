@@ -137,6 +137,8 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 
+        Dingo\Api\Provider\LaravelServiceProvider::class,
+
 		/*
 		 * Application Service Providers...
 		 */
@@ -157,7 +159,8 @@ return [
         'Codesleeve\LaravelStapler\Providers\L5ServiceProvider',
         'Collective\Html\HtmlServiceProvider',
 
-
+		'Barryvdh\Cors\ServiceProvider',
+		'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
 	],
 
 	/*
@@ -210,7 +213,10 @@ return [
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
-
+        'API' => 'Dingo\Api\Facade\API',
+        'APIRoute' => 'Dingo\Api\Facade\Route',
+        'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth',
+        'JWTFactory' => 'Tymon\JWTAuth\Facades\JWTFactory',
 	],
 
 ];
