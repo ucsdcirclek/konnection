@@ -36,8 +36,8 @@ Route::group(['middleware' => 'auth'], function()
         ['only' => ['create', 'store']]);
 
     Route::post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
-    Route::patch('events/{slug}/registrations/self', 'EventRegistrationsController@update');
-    Route::delete('events/{slug}/registrations/self', 'EventRegistrationsController@destroy');
+    Route::patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
+    Route::delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@destroy');
 });
 
 // Admin areas.
