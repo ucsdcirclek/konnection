@@ -28,7 +28,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $types = EventTYpe::all()->lists('name');
+        $types = EventType::all()->lists('name');
 
         return view('pages.calendar', compact('types'));
     }

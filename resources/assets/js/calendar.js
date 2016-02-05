@@ -66,17 +66,18 @@ $(function() {
     },
     events: function(start, end, timezone, callback) {
       $.ajax({
-        url: '/api/events',
+        url: '/api/events/event_range',
+        method: 'POST',
         dataType: 'json',
         data: {
           // our hypothetical feed requires UNIX timestamps
-          start: start.toISOString(),
-          end: end.toISOString()
+          start_date: start.toISOString(),
+          end_date: end.toISOString()
         },
         success: function(doc) {
           var events = [];
 
-          _.forEach(doc.data, function(event) {
+          _.forEach(doc.events, function(event) {
             events.push({
               id: event.id,
               title: event.title,

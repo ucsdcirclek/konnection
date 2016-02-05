@@ -11,6 +11,7 @@ use Dingo\Api\Exception\DeleteResourceFailedException;
 use Dingo\Api\Exception\StoreResourceFailedException;
 use Dingo\Api\Exception\UpdateResourceFailedException;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 
@@ -22,6 +23,25 @@ use Tymon\JWTAuth\Facades\JWTAuth;
  */
 class EventRegistrationsController extends APIController
 {
+    /**
+     * Lists all registrations for event with given slug.
+     *
+     * @Get("/events/{slug}/registrations")
+     *
+     * @param $slug
+     * @return \Dingo\Api\Http\Response
+     */
+    public function index($slug)
+    {
+        $event = Event::findBySlug($slug);
+
+        if (!$event)
+            throw new NotFoundHttpException;
+
+        $registrations = EventRegistration::where('event_id', $event->id)->latest()->get();
+        return $this->response->collection($registrations, new EventRegistrationTransformer);
+    }
+
     /**
      * Stores a registration, associating the newly created registration with
      * the user and the event.

@@ -119,17 +119,30 @@ $api = app('Dingo\Api\Routing\Router');
 $api->version('v1', function($api) {
 
     $api->group(['namespace' => 'App\Api\Controllers', 'middleware' => 'cors'], function($api) {
+        // Routes that are accessible by anonymous visitors to the site. These
+        // routes should only be using safe methods (i.e. GET, HEAD, OPTIONS).
 
-        // Authentication routes
-        $api->post('login', 'AuthController@authenticate');
+        // Authentication routes.
+        $api->post('auth/login', 'AuthController@authenticate');
+        $api->post('auth/register', 'AuthController@register');
 
-        // Routes that should be accessible by anonymous visitors to the site.
+        // Event resource routes.
         $api->get('events', 'EventsController@index');
+        $api->post('events/event_range', 'EventsController@getEventsInRange');
+        $api->post('events/event_date', 'EventsController@getEventsOnDate');
+        $api->get('events/{slug}/registrations', 'EventRegistrationsController@index');
+
+        // Post resource routes.
         $api->get('posts', 'PostsController@index');
 
         $api->group(['before' => 'jwt.auth', 'middleware' => 'jwt.refresh'], function($api) {
+            // Routes that are only available under authentication. All
+            // requests made to these routes require a valid JWT.
 
-            // Event registrations routes.
+            // Gets user corresponding to JWT.
+            $api->get('auth/current_user', 'AuthController@getAuthenticatedUser');
+
+            // Event registration resource routes.
             $api->post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
             $api->patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
             $api->delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@destroy');

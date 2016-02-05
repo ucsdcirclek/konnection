@@ -26,7 +26,7 @@ class PostsController extends APIController
      */
     public function index()
     {
-        $posts = Post::all()->latest()->take(10)->get();
+        $posts = Post::all()->take(5)->sortByDesc('created_at');
         return $this->response->collection($posts, new PostTransformer);
     }
 }

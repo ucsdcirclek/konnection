@@ -2,6 +2,7 @@
 
 namespace App\Api\Controllers;
 
+use Dingo\Api\Exception\ResourceException;
 use Illuminate\Http\Request;
 
 use App\Event;
@@ -25,28 +26,56 @@ class EventsController extends APIController
      *
      * @Get("/events")
      *
-     * @param Request $request
      * @return \Dingo\Api\Http\Response
+     * @internal param Request $request
      */
-    public function index(Request $request)
+    public function index()
     {
-        // Checks whether request has keys |start| and |end|.
-        if ($request->has('start') && $request->has('end')) {
-            $range = [];
+        $events = Event::paginate();
+        return $this->response->paginator($events, new EventTransformer);
+    }
 
-            // Converts input into minimum and maximum values.
-            $range[] = Carbon::parse($request->input('start'))->toDateTimeString();
-            $range[] = Carbon::parse($request->input('end'))->toDateTimeString();
+    /**
+     * Retrieves events within a range specified by the request parameters
+     * |start_date| and |end_date|.
+     *
+     * @param Request $request
+     * @return mixed
+     */
+    public function getEventsInRange(Request $request)
+    {
+        if (!$request->has('start_date') || !$request->has('end_date'))
+            throw new ResourceException('Missing start_date and end_date parameters in request.');
 
-            // Returns all events within a range specified by minimum and
-            // maximum values computed above from request.
-            $events = Event::whereBetween('start_time', $range)->where('hidden', false)->get();
-        } else {
-            // If keys are not present, then retrieves all event.
-            $events = Event::all();
-        }
+        $range = [];
 
-        // Returns events.
-        return $this->response->collection($events, new EventTransformer);
+        // Converts input into minimum and maximum values.
+        $range[] = Carbon::parse($request->input('start_date'))->toDateTimeString();
+        $range[] = Carbon::parse($request->input('end_date'))->toDateTimeString();
+
+        // Returns all events within a range specified by minimum and
+        // maximum values computed above from request.
+        return Event::whereBetween('start_time', $range)->where('hidden', false)->get();
+    }
+
+    /**
+     * Retrieves all events on a day specified as a request parameter. A date
+     * in UTC representing the beginning of the day must be passed in.
+     *
+     * @Post("/events/event_date")
+     *
+     * @param Request $request
+     */
+    public function getEventsOnDate(Request $request)
+    {
+        if (!$request->has('date'))
+            throw new ResourceException('Missing date parameter in request.');
+
+        // Date in request must be in UTC and must represent the very beginning
+        // of the day.
+        $beginningOfDay = Carbon::parse($request->input('date'));
+        $endOfDay = $beginningOfDay->addDay();
+
+        return Event::whereBetween('start_time', [$beginningOfDay, $endOfDay])->where('hidden', false)->get();
     }
 }
