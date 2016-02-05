@@ -160,6 +160,7 @@ return [
         'Collective\Html\HtmlServiceProvider',
 
 		'Barryvdh\Cors\ServiceProvider',
+		'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
 	],
 
 	/*
@@ -213,7 +214,9 @@ return [
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
         'API' => 'Dingo\Api\Facade\API',
-        'APIRoute' => 'Dingo\Api\Facade\Route'
+        'APIRoute' => 'Dingo\Api\Facade\Route',
+        'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth',
+        'JWTFactory' => 'Tymon\JWTAuth\Facades\JWTFactory',
 	],
 
 ];
