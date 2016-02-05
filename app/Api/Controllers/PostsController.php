@@ -26,7 +26,7 @@ class PostsController extends APIController
      */
     public function index()
     {
-        $posts = Post::all()->take(10);
+        $posts = Post::all()->latest()->take(10)->get();
         return $this->response->collection($posts, new PostTransformer);
     }
 }

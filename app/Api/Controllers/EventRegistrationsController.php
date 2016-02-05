@@ -2,20 +2,17 @@
 
 namespace App\Api\Controllers;
 
+use App\Api\Transformers\EventRegistrationTransformer;
 use App\Event;
 use App\EventRegistration;
-use App\GuestRegistration;
 use App\Http\Requests;
-
-use Auth;
-
 use Carbon\Carbon;
+use Dingo\Api\Exception\DeleteResourceFailedException;
 use Dingo\Api\Exception\StoreResourceFailedException;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-use App\Api\Transformers\EventRegistrationTransformer;
-
+use Dingo\Api\Exception\UpdateResourceFailedException;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
+use Tymon\JWTAuth\Facades\JWTAuth;
+
 
 /**
  * Event registrations resource representation. Requires user to be
@@ -37,39 +34,29 @@ class EventRegistrationsController extends APIController
      */
     public function store(Request $request, $slug)
     {
+        $user = JWTAuth::parseToken()->authenticate();
         $event = Event::findBySlug($slug);
         $now = Carbon::now();
 
-        // Checks whether event is open for registration by checking whether
-        // the current time is between the event's sign-up open and close
-        // times.
+        // Throws error if the current time is outside the event's sign-up
+        // window.
         if (!($now > $event->open_time && $now < $event->close_time))
-            throw new AccessDeniedHttpException('Event is not open for registration!');
+            throw new StoreResourceFailedException('Event is not open for registration!');
 
         $input = $request->all();
         $input['event_id'] = $event->id;
+        $input['user_id'] = $user->id;
 
-        if (!Auth::check()) {
+        $duplicate = EventRegistration::where('user_id', $user->id)
+                                      ->where('event_id', $event->id)
+                                      ->first();
 
-            // If the user isn't logged in, then make a guest registration>
-            return GuestRegistration::create($input);
-        } else {
-            // Otherwise the user is logged in, and tie the registration to
-            // the user ID.
-            $input['user_id'] = Auth::id();
+        // Throws error if a registration with the same user ID for the same
+        // event ID already exists.
+        if ($duplicate)
+            throw new StoreResourceFailedException('User is already registered for this event!');
 
-            // Checks whether a registration already exists with the user_id
-            // for the same event, and if there is then this is a duplicate
-            // registration.
-            if (EventRegistration::where('user_id', $input['user_id'])
-                ->where('event_id', $input['event_id'])
-                ->first()) {
-                throw new StoreResourceFailedException('User is already registered for this event!');
-            }
-
-            $registration = EventRegistration::create($input);
-        }
-
+        $registration = EventRegistration::create($input);
         return $this->response->item($registration, new EventRegistrationTransformer);
     }
 
@@ -79,27 +66,24 @@ class EventRegistrationsController extends APIController
      *
      * @Patch("/events/{slug}/registrations/{id}")
      *
+     * @param Request $request
      * @param $slug
-     * @param $id
      * @return \Dingo\Api\Http\Response
+     * @internal param $id
      */
-    public function update($slug, $id)
+    public function update(Request $request, $slug)
     {
+        $user = JWTAuth::parseToken()->authenticate();
         $event = Event::findBySlug($slug);
 
-        if ($id === 'self' && Auth::check()) {
-            $registration = EventRegistration::where('user_id', '=', Auth::id())
-                                             ->where('event_id', '=', $event->id)
-                                             ->update(\Request::all());
-        } else {
-            $registration = EventRegistration::find($id)->update(\Request::all());
-        }
+        $result = EventRegistration::where('user_id', '=', $user->id)
+                                   ->where('event_id', '=', $event->id)
+                                   ->update($request->all());
 
-        if ($registration)
-            return response()->json(['message' => 'Registration updated!'], 200);
+        if ($result)
+            return response()->json(['Registration updated successfully.'], 200);
         else
-            throw new ConflictHttpException('There was an issue updating the registration!');
-
+            throw new UpdateResourceFailedException;
     }
 
     /**
@@ -108,25 +92,21 @@ class EventRegistrationsController extends APIController
      * @Delete("/events/{slug}/registrations/{id}")
      *
      * @param $slug
-     * @param $id
      * @return \Dingo\Api\Http\Response
+     * @internal param $id
      */
-    public function delete($slug, $id)
+    public function destroy($slug)
     {
+        $user = JWTAuth::parseToken()->authenticate();
         $event = Event::findBySlug($slug);
 
-        if ($id == 'self') {
-            // If |id| is set to self, then gets authenticated user's ID and
-            // deletes registration for that user and event IDs combination.
-            if (Auth::check())
-                EventRegistration::where('user_id', '=', Auth::id())
-                                 ->where('event_id', '=', $event->id)
-                                 ->delete();
-        } else {
-            // Otherwise, deletes an event registration based on ID.
-            EventRegistration::destroy($id);
-        }
+        $result = EventRegistration::where('user_id', '=', $user->id)
+                                   ->where('event_id', '=', $event->id)
+                                   ->delete();
 
-        return response()->json(['message' => 'Deleted successfully!'], 200);
+        if ($result)
+            return response()->json(['Registration removed successfully.'], 200);
+        else
+            throw new DeleteResourceFailedException;
     }
 }

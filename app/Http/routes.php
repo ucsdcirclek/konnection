@@ -36,8 +36,8 @@ Route::group(['middleware' => 'auth'], function()
         ['only' => ['create', 'store']]);
 
     Route::post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
-    Route::patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
-    Route::delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@destroy');
+    Route::patch('events/{slug}/registrations/self', 'EventRegistrationsController@update');
+    Route::delete('events/{slug}/registrations/self', 'EventRegistrationsController@destroy');
 });
 
 // Admin areas.
@@ -123,19 +123,16 @@ $api->version('v1', function($api) {
         // Authentication routes
         $api->post('login', 'AuthController@authenticate');
 
-        // Event list route.
+        // Routes that should be accessible by anonymous visitors to the site.
         $api->get('events', 'EventsController@index');
-
-        // Post list route.
         $api->get('posts', 'PostsController@index');
 
-        $api->group(['middleware' => 'jwt.refresh'], function($api) {
+        $api->group(['before' => 'jwt.auth', 'middleware' => 'jwt.refresh'], function($api) {
 
             // Event registrations routes.
             $api->post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
             $api->patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
-            $api->delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@delete');
-
+            $api->delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@destroy');
         });
 
     });
