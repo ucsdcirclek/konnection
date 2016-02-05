@@ -25,7 +25,6 @@ use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
  */
 class EventRegistrationsController extends APIController
 {
-
     /**
      * Stores a registration, associating the newly created registration with
      * the user and the event.
@@ -97,7 +96,7 @@ class EventRegistrationsController extends APIController
         }
 
         if ($registration)
-            return response()->json(['message' => 'Registration updated!']);
+            return response()->json(['message' => 'Registration updated!'], 200);
         else
             throw new ConflictHttpException('There was an issue updating the registration!');
 
@@ -128,6 +127,6 @@ class EventRegistrationsController extends APIController
             EventRegistration::destroy($id);
         }
 
-        return $this->response->noContent();
+        return response()->json(['message' => 'Deleted successfully!'], 200);
     }
 }

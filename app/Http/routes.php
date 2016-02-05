@@ -116,16 +116,22 @@ $api->version('v1', function($api) {
 
     $api->group(['namespace' => 'App\Api\Controllers', 'middleware' => 'cors'], function($api) {
 
-        // Event list route.
-        $api->get('events', 'EventsController@index');
+        // Authentication routes
+        $api->post('login', 'AuthController@authenticate');
 
-        // Event registrations routes.
-        $api->post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
-        $api->patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
-        $api->delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@delete');
+        $api->group(['middleware' => 'jwt.refresh'], function($api) {
+            // Event list route.
+            $api->get('events', 'EventsController@index');
 
-        // Post list route.
-        $api->get('posts', 'PostsController@index');
+            // Event registrations routes.
+            $api->post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
+            $api->patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
+            $api->delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@delete');
+
+            // Post list route.
+            $api->get('posts', 'PostsController@index');
+        });
+
     });
 });
 
