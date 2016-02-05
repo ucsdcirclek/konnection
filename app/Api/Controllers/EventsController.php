@@ -13,7 +13,7 @@ use Carbon\Carbon;
  * Events resource representation. Only requires authentication for unsafe
  * methods, otherwise allows unauthenticated users read-only access.
  *
- * @Resource('Events', uri='/events')
+ * @Resource("Events", uri="/events")
  */
 class EventsController extends APIController
 {

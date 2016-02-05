@@ -123,6 +123,9 @@ $api->version('v1', function($api) {
         $api->post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
         $api->patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
         $api->delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@delete');
+
+        // Post list route.
+        $api->get('posts', 'PostsController@index');
     });
 });
 
