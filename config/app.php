@@ -159,7 +159,7 @@ return [
         'Codesleeve\LaravelStapler\Providers\L5ServiceProvider',
         'Collective\Html\HtmlServiceProvider',
 
-
+		'Barryvdh\Cors\ServiceProvider',
 	],
 
 	/*
