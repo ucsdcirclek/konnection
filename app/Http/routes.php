@@ -114,12 +114,15 @@ $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', function($api) {
 
-    // Event list route.
-    $api->get('events', 'App\Api\Controllers\EventsController@index');
+    $api->group(['namespace' => 'App\Api\Controllers', 'middleware' => 'cors'], function($api) {
 
-    // Event registrations routes.
-    $api->post('events/{slug}/registrations/create', 'App\Api\Controllers\EventRegistrationsController@store');
-    $api->patch('events/{slug}/registrations/{id}', 'App\Api\Controllers\EventRegistrationsController@update');
-    $api->delete('events/{slug}/registrations/{id}', 'App\Api\Controllers\EventRegistrationsController@delete');
+        // Event list route.
+        $api->get('events', 'EventsController@index');
+
+        // Event registrations routes.
+        $api->post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
+        $api->patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');
+        $api->delete('events/{slug}/registrations/{id}', 'EventRegistrationsController@delete');
+    });
 });
 
