@@ -142,6 +142,9 @@ $api->version('v1', function($api) {
             // Gets user corresponding to JWT.
             $api->get('auth/current_user', 'AuthController@getAuthenticatedUser');
 
+            // Checks whether token is valid.
+            $api->get('auth/validate_token', 'AuthController@validateToken');
+
             // Event registration resource routes.
             $api->post('events/{slug}/registrations/create', 'EventRegistrationsController@store');
             $api->patch('events/{slug}/registrations/{id}', 'EventRegistrationsController@update');

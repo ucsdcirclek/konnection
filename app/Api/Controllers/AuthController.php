@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
+use Dingo\Api\Facade\API;
+
 /**
  * Handles JWT authentication.
  */
@@ -22,6 +24,15 @@ class AuthController extends APIController
     public function getAuthenticatedUser()
     {
         return JWTAuth::parseToken()->authenticate();
+    }
+
+    /**
+     * Responds with 200 OK if JWT is valid. If this route is reached, then the
+     * ticket must be valid because of middleware applied before this route is
+     * reached.
+     */
+    public function validateToken() {
+        return API::response()->array(['status' => 'success'])->statusCode(200);
     }
 
     /**
