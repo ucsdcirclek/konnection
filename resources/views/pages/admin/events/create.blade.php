@@ -6,7 +6,7 @@
 
 @section('admin-content')
     <div id="event-create" class="wrapper">
-        @include ('errors.errors');
+        @include ('errors.errors')
 
         <h2>Create an Event</h2>
         <br/>
@@ -29,26 +29,16 @@
         {!! Form::text('start_time', '', array('class'=>'datetime')) !!}
 
         <label for="end_time">Event End</label>
+        <p>(defaults to an hour after start time)</p>
         {!! Form::text('end_time', '', array('class'=>'datetime')) !!}
 
         <label for="open_time">Signup Open</label>
-        {!! Form::text('open_time', '', array('class'=>'datetime')) !!}
+        <p>(defaults to now)</p>
+        {!! Form::text('open_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')->format('l, F j, Y g:i A'), array('class'=>'datetime')) !!}
 
         <label for="close_time">Signup Close</label>
+        <p>(defaults to event end time)</p>
         {!! Form::text('close_time', '', array('class'=>'datetime')) !!}
-
-        <label for="chair_id">Event Chair</label>
-        <p>(optional)</p>
-        {!! Form::hidden('chair_id', null, array('class' => 'chair-field')) !!}
-
-        <div class="avatar small">
-            <p><strong>No chair</strong></p>
-            <img src="/avatars/original/missing.png">
-
-            <div><a href=".search-popup" class="user-not-optional search-popup-link button emphasis" data-effect="mfp-move-horizontal">Change</a></div>
-
-            @include('search.search', array('selectClass' => 'chair-select'))
-        </div>
 
         <label for="type_id">What kind of event is this?</label>
         <p>(optional)</p>

@@ -45,10 +45,13 @@
                         {{-- Show guest registration link if not logged in --}}
                         @if(Auth::check())
                             @if(!$event->isRegistered(Auth::id()))
-                                <button id="register-btn"><i class="fa fa-check"></i> Signup
-                                </button>
+                                {!! Form::open(array('action' => array('EventRegistrationsController@store', 'slug' => $event->slug, 'id' => 'self'))) !!}
+                                {!! Form::button('<i class="fa fa-check"></i> Sign up', array('type' => 'submit', 'id' => 'register-btn')) !!}
+                                {!! Form::close() !!}
                             @else
-                                <button id="unregister-btn"><i class="fa fa-close"></i> Signup</button>
+                                {!! Form::open(array('action' => array('EventRegistrationsController@destroy', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'delete')) !!}
+                                {!! Form::button('<i class="fa fa-close"></i> Sign up', array('type' => 'submit', 'id' => 'unregister-btn')) !!}
+                                {!! Form::close() !!}
                             @endif
                         @else
                             <div class="modal">
@@ -82,7 +85,6 @@
                                                 Signup
                                             </button>
                                         </form>
-                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -129,6 +131,8 @@
 
 
             <div class="right">
+                @include ('errors.errors')
+
                 <div class="chair avatar large">
                     <h5>Person of Contact</h5>
                     <br/>
@@ -149,27 +153,25 @@
 
                 </div>
 
-                @if(Auth::check())
-                    <button id="chair-event-btn" type="button">Chair Event</button>
-                    <div class="confirm">
-                        <p>Are you sure?</p>
-                        <button id="confirm-chair" class="confirmation" type="button">Yes</button>
-                        <button id="reject-chair" class="rejection" type="button">No</button>
-                    </div>
-                @endif
-
                 @if($event->isRegistered(Auth::id()))
                     <div>
                         <h6>Volunteer to be a:</h6>
 
                         <div class="btn-group">
-                            <button id="drive-btn" type="button"><i class="fa fa-car"></i> Driver</button>
-                            <br/>
-                            <button id="photograph-btn" type="button"><i class="fa fa-camera"></i>
-                                Photographer
-                            </button>
-                            <br/>
-                            <button id="write-btn" type="button"><i class="fa fa-pencil"></i> Writer</button>
+                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
+                            {!! Form::hidden('driver_status', 1) !!}
+                            {!! Form::button('<i class="fa fa-car"></i> Driver', array('type' => 'submit', 'id' => 'drive-btn')) !!}
+                            {!! Form::close() !!}
+
+                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
+                            {!! Form::hidden('photographer_status', 1) !!}
+                            {!! Form::button('<i class="fa fa-camera"></i> Photographer', array('type' => 'submit', 'id' => 'photograph-btn')) !!}
+                            {!! Form::close() !!}
+
+                            {!! Form::open(array('method' => 'patch', 'action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'))) !!}
+                            {!! Form::hidden('writer_status', 1) !!}
+                            {!! Form::button('<i class="fa fa-pencil"></i> Writer', array('type' => 'submit', 'id' => 'write-btn')) !!}
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 @endif
@@ -190,6 +192,16 @@
                             'delete']) !!}
                             {!! Form::submit('Delete Event') !!}
                             {!! Form::close() !!}
+
+                            @if($event->isOpen())
+                                {!! Form::model($event, array('action' => array('EventsController@update', $event->slug), 'method' => 'POST')) !!}
+                                {!! Form::hidden('close_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')) !!}
+                                {!! Form::submit('Close sign-ups') !!}
+                            @else
+                                {!! Form::model($event, array('action' => array('EventsController@update', $event->slug), 'method' => 'POST')) !!}
+                                {!! Form::hidden('open_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')) !!}
+                                {!! Form::submit('Open sign-ups') !!}
+                            @endif
                         </div>
                 @endif
 

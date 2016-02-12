@@ -40,6 +40,8 @@
             @endif
         </div>
 
+        {{-- Image for event chair, required to move on with the form. --}}
+
         <div class="chair avatar large">
 
             @if (is_null($chair))
@@ -59,5 +61,6 @@
             @include('search.search')
 
         </div>
+
     </div>
 </div>

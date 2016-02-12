@@ -12,7 +12,14 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('main.scss')
-      .scriptsIn('resources/assets/js', 'public/js/main.js')
-      .version(['css/main.css', 'js/main.js']);
+  mix.sass('main.scss')
+    .scripts([
+      'app-constants.js',
+      'misc-config.js',
+      'cerf.js',
+      'popup-config.js',
+      'user-search.js',
+      '*.js'
+    ], 'public/js/main.js')
+    .version(['css/main.css', 'js/main.js']);
 });

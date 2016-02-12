@@ -28,7 +28,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $types = EventTYpe::all()->lists('name');
+        $types = EventType::all()->lists('name');
 
         return view('pages.calendar', compact('types'));
     }
@@ -51,10 +51,6 @@ class EventsController extends Controller
     public function store(CreateEventRequest $req)
     {
         $input = $req->all();
-
-        // Makes sure chair_id enters database as an integer or null if left empty.
-        strcmp($input['chair_id'], "") == 0 ? $input['chair_id'] = null
-                                            : $input['chair_id'] = (int) $input['chair_id'];
 
         // Ensures database times are always in UTC.
         foreach ($input as $key => $value) {
@@ -141,8 +137,8 @@ class EventsController extends Controller
 
         $event->start_time = $event->start_time->setTimezone('America/Los_Angeles');
         $event->end_time = $event->end_time->setTimezone('America/Los_Angeles');
-        $event->open_time = $event->end_time->setTimezone('America/Los_Angeles');
-        $event->close_time = $event->end_time->setTimezone('America/Los_Angeles');
+        $event->open_time = $event->open_time->setTimezone('America/Los_Angeles');
+        $event->close_time = $event->close_time->setTimezone('America/Los_Angeles');
 
         return view('pages.admin.events.update', compact('event'));
     }
@@ -157,10 +153,36 @@ class EventsController extends Controller
     {
         $input = $req->all();
 
+        $event = Event::findBySlug($slug);
+
+
+        if (array_key_exists('open_time', $input)) {
+            $openTime = new Carbon($input['open_time'], 'America/Los_Angeles');
+
+            if ($openTime->gte($event->end_time->setTimezone('America/Los_Angeles'))) {
+                return redirect()->action('EventsController@show', $slug)
+                                 ->withErrors('Cannot open sign-ups for an event that already occurred!');
+            }
+
+            // If the sign-up button shows up, and the event's close time is
+            // later than the current time, then makes the new open time to
+            // be current time (probably happens when the admin wants to open
+            // sign-ups earlier than expected when creating the event).
+            if ($event->close_time->setTimezone('America/Los_Angeles')->lte($openTime)) {
+
+                // However, if the admin is opening the event after it has already
+                // closed, then we should also update the close time, since the
+                // close time should not be before the open time (also keeps
+                // Event::isOpen() working).
+                $input['close_time'] = $event->end_time->setTimezone('America/Los_Angeles')->toDateTimeString();
+            }
+        }
+
         // Ensures database times are always in UTC.
         foreach ($input as $key => $value) {
 
-            // Ensures only time fields are changed.
+            // Ensures only time fields are changed. Open time and close times
+            // are already handled above.
             if (!strpos($key, 'time')) {
                 continue;
             }
@@ -173,7 +195,7 @@ class EventsController extends Controller
             $input[$key] = $utc->toDateTimeString();
         }
 
-        Event::findBySlug($slug)->update($input);
+        $event->update($input);
 
         return redirect()->action('EventsController@show', $slug);
     }

@@ -22,10 +22,10 @@ class UpdateEventRequest extends Request {
 	public function rules()
 	{
 		return [
-            'start_time' => 'sometimes|required|date',
+            'start_time' => 'sometimes|required|date|before:end_time',
             'end_time' => 'sometimes|required|date',
-            'open_time' => 'date',
-            'close_time' => 'date'
+            'open_time' => 'sometimes|date',
+            'close_time' => 'sometimes|date'
 		];
 	}
 

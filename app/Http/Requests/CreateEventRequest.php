@@ -22,12 +22,12 @@ class CreateEventRequest extends Request {
 	public function rules()
 	{
 		return [
+            'title' => 'required',
             'start_time' => 'required|date',
             'end_time' => 'required|date',
             'start_time' => 'before:end_time',
-            'open_time' => 'date',
+            'open_time' => 'date|before:close_time',
             'close_time' => 'date',
-            'open_time' => 'before:close_time'
 		];
 	}
 

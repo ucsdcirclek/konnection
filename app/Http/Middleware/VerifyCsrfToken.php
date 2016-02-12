@@ -5,6 +5,15 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 
 class VerifyCsrfToken extends BaseVerifier {
 
+    /**
+     * URIs excluded from CSRF verification. Should only exclude API endpoints.
+     *
+     * @var array
+     */
+    protected $except = [
+        'api/*'
+    ];
+
 	/**
 	 * Handle an incoming request.
 	 *

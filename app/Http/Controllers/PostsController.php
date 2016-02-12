@@ -95,7 +95,7 @@ class PostsController extends Controller {
 	}
 
     public function bulletin() {
-        $posts = Post::where('category_id', 5)->take(10)->get();
+        $posts = Post::where('category_id', 5)->orderBy('created_at', 'desc')->take(5)->get();
 
         return view('pages.bulletin', compact('posts'));
     }
