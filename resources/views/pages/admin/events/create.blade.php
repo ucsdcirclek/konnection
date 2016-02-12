@@ -33,7 +33,7 @@
 
         <label for="open_time">Signup Open</label>
         <p>(optional, defaults to now)</p>
-        {!! Form::text('open_time', '', array('class'=>'datetime')) !!}
+        {!! Form::text('open_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')->format('l, F j, Y g:i A'), array('class'=>'datetime')) !!}
 
         <label for="close_time">Signup Close</label>
         <p>(optional, defaults to event start time)</p>

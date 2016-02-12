@@ -137,8 +137,8 @@ class EventsController extends Controller
 
         $event->start_time = $event->start_time->setTimezone('America/Los_Angeles');
         $event->end_time = $event->end_time->setTimezone('America/Los_Angeles');
-        $event->open_time = $event->end_time->setTimezone('America/Los_Angeles');
-        $event->close_time = $event->end_time->setTimezone('America/Los_Angeles');
+        $event->open_time = $event->open_time->setTimezone('America/Los_Angeles');
+        $event->close_time = $event->close_time->setTimezone('America/Los_Angeles');
 
         return view('pages.admin.events.update', compact('event'));
     }
