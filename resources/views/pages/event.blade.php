@@ -195,11 +195,11 @@
 
                             @if($event->isOpen())
                                 {!! Form::model($event, array('action' => array('EventsController@update', $event->slug), 'method' => 'POST')) !!}
-                                {!! Form::hidden('close_time', Carbon\Carbon::now()) !!}
+                                {!! Form::hidden('close_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')) !!}
                                 {!! Form::submit('Close sign-ups') !!}
                             @else
                                 {!! Form::model($event, array('action' => array('EventsController@update', $event->slug), 'method' => 'POST')) !!}
-                                {!! Form::hidden('open_time', Carbon\Carbon::now()) !!}
+                                {!! Form::hidden('open_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')) !!}
                                 {!! Form::submit('Open sign-ups') !!}
                             @endif
                         </div>

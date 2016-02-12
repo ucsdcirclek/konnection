@@ -30,7 +30,7 @@
         {!! Form::text('end_time', $event->end_time->format('l, F j, Y g:i A'), array('class'=>'datetime')) !!}
 
         <label for="open_time">Signup Open</label>
-        {!! Form::text('open_time', $event->open_time->format('l, F j, Y g:i A'), array('class'=>'datetime')) !!}
+        {!! Form::text('open_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')->format('l, F j, Y g:i A'), array('class'=>'datetime')) !!}
 
         <label for="close_time">Signup Close</label>
         {!! Form::text('close_time', $event->close_time->format('l, F j, Y g:i A'), array('class'=>'datetime')) !!}
