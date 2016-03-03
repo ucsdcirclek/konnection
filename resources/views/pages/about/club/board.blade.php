@@ -17,7 +17,7 @@
         <img src="{{ asset('images/board/emilie.jpg') }}" />
     </div>
 
-    <div data-content="VP Service Bradley Ventayan" class="image">
+    <div data-content="VP Service Bradley Ventayen" class="image">
         <img src="{{ asset('images/board/brad.jpg') }}" />
     </div>
 
@@ -58,7 +58,7 @@
         <img src="{{ asset('images/board/mason.jpg') }}" />
     </div>
 
-    <div data-content="Member Recognition AZ DeGuzman" class="image">
+    <div data-content="Member Relations AZ DeGuzman" class="image">
         <img src="{{ asset('images/board/az.jpg') }}" />
     </div>
 
