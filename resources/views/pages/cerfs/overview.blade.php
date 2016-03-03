@@ -39,7 +39,7 @@
 
                                     <div class="cerf-description">
                                         <p><strong>{{ $event->title }}</strong></p>
-                                        <p>{{ $event->end_time->setTimezone('America/Los_Angeles')->format('l, F j, Y') }}</p>
+                                        <p><b>Occurred:</b> {{ $event->end_time->setTimezone('America/Los_Angeles')->format('l, F j, Y') }}</p>
                                     </div>
                                 </div>
                             </a>
