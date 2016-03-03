@@ -5,8 +5,9 @@
 @endsection
 
 @section('content')
+    @include('layouts.header', array('headerTitle' => 'About Our District'))
+
     <div class="wrapper">
-        <h1>About Our District</h1><br />
         <p>
             UCSD Circle K is a part of <strong>Cal-Nev-Ha</strong> district, which comprises California, Nevada, and Hawaii. CNH is the largest district in CKI. From the black sand beaches of Hawaii, the glamour of Hollywood, to the world's playground of Las Vegas, the California-Nevada-Hawaii District spans over 2700 miles to include some of the most dynamic and diverse parts of the world. With 40 clubs and over 1,000 members spanning these three states, Cal-Nev-Ha serves as a shining beacon to its fellow districts.
 

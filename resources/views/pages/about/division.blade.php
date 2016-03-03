@@ -5,8 +5,9 @@
 @endsection
 
 @section('content')
+    @include('layouts.header', array('headerTitle' => 'About Our Division'))
+
     <div class="wrapper">
-        <h1>About Our Division</h1><br />
         <p>
             UCSD Circle K is a part of <strong>Paradise Division</strong>, one of the eight divisions in Cal-Nev-Ha (see District tab). Our current Lieutenant Governor is San Diego State University's <strong>Gerald Biando</strong>. Our division
             comprises	seven schools that range in location from California to Hawaii. Paradise Division's mascots are a <strong>toucan and a pineapple</strong>.
