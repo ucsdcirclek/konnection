@@ -36,9 +36,9 @@ class CerfsController extends Controller {
      */
     public function overview()
     {
-        // Ensures only events created after implementation of online CERFs system are checked.
+        // Only shows events that occurred within the last month and a half.
         $newestAllowed = Carbon::now();
-        $oldestAllowed = Carbon::now()->subMonth();
+        $oldestAllowed = Carbon::now()->subMonth()->subWeeks(2);
 
         // Finds IDs of all events that do not have an associated approved CERF.
         $eventIdsWithoutCerfs = Event::select('events.id')
@@ -49,9 +49,11 @@ class CerfsController extends Controller {
 
         // TODO Paginate events that need to be CERFed.
 
-        // Retrieves events without CERFs based on ID. Casts to array to pass to foreach loop in view.
-        $eventsWithoutCerfs = Event::find($eventIdsWithoutCerfs->toArray());
+        // Retrieves events without CERFs based on ID. Casts to array to pass to foreach loop in view and sorts events
+        // in descending order by when they ended (most recent events are closer to the top).
+        $eventsWithoutCerfs = Event::find($eventIdsWithoutCerfs->toArray())->sortByDesc('end_time');
 
+        // Gets CERFs that belong to currently logged in user.
         $userCerfs = Cerf::where('reporter_id', Auth::id())->where('approved', false)->get();
 
         return view('pages.cerfs.overview', compact('eventsWithoutCerfs', 'userCerfs', 'oldestAllowed', 'newestAllowed'));
@@ -78,10 +80,14 @@ class CerfsController extends Controller {
 	 */
 	public function index()
 	{
+        $now = Carbon::now();
+        $monthAndHalfAgo = Carbon::now()->subMonth()->subWeeks(2);
+
         $pendingCerfs = Cerf::where('approved', false)->get();
 
-        // TODO Add filter for approved CERFs.
-        $approvedCerfs = Cerf::where('approved', true)->get();
+        $approvedCerfs = Cerf::where('approved', true)
+                             ->whereBetween('created_at', [$now, $monthAndHalfAgo])
+                             ->orderBy('created_at', 'desc')->get();
 
         return view('pages.cerfs.index', compact('pendingCerfs', 'approvedCerfs'));
 	}

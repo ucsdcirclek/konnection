@@ -54,6 +54,7 @@
                                 {!! Form::close() !!}
                             @endif
                         @else
+
                             <div class="modal">
                                 <label for="guestRegistration">
                                     <div class="btn"><i class="fa fa-check"></i> Guest Signup</div>
@@ -66,28 +67,25 @@
 
                                         <h1>Sign up as a guest</h1>
 
-                                        <p class="intro">We're glad you've decided to check us out! Please leave us with
-                                            some
-                                            contact
-                                            information in case we need to contact you regarding our event!</p>
+                                        <p class="intro">We're glad you've decided to check us out! Please leave us with some contact information in case we need to contact you regarding our event!</p>
 
-                                        <p class="body">
+                                        {!! Form::open(array('action' => array('GuestRegistrationsController@store', $event->slug))) !!}
 
-                                        <form id="registerGuest">
-                                            <label>First Name</label>
-                                            <input type="text" name="firstName">
-                                            <label>Last Name</label>
-                                            <input type="text" name="lastName">
-                                            <label>Phone Number</label>
-                                            <input type="tel" name="phone">
+                                        {!! Form::label('first_name', 'First Name') !!}
+                                        {!! Form::text('first_name') !!}
 
-                                            <button type="submit">
-                                                Signup
-                                            </button>
-                                        </form>
+                                        {!! Form::label('last_name', 'Last Name') !!}
+                                        {!! Form::text('last_name') !!}
+
+                                        {!! Form::label('phone', 'Phone') !!}
+                                        {!! Form::text('phone') !!}
+
+                                        {!! Form::submit('Submit')  !!}
+                                        {!! Form::close() !!}
                                     </div>
                                 </div>
                             </div>
+
                         @endif
                     </div>
                 @endif
@@ -123,6 +121,24 @@
 
                                 <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
 
+                            </li>
+                        @endforeach
+
+                        {{-- Displays guests. --}}
+                        @foreach($event->guests as $guestRegistration)
+                            <li class="avatar small">
+                                <div class="avatar-wrapper">
+                                    <img src="/avatars/original/missing.png"/>
+
+                                    {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
+                                    <div class="overlay">
+                                        @if ($guestRegistration->driver_status)
+                                            <i class="fa fa-car"></i>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <p class="name">{{ $guestRegistration->first_name}} {{ $guestRegistration->last_name }}</p>
                             </li>
                         @endforeach
                     </ul>

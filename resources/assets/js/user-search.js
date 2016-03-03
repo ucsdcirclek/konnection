@@ -10,8 +10,6 @@
  */
 
 $(function() {
-  console.log('initialized user-search');
-
   var timeoutID;
 
   window.addNotListed = function() {

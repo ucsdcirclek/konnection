@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
+    @include('layouts.header', array('headerTitle' => 'Contact Us!'))
     <div class="wrapper">
-        <h1>Contact us!</h1><br />
-        <h3>2014 - 2015 UCSD CKI Board</h3>
+        <h1>2014 - 2015 UCSD CKI Board</h1>
         <table>
             <tr>
                 <th>Name</th>

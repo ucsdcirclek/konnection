@@ -1,8 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
+
+    @include('layouts.header', array('headerTitle' => 'About Circle K'))
+
     <div id="about" class="wrapper">
-        <h1>About Circle K</h1><br />
         <div id="sidebar">
             <div class="page"><a href="{{ url('about/circlek') }}">General</a></div>
             <hr>
@@ -12,7 +14,6 @@
             <hr>
             <div class="page"><a href="{{ url('about/circlek/tenets') }}">Tenets</a></div>
         </div>
-        <br /><br />
         <div id="main">
             @yield('about-content')
         </div>
