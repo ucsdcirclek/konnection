@@ -86,7 +86,7 @@ class CerfsController extends Controller {
         $pendingCerfs = Cerf::where('approved', false)->get();
 
         $approvedCerfs = Cerf::where('approved', true)
-                             ->whereBetween('created_at', [$now, $monthAndHalfAgo])
+                             ->whereBetween('created_at', [$monthAndHalfAgo, $now])
                              ->orderBy('created_at', 'desc')->get();
 
         return view('pages.cerfs.index', compact('pendingCerfs', 'approvedCerfs'));

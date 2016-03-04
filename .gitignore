@@ -6,7 +6,7 @@ _ide_helper.php
 .idea/
 .DS_Store
 
-/storage/debugbar/
+/storage
 /public/css/main.css
 /public/css/main.css.map
 /public/js/main.js
