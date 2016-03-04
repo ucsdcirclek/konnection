@@ -5,47 +5,68 @@
 @endsection
 
 @section('about-content')
-    <div data-content="President &nbsp; Deborah Diaz" class="image">
-        <img src="{{ asset('images/board/Deborah.jpg') }}" />
+    <h1 class="about-title">UCSD Circle K Board 2015-2016</h1>
+
+    <br/>
+
+    <div data-content="President &nbsp; Joseph Le" class="image">
+        <img src="{{ asset('images/board/joseph.jpg') }}" />
     </div>
 
-    <div data-content="VP Administration Jaime Estepa" class="image">
-        <img src="{{ asset('images/board/Jaime.jpg') }}" />
+    <div data-content="VP Administration Emilie Shen" class="image">
+        <img src="{{ asset('images/board/emilie.jpg') }}" />
     </div>
 
-    <div data-content="VP Service Taryn Conyers" class="image">
-        <img src="{{ asset('images/board/Taryn.jpg') }}" />
+    <div data-content="VP Service Bradley Ventayen" class="image">
+        <img src="{{ asset('images/board/brad.jpg') }}" />
     </div>
 
-    <div data-content="Secretary Emilie Shen" class="image">
-        <img src="{{ asset('images/board/Emilie.jpg') }}" />
+    <div data-content="Secretary Esther Wang" class="image">
+        <img src="{{ asset('images/board/esther.jpg') }}" />
     </div>
 
-    <div data-content="Treasurer Victoria Ortiz " class="image">
-        <img src="{{ asset('images/board/Victoria.jpg') }}" />
+    <div data-content="Treasurer Thong Pham" class="image">
+        <img src="{{ asset('images/board/thong.jpg') }}" />
     </div>
     <br>
 
-    <div data-content="Fundraising Cyrielle Hacher" class="image">
-        <img src="{{ asset('images/board/Cyrielle.jpg') }}" />
+    <div data-content="Fundraising Sabrina Lim" class="image">
+        <img src="{{ asset('images/board/sabrina.jpg') }}" />
     </div>
-    <div data-content="Historian Tim Hwang" class="image">
-        <img src="{{ asset('images/board/Tim.jpg') }}" />
-    </div>
-
-    <div data-content="Kiwanis Family Jon Woo" class="image">
-        <img src="{{ asset('images/board/Jon.jpg') }}" />
+    <div data-content="Historian Vivian Dinh" class="image">
+        <img src="{{ asset('images/board/vivian.jpg') }}" />
     </div>
 
-    <div data-content="Public Relations Nick Chang" class="image">
-        <img src="{{ asset('images/board/Nick.jpg') }}" />
+    <div data-content="Kiwanis Family Vincent Lim" class="image">
+        <img src="{{ asset('images/board/vincent.jpg') }}" />
     </div>
-    <div data-content="Social Andrew Thai" class="image">
-        <img src="{{ asset('images/board/Andrew.jpg') }}" />
+
+    <div data-content="Public Relations Erica Kao" class="image">
+        <img src="{{ asset('images/board/erica.jpg') }}" />
     </div>
+    <div data-content="Social Bella Nguyen" class="image">
+        <img src="{{ asset('images/board/bella.jpg') }}" />
+    </div>
+
     <br>
 
-    <div data-content="Technology Joseph Le" class="image">
-        <img src="{{ asset('images/board/Joseph.jpg') }}" />
+    <div data-content="Member Development and Education Christine Vo" class="image">
+        <img src="{{ asset('images/board/christine.jpg') }}" />
+    </div>
+
+    <div data-content="Service Mason Zhu" class="image">
+        <img src="{{ asset('images/board/mason.jpg') }}" />
+    </div>
+
+    <div data-content="Member Relations AZ DeGuzman" class="image">
+        <img src="{{ asset('images/board/az.jpg') }}" />
+    </div>
+
+    <div data-content="Spirit Adrian Cruz" class="image">
+        <img src="{{ asset('images/board/adrian.jpg') }}" />
+    </div>
+
+    <div data-content="Technology Brian Tan" class="image">
+        <img src="{{ asset('images/board/brian.jpg') }}" />
     </div>
 @endsection

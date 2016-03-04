@@ -6,7 +6,6 @@
  */
 
 $(function() {
-  console.log('initialized popup-config');
 
   $('.search-popup-link').magnificPopup({
     type: 'inline',

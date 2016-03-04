@@ -14,6 +14,9 @@ Route::get('/', 'HomeController@index');
 Route::get('events', 'EventsController@index');
 Route::get('events/{id}', 'EventsController@show');
 
+// Allows anonymous users to create registrations.
+Route::post('events/{slug}/guest_registrations/create', 'GuestRegistrationsController@store');
+
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
