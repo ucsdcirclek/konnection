@@ -10,38 +10,37 @@
 $(function() {
   // Sets color of event cell based on type of event.
   window.setEventColor = function(type_id) {
-
     var color = appConstants.DEFAULT_COLOR;
 
-    switch (type_id) {
+    switch (type_id.toString()) {
 
       //Service
-      case 1:
+      case '1':
         color = appConstants.SERVICE_COLOR;
         break;
 
       // Social
-      case 2:
+      case '2':
         color = appConstants.SOCIAL_COLOR;
         break;
 
       // Committee
-      case 3:
+      case '3':
         color = appConstants.COMMITTEE_COLOR;
         break;
 
       // Kiwanis
-      case 4:
+      case '4':
         color = appConstants.KIWANIS_COLOR;
         break;
 
       // Fundraising
-      case 5:
+      case '5':
         color = appConstants.FUNDRAISING_COLOR;
         break;
 
       // Division/District
-      case 6:
+      case '6':
         color = appConstants.DIVISION_COLOR;
         break;
     }
