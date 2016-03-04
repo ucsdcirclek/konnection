@@ -15,6 +15,7 @@ use Imagine\Image\Box;
 use Imagine\Gd\Imagine;
 
 use File;
+use Intervention\Image\Facades\Image;
 use \PHPExif\Reader\Reader;
 
 class UsersController extends Controller {
@@ -73,14 +74,14 @@ class UsersController extends Controller {
 
         $cropSucceeded = true;
 
-        if (!is_null($input['avatar'])) $cropSucceeded = $this->cropAvatar();
+        if (!is_null($input['avatar'])) $image = $this->cropAvatar();
 
-        if ($cropSucceeded) {
+        if ($image) {
             return redirect()->action('UsersController@edit')
                 ->with('message', 'Your profile has been updated.');
         } else {
             return redirect()->action('UsersController@edit')
-                ->withErrors(['error', 'Image type not supported! Please try a different image.']);
+                ->withErrors(['error', 'Something went wrong! Image was too big or format was not supported. Please try another image.']);
         }
 	}
 
@@ -91,78 +92,16 @@ class UsersController extends Controller {
      */
     private function cropAvatar() {
 
-        // Image manipulation class part of codesleeve/laravel-stapler.
-        $imagine = new Imagine();
-
         // Gets full path of uploaded avatar, creates Imagine object to manipulate image.
         $avatarPath = \Auth::user()->avatar->url();
-        $image =  $imagine->open(public_path() . $avatarPath);
+        $image = Image::make(public_path() . $avatarPath);
 
-        // Reads EXIF data with a wrapper around native exif_read_data() PHP function.
-        $reader = Reader::factory(Reader::TYPE_NATIVE);
-        $exifData = $reader->getExifFromFile(public_path() . $avatarPath)->getRawData();
+        $image->resize(300, null, function ($constraint) {
+            $constraint->aspectRatio();
+        });
 
-        $width = NULL;
-        $height = NULL;
-
-        if (array_key_exists('ExifImageWidth', $exifData) && array_key_exists('ExifImageLength')) {
-            $width = $exifData['ExifImageWidth'];
-            $height = $exifData['ExifImageLength'];
-        }
-
-        // Sometimes the image will not have all EXIF data. Instead, it might
-        // have an automatically computed width and height.
-        else if (array_key_exists('COMPUTED', $exifData)) {
-            $width = $exifData['COMPUTED']['Width'];
-            $height = $exifData['COMPUTED']['Height'];
-        }
-
-        // If the image has no height or width values, then redirect back to
-        // settings page with an error message.
-        else {
-            return false;
-        }
-
-        // Crops off top and  bottom for tall images.
-        if ($height > $width) {
-            $start = ($height - $width) / 2;
-            $image->crop(new Point(0, $start), new Box($width, $width));
-        }
-
-        // Crops off sides for wide images.
-        else {
-            $start = ($width - $height) / 2;
-            $image->crop(new Point($start, 0), new Box($height, $height));
-        }
-
-        // In case image does not have all EXIF data, including orientation.
-        // Setting EXIF orientation to 1 stores the image as it is originally
-        // oriented.
-        if (!array_key_exists('Orientation', $exifData)) $exifData['Orientation'] = 1;
-
-        // Adjusts orientation depending on EXIF orientation data.
-        switch($exifData['Orientation']) {
-
-            // Rotates image if it is upside down.
-            case 3:
-                $image->rotate(180);
-                break;
-
-            // Rotates image 90 degrees to the right.
-            case 6:
-                $image->rotate(90);
-                break;
-
-            // Rotates image 90 degrees to the left.
-            case 8:
-                $image->rotate(-90);
-                break;
-        }
-
-        // Replaces original avatar and ensures previous image is deleted.
-        File::delete(public_path() . $avatarPath);
         $image->save(public_path() . $avatarPath);
 
-        return true;
+        return $image;
     }
 }

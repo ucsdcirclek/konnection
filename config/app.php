@@ -161,6 +161,7 @@ return [
 
 		'Barryvdh\Cors\ServiceProvider',
 		'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
+		Intervention\Image\ImageServiceProvider::class,
 	],
 
 	/*
@@ -217,6 +218,7 @@ return [
         'APIRoute' => 'Dingo\Api\Facade\Route',
         'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth',
         'JWTFactory' => 'Tymon\JWTAuth\Facades\JWTFactory',
+        'Image' => Intervention\Image\Facades\Image::class,
 	],
 
 ];
