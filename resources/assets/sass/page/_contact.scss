@@ -1,0 +1,28 @@
+.title-wrapper {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.contact-row {
+  padding: 5px;
+  display: flex;
+
+  div {
+    margin: 5px;
+    text-align: center;
+
+    img {
+      padding: 10px 0;
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+    }
+
+    flex: 1;
+    background-color: $lightest-green;
+    border-radius: $base-border-radius;
+  }
+
+  p { margin: 0; }
+  p:last-child { margin-bottom: 10px; }
+}

@@ -7,7 +7,112 @@
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Contact Us!'))
     <div class="wrapper">
-        <h1>2014 - 2015 UCSD CKI Board</h1>
+        <div class="title-wrapper">
+            <h1 class="title">2015 - 2016 UCSD CKI Board</h1>
+            <h1 class="title">"Incrediboard"</h1>
+        </div>
+
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/board/joseph.jpg') }}" />
+                <p><strong>Joseph Le</strong></p>
+                <p>President</p>
+                <p>president@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/emilie.jpg') }}" />
+                <p><strong>Emilie Shen</strong></p>
+                <p>Vice President of Administration</p>
+                <p>vpa@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/brad.jpg') }}" />
+                <p><strong>Bradley Ventayen</strong></p>
+                <p>Vice President of Service</p>
+                <p>vps@ucsdcki.org</p>
+            </div>
+        </div>
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/board/esther.jpg') }}" />
+                <p><strong>Esther Wang</strong></p>
+                <p>Secretary</p>
+                <p>secretary@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/thong.jpg') }}" />
+                <p><strong>Thong Pham</strong></p>
+                <p>Treasurer</p>
+                <p>treasurer@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/sabrina.jpg') }}" />
+                <p><strong>Sabrina Lim</strong></p>
+                <p>Fundraising</p>
+                <p>fundraising@ucsdcki.org</p>
+            </div>
+        </div>
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/board/vivian.jpg') }}" />
+                <p><strong>Vivian Dinh</strong></p>
+                <p>Historian</p>
+                <p>historian@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/vincent.jpg') }}" />
+                <p><strong>Vincent Lim</strong></p>
+                <p>Kiwanis Family</p>
+                <p>kfam@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/erica.jpg') }}" />
+                <p><strong>Erica Kao</strong></p>
+                <p>Public Relations</p>
+                <p>pr@ucsdcki.org</p>
+            </div>
+        </div>
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/board/az.jpg') }}" />
+                <p><strong>Adrian DeGuzman</strong></p>
+                <p>Member Relations</p>
+                <p>mr@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/christine.jpg') }}" />
+                <p><strong>Christine Vo</strong></p>
+                <p>Member Development and Education</p>
+                <p>mde@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/bella.jpg') }}" />
+                <p><strong>Bella Nguyen</strong></p>
+                <p>Social</p>
+                <p>social@ucsdcki.org</p>
+            </div>
+        </div>
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/board/adrian.jpg') }}" />
+                <p><strong>Adrian Cruz</strong></p>
+                <p>Spirit</p>
+                <p>spirit@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/mason.jpg') }}" />
+                <p><strong>Mason Zhu</strong></p>
+                <p>Service</p>
+                <p>service@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/board/brian.jpg') }}" />
+                <p><strong>Brian Tan</strong></p>
+                <p>Technology</p>
+                <p>technology@ucsdcki.org</p>
+            </div>
+        </div>
+        {{--
         <table>
             <tr>
                 <th>Name</th>
@@ -85,5 +190,6 @@
                 <td>technology@ucsdcki.org</td>
             </tr>
         </table>
+        --}}
     </div>
 @endsection
