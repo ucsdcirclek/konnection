@@ -96,9 +96,7 @@ class UsersController extends Controller {
         $avatarPath = \Auth::user()->avatar->url();
         $image = Image::make(public_path() . $avatarPath);
 
-        $image->resize(300, null, function ($constraint) {
-            $constraint->aspectRatio();
-        });
+        $image->fit(300);
 
         $image->save(public_path() . $avatarPath);
 
