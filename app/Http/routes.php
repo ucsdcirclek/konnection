@@ -133,6 +133,7 @@ $api->version('v1', function($api) {
         $api->post('events/event_range', 'EventsController@getEventsInRange');
         $api->post('events/event_date', 'EventsController@getEventsOnDate');
         $api->get('events/{slug}/registrations', 'EventRegistrationsController@index');
+        $api->get('events/{id}', 'EventsController@show');
 
         // Post resource routes.
         $api->get('posts', 'PostsController@index');
