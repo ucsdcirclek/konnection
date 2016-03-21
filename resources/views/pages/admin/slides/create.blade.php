@@ -2,6 +2,8 @@
 
 @section('admin-content')
     <div class="wrapper create-form">
+        @include('errors.errors')
+
         <h2>Create a Slide</h2>
         <p>
             For a slider with just an image without a text overlay, leave the

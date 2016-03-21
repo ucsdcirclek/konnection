@@ -96,7 +96,6 @@ Route::group(['prefix' => 'about'], function()
     Route::group(['prefix' => 'club'], function()
     {
         Route::get('/', function() { return view('pages.about.club.general'); });
-        Route::get('board', function() { return view('pages.about.club.board'); });
         Route::get('causes', function() { return view('pages.about.club.causes'); });
         Route::get('tenets', function() { return view('pages.about.club.tenets'); });
     });

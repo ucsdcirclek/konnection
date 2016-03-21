@@ -12,6 +12,9 @@ $(function() {
   window.setEventColor = function(type_id) {
     var color = appConstants.DEFAULT_COLOR;
 
+    if (!type_id)
+      return color;
+
     switch (type_id.toString()) {
 
       //Service
