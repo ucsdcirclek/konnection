@@ -9,6 +9,7 @@ use App\Event;
 use App\Http\Requests;
 use App\Api\Transformers\EventTransformer;
 use Carbon\Carbon;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Events resource representation. Only requires authentication for unsafe
@@ -31,8 +32,24 @@ class EventsController extends APIController
      */
     public function index()
     {
-        $events = Event::paginate();
+        $events = Event::orderBy('start_time', 'desc')->paginate();
         return $this->response->paginator($events, new EventTransformer);
+    }
+
+    /**
+     * Provides details of an event given its ID.
+     *
+     * @Get("/events/{id]")
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function show($id)
+    {
+        $event = Event::find($id);
+        if (!$event) throw new NotFoundHttpException('Event does not exist.');
+
+        return $event;
     }
 
     /**

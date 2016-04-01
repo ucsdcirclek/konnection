@@ -96,7 +96,6 @@ Route::group(['prefix' => 'about'], function()
     Route::group(['prefix' => 'club'], function()
     {
         Route::get('/', function() { return view('pages.about.club.general'); });
-        Route::get('board', function() { return view('pages.about.club.board'); });
         Route::get('causes', function() { return view('pages.about.club.causes'); });
         Route::get('tenets', function() { return view('pages.about.club.tenets'); });
     });
@@ -134,6 +133,7 @@ $api->version('v1', function($api) {
         $api->post('events/event_range', 'EventsController@getEventsInRange');
         $api->post('events/event_date', 'EventsController@getEventsOnDate');
         $api->get('events/{slug}/registrations', 'EventRegistrationsController@index');
+        $api->get('events/{id}', 'EventsController@show');
 
         // Post resource routes.
         $api->get('posts', 'PostsController@index');
