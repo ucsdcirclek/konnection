@@ -6,113 +6,116 @@
 
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Contact Us!'))
+
     <div class="wrapper">
         <div class="title-wrapper">
-            <h1 class="title">2015 - 2016 UCSD CKI Board</h1>
-            <h1 class="title">"Incrediboard"</h1>
+            <h1 class="title">2016 - 2017 UCSD CKI Board</h1>
+            <h1 class="title">"Billboard Hot 15"</h1>
         </div>
 
+        {{--
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/joseph.jpg') }}" />
-                <p><strong>Joseph Le</strong></p>
+                <img src="{{ asset('images/board/sabrina.jpg') }}" />
+                <p><strong>Sabrina Lim</strong> aka "Savage Cabbage"</p>
                 <p>President</p>
                 <p>president@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/emilie.jpg') }}" />
-                <p><strong>Emilie Shen</strong></p>
+                <img src="{{ asset('images/board/vincent.jpg') }}" />
+                <p><strong>Vincent Lim</strong></p>
                 <p>Vice President of Administration</p>
                 <p>vpa@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/brad.jpg') }}" />
-                <p><strong>Bradley Ventayen</strong></p>
+                <img src="{{ asset('images/board/chloris.jpg') }}" />
+                <p><strong>Chloris Li</strong></p>
                 <p>Vice President of Service</p>
                 <p>vps@ucsdcki.org</p>
             </div>
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/esther.jpg') }}" />
-                <p><strong>Esther Wang</strong></p>
+                <img src="{{ asset('images/board/susan.jpg') }}" />
+                <p><strong>Susan Sun</strong></p>
                 <p>Secretary</p>
                 <p>secretary@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/thong.jpg') }}" />
-                <p><strong>Thong Pham</strong></p>
+                <img src="{{ asset('images/board/jason.jpg') }}" />
+                <p><strong>Jason Liu</strong></p>
                 <p>Treasurer</p>
                 <p>treasurer@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/sabrina.jpg') }}" />
-                <p><strong>Sabrina Lim</strong></p>
+                <img src="{{ asset('images/board/michelle.jpg') }}" />
+                <p><strong>Michelle Cang</strong></p>
                 <p>Fundraising</p>
                 <p>fundraising@ucsdcki.org</p>
             </div>
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/vivian.jpg') }}" />
-                <p><strong>Vivian Dinh</strong></p>
+                <img src="{{ asset('images/board/tiffany.jpg') }}" />
+                <p><strong>Tiffany Nguyen</strong></p>
                 <p>Historian</p>
                 <p>historian@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/vincent.jpg') }}" />
-                <p><strong>Vincent Lim</strong></p>
+                <img src="{{ asset('images/board/jennifer.jpg') }}" />
+                <p><strong>Jennifer Truong</strong></p>
                 <p>Kiwanis Family</p>
                 <p>kfam@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/erica.jpg') }}" />
-                <p><strong>Erica Kao</strong></p>
+                <img src="{{ asset('images/board/jane.jpg') }}" />
+                <p><strong>Jane Wu</strong></p>
                 <p>Public Relations</p>
                 <p>pr@ucsdcki.org</p>
             </div>
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/az.jpg') }}" />
-                <p><strong>Adrian DeGuzman</strong></p>
+                <img src="{{ asset('images/board/mason.jpg') }}" />
+                <p><strong>Mason Zhu</strong></p>
                 <p>Member Relations</p>
                 <p>mr@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/christine.jpg') }}" />
-                <p><strong>Christine Vo</strong></p>
+                <img src="{{ asset('images/board/john.jpg') }}" />
+                <p><strong>John Shin</strong></p>
                 <p>Member Development and Education</p>
                 <p>mde@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/bella.jpg') }}" />
-                <p><strong>Bella Nguyen</strong></p>
+                <img src="{{ asset('images/board/diana.jpg') }}" />
+                <p><strong>Diana Thai</strong></p>
                 <p>Social</p>
                 <p>social@ucsdcki.org</p>
             </div>
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/adrian.jpg') }}" />
-                <p><strong>Adrian Cruz</strong></p>
-                <p>Spirit</p>
-                <p>spirit@ucsdcki.org</p>
+                <img src="{{ asset('images/board/michael.jpg') }}" />
+                <p><strong>Michael Lindarto</strong></p>
+                <p>Fellowship</p>
+                <p>fellowship@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/mason.jpg') }}" />
-                <p><strong>Mason Zhu</strong></p>
+                <img src="{{ asset('images/board/hannah.jpg') }}" />
+                <p><strong>Hannah Hwang</strong></p>
                 <p>Service</p>
                 <p>service@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/brian.jpg') }}" />
-                <p><strong>Brian Tan</strong></p>
+                <img src="{{ asset('images/board/reggie.jpg') }}" />
+                <p><strong>Reggie Wu</strong></p>
                 <p>Technology</p>
                 <p>technology@ucsdcki.org</p>
             </div>
         </div>
-        {{--
+       --}}
+
         <table>
             <tr>
                 <th>Name</th>
@@ -120,76 +123,76 @@
                 <th>Email</th>
             </tr>
             <tr>
-                <td>Joseph Le</td>
+                <td>Sabrina Lim</td>
                 <td>President</td>
                 <td>president@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Emilie Shen</td>
+                <td>Vincent Lim</td>
                 <td>VP of Administration</td>
                 <td>vpa@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Bradley Ventayen</td>
+                <td>Chloris Li</td>
                 <td>VP of Service</td>
                 <td>vps@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Esther Wang</td>
+                <td>Susan Sun</td>
                 <td>Secretary</td>
                 <td>secretary@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Thong Pham</td>
+                <td>Jason Liu</td>
                 <td>Treasurer</td>
                 <td>treasurer@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Sabrina Lim</td>
+                <td>Michelle Cang</td>
                 <td>Fundraising</td>
                 <td>fundraising@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Vivian Dinh</td>
+                <td>Tiffany Nguyen</td>
                 <td>Historian</td>
                 <td>historian@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Vincent Lim</td>
+                <td>Jennifer Truong</td>
                 <td>Kiwanis Family</td>
                 <td>kfam@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Erica Kao</td>
+                <td>Jane Wu</td>
                 <td>Public Relations</td>
                 <td>pr@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Adrian DeGuzman</td>
+                <td>Mason Zhu</td>
                 <td>Member Relations</td>
                 <td>mr@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Christine Vo</td>
+                <td>John Shin</td>
                 <td>Membership Development & Education</td>
                 <td>mde@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Bella Nguyen</td>
+                <td>Diana Thai</td>
                 <td>Social Chair</td>
                 <td>social@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Adrian Cruz</td>
-                <td>Spirit Chair</td>
-                <td>spirit@ucsdcki.org</td>
+                <td>Michael Lindarto</td>
+                <td>Fellowship Chair</td>
+                <td>fellowship@ucsdcki.org</td>
             </tr>
             <tr>
-                <td>Brian Tan</td>
+                <td>Reggie Wu</td>
                 <td>Technology Chair</td>
                 <td>technology@ucsdcki.org</td>
             </tr>
         </table>
-        --}}
+
     </div>
 @endsection
