@@ -23,7 +23,7 @@ class UpdateUserRequest extends Request {
 	{
 		return [
 			'email' => 'sometimes|required|email',
-            'password_confirmation' => 'confirmed',
+            'confirmed' => 'password',
             'first_name' => 'sometimes|required',
             'last_name' => 'sometimes|required',
             'avatar' => 'image'

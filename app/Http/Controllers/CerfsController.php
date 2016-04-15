@@ -83,7 +83,9 @@ class CerfsController extends Controller {
         $now = Carbon::now();
         $monthAndHalfAgo = Carbon::now()->subMonth()->subWeeks(2);
 
-        $pendingCerfs = Cerf::where('approved', false)->get();
+        // Does not limit CERFs within a month and a half ago since out of date CERFs should be rejected to be deleted
+        // anyways.
+        $pendingCerfs = Cerf::where('approved', false)->orderBy('created_at', 'desc')->get();
 
         $approvedCerfs = Cerf::where('approved', true)
                              ->whereBetween('created_at', [$monthAndHalfAgo, $now])

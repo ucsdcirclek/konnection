@@ -18,6 +18,8 @@ use File;
 use Intervention\Image\Facades\Image;
 use \PHPExif\Reader\Reader;
 
+use Hash;
+
 class UsersController extends Controller {
 
     /**
@@ -69,20 +71,23 @@ class UsersController extends Controller {
         // Only take acceptable input
 		$input = $req->only('avatar', 'password', 'email', 'first_name', 'last_name');
 
-        // Update user
-        \Auth::user()->update($input);
+        // Removes null and empty strings to prevent empty passwords from being hashed and put into the database.
+        $filtered_input = array_filter($input);
 
-        $cropSucceeded = true;
+        if (array_key_exists('password', $filtered_input))
+            $filtered_input['password'] = Hash::make($req->password);
 
-        if (!is_null($input['avatar'])) $image = $this->cropAvatar();
+        if (array_key_exists('avatar', $filtered_input)) {
+            $image = $this->cropAvatar();
 
-        if ($image) {
-            return redirect()->action('UsersController@edit')
-                ->with('message', 'Your profile has been updated.');
-        } else {
-            return redirect()->action('UsersController@edit')
-                ->withErrors(['error', 'Something went wrong! Image was too big or format was not supported. Please try another image.']);
+            if (!$image)
+                redirect()->action('UsersController@edit')
+                          ->withErrors(['error', 'Something went wrong! Image was too big or format was not supported. Please try another image.']);
         }
+
+        // Update user
+        \Auth::user()->update($filtered_input);
+        return redirect()->action('UsersController@edit')->with('message', 'Your profile has been updated.');
 	}
 
     /**

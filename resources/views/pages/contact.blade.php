@@ -188,6 +188,11 @@
                 <td>fellowship@ucsdcki.org</td>
             </tr>
             <tr>
+                <td>Hannah Hwang</td>
+                <td>Service Chair</td>
+                <td>service@ucsdcki.org</td>
+            </tr>
+            <tr>
                 <td>Reggie Wu</td>
                 <td>Technology Chair</td>
                 <td>technology@ucsdcki.org</td>

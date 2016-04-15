@@ -20,7 +20,7 @@
                             </div>
 
                             <div class="cerf-description">
-                                <p>CERF for: <strong>{{ $cerf->event->title }}</strong></p>
+                                <p>CERF for: <strong>{{ $cerf->event->title ? $cerf->event->title : "No Title" }}</strong></p>
                                 <small>Reported on {{ $cerf->created_at->setTimezone('America/Los_Angeles')->format('l, F j, Y') }}</small>
                             </div>
                         </div>
