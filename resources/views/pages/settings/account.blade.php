@@ -32,10 +32,10 @@
         {!! \Form::email('email') !!}
 
         <label for="password">New Password</label>
-        {!! \Form::password('password') !!}
+        {!! \Form::password('password', null) !!}
 
         <label for="password_confirmation">Password Confirmation</label>
-        {!! \Form::password('password_confirmation') !!}
+        {!! \Form::password('password_confirmation', null) !!}
 
         <label for="first_name">First Name</label>
         {!! \Form::text('first_name') !!}
