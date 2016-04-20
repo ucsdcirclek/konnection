@@ -13,7 +13,7 @@
             <h1 class="title">"Billboard Hot 15"</h1>
         </div>
 
-        {{--
+        -
         <div class="contact-row">
             <div>
                 <img src="{{ asset('images/board/sabrina.jpg') }}" />
@@ -114,8 +114,9 @@
                 <p>technology@ucsdcki.org</p>
             </div>
         </div>
-       --}}
 
+
+        {{--
         <table>
             <tr>
                 <th>Name</th>
@@ -198,6 +199,6 @@
                 <td>technology@ucsdcki.org</td>
             </tr>
         </table>
-
+        --}}
     </div>
 @endsection
