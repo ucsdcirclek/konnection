@@ -19,7 +19,7 @@ return [
 		'secret' => '',
 	],
 
-	'mandrill' => [
+	'sparkpost' => [
 		'secret' => env('SPARKPOST_SECRET', ''),
 	],
 
