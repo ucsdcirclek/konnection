@@ -6,7 +6,7 @@
 	"type": "project",
   	"homepage": "http://ucsdcki.org",
 	"require": {
-		"laravel/framework": "5.1.*",
+		"laravel/framework": "5.2.*",
 	  	"guzzlehttp/guzzle": "~5.3|~6.0",
 		"zizaco/entrust": "dev-laravel-5",
 		"cviebrock/eloquent-sluggable": "~3.0",
@@ -14,7 +14,7 @@
 		"laravelcollective/html": "~5.0",
 		"miljar/php-exif": "~0.5.0",
 		"doctrine/dbal": "^2.5",
-		"dingo/api": "dev-master#b36db17c7294e44e6ce7039952ca8f8d57caab37",
+		"dingo/api": "1.0.*@dev",
 		"barryvdh/laravel-cors": "^0.7.3",
 		"tymon/jwt-auth": "0.5.*",
 		"intervention/image": "^2.3"
@@ -24,7 +24,9 @@
 		"phpspec/phpspec": "~2.1",
 		"fzaninotto/faker": "v1.3.0",
 		"barryvdh/laravel-ide-helper": "~2.0",
-		"barryvdh/laravel-debugbar": "~2.0"
+		"barryvdh/laravel-debugbar": "~2.0",
+		"symfony/dom-crawler": "~3.0",
+		"symfony/css-selector": "~3.0"
 	},
 	"autoload": {
 		"classmap": [
