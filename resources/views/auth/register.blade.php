@@ -44,6 +44,9 @@
             <label for="last_name">Last Name</label>
             <input type="text" name="last_name" value="{{ old('last_name') }}">
 
+            {!! Recaptcha::render() !!}
+            <br />
+
             <input type="submit" class="button" value="Register">
         </form>
     </div>
