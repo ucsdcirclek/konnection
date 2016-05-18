@@ -98,8 +98,8 @@ return [
 	'passwords' => [
 		'users' => [
 			'provider' => 'users',
-			'email' => 'auth.emails.password',
-			'table' => 'password_resets',
+			'email' => 'emails.password',
+			'table' => 'password_reminders',
 			'expire' => 60,
 		],
 	],
