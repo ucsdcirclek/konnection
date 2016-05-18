@@ -9,7 +9,7 @@
         <h2>Feature an Event</h2>
         <br/>
 
-        {!! Form::open(['action' => 'EventsController@saveFeaturedEvent']) !!}
+        {!! Form::open(['action' => ['EventsController@saveFeaturedEvent', $event->slug]]) !!}
 
         {!! Form::hidden('event', $event->id) !!}
 
