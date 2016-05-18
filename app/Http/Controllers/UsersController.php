@@ -60,16 +60,17 @@ class UsersController extends Controller {
         return view('pages.settings.account', compact('user'));
     }
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param UpdateUserRequest $req
+     * @return Response
+     * @internal param int $id
+     */
 	public function update(UpdateUserRequest $req)
 	{
         // Only take acceptable input
-		$input = $req->only('avatar', 'password', 'email', 'first_name', 'last_name');
+		$input = $req->only('avatar', 'password', 'email', 'phone', 'first_name', 'last_name');
 
         // Removes null and empty strings to prevent empty passwords from being hashed and put into the database.
         $filtered_input = array_filter($input);
