@@ -18,7 +18,7 @@
             <li>Grossmont College </li>
             <li>California State University San Marcos </li>
             <li>Hawaii Pacific University </li>
-            <li>San Diego State University </li>
+            <li><a href="http://www.sdsucirclek.com/">San Diego State University </a></li>
             <li>University of California, San Diego </li>
             <li>University of Hawaii, Hilo </li>
             <li>University of Hawaii, Manoa</li>

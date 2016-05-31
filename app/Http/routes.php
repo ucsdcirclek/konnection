@@ -91,7 +91,7 @@ Route::group(['prefix' => 'about'], function()
         Route::get('history', function() { return view('pages.about.circlek.history'); });
         Route::get('structure', function() { return view('pages.about.circlek.structure'); });
         Route::get('tenets', function() { return view('pages.about.circlek.tenets'); });
-    });
+});
 
     Route::group(['prefix' => 'club'], function()
     {
@@ -100,6 +100,7 @@ Route::group(['prefix' => 'about'], function()
         Route::get('tenets', function() { return view('pages.about.club.tenets'); });
     });
 
+    Route::get('drivers', function() { return view('pages.about.drivers'); });
     Route::get('district', function() { return view('pages.about.district'); });
     Route::get('division', function() { return view('pages.about.division'); });
     Route::get('membership', function() { return view('pages.about.membership'); });
