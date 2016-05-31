@@ -37,6 +37,9 @@
         <label for="password_confirmation">Password Confirmation</label>
         {!! \Form::password('password_confirmation', null) !!}
 
+        <label for="phone">Phone</label>
+        {!! \Form::text('phone') !!}
+
         <label for="first_name">First Name</label>
         {!! \Form::text('first_name') !!}
 
