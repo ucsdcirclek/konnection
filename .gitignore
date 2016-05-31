@@ -1,7 +1,6 @@
 /vendor
 /node_modules
 .env
-composer.lock
 _ide_helper.php
 .idea/
 .DS_Store

@@ -170,6 +170,7 @@ return [
 		'Barryvdh\Cors\ServiceProvider',
 		'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
 		Intervention\Image\ImageServiceProvider::class,
+		Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
 	],
 
 	/*
@@ -227,6 +228,7 @@ return [
         'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth',
         'JWTFactory' => 'Tymon\JWTAuth\Facades\JWTFactory',
         'Image' => Intervention\Image\Facades\Image::class,
+		'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
 	],
 
 ];
