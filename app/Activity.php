@@ -99,4 +99,9 @@ class Activity extends Model {
         $this->attributes['notes'] = strip_tags($value);
     }
 
+    public function setApproved()
+    {
+        $this->attributes['approved'] = true;
+    }
+
 }
