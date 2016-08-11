@@ -5,10 +5,24 @@ html {
 
 body {
   @include outer-container;
-  background: $base-background-color url('/images/kelp.jpg') no-repeat fixed;
-  height: 100%;
+  //background: $base-background-color url('/images/cloudsback.png') no-repeat center center fixed;
+  //height: 100%;
+
+  //fixed background
+  background: $base-background-color no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/gradient.jpg',     sizingMethod='scale');
+  //-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/gradient.jpg', sizingMethod='scale');
+  //endfixedbackground
+
+  //scrolling background
+  /*background: $base-background-color url('/images/cloudsback.png') no-repeat center center;
+  background-size: 100% 100%;
   min-width: em(700);
-  margin: 0 auto;
+  margin: 0 auto;*/
 }
 
 #container{

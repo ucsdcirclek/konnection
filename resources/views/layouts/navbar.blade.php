@@ -44,6 +44,7 @@
                     <li class="nav-link"><a href="{{ url('/auth/register') }}">register</a></li>
                 @else
                     <li class="nav-link"><a href="{{ url('settings') }}">settings</a></li>
+                    <li class="nav-link"><a href="{{ url('profile') }}">profile</a></li>
                     <li class="nav-link"><a href="{{ url('/auth/logout') }}">logout</a></li>
                 @endif
 
