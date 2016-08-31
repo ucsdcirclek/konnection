@@ -12,25 +12,23 @@
             <p> {{$user->first_name . " " . $user->last_name}}</p>
         </div>
         <div>
-            <p>MRP status</p>
-            <p>You currently have {{$countArray[0]}} service hours!</p>
+            <p>MRP status - TBD</p>
+            <p>You have completed:</p>
+            <p>{{$countArray[0]}} service hours!</p>
             <p>{{$countArray[1]}} leadership hours!</p>
             <p>{{$countArray[2]}} fellowship hours!</p>
-            <p>{{$countArray[3]}} miles!</p>
+            <p>and have driven {{$countArray[3]}} miles!</p>
             <p>Events</p>
         </div>
         <div>
-            <p>testing</p>
+
+            @foreach ($events as $name)
+                <p>{{$name->title}}</p>
+            @endforeach
+
+
         </div>
     </div>
 
-
-
-    <div>
-        <img src="{{ $user->avatar->url() }}" style="border-radius:50%; width:150px; height:150px;">
-    </div>
-
-    <h2>{{ $profile->college  }}</h2>
-    <p>{{ $profile->bio }}</p>
 
 @endsection

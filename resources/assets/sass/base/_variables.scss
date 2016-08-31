@@ -35,10 +35,15 @@ $light-green: #6DA592;
 $dark-green: #1D2623;
 $very-dark-green: #021810;
 
-$steel-blue: #456AA1;
+// Colors for "adventure" theme
+
+$steel-blue: #36527e;
 $light-tan: #dbc9bd;
 $pink-tan: #d1ada1;
 $dark-slate-gray: #232e40;
+$lightest-blue: #f5fafa;
+$night-blue: #1f3750;
+$light-blue: #bae9ff;
 
 // Event tags sections in CERF creation form
 $brown: #4D2C19;
@@ -84,7 +89,7 @@ $base-border-color: $light-gray;
 $alert-color: $beige;
 $error-color: $light-red;
 $notice-color: $light-yellow;
-$success-color: $light-green;
+$success-color: $lightest-blue;
 
 // Forms
 $form-border-color: $base-border-color;
