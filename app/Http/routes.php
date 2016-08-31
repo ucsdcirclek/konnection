@@ -29,8 +29,8 @@ Route::group(['middleware' => 'auth'], function()
     Route::post('settings', 'UsersController@update');
     Route::get('/users/current', 'UsersController@current');
 
-    Route::get('profile', 'ProfilesController@show' );
-    Route::get('/profile/{id}', 'ProfilesController@temp');
+    //Route::get('profile', 'ProfilesController@show' );
+    //Route::get('/profile/{id}', 'ProfilesController@temp');
 
     Route::resource('tag', 'TagsController',
         ['only' => ['create', 'store']]);
