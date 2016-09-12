@@ -6,6 +6,29 @@
 
 @section('content')
     <div id="settings" class="wrapper">
+        <h2>Account Details</h2>
+
+    <div class="profile-row">
+        <div>
+            <img src="{{ $user->avatar->url() }}" />
+            <p> {{$user->first_name . " " . $user->last_name}}</p>
+        </div>
+        <div>
+            <h5 id="subtitle">MRP status - TBD</h5>
+            <p>You have completed:</p>
+            <p>{{$countArray[0]}} service hours!</p>
+            <p>{{$countArray[1]}} leadership hours!</p>
+            <p>{{$countArray[2]}} fellowship hours!</p>
+            <p>and have driven {{$countArray[3]}} miles!</p>
+        </div>
+        <div>
+            <h5 id="subtitle">Upcoming Events</h5>
+            @foreach ($events as $name)
+                <p>{{$name->title}}</p>
+            @endforeach
+        </div>
+    </div>
+
         <h2>Account Settings</h2>
         @if (count($errors) > 0)
             <div class="flash-alert">

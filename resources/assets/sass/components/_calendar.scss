@@ -7,7 +7,7 @@
   }
 
   .fc-day-header {
-    background-color: lighten($medium-green, 20%);
+    background-color: lighten($tan, 20%);
     color: white;
     font-weight: 400;
     padding: 10px;
@@ -52,7 +52,7 @@
   }
 
   button:hover {
-    color: $light-green;
+    color: $night-blue;
     background-color: $light-gray;
   }
 
@@ -89,7 +89,7 @@
   }
 
   .fc-left {
-    h2 { color: lighten($medium-green, 20%) }
+    h2 { color: lighten($tan, 20%) }
   }
 }
 

@@ -31,9 +31,19 @@ $dark-gray: #333;
 $yellow: #ECFEAA;
 $lightest-green: #DDEAE9;
 $light-green: #6DA592;
-$medium-green: #243E36;
+
 $dark-green: #1D2623;
 $very-dark-green: #021810;
+
+// Colors for "adventure" theme
+
+$steel-blue: #36527e;
+$light-tan: #dbc9bd;
+$pink-tan: #d1ada1;
+$dark-slate-gray: #232e40;
+$lightest-blue: #f5fafa;
+$night-blue: #1f3750;
+$light-blue: #bae9ff;
 
 // Event tags sections in CERF creation form
 $brown: #4D2C19;
@@ -57,20 +67,20 @@ $fundraising: #759936;
 $division: #CEB28A;
 
 // Background Colors
-$base-background-color: $very-dark-green;
+$base-background-color: $steel-blue;
 $home-background-color: $lightest-gray;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $medium-green;
+$base-accent-color: $dark-slate-gray;
 $header-font-color: $base-accent-color;
 
 // Link Colors
-$base-link-color: $medium-green;                    // Button colors.
+$base-link-color: $dark-slate-gray;                    // Button colors.
 $hover-link-color: darken($base-accent-color, 15);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
-$emphasis-color: $medium-green;
+$emphasis-color: $dark-slate-gray;
 
 // Border color
 $base-border-color: $light-gray;
@@ -79,7 +89,7 @@ $base-border-color: $light-gray;
 $alert-color: $beige;
 $error-color: $light-red;
 $notice-color: $light-yellow;
-$success-color: $light-green;
+$success-color: $lightest-blue;
 
 // Forms
 $form-border-color: $base-border-color;

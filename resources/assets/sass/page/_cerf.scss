@@ -4,10 +4,12 @@
   margin: 20px 30px 20px 30px;
 }
 
-.light-emphasis { color: $light-green }
+.light-emphasis { color: $night-blue
+}
 .light-gray { background-color: $lightest-gray }
 .gray { background-color: $light-gray }
-.light-green { background-color: $lightest-green }
+.light-green { background-color: $lightest-blue
+}
 .light-yellow { background-color: lighten($gold, 30%) }
 
 .empty-section {
@@ -82,7 +84,7 @@
           }
         }
 
-        .green { background-color: $lightest-green; }
+        .green { background-color: $lightest-blue; }
         .yellow { background-color: lighten($gold, 30%); }
         .blue { background-color: lighten($blue, 50%); }
 
@@ -119,7 +121,7 @@
 // CERF creation form.
 
 .event-summary {
-  background-color: $lightest-green;
+  background-color: $lightest-blue;
 
   .flash-notice {
     margin-bottom: 50px;
@@ -156,7 +158,7 @@
 //region Member attendance table
 
 #member-attendance-section {
-  background-color: $lightest-green;
+  background-color: $lightest-blue;
 
   table {
     table-layout: fixed;
@@ -302,7 +304,7 @@
 //region Kiwanis attendance table
 
 #kiwanis-attendance-section {
-  background-color: $lightest-green;
+  background-color: $lightest-blue;
 
   h3  {
     text-align: center;
@@ -356,7 +358,7 @@
 //region Commentary section
 
 #commentary-section {
-  background-color: $lightest-green;
+  background-color: $lightest-blue;
 
   h3 {
     text-align: center;
@@ -383,7 +385,7 @@
   text-align: center;
 
   div {
-    background-color: $light-green;
+    background-color: $night-blue;
   }
 }
 
@@ -393,7 +395,7 @@
 
 .attendees-listing {
   overflow: auto;
-  background-color: $lightest-green;
+  background-color: $lightest-blue;
 
   table {
     margin-bottom: 50px;
@@ -435,7 +437,7 @@
 }
 
 .drivers-listing, .comment-listing, .fundraising-listing {
-  background-color: $lightest-green;
+  background-color: $lightest-blue;
 }
 
 .comment-listing > h3 {

@@ -32,13 +32,13 @@ class EventTagsTableSeeder extends Seeder
                 1,
                 'District Service Initiative',
                 'DSI',
-                'For the 2014-2015 year, an event that falls under the "Leaping Towards Literacy" Definition.'
+                'For the 2016-2017 year, an event that falls under the "Serve to Conserve" Definition.'
             ),
             array(
                 1,
                 'International Service Initiative',
                 'ISI',
-                'The International Service Initiative is "Focusing on the Future: Children."'
+                'The International Service Initiative is "Focusing on the Future: Children." This is any event helping children under 18. (Usually involves direct service).'
             ),
             array(
                 2,
@@ -68,7 +68,7 @@ class EventTagsTableSeeder extends Seeder
                 4,
                 'Circle K',
                 'CK',
-                'Event with 2 members from your CKI Club and another 2 from another CKI Club present.'
+                'Event with 2 members from your CKI Club and another 2 from another CKI Club present. Also counts as AD if less than two members are present.'
             ),
             array(
                 4,
@@ -80,7 +80,8 @@ class EventTagsTableSeeder extends Seeder
                 4,
                 'Interclub',
                 'IN',
-                'Clubs with < 21 members need at least 2 members in attendance from your own & another KF/CK Club, 21-30 members need 3, and > 30 members need at least 4 members. The club who hosted the event does not receive an Interclub tag unless the event is service though other clubs do.'
+                'An interclub is any event hosted by another Kiwanis Family club, including Circle K. If your club has 50 members or less, at least TWO members from your home club and at least TWO members present from another Kiwanis Family club. If your club has 51-90 members, at least THREE members from your home club and at least TWO members from another Kiwanis Family club. If your club has 91 members or more, at least FOUR members from your home club and at least TWO members present from another Kiwanis Family club. The host club may mark the interclub (IN) tag if the hosted event is a community service project.
+'
             ),
             array(
                 4,
