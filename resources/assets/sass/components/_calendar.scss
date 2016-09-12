@@ -7,7 +7,7 @@
   }
 
   .fc-day-header {
-    background-color: lighten($tan, 20%);
+    background-color: lighten($dark-slate-gray, 20%);
     color: white;
     font-weight: 400;
     padding: 10px;
@@ -89,7 +89,7 @@
   }
 
   .fc-left {
-    h2 { color: lighten($tan, 20%) }
+    h2 { color: lighten($dark-slate-gray, 20%) }
   }
 }
 
