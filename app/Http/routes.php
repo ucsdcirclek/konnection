@@ -60,6 +60,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
     Route::delete('events/{slug}', 'EventsController@delete');
     Route::get('events/{slug}/feature', 'EventsController@feature');
     Route::post('events/{slug}/feature', 'EventsController@saveFeaturedEvent');
+    Route::get('events/{slug}/clone', 'EventsController@cloneCopy');
+    Route::post('events/{slug}/clone', 'EventsController@store');
 
     // Posts
     Route::get('posts/create', 'PostsController@create');
