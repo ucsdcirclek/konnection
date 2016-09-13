@@ -255,4 +255,15 @@ class EventsController extends Controller
         return view('pages.admin.events.registrations', compact('event', 'registrations'));
     }
 
+    public function cloneCopy($slug) {
+        $event = Event::findBySlug($slug);
+
+        $event->start_time = $event->start_time->setTimezone('America/Los_Angeles')->addWeek();
+        $event->end_time = $event->end_time->setTimezone('America/Los_Angeles')->addWeek();
+        $event->open_time = $event->open_time->setTimezone('America/Los_Angeles')->addWeek();
+        $event->close_time = $event->close_time->setTimezone('America/Los_Angeles')->addWeek();
+
+        return view('pages.admin.events.clone', compact('event'));
+    }
+
 }

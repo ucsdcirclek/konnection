@@ -14,12 +14,12 @@
         <p>We'll need some basic information about you as well as some interesting points about you to sort you into one
             of the three families this year. Just fill out this form and submit it!</p>
 
-            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/c2eEtB">Membership Application</a>
+            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/FuVR7s">Membership Application</a>
 
         <br />
 
         <h2>Step 2: Submit your Dues</h2>
-        <p>Membership for the year costs only $40.
+        <p>Membership for the year costs only $45.
             <strong>Turn this amount in check (payable to UCSD Circle K)/cash/Venmo (UCSDCircleK).</strong>
             Some of the benefits you'll receive are:</p>
         <ul>
@@ -33,6 +33,12 @@
         <p>That's it! You just need to submit the membership form along with your dues and you are an official,
             dues paid member of UCSD Circle K! Your membership form and dues are due at the Week 3 GBM if you'd like to be
             sorted into a family by the New Member Installation.</p>
+
+        <h2>Step 4: Register for CST!</h2>
+        <p>A lot of our service events are held off campus, and we use CST (Community Service Transportation)
+            to shuttle members to and from events! Look out for a presentation at the Week 3 GBM or click below for information!</p>
+
+            <a class="button" target="_blank" href="https://students.ucsd.edu/student-life/involvement/community/cstvans/index.html">CST Page</a>
 
     </div>
 

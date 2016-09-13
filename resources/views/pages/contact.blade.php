@@ -36,8 +36,8 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/susan.jpg') }}" />
-                <p><strong>Susan Sun</strong></p>
+                <img src="{{ asset('avatars/original/missing.png') }}" />
+                <p><strong>Alexandra Wei</strong></p>
                 <p>Secretary</p>
                 <p>secretary@ucsdcki.org</p>
             </div>

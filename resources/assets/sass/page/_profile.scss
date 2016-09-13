@@ -1,9 +1,4 @@
-.title-wrapper {
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-.contact-row {
+.profile-row {
   padding: 5px;
   display: flex;
 
@@ -12,17 +7,21 @@
     text-align: center;
 
     img {
-      padding: 10px 0;
-      width: 175px;
-      height: 175px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
     }
 
     flex: 1;
-    background-color: $lightest-blue;
+    //background-color: $lightest-green;
     border-radius: $base-border-radius;
   }
-
   p { margin: 0; }
   p:last-child { margin-bottom: 10px; }
+
+}
+
+.subtitle {
+  font-size: 1.5em;
+  font-weight: bold;
 }

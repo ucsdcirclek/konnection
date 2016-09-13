@@ -17,7 +17,7 @@
     @include fill-parent;
     @include row(table);
 
-    @include sharp-gradient($lightest-green, $light-green); // genius
+    @include sharp-gradient($lightest-blue, $night-blue); // genius indeed
 
     overflow: hidden;
 
@@ -39,10 +39,10 @@
       .center {
 
         a {
-          color: $light-green;
+          color: $night-blue;
 
           &:hover {
-            color: $medium-green;
+            color: $dark-slate-gray;
           }
         }
 
@@ -61,7 +61,7 @@
       @include reset-display;
       @include pad();
 
-      background-color: $light-green;
+      background-color: $night-blue;
 
       transform: skewX(-20deg);
 
@@ -98,7 +98,7 @@
   }
 
   #announcements-view {
-    background-color: $lightest-green;
+    background-color: $lightest-blue;
 
     padding: 20px 40px 20px 40px;
 
