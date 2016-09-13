@@ -45,8 +45,6 @@
                         <span class="light-emphasis">199,327</span> hours of service.
                     </p>
 
-                    <br/>
-
                     <p class="center"><a href="/events">Check out some of our events!</a></p>
                     <p class="center"><a href="https://www.joomag.com/magazine/the-crobie-contagion-issue-07/0121090001465955949?short" target="_blank">Check out our newsletters!</a></p>
                 </div>
