@@ -14,7 +14,7 @@
             <p> {{$user->first_name . " " . $user->last_name}}</p>
         </div>
         <div>
-            <h5 id="subtitle">MRP status - TBD</h5>
+            <h5 id="subtitle">MRP status - <a href="http://www.cnhcirclek.org/page/2-membership_recognition_program/" target="_blank">TBD</a></h5>
             <p>You have completed:</p>
             <p>{{$countArray[0]}} service hours!</p>
             <p>{{$countArray[1]}} leadership hours!</p>
@@ -22,7 +22,7 @@
             <p>and have driven {{$countArray[3]}} miles!</p>
         </div>
         <div>
-            <h5 id="subtitle">Upcoming Events</h5>
+            <h5 id="subtitle">Your Upcoming Events</h5>
             @foreach ($events as $name)
                 <p>{{$name->title}}</p>
             @endforeach
