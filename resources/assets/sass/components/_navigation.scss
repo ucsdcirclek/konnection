@@ -243,7 +243,7 @@
         color: white;
 
         &:hover {
-          background-color: $dark-green;
+          background-color: $darker-slate-gray;
         }
 
         @include media($horizontal-bar-mode) {
