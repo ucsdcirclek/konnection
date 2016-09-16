@@ -61,7 +61,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(
     Route::get('events/{slug}/feature', 'EventsController@feature');
     Route::post('events/{slug}/feature', 'EventsController@saveFeaturedEvent');
     Route::get('events/{slug}/clone', 'EventsController@cloneCopy');
-    Route::post('events/{slug}/clone', 'EventsController@store');
+    Route::post('events/{slug}/clone', 'EventsController@cloneStore');
 
     // Posts
     Route::get('posts/create', 'PostsController@create');

@@ -260,10 +260,47 @@ class EventsController extends Controller
 
         $event->start_time = $event->start_time->setTimezone('America/Los_Angeles')->addWeek();
         $event->end_time = $event->end_time->setTimezone('America/Los_Angeles')->addWeek();
-        $event->open_time = $event->open_time->setTimezone('America/Los_Angeles')->addWeek();
         $event->close_time = $event->close_time->setTimezone('America/Los_Angeles')->addWeek();
 
         return view('pages.admin.events.clone', compact('event'));
+    }
+
+    public function cloneStore(CreateEventRequest $req)
+    {
+        $input = $req->all();
+
+        // Ensures database times are always in UTC.
+        foreach ($input as $key => $value) {
+
+            // Ensures only time fields are changed.
+            if (!strpos($key, 'time')) {
+                continue;
+            }
+
+            // Converts time from PST to UTC.
+            $pst = new Carbon($value, 'America/Los_Angeles');
+            $utc = $pst->setTimezone('UTC');
+
+            // Sets date/time string back into values for database.
+            $input[$key] = $utc->toDateTimeString();
+        }
+
+        $input['creator_id'] = \Auth::id(); // Set creator ID by default
+
+        // Set default close time if needed
+        if (!isset($input['close_time'])) {
+            $input['close_time'] = $input['start_time'];
+        }
+
+        // Set default open time if needed
+        if (!isset($input['open_time'])) {
+            $input['open_time'] = Carbon::now();
+        }
+
+        // Create event
+        $event = Event::create($input);
+
+        return redirect()->action('EventsController@show', $event->slug);
     }
 
 }
