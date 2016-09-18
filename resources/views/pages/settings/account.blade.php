@@ -24,7 +24,7 @@
         <div>
             <h5 id="subtitle">Your Upcoming Events</h5>
             @foreach ($events as $name)
-                <p>{{$name->title}}</p>
+                <p><a href="http://ucsdcki.org/events/{{$name->slug}}">{{$name->title}}</a></p>
             @endforeach
         </div>
     </div>
