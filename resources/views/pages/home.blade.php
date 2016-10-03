@@ -50,8 +50,9 @@
                 </div>
 
                 <div class="links">
-                    <div><button><a href="/about/membership">Become a member</a></button></div>
-                    <div><button><a href="/auth/login">Login</a></button></div>
+                    <div><a class="button" href="/about/membership">Become a member</a></div>
+                    <div><a class="button" href="/auth/login">Login</a></div>
+
                 </div>
             </div>
         @endunless
