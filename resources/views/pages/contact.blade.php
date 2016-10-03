@@ -36,7 +36,7 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('avatars/original/missing.png') }}" />
+                <img src="{{ asset('images/board/alexandra.jpg') }}" />
                 <p><strong>Alexandra Wei</strong></p>
                 <p>Secretary</p>
                 <p>secretary@ucsdcki.org</p>
