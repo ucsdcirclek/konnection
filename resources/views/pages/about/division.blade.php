@@ -9,7 +9,7 @@
 
     <div class="wrapper">
         <p>
-            UCSD Circle K is a part of <strong>Paradise Division</strong>, one of the eight divisions in Cal-Nev-Ha (see District tab). Our current Lieutenant Governor is San Diego State University's <strong>Gerald Biando</strong>. Our division
+            UCSD Circle K is a part of <strong>Paradise Division</strong>, one of the eight divisions in Cal-Nev-Ha (see District tab). Our current Lieutenant Governor is San Diego State University's <strong>Nicolet Ramirez</strong>. Our division
             comprises	seven schools that range in location from California to Hawaii. Paradise Division's mascots are a <strong>toucan and a pineapple</strong>.
         </p>
         <h3>Paradise Clubs</h3>
