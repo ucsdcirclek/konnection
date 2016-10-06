@@ -15,6 +15,7 @@
                         <li><a href="{{ url('about/division') }}">Division</a></li>
                         <li><a href="{{ url('about/club') }}">Club</a></li>
                         <li><a href="{{ url('about/drivers') }}">Drivers</a></li>
+                        <li><a href="{{ url('about/membership') }}">Membership</a></li>
                         <li><a target="_blank" href="http://www.kiwanis.org">Kiwanis</a></li>
                         <li><a target="_blank" href="http://www.kiwanisclublajolla.org/">La Jolla Kiwanis</a></li>
                     </ul>
