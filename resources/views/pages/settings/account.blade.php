@@ -14,7 +14,7 @@
             <p> {{$user->first_name . " " . $user->last_name}}</p>
         </div>
         <div>
-            <h5 id="subtitle">MRP status - <a href="http://www.cnhcirclek.org/page/2-membership_recognition_program/" target="_blank">TBD</a></h5>
+            <h5 id="subtitle">MRP status - <a href="http://www.cnhcirclek.org/leadership/membership-recognition-program/" target="_blank">TBD</a></h5>
             <p>You have completed:</p>
             <p>{{$countArray[0]}} service hours!</p>
             <p>{{$countArray[1]}} leadership hours!</p>
