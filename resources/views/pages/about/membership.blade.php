@@ -10,7 +10,7 @@
         <p>We're really excited that you've decided to become a part of UCSD Circle K! To become a member,
             you only need to follow these simple steps:</p>
 
-        <h2>Step 1: Complete the Membership Form</h2>
+        <h2>Step 1: Complete the Membership Form!</h2>
         <p>We'll need some basic information about you as well as some interesting points about you to sort you into one
             of the three families this year. Just fill out this form and submit it!</p>
 
@@ -18,7 +18,7 @@
 
         <br />
 
-        <h2>Step 2: Submit your Dues</h2>
+        <h2>Step 2: Submit your Dues!</h2>
         <p>Membership for the year costs only $45.
             <strong>Turn this amount in check (payable to UCSD Circle K)/cash/Venmo (UCSDCircleK).</strong>
             Some of the benefits you'll receive are:</p>
