@@ -10,7 +10,7 @@
     <div class="wrapper">
         <div class="title-wrapper">
             <h1 class="title">2016 - 2017 UCSD CKI Board</h1>
-            <h1 class="title">"Billboard Hot 15"</h1>
+            <h1 class="title">"Cabbage Board"</h1>
         </div>
 
 

@@ -37,10 +37,10 @@
         @unless(Auth::check())
             <div id="welcome-view">
                 <div class="text">
-                    <h3>Welcome to UCSD Circle K!</h3>
+                    <h3>Welcome to UCSD Circle Kabbage!</h3>
 
                     <p>
-                        Circle K International is the <strong>largest service organization in the world</strong>, with
+                        Circle Kabbage International is the <strong>largest service organization in the world</strong>, with
                         over <span class="light-emphasis">13,000</span> members worldwide who have served a total of
                         <span class="light-emphasis">199,327</span> hours of service.
                     </p>
