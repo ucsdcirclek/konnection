@@ -12,8 +12,107 @@
             <h1 class="title">2016 - 2017 UCSD CKI Board</h1>
             <h1 class="title">"Cabbage Board"</h1>
         </div>
-
-
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/cabbages/sabrina.jpg') }}" />
+                <p><strong>Queen Savage Cabbage</strong></p>
+                <p>President</p>
+                <p>president@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/vincent.jpg') }}" />
+                <p><strong>VP of Cabbages</strong></p>
+                <p>Vice President of Administration</p>
+                <p>vpa@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/chloris.jpg') }}" />
+                <p><strong>Princess Cabbage</strong></p>
+                <p>Vice President of Service</p>
+                <p>vps@ucsdcki.org</p>
+            </div>
+        </div>
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/cabbages/alexandra.jpg') }}" />
+                <p><strong>Wei Too Much Cabbage</strong></p>
+                <p>Secretary</p>
+                <p>secretary@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/jason.jpg') }}" />
+                <p><strong>Cabbage Daliuro</strong></p>
+                <p>Treasurer</p>
+                <p>treasurer@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/michelle.jpg') }}" />
+                <p><strong>Cabbage Bank</strong></p>
+                <p>Fundraising</p>
+                <p>fundraising@ucsdcki.org</p>
+            </div>
+        </div>
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/cabbages/tiffany.jpg') }}" />
+                <p><strong>Nguyen-ing Cabbage</strong></p>
+                <p>Historian</p>
+                <p>historian@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/jennifer.jpg') }}" />
+                <p><strong>Kabbage Family Chair</strong></p>
+                <p>Kiwanis Family</p>
+                <p>kfam@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/jane.jpg') }}" />
+                <p><strong>Cabbageberriey</strong></p>
+                <p>Public Relations</p>
+                <p>pr@ucsdcki.org</p>
+            </div>
+        </div>
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/cabbages/mason.jpg') }}" />
+                <p><strong>Cabbage Relations</strong></p>
+                <p>Member Relations</p>
+                <p>mr@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/john.jpg') }}" />
+                <p><strong>Cabbage Development and Education</strong></p>
+                <p>Member Development and Education</p>
+                <p>mde@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/diana.jpg') }}" />
+                <p><strong>Thai Cabbage</strong></p>
+                <p>Social</p>
+                <p>social@ucsdcki.org</p>
+            </div>
+        </div>
+        <div class="contact-row">
+            <div>
+                <img src="{{ asset('images/cabbages/michael.jpg') }}" />
+                <p><strong>Cabbage Patch Kid</strong></p>
+                <p>Fellowship</p>
+                <p>fellowship@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/hannah.jpg') }}" />
+                <p><strong>Cabbage Served Fresh</strong></p>
+                <p>Service</p>
+                <p>service@ucsdcki.org</p>
+            </div>
+            <div>
+                <img src="{{ asset('images/cabbages/reggie.jpg') }}" />
+                <p><strong>Cabbage Swift</strong></p>
+                <p>Technology</p>
+                <p>technology@ucsdcki.org</p>
+            </div>
+        </div>
+{{--
         <div class="contact-row">
             <div>
                 <img src="{{ asset('images/board/sabrina.jpg') }}" />
@@ -114,6 +213,8 @@
                 <p>technology@ucsdcki.org</p>
             </div>
         </div>
+
+--}}
 
         {{--
         <table>
