@@ -104,7 +104,9 @@
                             <li class="avatar small">
 
                                 <div class="avatar-wrapper">
-                                    <img src="{{ $registration->user->avatar->url() }}">
+                                    {{--change me --}}
+                                    {{--<img src="{{ $registration->user->avatar->url() }}"> --}}
+                                    <img src="/avatars/original/missing.png"/>
 
                                     {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
                                     <div class="overlay">
@@ -158,11 +160,14 @@
                     </div>
 
                     @if(is_null($event->chair))
-                        <img src="{{ $event->creator->avatar->url() }}">
+                        {{-- change me --}}
+                        {{--<img src="{{ $event->creator->avatar->url() }}"> --}}
+                        <img src="/avatars/original/missing.png"/>
                         <p class="name">{{ $event->creator->first_name }} {{$event->creator->last_name}}</p>
                         <p class="info">{{ $event->creator->phone }}</p>
                     @else
-                        <img src="{{ $event->chair->avatar->url() }}">
+                        {{--<img src="{{ $event->chair->avatar->url() }}"> --}}
+                        <img src="/avatars/original/missing.png"/>
                         <p class="name">{{ $event->chair->first_name }} {{$event->chair->last_name}}</p>
                         <p class="info">{{ $event->chair->phone }}</p>
                     @endif
