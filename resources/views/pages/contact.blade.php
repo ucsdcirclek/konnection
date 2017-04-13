@@ -68,7 +68,7 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/poiema1.jpg') }}" />
+                <img src="{{ asset('images/board/poiema.jpg') }}" />
                 <p><strong>Poiema Kim</strong></p>
                 <p>Historian</p>
                 <p>historian@ucsdcki.org</p>
