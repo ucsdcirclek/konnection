@@ -94,7 +94,7 @@
                 <p>mr@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/louise.jpg') }}" />
+                <img src="{{ asset('images/board/louise1.jpg') }}" />
                 <p><strong>Louise Tolentino</strong></p>
                 <p>Member Development and Education</p>
                 <p>mde@ucsdcki.org</p>
