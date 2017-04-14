@@ -54,7 +54,7 @@
                 <p>secretary@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/nancy.jpg') }}" />
+                <img src="{{ asset('images/board/trash.jpg') }}" />
                 <p><strong>Nancy Huang</strong></p>
                 <p>Treasurer</p>
                 <p>treasurer@ucsdcki.org</p>
