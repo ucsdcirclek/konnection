@@ -111,6 +111,8 @@ Route::group(['prefix' => 'about'], function()
     Route::get('membership', function() { return view('pages.about.membership'); });
 });
 Route::get('contact', function() { return view('pages.contact'); });
+Route::get('gallery', function() { return view( 'pages.gallery'); });
+
 
 /*
 |--------------------------------------------------------------------------

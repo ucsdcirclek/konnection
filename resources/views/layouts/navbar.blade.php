@@ -39,6 +39,8 @@
                 </li>
 
                 <li class="nav-link"><a href="{{ url('contact') }}">contact</a></li>
+                <li class = "nav-link"><a href="{{ url('/gallery') }}">gallery</a>/li>
+
 
                 @if (! Auth::check())
                     <li class="nav-link"><a href="{{ url('/auth/login') }}">login</a></li>
