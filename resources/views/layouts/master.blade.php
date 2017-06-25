@@ -35,7 +35,7 @@
     @include('layouts.admin')
 
     <div id="header-image">
-        <h1><img alt="UCSD Circle K" src="{{ asset('images/banner.jpg') }}"></h1>
+        <h1><img alt="UCSD Circle K" src="{{ asset('images/2017-2018_UCSDCKIBanner.jpg') }}"></h1>
     </div>
     {{-- End Header --}}
 
