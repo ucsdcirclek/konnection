@@ -9,20 +9,21 @@ body {
   //height: 100%;
 
   //fixed background
-  /*
-  background: $base-background-color no-repeat center center fixed;
+ 
+  background-image: url('/images/royalblue.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  */
+ 
+  
   //gradient
-  background: $base-background-color; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($base-background-color, $pink-grad); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($base-background-color, $pink-grad); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($base-background-color, $pink-grad); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($base-background-color, $pink-grad); /* Standard syntax */
-  background-attachment: fixed;
+  //background: $base-background-color; /* For browsers that do not support gradients */
+  //background: -webkit-linear-gradient($base-background-color, $pink-grad); /* For Safari 5.1 to 6.0 */
+  //background: -o-linear-gradient($base-background-color, $pink-grad); /* For Opera 11.1 to 12.0 */
+  //background: -moz-linear-gradient($base-background-color, $pink-grad); /* For Firefox 3.6 to 15 */
+  //background: linear-gradient($base-background-color, $pink-grad); /* Standard syntax */
+  //background-attachment: fixed;
   //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/gradient.jpg',     sizingMethod='scale');
   //-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/gradient.jpg', sizingMethod='scale');
   //endfixedbackground
