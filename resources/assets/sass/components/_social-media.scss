@@ -54,4 +54,11 @@
       background-color: $twitter;
     }
   }
+  
+  .snapchat-box {
+    &:hover {
+      background-color: $snapchat;
+    }
+  }
+  
 }
