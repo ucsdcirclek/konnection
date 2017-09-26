@@ -33,7 +33,7 @@
                         <li><a target="_blank" href="http://dcon.cnhcirclek.org/">DCON</a></li>
                         <li><a target="_blank" href="http://ftc.cnhcirclek.org/">FTC</a></li>
                         <li><a target="_blank"
-                               href="http://www.cnhcirclek.org/event/7-crazy_kompetition_for_infants_south/">CKI
+                               href="http://www.cnhcirclek.org/committees/fifun/crazy-kompetition-2017-games-playbook/">CKI
                                 South</a></li>
                     </ul>
                 </li>
