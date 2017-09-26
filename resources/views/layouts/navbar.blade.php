@@ -12,7 +12,7 @@
                 <li class="nav-link more"><a href="javascript:void(0)">about</a>
                     <ul class="submenu">
                         <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
-                        <li><a href="{{ url('about/division') }}">Division</a></li>
+                        <!--<li><a href="{{ url('about/division') }}">Division</a></li>-->
                         <li><a href="{{ url('about/club') }}">Club</a></li>
                         <li><a href="{{ url('about/drivers') }}">Drivers</a></li>
                         <li><a href="{{ url('about/membership') }}">Membership</a></li>
@@ -29,7 +29,7 @@
 
                 <li class="nav-link more"><a href="">district</a>
                     <ul class="submenu">
-                        <li><a href="{{ url('about/district') }}">About</a></li>
+                        <!--<li><a href="{{ url('about/district') }}">About</a></li>-->
                         <li><a target="_blank" href="http://dcon.cnhcirclek.org/">DCON</a></li>
                         <li><a target="_blank" href="http://ftc.cnhcirclek.org/">FTC</a></li>
                         <li><a target="_blank"
