@@ -10,7 +10,7 @@
         <hr>
         <div class="page"><a href="{{ url('about/club/causes') }}">Causes</a></div>
         <hr>
-        <div class="page"><a href="{{ url('about/club/tenets') }}">Tenets</a></div>
+        <!--<div class="page"><a href="{{ url('about/club/tenets') }}">Tenets</a></div>-->
       </div>
       <div id="main">
           @yield('about-content')
