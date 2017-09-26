@@ -26,10 +26,6 @@
         <p>I pledge to uphold the Objects of Circle K International, to foster compassion and goodwill toward others
             through service and leadership, to develop my abilities and the abilities of all people, and to dedicate myself
             to the realization of mankind’s potential! </p>
-
-        <h4>History</h4>
-
-        <p>Live to Serve, Love to Serve!</p>
     </div>
 
 @endsection
