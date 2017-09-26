@@ -42,6 +42,6 @@
         During fall quarter, the club hosts its <strong>New Member Installation</strong>, a dinner reception that welcomes 
         new members into our club.
         UCSD Circle K also participates in many District Events such as <strong>District Convention</strong> (DCON), 
-        <strong>Fall Training Conference</strong> (FTC), <strong>CKI South</strong>, <strong>District Large Scale Service Project</strong>
-        (DLSSP), and <strong>Crazy Kompetition for Infants</strong> which you can find out more about on the District tab.</p>
+        <strong>Fall Training Conference</strong> (FTC), <strong>District Large Scale Service Project</strong>
+        (DLSSP), and <strong>Crazy Kompetition for Infants</strong> (CKI South) which you can find out more about on the District tab.</p>
 @endsection
