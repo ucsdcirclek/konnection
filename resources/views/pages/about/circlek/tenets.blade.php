@@ -17,13 +17,12 @@
         seeking more committee members. Each would be more than happy to receive further input. Every event also requires a
         chair, a responsibility that anyone willing may request. The club also has an Elected Board which is elected by club
         members every year before Spring Quarter, and an Appointed Board which is selected by the Elected Board. To learn more
-        about the current board as well as its specific positions, please refer to the Board page. </p>
+        about the current board as well as its specific positions, please refer to the Contact page. </p>
     <h4>Fellowship</h4>
-    <p>CSD Circle K provides various opportunities for social life socializing and friendships. It is Events are always open
+    <p> UCSD Circle K provides various opportunities for social life socializing and friendships. It is Events are always open
         to new members, and will always welcome anyone to attend its GBMs or events. It also holds multiple social events
         every week Socials are held often and which can range from hanging out at the beach to going out for a meal. Rides are
         also provided to all social events if necessary. To view upcoming social events, please refer to the page or to the
-        Calendar. We also have multiple families which you can join, which include a sibling system. We also have multiple
-        families within the club which are open to all members, and you can even participate in our mentorship program where
-        you’ll be paired with a returning member.</p>
+        Calendar. We also have multiple families within the club which are open to all members, and you can even participate 
+        in our mentorship program where you’ll be paired with a returning member (Bigs and Littles).</p>
 @endsection
