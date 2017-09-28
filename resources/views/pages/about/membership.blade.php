@@ -14,7 +14,7 @@
         <p>We'll need some basic information about you as well as some interesting points about you to sort you into one
             of the three families this year. Just fill out this form and submit it!</p>
 
-            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/FuVR7s">Membership Application</a>
+            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/yDt69X">Membership Application</a>
 
         <br />
 
