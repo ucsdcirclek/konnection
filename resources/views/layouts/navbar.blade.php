@@ -1,5 +1,14 @@
+<style>
+    @media only screen and (max-width: 500px) {
+        .mobile-text {
+            font-size: 8px;
+        }
+    }
+</style>
+
 <header class="centered-navigation">
-    <div class="centered-navigation-wrapper">
+    <div class="mobile-text">
+      <div class="centered-navigation-wrapper">
 
         <a href="" class="centered-navigation-menu-button" id="js-mobile-menu">MENU</a>
 
@@ -54,5 +63,6 @@
 
         </div>
 
+      </div>
     </div>
 </header>
