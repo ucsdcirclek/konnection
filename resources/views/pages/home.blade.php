@@ -2,6 +2,34 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        @media only screen and (max-width: 500px) {
+            .videoWrapper {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 */
+                padding-top: 20px;
+                height: 0;
+            }
+            .videoWrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .mobile-text {
+                font-size: 12px;
+            }
+
+            .mobile-text h2 {
+                font-size: 14px;
+            }
+
+        }
+    </style>
+    
 </head>
 
 @section('title', 'Home')
@@ -62,7 +90,22 @@
                 </div>
             </div>
         @endunless
+        
+        <div class="center">
+            <div class="mobile-text">
+                <h2 style="text-align: center;padding-top: 3%">2016-2017 Term Recap Video</h2>
+                <p style="text-align: center;">Look back on a year of service, leadership, and fellowship!</p>
+            </div>
+            <div class="videoWrapper">
+                <div style="position:relative;height:0;padding-bottom:47.25%;text-align: center">
+                    <iframe width="800" height="480"
+                            src="https://www.youtube.com/embed/oDkApQZZgFU?autoplay=1">
+                    </iframe>
+                </div>
+            </div>
+        </div>
 
+      <div class="mobile-text">
         <div id="week-view">
             <ul class="week">
 
@@ -110,7 +153,9 @@
                 @endforeach
             </ul>
         </div>
+      </div>  
 
+      <div class="mobile-text">
         <div id="announcements-view">
             <div><h2>Announcements</h2></div>
 
@@ -126,8 +171,8 @@
                         </p>
                     </article>
                 @endforeach
-            </div>
+          </div>
         </div>
-
+      </div>
     </div>
 @endsection
