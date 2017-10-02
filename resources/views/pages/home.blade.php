@@ -26,8 +26,12 @@
             .mobile-text h2 {
                 font-size: 14px;
             }
+            
+            .hidden{
+              visibility: hidden;
+            }
 
-        }
+}
     </style>
     
 </head>
@@ -57,13 +61,14 @@
         @endforeach
     </div>
 
-    <div id="social-media-column">
-        <a href="https://www.facebook.com/ucsdcirclek"><div class="facebook-box"><i class="fa fa-2x fa-facebook"></i></div></a>
-        <a href="http://ucsdcirclek.tumblr.com"><div class="tumblr-box"><i class="fa fa-2x fa-tumblr"></i></div></a>
-        <a href="https://instagram.com/ucsdcirclek"><div class="instagram-box"><i class="fa fa-2x fa-instagram"></i></div></a>
-        <a href="https://twitter.com/ucsdcirclek"><div class="twitter-box"><i class="fa fa-2x fa-twitter"></i></div></a>
-        <a href="https://www.snapchat.com/add/ucsdcirclek"><div class="snapchat-box"><i class="fa fa-2x fa-snapchat-ghost" style="font-size:36px"></i></div></a>
-
+    <div class="hidden">
+        <div id="social-media-column">
+          <a href="https://www.facebook.com/ucsdcirclek"><div class="facebook-box"><i class="fa fa-2x fa-facebook"></i></div></a>
+          <a href="http://ucsdcirclek.tumblr.com"><div class="tumblr-box"><i class="fa fa-2x fa-tumblr"></i></div></a>
+          <a href="https://instagram.com/ucsdcirclek"><div class="instagram-box"><i class="fa fa-2x fa-instagram"></i></div></a>
+          <a href="https://twitter.com/ucsdcirclek"><div class="twitter-box"><i class="fa fa-2x fa-twitter"></i></div></a>
+          <a href="https://www.snapchat.com/add/ucsdcirclek"><div class="snapchat-box"><i class="fa fa-2x fa-snapchat-ghost" style="font-size:36px"></i></div></a>
+        </div>
     </div>
 
     <div id="content">
