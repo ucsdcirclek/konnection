@@ -68,6 +68,7 @@
 
     <div id="content">
 
+      <div class="mobile-text">
         @unless(Auth::check())
             <div id="welcome-view">
                 <div class="text">
@@ -89,6 +90,7 @@
 
                 </div>
             </div>
+          </div>
         @endunless
         
         <div class="center">
