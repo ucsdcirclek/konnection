@@ -5,12 +5,12 @@
 {{-- Take description, cut it down, and add ellipses --}}
 @section('description', substr(strip_tags($event->description), 0, 156) . '...')
 
-
 <style>
     @media only screen and (max-width: 500px) {
         .mobile-text {
             font-size: 16px;
         }
+
         .mobile-header {
             font-size: 12px;
         }
@@ -20,7 +20,7 @@
 
 @section('content')
     <div id="event">
-      <div class="mobile-text">
+        <div class="mobile-text">
         <div id="navigator" style="border-bottom-left-radius: 10px;">
             @foreach($upcoming_events as $day => $events)
                 <ul>
@@ -33,13 +33,12 @@
             @endforeach
             <a href="{{ action('EventsController@index') }}">Back to Calendar</a>
         </div>
-      </div>
-
+        </div>
 
         <div id="viewport">
 
             <div class="head">
-               <div class="mobile-text">
+                <div class="mobile-text">
 
                 <div class="event-info">
                     <h2>{{ $event->title }}</h2>
@@ -54,11 +53,10 @@
                             <li>Meet at <strong>{{ $event->meeting_location}}</strong></li>@endif
                     </ul>
                 </div>
-              </div> 
-
+            </div>
                 {{-- Only allow registration if the event is actually open --}}
                 @if($event->isOpen())
-                  <div class="mobile-header">
+                    <div class="mobile-header">
                     <div class="signup">
                         {{-- Show guest registration link if not logged in --}}
                         @if(Auth::check())
@@ -71,7 +69,6 @@
                                 {!! Form::button('<i class="fa fa-close"></i> Sign up', array('type' => 'submit', 'id' => 'unregister-btn')) !!}
                                 {!! Form::close() !!}
                             @endif
-         
                         @else
 
                             <div class="modal">
@@ -108,15 +105,16 @@
                         @endif
                     </div>
                 @endif
-                </div>
+                    </div>
+
             </div>
 
             <div class="left">
-               <div class="mobile-text">
-                  <div class="description">
-                      {!! $event->description !!}
-                  </div>
-               </div>
+                <div class="mobile-text">
+                    <div class="description">
+                        {!! $event->description !!}
+                    </div>
+                </div>
 
                 <div class="registrations">
                     <h4>Who's going</h4>
@@ -140,9 +138,9 @@
                                     </div>
                                 </div>
 
-
+                                <div class="mobile-text">
                                 <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
-
+                                </div>
                             </li>
                         @endforeach
 
@@ -163,15 +161,16 @@
                                 <p class="name">{{ $guestRegistration->first_name}} {{ $guestRegistration->last_name }}</p>
                             </li>
                         @endforeach
-                      </ul>
+                    </ul>
                     </div>
                 </div>
             </div>
 
 
+
             <div class="right">
                 @include ('errors.errors')
-                
+
                 <div class="mobile-text">
                 <div class="chair avatar large">
                     <h5>Person of Contact</h5>
@@ -191,12 +190,11 @@
                         <p class="info">{{ $event->chair->phone }}</p>
                     @endif
 
-                 </div>
+                </div>
                 </div>
 
                 @if($event->isRegistered(Auth::id()))
-                  <div class="mobile-text">
-                    <div>
+                    <div class="mobile-text">
                         <h6>Volunteer to be a:</h6>
 
                         <div class="btn-group">
@@ -219,8 +217,8 @@
                 @endif
 
                 @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
-                        <h6>Admin</h6>
-                           <div class="mobile-text">
+                    <h6>Admin</h6>
+                    <div class="mobile-text">
                         <div class="btn-group">
                             <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
                                 Edit Event
@@ -249,7 +247,7 @@
                                 {!! Form::submit('Open sign-ups') !!}
                             @endif
                         </div>
-                   </div>
+                    </div>
                 @endif
 
             </div>
