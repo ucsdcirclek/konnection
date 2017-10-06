@@ -74,7 +74,7 @@
     <div id="content">
 
       <div class="mobile-text">
-        @unless(Auth::check())
+        @if(!Auth::check())
             <div id="welcome-view">
                 <div class="text">
                     <h3>Welcome to UCSD Circle K!</h3>
@@ -90,13 +90,22 @@
                 </div>
 
                 <div class="links">
-                    <div><a class="button" href="/about/membership">Become a member</a></div>
+                    <div><a class="button" href="/auth/register">Register an account on the website!</a></div>
                     <div><a class="button" href="/auth/login">Login</a></div>
 
                 </div>
             </div>
           </div>
-        @endunless
+          @else
+          <div id="welcome-view">
+                <div class="text">
+                    <p class="center">Haven't filled out a membership application yet? Fill one out right here!</p>
+                </div>
+                <div class="links">
+                    <div><a class="button" href="/about/membership">Membership</a></div>
+                </div>
+            </div>
+        @endif
         
         <div class="center">
             <div class="mobile-text">
