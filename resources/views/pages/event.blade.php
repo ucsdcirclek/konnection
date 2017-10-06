@@ -137,6 +137,7 @@
                                         @endif
                                     </div>
                                 </div>
+                               </div> 
 
                                 <div class="mobile-text">
                                 <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
