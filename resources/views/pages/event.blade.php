@@ -11,11 +11,6 @@
         .mobile-text {
             font-size: 16px;
         }
-
-        .avatar{
-            text-align: center;
-        }
-
         .mobile-header {
             font-size: 12px;
         }
