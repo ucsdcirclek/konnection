@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 @section('title', $event->title)
@@ -5,22 +6,8 @@
 {{-- Take description, cut it down, and add ellipses --}}
 @section('description', substr(strip_tags($event->description), 0, 156) . '...')
 
-<style>
-    @media only screen and (max-width: 500px) {
-        .mobile-text {
-            font-size: 16px;
-        }
-
-        .mobile-header {
-            font-size: 12px;
-        }
-
-    }
-</style>
-
 @section('content')
     <div id="event">
-        <div class="mobile-text">
         <div id="navigator" style="border-bottom-left-radius: 10px;">
             @foreach($upcoming_events as $day => $events)
                 <ul>
@@ -33,12 +20,11 @@
             @endforeach
             <a href="{{ action('EventsController@index') }}">Back to Calendar</a>
         </div>
-        </div>
+
 
         <div id="viewport">
 
             <div class="head">
-                <div class="mobile-text">
 
                 <div class="event-info">
                     <h2>{{ $event->title }}</h2>
@@ -53,10 +39,9 @@
                             <li>Meet at <strong>{{ $event->meeting_location}}</strong></li>@endif
                     </ul>
                 </div>
-            </div>
+
                 {{-- Only allow registration if the event is actually open --}}
                 @if($event->isOpen())
-                    <div class="mobile-header">
                     <div class="signup">
                         {{-- Show guest registration link if not logged in --}}
                         @if(Auth::check())
@@ -105,20 +90,16 @@
                         @endif
                     </div>
                 @endif
-                    </div>
 
             </div>
 
             <div class="left">
-                <div class="mobile-text">
-                    <div class="description">
-                        {!! $event->description !!}
-                    </div>
+                <div class="description">
+                    {!! $event->description !!}
                 </div>
 
                 <div class="registrations">
                     <h4>Who's going</h4>
-                    <div class="mobile-text">
                     <ul>
                         @foreach($event->registrations as $registration)
                             <li class="avatar small">
@@ -137,11 +118,10 @@
                                         @endif
                                     </div>
                                 </div>
-                               </div> 
 
-                                <div class="mobile-text">
+
                                 <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
-                                </div>
+
                             </li>
                         @endforeach
 
@@ -163,16 +143,13 @@
                             </li>
                         @endforeach
                     </ul>
-                    </div>
                 </div>
             </div>
-
 
 
             <div class="right">
                 @include ('errors.errors')
 
-                <div class="mobile-text">
                 <div class="chair avatar large">
                     <h5>Person of Contact</h5>
                     <br/>
@@ -192,10 +169,9 @@
                     @endif
 
                 </div>
-                </div>
 
                 @if($event->isRegistered(Auth::id()))
-                    <div class="mobile-text">
+                    <div>
                         <h6>Volunteer to be a:</h6>
 
                         <div class="btn-group">
@@ -218,8 +194,7 @@
                 @endif
 
                 @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
-                    <h6>Admin</h6>
-                    <div class="mobile-text">
+                        <h6>Admin</h6>
                         <div class="btn-group">
                             <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
                                 Edit Event
@@ -248,7 +223,6 @@
                                 {!! Form::submit('Open sign-ups') !!}
                             @endif
                         </div>
-                    </div>
                 @endif
 
             </div>
