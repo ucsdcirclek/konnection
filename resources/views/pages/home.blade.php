@@ -115,7 +115,7 @@
             <div class="videoWrapper">
                 <div style="position:relative;height:0;padding-bottom:47.25%;text-align: center">
                     <iframe width="800" height="480"
-                            src="https://www.youtube.com/embed/oDkApQZZgFU?autoplay=1">
+                            src="https://www.youtube.com/embed/oDkApQZZgFU?">
                     </iframe>
                 </div>
             </div>
