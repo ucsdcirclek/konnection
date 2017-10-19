@@ -154,7 +154,7 @@ class UsersController extends Controller {
 
         $image->fit(300);
 
-        $image->save(public_path() . $avatarPath);
+        $image->save('/var/www/konnection/public' . $avatarPath);
 
         return $image;
     }
