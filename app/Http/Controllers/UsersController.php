@@ -150,7 +150,7 @@ class UsersController extends Controller {
 
         // Gets full path of uploaded avatar, creates Imagine object to manipulate image.
         $avatarPath = \Auth::user()->avatar->url();
-        $image = Image::make(public_path() . $avatarPath);
+        $image = Image::make('/var/www/konnection/public' . $avatarPath);
 
         $image->fit(300);
 
