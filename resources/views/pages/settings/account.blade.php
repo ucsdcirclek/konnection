@@ -11,6 +11,7 @@
     <div class="profile-row">
         <div>
             <img src="{{ $user->avatar->url() }}" />
+            <p> {{public_path()}}</p>
             <p> {{$user->first_name . " " . $user->last_name}}</p>
         </div>
         <div>
