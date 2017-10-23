@@ -4,21 +4,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
+        /*CSS for mobile friendly format*/
         @media only screen and (max-width: 500px) {
-            .videoWrapper {
-                position: relative;
-                padding-bottom: 56.25%; /* 16:9 */
-                padding-top: 20px;
-                height: 0;
-            }
-            .videoWrapper iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-
             .mobile-text {
                 font-size: 12px;
             }
@@ -27,12 +14,67 @@
                 font-size: 14px;
             }
             
+            .mobile-text-timer{
+                font-size: 16px;
+            }
+            
             .hidden{
               visibility: hidden;
             }
 
-}
+       }
+       /*CSS for Mball Timer Countdown*/
+       .bgimg {
+            padding-top: 8px;
+            padding-left: 30px;
+            position: relative;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .middle {
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size:50px;
+            width: 100%
+        }
     </style>
+    
+    <script>
+        // Set the Mball count down date
+        var countDownDate = new Date("Nov 19, 2017 00:30:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in an element with id="demo"
+            document.getElementById("timer").innerHTML = days + " days " + hours + " hours "
+                + minutes + " min " + seconds + " sec ";
+
+            document.getElementById("timer").style.fontWeight = "900";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "Mball Time!";
+            }
+        }, 1000);
+    </script>
     
 </head>
 
@@ -107,6 +149,7 @@
             </div>
         @endif
         
+        <!--
         <div class="center">
             <div class="mobile-text">
                 <h2 style="text-align: center;padding-top: 3%">2016-2017 Term Recap Video</h2>
@@ -120,6 +163,17 @@
                 </div>
             </div>
         </div>
+        -->
+        
+        <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
+                <div class="bgimg">
+                    <img src="{{asset('images/MballGraphic_Large.jpg')}}"/></a>
+                        <div class="middle">
+                            <div class="mobile-text-timer">
+                                <p id="timer"></p>
+                            </div>
+                        </div>
+                </div>
 
       <div class="mobile-text">
         <div id="week-view">
