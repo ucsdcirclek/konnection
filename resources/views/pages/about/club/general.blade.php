@@ -26,7 +26,7 @@
             <li>2015-2016: Under the Sea</li>
             <li>2014-2015: Fairy Tales</li>
             <li>2012-2013: Spies</li>
-            <p>2014-2015: The Nightmare Before Christmas</p>
+            <p>2011-2012: The Nightmare Before Christmas</p>
         </ul>
 
     <h4>General Body Meetings</h4>
