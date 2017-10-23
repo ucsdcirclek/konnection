@@ -26,7 +26,6 @@
        /*CSS for Mball Timer Countdown*/
        .bgimg {
             padding-top: 8px;
-            padding-left: 13px;
             position: relative;
             color: white;
             font-family: "Courier New", Courier, monospace;
