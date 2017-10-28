@@ -1,0 +1,95 @@
+/*Smart Phones*/
+@media only screen and (max-width: 500px) {
+  .mobile-text {
+    font-size: 12px;
+  }
+
+  .mobile-text h2 {
+    font-size: 14px;
+  }
+
+  .hidden{
+    visibility: hidden;
+  }
+
+  .desc{
+    font-size: 14px;
+  }
+
+  .title{
+    padding:5px;
+    font-size: 16px;
+  }
+
+  /*MBall Timer*/
+  .mobile-text-timer{
+    font-size: 16px;
+  }
+
+  /*Member recognition slide show*/
+    #slideshow {
+      margin-left: 80px;
+      margin-right: 80px;
+      margin-bottom: 40px;
+      left:50px;
+      position: relative;
+      width: 130px;
+      height: 130px;
+      padding: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+  #slideshow > div {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+  }
+
+
+    #slideshow2 {
+      margin-left: 80px;
+      margin-right: 80px;
+      margin-bottom: 40px;
+      left:50px;
+      position: relative;
+      width: 130px;
+      height: 130px;
+      padding: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    #slideshow2 > div {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+    }
+
+  .contact-row {
+    padding: 5px;
+    display: flex;
+
+    div {
+      margin: 5px;
+      text-align: center;
+
+      img {
+        padding: 10px 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      flex: 1;
+      background-color: $lightest-blue;
+      border-radius: $base-border-radius;
+    }
+
+    p { margin: 0; }
+    p:last-child { margin-bottom: 10px; }
+  }
+
+}
