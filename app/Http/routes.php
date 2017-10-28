@@ -131,7 +131,7 @@ Route::get('TeamGreen', function() { return view( 'pages.ImpactTeams.TeamGreen')
 Route::get('TeamHope', function() { return view( 'pages.ImpactTeams.TeamHope'); });
 Route::get('TeamTails', function() { return view( 'pages.ImpactTeams.TeamTails'); });
 Route::get('TeamSmileys', function() { return view( 'pages.ImpactTeams.TeamSmileys'); });
-Route::get('TeamFTK', function() { return view( 'pages.ImpactTeams.TeamFTK'); })
+Route::get('TeamFTK', function() { return view( 'pages.ImpactTeams.TeamFTK'); });
 
 
 /*
