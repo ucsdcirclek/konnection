@@ -4,25 +4,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
-        /*CSS for mobile friendly format*/
-        @media only screen and (max-width: 500px) {
-            .mobile-text {
-                font-size: 12px;
-            }
-
-            .mobile-text h2 {
-                font-size: 14px;
-            }
-            
-            .mobile-text-timer{
-                font-size: 16px;
-            }
-            
-            .hidden{
-              visibility: hidden;
-            }
-
-       }
        /*CSS for Mball Timer Countdown*/
        .bgimg {
             padding-top: 8px;
@@ -79,6 +60,7 @@
             }
         }, 1000);
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     
 </head>
 
@@ -168,6 +150,62 @@
             </div>
         </div>
         -->
+        
+        @include('layouts.header', array('headerTitle' => 'Featured Members'))
+        <!--Need to change width back when Committees page are done-->
+            <div class="member-row" style="width: 100%">
+                <div class="container">
+                    <div>
+                        <a href="{{ url('halloffame') }}">
+                            <div class="image">
+                                <div id="slideshow">
+                            <div>
+                                <img src="{{ asset('images/mr/spotlight/Alison.jpg') }}" />
+                            </div>
+                            <div>
+                                <img src="{{ asset('images/mr/spotlight/Andrew.jpg') }}" />
+                            </div>
+                            <div>
+                                <img src="{{ asset('images/mr/sof/Justin_D.jpg') }}" />
+                            </div>
+                            <div>
+                                <img src="{{ asset('images/mr/sof/Kenneth.jpg') }}" />
+                            </div>
+                        </div>
+                        <img src="https://fontmeme.com/permalink/171025/927b61dc4298ddf8c584ba4d5530972f.png" alt="fancy-fonts" border="0">
+                    </div>
+                </a>
+                    </div>
+                </div>
+
+                <!--<div class="container">
+                    <div>
+                        <a href="{{ url('halloffame') }}">
+                            <div class="image">
+                                <div id="slideshow2">
+                                    <div>
+                                        <img src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/SLSSP.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/Key2College/K2CThumb.jpg') }}"/>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SAAT/SAATThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" />
+                                    </div>
+                                </div>
+                                <img src="https://fontmeme.com/permalink/171028/7fe5e29300cd6b7cbb723edbc71adcc0.png"
+                                     alt="fancy-fonts" border="0">
+                            </div>
+                    </div>
+                </div>
+                -->
+            </div>
         
         <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
                 <div class="bgimg">
