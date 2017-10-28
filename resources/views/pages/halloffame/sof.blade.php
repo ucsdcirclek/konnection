@@ -41,7 +41,7 @@
                 <img src="{{ asset('images/mr/sof/Kenneth.jpg') }}" />
                 <p><strong>Kenneth Truong</strong></p>
                 <p>3rd Year</p>
-                <p>Insert Major Here</p>
+                <p>Cognitive Science</p>
             </div>
             <div>
                 <img src="{{ asset('images/mr/sof/Justin_D.jpg') }}" />
