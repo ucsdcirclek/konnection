@@ -113,6 +113,26 @@ Route::group(['prefix' => 'about'], function()
 Route::get('contact', function() { return view('pages.contact'); });
 Route::get('gallery', function() { return view( 'pages.gallery'); });
 
+Route::get('halloffame', function() { return view( 'pages.halloffame.halloffame'); });
+Route::get('mom', function() { return view( 'pages.halloffame.mom'); });
+Route::get('sof', function() { return view( 'pages.halloffame.sof'); });
+Route::get('spotlight', function() { return view( 'pages.halloffame.spotlight'); });
+
+Route::get('committees', function() { return view( 'pages.committees.committees'); });
+Route::get('masquerade', function() { return view( 'pages.committees.masquerade'); });
+Route::get('SLSSP', function() { return view( 'pages.committees.SLSSP'); });
+Route::get('Key2College', function() { return view( 'pages.committees.Key2College'); });
+Route::get('TechTeam', function() { return view( 'pages.committees.TechTeam'); });
+Route::get('SAAT', function() { return view( 'pages.committees.SAAT'); });
+
+Route::get('impact', function() { return view( 'pages.impact'); });
+Route::get('CarpeDiem', function() { return view( 'pages.ImpactTeams.CarpeDiem'); });
+Route::get('TeamGreen', function() { return view( 'pages.ImpactTeams.TeamGreen'); });
+Route::get('TeamHope', function() { return view( 'pages.ImpactTeams.TeamHope'); });
+Route::get('TeamTails', function() { return view( 'pages.ImpactTeams.TeamTails'); });
+Route::get('TeamSmileys', function() { return view( 'pages.ImpactTeams.TeamSmileys'); });
+Route::get('TeamFTK', function() { return view( 'pages.ImpactTeams.TeamFTK'); });
+
 
 /*
 |--------------------------------------------------------------------------
