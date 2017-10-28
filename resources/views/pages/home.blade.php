@@ -160,16 +160,16 @@
                             <div class="image">
                                 <div id="slideshow">
                             <div>
-                                <img src="{{ asset('images/mr/spotlight/Alison.jpg') }}" />
+                                <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
                             </div>
                             <div>
-                                <img src="{{ asset('images/mr/spotlight/Andrew.jpg') }}" />
+                                <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
                             </div>
                             <div>
-                                <img src="{{ asset('images/mr/sof/Justin_D.jpg') }}" />
+                                <img src="{{ asset('images/halloffame/mr/sof/Justin_D.jpg') }}" />
                             </div>
                             <div>
-                                <img src="{{ asset('images/mr/sof/Kenneth.jpg') }}" />
+                                <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
                             </div>
                         </div>
                         <img src="https://fontmeme.com/permalink/171025/927b61dc4298ddf8c584ba4d5530972f.png" alt="fancy-fonts" border="0">
