@@ -38,13 +38,13 @@
         <div class="mobile-text">
         <div class ="contact-row">
             <div>
-                <img src="{{ asset('images/mr/spotlight/Alison.jpg') }}" />
+                <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
                 <p><strong>Alison Liu</strong></p>
                 <p>1st year</p>
                 <p>Communications</p>
             </div>
             <div>
-                <img src="{{ asset('images/mr/spotlight/Andrew.jpg') }}" />
+                <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
                 <p><strong>Andrew Vu</strong></p>
                 <p>1st Year</p>
                 <p>Biochemistry</p>
