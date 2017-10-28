@@ -19,7 +19,9 @@
 
     <div align="center">
         <div class = "title">
+        <font size="23">
             <p><strong>What is the Staff of Fellowship?</strong></p>
+        </font>
         </div>
         <div class="desc">
             <p>Started by alumni, Mike Mullen, the Staff of Fellowship recognizes a dues-paid member twice a month for
