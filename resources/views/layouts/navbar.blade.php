@@ -31,6 +31,8 @@
                 </li>
 
                 <li class="nav-link"><a href="{{ url('/events') }}">calendar</a></li>
+                
+                <li class="nav-link"><a href="{{ url('/resources')}}">resources</a></li>
 
                 <li class="nav-link"><a href="{{ url('/bulletin') }}">bulletin</a></li>
 
