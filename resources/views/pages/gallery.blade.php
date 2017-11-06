@@ -30,7 +30,7 @@
 
     <div class="btn-group">
         <button><a target="_blank" href="https://www.flickr.com/photos/ucsdckigallery/albums" style="color:white">Spring 2017 (Flickr Album)</a></button>
-        <button><a target="_blank" href="https://drive.google.com/drive/folders/0B-mRsUmzugcLTWRTNFYwa2cwN00" style="color:white">Google Drive 2017</a></button>
+        <button><a target="_blank" href="https://drive.google.com/drive/folders/0B-mRsUmzugcLTWRTNFYwa2cwN00" style="color:white">Google Drive 2017-18</a></button>
         <button><a target="_blank" href="https://www.youtube.com/playlist?list=PLauQJNb_35oxuJ3_Kct_tHZBNaeOeFipr" style="color:white">2016-2017 Weekly Recap Videos</a></button>
     </div>
 
