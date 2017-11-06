@@ -15,7 +15,7 @@
         <br/>
         <HR>
         <h4>
-            <a href="https://ucsdcki.typeform.com/to/yDt69X">Membership Application</a>
+            <a href="https://ucsdcki.typeform.com/to/yDt69X" target="_blank">Membership Application</a>
         </h4>
         <p> Apply to be a UCSD Circle K member! </p>
 
@@ -86,21 +86,21 @@
 
             <HR>
             <h4>
-                <a href="http://bit.ly/mhf1718">Fundraiser Suggestions</a>
+                <a href="http://bit.ly/mhf1718" target="_blank">Fundraiser Suggestions</a>
             </h4>
             <p> Have an awesome fundraising idea? Let us know here!
             </p>
 
             <HR>
             <h4>
-                <a href="http://bit.ly/2q5pptN">Social Suggestions</a>
+                <a href="http://bit.ly/2q5pptN" target="_blank">Social Suggestions</a>
             </h4>
             <p> Got any fun ideas for a social? Let us know here!
             </p>
 
             <HR>
             <h4>
-                <a href="http://bit.ly/2q5pptN">Website Suggestions</a>
+                <a href="http://bit.ly/2q5pptN" target="_blank">Website Suggestions</a>
             </h4>
             <p> Any ideas you want to see on our website? Let us know here!
             </p>
