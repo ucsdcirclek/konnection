@@ -21,27 +21,12 @@
 
         <HR>
         <h4>
-            <a href="https://docs.google.com/document/d/1cs5xAeWIoc7rNTWlZ0ei3-dtrZ3EVIE0Ok_a5KY9NVU/edit"
-               target="_blank">Key2College Application</a>
+            <a href="http://bit.ly/LSFP2018"
+               target="_blank">LSFP Committee Application</a>
         </h4>
-        <p> Apply for the Key2College committee! (Due on <font color="red">Tuesday, November 7th, 2017 11:59pm</font>)
+        <p> Apply for the Large Service Fundraising Project committee! (Due on <font color="red">Tuesday, December 5th, 2017 11:59pm</font>)
         </p>
 
-        <HR>
-        <h4>
-            <a href="https://docs.google.com/document/d/1ZpD1nq598Xh73avxwSBJCMTTSbxHKGyS141npbLe3jQ/edit"
-               target="_blank">SLSSP Application</a>
-        </h4>
-        <p> Apply for the SLSSP committee! (Due on <font color="red">Monday, November 13th, 2017 11:59pm</font>)
-        </p>
-
-        <HR>
-        <h4>
-            <a href="https://bit.ly/ckiyearbookcommittee1718"
-               target="_blank">Yearbook Committee Application</a>
-        </h4>
-        <p> Apply for the Yearbook committee! (Due on <font color="red">Monday, November 27th, 2017 11:59pm</font>)
-        </p>
         <br/>
 
         <h3><center>Forms</h3></center>
@@ -50,6 +35,14 @@
 
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
 
+            <h4>
+                <a href="http://bit.ly/2zptFJo" target="_blank">Website Feature Survey Form</a>
+            </h4>
+            <p> Let our Tech Team know which website feature you would like to be implemented first or suggest a
+                feature you would like to see on our website!
+            </p>
+
+            <HR>
             <h4>
                 <a href="http://bit.ly/2hlfGO0" target="_blank">New Member Install Feedback Form</a>
             </h4>
