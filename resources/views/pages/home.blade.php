@@ -151,7 +151,6 @@
         </div>
         -->
         
-        @include('layouts.header', array('headerTitle' => 'Featured Members'))
         <!--Need to change width back when Committees page are done-->
             <div class="member-row" style="width: 100%">
                 <div class="container">
