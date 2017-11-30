@@ -159,22 +159,41 @@
                         <a href="{{ url('halloffame') }}">
                             <div class="image">
                                 <div id="slideshow">
-                            <div>
-                                <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Braelyn.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Patrick.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Riku.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Justin_D.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
+                                    </div>
+                                </div>
+                        <img src="https://fontmeme.com/permalink/171128/4910b3f96a9661841d56029db5670aa5.png"
+                             alt="fancy-fonts" border="0">
                             </div>
-                            <div>
-                                <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
-                            </div>
-                            <div>
-                                <img src="{{ asset('images/halloffame/mr/sof/Justin_D.jpg') }}" />
-                            </div>
-                            <div>
-                                <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
-                            </div>
-                        </div>
-                        <img src="https://fontmeme.com/permalink/171025/927b61dc4298ddf8c584ba4d5530972f.png" alt="fancy-fonts" border="0">
-                    </div>
-                </a>
+                        </a>
                     </div>
                 </div>
 
@@ -207,7 +226,8 @@
                 -->
             </div>
         
-        <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
+       <!-- 
+       <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
                 <div class="bgimg">
                     <img src="{{asset('images/MballGraphic_Large.jpg')}}"/></a>
                         <div class="middle">
@@ -216,6 +236,7 @@
                             </div>
                         </div>
                 </div>
+                -->
 
       <div class="mobile-text">
         <div id="week-view">
