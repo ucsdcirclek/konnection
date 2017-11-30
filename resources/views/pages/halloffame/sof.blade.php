@@ -53,8 +53,29 @@
             </div>
         </div>
     </div>
-</div>
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'October'))
+        </div>
+        <div class="mobile-text">
+            <div class ="contact-row">
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/sof/Riku.jpg') }}" />
+                    <p><strong>Riku Tajima</strong></p>
+                    <p>3rd Year</p>
+                    <p>Sociology</p>
+                </div>
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/sof/Patrick.jpg') }}" />
+                    <p><strong>Patrick Cosare</strong></p>
+                    <p>3rd Year</p>
+                    <p>General Biology</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @endsection
+
+
 
 
