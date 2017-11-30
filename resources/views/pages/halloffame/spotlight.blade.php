@@ -36,20 +36,40 @@
             @include('layouts.header', array('headerTitle' => 'October'))
         </div>
         <div class="mobile-text">
-        <div class ="contact-row">
-            <div>
-                <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
-                <p><strong>Alison Liu</strong></p>
-                <p>1st year</p>
-                <p>Communications</p>
-            </div>
-            <div>
-                <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
-                <p><strong>Andrew Vu</strong></p>
-                <p>1st Year</p>
-                <p>Biochemistry</p>
+            <div class ="contact-row">
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
+                    <p><strong>Alison Liu</strong></p>
+                    <p>1st year</p>
+                    <p>Communications</p>
+                </div>
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
+                    <p><strong>Andrew Vu</strong></p>
+                    <p>1st Year</p>
+                    <p>Biochemistry</p>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'November'))
+        </div>
+        <div class="mobile-text">
+            <div class ="contact-row">
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
+                    <p><strong>Wes Yuen</strong></p>
+                    <p>4th year</p>
+                    <p>Communications</p>
+                </div>
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/spotlight/Braelyn.jpg') }}" />
+                    <p><strong>Braelyn Joy</strong></p>
+                    <p>1st Year</p>
+                    <p>Human Biology</p>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
