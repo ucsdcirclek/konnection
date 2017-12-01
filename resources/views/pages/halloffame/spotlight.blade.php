@@ -60,7 +60,7 @@
                 <div>
                     <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
                     <p><strong>Wes Yuen</strong></p>
-                    <p>4th year</p>
+                    <p>3rd year</p>
                     <p>Communications</p>
                 </div>
                 <div>
