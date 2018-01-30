@@ -224,7 +224,7 @@
                                         <img src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" />
                                     </div>
                                     <div>
-                                        <img src="{{ asset('images/Committees/LSFP/LSFPThumb1718.jpg') }}" />
+                                        <img src="{{ asset('images/Committees/LSFP/LSFP1718Thumb.jpg') }}" />
                                     </div>
                                     <div>
                                         <img src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" />
