@@ -7,7 +7,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/committees/TechTeam/TTcover.jpg');background-repeat: no-repeat;">
+         style="background-image: url('/images/committees/TechTeam/TTCover.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
             Tech Team 2017-2018
         </div>
