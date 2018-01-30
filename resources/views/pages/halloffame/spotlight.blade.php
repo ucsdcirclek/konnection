@@ -60,7 +60,7 @@
                 <div>
                     <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
                     <p><strong>Wes Yuen</strong></p>
-                    <p>3rd year</p>
+                    <p>4th year</p>
                     <p>Communications</p>
                 </div>
                 <div>
@@ -68,6 +68,20 @@
                     <p><strong>Braelyn Joy</strong></p>
                     <p>1st Year</p>
                     <p>Human Biology</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'January'))
+        </div>
+        <div class="mobile-text">
+            <div class ="contact-row">
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/spotlight/Maricris.jpg') }}" />
+                    <p><strong>Maricris Hernandez</strong></p>
+                    <p>2nd year</p>
+                    <p>General Biology - Cell Bio</p>
                 </div>
             </div>
         </div>

@@ -53,8 +53,9 @@
             </div>
         </div>
     </div>
+
         <div class="title-wrapper">
-            @include('layouts.header', array('headerTitle' => 'October'))
+            @include('layouts.header', array('headerTitle' => 'November'))
         </div>
         <div class="mobile-text">
             <div class ="contact-row">
@@ -72,10 +73,22 @@
                 </div>
             </div>
         </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'January'))
+        </div>
+        <div class="mobile-text">
+            <div class ="contact-row">
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/sof/Phillip.jpg') }}" />
+                    <p><strong>Phillip Truong</strong></p>
+                    <p>1st Year</p>
+                    <p>Mechanical Engineering</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     @endsection
-
-
 
 

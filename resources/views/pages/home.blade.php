@@ -159,6 +159,12 @@
                             <div class="image">
                                 <div id="slideshow">
                                     <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Maricris.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Phillip.jpg') }}" />
+                                    </div>
+                                    <div>
                                         <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
                                     </div>
                                     <div>
@@ -185,6 +191,7 @@
                                     <div>
                                         <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
                                     </div>
+
                                     <div>
                                         <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
                                     </div>
@@ -196,25 +203,46 @@
                     </div>
                 </div>
 
-                <!--<div class="container">
+                <div class="container">
                     <div>
-                        <a href="{{ url('halloffame') }}">
+                        <a href="{{ url('groups') }}">
                             <div class="image">
                                 <div id="slideshow2">
                                     <div>
                                         <img src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" />
                                     </div>
                                     <div>
-                                        <img src="{{ asset('images/Committees/SLSSP/SLSSP.jpg') }}" />
+                                        <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb.jpg') }}" />
                                     </div>
                                     <div>
                                         <img src="{{ asset('images/Committees/Key2College/K2CThumb.jpg') }}"/>
                                     </div>
                                     <div>
-                                        <img src="{{ asset('images/Committees/SAAT/SAATThumb.jpg') }}" />
+                                        <img src="{{ asset('images/Committees/SAAT/SAATThumb1718.JPG') }}" />
                                     </div>
                                     <div>
                                         <img src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/LSFP/LSFPThumb1718.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/greenteam/GreenTeamThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" />
                                     </div>
                                 </div>
                                 <img src="https://fontmeme.com/permalink/171028/7fe5e29300cd6b7cbb723edbc71adcc0.png"
@@ -222,11 +250,9 @@
                             </div>
                     </div>
                 </div>
-                -->
             </div>
-        
-       <!-- 
-       <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
+        <!--
+        <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
                 <div class="bgimg">
                     <img src="{{asset('images/MballGraphic_Large.jpg')}}"/></a>
                         <div class="middle">
@@ -235,7 +261,7 @@
                             </div>
                         </div>
                 </div>
-                -->
+    -->
 
       <div class="mobile-text">
         <div id="week-view">

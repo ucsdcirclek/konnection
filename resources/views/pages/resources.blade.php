@@ -19,14 +19,6 @@
         </h4>
         <p> Apply to be a UCSD Circle K member! </p>
 
-        <HR>
-        <h4>
-            <a href="http://bit.ly/LSFP2018"
-               target="_blank">LSFP Committee Application</a>
-        </h4>
-        <p> Apply for the Large Service Fundraising Project committee! (Due on <font color="red">Tuesday, December 5th, 2017 11:59pm</font>)
-        </p>
-
         <br/>
 
         <h3><center>Forms</h3></center>
@@ -34,6 +26,26 @@
 
 
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
+
+            <h4>
+                <a href="http://bit.ly/ucsddlssp18" target="_blank">DSLSSP South 2017-18 Registration Form</a>
+            </h4>
+            <p> Sign up for District Single Large Scale Service Project South! Also please fill out the
+                <a href="https://tinyurl.com/yabdbg46" target="_blank">wavier form</a> and turn it into our
+                Treasurer. Due on <font color="red">Monday, February 5th, 2017 11:59pm</font>
+            </p>
+
+            <HR>
+
+            <h4>
+                <a href="http://bit.ly/dconreg17" target="_blank">DCON 2017-18 Registration Form</a>
+            </h4>
+            <p> Sign up for District Convention! Also please download and fill out a Code of Conduct and Wavier form
+                found <a href="http://dcon.cnhcirclek.org/" target="_blank">here</a> and turn it into our Treasurer.
+                Due on <font color="red">Tuesday, February 6th, 2017 11:59pm</font>
+            </p>
+
+            <HR>
 
             <h4>
                 <a href="http://bit.ly/2zptFJo" target="_blank">Website Feature Survey Form</a>
