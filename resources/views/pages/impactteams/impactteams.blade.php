@@ -95,7 +95,7 @@
 
         <div class="commbox"> <!-- contains the entire row--> <!-- Team FTK -->
             <div class="container"> <!-- puts the picture in a box-->
-                <img class src="{{ asset('images/impactteams/teamftk/FTKthumb.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox"> <!-- box for adding a description-->
                 <a href="{{ url('TeamFTK') }}">
