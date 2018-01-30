@@ -227,9 +227,6 @@
                 <a href="{{ url('CarpeVitam') }}">
                     <button>Learn more</button>
                 </a>
-                <a class="button" id="disabled">
-                    Apply
-                </a>
             </div>
         </div>
 
