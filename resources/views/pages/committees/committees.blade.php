@@ -155,7 +155,7 @@
 
         <div class="commbox"> <!-- SAAT Committee -->
             <div class="container">
-                <img class src="{{ asset('images/Committees/SAAT/SAATThumb1718.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/SAAT/SAATThumb1718.JPG') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('SAAT') }}">
@@ -178,7 +178,7 @@
 
         <div class="commbox"> <!-- LSFP Committee -->
             <div class="container">
-                <img class src="{{ asset('images/Committees/LSFP/LSFPThumb1718.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/LSFP/LSFP1718Thumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('LSFP') }}">
