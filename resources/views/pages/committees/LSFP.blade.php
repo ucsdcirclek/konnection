@@ -7,7 +7,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/Committees/LSFP/LSFPCover1718.jpg');background-repeat: no-repeat;">
+         style="background-image: url('/images/Committees/LSFP/LSFP1718Cover.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
             LSFP Committee 2017-2018
         </div>
