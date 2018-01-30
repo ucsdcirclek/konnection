@@ -126,7 +126,7 @@
     <div id="background" class="bigbanner"
          style="background-image: url('/images/Committees/SAAT/SAATCover17182.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
-            Key2College Committee 2017-2018
+            SAAT Committee 2017-2018
         </div>
     </div>
 
