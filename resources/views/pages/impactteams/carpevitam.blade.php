@@ -41,8 +41,8 @@
                 <p id="title2">Logistics Chair</p>
             </div>
             <div>
-                <img id="image3" src="{{ asset('images/impactteams/carpevitam/Lillia.jpg') }}" />
-                <p id="name3"><strong>Lillia Lee</strong></p>
+                <img id="image3" src="{{ asset('images/impactteams/carpevitam/Lillian.jpg') }}" />
+                <p id="name3"><strong>Lillian Lee</strong></p>
                 <p id="title3">Public Relations Chair</p>
             </div>
         </div>
