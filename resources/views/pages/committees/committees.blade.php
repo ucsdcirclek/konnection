@@ -58,7 +58,7 @@
 
         <div class="commbox"> <!-- contains the entire row--> <!-- MBall committee -->
             <div class="container"> <!-- puts the picture in a box-->
-                <img class src="{{ asset('images/committees/MBall/MBallThumb.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox"> <!-- box for adding a description-->
                 <a href="{{ url('masquerade') }}">
@@ -107,7 +107,7 @@
 
         <div class="commbox"> <!-- UCSD CKI Tech Team -->
             <div class="container">
-                <img class src="{{ asset('images/committees/TechTeam/TechThumb.png') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('TechTeam') }}">
@@ -130,7 +130,7 @@
 
         <div class="commbox"> <!-- Key2college -->
             <div class="container">
-                <img class src="{{ asset('images/committees/Key2College/K2CThumbtemp.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/Key2College/K2CThumbtemp.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('Key2College') }}">
@@ -155,7 +155,7 @@
 
         <div class="commbox"> <!-- SAAT Committee -->
             <div class="container">
-                <img class src="{{ asset('images/committees/SAAT/SAATThumb1718.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/SAAT/SAATThumb1718.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('SAAT') }}">
