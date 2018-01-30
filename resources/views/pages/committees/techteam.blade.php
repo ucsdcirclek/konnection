@@ -7,7 +7,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/committees/techteam/ttcover.jpg');background-repeat: no-repeat;">
+         style="background-image: url('/images/committees/TechTeam/TTcover.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
             Tech Team 2017-2018
         </div>
@@ -43,17 +43,17 @@
             <div id="rows">
                 <div id="row1" class="contact-row">
                     <div>
-                        <img id="image1" src="{{ asset('images/Committees/techteam/weijin.jpg') }}" />
+                        <img id="image1" src="{{ asset('images/Committees/TechTeam/Weijin.jpg') }}" />
                         <p id="name1"><strong>Weijin Xu</strong></p>
                         <p id="title1">Tech Team Committee Head</p>
                     </div>
                     <div>
-                        <img id="image2" src="{{ asset('images/Committees/techteam/Carl.jpg') }}" />
+                        <img id="image2" src="{{ asset('images/Committees/TechTeam/Carl.jpg') }}" />
                         <p id="name2"><strong>Carl Dungca</strong></p>
                         <p id="title2">Developer</p>
                     </div>
                     <div>
-                        <img id="image3" src="{{ asset('images/Committees/techteam/Ryan.jpg') }}" />
+                        <img id="image3" src="{{ asset('images/Committees/TechTeam/Ryan.jpg') }}" />
                         <p id="name3"><strong>Ryan Lemon</strong></p>
                         <p id="title3">Developer</p>
                     </div>
@@ -61,24 +61,24 @@
 
                 <div id="row2" class="contact-row">
                     <div>
-                        <img id="image4" src="{{ asset('images/Committees/techteam/Samarth.jpg') }}" />
+                        <img id="image4" src="{{ asset('images/Committees/TechTeam/Samarth.jpg') }}" />
                         <p id="name4"><strong>Samarth Aggarwal</strong></p>
                         <p id="title4">Developer</p>
                     </div>
                     <div>
-                        <img id="image5" src="{{ asset('images/Committees/techteam/Stefanie.jpg') }}" />
+                        <img id="image5" src="{{ asset('images/Committees/TechTeam/Stefanie.jpg') }}" />
                         <p id="name5"><strong>Stefanie Tonnu</strong></p>
                         <p id="title5">Developer</p>
                     </div>
                     <div>
-                        <img id="image6" src="{{ asset('images/Committees/techteam/Jay.jpg') }}" />
+                        <img id="image6" src="{{ asset('images/Committees/TechTeam/Jay.jpg') }}" />
                         <p id="name6"><strong>Jay Wang</strong></p>
                         <p id="title6">Developer</p>
                     </div>
                 </div>
                 <div id="row3" class="contact-row">
                     <div>
-                        <img id="image7" src="{{ asset('images/Committees/techteam/Jane.jpg') }}" />
+                        <img id="image7" src="{{ asset('images/Committees/TechTeam/Jane.jpg') }}" />
                         <p id="name7"><strong>Jane Wu</strong></p>
                         <p id="title7">Developer</p>
                     </div>
