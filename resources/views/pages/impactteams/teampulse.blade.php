@@ -7,7 +7,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/impactteams/teampulse/TeamPulseCover.jpg');background-repeat: no-repeat;">
+         style="background-image: url('/images/impactteams/teampulse/TeamPulseCover2.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
             Team Pulse
         </div>
