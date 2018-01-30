@@ -26,7 +26,7 @@
         document.getElementById('image3').src="{{ asset('images/Committees/MBall/Emilie.jpg') }}";
         document.getElementById('image4').src="{{ asset('images/Committees/MBall/Esther.jpg') }}";
         document.getElementById('image5').src="{{ asset('images/Committees/MBall/Seth.jpg') }}";
-        document.getElementById('image6').src="{{ asset('images/Committees/Mball/Aaron.jpg') }}";
+        document.getElementById('image6').src="{{ asset('images/Committees/MBall/Aaron.jpg') }}";
         document.getElementById('name1').innerHTML = "Joseph Le";
         document.getElementById('name2').innerHTML = "Gene He";
         document.getElementById('name3').innerHTML = "Emilie Shen";
@@ -130,7 +130,7 @@
 
 @section('content')
 
-    <div id="background" class="bigbanner" style="background-image: url('/images/committees/MBall/MballCover17182.jpg')">
+    <div id="background" class="bigbanner" style="background-image: url('/images/Committees/MBall/MballCover17182.jpg')">
         <div id="title" class="bigbannertext">
             Masquerade Ball Committee 2017-2018
         </div>
