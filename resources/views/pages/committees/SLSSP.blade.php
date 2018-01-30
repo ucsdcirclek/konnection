@@ -8,7 +8,7 @@
     var r3 = 1;
     function change1617()
     {
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/SLSSP/SLSSPCover1617.jpg')";
+        document.getElementById('background').style.backgroundImage="url('/images/Committees/SLSSP/SLSSPCover.jpg')";
         document.getElementById('title').innerHTML = "SLSSP Committee 2016-2017";
 
         document.getElementById('image1').src="{{ asset('images/Committees/SLSSP/Chloris.jpg') }}";
