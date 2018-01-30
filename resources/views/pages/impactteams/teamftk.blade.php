@@ -7,7 +7,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/impactteams/teamftk/FTKCover.jpg');background-repeat: no-repeat;">
+         style="background-image: url('/images/impactteams/teamftk/FTKCover2.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
             Team For The Kids (FTK)
         </div>
