@@ -75,7 +75,7 @@
             </div>
             <div>
                 <img id="image8" src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
-                <p id="name8"><strong>Kylie tran</strong></p>
+                <p id="name8"><strong>Kylie Tran</strong></p>
                 <p id="title8">Finance Co-Chair</p>
             </div>
         </div>
