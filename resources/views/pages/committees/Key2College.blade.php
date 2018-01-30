@@ -118,7 +118,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/committees/Key2College/K2CCovertemp2.jpg');background-repeat: no-repeat;">
+         style="background-image: url('/images/Committees/Key2College/K2CCovertemp2.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
             Key2College Committee 2017-2018
         </div>
@@ -151,7 +151,7 @@
             <div id="rows">
                 <div id="row1" class="contact-row">
                     <div>
-                        <img id="image1" src="{{ asset('images/board/Michael.jpg') }}" />
+                        <img id="image1" src="{{ asset('images/board/michael.jpg') }}" />
                         <p id="name1"><strong>Michael Christenson</strong></p>
                         <p id="title1">Key2College Committee Head</p>
                     </div>
