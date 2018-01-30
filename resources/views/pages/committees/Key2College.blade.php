@@ -73,7 +73,7 @@
             r3 = 0;
         }
 
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/Key2College/K2CCovertemp.jpg')";
+        document.getElementById('background').style.backgroundImage="url('/images/Committees/Key2College/K2CCovertemp3.jpg')";
         document.getElementById('title').innerHTML = "Key2College Committee 2017-2018";
 
         document.getElementById('image1').src = "{{ asset('images/board/michael.jpg') }}";
