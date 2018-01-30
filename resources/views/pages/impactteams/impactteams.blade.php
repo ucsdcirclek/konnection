@@ -74,7 +74,7 @@
 
         <div class="commbox"> <!-- Team Hope -->
             <div class="container">
-                <img class src="{{ asset('images/impactteams/teampulse/teampulsethumb.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamPulse') }}">
@@ -95,7 +95,7 @@
 
         <div class="commbox"> <!-- contains the entire row--> <!-- Team FTK -->
             <div class="container"> <!-- puts the picture in a box-->
-                <img class src="{{ asset('images/impactteams/teamftk/ftkthumb.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/impactteams/teamftk/FTKthumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox"> <!-- box for adding a description-->
                 <a href="{{ url('TeamFTK') }}">
@@ -118,7 +118,7 @@
 
         <div class="commbox"> <!-- Team Hope -->
             <div class="container">
-                <img class src="{{ asset('images/impactteams/teamhope/teamhopethumb.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamHope') }}">
@@ -142,7 +142,7 @@
 
         <div class="commbox"> <!-- Team Smileys -->
             <div class="container">
-                <img class src="{{ asset('images/impactteams/teamsmileys/teamsmileysthumb.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamSmileys') }}">
@@ -209,7 +209,7 @@
 
         <div class="commbox"> <!-- carpevitam -->
             <div class="container">
-                <img class src="{{ asset('images/impactteams/carpevitam/carpevitamthumb5.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('CarpeVitam') }}">
