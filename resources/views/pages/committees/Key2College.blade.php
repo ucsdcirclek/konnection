@@ -118,7 +118,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/Committees/Key2College/K2CCovertemp.jpg');background-repeat: no-repeat;">
+         style="background-image: url('/images/Committees/Key2College/K2CCovertemp3.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
             Key2College Committee 2017-2018
         </div>
