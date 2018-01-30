@@ -67,7 +67,7 @@
             r3 = 0;
         }
 
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/SAAT/SAATCover1718.jpg')";
+        document.getElementById('background').style.backgroundImage="url('/images/Committees/SAAT/SAATCover17182.jpg')";
         document.getElementById('title').innerHTML = "SAAT Committee 2017-2018";
 
         document.getElementById('image1').src = "{{ asset('images/Committees/SAAT/Shannon.jpg') }}";
@@ -124,7 +124,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/Committees/SAAT/SAATCover1718.jpg');background-repeat: no-repeat;">
+         style="background-image: url('/images/Committees/SAAT/SAATCover17182.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
             Key2College Committee 2017-2018
         </div>
