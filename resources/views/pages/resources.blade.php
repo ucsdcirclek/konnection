@@ -19,6 +19,15 @@
         </h4>
         <p> Apply to be a UCSD Circle K member! </p>
 
+        <HR>
+        <h4>
+            <a href="https://files.slack.com/files-pri/T48N4GHC7-F91QG4TQA/download/prager_s_mentorship_program_circle_k_version.docx" download >
+                Kiwanis Mentorship Application</a>
+        </h4>
+        <p> Are you interested in applying for a Kiwanis member to help you advance in your field of career?
+            Fill out an application today and hand it into our President! </p>
+
+
         <br/>
 
         <h3><center>Forms</h3></center>
