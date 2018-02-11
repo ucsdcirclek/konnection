@@ -159,6 +159,15 @@
                             <div class="image">
                                 <div id="slideshow">
                                     <div>
+                                        <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Hanna.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Nayeli.jpg') }}" />
+                                    </div>
+                                    <div>
                                         <img src="{{ asset('images/halloffame/mr/spotlight/Maricris.jpg') }}" />
                                     </div>
                                     <div>
@@ -212,7 +221,7 @@
                                         <img src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" />
                                     </div>
                                     <div>
-                                        <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb.jpg') }}" />
+                                        <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" />
                                     </div>
                                     <div>
                                         <img src="{{ asset('images/Committees/Key2College/K2CThumbtemp.jpg') }}"/>
@@ -224,7 +233,7 @@
                                         <img src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" />
                                     </div>
                                     <div>
-                                        <img src="{{ asset('images/Committees/LSFP/LSFP1718Thumb.jpg') }}" />
+                                        <img src="{{ asset('images/Committees/LSFP/LSFP1718Thumb2.jpg') }}" />
                                     </div>
                                     <div>
                                         <img src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" />

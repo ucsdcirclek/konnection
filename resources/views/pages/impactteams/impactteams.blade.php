@@ -132,7 +132,7 @@
                 <p></p>
                 <p>Team Hope's goal is raising cancer awareness and helping those affected by cancer or any other
                     debilitating illnesses heal.</p>
-                <a href="{{ url('Team Hope') }}">
+                <a href="{{ url('TeamHope') }}">
                     <button>Learn more</button>
                 </a>
             </div>

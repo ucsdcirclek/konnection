@@ -83,6 +83,12 @@
                     <p>2nd year</p>
                     <p>General Biology - Cell Bio</p>
                 </div>
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/spotlight/Nayeli.jpg') }}" />
+                    <p><strong>Nayeli Mota</strong></p>
+                    <p>2nd year</p>
+                    <p>Language Studies</p>
+                </div>
             </div>
         </div>
     </div>

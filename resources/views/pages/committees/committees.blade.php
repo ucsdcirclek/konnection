@@ -81,7 +81,7 @@
 
         <div class="commbox"> <!-- SLSSP Committee -->
             <div class="container">
-                <img class src="{{ asset('images/Committees/SLSSP/SLSSPThumb.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('SLSSP') }}">
@@ -98,8 +98,12 @@
                 <a href="{{ url('SLSSP') }}">
                     <button>Learn more</button>
                 </a>
-                <a href="https://docs.google.com/document/d/1ZpD1nq598Xh73avxwSBJCMTTSbxHKGyS141npbLe3jQ/edit"
-                   target="_blank" class="button" id="disabled">
+                
+                <!-- Application-->
+                <!--href="https://docs.google.com/document/d/1ZpD1nq598Xh73avxwSBJCMTTSbxHKGyS141npbLe3jQ/edit"
+                   target="_blank"-->
+                
+                <a class="button" id="disabled">
                     Apply
                 </a>
             </div>
@@ -178,7 +182,7 @@
 
         <div class="commbox"> <!-- LSFP Committee -->
             <div class="container">
-                <img class src="{{ asset('images/Committees/LSFP/LSFP1718Thumb.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/LSFP/LSFP1718Thumb2.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('LSFP') }}">
