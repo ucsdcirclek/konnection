@@ -53,7 +53,7 @@
     }
     function change1718() {
 
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/SLSSP/SLSSPCovertemp2.jpg')";
+        document.getElementById('background').style.backgroundImage="url('/images/Committees/SLSSP/SLSSPCover1718.jpg')";
         document.getElementById('title').innerHTML = "SLSSP Committee 2017-2018";
 
 
@@ -103,7 +103,7 @@
 
 @section('content')
 
-    <div id="background" class="bigbanner" style="background-image: url('/images/Committees/SLSSP/SLSSPCovertemp2.jpg')">
+    <div id="background" class="bigbanner" style="background-image: url('/images/Committees/SLSSP/SLSSPCover1718.jpg')">
         <div id="title" class="bigbannertext">
             SLSSP Committee 2017-2018
         </div>
