@@ -85,6 +85,18 @@
                     <p>1st Year</p>
                     <p>Mechanical Engineering</p>
                 </div>
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/sof/Hanna.jpg') }}" />
+                    <p><strong>Hanna Lam</strong></p>
+                    <p>1st Year</p>
+                    <p>Psychology </p>
+                </div>
+                <div>
+                    <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
+                    <p><strong>Kylie Tran</strong></p>
+                    <p>1st Year</p>
+                    <p>Human Biology</p>
+                </div>
             </div>
         </div>
     </div>
