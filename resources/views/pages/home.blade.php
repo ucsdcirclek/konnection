@@ -221,7 +221,7 @@
                                         <img src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" />
                                     </div>
                                     <div>
-                                        <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb.jpg') }}" />
+                                        <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" />
                                     </div>
                                     <div>
                                         <img src="{{ asset('images/Committees/Key2College/K2CThumbtemp.jpg') }}"/>
