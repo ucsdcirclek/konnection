@@ -66,6 +66,9 @@
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6> <!-- use this to specify whether or not the committee is active -->
+                
+                <!--<h6 style="color:green">Status: ACTIVE</h6>-->
+                <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/31/17)</h6>-->
                 <h6 style="color:gray">Status: INACTIVE</h6>
 
                 <p></p>
@@ -88,8 +91,9 @@
                     <h3>SLSSP Committee</h3>
                 </a>
 
-                <h6 style="color:green">Status: ACTIVE</h6>
-                <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 11/13/17)</h6>-->
+                <!--<h6 style="color:green">Status: ACTIVE</h6>-->
+                <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/31/17)</h6>-->
+                <h6 style="color:gray">Status: INACTIVE</h6>
 
 
                 <p></p>
@@ -118,8 +122,9 @@
                     <h3>UCSD CKI Tech Team</h3>
                 </a>
 
-                <h6 style="color:green">Status: ACTIVE</h6>
-                <!-- <h6 style="color:gray">Status: INACTIVE</h6> -->
+                <!--<h6 style="color:green">Status: ACTIVE</h6>-->
+                <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/31/17)</h6>-->
+                <h6 style="color:gray">Status: INACTIVE</h6>
 
                 <p></p>
                 <p>UCSD CKI's tech team works to maintain and improve the club website.</p>
@@ -141,8 +146,9 @@
                     <h3>Key2College Committee</h3>
                 </a>
 
-                <h6 style="color:green">Status: ACTIVE</h6>
-                <!--<h6 style="color:gray">Status: INACTIVE</h6>-->
+                <!--<h6 style="color:green">Status: ACTIVE</h6>-->
+                <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/31/17)</h6>-->
+                <h6 style="color:gray">Status: INACTIVE</h6>
 
                 <p></p>
                 <p>The Key2College Committee at UCSD Circle K organizes a day of workshops, entertainment,
@@ -166,8 +172,9 @@
                     <h3>UCSD CKI Student Alliance Against Trafficking (SAAT)</h3>
                 </a>
 
-                <h6 style="color:green">Status: ACTIVE</h6>
+                <!--<h6 style="color:green">Status: ACTIVE</h6>-->
                 <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/31/17)</h6>-->
+                <h6 style="color:gray">Status: INACTIVE</h6>
 
                 <p></p>
                 <p>The SAAT Committee fights to increase awareness on human trafficking through several events.</p>
@@ -189,8 +196,10 @@
                     <h3>Large Scale Fundraising Project Committee (LSFP)</h3>
                 </a>
 
-                <h6 style="color:green">Status: ACTIVE</h6>
+                <!--<h6 style="color:green">Status: ACTIVE</h6>-->
                 <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/31/17)</h6>-->
+                <h6 style="color:gray">Status: INACTIVE</h6>
+
 
                 <p></p>
                 <p>The LSFP Committee is in charge of hosting a large-scale fundraiser that is aimed towards
