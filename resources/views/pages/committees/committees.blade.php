@@ -203,7 +203,7 @@
 
                 <p></p>
                 <p>The LSFP Committee is in charge of hosting a large-scale fundraiser that is aimed towards
-                    one of the District Fundraising Initiatives.</p>
+                    the District Fundraising Initiatives.</p>
                 <a href="{{ url('LSFP') }}">
                     <button>Learn more</button>
                 </a>
