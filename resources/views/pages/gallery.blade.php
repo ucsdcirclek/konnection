@@ -21,17 +21,27 @@
         </div>
         <p></p>
         <div class="center">
-        <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/oDkApQZZgFU?autoplay=1" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+        <div style="position:relative;height:0;padding-bottom:56.25%;margin-left: 25px"><iframe src="https://www.youtube.com/embed/oDkApQZZgFU?autoplay=0" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
         <p></p>
+        
+        <h2>Newsletters</h2>
+            <p>Read personal accounts of our events from our members!</p>
+            <p style="line-height: 2px"><strong>(Full screen for best experience)</strong></p>
+            <div data-configid="32423822/59188021" style="width:100%; height:259px; margin-left: 25px" class="issuuembed"></div>
+            <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+        
         <h2>Photo Archive</h2>
         <p><strong>Revisit</strong> memories from <strong>current</strong> and <strong>previous</strong> years!</p>
     </div>
     </div>
 
-    <div class="btn-group">
-        <button><a target="_blank" href="https://www.flickr.com/photos/ucsdckigallery/albums" style="color:white">Spring 2017 (Flickr Album)</a></button>
-        <button><a target="_blank" href="https://drive.google.com/drive/folders/0B-mRsUmzugcLTWRTNFYwa2cwN00" style="color:white">Google Drive 2017-18</a></button>
-        <button><a target="_blank" href="https://www.youtube.com/playlist?list=PLauQJNb_35oxuJ3_Kct_tHZBNaeOeFipr" style="color:white">2016-2017 Weekly Recap Videos</a></button>
+   <div class="btn-group">
+        <a target="_blank" href="https://www.flickr.com/photos/ucsdckigallery/albums" style="color:white">
+            <button>Spring 2017 (Flickr Album)</button></a>
+        <a target="_blank" href="https://drive.google.com/drive/folders/0B-mRsUmzugcLTWRTNFYwa2cwN00" style="color:white">
+            <button>Google Drive 2017-18</button></a>
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLauQJNb_35oxuJ3_Kct_tHZBNaeOeFipr" style="color:white">
+            <button>2016-2017 Weekly Recap Videos</button></a>
     </div>
 
     <p></p>
