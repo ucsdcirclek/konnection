@@ -76,12 +76,12 @@
         document.getElementById('background').style.backgroundImage="url('/images/Committees/Key2College/K2CCovertemp3.jpg')";
         document.getElementById('title').innerHTML = "Key2College Committee 2017-2018";
 
-        document.getElementById('image1').src = "{{ asset('images/board/michael.jpg') }}";
+        document.getElementById('image1').src = "{{ asset('images/Committees/Key2College/Michael1718.jpg') }}";
         document.getElementById('image2').src = "{{ asset('images/Committees/Key2College/Donaji.jpg') }}";
-        document.getElementById('image3').src = "{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}";
+        document.getElementById('image3').src = "{{ asset('images/Committees/Key2College/Joanna.jpg') }}";
         document.getElementById('image4').src = "{{ asset('images/Committees/Key2College/Rowan.jpg') }}";
         document.getElementById('image5').src = "{{ asset('images/Committees/Key2College/Justin.jpg') }}";
-        document.getElementById('image6').src = "{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}";
+        document.getElementById('image6').src = "{{ asset('images/Committees/Key2College/Aaron.jpg') }}";
         document.getElementById('image7').src = "{{ asset('images/Committees/Key2College/JustinD.jpg') }}";
         document.getElementById('name1').innerHTML = "Michael Christenson";
         document.getElementById('name2').innerHTML = "Donaji Rodriguez";
@@ -118,7 +118,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/Committees/Key2College/K2CCovertemp3.jpg');background-repeat: no-repeat;">
+         style="background-image: url('/images/Committees/Key2College/K2CCover1718.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
             Key2College Committee 2017-2018
         </div>
@@ -151,7 +151,7 @@
             <div id="rows">
                 <div id="row1" class="contact-row">
                     <div>
-                        <img id="image1" src="{{ asset('images/board/michael.jpg') }}" />
+                        <img id="image1" src="{{ asset('images/Committees/Key2College/Michael1718.jpg') }}" />
                         <p id="name1"><strong>Michael Christenson</strong></p>
                         <p id="title1">Key2College Committee Head</p>
                     </div>
@@ -161,7 +161,7 @@
                         <p id="title2">Logisitcs Chair</p>
                     </div>
                     <div>
-                        <img id="image3" src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
+                        <img id="image3" src="{{ asset('images/Committees/Key2College/Joanna.jpg') }}" />
                         <p id="name3"><strong>Joanna Truong</strong></p>
                         <p id="title3">Programs Chair</p>
                     </div>
@@ -179,7 +179,7 @@
                         <p id="title5">Publicity Chair</p>
                     </div>
                     <div>
-                        <img id="image6" src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
+                        <img id="image6" src="{{ asset('images/Committees/Key2College/Aaron.jpg') }}" />
                         <p id="name6"><strong>Aaron Zepeda</strong></p>
                         <p id="title6">Key2Life Chair</p>
                     </div>
