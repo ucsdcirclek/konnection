@@ -139,7 +139,7 @@
 
         <div class="commbox"> <!-- Key2college -->
             <div class="container">
-                <img class src="{{ asset('images/Committees/Key2College/K2CThumbtemp.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/Key2College/K2CThumb1718.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('Key2College') }}">
