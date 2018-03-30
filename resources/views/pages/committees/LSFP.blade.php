@@ -26,7 +26,9 @@
         <p>
             2017-2018 LSFP Committee hosted a divisional service auction with a theme that revolved around
             "The Greatest Showman". The proceeds for this large-scale fundraiser went towards Kiwanis Family House
-            and 20% of the proceeds went towards helping Hawaii Circle K clubs get to District Events.
+            and 20% of the proceeds went towards helping Hawaii Circle K clubs get to District Events. The committee
+            also hosted Pies For PTP and Double Dare Week during Fellowship week to raise money towards Pediatric
+            Trauma Program.
         </p>
     </div>
 

@@ -32,29 +32,85 @@
 
     <div class="wrapper">
         <div class="title-wrapper">
-            @include('layouts.header', array('headerTitle' => 'October'))
+            @include('layouts.header', array('headerTitle' => 'April 2017'))
         </div>
         <div class="mobile-text">
             <div class ="contact-row">
                 <div>
-                    <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
-                    <p><strong>Joanna Troung</strong></p>
-                    <p>1st year</p>
+                    <img src="{{ asset('images/halloffame/mr/mom/Julie.jpg') }}" />
+                    <p><strong>Julie Shiozaki</strong></p>
+                    <p>4th Year</p>
+                    <p>Communications</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'May 2017'))
+        </div>
+        <div class="mobile-text">
+            <div class ="contact-row">
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/mom/Sean.jpg') }}" />
+                    <p><strong>Sean Lo</strong></p>
+                    <p>2nd Year</p>
                     <p>Human Biology</p>
                 </div>
             </div>
         </div>
 
         <div class="title-wrapper">
-            @include('layouts.header', array('headerTitle' => 'November'))
+            @include('layouts.header', array('headerTitle' => 'October 2017'))
+        </div>
+        <div class="mobile-text">
+            <div class ="contact-row">
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
+                    <p><strong>Joanna Troung</strong></p>
+                    <p>1st Year</p>
+                    <p>Human Biology</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'November 2017'))
         </div>
         <div class="mobile-text">
             <div class ="contact-row">
                 <div>
                     <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
                     <p><strong>Aaron Zepeda</strong></p>
-                    <p>1st year</p>
+                    <p>1st Year</p>
                     <p>Undeclared</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'February 2018'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/halloffame/mr/mom/Stephanie.jpg')}}" />
+                    <p><strong>Stephanie Nguyen</strong></p>
+                    <p>1st Year</p>
+                    <p>Biochemistry</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'March 2018'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/impactteams/teamftk/Vivian.jpg')}}" />
+                    <p><strong>Vivian Du</strong></p>
+                    <p>2nd Year</p>
+                    <p>General Biology</p>
                 </div>
             </div>
         </div>

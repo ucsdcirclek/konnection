@@ -159,6 +159,54 @@
                             <div class="image">
                                 <div id="slideshow">
                                     <div>
+                                        <img src="{{ asset('images/impactteams/teamftk/Vivian.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Tri.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Vanissa.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SAAT/Marne.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teampulse/Sally.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SAAT/Ming.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/Jovonne.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Stephanie.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Julie.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Sean.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Jack.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Tammy.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamftk/Fray.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/Alyssa.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/PatrickL.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/Victoria.jpg') }}" />
+                                    </div>
+                                    <div>
                                         <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
                                     </div>
                                     <div>
@@ -224,7 +272,7 @@
                                         <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" />
                                     </div>
                                     <div>
-                                        <img src="{{ asset('images/Committees/Key2College/K2CThumbtemp.jpg') }}"/>
+                                        <img src="{{ asset('images/Committees/Key2College/K2CThumb1718.jpg') }}"/>
                                     </div>
                                     <div>
                                         <img src="{{ asset('images/Committees/SAAT/SAATThumb1718.JPG') }}" />
