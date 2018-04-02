@@ -105,9 +105,7 @@
                             <li class="avatar small">
 
                                 <div class="avatar-wrapper">
-                                    {{--change me --}}
-                                    {{--<img src="{{ $registration->user->avatar->url() }}"> --}}
-                                    <img src="{{ asset('images/passionfruits/passionfruit.jpg') }}" />
+                                    <img src="{{ $registration->user->avatar->url() }}">
                                     {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
                                     <div class="overlay">
                                         @if ($registration->driver_status)
@@ -159,15 +157,11 @@
                     </div>
 
                     @if(is_null($event->chair))
-                        {{--change me --}}
-                        {{--<img src="{{ $registration->user->avatar->url() }}">--}}
-                        <img src="{{ asset('images/passionfruits/passionfruit.jpg') }}"/>
+                        <img src="{{ $registration->user->avatar->url() }}">
                         <p class="name">{{ $event->creator->first_name }} {{$event->creator->last_name}}</p>
                         <p class="info">{{ $event->creator->phone }}</p>
                     @else
-                        {{--change me --}}
-                        {{--<img src="{{ $registration->user->avatar->url() }}">--}}
-                        <img src="{{ asset('images/passionfruits/passionfruit.jpg') }}"/>
+                        <img src="{{ $registration->user->avatar->url() }}">
                         <p class="name">{{ $event->chair->first_name }} {{$event->chair->last_name}}</p>
                         <p class="info">{{ $event->chair->phone }}</p>
                     @endif
