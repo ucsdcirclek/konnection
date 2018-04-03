@@ -25,19 +25,19 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/Bradley.jpg') }}" />
+                <img src="{{ asset('images/board/bradley.jpg') }}" />
                 <p><strong>Bradley Ventayen</strong></p>
                 <p>President</p>
                 <p>president@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/John.jpg') }}" />
+                <img src="{{ asset('images/board/john.jpg') }}" />
                 <p><strong>John Shin</strong></p>
                 <p>Vice President of Administration</p>
                 <p>vpa@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/Matthew.jpg') }}" />
+                <img src="{{ asset('images/board/matthew.jpg') }}" />
                 <p><strong>Matthew Kawakami</strong></p>
                 <p>Vice President of Service</p>
                 <p>vps@ucsdcki.org</p>
@@ -45,19 +45,19 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/Wesley.jpg') }}" />
+                <img src="{{ asset('images/board/wesley.jpg') }}" />
                 <p><strong>Wesley Wu</strong></p>
                 <p>Secretary</p>
                 <p>secretary@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/Nancy.jpg') }}" />
+                <img src="{{ asset('images/board/nancy.jpg') }}" />
                 <p><strong>Nancy Huang</strong></p>
                 <p>Treasurer</p>
                 <p>treasurer@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/Anh.jpg') }}" />
+                <img src="{{ asset('images/board/anh.jpg') }}" />
                 <p><strong>Anh Vo</strong></p>
                 <p>Fundraising</p>
                 <p>fundraising@ucsdcki.org</p>
@@ -71,13 +71,13 @@
                 <p>historian@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/Michael.jpg') }}" />
+                <img src="{{ asset('images/board/michael.jpg') }}" />
                 <p><strong>Michael Christensen</strong></p>
                 <p>Kiwanis Family</p>
                 <p>kfam@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/Shannon.jpg') }}" />
+                <img src="{{ asset('images/board/shannon.jpg') }}" />
                 <p><strong>Shannon Lee</strong></p>
                 <p>Public Relations</p>
                 <p>pr@ucsdcki.org</p>
@@ -85,7 +85,7 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/Erica.jpg') }}" />
+                <img src="{{ asset('images/board/erica.jpg') }}" />
                 <p><strong>Erica Wei</strong></p>
                 <p>Member Relations</p>
                 <p>mr@ucsdcki.org</p>
@@ -97,7 +97,7 @@
                 <p>mde@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/Don.jpg') }}" />
+                <img src="{{ asset('images/board/don.jpg') }}" />
                 <p><strong>Don Tran</strong></p>
                 <p>Social</p>
                 <p>social@ucsdcki.org</p>
@@ -105,19 +105,19 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/Ryan.jpg') }}" />
+                <img src="{{ asset('images/board/ryan.jpg') }}" />
                 <p><strong>Ryan Luong</strong></p>
                 <p>Fellowship</p>
                 <p>fellowship@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/Siobhan.jpg') }}" />
+                <img src="{{ asset('images/board/siobhan.jpg') }}" />
                 <p><strong>Siobhan lin-nugent</strong></p>
                 <p>Service</p>
                 <p>service@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/Weijin.jpg') }}" />
+                <img src="{{ asset('images/board/weijin.jpg') }}" />
                 <p><strong>Weijin Xu</strong></p>
                 <p>Technology</p>
                 <p>technology@ucsdcki.org</p>
