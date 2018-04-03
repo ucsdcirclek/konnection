@@ -157,11 +157,11 @@
                     </div>
 
                     @if(is_null($event->chair))
-                        <img src="{{ $registration->user->avatar->url() }}">
+                        <img src="{{ $event->creator->avatar->url() }}">
                         <p class="name">{{ $event->creator->first_name }} {{$event->creator->last_name}}</p>
                         <p class="info">{{ $event->creator->phone }}</p>
                     @else
-                        <img src="{{ $registration->user->avatar->url() }}">
+                        <img src="{{ $event->chair->avatar->url() }}">
                         <p class="name">{{ $event->chair->first_name }} {{$event->chair->last_name}}</p>
                         <p class="info">{{ $event->chair->phone }}</p>
                     @endif
