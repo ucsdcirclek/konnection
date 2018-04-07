@@ -20,6 +20,16 @@
         <p> Apply to be a UCSD Circle K member! </p>
 
         <HR>
+
+        <h4>
+            <a href="https://docs.google.com/document/d/1QYm_EymGutshxR8oY1JavcuC380VqHVdpCt0zbOgQPM/edit" target="_blank"> Masquerade Ball Committee Application (2018)</a>
+        </h4>
+        <p> Help plan our annual Masquerade Ball, UCSD Circle K's largest fundraiser! Due on <font color="red">Tuesday, April 10th by 11:59 p.m
+            </font> </p>
+
+
+        <HR>
+
         <h4>
             <a href="https://files.slack.com/files-pri/T48N4GHC7-F91QG4TQA/download/prager_s_mentorship_program_circle_k_version.docx" download >
                 Kiwanis Mentorship Application</a>
@@ -35,15 +45,6 @@
 
 
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
-
-            <h4>
-                <a href="https://docs.google.com/document/d/1QYm_EymGutshxR8oY1JavcuC380VqHVdpCt0zbOgQPM/edit" target="_blank">Masquerade Ball Committee Application (2018)</a>
-            </h4>
-            <p> Help plan our annual Masquerade Ball, UCSD Circle K's largest fundraiser! Due on <font color="red">Tuesday, April 10th by 11:59 p.m
-                </font>
-            </p>
-
-            <HR>
 
             <h4>
                 <a href="http://bit.ly/2zptFJo" target="_blank">Website Feature Survey Form</a>
