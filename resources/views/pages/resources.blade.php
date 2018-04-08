@@ -31,6 +31,15 @@
         <HR>
 
         <h4>
+            <a href="https://goo.gl/forms/QQavNpWedRLsBYHf1" target="_blank"> Tech Team Application (2018-2019)</a>
+        </h4>
+        <p>Work behind the scenes by developing new features for the UCSD CKI official website! Due on <font color="red">Wednesday, April 18th by 11:59 p.m
+            </font> </p>
+
+
+        <HR>
+
+        <h4>
             <a href="https://files.slack.com/files-pri/T48N4GHC7-F91QG4TQA/download/prager_s_mentorship_program_circle_k_version.docx" download >
                 Kiwanis Mentorship Application</a>
         </h4>
@@ -45,6 +54,16 @@
 
 
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
+
+            <h4>
+                <a href=" http://bit.ly/2018-2019ucsdckitheme" target="_blank">Club Theme Suggestions</a>
+            </h4>
+            <p> Have an idea for our org’s new theme? Submit them through our form for a chance to have it printed into our new
+                T-Shirts, Yearbook, and Scrapbook! <font color="red">Friday, April 20th by 11:59 p.m
+                </font>
+            </p>
+
+            <HR>
 
             <h4>
                 <a href="http://bit.ly/2zptFJo" target="_blank">Website Feature Survey Form</a>
@@ -106,3 +125,4 @@
     </div>
 
 @endsection
+
