@@ -1,4 +1,4 @@
-@extends('layouts.master')
+extends('layouts.master')
 
 @section('title')
     Membership
@@ -19,14 +19,17 @@
         <br />
 
         <h2>Step 2: Submit your Dues!</h2>
-        <p>Membership for the year costs only $45.
+        <!--Change Me <p>Membership for the year costs only $45.
             <strong>Turn this amount in check (payable to UCSD Circle K)/cash/Venmo (UCSDCircleK).</strong>
-            Some of the benefits you'll receive are:</p>
-        <ul>
+            Some of the benefits you'll receive are:</p> -->
+        <p>Membership for spring quarter is <strong>completely free!</strong></p>
+        <p>All dues paid members recieve:</p>
+
+       <ul>
             <li>A free club t-shirt</li>
             <li>Free lunch on Fridays at Kiwanis Luncheon</li>
             <li>Free rides to all events</li>
-            <li>You get to be sorted into a family!</li>
+            <li>The opportunity to be sorted into a family!</li>
         </ul>
 
         <h2>Step 3: Submit the Above!</h2>
@@ -38,7 +41,7 @@
         <p>A lot of our service events are held off campus, and we use CST (Community Service Transportation)
             to shuttle members to and from events! Look out for a presentation at the Week 3 GBM or click below for information!</p>
 
-            <a class="button" target="_blank" href="https://students.ucsd.edu/student-life/involvement/community/cstvans/index.html">CST Page</a>
+            <a class="button" target="_blank" href="https://students.ucsd.edu/student-life/involvement/community/local-ongoing-service/cstvans/orientation.html">CST Page</a>
 
     </div>
 
