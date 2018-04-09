@@ -20,6 +20,25 @@
         <p> Apply to be a UCSD Circle K member! </p>
 
         <HR>
+
+        <h4>
+            <a href="https://docs.google.com/document/d/1QYm_EymGutshxR8oY1JavcuC380VqHVdpCt0zbOgQPM/edit" target="_blank"> Masquerade Ball Committee Application (2018)</a>
+        </h4>
+        <p> Help plan our annual Masquerade Ball, UCSD Circle K's largest fundraiser! Due on <font color="red">Tuesday, April 10th by 11:59 p.m
+            </font> </p>
+
+
+        <HR>
+
+        <h4>
+            <a href="https://goo.gl/forms/QQavNpWedRLsBYHf1" target="_blank"> Tech Team Application (2018-2019)</a>
+        </h4>
+        <p>Work behind the scenes by developing new features for the UCSD CKI official website! Due on <font color="red">Wednesday, April 18th by 11:59 p.m
+            </font> </p>
+
+
+        <HR>
+
         <h4>
             <a href="https://files.slack.com/files-pri/T48N4GHC7-F91QG4TQA/download/prager_s_mentorship_program_circle_k_version.docx" download >
                 Kiwanis Mentorship Application</a>
@@ -37,9 +56,10 @@
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
 
             <h4>
-                <a href="https://docs.google.com/document/d/1QYm_EymGutshxR8oY1JavcuC380VqHVdpCt0zbOgQPM/edit" target="_blank">Masquerade Ball Committee Application (2018)</a>
+                <a href=" http://bit.ly/2018-2019ucsdckitheme" target="_blank">Club Theme Suggestions</a>
             </h4>
-            <p> Help plan our annual Masquerade Ball, UCSD Circle K's largest fundraiser! Due on <font color="red">Tuesday, April 10th by 11:59 p.m
+            <p> Have an idea for our org’s new theme? Submit them through our form for a chance to have it printed into our new
+                T-Shirts, Yearbook, and Scrapbook! <font color="red">Friday, April 20th by 11:59 p.m
                 </font>
             </p>
 
@@ -105,3 +125,4 @@
     </div>
 
 @endsection
+
