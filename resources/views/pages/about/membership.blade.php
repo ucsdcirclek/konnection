@@ -1,4 +1,4 @@
-extends('layouts.master')
+@extends('layouts.master')
 
 @section('title')
     Membership
@@ -11,10 +11,11 @@ extends('layouts.master')
             you only need to follow these simple steps:</p>
 
         <h2>Step 1: Complete the Membership Form!</h2>
-        <p>We'll need some basic information about you as well as some interesting points about you to sort you into one
+        <!-- <p>We'll need some basic information about you as well as some interesting points about you to sort you into one
             of the three families this year. Just fill out this form and submit it!</p>
 
-            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/yDt69X">Membership Application</a>
+            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/yDt69X">Membership Application</a> -->
+        <p>Be on the lookout for a revised new member application, coming out next fall!</p>
 
         <br />
 
