@@ -1,4 +1,4 @@
-@extends('layouts.master')
+extends('layouts.master')
 
 @section('title')
     Membership
@@ -22,13 +22,14 @@
         <!--Change Me <p>Membership for the year costs only $45.
             <strong>Turn this amount in check (payable to UCSD Circle K)/cash/Venmo (UCSDCircleK).</strong>
             Some of the benefits you'll receive are:</p> -->
-        <p>Membership for spring quarter is completely free!</p>
+        <p>Membership for spring quarter is <strong>completely free!</strong></p>
+        <p>All dues paid members recieve:</p>
 
-        <ul>
+       <ul>
             <li>A free club t-shirt</li>
             <li>Free lunch on Fridays at Kiwanis Luncheon</li>
             <li>Free rides to all events</li>
-            <li>You get to be sorted into a family!</li>
+            <li>The opportunity to be sorted into a family!</li>
         </ul>
 
         <h2>Step 3: Submit the Above!</h2>
