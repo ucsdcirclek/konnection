@@ -11,11 +11,11 @@
             you only need to follow these simple steps:</p>
 
         <h2>Step 1: Complete the Membership Form!</h2>
-        <!-- <p>We'll need some basic information about you as well as some interesting points about you to sort you into one
-            of the three families this year. Just fill out this form and submit it!</p>
+        <p>We'll need some basic information about you as well as some interesting points about you to sort you into a
+         family this year. Just fill out this form and submit it!</p>
 
-            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/yDt69X">Membership Application</a> -->
-        <p>Be on the lookout for a revised new member application, coming out next fall!</p>
+            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/yDt69X">Membership Application</a>
+        <!--<p>Be on the lookout for a revised new member application, coming out next fall!</p> -->
 
         <br />
 
@@ -24,7 +24,7 @@
             <strong>Turn this amount in check (payable to UCSD Circle K)/cash/Venmo (UCSDCircleK).</strong>
             Some of the benefits you'll receive are:</p> -->
         <p>Membership for spring quarter is <strong>completely free!</strong></p>
-        <p>All dues paid members recieve:</p>
+        <p>All dues paid members will recieve:</p>
 
        <ul>
             <li>A free club t-shirt</li>
