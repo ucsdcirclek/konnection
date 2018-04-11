@@ -24,9 +24,10 @@
 
 
         <h4>
-            <a href="https://docs.google.com/document/d/1QYm_EymGutshxR8oY1JavcuC380VqHVdpCt0zbOgQPM/edit" target="_blank"> Masquerade Ball Committee Application (2018)</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVGzt9NvHSbiwRVOm147T7YfmyX7RhcpMDHxDbTMDGAqyA2g/viewform" target="_blank">
+                PR Media Assistant Application</a>
         </h4>
-        <p> Help plan our annual Masquerade Ball, UCSD Circle K's largest fundraiser! Due on <font color="red">Tuesday, April 10th by 11:59 p.m
+        <p> See what it's like to post and publicize for UCSD CKI by being a Media Assistant! Due on <font color="red">Friday, April 13th by 11:59 p.m
             </font> </p>
 
         <HR>
@@ -66,6 +67,16 @@
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
 
             <h4>
+                <a href="https://docs.google.com/forms/d/1csqMo8m7QdEY3VDEG4gWWYa46EXXATNQlzp0u9ak7Rs/viewform?edit_requested=true"
+                   target="_blank">Weekly recap song requests</a>
+            </h4>
+            <p> Would you like to request a song for our weekly GBM recap videos? Now is your chance!</p>
+
+            <HR>
+
+
+
+            <h4>
                 <a href=" http://bit.ly/2018-2019ucsdckitheme" target="_blank">Club Theme Suggestions</a>
             </h4>
             <p> Have an idea for our org’s new theme? Submit them through our form for a chance to have it printed into our new
@@ -98,14 +109,15 @@
 
             <HR>
             <h4>
-                <a href="http://bit.ly/ckireimbursements1718" target="_blank">Reimbursement Form</a>
+                <a href="http://bit.ly/ucsdckireimburse2018" target="_blank">Reimbursement Form</a>
             </h4>
             <p> Go here for reimbursement requests. Make sure to follow all the steps!
             </p>
 
             <HR>
             <h4>
-                <a href="http://bit.ly/2ygHMRD" target="_blank">Budget Form</a>
+                <a href="https://docs.google.com/document/d/1g0B0QbJ0n4rfwBC1xr9fcMpc9-zuWySCFz7Hj92dd0o/edit?usp=sharing"
+                   target="_blank">Budget Form</a>
             </h4>
             <p> Go here for budget requests. Make sure to follow all the steps!
             </p>
@@ -135,4 +147,5 @@
     </div>
 
 @endsection
+
 
