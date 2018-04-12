@@ -11,7 +11,7 @@
     <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em"> -->
 
     <div class="wrapper">
-        <h3><center>Applications Test</h3></center>
+        <h3><center>Applications</h3></center>
         <br/>
         <HR>
         <h4>
