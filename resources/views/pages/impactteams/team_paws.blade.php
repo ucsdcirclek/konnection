@@ -37,12 +37,12 @@
                 <p id="title1">Impact Team Head</p>
             </div>
             <div>
-                <img id="image2" src="{{ asset('images/impactteams/team_paws/Minghua.jpg') }}" />
+                <img id="image2" src="{{ asset('images/impactteams/team_paws/Minghua.JPG') }}" />
                 <p id="name2"><strong>Minghua Ong</strong></p>
                 <p id="title2">Impact Team Head</p>
             </div>
             <div>
-                <img id="image3" src="{{ asset('images/impactteams/team_paws/Alyssa.jpg') }}" />
+                <img id="image3" src="{{ asset('images/impactteams/team_paws/Alyssa.JPG') }}" />
                 <p id="name3"><strong>Alyssa Granados</strong></p>
                 <p id="title3">Co-Finanace Chair</p>
             </div>
