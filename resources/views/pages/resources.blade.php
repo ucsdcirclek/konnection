@@ -22,12 +22,10 @@
 
         <HR>
 
-
         <h4>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVGzt9NvHSbiwRVOm147T7YfmyX7RhcpMDHxDbTMDGAqyA2g/viewform" target="_blank">
-                PR Media Assistant Application</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScPdEs368KSL9WC-XmoWxJNrDzFBzMxCx5jOnKOb4RbCxLoZg/viewform" target="_blank"> New Member Install Committee</a>
         </h4>
-        <p> See what it's like to post and publicize for UCSD CKI by being a Media Assistant! Due on <font color="red">Friday, April 13th by 11:59 p.m
+        <p>Be part of the team that organizes UCSD CKI's new member install event! Due on <font color="red">Sunday, April 22nd by 11:59 p.m
             </font> </p>
 
         <HR>
@@ -46,7 +44,6 @@
         </h4>
         <p>Work behind the scenes by developing new features for the UCSD CKI official website! Due on <font color="red">Wednesday, April 18th by 11:59 p.m
             </font> </p>
-
 
         <HR>
 
