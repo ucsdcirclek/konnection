@@ -123,15 +123,15 @@
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
-                <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/31/17)</h6>-->
-                <h6 style="color:gray">Status: INACTIVE</h6>
+                <h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 4/18/18)</h6>
+                <!-- <h6 style="color:gray">Status: INACTIVE</h6> -->
 
                 <p></p>
                 <p>UCSD CKI's tech team works to maintain and improve the club website.</p>
                 <a href={{ url('TechTeam') }}>
                     <button>Learn more</button>
                 </a>
-                <a id="disabled" class="button">
+                <a id="apply" class="button" href="https://goo.gl/forms/QQavNpWedRLsBYHf1" target="_blank">
                     Apply
                 </a>
             </div>
