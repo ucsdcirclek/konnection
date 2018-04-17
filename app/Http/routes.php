@@ -137,6 +137,7 @@ Route::get('TeamTails', function() { return view( 'pages.impactteams.teamtails')
 Route::get('TeamSmileys', function() { return view( 'pages.impactteams.teamsmileys'); });
 Route::get('TeamFTK', function() { return view( 'pages.impactteams.teamftk'); });
 Route::get('TeamPulse', function() { return view( 'pages.impactteams.teampulse'); });
+Route::get('Team_Paws', function() { return view( 'pages.impactteams.team_paws'); });
 
 
 

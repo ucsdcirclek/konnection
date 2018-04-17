@@ -70,9 +70,33 @@
 
     <div class="wrapper">
 
+        @include('layouts.header', array('headerTitle' => '2018-2019 Term'))
+
+        <div class="commbox">
+            <div class="container">
+                <img class src="{{ asset('images/impactteams/team_paws/Paws_Thumb.png') }}" alt="Avatar">
+            </div>
+            <div class="textbox">
+                <a href="{{ url('Team_Paws') }}">
+                    <h3>Team Paws</h3>
+                </a>
+
+                <h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
+                 current Impact Team for the quarter-->
+                <!--<h6 style="color:gray">Status: COMPLETED</h6>-->
+
+                <p></p>
+                <p>Team Paws fights and volunteers for the fair treatment and rights of dogs. </p>
+                <a href="{{ url('Team_Paws') }}">
+                    <button>Learn more</button>
+                </a>
+            </div>
+        </div>
+
+
         @include('layouts.header', array('headerTitle' => '2017-2018 Term'))
 
-        <div class="commbox"> <!-- Team Hope -->
+        <div class="commbox">
             <div class="container">
                 <img class src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" alt="Avatar">
             </div>
@@ -81,9 +105,7 @@
                     <h3>Team Pulse</h3>
                 </a>
 
-                <h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
-                 current Impact Team for the quarter-->
-                <!--<h6 style="color:gray">Status: COMPLETED</h6>-->
+                <h6 style="color:gray">Status: COMPLETED</h6>
 
                 <p></p>
                 <p>Team Pulse's goal is focused on heart disease awareness and prevention.</p>
