@@ -85,7 +85,7 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/maricris2.JPG') }}" />
+                <img src="{{ asset('images/board/Maricris2.jpg') }}" />
                 <p><strong>Maricris Hernandez</strong></p>
                 <p>Member Relations</p>
                 <p>mr@ucsdcki.org</p>
