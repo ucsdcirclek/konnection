@@ -86,7 +86,7 @@
                 <!--<h6 style="color:gray">Status: COMPLETED</h6>-->
 
                 <p></p>
-                <p>Team Paws fights and volunteers for the fair treatment and rights of dogs. </p>
+                <p>Team Paws focuses on the health and well being of dogs as well as education in pet care.  </p>
                 <a href="{{ url('Team_Paws') }}">
                     <button>Learn more</button>
                 </a>

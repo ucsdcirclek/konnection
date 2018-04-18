@@ -19,8 +19,9 @@
             <p></p>
             <h1 class="title">What is Team Paws?</h1>
         </div>
-        <p>Team Paws is an impact team dedicated to volunteering at animal shelters and helping dogs in need! Keep your eye out for
-            future events!
+        <p>Team Paws is an impact team dedicated to helping animals in need!
+            Our primary cause is for dogs and dog health, but we also plan to create an impact for pets in general
+            by increasing education on pet care and health.
         </p>
 
     </div>
