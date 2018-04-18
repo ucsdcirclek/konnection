@@ -16,12 +16,12 @@
                 <p>"Sometimes you will never know the value of a <strong>moment</strong> until it becomes a <strong>memory</strong>."</p>
                 <p>- Theodor Seuss Geisel</p>
             </div>
-            <h2>2016-2017 Term Recap Video</h2>
+            <h2>2017-2018 Yearly Recap</h2>
             <p>Look back on a year of service, leadership, and fellowship</p>
         </div>
         <p></p>
         <div class="center">
-            <div style="position:relative;height:0;padding-bottom:56.25%;margin-left: 25px"><iframe src="https://www.youtube.com/embed/oDkApQZZgFU?autoplay=0" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/GAK95gmbTyE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <p></p>
 
             <div class="title-wrapper">
@@ -43,10 +43,10 @@
         <div class="center">
             <a target="_blank" href="https://www.flickr.com/photos/ucsdckigallery/albums" style="color:white">
                 <button>Spring 2017 (Flickr Album)</button></a>
-            <a target="_blank" href="https://drive.google.com/drive/folders/0B-mRsUmzugcLTWRTNFYwa2cwN00" style="color:white">
-                <button>Google Drive 2017-18</button></a>
-            <a target="_blank" href="https://www.youtube.com/playlist?list=PLauQJNb_35oxuJ3_Kct_tHZBNaeOeFipr" style="color:white">
-                <button>2016-2017 Weekly Recap Videos</button></a>
+            <a target="_blank" href="https://drive.google.com/drive/u/1/folders/12PjqPRyRPLRGc2MHYW1kLk1IXerwNLlL" style="color:white">
+                <button>Google Drive 2018-2019</button></a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=nZR4B8V0R2o&list=PLauQJNb_35oy9ZCA15GqgYgiyTp2Gv1bo" style="color:white">
+                <button>2018-2019 Weekly Recap Videos</button></a>
         </div>
 
     <p></p>
