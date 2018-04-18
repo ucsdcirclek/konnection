@@ -85,13 +85,13 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/maricris2.jpg') }}" />
+                <img src="{{ asset('images/board/maricris2.JPG') }}" />
                 <p><strong>Maricris Hernandez</strong></p>
                 <p>Member Relations</p>
                 <p>mr@ucsdcki.org</p>
             </div>
             <div>
-                <img src="{{ asset('images/board/Justin2.JPG') }}" />
+                <img src="{{ asset('images/board/Justin2.jpg') }}" />
                 <p><strong>Justin Palor</strong></p>
                 <p>Member Development and Education</p>
                 <p>mde@ucsdcki.org</p>
