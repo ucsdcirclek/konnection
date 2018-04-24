@@ -105,8 +105,8 @@
         </div>
         <div class="contact-row">
             <div>
-                <img src="{{ asset('images/board/Philip2.jpg') }}" />
-                <p><strong>Philip Truong</strong></p>
+                <img src="{{ asset('images/board/Phillip2.jpg') }}" />
+                <p><strong>Phillip Truong</strong></p>
                 <p>Fellowship</p>
                 <p>fellowship@ucsdcki.org</p>
             </div>

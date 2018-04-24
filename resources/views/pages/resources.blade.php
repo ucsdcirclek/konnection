@@ -25,24 +25,7 @@
         <h4>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScPdEs368KSL9WC-XmoWxJNrDzFBzMxCx5jOnKOb4RbCxLoZg/viewform" target="_blank"> New Member Install Committee</a>
         </h4>
-        <p>Be part of the team that organizes UCSD CKI's new member install event! Due on <font color="red">Sunday, April 22nd by 11:59 p.m
-            </font> </p>
-
-        <HR>
-
-        <h4>
-            <a href="https://drive.google.com/file/d/1T7s8jEj-tLUkNqVQe3WFnONarU-Ylps7/view?usp=sharing" target="_blank"> Family Head Application (2018-2019)</a>
-        </h4>
-        <p> Help build lasting friendships between club members by managing one of many UCSD Circle K families! Due on <font color="red">Sunday, April 22nd by 11:59 p.m
-            </font> </p>
-
-
-        <HR>
-
-        <h4>
-            <a href="https://goo.gl/forms/QQavNpWedRLsBYHf1" target="_blank"> Tech Team Application (2018-2019)</a>
-        </h4>
-        <p>Work behind the scenes by developing new features for the UCSD CKI official website! Due on <font color="red">Wednesday, April 18th by 11:59 p.m
+        <p>Be part of the team that organizes UCSD CKI's new member install event! Due on <font color="red">Tuesday, April 24th by 11:59 p.m
             </font> </p>
 
         <HR>
@@ -64,22 +47,26 @@
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
 
             <h4>
+                <a href="https://docs.google.com/document/d/1l5J_qNS9473Q3GCA0oT9CxVOfTmBryaBQbs71FYmHVs/edit?usp=sharing"
+                   target="_blank">Cheers</a>
+            </h4>
+            <p>S-, U-P-E-R, superstar is what you are! Find the words to all of our spirit cheers here!</p>
+
+            <HR>
+
+            <h4>
+                <a href="http://bit.ly/ckigbm1819 "
+                   target="_blank">GBM Suggestions</a>
+            </h4>
+            <p> Do you have any interesting ideas for GBM activities? Request them here.</p>
+
+            <HR>
+
+            <h4>
                 <a href="https://docs.google.com/forms/d/1csqMo8m7QdEY3VDEG4gWWYa46EXXATNQlzp0u9ak7Rs/viewform?edit_requested=true"
                    target="_blank">Weekly recap song requests</a>
             </h4>
             <p> Would you like to request a song for our weekly GBM recap videos? Now is your chance!</p>
-
-            <HR>
-
-
-
-            <h4>
-                <a href=" http://bit.ly/2018-2019ucsdckitheme" target="_blank">Club Theme Suggestions</a>
-            </h4>
-            <p> Have an idea for our org’s new theme? Submit them through our form for a chance to have it printed into our new
-                T-Shirts, Yearbook, and Scrapbook! <font color="red">Friday, April 20th by 11:59 p.m
-                </font>
-            </p>
 
             <HR>
 
