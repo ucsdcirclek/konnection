@@ -67,9 +67,9 @@
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6> <!-- use this to specify whether or not the committee is active -->
                 
-                <!--<h6 style="color:green">Status: ACTIVE</h6>-->
+                <h6 style="color:green">Status: ACTIVE</h6>
                 <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/31/17)</h6>-->
-                <h6 style="color:gray">Status: INACTIVE</h6>
+                <!--<h6 style="color:gray">Status: INACTIVE</h6>-->
 
                 <p></p>
                 <p>The Masquerade Ball Committee works together to host UCSD CKI's largest fundraiser!</p>
@@ -122,8 +122,8 @@
                     <h3>UCSD CKI Tech Team</h3>
                 </a>
 
-                <!--<h6 style="color:green">Status: ACTIVE</h6>-->
-                <h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 4/18/18)</h6>
+                <h6 style="color:green">Status: ACTIVE</h6>
+               <!-- <h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 4/18/18)</h6> -->
                 <!-- <h6 style="color:gray">Status: INACTIVE</h6> -->
 
                 <p></p>
@@ -131,7 +131,7 @@
                 <a href={{ url('TechTeam') }}>
                     <button>Learn more</button>
                 </a>
-                <a id="apply" class="button" href="https://goo.gl/forms/QQavNpWedRLsBYHf1" target="_blank">
+                <a id="disabled" class="button">
                     Apply
                 </a>
             </div>
