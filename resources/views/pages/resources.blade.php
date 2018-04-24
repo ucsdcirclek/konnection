@@ -47,6 +47,22 @@
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
 
             <h4>
+                <a href="https://docs.google.com/document/d/1l5J_qNS9473Q3GCA0oT9CxVOfTmBryaBQbs71FYmHVs/edit?usp=sharing"
+                   target="_blank">Cheers</a>
+            </h4>
+            <p>S-, U-P-E-R, superstar is what you are! Find the words to all of our spirit cheers here!</p>
+
+            <HR>
+
+            <h4>
+                <a href="http://bit.ly/ckigbm1819 "
+                   target="_blank">GBM Suggestions</a>
+            </h4>
+            <p> Do you have any interesting ideas for GBM activities? Request them here.</p>
+
+            <HR>
+
+            <h4>
                 <a href="https://docs.google.com/forms/d/1csqMo8m7QdEY3VDEG4gWWYa46EXXATNQlzp0u9ak7Rs/viewform?edit_requested=true"
                    target="_blank">Weekly recap song requests</a>
             </h4>
