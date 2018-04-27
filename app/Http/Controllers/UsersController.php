@@ -3,7 +3,12 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Carbon\Carbon;
 use App\User;
+use App\Activity;
+use App\Cerf;
+use App\EventRegistration;
+use App\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use App\Http\Requests\UpdateUserRequest;
@@ -21,6 +26,7 @@ use \PHPExif\Reader\Reader;
 use Hash;
 
 class UsersController extends Controller {
+
 
     /**
      * Returns HTML markup for search results in users search form.
@@ -48,6 +54,48 @@ class UsersController extends Controller {
         }
     }
 
+    public function countHours(){
+        $MRPStart = new Carbon('first day of March 2016');
+        $MRPFinish = new Carbon('last day of February 2017');
+
+        $userid = \Auth::user()->id;
+        $activities = Activity::where('approved', true)->where('user_id', $userid)->get();
+        $serviceHours = 0;
+        $leadershipHours = 0;
+        $fellowshipHours = 0;
+        $miles = 0;
+        foreach($activities as $activity)
+        {
+            $cerf = Cerf::find($activity->cerf_id);
+            $event = Event::find($cerf->event_id);
+            if ($event->start_time >= $MRPStart && $event->end_time <= $MRPFinish)
+            {
+                $serviceHours += $activity->service_hours + $activity->planning_hours + $activity->traveling_hours;
+                $leadershipHours += $activity->admin_hours;
+                $fellowshipHours += $activity->social_hours;
+                $miles += $activity->mileage;
+            }
+        }
+
+        return array($serviceHours, $leadershipHours, $fellowshipHours, $miles);
+    }
+
+    public function getEvents() {
+        $userid = \Auth::user()->id;
+        $eventregs = EventRegistration::where('user_id', $userid)->get();
+        $events = array();
+        $now = Carbon::now();
+        foreach($eventregs as $eventreg)
+        {
+            $temp = Event::find($eventreg->event_id); /*->where('start_time', '>=', $now)->get();*/
+            if ($temp != null && $temp->start_time >= $now) {
+                array_push($events, $temp);
+            }
+
+        }
+        return $events;
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -57,7 +105,9 @@ class UsersController extends Controller {
     public function edit()
     {
         $user = \Auth::user();
-        return view('pages.settings.account', compact('user'));
+        $countArray = $this->countHours();
+        $events = $this->getEvents();
+        return view('pages.settings.account', compact('user', 'countArray', 'events'));
     }
 
     /**

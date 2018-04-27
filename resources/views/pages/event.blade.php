@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 @section('title', $event->title)
@@ -105,7 +106,6 @@
 
                                 <div class="avatar-wrapper">
                                     <img src="{{ $registration->user->avatar->url() }}">
-
                                     {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
                                     <div class="overlay">
                                         @if ($registration->driver_status)
@@ -129,7 +129,6 @@
                             <li class="avatar small">
                                 <div class="avatar-wrapper">
                                     <img src="/avatars/original/missing.png"/>
-
                                     {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
                                     <div class="overlay">
                                         @if ($guestRegistration->driver_status)
@@ -203,6 +202,9 @@
                             </a>
                             <a class="button" href="{{ action('EventsController@feature', $event->slug) }}">
                                 Feature Event
+                            </a>
+                            <a class="button" href="{{ action('EventsController@cloneCopy', $event->slug) }}">
+                                Clone Event
                             </a>
                             {!! Form::open(['action' => ['EventsController@delete', $event->slug], 'method' =>
                             'delete']) !!}

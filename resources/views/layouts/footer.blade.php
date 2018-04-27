@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <p>© 2015-2016 UC San Diego Circle K International.</p>
+    <p>© 2017-2018 UC San Diego Circle K International.</p>
 
     {{--
     <p id="credits">Designed and developed by Joseph Le with contributions from Jamie Santos, John Gamboa,

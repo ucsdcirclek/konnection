@@ -10,6 +10,7 @@
 
     @include('layouts.header', array('headerTitle' => 'Calendar'))
 
+  <div class="mobile-text">
     <div id="legend">
         <div class="types-table">
 
@@ -22,4 +23,5 @@
     </div>
 
     <div class="calendar"></div>
+  </div>
 @endsection

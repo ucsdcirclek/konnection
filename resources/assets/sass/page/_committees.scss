@@ -1,0 +1,91 @@
+/* Stylesheet for all committee and impact team pages */
+
+/* For gallery image descriptions (not implemented yet) */
+.desc{
+  font-size: 22;
+}
+
+/* Title of the committee before description */
+.title{
+  padding:5px;
+}
+
+/* For adding a committee description */
+.message-box {
+  padding: 1em;
+}
+
+/* The big picture at the top of the page */
+.bigbanner {
+  background-position: center;
+  width: 100%;
+  height: 20em;
+  padding: 15px;
+  font-size: 150%;
+  line-height: 80%;
+  color: white;
+  background-attachment: fixed;
+}
+
+/* The text on the banner picture at the top of the page */
+.bigbannertext {
+  text-align: center;
+  font-size: 200%;
+  position: relative;
+  top: 50%;
+  background-color: #00071d;
+  height: 1.5em;
+  padding: 20px;
+  opacity: 0.75;
+}
+
+/* Buttons that link directly to committee applications */
+a#apply:visited {
+  color: white;
+}
+
+a.button#apply:hover {
+  background-color: darkcyan;
+}
+
+#apply:hover {
+  background-color: black;
+}
+
+a.button#apply {
+  margin: 5px;
+}
+
+
+.button#disabled {
+  background-color: gray;
+  margin: 5px;
+}
+
+.button#disabled:hover {
+  background-color: gray;
+  margin: 5px;
+}
+
+/* For adding a mini gallery */
+div.gallery {
+  padding: 1em;
+  border: 1px solid #ccc;
+  float: left;
+  width: 33.3%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-size: 100%;
+}

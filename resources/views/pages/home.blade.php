@@ -1,5 +1,69 @@
 @extends('layouts.master')
 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+       /*CSS for Mball Timer Countdown*/
+       .bgimg {
+            padding-top: 8px;
+            position: relative;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .middle {
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size:50px;
+            width: 100%;
+            text-shadow:
+                    -1px -1px 0 #000,
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+        }
+    </style>
+    
+    <script>
+        // Set the Mball count down date
+        var countDownDate = new Date("Nov 19, 2017 00:30:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in an element with id="demo"
+            document.getElementById("timer").innerHTML = days + " days " + hours + " hours "
+                + minutes + " min " + seconds + " sec ";
+
+            document.getElementById("timer").style.fontWeight = "900";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "Mball Time!";
+            }
+        }, 1000);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    
+</head>
+
 @section('title', 'Home')
 
 @section('description')
@@ -25,16 +89,20 @@
         @endforeach
     </div>
 
-    <div id="social-media-column">
-        <a href="https://www.facebook.com/ucsdcirclek"><div class="facebook-box"><i class="fa fa-2x fa-facebook"></i></div></a>
-        <a href="http://ucsdcirclek.tumblr.com"><div class="tumblr-box"><i class="fa fa-2x fa-tumblr"></i></div></a>
-        <a href="https://instagram.com/ucsdcirclek"><div class="instagram-box"><i class="fa fa-2x fa-instagram"></i></div></a>
-        <a href="https://twitter.com/ucsdcirclek"><div class="twitter-box"><i class="fa fa-2x fa-twitter"></i></div></a>
+    <div class="hidden">
+        <div id="social-media-column">
+          <a href="https://www.facebook.com/ucsdcirclek"><div class="facebook-box"><i class="fa fa-2x fa-facebook"></i></div></a>
+          <a href="http://ucsdcirclek.tumblr.com"><div class="tumblr-box"><i class="fa fa-2x fa-tumblr"></i></div></a>
+          <a href="https://instagram.com/ucsdcirclek"><div class="instagram-box"><i class="fa fa-2x fa-instagram"></i></div></a>
+          <a href="https://twitter.com/ucsdcirclek"><div class="twitter-box"><i class="fa fa-2x fa-twitter"></i></div></a>
+          <a href="https://www.snapchat.com/add/ucsdcirclek"><div class="snapchat-box"><i class="fa fa-2x fa-snapchat-ghost" style="font-size:36px"></i></div></a>
+        </div>
     </div>
 
     <div id="content">
 
-        @unless(Auth::check())
+      <div class="mobile-text">
+        @if(!Auth::check())
             <div id="welcome-view">
                 <div class="text">
                     <h3>Welcome to UCSD Circle K!</h3>
@@ -45,18 +113,214 @@
                         <span class="light-emphasis">199,327</span> hours of service.
                     </p>
 
-                    <br/>
-
                     <p class="center"><a href="/events">Check out some of our events!</a></p>
+                    <p class="center"><a href="https://www.joomag.com/magazine/the-crobie-contagion-issue-07/0121090001465955949?short" target="_blank">Check out our newsletters!</a></p>
                 </div>
 
                 <div class="links">
-                    <div><button><a href="/about/membership">Become a member</a></button></div>
-                    <div><button><a href="/auth/login">Login</a></button></div>
+                    <div><a class="button" href="/auth/register">Register an account on the website!</a></div>
+                    <div><a class="button" href="/auth/login">Login</a></div>
+
                 </div>
             </div>
-        @endunless
+          </div>
+          @else
+          <div id="welcome-view">
+                <div class="text">
+                    <p class="center">Haven't filled out a membership application yet? Fill one out right here!</p>
+                </div>
+                <div class="links">
+                    <div><a class="button" href="/about/membership">Membership</a></div>
+                </div>
+            </div>
+        @endif
+        
+        <!--
+        <div class="center">
+            <div class="mobile-text">
+                <h2 style="text-align: center;padding-top: 3%">2016-2017 Term Recap Video</h2>
+                <p style="text-align: center;">Look back on a year of service, leadership, and fellowship!</p>
+            </div>
+            <div class="videoWrapper">
+                <div style="position:relative;height:0;padding-bottom:47.25%;text-align: center">
+                    <iframe width="800" height="480"
+                            src="https://www.youtube.com/embed/oDkApQZZgFU?">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        -->
+        
+        <!--Need to change width back when Committees page are done-->
+            <div class="member-row" style="width: 100%">
+                <div class="container">
+                    <div>
+                        <a href="{{ url('halloffame') }}">
+                            <div class="image">
+                                <div id="slideshow">
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamftk/Vivian.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Tri.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Vanissa.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SAAT/Marne.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teampulse/Sally.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SAAT/Ming.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/Jovonne.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Stephanie.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Julie.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Sean.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Jack.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Tammy.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamftk/Fray.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/Alyssa.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/PatrickL.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/Victoria.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Hanna.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Nayeli.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Maricris.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Phillip.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Braelyn.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Patrick.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Riku.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Justin_D.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
+                                    </div>
 
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
+                                    </div>
+                                </div>
+                        <img src="https://fontmeme.com/permalink/171128/4910b3f96a9661841d56029db5670aa5.png"
+                             alt="fancy-fonts" border="0">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div>
+                        <a href="{{ url('groups') }}">
+                            <div class="image">
+                                <div id="slideshow2">
+                                    <div>
+                                        <img src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/Key2College/K2CThumb1718.jpg') }}"/>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SAAT/SAATThumb1718.JPG') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/LSFP/LSFP1718Thumb2.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/greenteam/GreenTeamThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" />
+                                    </div>
+                                </div>
+                                <img src="https://fontmeme.com/permalink/171028/7fe5e29300cd6b7cbb723edbc71adcc0.png"
+                                     alt="fancy-fonts" border="0">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!--
+        <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
+                <div class="bgimg">
+                    <img src="{{asset('images/MballGraphic_Large.jpg')}}"/></a>
+                        <div class="middle">
+                            <div class="mobile-text-timer">
+                                <p id="timer"></p>
+                            </div>
+                        </div>
+                </div>
+    -->
+
+      <div class="mobile-text">
         <div id="week-view">
             <ul class="week">
 
@@ -104,7 +368,9 @@
                 @endforeach
             </ul>
         </div>
+      </div>  
 
+      <div class="mobile-text">
         <div id="announcements-view">
             <div><h2>Announcements</h2></div>
 
@@ -120,8 +386,8 @@
                         </p>
                     </article>
                 @endforeach
-            </div>
+          </div>
         </div>
-
+      </div>
     </div>
 @endsection

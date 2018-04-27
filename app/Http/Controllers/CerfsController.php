@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateCerfRequest;
 use App\Http\Requests\ShowCerfRequest;
 use App\Http\Requests\UpdateCerfRequest;
+use App\Http\Requests\UpdateActivityRequest;
 use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
@@ -311,6 +312,13 @@ class CerfsController extends Controller {
         $cerf = Cerf::find($id);
         $cerf->update(['approved' => true]);
 
+        //updates the appropriate activities associated with the cerf_id
+        $activities = Activity::where('cerf_id', $id)->get();
+        foreach ($activities as $activity)
+        {
+            $activity->update(['approved' => true]);
+        }
+
         $otherCerfs = Cerf::where('event_id', $cerf->event_id)->where('approved', false)->get();
 
         foreach($otherCerfs as $cerf) {
@@ -318,6 +326,13 @@ class CerfsController extends Controller {
             // See comments in CerfsController@destroy.
             DB::statement('delete from cerfs where id=' . $cerf->id);
             DB::statement('delete from events_assigned_tags where cerf_id=' . $cerf->id);
+
+            // Deletes the activites associated with the cerf to delete
+            $otherActivities = Activity::where('cerf_id', $cerf->id)->get();
+
+            foreach($otherActivities as $activity) {
+                DB::statement('delete from activity_log where cerf_id=' . $cerf->id);
+            }
         }
 
         return redirect()->action('CerfsController@overview');
