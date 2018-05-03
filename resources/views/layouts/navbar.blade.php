@@ -11,6 +11,10 @@
             width: 80%;
             overflow: auto;
         }
+
+        li.modalTab a {
+            padding: 24px 16px;
+        }
     }
 
 </style>
