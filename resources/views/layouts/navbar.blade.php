@@ -12,6 +12,7 @@
             overflow: auto;
         }
     }
+
 </style>
 
 <header class="centered-navigation">
@@ -84,12 +85,16 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div>
-                <button onclick="openTab('loginForm')">Login</button>
-                <button onclick="openTab('registerForm')">Register</button>
-            </div>
-            <div id="login" class="wrapper">
+            <ul class="modal-header"> <!-- A navigation tab for the modal -->
+                <span class="close">&times;</span> <!-- An exit button for the modal -->
+                <li class="modalTab" onclick="openTab('loginForm')"> <!-- Tab items -->
+                    <a>Login</a>
+                </li>
+                <li class="modalTab" onclick="openTab('registerForm')">
+                    <a>Register</a>
+                </li>
+            </ul>
+            <div id="login" class="wrapper" style="padding: 5%">
 
 
                 <!--Login form within the modal content -->
@@ -120,13 +125,13 @@
                             </label>
                         </div>
                         <br />
-                        <button type="submit" class="button">Login</button>
+                        <button type="submit" class="button" id="loginButton">Login</button>
                         <a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
                     </form>
                 </div>
 
                 <div id="registerForm" class="loginTab" style="display:none"> <!--Removed ID so that this div doesn't display as a column -->
-                    <div class="wrapper">
+                    <div class="wrapper" style="padding: 3%">
                         <h2>Let's get registered!</h2>
 
                         <p>You'll need to register for an account before being able to sign up for an event! We'll keep your information safe and only use it to give you updates on the events you signed up for!</p>
@@ -168,7 +173,7 @@
                             {!! Recaptcha::render() !!}
                             <br />
 
-                            <input type="submit" class="button" value="Register">
+                            <input type="submit" class="button" value="Register" id="loginButton">
                         </form>
                     </div>
                 </div>

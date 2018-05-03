@@ -10,7 +10,7 @@ var span = document.getElementsByClassName("close")[0];
 // Get the HTML element
 var scroll = document.getElementsByTagName("html")[0];
 
-//When the user clicks a tab button, it will change the content
+//Gets all elements with class name loginTab and hides them
 function openTab(tabName) {
     var i;
     var x = document.getElementsByClassName("loginTab");
