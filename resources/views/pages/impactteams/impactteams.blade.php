@@ -7,52 +7,6 @@
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Impact Teams'))
 
-    <head>
-
-        <style>
-            .commbox{
-                background-color: lightgrey;
-                padding: 25px;
-                margin: 25px;
-                height: 18em;
-            }
-            .textbox {
-                padding: 25px;
-                float: left;
-                width: 66.6%;
-                box-sizing: border-box;
-            }
-            .container {
-                position: relative;
-                float: left;
-                width: 33.3%;
-                height: auto;
-                margin-bottom: 16px;
-                padding: 0 8px;
-                border: 3px;
-            }
-            image {
-                display: block;
-                max-width: 100%;
-                height: auto;
-            }
-            h3 {
-                text-decoration: underline;
-            }
-            @media only screen and (max-width: 414px) {
-                .text {
-                    color: white;
-                    font-size: 17px;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                }
-            }
-        </style>
-    </head>
-
     <div align="center">
         <div class = "title">
             <font size="23">
@@ -73,7 +27,7 @@
         @include('layouts.header', array('headerTitle' => '2018-2019 Term'))
 
         <div class="commbox">
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/team_paws/Paws_Thumb.png') }}" alt="Avatar">
             </div>
             <div class="textbox">
@@ -97,7 +51,7 @@
         @include('layouts.header', array('headerTitle' => '2017-2018 Term'))
 
         <div class="commbox">
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
@@ -116,7 +70,7 @@
         </div>
 
         <div class="commbox"> <!-- contains the entire row--> <!-- Team FTK -->
-            <div class="container"> <!-- puts the picture in a box-->
+            <div class="picture_container"> <!-- puts the picture in a box-->
                 <img class src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox"> <!-- box for adding a description-->
@@ -139,7 +93,7 @@
         </div>
 
         <div class="commbox"> <!-- Team Hope -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
@@ -163,7 +117,7 @@
         @include('layouts.header', array('headerTitle' => '2016-2017 Term'))
 
         <div class="commbox"> <!-- Team Smileys -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
@@ -184,7 +138,7 @@
         </div>
 
         <div class="commbox"> <!-- Team Tails -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/teamtails/TeamTailsThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
@@ -207,7 +161,7 @@
         </div>
 
         <div class="commbox"> <!-- Green Team -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/greenteam/GreenTeamThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
@@ -230,7 +184,7 @@
         </div>
 
         <div class="commbox"> <!-- carpevitam -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
