@@ -19,7 +19,7 @@ elixir(function(mix) {
       'cerf.js',
       'popup-config.js',
       'user-search.js',
-      'slideshow.js',
+      //'slideshow.js',
       '*.js'
     ], 'public/js/main.js')
     .version(['css/main.css', 'js/main.js']);

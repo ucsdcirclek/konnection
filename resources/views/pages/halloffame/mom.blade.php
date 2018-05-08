@@ -17,16 +17,11 @@
     @include('layouts.header', array('headerTitle' => 'Member of the Month'))
 
     <div align="center">
-        <div class = "title">
-            <font size="23">
-                <p><strong>What is Member of the Month?</strong></p>
-            </font>
-        </div>
+
         <div class="desc">
-            <p> Every month, a dues-paid member is recognized for representing all three tenents of Circle K through more than one
+             Every month, a dues-paid member is recognized for representing all three tenents of Circle K through more than one
                 event. The recognized member is either nominated by a board or general member, then voted on by the board.
                 Each board member then donates $1 each month towards a gift for the recognized member.
-            </p>
         </div>
     </div>
 

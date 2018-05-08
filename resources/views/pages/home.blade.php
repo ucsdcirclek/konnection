@@ -26,6 +26,7 @@
                     -1px 1px 0 #000,
                     1px 1px 0 #000;
         }
+
     </style>
     
     <script>
@@ -163,9 +164,9 @@
                                         <img src="{{ asset('images/halloffame/mr/sof/Tri.jpg') }}" />
                                     </div>
                                 </div>
-                            <h3>
+                            <button style="margin: 3%">
                                 Featured Members
-                            </h3>
+                            </button>
                         </a>
                 </div>
 
@@ -179,9 +180,9 @@
                                         <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" />
                                     </div>
                                 </div>
-                            <h3>
+                            <button style="margin: 3%">
                                 Committees/Impact Teams
-                            </h3>
+                            </button>
                         </a>
                 </div>
             </div>

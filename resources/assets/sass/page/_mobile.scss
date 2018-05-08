@@ -1,16 +1,21 @@
 /*Smart Phones*/
 @media only screen and (max-width: 500px) {
-  .mobile-text {
-    font-size: 12px;
+  p {
+    font-size: 15px;
   }
 
-  .mobile-text h2 {
-    font-size: 14px;
+  ul.week > li h5 {
+    font-size: 15px;
   }
 
-  .hidden{
-    visibility: hidden;
+   h2 {
+    font-size: 22px;
   }
+
+  h3 {
+    font-size: 20px;
+  }
+
 
   .desc{
     font-size: 14px;
@@ -26,36 +31,16 @@
     font-size: 16px;
   }
 
-  /*Member recognition slide show*/
-
-  #slideshow > div {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
+  .member-row {
+    display: block;
   }
 
+  .container {
+    width: 100%;
+    height: 55%;
+  }
 
-    #slideshow2 {
-      margin-left: 80px;
-      margin-right: 80px;
-      margin-bottom: 40px;
-      left:50px;
-      position: relative;
-      width: 130px;
-      height: 130px;
-      padding: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    }
-
-    #slideshow2 > div {
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      right: 2px;
-      bottom: 2px;
-    }
+  /*Member recognition slide show*/
 
   .contact-row {
     padding: 5px;
@@ -81,4 +66,30 @@
     p:last-child { margin-bottom: 10px; }
   }
 
+  /* Home Page */
+
+  #content #welcome-view {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    background: none;
+  }
+
+  #content #welcome-view .text {
+    display: block;
+    width: 100%;
+    height: 400px;
+    transform: none;
+  }
+
+    #content #welcome-view .text * {
+      transform: none;
+    }
+
+    #content #welcome-view .links {
+      display: block;
+      width: 100%;
+      height: 400px;
+      transform: none;
+    }
 }
