@@ -1,7 +1,11 @@
 <style>
     @media only screen and (max-width: 500px) {
+
         .mobile-text {
-            font-size: 8px;
+            font-size: 12px;
+        }
+        .centered-navigation {
+            height: 18%;
         }
     }
 </style>
