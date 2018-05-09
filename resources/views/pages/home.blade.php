@@ -26,6 +26,7 @@
                     -1px 1px 0 #000,
                     1px 1px 0 #000;
         }
+
     </style>
     
     <script>
@@ -101,7 +102,6 @@
 
     <div id="content">
 
-      <div class="mobile-text">
         @if(!Auth::check())
             <div id="welcome-view">
                 <div class="text">
@@ -123,14 +123,14 @@
 
                 </div>
             </div>
-          </div>
           @else
           <div id="welcome-view">
-                <div class="text">
+                <div class="text" style="height: 300px">
+                    <h2 class="center" style="margin:10%">Welcome to UCSD Circle K!</h2>
                     <p class="center">Haven't filled out a membership application yet? Fill one out right here!</p>
                 </div>
-                <div class="links">
-                    <div><a class="button" href="/about/membership">Membership</a></div>
+                <div class="links" style="height:100px">
+                    <div style="margin: 4%"><a class="button" href="/about/membership">Membership</a></div>
                 </div>
             </div>
         @endif
@@ -154,9 +154,6 @@
         <!--Need to change width back when Committees page are done-->
             <div class="member-row" style="width: 100%">
                 <div class="container">
-                    <div>
-                        <a href="{{ url('halloffame') }}">
-                            <div class="image">
                                 <div id="slideshow">
                                     <div>
                                         <img src="{{ asset('images/impactteams/teamftk/Vivian.jpg') }}" />
@@ -253,17 +250,19 @@
                                         <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
                                     </div>
                                 </div>
-                        <img src="https://fontmeme.com/permalink/171128/4910b3f96a9661841d56029db5670aa5.png"
-                             alt="fancy-fonts" border="0">
+
+                            <div class="dropdown">
+                                <button style="margin-top: 3%">Featured Members</button>
+                                  <div class="dropdown-content">
+                                    <a href="{{ url('mom') }}">Member of the Month</a>
+                                    <a href="{{ url('sof') }}">Staff of Fellowship</a>
+                                    <a href="{{ url('spotlight') }}">Member Spotlight</a>
+                                </div>
                             </div>
-                        </a>
-                    </div>
+
                 </div>
 
                 <div class="container">
-                    <div>
-                        <a href="{{ url('groups') }}">
-                            <div class="image">
                                 <div id="slideshow2">
                                     <div>
                                         <img src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" />
@@ -302,10 +301,14 @@
                                         <img src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" />
                                     </div>
                                 </div>
-                                <img src="https://fontmeme.com/permalink/171028/7fe5e29300cd6b7cbb723edbc71adcc0.png"
-                                     alt="fancy-fonts" border="0">
+
+                            <div class="dropdown">
+                                <button style="margin-top: 3%">Committees and Impact Teams</button>
+                                <div class="dropdown-content">
+                                    <a href="{{ url('committees') }}">Committees</a>
+                                    <a href="{{ url('impactteams') }}">Impact Teams</a>
+                                </div>
                             </div>
-                    </div>
                 </div>
             </div>
         <!--
@@ -320,7 +323,6 @@
                 </div>
     -->
 
-      <div class="mobile-text">
         <div id="week-view">
             <ul class="week">
 
@@ -368,7 +370,6 @@
                 @endforeach
             </ul>
         </div>
-      </div>  
 
       <div class="mobile-text">
         <div id="announcements-view">
@@ -390,4 +391,6 @@
         </div>
       </div>
     </div>
+
 @endsection
+

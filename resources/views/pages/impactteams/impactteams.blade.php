@@ -7,58 +7,7 @@
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Impact Teams'))
 
-    <head>
-
-        <style>
-            .commbox{
-                background-color: lightgrey;
-                padding: 25px;
-                margin: 25px;
-                height: 18em;
-            }
-            .textbox {
-                padding: 25px;
-                float: left;
-                width: 66.6%;
-                box-sizing: border-box;
-            }
-            .container {
-                position: relative;
-                float: left;
-                width: 33.3%;
-                height: auto;
-                margin-bottom: 16px;
-                padding: 0 8px;
-                border: 3px;
-            }
-            image {
-                display: block;
-                max-width: 100%;
-                height: auto;
-            }
-            h3 {
-                text-decoration: underline;
-            }
-            @media only screen and (max-width: 414px) {
-                .text {
-                    color: white;
-                    font-size: 17px;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                }
-            }
-        </style>
-    </head>
-
     <div align="center">
-        <div class = "title">
-            <font size="23">
-                <p><strong>What is an Impact Team?</strong></p>
-            </font>
-        </div>
         <div class="desc">
             <p>An impact team is a student-run team that focuses on leadership based service events. Impact teams emphasize learning,
                 experimentation, and taking initiatives. The potential of an impact team is high, as it is free from the contraints
@@ -73,12 +22,12 @@
         @include('layouts.header', array('headerTitle' => '2018-2019 Term'))
 
         <div class="commbox">
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/team_paws/Paws_Thumb.png') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('Team_Paws') }}">
-                    <h3>Team Paws</h3>
+                    <h2>Team Paws</h2>
                 </a>
 
                 <h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -97,12 +46,12 @@
         @include('layouts.header', array('headerTitle' => '2017-2018 Term'))
 
         <div class="commbox">
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamPulse') }}">
-                    <h3>Team Pulse</h3>
+                    <h2>Team Pulse</h2>
                 </a>
 
                 <h6 style="color:gray">Status: COMPLETED</h6>
@@ -116,12 +65,12 @@
         </div>
 
         <div class="commbox"> <!-- contains the entire row--> <!-- Team FTK -->
-            <div class="container"> <!-- puts the picture in a box-->
+            <div class="picture_container"> <!-- puts the picture in a box-->
                 <img class src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox"> <!-- box for adding a description-->
                 <a href="{{ url('TeamFTK') }}">
-                    <h3>Team FTK</h3>
+                    <h2>Team FTK</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -139,12 +88,12 @@
         </div>
 
         <div class="commbox"> <!-- Team Hope -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamHope') }}">
-                    <h3>Team Hope</h3>
+                    <h2>Team Hope</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -163,12 +112,12 @@
         @include('layouts.header', array('headerTitle' => '2016-2017 Term'))
 
         <div class="commbox"> <!-- Team Smileys -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamSmileys') }}">
-                    <h3>Team Smileys</h3>
+                    <h2>Team Smileys</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -184,12 +133,12 @@
         </div>
 
         <div class="commbox"> <!-- Team Tails -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/teamtails/TeamTailsThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamTails') }}">
-                    <h3>Team Tails</h3>
+                    <h2>Team Tails</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -207,12 +156,12 @@
         </div>
 
         <div class="commbox"> <!-- Green Team -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/greenteam/GreenTeamThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('GreenTeam') }}">
-                    <h3>Green Team</h3>
+                    <h2>Green Team</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -230,12 +179,12 @@
         </div>
 
         <div class="commbox"> <!-- carpevitam -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('CarpeVitam') }}">
-                    <h3>Carpe Vitam</h3>
+                    <h2>Carpe Vitam</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the

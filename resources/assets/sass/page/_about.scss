@@ -2,7 +2,7 @@
 #about {
   #main {
     @include span-columns(10);
-    height: 100%;
+    height: auto;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;

@@ -17,17 +17,13 @@
     @include('layouts.header', array('headerTitle' => 'Member Spotlight'))
 
     <div align="center">
-        <div class = "title">
-            <font size="23">
-                <p><strong>What is Member Spotlight?</strong></p>
-            </font>
-        </div>
+
         <div class="desc">
-            <p> Twice a month, a dues-paid member is recognized for their hard work and efforts towards service projects
+           Twice a month, a dues-paid member is recognized for their hard work and efforts towards service projects
                 and/or events. They are nominated by the board or general members, then voted on by the board. The member
                 who receives the Member Spotlight Recognition receives Crobie, the Stomach Flu and the club's mascot plush,
                 and an journal to document any exciting adventures with Crobie.
-            </p>
+
         </div>
     </div>
 

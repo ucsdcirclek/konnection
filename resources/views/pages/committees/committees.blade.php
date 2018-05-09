@@ -7,62 +7,13 @@
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Committees'))
 
-    <head>
-
-        <style>
-            .commbox{
-                background-color: lightgrey;
-                padding: 25px;
-                margin: 25px;
-                height: 18em;
-            }
-            .textbox {
-                padding: 25px;
-                float: left;
-                width: 66.6%;
-                box-sizing: border-box;
-            }
-            .container {
-                position: relative;
-                float: left;
-                width: 33.3%;
-                height: auto;
-                margin-bottom: 16px;
-                padding: 0 8px;
-                border: 3px;
-            }
-            image {
-                display: block;
-                max-width: 100%;
-                height: auto;
-            }
-            h3 {
-                text-decoration: underline;
-            }
-            @media only screen and (max-width: 414px) {
-                .text {
-                    color: white;
-                    font-size: 17px;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                }
-            }
-        </style>
-    </head>
-    <body>
-
-    <div class="wrapper">
-
         <div class="commbox"> <!-- contains the entire row--> <!-- MBall committee -->
-            <div class="container"> <!-- puts the picture in a box-->
+            <div class="picture_container"> <!-- puts the picture in a box-->
                 <img class src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox"> <!-- box for adding a description-->
                 <a href="{{ url('masquerade') }}">
-                    <h3>Masquerade Ball Committee</h3>
+                    <h2>Masquerade Ball Committee</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6> <!-- use this to specify whether or not the committee is active -->
@@ -83,12 +34,12 @@
         </div>
 
         <div class="commbox"> <!-- SLSSP Committee -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('SLSSP') }}">
-                    <h3>SLSSP Committee</h3>
+                    <h2>SLSSP Committee</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
@@ -114,12 +65,12 @@
         </div>
 
         <div class="commbox"> <!-- UCSD CKI Tech Team -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('TechTeam') }}">
-                    <h3>UCSD CKI Tech Team</h3>
+                    <h2>UCSD CKI Tech Team</h2>
                 </a>
 
                 <h6 style="color:green">Status: ACTIVE</h6>
@@ -138,12 +89,12 @@
         </div>
 
         <div class="commbox"> <!-- Key2college -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/Committees/Key2College/K2CThumb1718.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('Key2College') }}">
-                    <h3>Key2College Committee</h3>
+                    <h2>Key2College Committee</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
@@ -164,12 +115,12 @@
         </div>
 
         <div class="commbox"> <!-- SAAT Committee -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/Committees/SAAT/SAATThumb1718.JPG') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('SAAT') }}">
-                    <h3>UCSD CKI Student Alliance Against Trafficking (SAAT)</h3>
+                    <h2>UCSD CKI Student Alliance Against Trafficking (SAAT)</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
@@ -188,12 +139,12 @@
         </div>
 
         <div class="commbox"> <!-- LSFP Committee -->
-            <div class="container">
+            <div class="picture_container">
                 <img class src="{{ asset('images/Committees/LSFP/LSFP1718Thumb2.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
                 <a href="{{ url('LSFP') }}">
-                    <h3>Large Scale Fundraising Project Committee (LSFP)</h3>
+                    <h2>Large Scale Fundraising Project Committee (LSFP)</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
@@ -212,9 +163,5 @@
                 </a>
             </div>
         </div>
-
-
-    </div>
-    </body>
 
 @endsection
