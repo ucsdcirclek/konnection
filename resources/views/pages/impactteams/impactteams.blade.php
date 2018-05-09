@@ -8,11 +8,6 @@
     @include('layouts.header', array('headerTitle' => 'Impact Teams'))
 
     <div align="center">
-        <div class = "title">
-            <font size="23">
-                <p><strong>What is an Impact Team?</strong></p>
-            </font>
-        </div>
         <div class="desc">
             <p>An impact team is a student-run team that focuses on leadership based service events. Impact teams emphasize learning,
                 experimentation, and taking initiatives. The potential of an impact team is high, as it is free from the contraints
@@ -32,7 +27,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('Team_Paws') }}">
-                    <h3>Team Paws</h3>
+                    <h2>Team Paws</h2>
                 </a>
 
                 <h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -56,7 +51,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamPulse') }}">
-                    <h3>Team Pulse</h3>
+                    <h2>Team Pulse</h2>
                 </a>
 
                 <h6 style="color:gray">Status: COMPLETED</h6>
@@ -75,7 +70,7 @@
             </div>
             <div class="textbox"> <!-- box for adding a description-->
                 <a href="{{ url('TeamFTK') }}">
-                    <h3>Team FTK</h3>
+                    <h2>Team FTK</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -98,7 +93,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamHope') }}">
-                    <h3>Team Hope</h3>
+                    <h2>Team Hope</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -122,7 +117,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamSmileys') }}">
-                    <h3>Team Smileys</h3>
+                    <h2>Team Smileys</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -143,7 +138,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('TeamTails') }}">
-                    <h3>Team Tails</h3>
+                    <h2>Team Tails</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -166,7 +161,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('GreenTeam') }}">
-                    <h3>Green Team</h3>
+                    <h2>Green Team</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -189,7 +184,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('CarpeVitam') }}">
-                    <h3>Carpe Vitam</h3>
+                    <h2>Carpe Vitam</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the

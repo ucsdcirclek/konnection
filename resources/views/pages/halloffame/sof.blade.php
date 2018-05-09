@@ -18,17 +18,13 @@
     @include('layouts.header', array('headerTitle' => 'Staff of Fellowship'))
 
     <div align="center">
-        <div class = "title">
-        <font size="23">
-            <p><strong>What is the Staff of Fellowship?</strong></p>
-        </font>
-        </div>
+
         <div class="desc">
-            <p>Started by alumni, Mike Mullen, the Staff of Fellowship recognizes a dues-paid member twice a month for
+            Started by alumni, Mike Mullen, the Staff of Fellowship recognizes a dues-paid member twice a month for
                 their hard work and dedication towards the fellowship tenent. Like the Member Spotlight, members are
                 nominated by board or general members, then voted on by the board. The member who receives this
                 recognition is honored with an actual staff where they can sharpie their name alongside others who were
-                also recognized. </p>
+                also recognized.
         </div>
     </div>
 
