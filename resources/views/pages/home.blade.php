@@ -162,6 +162,94 @@
                                     <div>
                                         <img src="{{ asset('images/halloffame/mr/sof/Tri.jpg') }}" />
                                     </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Vanissa.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SAAT/Marne.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teampulse/Sally.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SAAT/Ming.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/Jovonne.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Stephanie.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Julie.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Sean.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Jack.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Tammy.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamftk/Fray.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/Alyssa.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/PatrickL.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SLSSP/Victoria.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Hanna.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Nayeli.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Maricris.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Phillip.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Braelyn.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Patrick.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Riku.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Justin_D.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
+                                    </div>
+
+                                    <div>
+                                        <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
+                                    </div> -->
                                 </div>
                             <button style="margin: 3%">
                                 Featured Members
@@ -177,6 +265,36 @@
                                     </div>
                                     <div>
                                         <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/Key2College/K2CThumb1718.jpg') }}"/>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/SAAT/SAATThumb1718.JPG') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/Committees/LSFP/LSFP1718Thumb2.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/greenteam/GreenTeamThumb.jpg') }}" />
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" />
                                     </div>
                                 </div>
                             <button style="margin: 3%">
@@ -197,7 +315,6 @@
                 </div>
     -->
 
-      <div class="mobile-text">
         <div id="week-view">
             <ul class="week">
 
@@ -245,7 +362,6 @@
                 @endforeach
             </ul>
         </div>
-      </div>  
 
       <div class="mobile-text">
         <div id="announcements-view">
@@ -269,126 +385,3 @@
     </div>
 @endsection
 
-<!-- slideshow 1
-<div>
-    <img src="{{ asset('images/halloffame/mr/spotlight/Vanissa.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/Committees/SAAT/Marne.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/impactteams/teampulse/Sally.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/Committees/SAAT/Ming.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/Committees/SLSSP/Jovonne.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/mom/Stephanie.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/mom/Julie.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/mom/Sean.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/sof/Jack.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/spotlight/Tammy.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/impactteams/teamftk/Fray.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/Committees/SLSSP/Alyssa.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/sof/PatrickL.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/Committees/SLSSP/Victoria.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/sof/Hanna.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/spotlight/Nayeli.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/spotlight/Maricris.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/sof/Phillip.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/spotlight/Braelyn.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/sof/Patrick.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/sof/Riku.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/sof/Justin_D.jpg') }}" />
-</div>
-<div>
-    <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
-</div>
-
-<div>
-    <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
-</div> -->
-
-<!-- Slideshow 2
-
-        <div>
-            <img src="{{ asset('images/Committees/Key2College/K2CThumb1718.jpg') }}"/>
-        </div>
-        <div>
-            <img src="{{ asset('images/Committees/SAAT/SAATThumb1718.JPG') }}" />
-        </div>
-        <div>
-            <img src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" />
-        </div>
-        <div>
-            <img src="{{ asset('images/Committees/LSFP/LSFP1718Thumb2.jpg') }}" />
-        </div>
-        <div>
-            <img src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" />
-        </div>
-        <div>
-            <img src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}" />
-        </div>
-        <div>
-            <img src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}" />
-        </div>
-        <div>
-            <img src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" />
-        </div>
-        <div>
-            <img src="{{ asset('images/impactteams/greenteam/GreenTeamThumb.jpg') }}" />
-        </div>
-        <div>
-            <img src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" />
-        </div>
-    -->
