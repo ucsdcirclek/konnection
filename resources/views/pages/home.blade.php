@@ -154,7 +154,6 @@
         <!--Need to change width back when Committees page are done-->
             <div class="member-row" style="width: 100%">
                 <div class="container">
-                        <a href="{{ url('halloffame') }}">
                                 <div id="slideshow">
                                     <div>
                                         <img src="{{ asset('images/impactteams/teamftk/Vivian.jpg') }}" />
@@ -249,16 +248,21 @@
 
                                     <div>
                                         <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
-                                    </div> -->
+                                    </div>
                                 </div>
-                            <button style="margin: 3%">
-                                Featured Members
-                            </button>
-                        </a>
+
+                            <div class="dropdown">
+                                <button style="margin-top: 3%">Featured Members</button>
+                                  <div class="dropdown-content">
+                                    <a href="{{ url('mom') }}">Member of the Month</a>
+                                    <a href="{{ url('sof') }}">Staff of Fellowship</a>
+                                    <a href="{{ url('spotlight') }}">Member Spotlight</a>
+                                </div>
+                            </div>
+
                 </div>
 
                 <div class="container">
-                        <a href="{{ url('groups') }}">
                                 <div id="slideshow2">
                                     <div>
                                         <img src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" />
@@ -297,10 +301,14 @@
                                         <img src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" />
                                     </div>
                                 </div>
-                            <button style="margin: 3%">
-                                Committees/Impact Teams
-                            </button>
-                        </a>
+
+                            <div class="dropdown">
+                                <button style="margin-top: 3%">Committees and Impact Teams</button>
+                                <div class="dropdown-content">
+                                    <a href="{{ url('committees') }}">Committees</a>
+                                    <a href="{{ url('impactteams') }}">Impact Teams</a>
+                                </div>
+                            </div>
                 </div>
             </div>
         <!--
@@ -382,6 +390,13 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+            <p>Hello World!</p>
+        </div>
     </div>
 @endsection
 
