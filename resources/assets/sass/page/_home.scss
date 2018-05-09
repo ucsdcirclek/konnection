@@ -160,3 +160,50 @@
     }
   }
 }
+
+ul.week {
+  height:50%;
+}
+
+.dropdown {
+  display: inline-block;
+  margin-top: 0px;
+
+  button {
+    &:hover {
+      background-color: $base-button-color;
+    }
+  }
+
+  &:hover {
+
+    .dropdown-content {
+      display: block;
+      margin-top: 0px;
+    }
+  }
+}
+
+
+div {
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $base-link-color;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        background-color: $hover-dropdown-color
+      }
+    }
+  }
+}
+

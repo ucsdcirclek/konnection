@@ -13,7 +13,7 @@
             </div>
             <div class="textbox"> <!-- box for adding a description-->
                 <a href="{{ url('masquerade') }}">
-                    <h3>Masquerade Ball Committee</h3>
+                    <h2>Masquerade Ball Committee</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6> <!-- use this to specify whether or not the committee is active -->
@@ -39,7 +39,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('SLSSP') }}">
-                    <h3>SLSSP Committee</h3>
+                    <h2>SLSSP Committee</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
@@ -70,7 +70,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('TechTeam') }}">
-                    <h3>UCSD CKI Tech Team</h3>
+                    <h2>UCSD CKI Tech Team</h2>
                 </a>
 
                 <h6 style="color:green">Status: ACTIVE</h6>
@@ -94,7 +94,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('Key2College') }}">
-                    <h3>Key2College Committee</h3>
+                    <h2>Key2College Committee</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
@@ -120,7 +120,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('SAAT') }}">
-                    <h3>UCSD CKI Student Alliance Against Trafficking (SAAT)</h3>
+                    <h2>UCSD CKI Student Alliance Against Trafficking (SAAT)</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
@@ -144,7 +144,7 @@
             </div>
             <div class="textbox">
                 <a href="{{ url('LSFP') }}">
-                    <h3>Large Scale Fundraising Project Committee (LSFP)</h3>
+                    <h2>Large Scale Fundraising Project Committee (LSFP)</h2>
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
