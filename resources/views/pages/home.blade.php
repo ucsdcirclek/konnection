@@ -102,7 +102,6 @@
 
     <div id="content">
 
-      <div class="mobile-text">
         @if(!Auth::check())
             <div id="welcome-view">
                 <div class="text">
@@ -124,14 +123,14 @@
 
                 </div>
             </div>
-          </div>
           @else
           <div id="welcome-view">
-                <div class="text">
+                <div class="text" style="height: 300px">
+                    <h2 class="center" style="margin:10%">Welcome to UCSD Circle K!</h2>
                     <p class="center">Haven't filled out a membership application yet? Fill one out right here!</p>
                 </div>
-                <div class="links">
-                    <div><a class="button" href="/about/membership">Membership</a></div>
+                <div class="links" style="height:100px">
+                    <div style="margin: 4%"><a class="button" href="/about/membership">Membership</a></div>
                 </div>
             </div>
         @endif

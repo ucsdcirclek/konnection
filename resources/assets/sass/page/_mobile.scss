@@ -68,28 +68,46 @@
 
   /* Home Page */
 
-  #content #welcome-view {
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-    background: none;
-  }
-
-  #content #welcome-view .text {
-    display: block;
-    width: 100%;
-    height: 400px;
-    transform: none;
-  }
-
-    #content #welcome-view .text * {
-      transform: none;
-    }
-
-    #content #welcome-view .links {
-      display: block;
+  #content {
+    #welcome-view {
       width: 100%;
-      height: 400px;
-      transform: none;
+      display: table;
+      table-layout: fixed;
+      background: none;
+
+      h3 {
+        margin: 20px;
+        padding-left: 20%;
+      }
+
+      .links {
+        display: block;
+        width: 100%;
+        height: 400px;
+        transform: none;
+
+        div:nth-child(2) {
+          padding-left: 0px;
+        }
+
+        div {
+          transform: none;
+          margin: 10%;
+        }
+
+      }
+
+      .text {
+        display: block;
+        width: 100%;
+        height: 400px;
+        transform: none;
+
+        * {
+          transform: none;
+        }
+      }
     }
+  }
+
 }
