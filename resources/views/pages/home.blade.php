@@ -119,7 +119,7 @@
 
                 <div class="links">
                     <div><a class="button" href="/auth/register">Register an account on the website!</a></div>
-                    <div><a class="button" href="/auth/login">Login</a></div>
+                    <div class="ModalLogin"><a class="button">Login</a></div>
 
                 </div>
             </div>

@@ -2,7 +2,9 @@
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("ModalLogin");
+var btn = document.getElementsByClassName("ModalLogin")[0];
+var btn2 = document.getElementsByClassName("ModalLogin")[1]; //The login button on the home page
+
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -39,5 +41,11 @@ window.onclick = function(event) {
         scroll.style.overflow = "auto"; //Re enables scrolling
     }
 }
+
+btn2.onclick = function() {
+    modal.style.display = "block"
+    scroll.style.overflow = "hidden"; //Disables scrolling when modal is open
+}
+
 
 //Adapted from ode from w3schools.com

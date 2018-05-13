@@ -69,7 +69,7 @@
 
 
                 @if (! Auth::check())
-                    <li class="nav-link" id="ModalLogin"><a>login</a></li>
+                    <li class="nav-link"><a class="ModalLogin">login</a></li>
                    <!-- <li class="nav-link"><a href="{{ url('/auth/register') }}">register</a></li> -->
                 @else
                     <!-- <li class="nav-link"><a href="{{ url('settings') }}">account</a></li> -->
