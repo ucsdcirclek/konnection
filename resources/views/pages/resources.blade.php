@@ -115,7 +115,7 @@
 
             <HR>
             <h4>
-                <a href="http://bit.ly/ucsdckisocial" target="_blank">Social Suggestions</a>
+                <a href="http://bit.ly/2q5pptN" target="_blank">Social Suggestions</a>
             </h4>
             <p> Got any fun ideas for a social? Let us know here!
             </p>
