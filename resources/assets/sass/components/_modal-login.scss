@@ -1,0 +1,101 @@
+/* The Modal (background that shows when you click the button) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top. Changed z-index in navigation.scss to 1 */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  overflow: auto;
+  position: relative;
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% from the top and centered */
+  border: 1px solid #888;
+  height: 510px; //Set height to constant for now because it expands too much on the home page for unknown reason
+  width: 50%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+#loginButton { //Inherits blue button properties, but makes the hover color green instead
+
+  &:hover {
+    background-color: green;
+  }
+}
+
+@keyframes animatetop { //Animates the modal box when you click login
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@-webkit-keyframes animatetop { //Code for webkit
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  right: 5%;
+  top: 18%;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  background-color: $dark-slate-gray;
+  color: $white;
+  margin: 0px;
+  padding: 0px;
+  height: 15%;
+}
+
+li.modalTab {
+  float: left;
+}
+
+li.modalTab a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 26px 16px;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+li.modalTab a:hover { /* Hovering over a modal tab turns it into a different color */
+  background-color: $hover-button-color;
+}
+
+li.modalTab.active {
+  background-color: $hover-button-color; /* properties for when a modal tab is clicked */
+}
+
+.loginTab {
+  animation: fadeEffect 0.5s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+//Based on code from w3schools.com
