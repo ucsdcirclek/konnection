@@ -55,7 +55,7 @@
 
                 <li class="nav-link more"><a href="">district</a>
                     <ul class="submenu">
-                        <!--<li><a href="{{ url('about/district') }}">About</a></li>-->
+                        <li><a href="{{ url('about/district') }}">About</a></li>
                         <li><a target="_blank" href="http://dcon.cnhcirclek.org/">DCON</a></li>
                         <li><a target="_blank" href="http://ftc.cnhcirclek.org/">FTC</a></li>
                         <li><a target="_blank"
@@ -69,11 +69,15 @@
 
 
                 @if (! Auth::check())
-                    <li class="nav-link"><a class="ModalLogin">login</a></li>
+                    <li class="nav-link"><a class="ModalLogin">login <i class="fa fa-user"></i></a></li>
                    <!-- <li class="nav-link"><a href="{{ url('/auth/register') }}">register</a></li> -->
                 @else
-                    <!-- <li class="nav-link"><a href="{{ url('settings') }}">account</a></li> -->
-                    <li class="nav-link"><a href="{{ url('/auth/logout') }}">logout</a></li>
+                        <li class="nav-link more"><a>account <i class="fa fa-user"></i></a>
+                            <ul class="submenu">
+                                <li><a href="{{ url('settings') }}">View Account</a></li>
+                                <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+                            </ul>
+                        </li>
                 @endif
 
             </ul>
@@ -83,8 +87,7 @@
       </div>
     </div>
 
-
-    <!-- Login button at the top of the page triggers the modal -->
+    <!--All code after this line determines what's inside of the login modal box -->
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
