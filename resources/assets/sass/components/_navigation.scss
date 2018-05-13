@@ -21,7 +21,7 @@
   font-family: $serif;
   height: $centered-navigation-height;
   width: 100%;
-  z-index: 9999;
+  z-index: 1;
 
   // Mobile view
 
@@ -67,7 +67,7 @@
     @include outer-container;
     @include clearfix;
     position: relative;
-    z-index: 999;
+    z-index: 1;
   }
 
   ul.centered-navigation-menu {
@@ -78,7 +78,7 @@
     overflow: visible;
     padding: 0;
     width: 100%;
-    z-index: 99999;
+    z-index: 1;
 
     @include media ($horizontal-bar-mode) {
       display: block;
@@ -102,7 +102,7 @@
     padding-right: $centered-navigation-submenu-padding;
     text-align: right;
     width: 100%;
-    z-index: 9999;
+    z-index: 1;
     font-family: $centered-navigation-font-family;
 
     @include media($horizontal-bar-mode) {
