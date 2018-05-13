@@ -110,6 +110,11 @@
                         <h3>Account Access</h3>
                         <hr />
                         @if (count($errors) > 0)
+                            <script> //Automatically clicks modal box if login info is wrong
+                                jQuery(function(){
+                                    jQuery('.ModalLogin').click();
+                                });
+                            </script>
                             <div class="alert alert-danger">
                                 <strong>Whoops!</strong> There were some problems with your input.<br><br>
                                 <ul>
