@@ -6,7 +6,7 @@
         }
         .centered-navigation {
             height: 18%;
-            
+
         }
         .modal-content {
             height: 480px;
@@ -55,7 +55,7 @@
 
                 <li class="nav-link more"><a href="">district</a>
                     <ul class="submenu">
-                        <!--<li><a href="{{ url('about/district') }}">About</a></li>-->
+                        <li><a href="{{ url('about/district') }}">About</a></li>
                         <li><a target="_blank" href="http://dcon.cnhcirclek.org/">DCON</a></li>
                         <li><a target="_blank" href="http://ftc.cnhcirclek.org/">FTC</a></li>
                         <li><a target="_blank"
@@ -69,11 +69,15 @@
 
 
                 @if (! Auth::check())
-                    <li class="nav-link" id="ModalLogin"><a>login</a></li>
+                    <li class="nav-link"><a class="ModalLogin">login <i class="fa fa-user"></i></a></li>
                    <!-- <li class="nav-link"><a href="{{ url('/auth/register') }}">register</a></li> -->
                 @else
-                    <li class="nav-link"><a href="{{ url('settings') }}">account</a></li>
-                    <li class="nav-link"><a href="{{ url('/auth/logout') }}">logout</a></li>
+                        <li class="nav-link more"><a>account <i class="fa fa-user"></i></a>
+                            <ul class="submenu">
+                                <li><a href="{{ url('settings') }}">View Account</a></li>
+                                <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+                            </ul>
+                        </li>
                 @endif
 
             </ul>
@@ -83,8 +87,7 @@
       </div>
     </div>
 
-
-    <!-- Login button at the top of the page triggers the modal -->
+    <!--All code after this line determines what's inside of the login modal box -->
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -110,6 +113,11 @@
                         <h3>Account Access</h3>
                         <hr />
                         @if (count($errors) > 0)
+                            <script> //Automatically clicks modal box if login info is wrong
+                                jQuery(function(){
+                                    jQuery('.ModalLogin').click();
+                                });
+                            </script>
                             <div class="alert alert-danger">
                                 <strong>Whoops!</strong> There were some problems with your input.<br><br>
                                 <ul>
@@ -126,8 +134,8 @@
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" name="remember"> Remember Me
-                                <p></p>
-                                <input type="checkbox" name="remember"> Take me to calendar
+                                <!--<p></p>
+                                <input type="checkbox" name="remember"> Take me to calendar -->
                             </label>
                         </div>
                         <br />
