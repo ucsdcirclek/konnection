@@ -72,7 +72,7 @@
                     <li class="nav-link" id="ModalLogin"><a>login</a></li>
                    <!-- <li class="nav-link"><a href="{{ url('/auth/register') }}">register</a></li> -->
                 @else
-                    <li class="nav-link"><a href="{{ url('settings') }}">account</a></li>
+                    <!-- <li class="nav-link"><a href="{{ url('settings') }}">account</a></li> -->
                     <li class="nav-link"><a href="{{ url('/auth/logout') }}">logout</a></li>
                 @endif
 
@@ -126,8 +126,8 @@
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" name="remember"> Remember Me
-                                <p></p>
-                                <input type="checkbox" name="remember"> Take me to calendar
+                                <!--<p></p>
+                                <input type="checkbox" name="remember"> Take me to calendar -->
                             </label>
                         </div>
                         <br />
