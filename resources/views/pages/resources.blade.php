@@ -19,24 +19,24 @@
         </h4>
         <p> Apply to be a UCSD Circle K member! </p>
 
-
         <HR>
-
         <h4>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScPdEs368KSL9WC-XmoWxJNrDzFBzMxCx5jOnKOb4RbCxLoZg/viewform" target="_blank"> New Member Install Committee</a>
+            <a href=" http://bit.ly/F18ITHApp" target="_blank">Impact team head application</a>
         </h4>
-        <p>Be part of the team that organizes UCSD CKI's new member install event! Due on <font color="red">Tuesday, April 24th by 11:59 p.m
-            </font> </p>
+        <p style="color: red">Due: Tuesday, May 22nd at 6:00 pm</p>
+        <p>If you have a passion about a specific cause and want to lead a committee to make a difference, apply to be
+            an Impact Team head!</p>
+
 
         <HR>
 
-        <h4>
+        <!--<h4>
             <a href="https://files.slack.com/files-pri/T48N4GHC7-F91QG4TQA/download/prager_s_mentorship_program_circle_k_version.docx" download >
                 Kiwanis Mentorship Application</a>
         </h4>
         <p> Are you interested in applying for a Kiwanis member to help you advance in your field of career?
             Fill out an application today and hand it into our President! </p>
-
+-->
 
         <br/>
 
@@ -45,6 +45,24 @@
 
 
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
+
+            <h4>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSch42sKUmBaASD1jRwc1Z1mqk4a9G2nSqQwZNalqmF_5Z6iUg/viewform"
+                   target="_blank">Service Survey</a>
+            </h4>
+            <p> Do you want to see specific service events? Want to let me know when you are available to do service?
+                Please fill out this survey! It is completely anonymous and will be used to improve future service events! </p>
+
+            <HR>
+
+            <h4>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4ttQWc2tM4wj0583mtGl_e3oPdtDFGolPpb8u6jnHCeNpkg/viewform"
+                   target="_blank">T-Shirt Suggestions</a>
+            </h4>
+            <p> Got an amazing T-Shirt idea? Then suggest designs here! To help you, think designs
+                like planets, comets, constellations, astrology, maybe even horoscopes.</p>
+
+            <HR>
 
             <h4>
                 <a href="https://docs.google.com/document/d/1l5J_qNS9473Q3GCA0oT9CxVOfTmBryaBQbs71FYmHVs/edit?usp=sharing"
