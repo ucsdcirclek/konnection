@@ -130,7 +130,7 @@
 
 @section('content')
 
-    <div id="background" class="bigbanner" style="background-image: url('/images/Committees/MBall/MballCover1819.jpg')">
+    <div id="background" class="bigbanner" style="background-image: url('/images/Committees/MBall/MBallCover1819.jpg')">
         <div id="title" class="bigbannertext">
             Masquerade Ball Committee 2018-2019
         </div>
