@@ -9,7 +9,7 @@
     <div id="background" class="bigbanner"
          style="background-image: url('/images/Committees/TechTeam/TTCover.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
-            Tech Team 2017-2018
+            Tech Team 2018-2019
         </div>
     </div>
 
@@ -39,8 +39,40 @@
         <center>
         -->
 
+    <div id="row1" class="contact-row">
+        <div>
+            <img id="image1" src="{{ asset('images/board/Carl2.jpg') }}" />
+            <p id="name1"><strong>Carl Dungca</strong></p>
+            <p id="title1">Tech Team Lead</p>
+        </div>
+        <div>
+            <img id="image2" src="{{ asset('images/Committees/MBall/Helen.jpg') }}" />
+            <p id="name2"><strong>Helen Thio</strong></p>
+            <p id="title2">Designer</p>
+        </div>
+        <div>
+            <img id="image3" src="{{ asset('images/Committees/TechTeam/Levi.jpg') }}" />
+            <p id="name3"><strong>Levi Friley</strong></p>
+            <p id="title3">Content Developer</p>
+        </div>
+    </div>
 
-            <div id="rows">
+    <div id="row2" class="contact-row">
+        <div>
+            <img id="image4" src="{{ asset('images/Committees/TechTeam/Angel.jpg') }}" />
+            <p id="name4"><strong>Angel Obie</strong></p>
+            <p id="title4">Feature Developer</p>
+        </div>
+        <div>
+            <img id="image5" src="{{ asset('images/Committees/TechTeam/Johnny.jpg') }}" />
+            <p id="name5"><strong>Johnny Luong</strong></p>
+            <p id="title5">Back-end Developer</p>
+        </div>
+
+    </div>
+
+
+            <!--<div id="rows">
                 <div id="row1" class="contact-row">
                     <div>
                         <img id="image1" src="{{ asset('images/Committees/TechTeam/Weijin.jpg') }}" />
@@ -83,7 +115,7 @@
                         <p id="title7">Developer</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- IN DEVELOPMENT (Mini Gallery)
             <div class="message-box">

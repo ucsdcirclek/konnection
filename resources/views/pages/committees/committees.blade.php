@@ -9,7 +9,7 @@
 
         <div class="commbox"> <!-- contains the entire row--> <!-- MBall committee -->
             <div class="picture_container"> <!-- puts the picture in a box-->
-                <img class src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" alt="Avatar">
+                <img class src="{{ asset('images/Committees/MBall/MBallCover1819.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox"> <!-- box for adding a description-->
                 <a href="{{ url('masquerade') }}">
