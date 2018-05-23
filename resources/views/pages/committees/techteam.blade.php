@@ -182,22 +182,20 @@
             -->
 
     <script>
-        //For practice, try to do this from scratch when implementing to other pages
         var acc = document.getElementsByClassName("accordion");
-        var i;
 
-        for (i = 0; i < acc.length; i++) {
+        for (var i = 0; i < acc.length; i++) { //Iterate through all accordion elements
             acc[i].addEventListener("click", function() {
                 /* Toggle between adding and removing the "active" class,
                  to highlight the button that controls the panel */
                 this.classList.toggle("active");
 
                 /* Toggle between hiding and showing the active panel */
-                var panel = this.nextElementSibling;
+                var panel = this.nextElementSibling; //If accordion is clicked with content shown, hide the content
                 if (panel.style.display === "block") {
                     panel.style.display = "none";
                 } else {
-                    panel.style.display = "block";
+                    panel.style.display = "block"; //If the user clicks anything else, do nothing
                 }
             });
         }
