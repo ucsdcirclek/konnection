@@ -78,7 +78,6 @@
           <p>Samarth Aggarwal</p>
           <p>Jane Wu</p>
           <p>Stephanie Tonnu</p>
-
     </div> <!-- Copy up to this div to create new sections -->
 
             <!-- IN DEVELOPMENT (Mini Gallery)
