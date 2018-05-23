@@ -71,13 +71,13 @@
     <div class="panel">
         <strong>Tech Team Committee Head</strong>
         <p>Weijin Xu</p>
-        <ul><strong>Developers</strong></ul>
-          <li>Carl Dungca</li>
-          <li>Ryan Lemon</li>
-          <li>Jay Wang</li>
-          <li>Samarth Aggarwal</li>
-          <li>Jane Wu</li>
-          <li>Stephanie Tonnu</li>
+        <strong>Developers</strong>
+          <p>Carl Dungca</p>
+          <p>Ryan Lemon</p>
+          <p>Jay Wang</p>
+          <p>Samarth Aggarwal</p>
+          <p>Jane Wu</p>
+          <p>Stephanie Tonnu</p>
 
     </div> <!-- Copy up to this div to create new sections -->
 

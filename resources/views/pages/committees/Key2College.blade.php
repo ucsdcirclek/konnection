@@ -4,117 +4,6 @@
     Key2College Committee
 @endsection
 
-<script>
-    var r3 = 0;
-    function change1617()
-    {
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/Key2College/K2CCover.jpg')";
-        document.getElementById('title').innerHTML = "Key2College Committee 2016-2017";
-
-        if (r3 == 0) {
-            var row3 = document.getElementById("row3");
-            var newdiv1 = document.createElement("div");
-            var newpic1 = document.createElement("img");
-            var newname1 = document.createElement("p");
-            var newtitle1 = document.createElement("p");
-            newpic1.src = "{{ asset('images/Committees/Key2College/Nancy.jpg') }}";
-            newname1.innerHTML = "Nancy Huang";
-            newtitle1.innerHTML = "Donations Chair";
-            row3.appendChild(newdiv1);
-            newdiv1.appendChild(newpic1);
-            newdiv1.appendChild(newname1);
-            newdiv1.appendChild(newtitle1);
-            newname1.style.fontWeight = "bold";
-            r3 = 1;
-        }
-
-        document.getElementById('image1').src="{{ asset('images/Committees/Key2College/Jennifer.jpg') }}";
-        document.getElementById('image2').src="{{ asset('images/Committees/Key2College/Louise.jpg') }}";
-        document.getElementById('image3').src="{{ asset('images/Committees/Key2College/Stefanie.jpg') }}";
-        document.getElementById('image4').src="{{ asset('images/Committees/Key2College/Michael.jpg') }}";
-        document.getElementById('image5').src="{{ asset('images/Committees/Key2College/Ariel.jpg') }}";
-        document.getElementById('image6').src="{{ asset('images/Committees/Key2College/Erica.jpg') }}";
-        document.getElementById('image7').src="{{ asset('images/Committees/Key2College/Don.jpg') }}";
-        document.getElementById('name1').innerHTML = "Jennifer Truong";
-        document.getElementById('name2').innerHTML = "Louise Tolentino";
-        document.getElementById('name3').innerHTML = "Stefanie Tonnu";
-        document.getElementById('name4').innerHTML = "Michael Christenson";
-        document.getElementById('name5').innerHTML = "Ariel Codilla";
-        document.getElementById('name6').innerHTML = "Erica Wei";
-        document.getElementById('name7').innerHTML = "Don Tran";
-        document.getElementById('title2').innerHTML = "Co-Logistics Chair";
-        document.getElementById('title3').innerHTML = "Co-Logistics Chair";
-        document.getElementById('title4').innerHTML = "Programs Chair";
-        var name1 = document.getElementById('name1');
-        var name2 = document.getElementById('name2');
-        var name3 = document.getElementById('name3');
-        var name4 = document.getElementById('name4');
-        var name5 = document.getElementById('name5');
-        var name6 = document.getElementById('name6');
-        var name7 = document.getElementById('name7');
-        var name8 = document.getElementById('name8');
-
-        name1.style.fontWeight="bold";
-        name2.style.fontWeight="bold";
-        name3.style.fontWeight="bold";
-        name4.style.fontWeight="bold";
-        name5.style.fontWeight="bold";
-        name6.style.fontWeight="bold";
-        name7.style.fontWeight="bold";
-        name8.style.fontWeight="bold";
-
-    }
-    function change1718() {
-
-        var row3 = document.getElementById("row3");
-        var nancy = row3.getElementsByTagName("div")[1];
-        if(r3 == 1) {
-            row3.removeChild(nancy);
-            r3 = 0;
-        }
-
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/Key2College/K2CCover1718.jpg')";
-        document.getElementById('title').innerHTML = "Key2College Committee 2017-2018";
-
-        document.getElementById('image1').src = "{{ asset('images/Committees/Key2College/Michael1718.jpg') }}";
-        document.getElementById('image2').src = "{{ asset('images/Committees/Key2College/Donaji.jpg') }}";
-        document.getElementById('image3').src = "{{ asset('images/Committees/Key2College/Joanna.jpg') }}";
-        document.getElementById('image4').src = "{{ asset('images/Committees/Key2College/Rowan.jpg') }}";
-        document.getElementById('image5').src = "{{ asset('images/Committees/Key2College/Justin.jpg') }}";
-        document.getElementById('image6').src = "{{ asset('images/Committees/Key2College/Aaron.jpg') }}";
-        document.getElementById('image7').src = "{{ asset('images/Committees/Key2College/JustinD.jpg') }}";
-        document.getElementById('name1').innerHTML = "Michael Christenson";
-        document.getElementById('name2').innerHTML = "Donaji Rodriguez";
-        document.getElementById('name3').innerHTML = "Joanna Truong";
-        document.getElementById('name4').innerHTML = "Rowan Ustoy";
-        document.getElementById('name5').innerHTML = "Justin Palor";
-        document.getElementById('name6').innerHTML = "Aaron Zependa";
-        document.getElementById('name7').innerHTML = "Justin Duong";
-        document.getElementById('title2').innerHTML = "Logistics Chair";
-        document.getElementById('title3').innerHTML = "Programs Chair";
-        document.getElementById('title4').innerHTML = "Donations Chair";
-        var name1 = document.getElementById('name1');
-        var name2 = document.getElementById('name2');
-        var name3 = document.getElementById('name3');
-        var name4 = document.getElementById('name4');
-        var name5 = document.getElementById('name5');
-        var name6 = document.getElementById('name6');
-        var name7 = document.getElementById('name7');
-
-        name1.style.fontWeight = "bold";
-        name2.style.fontWeight = "bold";
-        name3.style.fontWeight = "bold";
-        name4.style.fontWeight = "bold";
-        name5.style.fontWeight = "bold";
-        name6.style.fontWeight = "bold";
-        name7.style.fontWeight = "bold";
-
-
-    }
-</script>
-
-
-
 @section('content')
 
     <div id="background" class="bigbanner"
@@ -139,14 +28,6 @@
     <div class="title-wrapper">
         <h1 class="title">Committee Members</h1>
     </div>
-
-    <center>
-        <div class="btn-group">
-            <button onclick="change1718()">2017-2018</button>
-            <button onclick="change1617()">2016-2017</button>
-        </div>
-        <center>
-
 
             <div id="rows">
                 <div id="row1" class="contact-row">
@@ -192,6 +73,29 @@
                     </div>
                 </div>
             </div>
+
+            <div class="title-wrapper">
+                <h1 class="title">Past Members</h1>
+            </div>
+
+            <button class="accordion">2016-2017</button> <!--Create a new accordion for each year -->
+            <div class="panel">
+                <strong>Key2College Committee Head</strong>
+                <p>Jennifer Truong</p>
+                <strong>Co-Logistics Chairs</strong>
+                <p>Louise Tolentino</p>
+                <p>Stephanie Tonnu</p>
+                <strong>Programs Chair</strong>
+                <p>Michael Christensen</p>
+                <strong>Publicity Chair</strong>
+                <p>Ariel Codilla</p>
+                <strong>Key2Life Chair</strong>
+                <p>Erica Wei</p>
+                <strong>Entertainment Chair</strong>
+                <p>Don Tran</p>
+                <strong>Donations Chair</strong>
+                <p>Nancy Huang</p>
+            </div> <!-- Copy up to this div to create new sections -->
 
             <!-- IN DEVELOPMENT (Mini Gallery)
             <div class="message-box">

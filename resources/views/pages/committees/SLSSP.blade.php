@@ -32,12 +32,12 @@
             <div id="rows">
                 <div id="row1" class="contact-row">
                     <div>
-                        <img id="image1" src="{{ asset('images/board/matthew.jpg') }}" />
+                        <img id="image1" src="{{ asset('images/Committees/SLSSP/Matthew2.jpg') }}" />
                         <p id="name1"><strong>Matthew Kawakami</strong></p>
                         <p id="title1">SLSSP Committee Head</p>
                     </div>
                     <div>
-                        <img id="image2" src="{{ asset('images/board/siobhan.jpg') }}" />
+                        <img id="image2" src="{{ asset('images/Committees/SLSSP/Siobhan2.jpg') }}" />
                         <p id="name2"><strong>Siobhán Lin-Nugent</strong></p>
                         <p id="title2">Executive Assistant</p>
                     </div>
@@ -105,17 +105,15 @@
         <p>Wendy Zhang</p>
         <strong>Internal Operations Chair</strong>
         <p>Joanna Lam</p>
-        <strong>Recreations Co-Chair</strong>
+        <strong>Recreations Co-Chairs</strong>
         <p>Kenneth Truong</p>
-        <strong>Recreations Co-Chair</strong>
         <p>Matthew Kawakami</p>
         <strong>DSI Ambassador</strong>
         <p>Justin Wu</p>
         <strong>Finance Chair</strong>
         <p>Anh Vo</p>
-        <strong>Public Relations Co-Chair</strong>
+        <strong>Public Relations Co-Chairs</strong>
         <p>Nancy Huang</p>
-        <strong>Public Relations Co-Chair</strong>
         <p>Shannon Lee</p>
     </div> <!-- Copy up to this div to create new sections -->
 

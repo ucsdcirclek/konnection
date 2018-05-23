@@ -43,10 +43,12 @@
                 <p>mball.operations@ucsdcki.org</p>
             </div>
             <div>
-                <img id="image3" src="{{ asset('images/Committees/MBall/Lisa.jpg') }}" />
-                <p id="name3"><strong>Lisa Ton</strong></p>
-                <p id="title3">Programs Coordinator</p>
-                <p>mball.program@ucsdcki.org</p>
+                <div>
+                    <img id="image7" src="{{ asset('images/Committees/MBall/Allyson.jpg') }}" />
+                    <p id="name7"><strong>Allyson Luong</strong></p>
+                    <p id="title7">DFI Operations Chair</p>
+                    <p>mball.operations@ucsdcki.org</p>
+                </div>
             </div>
         </div>
 
@@ -73,10 +75,10 @@
 
         <div id="row3" class="contact-row">
             <div>
-                <img id="image7" src="{{ asset('images/Committees/MBall/Allyson.jpg') }}" />
-                <p id="name7"><strong>Allyson Luong</strong></p>
-                <p id="title7">DFI Operations Chair</p>
-                <p>mball.operations@ucsdcki.org</p>
+            <img id="image3" src="{{ asset('images/Committees/MBall/Lisa.jpg') }}" />
+            <p id="name3"><strong>Lisa Ton</strong></p>
+            <p id="title3">Programs Coordinator</p>
+            <p>mball.program@ucsdcki.org</p>
             </div>
             <div>
                 <img id="image8" src="{{ asset('images/Committees/MBall/Renelle.jpg') }}" />
@@ -115,7 +117,6 @@
         <p>Jason Liu</p>
         <strong>Finance</strong>
         <p>Jason Wu</p>
-        <strong>Finance</strong>
         <p>Hannah Hwang</p>
     </div> <!-- Copy up to this div to create new sections -->
 
