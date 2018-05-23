@@ -63,58 +63,11 @@
 
     </div>
 
-
-            <!--<div id="rows">
-            <div id="rows">
-                <div id="row1" class="contact-row">
-                    <div>
-                        <img id="image1" src="{{ asset('images/Committees/TechTeam/Weijin.jpg') }}" />
-                        <p id="name1"><strong>Weijin Xu</strong></p>
-                        <p id="title1">Tech Team Committee Head</p>
-                    </div>
-                    <div>
-                        <img id="image2" src="{{ asset('images/Committees/TechTeam/Carl.jpg') }}" />
-                        <p id="name2"><strong>Carl Dungca</strong></p>
-                        <p id="title2">Developer</p>
-                    </div>
-                    <div>
-                        <img id="image3" src="{{ asset('images/Committees/TechTeam/Ryan.jpg') }}" />
-                        <p id="name3"><strong>Ryan Lemon</strong></p>
-                        <p id="title3">Developer</p>
-                    </div>
-                </div>
-
-                <div id="row2" class="contact-row">
-                    <div>
-                        <img id="image4" src="{{ asset('images/Committees/TechTeam/Samarth.jpg') }}" />
-                        <p id="name4"><strong>Samarth Aggarwal</strong></p>
-                        <p id="title4">Developer</p>
-                    </div>
-                    <div>
-                        <img id="image5" src="{{ asset('images/Committees/TechTeam/Stefanie.jpg') }}" />
-                        <p id="name5"><strong>Stefanie Tonnu</strong></p>
-                        <p id="title5">Developer</p>
-                    </div>
-                    <div>
-                        <img id="image6" src="{{ asset('images/Committees/TechTeam/Jay.jpg') }}" />
-                        <p id="name6"><strong>Jay Wang</strong></p>
-                        <p id="title6">Developer</p>
-                    </div>
-                </div>
-                <div id="row3" class="contact-row">
-                    <div>
-                        <img id="image7" src="{{ asset('images/Committees/TechTeam/Jane.jpg') }}" />
-                        <p id="name7"><strong>Jane Wu</strong></p>
-                        <p id="title7">Developer</p>
-                    </div>
-                </div>
-            </div> -->
-
 <div class="title-wrapper">
     <h1 class="title">Past Members</h1>
 </div>
 
-    <button class="accordion">2017-2018</button>
+    <button class="accordion">2017-2018</button> <!--Create a new accordion for each year -->
     <div class="panel">
         <strong>Tech Team Committee Head</strong>
         <p>Weijin Xu</p>
@@ -126,7 +79,7 @@
           <li>Jane Wu</li>
           <li>Stephanie Tonnu</li>
 
-    </div>
+    </div> <!-- Copy up to this div to create new sections -->
 
             <!-- IN DEVELOPMENT (Mini Gallery)
             <div class="message-box">

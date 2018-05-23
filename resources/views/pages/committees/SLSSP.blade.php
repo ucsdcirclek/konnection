@@ -4,103 +4,6 @@
     SLSSP Committee
 @endsection
 
-<script>
-    var r3 = 1;
-    function change1617()
-    {
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/SLSSP/SLSSPCover16172.jpg')";
-        document.getElementById('title').innerHTML = "SLSSP Committee 2016-2017";
-
-        document.getElementById('image1').src="{{ asset('images/Committees/SLSSP/Chloris.jpg') }}";
-        document.getElementById('image2').src="{{ asset('images/Committees/SLSSP/Hannah.jpg') }}";
-        document.getElementById('image3').src="{{ asset('images/Committees/SLSSP/Wendy.jpg') }}";
-        document.getElementById('image4').src="{{ asset('images/Committees/SLSSP/Joanna.jpg') }}";
-        document.getElementById('image5').src="{{ asset('images/Committees/SLSSP/Kenneth.jpg') }}";
-        document.getElementById('image6').src="{{ asset('images/Committees/SLSSP/Matthew.jpg') }}";
-        document.getElementById('image7').src="{{ asset('images/Committees/SLSSP/Justin.jpg') }}";
-        document.getElementById('image8').src="{{ asset('images/Committees/SLSSP/Anh.jpg') }}";
-        document.getElementById('image9').src="{{ asset('images/Committees/SLSSP/Nancy.jpg') }}";
-        document.getElementById('image10').src="{{ asset('images/Committees/SLSSP/Shannon.jpg') }}";
-        document.getElementById('name1').innerHTML = "Chloris Li";
-        document.getElementById('name2').innerHTML = "Hannah Hwang";
-        document.getElementById('name3').innerHTML = "Wendy Zang";
-        document.getElementById('name4').innerHTML = "Joanna Lam";
-        document.getElementById('name5').innerHTML = "Kenneth Truong";
-        document.getElementById('name6').innerHTML = "Matthew Kawakami";
-        document.getElementById('name7').innerHTML = "Justin Wu";
-        document.getElementById('name8').innerHTML = "Anh Vo";
-        document.getElementById('name9').innerHTML = "Nancy Huang";
-        document.getElementById('name10').innerHTML = "Shannon Lee";
-
-        document.getElementById('title3').innerHTML = "External Operations Chair";
-        document.getElementById('title4').innerHTML = "Internal Operations Chair";
-        document.getElementById('title8').innerHTML = "Finance Chair";
-        document.getElementById('title9').innerHTML = "Public Relations Co-Chair";
-        document.getElementById('title10').innerHTML = "Public Relations Co-Chair";
-
-        document.getElementById('name1').style.fontWeight="bold";
-        document.getElementById('name2').style.fontWeight="bold";
-        document.getElementById('name3').style.fontWeight="bold";
-        document.getElementById('name4').style.fontWeight="bold";
-        document.getElementById('name5').style.fontWeight="bold";
-        document.getElementById('name6').style.fontWeight="bold";
-        document.getElementById('name7').style.fontWeight="bold";
-        document.getElementById('name8').style.fontWeight="bold";
-        document.getElementById('name9').style.fontWeight="bold";
-        document.getElementById('name10').style.fontWeight="bold";
-
-
-    }
-    function change1718() {
-
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/SLSSP/SLSSPCover1718.jpg')";
-        document.getElementById('title').innerHTML = "SLSSP Committee 2017-2018";
-
-
-        document.getElementById('image1').src = "{{ asset('images/board/matthew.jpg') }}";
-        document.getElementById('image2').src = "{{ asset('images/board/siobhan.jpg') }}";
-        document.getElementById('image3').src = "{{ asset('images/Committees/SLSSP/Alyssa.jpg') }}";
-        document.getElementById('image4').src = "{{ asset('images/Committees/SLSSP/Angela.jpg') }}";
-        document.getElementById('image5').src = "{{ asset('images/Committees/SLSSP/Brent.jpg') }}";
-        document.getElementById('image6').src = "{{ asset('images/Committees/SLSSP/Meghan.jpg') }}";
-        document.getElementById('image7').src = "{{ asset('images/Committees/SLSSP/Jovonne.jpg') }}";
-        document.getElementById('image8').src = "{{ asset('images/Committees/SLSSP/Victoria.jpg') }}";
-        document.getElementById('image9').src = "{{ asset('images/Committees/SLSSP/Andrew.jpg') }}";
-        document.getElementById('image10').src = "{{ asset('images/Committees/SLSSP/Jolene.jpg') }}";
-
-        document.getElementById('name1').innerHTML = "Matthew Kawakami";
-        document.getElementById('name2').innerHTML = "Siobhán Lin-Nugent";
-        document.getElementById('name3').innerHTML = "Alyssa Lew";
-        document.getElementById('name4').innerHTML = "Angela Pham";
-        document.getElementById('name5').innerHTML = "Brent Min";
-        document.getElementById('name6').innerHTML = "Meghan Hernandez";
-        document.getElementById('name7').innerHTML = "Jovonne Lee";
-        document.getElementById('name8').innerHTML = "Victoria Vu";
-        document.getElementById('name9').innerHTML = "Andrew Vu";
-        document.getElementById('name10').innerHTML = "Jolene Leung";
-
-        document.getElementById('title3').innerHTML = "Operations Co-Chair";
-        document.getElementById('title4').innerHTML = "Operations Co-Chair";
-        document.getElementById('title8').innerHTML = "Public Relations Chair";
-        document.getElementById('title9').innerHTML = "Finance Co-Chair";
-        document.getElementById('title10').innerHTML = "Finance Co-Chair";
-
-        document.getElementById('name1').style.fontWeight="bold";
-        document.getElementById('name2').style.fontWeight="bold";
-        document.getElementById('name3').style.fontWeight="bold";
-        document.getElementById('name4').style.fontWeight="bold";
-        document.getElementById('name5').style.fontWeight="bold";
-        document.getElementById('name6').style.fontWeight="bold";
-        document.getElementById('name7').style.fontWeight="bold";
-        document.getElementById('name8').style.fontWeight="bold";
-        document.getElementById('name9').style.fontWeight="bold";
-        document.getElementById('name10').style.fontWeight="bold";
-
-    }
-</script>
-
-
-
 @section('content')
 
     <div id="background" class="bigbanner" style="background-image: url('/images/Committees/SLSSP/SLSSPCover1718.jpg')">
@@ -125,14 +28,6 @@
     <div class="title-wrapper">
         <h1 class="title">Committee Members</h1>
     </div>
-
-    <center>
-        <div class="btn-group">
-            <button onclick="change1718()">2017-2018</button>
-            <button onclick="change1617()">2016-2017</button>
-        </div>
-        <center>
-
 
             <div id="rows">
                 <div id="row1" class="contact-row">
@@ -196,7 +91,36 @@
                 </div>
             </div>
 
-            <!-- IN DEVELOPMENT (Mini Gallery)
+    <div class="title-wrapper">
+        <h1 class="title">Past Members</h1>
+    </div>
+
+    <button class="accordion">2016-2017</button> <!--Create a new accordion for each year -->
+    <div class="panel">
+        <strong>SLSSP Committee Head</strong>
+        <p>Chloris Li</p>
+        <strong>Executive Assistant</strong>
+        <p>Hannah Hwang</p>
+        <strong>External Operations Chair</strong>
+        <p>Wendy Zhang</p>
+        <strong>Internal Operations Chair</strong>
+        <p>Joanna Lam</p>
+        <strong>Recreations Co-Chair</strong>
+        <p>Kenneth Truong</p>
+        <strong>Recreations Co-Chair</strong>
+        <p>Matthew Kawakami</p>
+        <strong>DSI Ambassador</strong>
+        <p>Justin Wu</p>
+        <strong>Finance Chair</strong>
+        <p>Anh Vo</p>
+        <strong>Public Relations Co-Chair</strong>
+        <p>Nancy Huang</p>
+        <strong>Public Relations Co-Chair</strong>
+        <p>Shannon Lee</p>
+    </div> <!-- Copy up to this div to create new sections -->
+
+
+    <!-- IN DEVELOPMENT (Mini Gallery)
             <div class="message-box">
             <div class="title-wrapper">
                 <h1 class="title">Gallery</h1>
