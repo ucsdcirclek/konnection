@@ -51,7 +51,7 @@
 
                 <li class="nav-link"><a href="{{ url('/bulletin') }}">bulletin</a></li>
 
-                <li class="nav-link"><a href="{{ url('/cerfs/overview') }}">cerfs</a></li>
+                <!--<li class="nav-link"><a href="{{ url('/cerfs/overview') }}">cerfs</a></li> -->
 
                 <li class="nav-link more"><a href="">district</a>
                     <ul class="submenu">

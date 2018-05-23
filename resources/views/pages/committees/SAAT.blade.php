@@ -4,123 +4,6 @@
     SAAT Committee
 @endsection
 
-<script>
-    var r3 = 0;
-    function change1617()
-    {
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/SAAT/SAATCovertemp.jpg')";
-        document.getElementById('title').innerHTML = "SAAT Committee 2016-2017";
-
-
-        document.getElementById('image1').src="{{ asset('images/Committees/SAAT/Jane.jpg') }}";
-        document.getElementById('image2').src="{{ asset('images/Committees/SAAT/Hannah.jpg') }}";
-        document.getElementById('image3').src="{{ asset('images/board/wesley.jpg') }}";
-        document.getElementById('image4').src="{{ asset('images/Committees/SAAT/Kenneth.jpg') }}";
-        document.getElementById('image5').src="{{ asset('images/Committees/SAAT/Samarth.jpg') }}";
-        document.getElementById('image6').src="{{ asset('images/Committees/SAAT/Vivian.jpg') }}";
-        document.getElementById('image7').src="{{ asset('images/Committees/SAAT/Nancy.jpg') }}";
-        document.getElementById('image8').src="{{ asset('images/Committees/SAAT/Siobhan.jpg') }}";
-
-        document.getElementById('name1').innerHTML = "Jane Wu";
-        document.getElementById('name2').innerHTML = "Hannah Hwang";
-        document.getElementById('name3').innerHTML = "Wesley Wu";
-        document.getElementById('name4').innerHTML = "Kenneth Truong";
-        document.getElementById('name5').innerHTML = "Samarth Aggarwal";
-        document.getElementById('name6').innerHTML = "Vivian Sheen";
-        document.getElementById('name7').innerHTML = "Nancy Huang";
-        document.getElementById('name8').innerHTML = "Siobhán Lin-Nugent";
-
-        document.getElementById('title3').innerHTML = "Co-Logistics Chair";
-        document.getElementById('title4').innerHTML = "Co-Logistics Chair";
-        document.getElementById('title5').innerHTML = "Publicity Chair";
-        document.getElementById('title6').innerHTML = "Donations Chair";
-        document.getElementById('title7').innerHTML = "Co-Event Chair";
-        document.getElementById('title8').innerHTML = "Co-Event Chair";
-
-        var name1 = document.getElementById('name1');
-        var name2 = document.getElementById('name2');
-        var name3 = document.getElementById('name3');
-        var name4 = document.getElementById('name4');
-        var name5 = document.getElementById('name5');
-        var name6 = document.getElementById('name6');
-        var name7 = document.getElementById('name7');
-        var name8 = document.getElementById('name8');
-
-        name1.style.fontWeight="bold";
-        name2.style.fontWeight="bold";
-        name3.style.fontWeight="bold";
-        name4.style.fontWeight="bold";
-        name5.style.fontWeight="bold";
-        name6.style.fontWeight="bold";
-        name7.style.fontWeight="bold";
-        name8.style.fontWeight="bold";
-
-    }
-    function change1718() {
-
-        var row3 = document.getElementById("row3");
-        var nancy = row3.getElementsByTagName("div")[0];
-        var siobhan = row3.getElementsByTagName("div")[1];
-        if(r3 == 1) {
-            row3.removeChild(nancy);
-            row3.removeChild(siobhan);
-            r3 = 0;
-        }
-
-        document.getElementById('background').style.backgroundImage="url('/images/Committees/SAAT/SAATCover17182.jpg')";
-        document.getElementById('title').innerHTML = "SAAT Committee 2017-2018";
-
-        document.getElementById('image1').src = "{{ asset('images/Committees/SAAT/Shannon.jpg') }}";
-        document.getElementById('image2').src = "{{ asset('images/Committees/SAAT/Wesley.jpg') }}";
-        document.getElementById('image3').src = "{{ asset('images/Committees/SAAT/Marne.jpg') }}";
-        document.getElementById('image4').src = "{{ asset('images/Committees/SAAT/Kevin.jpg') }}";
-        document.getElementById('image5').src = "{{ asset('images/Committees/SAAT/Ming.jpg') }}";
-        document.getElementById('image6').src = "{{ asset('images/Committees/SAAT/Maricris.jpg') }}";
-        document.getElementById('image7').src = "{{ asset('images/Committees/SAAT/Tamara.jpg') }}";
-        document.getElementById('image8').src = "{{ asset('images/Committees/SAAT/Stephanie.jpg') }}";
-
-        document.getElementById('name1').innerHTML = "Shannon Lee";
-        document.getElementById('name2').innerHTML = "Wesley Wu";
-        document.getElementById('name3').innerHTML = "Marné Amoguis";
-        document.getElementById('name4').innerHTML = "Kevin Nguyen";
-        document.getElementById('name5').innerHTML = "Minghua Ong";
-        document.getElementById('name6').innerHTML = "Maricris Hernandez";
-        document.getElementById('name7').innerHTML = "Tamara Kawa";
-        document.getElementById('name8').innerHTML = "Stephanie Nguyen";
-
-        document.getElementById('title3').innerHTML = "Logistics Chair";
-        document.getElementById('title4').innerHTML = "Co-Donations Chair";
-        document.getElementById('title5').innerHTML = "Co-Donations Chair";
-        document.getElementById('title6').innerHTML = "Co-Education Chair";
-        document.getElementById('title7').innerHTML = "Co-Education Chair";
-        document.getElementById('title8').innerHTML = "Public Relations Chair";
-
-        var name1 = document.getElementById('name1');
-        var name2 = document.getElementById('name2');
-        var name3 = document.getElementById('name3');
-        var name4 = document.getElementById('name4');
-        var name5 = document.getElementById('name5');
-        var name6 = document.getElementById('name6');
-        var name7 = document.getElementById('name7');
-        var name8 = document.getElementById('name8');
-
-
-        name1.style.fontWeight = "bold";
-        name2.style.fontWeight = "bold";
-        name3.style.fontWeight = "bold";
-        name4.style.fontWeight = "bold";
-        name5.style.fontWeight = "bold";
-        name6.style.fontWeight = "bold";
-        name7.style.fontWeight = "bold";
-        name8.style.fontWeight = "bold";
-
-
-
-    }
-</script>
-
-
-
 @section('content')
 
     <div id="background" class="bigbanner"
@@ -147,14 +30,6 @@
     <div class="title-wrapper">
         <h1 class="title">Committee Members</h1>
     </div>
-
-    <center>
-        <div class="btn-group">
-            <button onclick="change1718()">2017-2018</button>
-            <button onclick="change1617()">2016-2017</button>
-        </div>
-        <center>
-
 
             <div id="rows">
                 <div id="row1" class="contact-row">
@@ -205,6 +80,27 @@
                     </div>
                 </div>
             </div>
+
+            <div class="title-wrapper">
+                <h1 class="title">Past Members</h1>
+            </div>
+
+            <button class="accordion">2016-2017</button> <!--Create a new accordion for each year -->
+            <div class="panel">
+                <strong>SAAT Co-Chairs</strong>
+                <p>Jane Wu</p>
+                <p>Hannah Hwang</p>
+                <strong>Co-Logistics Chairs</strong>
+                <p>Wesley Wu</p>
+                <p>Kenneth Truong</p>
+                <strong>Publicity Chair</strong>
+                <p>Samarth Aggarwal</p>
+                <strong>Donations Chair</strong>
+                <p>Vivian Sheen</p>
+                <strong>Co-Event Chairs</strong>
+                <p>Nancy Huang</p>
+                <p>Siobhán Lin-Nugent</p>
+            </div> <!-- Copy up to this div to create new sections -->
 
             <!-- IN DEVELOPMENT (Mini Gallery)
             <div class="message-box">
