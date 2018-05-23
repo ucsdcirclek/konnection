@@ -130,9 +130,9 @@
 
 @section('content')
 
-    <div id="background" class="bigbanner" style="background-image: url('/images/Committees/MBall/MballCover17182.jpg')">
+    <div id="background" class="bigbanner" style="background-image: url('/images/Committees/MBall/MBallCover1819.jpg')">
         <div id="title" class="bigbannertext">
-            Masquerade Ball Committee 2017-2018
+            Masquerade Ball Committee 2018-2019
         </div>
     </div>
 
@@ -152,15 +152,80 @@
         <h1 class="title">Committee Members</h1>
     </div>
 
-    <center>
+    <!--<center>
         <div class="btn-group">
             <button onclick="change1718()">2017-2018</button>
             <button onclick="change1617()">2016-2017</button>
         </div>
-        <center>
+        <center> -->
+
+    <div id="rows">
+        <div id="row1" class="contact-row">
+            <div>
+                <img id="image1" src="{{ asset('images/Committees/MBall/Anh.jpg') }}" />
+                <p id="name1"><strong>Anh Vo</strong></p>
+                <p id="title1">Masquerade Ball Chair</p>
+                <p>mball@ucsdcki.org</p>
+            </div>
+            <div>
+                <img id="image2" src="{{ asset('images/Committees/MBall/WesleyMBall.jpg') }}" />
+                <p id="name2"><strong>Wesley Wu</strong></p>
+                <p id="title2">Operations Director</p>
+                <p>mball.operations@ucsdcki.org</p>
+            </div>
+            <div>
+                <img id="image3" src="{{ asset('images/Committees/MBall/Lisa.jpg') }}" />
+                <p id="name3"><strong>Lisa Ton</strong></p>
+                <p id="title3">Programs Coordinator</p>
+                <p>mball.program@ucsdcki.org</p>
+            </div>
+        </div>
+
+        <div id="row2" class="contact-row">
+            <div>
+                <img id="image4" src="{{ asset('images/Committees/MBall/AlyssaG.jpg') }}" />
+                <p id="name4"><strong>Alyssa Granados</strong></p>
+                <p id="title4">Creative Director</p>
+                <p>mball.creative@ucsdcki.org</p>
+            </div>
+            <div>
+                <img id="image5" src="{{ asset('images/Committees/MBall/WesY.jpg') }}" />
+                <p id="name5"><strong>Wes-Yuen</strong></p>
+                <p id="title5">Co-Marketing Director</p>
+                <p>mball.publicity@ucsdcki.org</p>
+            </div>
+            <div>
+                <img id="image6" src="{{ asset('images/Committees/MBall/AaronZ.jpg') }}" />
+                <p id="name6"><strong>Aaron Zepeda</strong></p>
+                <p id="title6">Co-Marketing Director</p>
+                <p>mball.publicity@ucsdcki.org</p>
+            </div>
+        </div>
+
+        <div id="row3" class="contact-row">
+            <div>
+                <img id="image7" src="{{ asset('images/Committees/MBall/Allyson.jpg') }}" />
+                <p id="name7"><strong>Allyson Luong</strong></p>
+                <p id="title7">DFI Operations Chair</p>
+                <p>mball.operations@ucsdcki.org</p>
+            </div>
+            <div>
+                <img id="image8" src="{{ asset('images/Committees/MBall/Renelle.jpg') }}" />
+                <p id="name8"><strong>Renelle Gadon</strong></p>
+                <p id="title8">Co-Finance Coordinator</p>
+                <p>mball.finance@ucsdcki.org</p>
+            </div>
+            <div>
+                <img id="image9" src="{{ asset('images/Committees/MBall/Elaine.jpg') }}" />
+                <p id="name9"><strong>Elaine Dai</strong></p>
+                <p id="title9">Co-Finance Coordinator</p>
+                <p>mball.finance@ucsdcki.org</p>
+            </div>
+        </div>
+    </div>
 
 
-            <div id="rows">
+            <!--<div id="rows">
                 <div id="row1" class="contact-row">
                     <div>
                         <img id="image1" src="{{ asset('images/Committees/MBall/Michelle.jpg') }}" />
@@ -214,7 +279,7 @@
                         <p id="title9">Finance</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- IN DEVELOPMENT (Mini Gallery)
             <div class="message-box">
