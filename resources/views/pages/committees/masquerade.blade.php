@@ -116,7 +116,7 @@
         <strong>External Relations</strong>
         <p>Jason Liu</p>
         <strong>Finance</strong>
-        <p>Jason Wu</p>
+        <p>Jane Wu</p>
         <p>Hannah Hwang</p>
     </div> <!-- Copy up to this div to create new sections -->
 
