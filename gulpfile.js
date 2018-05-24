@@ -20,6 +20,7 @@ elixir(function(mix) {
       'popup-config.js',
       'user-search.js',
       'slideshow.js',
+      'accordion.js',
       //'modal.js',
       '*.js'
     ], 'public/js/main.js')
