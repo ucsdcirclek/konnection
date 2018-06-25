@@ -30,6 +30,7 @@
     {{-- Header --}}
 
     {{-- Navigation bar --}}
+    @include('layouts.navbar2')
     @include('layouts.navbar')
 
     @include('layouts.admin')
