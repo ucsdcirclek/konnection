@@ -2,9 +2,9 @@
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 70px;
-$nav-background: #262626;
+$nav-background: $dark-slate-gray;
 $nav-font-color: #ffffff;
-$link-hover-color: #2581DC;
+$link-hover-color: rgb(0, 0, 0);
 
 // Outer navigation wrapper
 .navigation {
@@ -42,6 +42,7 @@ nav {
     margin: 0;
     padding: 0;
     li {
+      font-family: $script;
       float: left;
       position: relative;
       a,

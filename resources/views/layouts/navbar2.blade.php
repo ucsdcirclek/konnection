@@ -1,7 +1,31 @@
+<style>
+    @media only screen and (max-width: 500px) {
+
+        .mobile-text {
+            font-size: 12px;
+        }
+        .centered-navigation {
+            height: 18%;
+
+        }
+        .modal-content {
+            height: 480px;
+            width: 90%;
+            overflow: auto;
+        }
+
+        li.modalTab a {
+            padding: 24px 16px;
+        }
+    }
+
+</style>
+
 <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <a href="#!">UCSD Circle K</a>
+            <i class="fas fa-splotch" style="color: white"></i>
+            <a href="{{ url('/') }}">UCSD Circle K</a>
         </div>
         <nav>
             <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
@@ -11,40 +35,34 @@
                 </li>
                 <li>
                     <a href="#!">about</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
+                        <li><a href="{{ url('about/club') }}">Club</a></li>
+                        <li><a href="{{ url('about/drivers') }}">Drivers</a></li>
+                        <li><a href="{{ url('about/membership') }}">Membership</a></li>
+                        <li><a target="_blank" href="http://www.kiwanis.org">Kiwanis</a></li>
+                        <li><a target="_blank" href="http://www.kiwanisclublajolla.org/">La Jolla Kiwanis</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="{{ url('/events') }}">calendar</a>
-                    <ul class="nav-dropdown">
-                        <li>
-                            <a href="#!">Web Design</a>
-                        </li>
-                        <li>
-                            <a href="#!">Web Development</a>
-                        </li>
-                        <li>
-                            <a href="#!">Graphic Design</a>
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a href="{{ url('/resources') }}">resources</a>
                 </li>
                 <li>
                     <a href="{{ url('/bulletin') }}">bulletin</a>
-                    <ul class="nav-dropdown">
-                        <li>
-                            <a href="#!">Web Design</a>
-                        </li>
-                        <li>
-                            <a href="#!">Web Development</a>
-                        </li>
-                        <li>
-                            <a href="#!">Graphic Design</a>
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a href="#!">district</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="{{ url('about/district') }}">About</a></li>
+                        <li><a target="_blank" href="http://dcon.cnhcirclek.org/">DCON</a></li>
+                        <li><a target="_blank" href="http://ftc.cnhcirclek.org/">FTC</a></li>
+                        <li><a target="_blank"
+                               href="http://www.cnhcirclek.org/committees/fifun/crazy-kompetition-2017-games-playbook/">CKI
+                                South</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="{{ url('contact') }}">contact</a>
