@@ -20,7 +20,7 @@
         });
         // Hamburger to X toggle
         $('#nav-toggle').on('click', function() {
-            this.classList.toggle('active');
+            this.classList.toggle('activeHome');
         });
     }); // end DOM ready
 })(jQuery); // end jQuery
