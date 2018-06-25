@@ -88,7 +88,7 @@ nav {
 .nav-mobile {
   display: none;
   position: absolute;
-  top: 1.2%;
+  top: 0;
   right: 0;
   background: $nav-background;
   height: $nav-height;
@@ -100,6 +100,9 @@ nav {
   }
   .navigation {
     padding-right: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
   }
   // Hamburger nav visible on mobile only
   .nav-mobile {
