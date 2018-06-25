@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ elixir("css/main.css") }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor/jquery.datetimepicker.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor/popup.css') }}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -30,7 +31,7 @@
     {{-- Header --}}
 
     {{-- Navigation bar --}}
-    @include('layouts.navbar')
+    @include('layouts.navbar2')
 
     @include('layouts.admin')
 
