@@ -8,7 +8,7 @@
     @media only screen and (max-width: 500px) {
         #admin-link { /*Attaches admin button to mobile nav bar */
             top: 4.2em;
-            z-index: 9999;
+            z-index: 9998;
         }
     }
 </style>
