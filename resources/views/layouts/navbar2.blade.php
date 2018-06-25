@@ -76,8 +76,9 @@
                         <a class="ModalLogin">login <i class="fa fa-user"></i></a>
                     </li>
                 @else
-                    <li class="nav-link more"><a>account <i class="fa fa-user"></i></a>
-                        <ul class="submenu">
+                    <li>
+                    <a href="#!">account <i class="fa fa-user"></i></a>
+                        <ul class="nav-dropdown">
                             <li><a href="{{ url('settings') }}">View Account</a></li>
                             <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
                         </ul>
