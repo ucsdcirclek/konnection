@@ -14,7 +14,6 @@ $link-hover-color: #2581DC;
 
 // Logo and branding
 .brand {
-  display: none;
   position: absolute;
   padding-left: 20px;
   float: left;
@@ -116,9 +115,6 @@ nav {
   }
   .nav-dropdown {
     position: static;
-  }
-  .brand {
-    display: inline;
   }
 }
 @media screen and (min-width: $breakpoint) {
