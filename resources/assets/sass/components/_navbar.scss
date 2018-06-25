@@ -14,6 +14,7 @@ $link-hover-color: #2581DC;
 
 // Logo and branding
 .brand {
+  display: none;
   position: absolute;
   padding-left: 20px;
   float: left;
@@ -91,7 +92,10 @@ nav {
   height: $nav-height;
   width: $nav-height;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 798px) {
+  .brand {
+    display: inline;
+  }
   // Hamburger nav visible on mobile only
   .nav-mobile {
     display: block;
