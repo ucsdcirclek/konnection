@@ -8,7 +8,7 @@
             height: 18%;
 
         }
-        .modal-content {
+        .modal-content { /* Dimensions of the login modal box */
             height: 480px;
             width: 90%;
             overflow: auto;
@@ -29,7 +29,7 @@
 <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <i class="fas fa-splotch" style="color: white"></i>
+            <i class="fas fa-splotch" style="color: white"></i> <!-- The icon for the mobile nav bar -->
             <a href="{{ url('/') }}">UCSD Circle K</a>
         </div>
         <nav>
@@ -39,7 +39,7 @@
                     <a href="{{ url('/') }}">home</a>
                 </li>
                 <li>
-                    <a href="#!">about</a>
+                    <a>about</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
                         <li><a href="{{ url('about/club') }}">Club</a></li>
@@ -59,7 +59,7 @@
                     <a href="{{ url('/bulletin') }}">bulletin</a>
                 </li>
                 <li>
-                    <a href="#!">district</a>
+                    <a>district</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('about/district') }}">About</a></li>
                         <li><a target="_blank" href="http://dcon.cnhcirclek.org/">DCON</a></li>
@@ -82,7 +82,7 @@
                     </li>
                 @else
                     <li>
-                    <a href="#!">account <i class="fa fa-user"></i></a>
+                    <a>account <i class="fa fa-user"></i></a>
                         <ul class="nav-dropdown">
                             <li><a href="{{ url('settings') }}">View Account</a></li>
                             <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
