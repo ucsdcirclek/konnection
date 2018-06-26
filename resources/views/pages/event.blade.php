@@ -7,7 +7,7 @@
 @section('description', substr(strip_tags($event->description), 0, 156) . '...')
 
 @section('content')
-    <div id="event">
+    <div id="event" style="overflow-x: scroll;">
         <div id="navigator" style="border-bottom-left-radius: 10px;">
             @foreach($upcoming_events as $day => $events)
                 <ul>

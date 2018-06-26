@@ -4,7 +4,7 @@ $breakpoint: 799px;
 $nav-height: 70px;
 $nav-background: $dark-slate-gray;
 $nav-font-color: #ffffff;
-$link-hover-color: rgb(0, 0, 0);
+$link-hover-color: $darker-slate-gray;
 
 // Outer navigation wrapper
 .navigation {
@@ -88,7 +88,7 @@ nav {
 .nav-mobile {
   display: none;
   position: absolute;
-  top: 1.2%;
+  top: 0;
   right: 0;
   background: $nav-background;
   height: $nav-height;
@@ -100,6 +100,9 @@ nav {
   }
   .navigation {
     padding-right: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
   }
   // Hamburger nav visible on mobile only
   .nav-mobile {
@@ -171,11 +174,5 @@ nav {
   }
 }
 
-// Page content
-article {
-  max-width: $content-width;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-//Mobile navbar by Tania Rascia
+//Mobile navbar by Tania Rascia https://www.taniarascia.com/responsive-dropdown-navigation-bar/
+//Adaptations to fit our website by Carl Dungca
