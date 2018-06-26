@@ -1,9 +1,13 @@
 /*Smart Phones*/
 @media only screen and (max-width: 500px) {
 
+  //Navbar settings
+
   #header-image { //Pushes content down to account for the sticky navbar
     margin-top: 20%;
   }
+
+  //End navbar settings
 
   #social-media-column {
     display:none;

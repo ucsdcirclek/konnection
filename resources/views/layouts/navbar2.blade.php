@@ -17,6 +17,11 @@
         li.modalTab a {
             padding: 24px 16px;
         }
+
+        .nav-list {
+            height: 75vh; /* Allows the mobile navbar to be scrolled if too big */
+            overflow-y: scroll;
+        }
     }
 
 </style>
