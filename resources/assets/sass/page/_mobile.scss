@@ -1,8 +1,13 @@
 /*Smart Phones*/
 @media only screen and (max-width: 500px) {
 
-  #social-media-column {
-    display:none;
+  //General settings
+  #header-image { //Pushes all webpage content down to account for the mobile navbar
+    margin-top: 20%;
+  }
+
+  #container {
+    overflow-x: scroll;
   }
 
 .bigbannertext {
@@ -35,13 +40,18 @@
     font-size: 30px;
   }
 
-  /*MBall Timer*/
+  //MBall Timer
   .mobile-text-timer{
     font-size: 16px;
   }
+  //End MBall timer
 
   .member-row {
     display: block;
+  }
+
+  .contact-row { //Contacts page cards scroll if too wide
+    overflow-x: scroll;
   }
 
   .container {
@@ -49,8 +59,7 @@
     height: 55%;
   }
 
-  /*Member recognition slide show*/
-
+  //Member recognition slide show
   .contact-row {
     padding: 5px;
     display: flex;
@@ -74,8 +83,12 @@
     p { margin: 0; }
     p:last-child { margin-bottom: 10px; }
   }
+  //End member recognition slideshow
 
-  /* Home Page */
+  // Home page settings
+  #social-media-column {
+    display:none;
+  }
 
   #content {
     #welcome-view {
@@ -97,11 +110,12 @@
 
         div:nth-child(2) {
           padding-left: 0px;
+          margin-top: 20%;
         }
 
         div {
           transform: none;
-          margin: 20% 10% 15% 10%;
+          margin-top: 35%;
         }
 
       }
@@ -118,5 +132,6 @@
       }
     }
   }
+  //End home page settings
 
 }
