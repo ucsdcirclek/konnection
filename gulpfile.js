@@ -19,6 +19,7 @@ elixir(function(mix) {
       'cerf.js',
       'popup-config.js',
       'user-search.js',
+      'navbar.js',
       'slideshow.js',
       'accordion.js',
       //'modal.js',
