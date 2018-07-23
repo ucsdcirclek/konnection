@@ -1,7 +1,8 @@
 .modal {
   $modal-padding: 3em;
   $modal-background: $white;
-  $modal-close-color: $light-gray;
+  $modal-close-color: $white;
+  $modal-close-background: $dark-slate-gray;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
   $modal-intro-color: $night-blue;
@@ -52,7 +53,7 @@
     @include position(absolute, ($modal-padding /2) ($modal-padding /2) 0 85%);
     @include size(1.5em);
     cursor: pointer;
-    background: $modal-background;
+    background: $modal-close-background;
 
     &:after,
     &:before {
@@ -67,7 +68,7 @@
 
     &:hover:after,
     &:hover:before {
-      background: darken($modal-close-color, 10);
+      background: darken($modal-close-color, 25);
     }
 
     &:before {
