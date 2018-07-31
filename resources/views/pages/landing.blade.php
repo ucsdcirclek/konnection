@@ -16,12 +16,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- Google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet"> <!-- Body -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> <!-- Headings -->
+        <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet"> <!-- Body, Palanquin -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> <!-- Headings, Raleway -->
     </head>
 
     <style>
-        p {
+        p, button {
             font-family: 'Palanquin', sans-serif;
         }
 
@@ -33,6 +33,10 @@
             max-width: 100%;
         }
 
+        h1 {
+            text-transform: uppercase;
+        }
+
         h1, h2 {
             font-family: 'Raleway', sans-serif;
         }
@@ -42,7 +46,19 @@
         }
 
         #bottom {
-            margin-bottom: 5%;
+            padding-bottom: 5%;
+        }
+
+        .colored-tile {
+            background-color: #132F4F;
+            color: #FFF;
+            padding: 8% 0;
+        }
+
+         .btn-lg {
+            border-radius: 50px;
+             padding: 1em 3em;
+             margin: 1em;
         }
 
     </style>
@@ -62,7 +78,7 @@
           </div>
           <div class="container" align="center">
               <div class="row">
-                  <button type="button" class="btn btn-primary btn-lg">Home</button>
+                  <button type="button" class="btn btn-primary btn-lg">Home</button> <!-- NOTE: Make this button more noticeable -->
                   <button type="button" class="btn btn-primary btn-lg">Calendar</button>
                   <button type="button" class="btn btn-primary btn-lg">Resources</button>
                   <button type="button" class="btn btn-primary btn-lg">Login</button>
@@ -70,8 +86,8 @@
           </div>
       </div>
 
-      <div class="container-fluid">
-          <h1 class="text-center">A community of leaders</h1>
+      <div class="container-fluid colored-tile">
+          <h1 class="text-center">We are a community of leaders</h1>
           <div class="row">
               <div class="col-sm-4" align="center">
                   <i class="fas fa-home fa-5x"></i>
@@ -145,9 +161,9 @@
 
     </div>
 
-    <div class="container-fluid" align="center" id="bottom">
+    <div class="container-fluid colored-tile" align="center" id="bottom">
 
-        <h1>Become a part of us</h1>
+        <h1>Start your journey with us</h1>
         <button type="button" class="btn btn-primary btn-lg">Get involved</button>
     </div>
 
