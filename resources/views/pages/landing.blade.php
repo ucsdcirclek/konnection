@@ -37,6 +37,14 @@
             font-family: 'Raleway', sans-serif;
         }
 
+        div.row {
+            padding:5% 0;
+        }
+
+        #bottom {
+            margin-bottom: 5%;
+        }
+
     </style>
 
     @section('description')
@@ -63,7 +71,7 @@
       </div>
 
       <div class="container-fluid">
-          <h1 class="text-center">Insert bragging rights</h1>
+          <h1 class="text-center">A community of leaders</h1>
           <div class="row">
               <div class="col-sm-4" align="center">
                   <i class="fas fa-home fa-5x"></i>
@@ -88,14 +96,14 @@
           </div>
       </div>
 
-    <h1 class="text-center">Insert catchphrase</h1>
+    <h1 class="text-center">Our Tenets</h1>
       <div class="container">
           <div class="row">
               <div class="col-sm-4">
                   <img class src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" alt="Avatar">
               </div>
               <div class="col-sm-8">
-                  <h1 class="display-4">Service</h1>
+                  <h1 class="display-3">Service</h1>
                   <p class="lead">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -106,7 +114,7 @@
 
           <div class="row">
               <div class="col-sm-8" align="right">
-                  <h1 class="display-4">Leadership</h1>
+                  <h1 class="display-3">Leadership</h1>
                   <p class="lead">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -123,7 +131,7 @@
                   <img class src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" alt="Avatar">
               </div>
               <div class="col-sm-8">
-                  <h1 class="display-4">Fellowship</h1>
+                  <h1 class="display-3">Fellowship</h1>
                   <p class="lead">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -137,7 +145,7 @@
 
     </div>
 
-    <div class="container-fluid" align="center">
+    <div class="container-fluid" align="center" id="bottom">
 
         <h1>Become a part of us</h1>
         <button type="button" class="btn btn-primary btn-lg">Get involved</button>
