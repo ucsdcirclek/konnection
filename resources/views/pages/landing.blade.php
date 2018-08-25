@@ -25,8 +25,11 @@
             font-family: 'Palanquin', sans-serif;
         }
 
-        button {
-            margin: 1% 0;
+
+        .jumbotron {
+            background-image: url(../images/galaxy.png);
+            margin-bottom: 0;
+            min-height: 100vh;
         }
 
         img {
@@ -47,18 +50,32 @@
 
         #bottom {
             padding-bottom: 5%;
+            background-color: #1D1335;
         }
 
         .colored-tile {
-            background-color: #132F4F;
+            background-color: #4A3F81;
             color: #FFF;
             padding: 8% 0;
+        }
+
+        button {
+            margin: 1% 0;
         }
 
          .btn-lg {
             border-radius: 50px;
              padding: 1em 3em;
              margin: 1em;
+             width: 30%;
+             transition: all .2s ease-in-out;
+             background-color: #486ABC;
+        }
+
+
+        .btn-primary:hover {
+            background-color: #4A3F81;
+            transform: scale(1.05);
         }
 
     </style>
@@ -74,11 +91,11 @@
           <h1 class="text-center">2018-2019</h1>
           <h2 class="text-center">To Service and Beyond!</h2>
           <div class="container" align="center">
-            <button type="button" class="btn btn-primary btn-lg">First Time Here?</button>
-          </div>
-          <div class="container" align="center">
               <div class="row">
-                  <button type="button" class="btn btn-primary btn-lg">Home</button> <!-- NOTE: Make this button more noticeable -->
+                  <a href="{{ url('/') }}"><button type="button" class="btn btn-primary btn-lg">Home</button></a>
+              </div>
+              <div class="row">
+                  <!-- NOTE: Make this button more noticeable -->
                   <button type="button" class="btn btn-primary btn-lg">Calendar</button>
                   <button type="button" class="btn btn-primary btn-lg">Resources</button>
                   <button type="button" class="btn btn-primary btn-lg">Login</button>
@@ -88,7 +105,7 @@
 
       <div class="container-fluid colored-tile">
           <h1 class="text-center">We are a community of leaders</h1>
-          <div class="row">
+          <div class="row" id="mini-nav">
               <div class="col-sm-4" align="center">
                   <i class="fas fa-home fa-5x"></i>
                   <h2>1</h2>
@@ -112,7 +129,12 @@
           </div>
       </div>
 
+      <hr>
+
     <h1 class="text-center">Our Tenets</h1>
+
+      <hr>
+
       <div class="container">
           <div class="row">
               <div class="col-sm-4">
@@ -128,6 +150,8 @@
               </div>
           </div>
 
+          <hr>
+
           <div class="row">
               <div class="col-sm-8" align="right">
                   <h1 class="display-3">Leadership</h1>
@@ -142,6 +166,8 @@
                   </div>
           </div>
 
+          <hr>
+
           <div class="row">
               <div class="col-sm-4">
                   <img class src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" alt="Avatar">
@@ -155,6 +181,9 @@
                   </p>
               </div>
           </div>
+
+          <hr>
+
       </div>
 
     <div class="container">
@@ -164,7 +193,7 @@
     <div class="container-fluid colored-tile" align="center" id="bottom">
 
         <h1>Start your journey with us</h1>
-        <button type="button" class="btn btn-primary btn-lg">Get involved</button>
+        <a href="{{ url('about/membership') }}"><button type="button" class="btn btn-primary btn-lg">Get involved</button></a>
     </div>
 
 
