@@ -22,7 +22,7 @@
 
     <style>
         p, button {
-            font-family: 'Palanquin', sans-serif;
+            font-family: 'Open Sans', sans-serif;
         }
 
 
@@ -41,7 +41,7 @@
         }
 
         h1, h2 {
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Questrial', sans-serif;
         }
 
         div.row {
@@ -64,7 +64,6 @@
         }
 
          .btn-lg {
-            border-radius: 50px;
              padding: 1em 3em;
              margin: 1em;
              width: 30%;
@@ -87,7 +86,7 @@
     <body>
 
       <div class="jumbotron">
-          <h1 class="text-center">UCSD CIRCLE K INTERNATIONAL</h1>
+          <h1 class="text-center">UCSD Circle K International</h1> <!-- Note: Make this a unique font -->
           <h1 class="text-center">2018-2019</h1>
           <h2 class="text-center">To Service and Beyond!</h2>
           <div class="container" align="center">
