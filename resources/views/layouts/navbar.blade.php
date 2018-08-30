@@ -38,12 +38,14 @@
                 <li>
                     <a href="{{ url('/') }}">home</a>
                 </li>
+
                 <li>
                     <a>about</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
                         <li><a href="{{ url('about/club') }}">Club</a></li>
-                        <li><a href="{{ url('about/drivers') }}">Drivers</a></li>
+                        <li><a href="{{ url('gallery') }}">Gallery</a></li>
+                        <!------- DISTRICT LINK HERE -------------->
                         <li><a href="{{ url('about/membership') }}">Membership</a></li>
                         <li><a target="_blank" href="http://www.kiwanis.org">Kiwanis</a></li>
                         <li><a target="_blank" href="http://www.kiwanisclublajolla.org/">La Jolla Kiwanis</a></li>
@@ -52,12 +54,23 @@
                 <li>
                     <a href="{{ url('/events') }}">calendar</a>
                 </li>
+
+
                 <li>
-                    <a href="{{ url('/resources') }}">resources</a>
+                    <a>resources</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="{{ url('/resources') }}">Applications & Forms</a></li>
+                        <li><a href="{{ url('/bulletin') }}">Bulletin</a></li>
+                        <li><a href="{{ url('/about/drivers') }}">Driving Reimbursement</a></li>
+                    </ul>
+
                 </li>
                 <li>
-                    <a href="{{ url('/bulletin') }}">bulletin</a>
+                    <a href="{{ url('contact') }}">contact</a>
                 </li>
+
+
+
                 <li>
                     <a>district</a>
                     <ul class="nav-dropdown">
@@ -69,21 +82,21 @@
                                 South</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="{{ url('contact') }}">contact</a>
-                </li>
-                <li>
-                    <a href="{{ url('gallery') }}">gallery</a>
-                </li>
+
 
                 @if (! Auth::check())
                     <li>
-                        <a class="ModalLogin">login <i class="fa fa-user"></i></a>
+                        <a>account <i class="fa fa-user"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a class="ModalLogin">Login</a></li>
+                            <li><a href="{{ url('about/membership') }}">Membership</a></li>
+                        </ul>
                     </li>
                 @else
                     <li>
                     <a>account <i class="fa fa-user"></i></a>
                         <ul class="nav-dropdown">
+                            <li><a href="{{ url('about/membership') }}">Membership</a></li>
                             <li><a href="{{ url('settings') }}">View Account</a></li>
                             <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
                         </ul>
