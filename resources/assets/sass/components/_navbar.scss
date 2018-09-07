@@ -2,16 +2,15 @@
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 70px;
-$nav-background: $midnight-blue;
+$nav-background: $dark-slate-gray;
 $nav-font-color: #ffffff;
-$link-hover-color: $dark-slate-blue;
+$link-hover-color: $darker-slate-gray;
 
 // Outer navigation wrapper
 .navigation {
   height: $nav-height;
   background: $nav-background;
-  padding-right: 23%;
-
+  padding-right: 15%;
 }
 
 // Logo and branding
@@ -44,7 +43,7 @@ nav {
     margin: 0;
     padding: 0;
     li {
-      font-family: 'Questrial';
+      font-family: $script;
       float: left;
       position: relative;
       a,
