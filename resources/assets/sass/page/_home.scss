@@ -17,7 +17,7 @@
     @include fill-parent;
     @include row(table);
 
-    @include sharp-gradient($lightest-blue, $night-blue); // genius indeed
+    @include sharp-gradient($lightest-blue, $base-accent-color); // genius indeed
 
     overflow: hidden;
 
@@ -39,7 +39,7 @@
       .center {
 
         a {
-          color: $night-blue;
+          color: $base-accent-color;
 
           &:hover {
             color: $dark-slate-gray;
@@ -61,7 +61,7 @@
       @include reset-display;
       @include pad();
 
-      background-color: $night-blue;
+      background-color: $base-accent-color;
 
       transform: skewX(-20deg);
 

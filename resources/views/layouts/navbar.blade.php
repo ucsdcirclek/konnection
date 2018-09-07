@@ -33,7 +33,7 @@
 <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <i class="fas fa-splotch" style="color: white"></i> <!-- The icon for the mobile nav bar -->
+            <i class="fas fa-rocket" style="color:white"></i> <!-- The icon for the mobile nav bar -->
             <a href="{{ url('/') }}">UCSD Circle K</a>
         </div>
         <nav>
@@ -100,7 +100,7 @@
 <!--All code after this line determines what's inside of the login modal box -->
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="modal-login">
 
     <!-- Modal content -->
     <div class="modal-content">
