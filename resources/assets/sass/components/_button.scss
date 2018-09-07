@@ -1,16 +1,5 @@
 button {
-  .animatedButton {
-    transition: all .2s ease-in-out;
-    border: 3px solid transparent;
-    &:hover {
-      background-color: $lightest-gray;
-      border: 3px solid $base-accent-color;
-      transform: scale(1.05);
-      color: $header-font-color;
-    }
-  }
-  :disabled {
-    border: 3px solid transparent;
+  &:disabled {
     background-color: $medium-gray;
   }
 }
