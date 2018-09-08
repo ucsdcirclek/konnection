@@ -22,16 +22,7 @@
             .calendar .fc-day-header { /* Makes calendar days look good on mobile */
                 overflow: hidden;
                 padding-left: 2px;
-
             }
-        }
-
-        .calendar .fc-left h2 {
-            color: #4A3F81;
-        }
-
-        .calendar .fc-day-header {
-            background-color: #4A3F81;
         }
     </style>
 
