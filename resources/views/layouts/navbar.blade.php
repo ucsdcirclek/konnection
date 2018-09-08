@@ -100,7 +100,7 @@
 <!--All code after this line determines what's inside of the login modal box -->
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="modal-login">
 
     <!-- Modal content -->
     <div class="modal-content">
