@@ -90,7 +90,15 @@
     display:none;
   }
 
-  #content {
+  #content #announcements-view { //Home page announcements
+    padding: 5%;
+  }
+
+  .announcements {
+    padding: 10%;
+  }
+
+    #content {
     #welcome-view {
       width: 100%;
       display: table;
