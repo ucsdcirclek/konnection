@@ -2,8 +2,8 @@
 $sans-serif: $helvetica;
 $serif: Arvo, serif;
 $script: Lobster, script;
-$base-font-family: $serif;
-$header-font-family: $serif;
+$base-font-family: 'Open Sans', sans-serif;
+$header-font-family: 'Questrial', sans-serif;
 
 // Sizes
 $base-font-size: 1em;
@@ -47,6 +47,13 @@ $lightest-blue: #f5fafa;
 $night-blue: #1f3750;
 $light-blue: #bae9ff;
 
+//Colors for "galaxy" theme
+$midnight-blue: #1D1335;
+$steel-blue-2: #486ABC;
+$dark-slate-blue: #4A3F81;
+$old-rose: #A454A2;
+$light-steel-blue: #BDB3DB;
+
 // Event tags sections in CERF creation form
 $brown: #4D2C19;
 $gold: #FFC53A;
@@ -70,20 +77,20 @@ $fundraising: #759936;
 $division: #CEB28A;
 
 // Background Colors
-$base-background-color: $steel-blue;
+$base-background-color: $dark-slate-blue;
 $home-background-color: $lightest-gray;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $dark-slate-gray;
+$base-accent-color: $midnight-blue;
 $header-font-color: $base-accent-color;
 
 // Link Colors
-$base-link-color: $dark-slate-gray;                    // Button colors.
-$hover-link-color: darken($base-accent-color, 15);
+$base-link-color: $dark-slate-blue;                    // Button colors.
+$hover-link-color: $steel-blue-2;
 $base-button-color: $base-link-color;
-$hover-button-color: $hover-link-color;
-$emphasis-color: $dark-slate-gray;
+$hover-button-color: $steel-blue-2;
+$emphasis-color: $midnight-blue;
 $hover-dropdown-color: $darker-slate-gray; // Color of drop-down when hovering
 
 // Border color

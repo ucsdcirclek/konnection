@@ -14,17 +14,16 @@
         <p>We'll need some basic information about you as well as some interesting points about you to sort you into a
          family this year. Just fill out this form and submit it!</p>
 
-            <a class="button" target="_blank" href="https://ucsdcki.typeform.com/to/yDt69X">Membership Application</a>
-        <!--<p>Be on the lookout for a revised new member application, coming out next fall!</p> -->
+            <a class="button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdRhGeUtIXZ8I3tbiWcxmyX34WG1enXThVdFRCf9WlBe736A/viewform">Membership Application</a>
 
         <br />
 
         <h2>Step 2: Submit your Dues!</h2>
-        <!--Change Me <p>Membership for the year costs only $45.
+        <p>Membership for the year costs only $45.
             <strong>Turn this amount in check (payable to UCSD Circle K)/cash/Venmo (UCSDCircleK).</strong>
-            Some of the benefits you'll receive are:</p> -->
-        <p>Membership for spring quarter is <strong>completely free!</strong></p>
-        <p>All dues paid members will recieve:</p>
+            Some of the benefits you'll receive are:</p>
+       <!-- <p>Membership for spring quarter is <strong>completely free!</strong></p>
+        <p>All dues paid members will recieve:</p> -->
 
        <ul>
             <li>A free club t-shirt</li>
