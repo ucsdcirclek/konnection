@@ -8,9 +8,6 @@
   
   .page-header {
     height: auto;
-      h1 {
-        padding: 5%;
-    }
   }
   
 
@@ -28,6 +25,11 @@
 
   ul.week > li h5 {
     font-size: 15px;
+  }
+
+  .page-header h1 {
+    line-height: inherit;
+    padding: 10%;
   }
 
    h2 {
