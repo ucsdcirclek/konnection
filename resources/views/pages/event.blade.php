@@ -2,10 +2,10 @@
 @extends('layouts.master')
 
 <style>
-    form {
-        display: block;
-        margin-bottom: 0.5em;
-    }
+  .btn-group-admin > a, input, form {
+      width: 100%;
+      margin-bottom: 1em;
+  }
 </style>
 
 @section('title', $event->title)
