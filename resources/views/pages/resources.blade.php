@@ -21,11 +21,11 @@
 
         <HR>
         <h4>
-            <a href=" http://bit.ly/F18ITHApp" target="_blank">Impact team head application</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScyVCva43AA2110TtUz59CJpkmnEms0_wvVXa2eDH6KeYUW8g/viewform" target="_blank">Team Haven Impact Team Application</a>
         </h4>
-        <p style="color: red">Due: Tuesday, May 22nd at 6:00 pm</p>
-        <p>If you have a passion about a specific cause and want to lead a committee to make a difference, apply to be
-            an Impact Team head!</p>
+        <p style="color: red">Due: Saturday, June 9, 2018 at 11:59pm</p>
+        <p>Apply to TEAM HAVEN, the Fall 2018 Impact Team, led by Ann Go! They will be focusing on domestic violence
+            awareness & promoting healthy relationships, and seek to help those affected in our community.</p>
 
 
         <HR>
@@ -85,22 +85,6 @@
                    target="_blank">Weekly recap song requests</a>
             </h4>
             <p> Would you like to request a song for our weekly GBM recap videos? Now is your chance!</p>
-
-            <HR>
-
-            <h4>
-                <a href="http://bit.ly/2zptFJo" target="_blank">Website Feature Survey Form</a>
-            </h4>
-            <p> Let our Tech Team know which website feature you would like to be implemented first or suggest a
-                feature you would like to see on our website!
-            </p>
-
-            <HR>
-            <h4>
-                <a href="http://bit.ly/2hlfGO0" target="_blank">New Member Install Feedback Form</a>
-            </h4>
-            <p> Now that NMI is over. Tell us what you liked/disliked about 2017-18's New Member Install!
-            </p>
 
             <HR>
             <h4>
