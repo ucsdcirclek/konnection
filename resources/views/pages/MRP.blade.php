@@ -39,7 +39,8 @@
             </tr>
             <tr class="col1 tHighlight">
                 <td><strong>Service Hours</strong></td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext"> All community service hours completed
+                            by dues-paid members between March 1, 2018, to February 28, 2019.</span></i></td>
                 <td>50</td>
                 <td>80</td>
                 <td>130</td>
@@ -47,7 +48,8 @@
             </tr>
             <tr class="col1 tHighlight">
                 <td><strong>Dues Paid</strong></td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Dues cost $45 for 2018-2019 membership. See membership page for more deails</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Dues cost $45 for 2018-2019 membership.
+                            See membership page for more deails</span></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
@@ -55,7 +57,8 @@
             </tr>
             <tr class="col1 tHighlight">
                 <td><strong>Additional</strong></td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Complete the specified number of requirements
+                            listed below to complete this category.</span></i></td>
                 <td>5</td>
                 <td>6</td>
                 <td>8</td>
@@ -63,7 +66,9 @@
             </tr>
             <tr class="col1">
                 <td>Socials (SE)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Any type of event that fosters fellowship
+                            within your club or with other members from the Kiwanis Family. Examples include club dinners,
+                            recreational activities, etc.</span></i></td>
                 <td>3</td>
                 <td>4</td>
                 <td>6</td>
@@ -71,7 +76,8 @@
             </tr>
             <tr class="col1">
                 <td>MD&amp;E Events (MD)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Any event that help in the recruitment,
+                            retention, development, and education of new and old members. Examples include tabling, workshops, etc.</span></i></td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
@@ -79,7 +85,8 @@
             </tr>
             <tr class="col1">
                 <td>Fundraisers (FR)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">An event that raises money for either
+                            your club (non-administrative funds) or for a charitable organization.</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -87,7 +94,8 @@
             </tr>
             <tr class="col1">
                 <td>Alumni (AL)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">An event in which two members from a Circle
+                            K club and at least two alumni (graduates) are present.</span></i></td>
                 <td>1</td>
                 <td>1</td>
                 <td>2</td>
@@ -95,7 +103,9 @@
             </tr>
             <tr class="col1">
                 <td>Kiwanis Family (KF)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">A Kiwanis Family event with at least
+                            two members present from your Circle K club and at least two members present from another non-Circle
+                            K Kiwanis Family club (ex. Key Club, Kiwanis).</span></i></td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
@@ -111,7 +121,8 @@
             </tr>
             <tr class="col1">
                 <td>Divisional Events (DV)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">An in-person event hosted for your home
+                            Division, which is usually hosted by the respective Lieutenant Governor (and Divisional Board).</span></i></td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
@@ -119,7 +130,8 @@
             </tr>
             <tr class="col1">
                 <td>District Events (DE)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">An event hosted by and for the District
+                            (ex. Fall Training Conference).</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>2</td>
@@ -127,7 +139,8 @@
             </tr>
             <tr class="col1">
                 <td>International Events (INT)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">An event held throughout all of Circle K International.
+                            Events that can fulfill this tag are CKIx and Leadership Academy.</span></i></td>
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
@@ -135,7 +148,8 @@
             </tr>
             <tr>
                 <td>Articles Submitted</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">An article or video submitted at the
+                            club, divisional, district, or international level (ex: club and divisional newsletters).</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -143,7 +157,8 @@
             </tr>
             <tr class="col1">
                 <td>Webinars Attended (WB)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">A workshop that is broadcasted online
+                            on the Club, Division, District, or International level.</span></i></td>
                 <td>4</td>
                 <td>5</td>
                 <td>6</td>
@@ -151,7 +166,7 @@
             </tr>
             <tr class="col1">
                 <td>Chaired Events</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Serve as the chair, or contact person, for a particular event.</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -159,7 +174,8 @@
             </tr>
             <tr class="col1">
                 <td>Host Workshop or Webinar</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Host or co-host a workshop or
+                            webinar at a district, divisional, or club-hosted workshop. </span></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
@@ -167,7 +183,8 @@
             </tr>
             <tr class="col1">
                 <td>Club Committee Member</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext"> Involvement in any committee within
+                            the club, division, district, or international level.</span></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>

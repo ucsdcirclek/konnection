@@ -27,13 +27,14 @@ tr > th {
 
 .tooltip .tooltiptext {
   font-family: $base-font-family;
-  width: 14em;
+  width: 20em;
   text-align: left;
   padding: 65%;
   visibility: hidden;
   background-color: $base-accent-color;
   color: white;
-  text-align: center;
+  //text-align: center;
+  font-weight: normal;
   border-radius: 6px;
   line-height: $base-line-height;
 
@@ -49,7 +50,7 @@ tr > th {
 }
 
 @media screen and (max-width:500px) {
-  .fa-trophy {
-    padding-left: 0%;
+  .tooltip .tooltiptext {
+    width: 60vw;
   }
 }
