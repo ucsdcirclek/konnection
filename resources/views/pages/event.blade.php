@@ -39,6 +39,9 @@
                             <li>Meet at <strong>{{ $event->meeting_location}}</strong></li>@endif
                     </ul>
                 </div>
+                <div class="description">
+                    {!! $event->description !!}
+                </div>
 
                 {{-- Only allow registration if the event is actually open --}}
                 @if($event->isOpen())
@@ -58,7 +61,7 @@
 
                             <div class="modal">
                                 <label for="guestRegistration">
-                                    <div class="btn"><i class="fa fa-check"></i> Guest Signup</div>
+                                    <div class="btn" id="guestBtn"><i class="fa fa-check"></i> Guest Signup</div>
                                 </label>
                                 <input class="modal-state" id="guestRegistration" type="checkbox"/>
 
@@ -86,11 +89,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="description">
-                                {!! $event->description !!}
-                            </div>
-
                         @endif
                     </div>
                 @endif
@@ -118,38 +116,6 @@
                     @endif
 
                 </div>
-
-            @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
-                <h6>Admin</h6>
-                <div class="btn-group">
-                    <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
-                        Edit Event
-                    </a>
-                    <a class="button" href="{{ action('EventsController@registrations', $event->slug) }}">
-                        View Registrations
-                    </a>
-                    <a class="button" href="{{ action('EventsController@feature', $event->slug) }}">
-                        Feature Event
-                    </a>
-                    <a class="button" href="{{ action('EventsController@cloneCopy', $event->slug) }}">
-                        Clone Event
-                    </a>
-                    {!! Form::open(['action' => ['EventsController@delete', $event->slug], 'method' =>
-                    'delete']) !!}
-                    {!! Form::submit('Delete Event') !!}
-                    {!! Form::close() !!}
-
-                    @if($event->isOpen())
-                        {!! Form::model($event, array('action' => array('EventsController@update', $event->slug), 'method' => 'POST')) !!}
-                        {!! Form::hidden('close_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')) !!}
-                        {!! Form::submit('Close sign-ups') !!}
-                    @else
-                        {!! Form::model($event, array('action' => array('EventsController@update', $event->slug), 'method' => 'POST')) !!}
-                        {!! Form::hidden('open_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')) !!}
-                        {!! Form::submit('Open sign-ups') !!}
-                    @endif
-                </div>
-            @endif
 
             <div class="registrations">
                 <h4>Who's going</h4>
@@ -218,5 +184,6 @@
                         </div>
                     </div>
                 @endif
+
     </div>
 @endsection
