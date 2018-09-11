@@ -66,6 +66,7 @@
                         <li><a href="{{ url('/resources') }}">Applications & Forms</a></li>
                         <li><a href="{{ url('/bulletin') }}">Bulletin</a></li>
                         <li><a href="{{ url('/about/drivers') }}">Driving Reimbursement</a></li>
+                        <li><a href="{{url('/MRP') }}">Member Recognition Program</a></li>
                     </ul>
 
                 </li>
