@@ -3,7 +3,8 @@
 
 <style>
     form {
-        display: inline;
+        display: block;
+        margin-bottom: 0.5em;
     }
 </style>
 
@@ -98,7 +99,7 @@
                 @if($event->isRegistered(Auth::id()))
                     <div class="eventOptions">
                         <h4 style="color:green;">Signup successful!</h4>
-                        <h6>Additional options:</h6>
+                        <h4>Additional options:</h4>
 
                         <div class="btn-group-reg">
                             {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
@@ -146,7 +147,7 @@
 
                     @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
                         <h6>Admin</h6>
-                        <div class="btn-group-reg">
+                        <div class="btn-group-admin">
                             <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
                                 Edit Event
                             </a>
