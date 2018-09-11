@@ -113,7 +113,8 @@
             </tr>
             <tr class="col1">
                 <td>Interclub (IN)</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">An interclub is any event hosted by
+                            another Kiwanis Family club, including Circle K.</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
