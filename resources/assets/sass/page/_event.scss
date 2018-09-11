@@ -127,3 +127,23 @@ button {
     margin-bottom: .5em;
   }
 }
+
+@media screen and (max-width:500px) {
+  .avatar.small img {
+    width: auto;
+    height: auto;
+  }
+
+  #unregister-btn, #register-btn, #guestBtn {
+    padding: 5%;
+    width: auto;
+  }
+
+  #viewport .head {
+    padding: 8%;
+  }
+
+  #viewport .registrations {
+    padding: 5%;
+  }
+}
