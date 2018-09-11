@@ -15,8 +15,11 @@
             Members are recognized at the district level during Fall Training Conference and District Convention.
         </p>
         <p>
-            In order to achieve an MRP ranking, you need to be dues-paid, reach a specific number of service hours,
-            and complete a specific number of tags.
+            MRP recipients will be recognized at GBMs and certain UCSD CKI events.
+        </p>
+        <p>
+            In order to achieve an <strong>MRP ranking</strong>, you need to be <strong>dues-paid</strong>, reach a specific
+            number of <strong>service hours</strong>, and complete a specific number of <strong>tags</strong>.
         </p>
         <h2>Requirements</h2>
         <table class="MRP_req">
@@ -145,6 +148,24 @@
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
+            </tr>
+        </table>
+
+        <h2>Crobie Levels</h2>
+        <table class="MRP_req">
+            <tr class="MRP_category">
+                <th>Level</th>
+                <th>Nano</th>
+                <th>Micro</th>
+                <th>Macro</th>
+                <th>Mega</th>
+            </tr>
+            <tr class="col1">
+                <td>Service Hours</td>
+                <td>25</td>
+                <td>50</td>
+                <td>75</td>
+                <td>100</td>
             </tr>
         </table>
     </div>
