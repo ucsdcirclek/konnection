@@ -8,7 +8,12 @@
   
   .page-header {
     height: auto;
+      h1 {
+        padding: 5%;
+        line-height: $base-line-height;
+    }
   }
+  
 
   #container {
     overflow-x: scroll;
