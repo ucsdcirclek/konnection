@@ -7,12 +7,18 @@
       margin-bottom: 1em;
   }
 
-    button .accordion {
+    button.accordion {
         width: 40%;
     }
 
      i.fa-car, i.fa-camera, i.fa-edit, i.fa-check, i.fa-close {
         display:block;
+    }
+
+    @media screen and (max-width:500px) {
+        button.accordion {
+            width: 100%;
+        }
     }
 </style>
 
