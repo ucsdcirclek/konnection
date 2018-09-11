@@ -140,7 +140,7 @@
                             </div>
 
 
-                            <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
+                            <p class="nameReg">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
 
                         </li>
                     @endforeach

@@ -2,6 +2,15 @@ button {
   font-family: $base-font-family;
 }
 
+.nameReg {
+  float: left;
+  font-size: .8em;
+}
+
+.avatar {
+  padding: 1%;
+}
+
 #event {
   @include span-columns(12);
 
@@ -97,9 +106,11 @@ button {
 
   .registrations {
     border-top: 1px solid $light-gray;
+    padding: 3%;
     margin-top: 1em;
     padding-top: 1em;
     @include span-columns(12);
+    text-align: center;
 
     ul li {
       @include span-columns(2);
