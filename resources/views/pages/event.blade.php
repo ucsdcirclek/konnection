@@ -89,6 +89,29 @@
                         @endif
                     </div>
                 @endif
+                @if($event->isRegistered(Auth::id()))
+                    <div>
+                        <h6 style="color:green;">Signup successful!</h6>
+                        <h6>Additional options:</h6>
+
+                        <div class="btn-group">
+                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
+                            {!! Form::hidden('driver_status', 1) !!}
+                            {!! Form::button('<i class="fa fa-car"></i> Driver', array('type' => 'submit', 'id' => 'drive-btn')) !!}
+                            {!! Form::close() !!}
+
+                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
+                            {!! Form::hidden('photographer_status', 1) !!}
+                            {!! Form::button('<i class="fa fa-camera"></i> Photographer', array('type' => 'submit', 'id' => 'photograph-btn')) !!}
+                            {!! Form::close() !!}
+
+                            {!! Form::open(array('method' => 'patch', 'action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'))) !!}
+                            {!! Form::hidden('writer_status', 1) !!}
+                            {!! Form::button('<i class="fa fa-pencil"></i> Writer', array('type' => 'submit', 'id' => 'write-btn')) !!}
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                @endif
                 <div class="description">
                     {!! $event->description !!}
                 </div>
@@ -161,29 +184,5 @@
                     @endforeach
                 </ul>
             </div>
-
-                @if($event->isRegistered(Auth::id()))
-                    <div>
-                        <h6>Volunteer to be a:</h6>
-
-                        <div class="btn-group">
-                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
-                            {!! Form::hidden('driver_status', 1) !!}
-                            {!! Form::button('<i class="fa fa-car"></i> Driver', array('type' => 'submit', 'id' => 'drive-btn')) !!}
-                            {!! Form::close() !!}
-
-                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
-                            {!! Form::hidden('photographer_status', 1) !!}
-                            {!! Form::button('<i class="fa fa-camera"></i> Photographer', array('type' => 'submit', 'id' => 'photograph-btn')) !!}
-                            {!! Form::close() !!}
-
-                            {!! Form::open(array('method' => 'patch', 'action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'))) !!}
-                            {!! Form::hidden('writer_status', 1) !!}
-                            {!! Form::button('<i class="fa fa-pencil"></i> Writer', array('type' => 'submit', 'id' => 'write-btn')) !!}
-                            {!! Form::close() !!}
-                        </div>
-                    </div>
-                @endif
-
     </div>
 @endsection
