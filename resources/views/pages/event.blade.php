@@ -6,6 +6,14 @@
       width: 100%;
       margin-bottom: 1em;
   }
+
+    button .accordion {
+        width: 40%;
+    }
+
+     i.fa-car, i.fa-camera, i.fa-edit, i.fa-check, i.fa-close {
+        display:block;
+    }
 </style>
 
 @section('title', $event->title)
@@ -54,11 +62,11 @@
                         @if(Auth::check())
                             @if(!$event->isRegistered(Auth::id()))
                                 {!! Form::open(array('action' => array('EventRegistrationsController@store', 'slug' => $event->slug, 'id' => 'self'))) !!}
-                                {!! Form::button('<i class="fa fa-check"></i> Sign up', array('type' => 'submit', 'id' => 'register-btn')) !!}
+                                {!! Form::button('Sign up <i class="fa fa-check"></i>', array('type' => 'submit', 'id' => 'register-btn')) !!}
                                 {!! Form::close() !!}
                             @else
                                 {!! Form::open(array('action' => array('EventRegistrationsController@destroy', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'delete')) !!}
-                                {!! Form::button('<i class="fa fa-close"></i> Cancel sign up', array('type' => 'submit', 'id' => 'unregister-btn')) !!}
+                                {!! Form::button('Cancel sign up <i class="fa fa-close"></i>', array('type' => 'submit', 'id' => 'unregister-btn')) !!}
                                 {!! Form::close() !!}
                             @endif
                         @else
@@ -104,17 +112,17 @@
                         <div class="btn-group-reg">
                             {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
                             {!! Form::hidden('driver_status', 1) !!}
-                            {!! Form::button('<i class="fa fa-car"></i> Driver', array('type' => 'submit', 'id' => 'drive-btn')) !!}
+                            {!! Form::button('Driver <i class="fa fa-car"></i>', array('type' => 'submit', 'id' => 'drive-btn')) !!}
                             {!! Form::close() !!}
 
                             {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
                             {!! Form::hidden('photographer_status', 1) !!}
-                            {!! Form::button('<i class="fa fa-camera"></i> Photographer', array('type' => 'submit', 'id' => 'photograph-btn')) !!}
+                            {!! Form::button('Photographer <i class="fa fa-camera"></i>', array('type' => 'submit', 'id' => 'photograph-btn')) !!}
                             {!! Form::close() !!}
 
                             {!! Form::open(array('method' => 'patch', 'action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'))) !!}
                             {!! Form::hidden('writer_status', 1) !!}
-                            {!! Form::button('<i class="fa fa-pencil"></i> Writer', array('type' => 'submit', 'id' => 'write-btn')) !!}
+                            {!! Form::button('Writer <i class="fas fa-edit"></i>', array('type' => 'submit', 'id' => 'write-btn')) !!}
                             {!! Form::close() !!}
                         </div>
                     </div>
@@ -146,7 +154,9 @@
                     @endif
 
                     @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
-                        <h6>Admin</h6>
+
+                        <button class="accordion"><h6>Admin event options<i class="fas fa-plus"></i></h6></button>
+                        <div class="panel">
                         <div class="btn-group-admin">
                             <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
                                 Edit Event
@@ -174,6 +184,7 @@
                                 {!! Form::hidden('open_time', Carbon\Carbon::now()->setTimezone('America/Los_Angeles')) !!}
                                 {!! Form::submit('Open sign-ups') !!}
                             @endif
+                        </div>
                         </div>
                     @endif
 
