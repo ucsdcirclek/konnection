@@ -8,7 +8,7 @@
 
 @section('content')
     <div id="event" style="overflow-x: scroll;">
-        <div id="navigator" style="border-bottom-left-radius: 10px;">
+        <div id="navigator" style="border-bottom-left-radius: 10px; display:none;">
             @foreach($upcoming_events as $day => $events)
                 <ul>
                     <h3>{{ $day }}</h3>
