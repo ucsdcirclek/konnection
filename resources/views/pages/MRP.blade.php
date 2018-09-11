@@ -4,13 +4,6 @@
     MRP
 @endsection
 
-<style>
-    .col1:first-child {
-        text-align: left;
-    }
-
-</style>
-
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Membership Recognition Program'))
 
@@ -195,8 +188,12 @@
         </table>
 
         <h2>Crobie Levels</h2>
-        <p>Crobie levels are a club-level MRP status. They are achieved by performing a certain number of service hours.
-        Crobie level recipients will be recognized at GBM and certain UCSD Circle K events!</p>
+        <p>Crobie Levels are a way for UCSD CKI to recognize members who may not be able to reach all the required tags of the
+            district-wide MRP. These levels are based solely on <strong>service hours</strong>, making them substantially easier to reach.
+        </p>
+        <p>Members who obtain Crobie Levels or MRP Levels will have access to our <strong>Member Recognition events/weekends</strong>
+            and can expect further <strong>gifts!</strong>
+        </p>
         <table class="MRP_req">
             <tr class="MRP_category">
                 <th>Level</th>
