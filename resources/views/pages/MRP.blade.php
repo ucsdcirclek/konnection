@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-    @include('layouts.header', array('headerTitle' => 'Membership Recognition Program'))
+    @include('layouts.header', array('headerTitle' => 'Member Recognition Program'))
 
     <div class="wrapper">
         <h2>General Information</h2>
-        <p>The Membership Recognition Program (MRP) is the largest way we recognize members from all over the California-Nevada-Hawai’i
+        <p>The Member Recognition Program (MRP) is the largest way we recognize members from all over the California-Nevada-Hawai’i
             district. It recognizes members who have shown dedication in our three tenets: service, leadership, and fellowship.
             Members are recognized at the district level during Fall Training Conference and District Convention.
         </p>
