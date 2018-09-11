@@ -39,9 +39,6 @@
                             <li>Meet at <strong>{{ $event->meeting_location}}</strong></li>@endif
                     </ul>
                 </div>
-                <div class="description">
-                    {!! $event->description !!}
-                </div>
 
                 {{-- Only allow registration if the event is actually open --}}
                 @if($event->isOpen())
@@ -92,6 +89,9 @@
                         @endif
                     </div>
                 @endif
+                <div class="description">
+                    {!! $event->description !!}
+                </div>
 
             </div>
 
