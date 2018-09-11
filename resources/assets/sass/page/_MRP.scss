@@ -27,13 +27,15 @@ tr > th {
 
 .tooltip .tooltiptext {
   font-family: $base-font-family;
+  width: 14em;
+  text-align: left;
+  padding: 65%;
   visibility: hidden;
-  width: 120px;
   background-color: $base-accent-color;
   color: white;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  line-height: $base-line-height;
 
   /* Position the tooltip */
   position: absolute;

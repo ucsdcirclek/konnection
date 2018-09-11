@@ -47,7 +47,7 @@
             </tr>
             <tr class="col1 tHighlight">
                 <td><strong>Dues Paid</strong></td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Dues cost $45 for 2018-2019 membership. See membership page for more deails</span></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
