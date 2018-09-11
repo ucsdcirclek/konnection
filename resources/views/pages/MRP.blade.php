@@ -5,12 +5,14 @@
 @endsection
 
 <style>
+    .col1:first-child {
+        text-align: left;
+    }
 
 </style>
 
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Membership Recognition Program'))
-    <!-- TODO Add tooltips and CSS-->
 
     <div class="wrapper">
         <h2>General Information</h2>
@@ -29,125 +31,143 @@
         <table class="MRP_req">
             <tr class="MRP_category">
                 <th>Category</th>
+                <th></th>
                 <th>Bronze</th>
                 <th>Silver</th>
                 <th>Gold</th>
                 <th>Platinum<i class="fas fa-trophy"></i></th>
             </tr>
             <tr class="col1 tHighlight">
-                <td><strong>Service Hours<i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></strong></td>
+                <td><strong>Service Hours</strong></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>50</td>
                 <td>80</td>
                 <td>130</td>
                 <td>200</td>
             </tr>
             <tr class="col1 tHighlight">
-                <td><strong>Dues Paid</strong><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td><strong>Dues Paid</strong></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
             </tr>
             <tr class="col1 tHighlight">
-                <td><strong>Additional</strong><i class="fas fa-info-circle"></i></td>
+                <td><strong>Additional</strong></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>5</td>
                 <td>6</td>
                 <td>8</td>
                 <td>11</td>
             </tr>
             <tr class="col1">
-                <td>Socials (SE) <i class="fas fa-info-circle"></i></td>
+                <td>Socials (SE)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>3</td>
                 <td>4</td>
                 <td>6</td>
                 <td>9</td>
             </tr>
             <tr class="col1">
-                <td>MD&amp;E Events (MD) <i class="fas fa-info-circle"></i></td>
+                <td>MD&amp;E Events (MD)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
                 <td>5</td>
             </tr>
             <tr class="col1">
-                <td>Fundraisers (FR) <i class="fas fa-info-circle"></i></td>
+                <td>Fundraisers (FR)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
             </tr>
             <tr class="col1">
-                <td>Alumni (AL) <i class="fas fa-info-circle"></i></td>
+                <td>Alumni (AL)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>1</td>
                 <td>1</td>
                 <td>2</td>
                 <td>2</td>
             </tr>
             <tr class="col1">
-                <td>Kiwanis Family (KF) <i class="fas fa-info-circle"></i></td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-            </tr>
-            <tr class="col1">
-                <td>Interclub (IN) <i class="fas fa-info-circle"></i></td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-            </tr>
-            <tr class="col1">
-                <td>Divisional Events (DV) <i class="fas fa-info-circle"></i></td>
+                <td>Kiwanis Family (KF)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
                 <td>5</td>
             </tr>
             <tr class="col1">
-                <td>District Events (DE) <i class="fas fa-info-circle"></i></td>
+                <td>Interclub (IN)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr class="col1">
+                <td>Divisional Events (DV)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr class="col1">
+                <td>District Events (DE)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>2</td>
                 <td>3</td>
             </tr>
             <tr class="col1">
-                <td>International Events (INT) <i class="fas fa-info-circle"></i></td>
+                <td>International Events (INT)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
             </tr>
             <tr>
-                <td>Articles Submitted <i class="fas fa-info-circle"></i></td>
+                <td>Articles Submitted</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
             </tr>
             <tr class="col1">
-                <td>Webinars Attended (WB) <i class="fas fa-info-circle"></i></td>
+                <td>Webinars Attended (WB)</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>4</td>
                 <td>5</td>
                 <td>6</td>
                 <td>7</td>
             </tr>
             <tr class="col1">
-                <td>Chaired Events <i class="fas fa-info-circle"></i></td>
+                <td>Chaired Events</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
             </tr>
             <tr class="col1">
-                <td>Host Workshop or Webinar <i class="fas fa-info-circle"></i></td>
+                <td>Host Workshop or Webinar</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
             </tr>
             <tr class="col1">
-                <td>Club Committee Member <i class="fas fa-info-circle"></i></td>
+                <td>Club Committee Member</td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
