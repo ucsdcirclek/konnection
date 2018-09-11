@@ -97,55 +97,6 @@
 
             </div>
 
-            <div class="left">
-
-                <div class="registrations">
-                    <h4>Who's going</h4>
-                    <ul>
-                        @foreach($event->registrations as $registration)
-                            <li class="avatar small">
-
-                                <div class="avatar-wrapper">
-                                    <img src="{{ $registration->user->avatar->url() }}">
-                                    {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
-                                    <div class="overlay">
-                                        @if ($registration->driver_status)
-                                            <i class="fa fa-car"></i>
-                                        @elseif ($registration->writer_status)
-                                            <i class="fa fa-pencil"></i>
-                                        @elseif ($registration->photographer_status)
-                                            <i class="fa fa-camera"></i>
-                                        @endif
-                                    </div>
-                                </div>
-
-
-                                <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
-
-                            </li>
-                        @endforeach
-
-                        {{-- Displays guests. --}}
-                        @foreach($event->guests as $guestRegistration)
-                            <li class="avatar small">
-                                <div class="avatar-wrapper">
-                                    <img src="/avatars/original/missing.png"/>
-                                    {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
-                                    <div class="overlay">
-                                        @if ($guestRegistration->driver_status)
-                                            <i class="fa fa-car"></i>
-                                        @endif
-                                    </div>
-                                </div>
-
-                                <p class="name">{{ $guestRegistration->first_name}} {{ $guestRegistration->last_name }}</p>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-
-
-            <div class="right">
                 @include ('errors.errors')
 
                 <div class="chair avatar large">
@@ -167,6 +118,51 @@
                     @endif
 
                 </div>
+
+            <div class="registrations">
+                <h4>Who's going</h4>
+                <ul>
+                    @foreach($event->registrations as $registration)
+                        <li class="avatar small">
+
+                            <div class="avatar-wrapper">
+                                <img src="{{ $registration->user->avatar->url() }}">
+                                {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
+                                <div class="overlay">
+                                    @if ($registration->driver_status)
+                                        <i class="fa fa-car"></i>
+                                    @elseif ($registration->writer_status)
+                                        <i class="fa fa-pencil"></i>
+                                    @elseif ($registration->photographer_status)
+                                        <i class="fa fa-camera"></i>
+                                    @endif
+                                </div>
+                            </div>
+
+
+                            <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
+
+                        </li>
+                    @endforeach
+
+                    {{-- Displays guests. --}}
+                    @foreach($event->guests as $guestRegistration)
+                        <li class="avatar small">
+                            <div class="avatar-wrapper">
+                                <img src="/avatars/original/missing.png"/>
+                                {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
+                                <div class="overlay">
+                                    @if ($guestRegistration->driver_status)
+                                        <i class="fa fa-car"></i>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <p class="name">{{ $guestRegistration->first_name}} {{ $guestRegistration->last_name }}</p>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
 
                 @if($event->isRegistered(Auth::id()))
                     <div>
@@ -223,9 +219,6 @@
                         </div>
                 @endif
 
-            </div>
-
-        </div>
 
     </div>
 @endsection
