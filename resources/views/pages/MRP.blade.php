@@ -200,7 +200,7 @@
                 <th>Nano</th>
                 <th>Micro</th>
                 <th>Macro</th>
-                <th>Mega</th>
+                <th>Mega<i class="fas fa-trophy"></i></th>
             </tr>
             <tr class="col1">
                 <td>Service Hours</td>
