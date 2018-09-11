@@ -21,7 +21,7 @@
             Members are recognized at the district level during Fall Training Conference and District Convention.
         </p>
         <p>
-            MRP recipients will be recognized at GBMs and certain UCSD CKI events.
+            MRP recipients will be recognized at GBMs and certain CKI events.
         </p>
         <p>
             In order to achieve an <strong>MRP ranking</strong>, you need to be <strong>dues-paid</strong>, reach a specific
@@ -167,7 +167,8 @@
             </tr>
             <tr class="col1">
                 <td>Chaired Events</td>
-                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Serve as the chair, or contact person, for a particular event.</span></i></td>
+                <td><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Serve as the chair, or contact person,
+                            for a particular event.</span></i></td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -194,6 +195,8 @@
         </table>
 
         <h2>Crobie Levels</h2>
+        <p>Crobie levels are a club-level MRP status. They are achieved by performing a certain number of service hours.
+        Crobie level recipients will be recognized at GBM and certain UCSD Circle K events!</p>
         <table class="MRP_req">
             <tr class="MRP_category">
                 <th>Level</th>
