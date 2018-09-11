@@ -32,7 +32,7 @@
                 <th>Bronze</th>
                 <th>Silver</th>
                 <th>Gold</th>
-                <th>Platinum</th>
+                <th>Platinum<i class="fas fa-trophy"></i></th>
             </tr>
             <tr class="col1 tHighlight">
                 <td><strong>Service Hours<i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></strong></td>
