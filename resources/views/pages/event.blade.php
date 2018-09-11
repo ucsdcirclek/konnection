@@ -7,7 +7,7 @@
 @section('description', substr(strip_tags($event->description), 0, 156) . '...')
 
 @section('content')
-    <div id="event" style="overflow-x: scroll;">
+    <!--<div id="event" style="overflow-x: scroll;">
         <div id="navigator" style="border-bottom-left-radius: 10px; display:none;">
             @foreach($upcoming_events as $day => $events)
                 <ul>
@@ -19,7 +19,7 @@
                 <br/>
             @endforeach
             <a href="{{ action('EventsController@index') }}">Back to Calendar</a>
-        </div>
+        </div> -->
 
 
         <div id="viewport">
@@ -87,6 +87,10 @@
                                 </div>
                             </div>
 
+                            <div class="description">
+                                {!! $event->description !!}
+                            </div>
+
                         @endif
                     </div>
                 @endif
@@ -94,9 +98,6 @@
             </div>
 
             <div class="left">
-                <div class="description">
-                    {!! $event->description !!}
-                </div>
 
                 <div class="registrations">
                     <h4>Who's going</h4>
@@ -142,7 +143,6 @@
                         @endforeach
                     </ul>
                 </div>
-            </div>
 
 
             <div class="right">

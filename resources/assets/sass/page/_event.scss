@@ -42,27 +42,30 @@ button {
 
 #viewport {
   .head {
-    @include span-columns(12);
+    //@include span-columns(12);
     display: block;
     border-bottom: 1px solid $light-gray;
     overflow-wrap: break-word;
+    text-align: center;
+    line-height: 2em;
+    padding: 2%;
 
-    .event-info {
-
+    /*.event-info {
+      @include span-columns(8);
     }
 
     .signup {
-
+      @include span-columns(4);
 
       button {
-
-      }
+        float: right;
+      } */
     }
 
     p {
       font-weight: bold;
     }
-  }
+
 
 
   .left {
