@@ -1,19 +1,24 @@
-/*.MRP_req {
-  text-align: right;
+td {
+  text-align:center;
 }
 
-  .MRP_category {
-    text-align: right;
-  }
+tr > th {
+  text-align:center;
+}
 
-.col1:first-child {
-  text-align: left;
-} */
+.tHighlight {
+  background-color: $base-link-color;
+  font-weight: bold;
+  color: white;
+}
+
+.fa-info-circle {
+  float: right;
+}
 
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {

@@ -4,6 +4,10 @@
     MRP
 @endsection
 
+<style>
+
+</style>
+
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Membership Recognition Program'))
     <!-- TODO Add tooltips and CSS-->
@@ -30,22 +34,22 @@
                 <th>Gold</th>
                 <th>Platinum</th>
             </tr>
-            <tr class="col1">
-                <td>Service Hours</td>
+            <tr class="col1 tHighlight">
+                <td><strong>Service Hours<i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></strong></td>
                 <td>50</td>
                 <td>80</td>
                 <td>130</td>
                 <td>200</td>
             </tr>
-            <tr class="col1">
-                <td>Dues Paid <i class="fas fa-info-circle"></i></td>
+            <tr class="col1 tHighlight">
+                <td><strong>Dues Paid</strong><i class="fas fa-info-circle tooltip"><span class="tooltiptext">Hello</span></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
                 <td><i class="fas fa-check"></i></td>
             </tr>
-            <tr class="col1">
-                <td>Additional Requirements <i class="fas fa-info-circle"></i></td>
+            <tr class="col1 tHighlight">
+                <td><strong>Additional</strong><i class="fas fa-info-circle"></i></td>
                 <td>5</td>
                 <td>6</td>
                 <td>8</td>
