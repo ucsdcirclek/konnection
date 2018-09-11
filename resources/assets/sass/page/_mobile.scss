@@ -5,6 +5,14 @@
   #header-image { //Pushes all webpage content down to account for the mobile navbar
     margin-top: 20%;
   }
+  
+  .page-header {
+    height: auto;
+      h1 {
+        padding: 5%;
+    }
+  }
+  
 
   #container {
     overflow-x: scroll;
