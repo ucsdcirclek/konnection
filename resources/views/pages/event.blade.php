@@ -79,7 +79,7 @@
 
                             <div class="modal">
                                 <label for="guestRegistration">
-                                    <div class="btn" id="guestBtn"><i class="fa fa-check"></i> Guest Signup</div>
+                                    <div class="btn" id="guestBtn">Guest Signup <i class="fa fa-check"></i></div>
                                 </label>
                                 <input class="modal-state" id="guestRegistration" type="checkbox"/>
 
