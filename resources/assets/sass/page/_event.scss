@@ -2,6 +2,31 @@ button {
   font-family: $base-font-family;
 }
 
+.btn-group-reg {
+  width: 100%;
+}
+
+#drive-btn, #photograph-btn, #write-btn {
+  width: 20%;
+}
+
+#register-btn {
+  &:hover {
+    background-color: $green;
+  }
+}
+
+#unregister-btn {
+  background-color: $old-rose;
+  &:hover {
+    background-color: $red;
+  }
+}
+
+.eventOptions {
+  padding: 2%;
+}
+
 #unregister-btn, #register-btn, #guestBtn {
   padding:1.5%;
   width: 40%;

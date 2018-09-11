@@ -1,6 +1,12 @@
 
 @extends('layouts.master')
 
+<style>
+    form {
+        display: inline;
+    }
+</style>
+
 @section('title', $event->title)
 
 {{-- Take description, cut it down, and add ellipses --}}
@@ -51,7 +57,7 @@
                                 {!! Form::close() !!}
                             @else
                                 {!! Form::open(array('action' => array('EventRegistrationsController@destroy', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'delete')) !!}
-                                {!! Form::button('<i class="fa fa-close"></i> Sign up', array('type' => 'submit', 'id' => 'unregister-btn')) !!}
+                                {!! Form::button('<i class="fa fa-close"></i> Cancel sign up', array('type' => 'submit', 'id' => 'unregister-btn')) !!}
                                 {!! Form::close() !!}
                             @endif
                         @else
@@ -90,11 +96,11 @@
                     </div>
                 @endif
                 @if($event->isRegistered(Auth::id()))
-                    <div>
-                        <h6 style="color:green;">Signup successful!</h6>
+                    <div class="eventOptions">
+                        <h4 style="color:green;">Signup successful!</h4>
                         <h6>Additional options:</h6>
 
-                        <div class="btn-group">
+                        <div class="btn-group-reg">
                             {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
                             {!! Form::hidden('driver_status', 1) !!}
                             {!! Form::button('<i class="fa fa-car"></i> Driver', array('type' => 'submit', 'id' => 'drive-btn')) !!}
@@ -140,7 +146,7 @@
 
                     @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
                         <h6>Admin</h6>
-                        <div class="btn-group">
+                        <div class="btn-group-reg">
                             <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
                                 Edit Event
                             </a>
