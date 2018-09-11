@@ -21,6 +21,8 @@ elixir(function(mix) {
       'user-search.js',
       'slideshow.js',
       'accordion.js',
+      'famSlideshow.js',
+      'timer.js',
       //'modal.js',
       '*.js'
     ], 'public/js/main.js')
