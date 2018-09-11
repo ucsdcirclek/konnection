@@ -137,7 +137,7 @@
                         <p class="name">{{ $event->chair->first_name }} {{$event->chair->last_name}}</p>
                         <p class="info">{{ $event->chair->phone }}</p>
                     @endif
-                    
+
                     @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
                         <h6>Admin</h6>
                         <div class="btn-group">
@@ -211,7 +211,7 @@
                                 </div>
                             </div>
 
-                            <p class="name">{{ $guestRegistration->first_name}} {{ $guestRegistration->last_name }}</p>
+                            <p class="nameReg">{{ $guestRegistration->first_name}} {{ $guestRegistration->last_name }}</p>
                         </li>
                     @endforeach
                 </ul>
