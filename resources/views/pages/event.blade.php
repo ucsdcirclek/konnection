@@ -199,7 +199,7 @@
                 </div>
 
             <div class="registrations">
-                <h4 style="padding-right: 5%;">Who's going</h4>
+                <h4 style="padding-right: 2.5%;">Who's going</h4>
                 <ul>
                     @foreach($event->registrations as $registration)
                         <li class="avatar small">

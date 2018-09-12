@@ -46,11 +46,6 @@ button {
   line-height: 2em;
 }
 
-.nameReg {
-  float: left;
-  font-size: .8em;
-}
-
 .avatar {
   padding: 1%;
 }
@@ -151,7 +146,7 @@ button {
   .registrations {
     border-top: 1px solid $light-gray;
     padding: 3%;
-    padding-left: 7%;
+    padding-left: 5%;
     margin-top: 1em;
     padding-top: 1em;
     @include span-columns(12);
@@ -174,6 +169,10 @@ button {
     padding: 5%;
     width: 75%;
     margin: 5%;
+  }
+
+  .nameReg {
+    font-size: 0.8em;
   }
 
   #drive-btn, #photograph-btn, #write-btn {
