@@ -158,8 +158,9 @@ button {
     text-align: center;
 
     ul li {
-      @include span-columns(2);
-      @include omega(6n);
+      @include span-columns(1);
+      @include omega(24n);
+      width: 10%;
     }
   }
 
@@ -169,11 +170,6 @@ button {
 }
 
 @media screen and (max-width:500px) {
-  .avatar.small img {
-    width: auto;
-    height: auto;
-  }
-
   #unregister-btn, #register-btn, #guestBtn {
     padding: 5%;
     width: 75%;
@@ -194,7 +190,7 @@ button {
   }
 
   #viewport .registrations {
-    padding-left: 8%;
+    padding-left: 5%;
     ul li {
       width: 30%;
     }

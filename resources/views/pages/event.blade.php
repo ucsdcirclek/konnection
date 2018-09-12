@@ -63,6 +63,9 @@
 
                 {{-- Only allow registration if the event is actually open --}}
                 @if($event->isOpen())
+                    @if($event->isRegistered(Auth::id()))
+                        <h4 style="color:green;">Signup successful!</h4>
+                    @endif
                     <div class="signup">
                         {{-- Show guest registration link if not logged in --}}
                         @if(Auth::check())
@@ -112,7 +115,6 @@
                 @endif
                 @if($event->isRegistered(Auth::id()))
                     <div class="eventOptions">
-                        <h4 style="color:green;">Signup successful!</h4>
                         <h4>Additional options:</h4>
 
                         <div class="btn-group-reg">
@@ -197,7 +199,7 @@
                 </div>
 
             <div class="registrations">
-                <h4 style="padding-right: 5%;">Who's going</h4>
+                <h4 style="padding-right: 2.5%;">Who's going</h4>
                 <ul>
                     @foreach($event->registrations as $registration)
                         <li class="avatar small">
