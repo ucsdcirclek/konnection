@@ -144,7 +144,7 @@
                     <input type="password" name="password">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="remember"> Remember Me
+                            <input type="checkbox" name="remember" style="width: auto;"> Remember Me
                             <!--<p></p>
                             <input type="checkbox" name="remember"> Take me to calendar -->
                         </label>
