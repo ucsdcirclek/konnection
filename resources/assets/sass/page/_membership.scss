@@ -1,0 +1,20 @@
+.guestColumn {
+  float: left;
+  padding: 2%;
+  width:50%;
+  background-color: $lightest-blue;
+  text-align: center;
+}
+
+.coloredTile {
+  background-color: $base-background-color;
+  text-align: center;
+  >h2 {
+    color: white;
+  }
+}
+
+.membershipRow {
+  @extend .contact-row;
+  padding: 10%;
+}
