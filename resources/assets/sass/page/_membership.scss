@@ -2,6 +2,10 @@
   padding-bottom: 5%;
 }
 
+.textLeft {
+  text-align: left;
+}
+
 .cardBtn {
   position: absolute;
   bottom: 5%;
@@ -73,15 +77,25 @@
     border-bottom: 1px solid rgba($base-background-color,0.4)
   }
 
+  #memPerks {
+    text-align: left;
+    margin:{
+      left: 5%;
+      right: 5%;
+    }
+  }
+
   .coloredTile {
     width: 100%;
     padding: 5%;
+    margin-bottom: 10%
   }
 
   .membershipRow {
     display: block;
     > div {
       margin: 5%;
+      padding: 8%;
       > h4 {
         margin-bottom: 3%;
       }

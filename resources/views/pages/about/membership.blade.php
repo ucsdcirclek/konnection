@@ -33,7 +33,7 @@
             <br>
                 <strong>Select a calendar event and click "guest signup" to try out our events!</strong>
             </p>
-            <a href="{{ url('masquerade') }}">
+            <a href="{{ url('/events') }}" target="_blank">
                 <button>Calendar</button>
             </a>
         </div>
@@ -45,7 +45,8 @@
             <br>
                 <strong>GBMs occur every Monday at 8pm. Weekly GBM locations will be posted on our Facebook page.</strong>
             </p>
-            <a href="{{ url('masquerade') }}">
+            <a href="https://www.facebook.com/groups/ucsdcki/?fb_dtsg_ag=Adz1EgK7XA76Cj2-JuHh7NGADg6YkNoSdC6Fi-_c2StWYQ%3AAdwftY_gwFHRQPeeCnjzN98F0dbW8ya3FcDm9J0ZbTW7OA"
+            target="_blank">
                 <button>Social Media</button>
             </a>
         </div>
@@ -58,19 +59,20 @@
                 <div>
                     <i class="fas fa-file-signature"></i>
                     <h4>Application</h4>
-                    <p>Follow the link below to fill out our online application.</p>
-                    <a href="{{ url('masquerade') }}">
+                    <p>Follow the link below to fill out our online application. The information will be used to sort you into a <strong>family!</strong></p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdRhGeUtIXZ8I3tbiWcxmyX34WG1enXThVdFRCf9WlBe736A/viewform" target="_blank">
                         <button class="cardBtn">Apply</button>
                     </a>
                 </div>
                 <div>
                     <i class="fas fa-box"></i>
                     <h4>Membership Dues</h4>
-                    <p>Dues cost $45 for the 2018-2019 school year. You will receive numerous benefits such as free rides to events, a free t-shirt,
-                    and the opportunity to be sorted into a family!
+                    <p>Dues cost $45 for the 2018-2019 school year. Pay by cash to our treasurer or venmo @UCSDCircleK
+                        <!--You will receive numerous benefits such as free rides to events, a free t-shirt,
+                    and the opportunity to be sorted into a family! -->
                     </p>
-                    <a href="{{ url('masquerade') }}">
-                        <button class="cardBtn">Pay Dues</button>
+                    <a href="https://venmo.com/UCSDCircleK" target="_blank">
+                        <button class="cardBtn">Venmo Page</button>
                     </a>
                 </div>
                 <div>
@@ -78,11 +80,13 @@
                     <h4>CST</h4>
                     <p>Community Service Transportation (CST) will provide free rides to all our service events in the San Diego area. Just fill out their form and
                     you're ready to go!</p>
-                    <a href="{{ url('masquerade') }}">
+                    <a href="https://students.ucsd.edu/student-life/involvement/community/local-ongoing-service/cstvans/orientation.html" target="_blank">
                         <button class="cardBtn">CST Page</button>
                     </a>
                 </div>
             </div>
+            <h4 id="memPerks">Official members of UCSD Circle K will be sorted into a family, be able to join committees, earn awards, access free rides to all events, eat free lunch
+            at Kiwanis Luncheon, have a big or little, access district events, and run for board!</h4>
         </div>
 
         <h2>Website account</h2>
@@ -131,7 +135,7 @@
             </tr>
         </table>
 
-        <a href="{{ url('masquerade') }}">
+        <a href="{{ url('/auth/register') }}" target="_blank">
             <button>Register for an account</button>
         </a>
 
