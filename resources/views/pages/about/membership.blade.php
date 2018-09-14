@@ -29,7 +29,7 @@
                 in challenges, win prizes, and get updates on what we have planned!
             <br>
             <br>
-                <strong>GBMs occur every monday at 8pm. Weekly GBM locations will be posted on our Facebook page.</strong>
+                <strong>GBMs occur every Monday at 8pm. Weekly GBM locations will be posted on our Facebook page.</strong>
             </p>
             <a href="{{ url('masquerade') }}">
                 <button>Social Media</button>
@@ -73,6 +73,53 @@
 
         <h2>Website account</h2>
         <h4>Sign up for events in just a few clicks!</h4>
+
+        <table>
+            <tr>
+                <th>Benefits</th>
+                <th>Guest</th>
+                <th>Registered User<i class="fas fa-star" style="padding-left:2%;"></i></th>
+            </tr>
+            <tr>
+                <td>Sign up for events</td>
+                <td><i class="fas fa-check"></i></td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+                <td>One-click event sign-up</td>
+                <td><i class="fas fa-close"></i></td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+                <td>One-click remove sign up</td>
+                <td><i class="fas fa-close"></i></td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+                <td>Save your contact information</td>
+                <td><i class="fas fa-close"></i></td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+                <td>View all your upcoming events</td>
+                <td><i class="fas fa-close"></i></td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+                <td>Track your MRP hours and status</td>
+                <td><i class="fas fa-close"></i></td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+                <td>Change contact information</td>
+                <td><i class="fas fa-close"></i></td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+        </table>
+
+        <a href="{{ url('masquerade') }}">
+            <button>Register for an account</button>
+        </a>
 
     </div>
 
