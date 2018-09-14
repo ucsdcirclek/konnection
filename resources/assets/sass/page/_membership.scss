@@ -40,11 +40,16 @@
 }
 
 .membershipRow {
-  @extend .contact-row;
+  padding: 5px;
+  display: flex;
   > div {
     padding: 3%;
     position: relative;
     height: 23em;
+    flex: 1;
+    margin: 1%;
+    background-color: $lightest-blue;
+    border-radius: $base-border-radius;
     > .fas {
       font-size: 3em;
       margin-bottom: 10%;
@@ -56,4 +61,31 @@
       margin-bottom: 3%;
     }
   }
+}
+
+@media only screen and (max-width:500px) {
+
+  .guestColumn {
+    width: 100%;
+    height: 60vh;
+    padding: 5%;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba($base-background-color,0.4)
+  }
+
+  .coloredTile {
+    width: 100%;
+    padding: 5%;
+  }
+
+  .membershipRow {
+    display: block;
+    > div {
+      margin: 5%;
+      > h4 {
+        margin-bottom: 3%;
+      }
+    }
+  }
+
 }
