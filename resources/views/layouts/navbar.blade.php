@@ -67,6 +67,7 @@
                         <li><a href="{{ url('/resources') }}">Applications & Forms</a></li>
                         <li><a href="{{ url('/bulletin') }}">Bulletin</a></li>
                         <li><a href="{{ url('/about/drivers') }}">Driving Reimbursement</a></li>
+                        <li><a href="{{url('/MRP') }}">Member Recognition Program</a></li>
                     </ul>
 
                 </li>
@@ -144,7 +145,7 @@
                     <input type="password" name="password">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="remember"> Remember Me
+                            <input type="checkbox" name="remember" style="width: auto;"> Remember Me
                             <!--<p></p>
                             <input type="checkbox" name="remember"> Take me to calendar -->
                         </label>
