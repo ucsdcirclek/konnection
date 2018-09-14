@@ -4,6 +4,20 @@
     Membership
 @endsection
 
+<style>
+    .fa-check {
+        color: green
+    }
+
+     td:first-child {
+        text-align: left;
+    }
+
+    th:first-child {
+        text-align:left;
+    }
+</style>
+
 @section('content')
 
     @include('layouts.header', array('headerTitle' => 'Membership'))
@@ -72,7 +86,7 @@
         </div>
 
         <h2>Website account</h2>
-        <h4>Sign up for events in just a few clicks!</h4>
+        <h4>Your online guide to UCSD Circle K!</h4>
 
         <table>
             <tr>
