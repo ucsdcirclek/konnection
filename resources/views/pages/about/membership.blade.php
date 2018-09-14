@@ -67,9 +67,8 @@
                 <div>
                     <i class="fas fa-box"></i>
                     <h4>Membership Dues</h4>
-                    <p>Dues cost $45 for the 2018-2019 school year. Pay by cash to our treasurer or venmo @UCSDCircleK
-                        <!--You will receive numerous benefits such as free rides to events, a free t-shirt,
-                    and the opportunity to be sorted into a family! -->
+                    <p>Dues cost $45 for the 2018-2019 school year. Pay by cash, check to UCSD Circle K, or venmo @UCSDCircleK. <strong>Dues must be paid by our week 3 GBM</strong>
+                        to be sorted into a family at new member install.
                     </p>
                     <a href="https://venmo.com/UCSDCircleK" target="_blank">
                         <button class="cardBtn">Venmo Page</button>
