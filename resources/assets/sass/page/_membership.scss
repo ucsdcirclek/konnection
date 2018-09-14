@@ -1,20 +1,58 @@
+#guideHeader {
+  padding-bottom: 5%;
+}
+
+.cardBtn {
+  position: absolute;
+  bottom: 5%;
+  left: 24%;
+  width: 50%;
+}
+
 .guestColumn {
   float: left;
   padding: 2%;
   width:50%;
+  height: 50vh;
   background-color: $lightest-blue;
   text-align: center;
+  > p {
+    text-align: left;
+    padding: 5%;
+  }
 }
 
 .coloredTile {
   background-color: $base-background-color;
   text-align: center;
-  >h2 {
+  display: inline-block;
+  padding: 2%;
+  border-radius: 5px;
+  > h2 {
+    color: white;
+    padding: 2%;
+  }
+  >h4 {
+    padding: 1%;
     color: white;
   }
 }
 
 .membershipRow {
   @extend .contact-row;
-  padding: 10%;
+  > div {
+    padding: 3%;
+    position: relative;
+    height: 23em;
+    > .fas {
+      font-size: 3em;
+      margin-bottom: 10%;
+    }
+    > p {
+      text-align: left;
+    }
+    > h4 {
+      margin-bottom: 3%;
+    }
+  }
 }

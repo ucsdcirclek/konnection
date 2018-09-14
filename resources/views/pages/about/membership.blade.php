@@ -9,39 +9,44 @@
     @include('layouts.header', array('headerTitle' => 'Membership'))
 
     <div class="wrapper" align="center">
-        <h1>Not sure where to start?</h1>
+        <h1 id="guideHeader">Not sure where to start?</h1>
 
         <div class="guestColumn">
             <h2>Service and Chill</h2>
             <p>Whether you're looking for a fun way to meet people on a day off or a community to serve, we've got you covered
                 with a variety of social and service events for you to try out!
+            <br>
+            <br>
+                <strong>Select a calendar event and click "guest signup" to try out our events!</strong>
             </p>
             <a href="{{ url('masquerade') }}">
-                <button>Learn more</button>
+                <button>Calendar</button>
             </a>
         </div>
         <div class="guestColumn">
             <h2>Meet us at our GBMs</h2>
             <p>Check out our general body meetings to find out more about our community. Interact with new and old members, participate
                 in challenges, win prizes, and get updates on what we have planned!
+            <br>
+            <br>
+                <strong>GBMs occur every monday at 8pm. Weekly GBM locations will be posted on our Facebook page.</strong>
             </p>
             <a href="{{ url('masquerade') }}">
-                <button>Learn more</button>
+                <button>Social Media</button>
             </a>
         </div>
 
         <div class="coloredTile">
-
             <h2>Ready to join?</h2>
-            <h4>Becoming a member is as easy as 1-2-3</h4>
+            <h4>Becoming an official member is as easy as 1-2-3</h4>
 
-            <div class="contact-row">
+            <div class="membershipRow">
                 <div>
                     <i class="fas fa-file-signature"></i>
                     <h4>Application</h4>
                     <p>Follow the link below to fill out our online application.</p>
                     <a href="{{ url('masquerade') }}">
-                        <button>Apply</button>
+                        <button class="cardBtn">Apply</button>
                     </a>
                 </div>
                 <div>
@@ -51,16 +56,16 @@
                     and the opportunity to be sorted into a family!
                     </p>
                     <a href="{{ url('masquerade') }}">
-                        <button>Pay Dues</button>
+                        <button class="cardBtn">Pay Dues</button>
                     </a>
                 </div>
                 <div>
                     <i class="fas fa-shuttle-van"></i>
                     <h4>CST</h4>
-                    <p>Community Service Transportation (CST) will provide free rides to all service events within Circle K. Just fill out their form and
+                    <p>Community Service Transportation (CST) will provide free rides to all our service events in the San Diego area. Just fill out their form and
                     you're ready to go!</p>
                     <a href="{{ url('masquerade') }}">
-                        <button>CST Page</button>
+                        <button class="cardBtn">CST Page</button>
                     </a>
                 </div>
             </div>
