@@ -46,6 +46,12 @@ button {
   line-height: 2em;
 }
 
+#guestBtn {
+  &:hover {
+    background-color: green;
+  }
+}
+
 .avatar {
   padding: 1%;
 }
