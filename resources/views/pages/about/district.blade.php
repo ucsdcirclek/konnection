@@ -17,11 +17,22 @@
 
         </p>
         <p>
-            Our district puts on many exciting events throughout the year, which you can find out more about on the Calendar
+            Our district puts on many exciting events throughout the year, which you can find out more about on the Calendar and the links below!
 
         </p>
         <p>
             CNH Circle K's website can be found <a href="http://cnhcirclek.org/">here</a>.
         </p>
+
+        <h5>Major District Events</h5>
+
+        <p>
+            <b><li><a target="_blank" href="http://dcon.cnhcirclek.org/">District Convention(DCON)</a></li></b>
+            <b><li><a target="_blank" href="http://ftc.cnhcirclek.org/">Fall Training Conference</a></li></b>
+            <b><li><a target="_blank"
+                      href="http://www.cnhcirclek.org/committees/fifun/crazy-kompetition-2017-games-playbook/">CKI South</a></li></b>
+        </p>
+
+
     </div>
 @endsection

@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Arvo|Lobster);
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
 
 @import "vendor/bourbon/bourbon";
 @import "base/grid-settings";
@@ -32,7 +34,7 @@
 @import "components/calendar";
 @import "components/slider";
 @import "components/forms";
-//@import "components/modal"; Replaced with modal-login, but not sure where this is used, so it's commented out.
+@import "components/modal";
 @import "components/modal-login";
 @import "components/btn-group";
 @import "components/button";
@@ -40,3 +42,4 @@
 @import "components/social-media";
 @import "components/search";
 @import "components/accordion";
+@import "components/navbar";
