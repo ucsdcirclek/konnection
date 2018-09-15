@@ -9,19 +9,23 @@
 
         }
         .modal-content { /* Dimensions of the login modal box */
-            height: 480px;
+            <!--480--->
+            height: 1480px;
             width: 90%;
             overflow: auto;
         }
 
         li.modalTab a {
-            padding: 24px 16px;
+            padding: 24px 60px;
         }
 
         .nav-list {
-            height: 75vh; /* Allows the mobile navbar to be scrolled if too big */
+            <!--75--->
+            height: 175vh; /* Allows the mobile navbar to be scrolled if too big */
             overflow-y: scroll;
         }
+
+
     }
 
 </style>
@@ -29,7 +33,7 @@
 <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <i class="fas fa-splotch" style="color: white"></i> <!-- The icon for the mobile nav bar -->
+            <i class="fas fa-rocket" style="color:white"></i> <!-- The icon for the mobile nav bar -->
             <a href="{{ url('/') }}">UCSD Circle K</a>
         </div>
         <nav>
@@ -38,12 +42,14 @@
                 <li>
                     <a href="{{ url('/') }}">home</a>
                 </li>
+
                 <li>
                     <a>about</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
                         <li><a href="{{ url('about/club') }}">Club</a></li>
-                        <li><a href="{{ url('about/drivers') }}">Drivers</a></li>
+                        <li><a href="{{ url('gallery') }}">Gallery</a></li>
+                        <li><a href="{{ url('about/district') }}">District</a></li>
                         <li><a href="{{ url('about/membership') }}">Membership</a></li>
                         <li><a target="_blank" href="http://www.kiwanis.org">Kiwanis</a></li>
                         <li><a target="_blank" href="http://www.kiwanisclublajolla.org/">La Jolla Kiwanis</a></li>
@@ -52,38 +58,36 @@
                 <li>
                     <a href="{{ url('/events') }}">calendar</a>
                 </li>
+
+
                 <li>
-                    <a href="{{ url('/resources') }}">resources</a>
-                </li>
-                <li>
-                    <a href="{{ url('/bulletin') }}">bulletin</a>
-                </li>
-                <li>
-                    <a>district</a>
+                    <a>resources</a>
                     <ul class="nav-dropdown">
-                        <li><a href="{{ url('about/district') }}">About</a></li>
-                        <li><a target="_blank" href="http://dcon.cnhcirclek.org/">DCON</a></li>
-                        <li><a target="_blank" href="http://ftc.cnhcirclek.org/">FTC</a></li>
-                        <li><a target="_blank"
-                               href="http://www.cnhcirclek.org/committees/fifun/crazy-kompetition-2017-games-playbook/">CKI
-                                South</a></li>
+                        <li><a href="{{ url('/resources') }}">Applications & Forms</a></li>
+                        <li><a href="{{ url('/bulletin') }}">Bulletin</a></li>
+                        <li><a href="{{ url('/about/drivers') }}">Driving Reimbursement</a></li>
+                        <li><a href="{{url('/MRP') }}">Member Recognition Program</a></li>
                     </ul>
+
                 </li>
                 <li>
                     <a href="{{ url('contact') }}">contact</a>
                 </li>
-                <li>
-                    <a href="{{ url('gallery') }}">gallery</a>
-                </li>
+
 
                 @if (! Auth::check())
                     <li>
-                        <a class="ModalLogin">login <i class="fa fa-user"></i></a>
+                        <a>account <i class="fa fa-user"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a class="ModalLogin">Login</a></li>
+                            <li><a href="{{ url('about/membership') }}">Membership</a></li>
+                        </ul>
                     </li>
                 @else
                     <li>
                     <a>account <i class="fa fa-user"></i></a>
                         <ul class="nav-dropdown">
+                            <li><a href="{{ url('about/membership') }}">Membership</a></li>
                             <li><a href="{{ url('settings') }}">View Account</a></li>
                             <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
                         </ul>
@@ -140,7 +144,7 @@
                     <input type="password" name="password">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="remember"> Remember Me
+                            <input type="checkbox" name="remember" style="width: auto;"> Remember Me
                             <!--<p></p>
                             <input type="checkbox" name="remember"> Take me to calendar -->
                         </label>

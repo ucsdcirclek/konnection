@@ -5,6 +5,11 @@
   #header-image { //Pushes all webpage content down to account for the mobile navbar
     margin-top: 20%;
   }
+  
+  .page-header {
+    height: auto;
+  }
+  
 
   #container {
     overflow-x: scroll;
@@ -20,6 +25,11 @@
 
   ul.week > li h5 {
     font-size: 15px;
+  }
+
+  .page-header h1 {
+    line-height: inherit;
+    padding: 10%;
   }
 
    h2 {
@@ -88,6 +98,18 @@
   // Home page settings
   #social-media-column {
     display:none;
+  }
+
+  #content #announcements-view { //Home page announcements
+    padding: 5%;
+  }
+
+  .announcements {
+    padding: 10%;
+  }
+
+  #slideshow, #slideshow2 {
+    width: 70%;
   }
 
   #content {

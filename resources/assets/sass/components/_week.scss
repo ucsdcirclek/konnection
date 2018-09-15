@@ -76,3 +76,14 @@ ul.week {
 
   }
 }
+ @media only screen and (max-width:500px) {
+   ul.week > li { //Home page featured events
+     display: block;
+     width: 100%;
+     padding: 10%;
+   }
+
+   ul.week > li:first-child {
+     border-radius: 5px;
+   }
+ }

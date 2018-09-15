@@ -139,6 +139,9 @@ Route::get('TeamFTK', function() { return view( 'pages.impactteams.teamftk'); })
 Route::get('TeamPulse', function() { return view( 'pages.impactteams.teampulse'); });
 Route::get('Team_Paws', function() { return view( 'pages.impactteams.team_paws'); });
 
+//Route::get('landing', function() { return view( 'pages.landing'); });
+Route::get('MRP', function() { return view( 'pages.MRP'); });
+
 
 
 /*
