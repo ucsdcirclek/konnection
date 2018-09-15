@@ -17,7 +17,8 @@
   float: left;
   padding: 2%;
   width:50%;
-  height: 50vh;
+  position: relative;
+  height: 60%;
   background-color: $lightest-blue;
   text-align: center;
   > p {
@@ -76,6 +77,13 @@
     border-radius: 5px;
     border-bottom: 1px solid rgba($base-background-color,0.4)
   }
+  
+  .guestBtn {
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    width: 50%;
+}
 
   #memPerks {
     text-align: left;
