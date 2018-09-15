@@ -134,7 +134,7 @@
             </tr>
         </table>
 
-        <a href="{{ url('/auth/register') }}" target="_blank">
+        <a href="/auth/register" target="_blank">
             <button>Register for an account</button>
         </a>
 
