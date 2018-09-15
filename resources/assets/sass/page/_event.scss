@@ -2,6 +2,60 @@ button {
   font-family: $base-font-family;
 }
 
+.btn-group-reg {
+  width: 100%;
+}
+
+.fa-plus {
+  margin-left: 1%;
+}
+
+.btn-group-admin {
+  width:min-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#drive-btn, #photograph-btn, #write-btn {
+  width: 40%;
+  line-height: 2em;
+}
+
+#register-btn {
+  line-height: 2em;
+  &:hover {
+    background-color: $green;
+  }
+}
+
+#unregister-btn {
+  background-color: $old-rose;
+  line-height: 2em;
+  &:hover {
+    background-color: $red;
+  }
+}
+
+.eventOptions {
+  padding: 2%;
+}
+
+#unregister-btn, #register-btn, #guestBtn {
+  padding:1.5%;
+  width: 40%;
+  line-height: 2em;
+}
+
+#guestBtn {
+  &:hover {
+    background-color: green;
+  }
+}
+
+.avatar {
+  padding: 1%;
+}
+
 #event {
   @include span-columns(12);
 
@@ -36,17 +90,21 @@ button {
     @include span-columns(9);
     @include omega;
     padding: 1em;
+    width: 100%;
   }
 }
 
 #viewport {
   .head {
-    @include span-columns(12);
+    //@include span-columns(12);
     display: block;
     border-bottom: 1px solid $light-gray;
     overflow-wrap: break-word;
+    text-align: center;
+    line-height: 2em;
+    padding: 2%;
 
-    .event-info {
+    /*.event-info {
       @include span-columns(8);
     }
 
@@ -55,13 +113,13 @@ button {
 
       button {
         float: right;
-      }
+      } */
     }
 
-    p {
+    /*p {
       font-weight: bold;
-    }
-  }
+    }*/
+
 
 
   .left {
@@ -93,17 +151,53 @@ button {
 
   .registrations {
     border-top: 1px solid $light-gray;
+    padding: 3%;
+    padding-left: 5%;
     margin-top: 1em;
     padding-top: 1em;
     @include span-columns(12);
+    text-align: center;
 
     ul li {
-      @include span-columns(2);
-      @include omega(6n);
+      @include span-columns(1);
+      @include omega(24n);
+      width: 10%;
     }
   }
 
   h4 {
     margin-bottom: .5em;
+  }
+}
+
+@media screen and (max-width:500px) {
+  #unregister-btn, #register-btn, #guestBtn {
+    padding: 5%;
+    width: 75%;
+    margin: 5%;
+  }
+
+  .nameReg {
+    font-size: 0.8em;
+  }
+
+  #drive-btn, #photograph-btn, #write-btn {
+    width: 80%;
+  }
+
+  .btn-group-admin {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #viewport .head {
+    padding: 8%;
+  }
+
+  #viewport .registrations {
+    padding-left: 5%;
+    ul li {
+      width: 30%;
+    }
   }
 }

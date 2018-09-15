@@ -1,14 +1,35 @@
 
 @extends('layouts.master')
 
+<style>
+  .btn-group-admin > a, input, form {
+      width: 100%;
+      margin-bottom: 1em;
+  }
+
+    button.accordion {
+        width: 40%;
+    }
+
+     i.fa-car, i.fa-camera, i.fa-edit, i.fa-check, i.fa-close {
+        display:block;
+    }
+
+    @media screen and (max-width:500px) {
+        button.accordion {
+            width: 100%;
+        }
+    }
+</style>
+
 @section('title', $event->title)
 
 {{-- Take description, cut it down, and add ellipses --}}
 @section('description', substr(strip_tags($event->description), 0, 156) . '...')
 
 @section('content')
-    <div id="event" style="overflow-x: scroll;">
-        <div id="navigator" style="border-bottom-left-radius: 10px;">
+    <!--<div id="event" style="overflow-x: scroll;">
+        <div id="navigator" style="border-bottom-left-radius: 10px; display:none;">
             @foreach($upcoming_events as $day => $events)
                 <ul>
                     <h3>{{ $day }}</h3>
@@ -19,7 +40,7 @@
                 <br/>
             @endforeach
             <a href="{{ action('EventsController@index') }}">Back to Calendar</a>
-        </div>
+        </div> -->
 
 
         <div id="viewport">
@@ -42,23 +63,26 @@
 
                 {{-- Only allow registration if the event is actually open --}}
                 @if($event->isOpen())
+                    @if($event->isRegistered(Auth::id()))
+                        <h4 style="color:green;">Signup successful!</h4>
+                    @endif
                     <div class="signup">
                         {{-- Show guest registration link if not logged in --}}
                         @if(Auth::check())
                             @if(!$event->isRegistered(Auth::id()))
                                 {!! Form::open(array('action' => array('EventRegistrationsController@store', 'slug' => $event->slug, 'id' => 'self'))) !!}
-                                {!! Form::button('<i class="fa fa-check"></i> Sign up', array('type' => 'submit', 'id' => 'register-btn')) !!}
+                                {!! Form::button('Sign up <i class="fa fa-check"></i>', array('type' => 'submit', 'id' => 'register-btn')) !!}
                                 {!! Form::close() !!}
                             @else
                                 {!! Form::open(array('action' => array('EventRegistrationsController@destroy', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'delete')) !!}
-                                {!! Form::button('<i class="fa fa-close"></i> Sign up', array('type' => 'submit', 'id' => 'unregister-btn')) !!}
+                                {!! Form::button('Cancel sign up <i class="fa fa-close"></i>', array('type' => 'submit', 'id' => 'unregister-btn')) !!}
                                 {!! Form::close() !!}
                             @endif
                         @else
 
                             <div class="modal">
                                 <label for="guestRegistration">
-                                    <div class="btn"><i class="fa fa-check"></i> Guest Signup</div>
+                                    <div class="btn" id="guestBtn">Guest Signup <i class="fa fa-check"></i></div>
                                 </label>
                                 <input class="modal-state" id="guestRegistration" type="checkbox"/>
 
@@ -86,66 +110,37 @@
                                     </div>
                                 </div>
                             </div>
-
                         @endif
                     </div>
                 @endif
+                @if($event->isRegistered(Auth::id()))
+                    <div class="eventOptions">
+                        <h4>Additional options:</h4>
 
-            </div>
+                        <div class="btn-group-reg">
+                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
+                            {!! Form::hidden('driver_status', 1) !!}
+                            {!! Form::button('Driver <i class="fa fa-car"></i>', array('type' => 'submit', 'id' => 'drive-btn')) !!}
+                            {!! Form::close() !!}
 
-            <div class="left">
+                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
+                            {!! Form::hidden('photographer_status', 1) !!}
+                            {!! Form::button('Photographer <i class="fa fa-camera"></i>', array('type' => 'submit', 'id' => 'photograph-btn')) !!}
+                            {!! Form::close() !!}
+
+                            {!! Form::open(array('method' => 'patch', 'action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'))) !!}
+                            {!! Form::hidden('writer_status', 1) !!}
+                            {!! Form::button('Writer <i class="fas fa-edit"></i>', array('type' => 'submit', 'id' => 'write-btn')) !!}
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                @endif
                 <div class="description">
                     {!! $event->description !!}
                 </div>
 
-                <div class="registrations">
-                    <h4>Who's going</h4>
-                    <ul>
-                        @foreach($event->registrations as $registration)
-                            <li class="avatar small">
-
-                                <div class="avatar-wrapper">
-                                    <img src="{{ $registration->user->avatar->url() }}">
-                                    {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
-                                    <div class="overlay">
-                                        @if ($registration->driver_status)
-                                            <i class="fa fa-car"></i>
-                                        @elseif ($registration->writer_status)
-                                            <i class="fa fa-pencil"></i>
-                                        @elseif ($registration->photographer_status)
-                                            <i class="fa fa-camera"></i>
-                                        @endif
-                                    </div>
-                                </div>
-
-
-                                <p class="name">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
-
-                            </li>
-                        @endforeach
-
-                        {{-- Displays guests. --}}
-                        @foreach($event->guests as $guestRegistration)
-                            <li class="avatar small">
-                                <div class="avatar-wrapper">
-                                    <img src="/avatars/original/missing.png"/>
-                                    {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
-                                    <div class="overlay">
-                                        @if ($guestRegistration->driver_status)
-                                            <i class="fa fa-car"></i>
-                                        @endif
-                                    </div>
-                                </div>
-
-                                <p class="name">{{ $guestRegistration->first_name}} {{ $guestRegistration->last_name }}</p>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
             </div>
 
-
-            <div class="right">
                 @include ('errors.errors')
 
                 <div class="chair avatar large">
@@ -166,34 +161,11 @@
                         <p class="info">{{ $event->chair->phone }}</p>
                     @endif
 
-                </div>
+                    @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
 
-                @if($event->isRegistered(Auth::id()))
-                    <div>
-                        <h6>Volunteer to be a:</h6>
-
-                        <div class="btn-group">
-                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
-                            {!! Form::hidden('driver_status', 1) !!}
-                            {!! Form::button('<i class="fa fa-car"></i> Driver', array('type' => 'submit', 'id' => 'drive-btn')) !!}
-                            {!! Form::close() !!}
-
-                            {!! Form::open(array('action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'), 'method' => 'patch')) !!}
-                            {!! Form::hidden('photographer_status', 1) !!}
-                            {!! Form::button('<i class="fa fa-camera"></i> Photographer', array('type' => 'submit', 'id' => 'photograph-btn')) !!}
-                            {!! Form::close() !!}
-
-                            {!! Form::open(array('method' => 'patch', 'action' => array('EventRegistrationsController@update', 'slug' => $event->slug, 'id' => 'self'))) !!}
-                            {!! Form::hidden('writer_status', 1) !!}
-                            {!! Form::button('<i class="fa fa-pencil"></i> Writer', array('type' => 'submit', 'id' => 'write-btn')) !!}
-                            {!! Form::close() !!}
-                        </div>
-                    </div>
-                @endif
-
-                @if(Auth::check() && (Auth::user()->hasRole('Officer') || Auth::user()->hasRole('Administrator')))
-                        <h6>Admin</h6>
-                        <div class="btn-group">
+                        <button class="accordion"><h6>Admin event options<i class="fas fa-plus"></i></h6></button>
+                        <div class="panel">
+                        <div class="btn-group-admin">
                             <a class="button" href="{{ action('EventsController@edit', $event->slug) }}">
                                 Edit Event
                             </a>
@@ -221,11 +193,54 @@
                                 {!! Form::submit('Open sign-ups') !!}
                             @endif
                         </div>
-                @endif
+                        </div>
+                    @endif
 
+                </div>
+
+            <div class="registrations">
+                <h4 style="padding-right: 2.5%;">Who's going</h4>
+                <ul>
+                    @foreach($event->registrations as $registration)
+                        <li class="avatar small">
+
+                            <div class="avatar-wrapper">
+                                <img src="{{ $registration->user->avatar->url() }}">
+                                {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
+                                <div class="overlay">
+                                    @if ($registration->driver_status)
+                                        <i class="fa fa-car"></i>
+                                    @elseif ($registration->writer_status)
+                                        <i class="fa fa-pencil"></i>
+                                    @elseif ($registration->photographer_status)
+                                        <i class="fa fa-camera"></i>
+                                    @endif
+                                </div>
+                            </div>
+
+
+                            <p class="nameReg">{{ $registration->user->first_name}} {{ $registration->user->last_name }}</p>
+
+                        </li>
+                    @endforeach
+
+                    {{-- Displays guests. --}}
+                    @foreach($event->guests as $guestRegistration)
+                        <li class="avatar small">
+                            <div class="avatar-wrapper">
+                                <img src="/avatars/original/missing.png"/>
+                                {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
+                                <div class="overlay">
+                                    @if ($guestRegistration->driver_status)
+                                        <i class="fa fa-car"></i>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <p class="nameReg">{{ $guestRegistration->first_name}} {{ $guestRegistration->last_name }}</p>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
-
-        </div>
-
     </div>
 @endsection
