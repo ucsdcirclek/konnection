@@ -22,7 +22,7 @@ elixir(function(mix) {
       'navbar.js',
       'slideshow.js',
       'accordion.js',
-      'famSlideshow.js',
+      //'famSlideshow.js',
       'timer.js',
       //'modal.js',
       '*.js'
