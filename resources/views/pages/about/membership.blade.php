@@ -34,7 +34,7 @@
                 <strong>Select a calendar event and click "guest signup" to try out our events!</strong>
             </p>
             <a href="{{ url('/events') }}" target="_blank">
-                <button>Calendar</button>
+                <button class="guestBtn">Calendar</button>
             </a>
         </div>
         <div class="guestColumn">
@@ -47,7 +47,7 @@
             </p>
             <a href="https://www.facebook.com/groups/ucsdcki/?fb_dtsg_ag=Adz1EgK7XA76Cj2-JuHh7NGADg6YkNoSdC6Fi-_c2StWYQ%3AAdwftY_gwFHRQPeeCnjzN98F0dbW8ya3FcDm9J0ZbTW7OA"
             target="_blank">
-                <button>Social Media</button>
+                <button class="guestBtn">Social Media</button>
             </a>
         </div>
 
@@ -134,7 +134,7 @@
             </tr>
         </table>
 
-        <a href="{{ url('/auth/register') }}" target="_blank">
+        <a href="/auth/register" target="_blank">
             <button>Register for an account</button>
         </a>
 
