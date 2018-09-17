@@ -22,7 +22,10 @@ elixir(function(mix) {
       'navbar.js',
       'slideshow.js',
       'accordion.js',
-      //'modal.js',
+      'calendar.js',
+        'modal.js',
+      'famSlideshow.js',
+      'timer.js',
       '*.js'
     ], 'public/js/main.js')
     .version(['css/main.css', 'js/main.js']);
