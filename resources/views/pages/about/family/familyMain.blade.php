@@ -180,26 +180,29 @@
 	
     <br>
     <br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis semper nisi, vel posuere tellus. Nunc consectetur
-        libero eu erat consequat, eget congue tortor hendrerit. Maecenas vitae ullamcorper ex. Mauris faucibus neque ut tellus
-        faucibus, in dictum sem efficitur. Etiam consectetur vulputate arcu mattis placerat. Integer placerat mi sit amet iaculis
-        euismod. Aliquam dapibus lacus sit amet turpis lacinia, nec rutrum nisi rhoncus. Pellentesque luctus quis risus a euismod.
-        Vivamus a quam tempor, consectetur purus id, gravida tortor. Vivamus a justo eu ligula tristique pretium ut ut ex.
-        Proin ac gravida ligula, eget auctor mi. Integer vel massa tincidunt, congue lectus sed, semper ex. Fusce tincidunt
-        risus vel faucibus mattis. Aliquam ut arcu lacinia, placerat ex pellentesque, vehicula risus. Morbi congue nec tellus
-        ut elementum. Suspendisse interdum odio non feugiat luctus.
-
-    Vestibulum lobortis rutrum sem, eu pellentesque purus facilisis sit amet. Pellentesque dui sapien, scelerisque ut erat sed,
-        suscipit consequat tellus. Proin justo mi, varius quis rhoncus et, aliquam a ipsum. Vestibulum et ipsum placerat, consectetur
-        orci eu, sollicitudin ex. Morbi blandit est nec sodales sagittis. Vivamus euismod egestas arcu, id mollis orci porttitor eleifend.
-        Praesent leo enim, laoreet quis ullamcorper id, eleifend eu diam. Vestibulum sed lorem egestas, accumsan nunc vel, mollis orci.
+    <p>
+        The family system is one of the most successful member-retention programs in UCSD Circle K. The family system creates
+        opportunities for club members to make new friends and memories with others. Family members will be paired based on their
+        responses on their membership application, allowing for extra compatibility.
+    </p>
+    <p>
+        Families in UCSD Circle K hold socials, inter-family competitions, service events, have their own cheers, and much more!
+        Find out which families you will be sorted into at this year's New Member Install.
     </p>
 
-    <br>
+      <div align="center">
+          <br><br>
+          <a class="button" href="">New Member Install event page</a>
+          <br><br><br></div>
+      <div align="center">
+      </div>
+
+
+      <br>
     <br>
 
             <div class="title-wrapper">
-                <h1 class="title">2018-2019 Families Theme: Blast to the Past</h1>
+                <h1 class="title">2018-2019 Families<br> Theme: Blast to the Past</h1>
             </div>
 
     <div class="contact-row">
@@ -224,35 +227,9 @@
         </div>
     </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis semper nisi, vel posuere tellus. Nunc consectetur
-          libero eu erat consequat, eget congue tortor hendrerit. Maecenas vitae ullamcorper ex. Mauris faucibus neque ut tellus
-          faucibus, in dictum sem efficitur. Etiam consectetur vulputate arcu mattis placerat. Integer placerat mi sit amet iaculis
-          euismod. Aliquam dapibus lacus sit amet turpis lacinia, nec rutrum nisi rhoncus. Pellentesque luctus quis risus a euismod.
+      <p>
+          Family pages coming soon!
       </p>
-
-    <div align="center">
-        <br><br>
-        <a class="button" href="">APPLY NOW!</a>
-        <br><br><br></div>
-        <div align="center">
-    </div>
-
-    <div class="title-wrapper">
-        <h1 class="title">Benefits:</h1>
-    </div>
-
-
-    <div class="contact-row">
-        <div>
-            <img src="https://i.imgur.com/oOEaEqe.png" />
-        </div>
-        <div>
-            <img src="https://i.imgur.com/oOEaEqe.png" />
-        </div>
-        <div>
-            <img src="https://i.imgur.com/oOEaEqe.png" />
-        </div>
-    </div>
 
     </div>
 @endsection
