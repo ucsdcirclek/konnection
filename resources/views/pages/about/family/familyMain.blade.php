@@ -4,181 +4,38 @@
     Family
 @endsection
 
-    <style>
-     p.descr{
-         white-space: pre-line;
-     }
-
-     p.big{
-         line-height: 200%;
-     }
-
-     .countdown {
-         text-align: center;
-         width: 100%;
-         border-radius:0;
-     }
-
-     * {
-         box-sizing:border-box
-     }
-
-     /* Slideshow container */
-     .slideshow-container {
-         max-width: 1000px;
-         position: relative;
-         margin: auto;
-     }
-
-     /* Hide the images by default */
-     .mySlides {
-         display: none;
-     }
-
-     /* Next & previous buttons */
-     .prev, .next {
-         cursor: pointer;
-         position: absolute;
-         top: 50%;
-         width: auto;
-         margin-top: -22px;
-         padding: 16px;
-         color: #4A3F81;
-         font-weight: bold;
-         font-size: 18px;
-         transition: 0.6s ease;
-         border-radius: 0 3px 3px 0;
-     }
-
-     /* Position the "next button" to the right */
-     .next {
-         right: 0;
-         border-radius: 3px 0 0 3px;
-     }
-
-     /* On hover, add a black background color with a little bit see-through */
-     .prev:hover, .next:hover {
-         background-color: #BDB3DB;
-     }
-
-     /* Caption text */
-     .text {
-         color: #f2f2f2;
-         font-size: 1.5em;
-         padding: 8px 12px;
-         position: absolute;
-         bottom: 8px;
-         width: 60%;
-         left: 20%;
-         text-align: center;
-         background-color: #4A3F81;
-     }
-
-     /* Number text (1/4 etc) */
-     .numbertext {
-         color: #f2f2f2;
-         font-size: 18px;
-         padding: 8px 12px;
-         position: absolute;
-         top: 0;
-     }
-
-     /* The dots/bullets/indicators */
-     .dot {
-         cursor: pointer;
-         height: 15px;
-         width: 15px;
-         margin: 0 2px;
-         background-color: #4A3F81;
-         border-radius: 50%;
-         display: inline-block;
-         transition: background-color 0.6s ease;
-     }
-
-     .active, .dot:hover {
-         background-color: #717171;
-     }
-
-     .famSlideImg {
-         width: 60%;
-     }
-
-     /* Fading animation */
-     .fade {
-         -webkit-animation-name: fade;
-         -webkit-animation-duration: 1.5s;
-         animation-name: fade;
-         animation-duration: 1.5s;
-     }
-
-     @-webkit-keyframes fade {
-         from {opacity: .4}
-         to {opacity: 1}
-     }
-
-     @keyframes fade {
-         from {opacity: .4}
-         to {opacity: 1}
-     }
-
-    @media only screen and (max-width: 500px) {
-        .famSlideImg {
-            width: 100%;
-        }
-
-        .text {
-            font-size: 1em;
-        }
-
-        .prev, .next {
-            color: white;
-            font-size: 2em;
-            top: 40%;
-        }
-
-        .next {
-            right: 4%;
-        }
-
-        .prev {
-            left: 4%;
-        }
-
-    }
-    </style>
-
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Family System'))
 
     <!-----------------------Slideshow-------------------------->
 
-    <div class="slideshow-container">
+    <div class="famSlideshowContainer">
         <!-- Full-width images with number and caption text -->
         <div style="text-align: center; margin: 5%;">
 
             <div class="mySlides fade">
                 <img class="famSlideImg" src="<?= asset('images/family/famHeads.jpg') ?>">
-                <div class="text">Family Heads 2017-2018</div>
+                <div class="famSlideText">Family Heads 2017-2018</div>
             </div>
 
             <div class="mySlides fade">
                 <img class="famSlideImg" src="<?= asset('images/family/gAang.jpg') ?>">
-                <div class="text">GAang GAang</div>
+                <div class="famSlideText">GAang GAang</div>
             </div>
 
             <div class="mySlides fade">
                 <img class="famSlideImg" src="<?= asset('images/family/hood.jpg') ?>">
-                <div class="text">Hundred Acre Hood</div>
+                <div class="famSlideText">Hundred Acre Hood</div>
             </div>
 
             <div class="mySlides fade">
                 <img class="famSlideImg" src="<?= asset('images/family/koopaTroopa.jpg') ?>">
-                <div class="text">Koopa Troopa</div>
+                <div class="famSlideText">Koopa Troopa</div>
             </div>
 
             <div class="mySlides fade">
                 <img class="famSlideImg" src="<?= asset('images/family/tbt.jpg') ?>">
-                <div class="text">#TBT</div>
+                <div class="famSlideText">#TBT</div>
             </div>
         </div>
 
@@ -190,11 +47,11 @@
 
     <!-- The dots/circles -->
     <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="famSlidedot" onclick="currentSlide(1)"></span>
+        <span class="famSlideDot" onclick="currentSlide(2)"></span>
+        <span class="famSlideDot" onclick="currentSlide(3)"></span>
+        <span class="famSlideDot" onclick="currentSlide(4)"></span>
+        <span class="famSlideDot" onclick="currentSlide(5)"></span>
     </div>
 
 
@@ -215,7 +72,7 @@
 
     <!-----------------------Countdown Timer-------------------------->
 
-      <div class="countdown coloredTile">
+      <div class="famCountdown coloredTile">
           <h1>Countdown to family reveal:</h1>
           <h2 id="counter"></h2>
           <div align="center">
