@@ -41,7 +41,7 @@
          width: auto;
          margin-top: -22px;
          padding: 16px;
-         color: white;
+         color: black;
          font-weight: bold;
          font-size: 18px;
          transition: 0.6s ease;
@@ -128,26 +128,26 @@
         <div style="text-align: center">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 4</div>
-                <img src="<?= asset('images/family/BlessUp.jpg') ?>" style="width:100%">
-                <div class="text">Bless Up</div>
+                <img src="<?= asset('images/family/gAang.jpg') ?>" style="width:60%">
+                <div class="text">GAang GAang</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">2 / 4</div>
-                <img src="<?= asset('images/family/Experiment858.jpg') ?>" style="width:100%">
-                <div class="text">Experiment 858</div>
+                <img src="<?= asset('images/family/hood.jpg') ?>" style="width:60%">
+                <div class="text">Hundred Acre Hood</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">3 / 4</div>
-                <img src="<?= asset('images/family/SquirtleSquad.jpg') ?>"  style="width:100%">
-                <div class="text">Squirtle Squad</div>
+                <img src="<?= asset('images/family/koopaTroopa.jpg') ?>"  style="width:60%">
+                <div class="text">Koopa Troopa</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">4 / 4</div>
-                <img src="<?= asset('images/family/Tumbleweed.jpg') ?>"  style="width:100%">
-                <div class="text">Tumbleweed</div>
+                <img src="<?= asset('images/family/tbt.jpg') ?>"  style="width:60%">
+                <div class="text">#TBT</div>
             </div>
         </div>
 
