@@ -43,7 +43,7 @@
          width: auto;
          margin-top: -22px;
          padding: 16px;
-         color: black;
+         color: #4A3F81;
          font-weight: bold;
          font-size: 18px;
          transition: 0.6s ease;
@@ -58,7 +58,7 @@
 
      /* On hover, add a black background color with a little bit see-through */
      .prev:hover, .next:hover {
-         background-color: rgba(0,0,0,0.8);
+         background-color: #BDB3DB;
      }
 
      /* Caption text */
@@ -121,15 +121,11 @@
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Family System'))
 
-    <div class="title-wrapper">
-        <h1 class="title">A Home Away From Home</h1>
-    </div>
-
     <!-----------------------Slideshow-------------------------->
 
     <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
-        <div style="text-align: center">
+        <div style="text-align: center; margin: 5%;">
 
             <div class="mySlides fade">
                 <img src="<?= asset('images/family/famHeads.jpg') ?>"  style="width:60%">
@@ -172,40 +168,31 @@
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
-    <!-----------------------Countdown Timer-------------------------->
-
-  <div class="wrapper">
-	
-    <br>
-    <br>
-    <p>
-        The family system is one of the most successful member-retention programs in UCSD Circle K. The family system creates
-        opportunities for club members to make new friends and memories with others. Family members will be paired based on their
-        responses on their membership application, allowing for extra compatibility.
-    </p>
-    <p>
-        Families in UCSD Circle K hold socials, inter-family competitions, service events, have their own cheers, and much more!
-        Find out which family you will be sorted into at this year's New Member Install!
-    </p>
-  </div>
-
-      <div class="countdown coloredTile">
-          <h1>Starting in:</h1>
-          <h2 id="counter"></h2>
-
-
-      <div align="center">
-          <br><br>
-          <a class="button" id="disabled">Sign up for NMI now!<br><br>(Coming Soon)</a>
-          <br><br><br></div>
-
-      </div>
 
     <div class="wrapper">
+        <div class="title-wrapper">
+            <h1 class="title">A Home Away From Home</h1>
+        </div>
+        <p>
+            The family system is one of the most successful member-retention programs in UCSD Circle K. The family system creates
+            opportunities for club members to make new friends and memories with others. Family members will be paired based on their
+            responses on their membership application, allowing for extra compatibility.
+        </p>
+        <p>
+            Families in UCSD Circle K hold socials, inter-family competitions, service events, have their own cheers, and much more!
+            Find out which family you will be sorted into at this year's New Member Install!
+        </p>
+    </div>
 
+    <!-----------------------Countdown Timer-------------------------->
 
-      <br>
-    <br>
+      <div class="countdown coloredTile">
+          <h1>Countdown to family reveal:</h1>
+          <h2 id="counter"></h2>
+          <div align="center">
+              <a class="button" id="disabled">Sign up for NMI now!<br><br>(Coming Soon)</a>
+          </div>
+      </div>
 
             <div class="title-wrapper">
                 <h1 class="title">2018-2019 Families<br> Theme: Blast to the Past</h1>
@@ -236,7 +223,5 @@
       <p style="text-align:center;">
           Individual family pages coming soon!
       </p>
-
-    </div>
 @endsection
 
