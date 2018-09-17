@@ -81,7 +81,7 @@
       </div>
 
         <div class="title-wrapper">
-            <h1 class="title">2018-2019 Families<br> Theme: Blast to the Past</h1>
+            <h1 class="title">2017-2018 Families<br> Theme: Blast to the Past</h1>
         </div>
 
     <h4 style="text-align:center;">
