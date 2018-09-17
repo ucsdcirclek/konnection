@@ -99,6 +99,10 @@
          background-color: #717171;
      }
 
+     .famSlideImg {
+         width: 60%;
+     }
+
      /* Fading animation */
      .fade {
          -webkit-animation-name: fade;
@@ -116,6 +120,31 @@
          from {opacity: .4}
          to {opacity: 1}
      }
+
+    @media only screen and (max-width: 500px) {
+        .famSlideImg {
+            width: 100%;
+        }
+
+        .text {
+            font-size: 1em;
+        }
+
+        .prev, .next {
+            color: white;
+            font-size: 2em;
+            top: 40%;
+        }
+
+        .next {
+            right: 4%;
+        }
+
+        .prev {
+            left: 4%;
+        }
+
+    }
     </style>
 
 @section('content')
@@ -128,27 +157,27 @@
         <div style="text-align: center; margin: 5%;">
 
             <div class="mySlides fade">
-                <img src="<?= asset('images/family/famHeads.jpg') ?>"  style="width:60%">
+                <img class="famSlideImg" src="<?= asset('images/family/famHeads.jpg') ?>">
                 <div class="text">Family Heads 2017-2018</div>
             </div>
 
             <div class="mySlides fade">
-                <img src="<?= asset('images/family/gAang.jpg') ?>" style="width:60%">
+                <img class="famSlideImg" src="<?= asset('images/family/gAang.jpg') ?>">
                 <div class="text">GAang GAang</div>
             </div>
 
             <div class="mySlides fade">
-                <img src="<?= asset('images/family/hood.jpg') ?>" style="width:60%">
+                <img class="famSlideImg" src="<?= asset('images/family/hood.jpg') ?>">
                 <div class="text">Hundred Acre Hood</div>
             </div>
 
             <div class="mySlides fade">
-                <img src="<?= asset('images/family/koopaTroopa.jpg') ?>"  style="width:60%">
+                <img class="famSlideImg" src="<?= asset('images/family/koopaTroopa.jpg') ?>">
                 <div class="text">Koopa Troopa</div>
             </div>
 
             <div class="mySlides fade">
-                <img src="<?= asset('images/family/tbt.jpg') ?>"  style="width:60%">
+                <img class="famSlideImg" src="<?= asset('images/family/tbt.jpg') ?>">
                 <div class="text">#TBT</div>
             </div>
         </div>
@@ -194,34 +223,36 @@
           </div>
       </div>
 
-            <div class="title-wrapper">
-                <h1 class="title">2018-2019 Families<br> Theme: Blast to the Past</h1>
+        <div class="title-wrapper">
+            <h1 class="title">2018-2019 Families<br> Theme: Blast to the Past</h1>
+        </div>
+
+    <h4 style="text-align:center;">
+        Individual family pages coming soon!
+    </h4>
+
+    <div class="wrapper">
+        <div class="contact-row">
+            <div>
+                <img src="<?= asset('images/family/ktHeads.jpg') ?>">
+                <h4><strong>Koopa Troopa</strong></h4>
             </div>
-
-    <div class="contact-row">
-        <div>
-            <img src="<?= asset('images/family/ktHeads.jpg') ?>">
-            <h4><strong>Koopa Troopa</strong></h4>
+            <div>
+                <img src="<?= asset('images/family/ggHeads.jpg') ?>">
+                <h4><strong>GAang GAang</strong></h4>
+            </div>
         </div>
-        <div>
-            <img src="<?= asset('images/family/ggHeads.jpg') ?>">
-            <h4><strong>GAang GAang</strong></h4>
+
+        <div class="contact-row">
+            <div>
+                <img src="<?= asset('images/family/tbtHeads.jpg') ?>">
+                <h4><strong>#TBT</strong></h4>
+            </div>
+            <div>
+                <img src="<?= asset('images/family/hoodHeads.jpg') ?>">
+                <h4><strong>Hundred Acre Hood</strong></h4>
+            </div>
         </div>
     </div>
-
-    <div class="contact-row">
-        <div>
-            <img src="<?= asset('images/family/tbtHeads.jpg') ?>">
-           <h4><strong>#TBT</strong></h4>
-        </div>
-        <div>
-            <img src="<?= asset('images/family/hoodHeads.jpg') ?>">
-            <h4><strong>Hundred Acre Hood</strong></h4>
-        </div>
-    </div>
-
-      <p style="text-align:center;">
-          Individual family pages coming soon!
-      </p>
 @endsection
 
