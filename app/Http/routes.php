@@ -110,6 +110,16 @@ Route::group(['prefix' => 'about'], function()
     Route::get('division', function() { return view('pages.about.division'); });
     Route::get('membership', function() { return view('pages.about.membership'); });
 });
+
+Route::group(['prefix' => 'familysystem'], function()
+{
+    Route::get('landing', function() { return view('pages.about.family.familyMain'); });
+    Route::get('family1', function() { return view('pages.about.family.family1'); });
+    Route::get('family2', function() { return view('pages.about.family.family2'); });
+    Route::get('family3', function() { return view('pages.about.family.family3'); });
+    Route::get('family4', function() { return view('pages.about.family.family4'); });
+});
+
 Route::get('contact', function() { return view('pages.contact'); });
 Route::get('gallery', function() { return view( 'pages.gallery'); });
 Route::get('resources', function() { return view( 'pages.resources'); });
