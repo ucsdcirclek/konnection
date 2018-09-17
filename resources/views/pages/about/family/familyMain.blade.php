@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Contact
+    Family
 @endsection
 
     <style>
@@ -15,6 +15,8 @@
 
      .countdown {
          text-align: center;
+         width: 100%;
+         border-radius:0;
      }
 
      * {
@@ -87,7 +89,7 @@
          height: 15px;
          width: 15px;
          margin: 0 2px;
-         background-color: #bbb;
+         background-color: #4A3F81;
          border-radius: 50%;
          display: inline-block;
          transition: background-color 0.6s ease;
@@ -167,14 +169,10 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
     <!-----------------------Countdown Timer-------------------------->
-
-    <div class="countdown">
-        <h1>Countdown to New Member Install</h1>
-        <h2 id="counter"></h2>
-    </div>
 
   <div class="wrapper">
 	
@@ -187,15 +185,23 @@
     </p>
     <p>
         Families in UCSD Circle K hold socials, inter-family competitions, service events, have their own cheers, and much more!
-        Find out which families you will be sorted into at this year's New Member Install.
+        Find out which family you will be sorted into at this year's New Member Install!
     </p>
+  </div>
+
+      <div class="countdown coloredTile">
+          <h1>Starting in:</h1>
+          <h2 id="counter"></h2>
+
 
       <div align="center">
           <br><br>
-          <a class="button" href="">New Member Install event page</a>
+          <a class="button" id="disabled">Sign up for NMI now!<br><br>(Coming Soon)</a>
           <br><br><br></div>
-      <div align="center">
+
       </div>
+
+    <div class="wrapper">
 
 
       <br>
@@ -207,28 +213,28 @@
 
     <div class="contact-row">
         <div>
-            <img src="https://i.imgur.com/oOEaEqe.png" />
-            <a href="{{ url('familysystem/family1') }}"><p><strong>Koopa Troopa</strong></p></a>
+            <img src="<?= asset('images/family/ktHeads.jpg') ?>">
+            <h4><strong>Koopa Troopa</strong></h4>
         </div>
         <div>
-            <img src="https://i.imgur.com/oOEaEqe.png" />
-            <a href="{{ url('familysystem/family2') }}"><p><strong>GAang GAang</strong></p></a>
+            <img src="<?= asset('images/family/ggHeads.jpg') ?>">
+            <h4><strong>GAang GAang</strong></h4>
         </div>
     </div>
 
     <div class="contact-row">
         <div>
-            <img src="https://i.imgur.com/oOEaEqe.png" />
-            <a href="{{ url('familysystem/family3') }}"><p><strong>#TBT</strong></p></a>
+            <img src="<?= asset('images/family/tbtHeads.jpg') ?>">
+           <h4><strong>#TBT</strong></h4>
         </div>
         <div>
-            <img src=" https://i.imgur.com/oOEaEqe.png   " />
-            <a href="{{ url('familysystem/family4') }}"><p><strong>Hundred Acre Hood</strong></p></a>
+            <img src="<?= asset('images/family/hoodHeads.jpg') ?>">
+            <h4><strong>Hundred Acre Hood</strong></h4>
         </div>
     </div>
 
-      <p>
-          Family pages coming soon!
+      <p style="text-align:center;">
+          Individual family pages coming soon!
       </p>
 
     </div>
