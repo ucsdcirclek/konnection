@@ -62,12 +62,14 @@
      /* Caption text */
      .text {
          color: #f2f2f2;
-         font-size: 40px;
+         font-size: 1.5em;
          padding: 8px 12px;
          position: absolute;
          bottom: 8px;
-         width: 100%;
+         width: 60%;
+         left: 20%;
          text-align: center;
+         background-color: #4A3F81;
      }
 
      /* Number text (1/4 etc) */
@@ -126,26 +128,28 @@
     <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
         <div style="text-align: center">
+
             <div class="mySlides fade">
-                <div class="numbertext">1 / 4</div>
+                <img src="<?= asset('images/family/famHeads.jpg') ?>"  style="width:60%">
+                <div class="text">Family Heads 2017-2018</div>
+            </div>
+
+            <div class="mySlides fade">
                 <img src="<?= asset('images/family/gAang.jpg') ?>" style="width:60%">
                 <div class="text">GAang GAang</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 4</div>
                 <img src="<?= asset('images/family/hood.jpg') ?>" style="width:60%">
                 <div class="text">Hundred Acre Hood</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 4</div>
                 <img src="<?= asset('images/family/koopaTroopa.jpg') ?>"  style="width:60%">
                 <div class="text">Koopa Troopa</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">4 / 4</div>
                 <img src="<?= asset('images/family/tbt.jpg') ?>"  style="width:60%">
                 <div class="text">#TBT</div>
             </div>
