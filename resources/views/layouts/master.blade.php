@@ -36,12 +36,7 @@
     @include('layouts.admin')
 
     <div id="header-image">
-        <!--<h1><img alt="UCSD Circle K" src="{{ asset('images/2017-18banner.jpg') }}"></h1> -->
-            <a href="https://www.youtube.com/user/ucsdcirclek" target="_blank">
-            <video muted="" id="video" autoplay="autoplay" loop="loop" style="width:100%;">
-                <source src="{{ asset('images/website-loop.mp4') }}" type="video/mp4">
-            </video>
-            </a>
+        <h1><img alt="UCSD Circle K" src="{{ asset('images/2017-18banner.jpg') }}"></h1>
     </div>
     {{-- End Header --}}
 
