@@ -15,7 +15,7 @@
         <br/>
         <HR>
         <h4>
-            <a href="https://ucsdcki.typeform.com/to/yDt69X" target="_blank">Membership Application</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdRhGeUtIXZ8I3tbiWcxmyX34WG1enXThVdFRCf9WlBe736A/viewform" target="_blank">Membership Application</a>
         </h4>
         <p> Apply to be a UCSD Circle K member! </p>
 
@@ -23,11 +23,7 @@
         <h4>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScyVCva43AA2110TtUz59CJpkmnEms0_wvVXa2eDH6KeYUW8g/viewform" target="_blank">Team Haven Impact Team Application</a>
         </h4>
-        <p style="color: red">Due: Saturday, June 9, 2018 at 11:59pm</p>
-        <p>Apply to TEAM HAVEN, the Fall 2018 Impact Team, led by Ann Go! They will be focusing on domestic violence
-            awareness & promoting healthy relationships, and seek to help those affected in our community.</p>
-
-
+      
         <HR>
 
         <!--<h4>
