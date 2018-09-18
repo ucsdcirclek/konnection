@@ -20,11 +20,6 @@
         <p> Apply to be a UCSD Circle K member! </p>
 
         <HR>
-        <h4>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScyVCva43AA2110TtUz59CJpkmnEms0_wvVXa2eDH6KeYUW8g/viewform" target="_blank">Team Haven Impact Team Application</a>
-        </h4>
-      
-        <HR>
 
         <!--<h4>
             <a href="https://files.slack.com/files-pri/T48N4GHC7-F91QG4TQA/download/prager_s_mentorship_program_circle_k_version.docx" download >
