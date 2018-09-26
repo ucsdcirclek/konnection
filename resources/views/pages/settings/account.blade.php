@@ -70,7 +70,8 @@
         {!! \Form::text('last_name') !!}
 
         <label for="avatar">Avatar</label>
-        {!! \Form::file('avatar') !!}
+        <!--{!! \Form::file('avatar') !!}--> <p style="color:#4A3F81">The upload avatar feature is currently not working. We
+        apologize for the inconvenience!</p>
 
         {!! \Form::submit('Save Settings', ['class' => 'button']) !!}
 
