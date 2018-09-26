@@ -75,7 +75,7 @@
         @foreach($slides as $slide)
             @if (empty($slide->title) || empty($slide->body))
                 <div class="slider-content">
-                    <a href="{{ $slide->link }}"><img src="{{ asset($slide->image->url()) }}"></a>
+                    <a href="{{ $slide->link }}" target="_blank"><img src="{{ asset($slide->image->url()) }}"></a>
                 </div>
             @else
                 <div class="slider-content">
