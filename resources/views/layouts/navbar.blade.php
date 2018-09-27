@@ -68,6 +68,8 @@
                         <li><a href="{{ url('/bulletin') }}">Bulletin</a></li>
                         <li><a href="{{ url('/about/drivers') }}">Driving Reimbursement</a></li>
                         <li><a href="{{url('/MRP') }}">Member Recognition Program</a></li>
+                        <li><a href="http://resources.cnhcirclek.org/" target="_blank">CNH District Resources</a></li>
+                        <li><a href="https://www.circlek.org/resources" target="_blank">International Resources</a></li>
                     </ul>
 
                 </li>
