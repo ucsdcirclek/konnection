@@ -29,8 +29,9 @@
         <p>
             <b><li><a target="_blank" href="http://dcon.cnhcirclek.org/">District Convention(DCON)</a></li></b>
             <b><li><a target="_blank" href="http://ftc.cnhcirclek.org/">Fall Training Conference</a></li></b>
-            <b><li><a target="_blank"
-                      href="http://www.cnhcirclek.org/committees/fifun/crazy-kompetition-2017-games-playbook/">CKI South</a></li></b>
+            <b><li><a target="_blank" href="http://crazykomp.cnhcirclek.org/">CKI South</a></li></b>
+            <b><li><a target="_blank" href="http://www.cnhcirclek.org/district-large-scale-service-project-2018/">District Large Scale Service Project
+                    (DLSSP) 2018</a></li></b>
         </p>
 
 
