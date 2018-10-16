@@ -43,8 +43,8 @@
                 </a>
 
                 <!--<h6 style="color:green">Status: ACTIVE</h6>-->
-                <!--<h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/31/17)</h6>-->
-                <h6 style="color:gray">Status: INACTIVE</h6>
+                <h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 10/30/18)</h6>
+                <!--<h6 style="color:gray">Status: INACTIVE</h6> -->
 
 
                 <p></p>
@@ -58,7 +58,7 @@
                 <!--href="https://docs.google.com/document/d/1ZpD1nq598Xh73avxwSBJCMTTSbxHKGyS141npbLe3jQ/edit"
                    target="_blank"-->
                 
-                <a class="button" id="disabled">
+                <a class="button" href="https://docs.google.com/document/d/1LBvdhU4-DnObX4sEdKNzYOxBHlapgNmt9_tgDyhiBVU/edit" target="_blank">
                     Apply
                 </a>
             </div>
