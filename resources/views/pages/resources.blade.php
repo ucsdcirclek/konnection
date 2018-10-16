@@ -30,17 +30,11 @@
         <HR>
 
         <h4>
-            <a href="https://docs.google.com/forms/d/1EKOqM_D8SCpstbgNjjUN7eM30TfWwK4kPL1rB3cjVyE/viewform?edit_requested=true" target="_blank">FA18 Media Assistant</a>
+            <a href="https://docs.google.com/document/d/1LBvdhU4-DnObX4sEdKNzYOxBHlapgNmt9_tgDyhiBVU/edit" target="_blank">Single
+                Large Scale Service Project Committee (SLSSP)</a>
         </h4>
-        <p>Interested in what behind-the-scenes are like in advertising for CKI this quarter? Have ideas on innovation for
-            how we promote on social media? Then apply to be PR Media Assistant! This is a learning experience, so no previous experience is needed!</p>
-
-        <HR>
-
-        <h4>
-            <a href="https://docs.google.com/forms/d/1hJ_O7YoZE3gEJEFyM-zDL6TfmoDbu3pHY1rDgDXWtmo/viewform?edit_requested=true" target="_blank">FA18 Newsletter Assistant</a>
-        </h4>
-        <p>Work with our Historian and PR Chair to help design the newsletter this quarter!</p>
+        <p>Be part of the team that organizes a full day of service projects to make a change in our community! This year's District Service
+        Initiative (DSI) is "helping those with disabilities".</p>
 
         <HR>
 
@@ -66,6 +60,14 @@
 
 
         <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em">
+
+            <h4>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScnyEghSWUo0iKsWfaw8eQ84-5TRZu_DQVg722oH6zfNuenPw/viewform"
+                   target="_blank">MBall Song Requests</a>
+            </h4>
+            <p>We will consider ALL songs, artists, and genres! (Classics included). Our DJs will do their best to incorporate the songs to  create a great mix!! </p>
+
+            <HR>
 
             <h4>
                 <a href="https://docs.google.com/spreadsheets/d/13wW9-xV0fRAQNcFqks-JQHPq3sO9a40IHEevtf0s8BM/edit#gid=0"
