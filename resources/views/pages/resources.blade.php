@@ -26,6 +26,25 @@
         </h4>
         <p>Do you want to serve as a mentor/mentee for your fellow Circle K members? Here is your opportunity!</p>
         <p>NOTE: You must be <strong>dues-paid</strong> and have completed <strong>2 service</strong> and <strong>2 social</strong> events this quarter to apply.</p>
+        <p>If you haven’t applied we’re extending the apps for LITTLES ONLY! This is your last chance to be able to get picked up by a big!
+            We're extending the app deadline to Friday November 2nd at 11:59 PM. Do your apps!!</p>
+
+        <HR>
+
+        <h4>
+        <a href="https://docs.google.com/document/d/1UR_zKl9Caxv8mDEdYCfmO2e9EMLttKuQStC3_j430XM/edit" target="_blank">Student Alliance Against Trafficking</a>
+        </h4>
+        <p>The Student Alliance Against Human Trafficking (SAAT) is a committee formed with the intention of increasing
+            the visibility of human trafficking and educating our peers on the warning signs to better protect themselves and their community.</p>
+
+        <HR>
+
+        <h4>
+            <a href="https://docs.google.com/document/d/1CneMojp7rqBN-tmzLCkCfoItfmEM7e3OsOr3tppK3w4/edit" target="_blank">Impact Team Head</a>
+        </h4>
+        <p>Impact Teams are independent service committees that are led by a general member, the Team Head. The Team Head
+            has the opportunity plan a project that makes a difference with an issue he/she is passionate about.</p>
+        <p>Apply if you would like to take this great leadership opportunity!</p>
 
         <HR>
 
