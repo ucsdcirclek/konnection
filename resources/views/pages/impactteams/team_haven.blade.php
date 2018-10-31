@@ -57,7 +57,7 @@
                 <p id="name2"><strong>Nicole Ambrioso</strong></p>
                 <p id="title2">Operations Chair</p>
             </div>
-            
+
             <div>
                 <img id="image6" src="{{ asset('images/impactteams/team_haven/Kathy.jpg') }}" />
                 <p id="name5"><strong>Kathy Tran</strong></p>
