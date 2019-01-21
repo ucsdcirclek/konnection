@@ -118,7 +118,7 @@
 
                 <div class="links">
                     <div><a class="button" href="/auth/register">Register an account on the website!</a></div>
-                    <div class="ModalLogin"><a class="button">Login <i class="fa fa-user"></i></a></div>
+                    <div><a class="button" href="{{ url('/auth/login') }}">Login <i class="fa fa-user"></i></a></div>
 
                 </div>
             </div>
