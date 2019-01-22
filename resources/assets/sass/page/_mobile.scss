@@ -60,8 +60,8 @@
     display: block;
   }
 
-  .contact-row { //Contacts page cards scroll if too wide
-    overflow-x: scroll;
+  .contact-row {
+    display:block;
   }
 
   .container {
