@@ -76,7 +76,7 @@
           <h1>Countdown to family reveal:</h1>
           <h2 id="counter"></h2>
           <div align="center">
-              <a class="button" id="disabled">Sign up for NMI now!<br><br>(Coming Soon)</a>
+              <a class="button" href="http://ucsdcki.org/events/new-member-installation-2" target="_blank" style="background-color:#1D1335">Sign up for NMI now!</a>
           </div>
       </div>
 

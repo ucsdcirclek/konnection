@@ -31,8 +31,7 @@
             <p style="line-height: 2px"><strong>(Full screen for best experience)</strong></p>
             <br/>
             <h3>Winter 2018</h3>
-            <div data-configid="32423822/59188021" style="width:640; height:259px; margin-left: 25px" class="issuuembed"></div>
-            <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+            <iframe src="https://e.issuu.com/anonymous-embed.html?u=ucsdckinewsletter&d=su_18_newsletter" width="100%" height="500" frameborder="0" allowfullscreen="true"></iframe>
 
             <br/>
             <h2>Photo Archive</h2>

@@ -93,6 +93,14 @@
                 <p>mball.finance@ucsdcki.org</p>
             </div>
         </div>
+        <div id="row3" class="contact-row">
+            <div>
+                <img id="image1" src="{{ asset('/images/Committees/TechTeam/Weijin.jpg') }}" />
+                <p id="name1"><strong>Weijin Xu</strong></p>
+                <p id="title1">Webmaster</p>
+                <p>mball.tech@ucsdcki.org</p>
+            </div>
+        </div>
     </div>
 
     <div class="title-wrapper">
