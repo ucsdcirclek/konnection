@@ -47,7 +47,7 @@
 
     <!-- The dots/circles -->
     <div style="text-align:center">
-        <span class="famSlideDot" onclick="currentSlide(1)"></span>
+        <span class="famSlideDot active" onclick="currentSlide(1)"></span>
         <span class="famSlideDot" onclick="currentSlide(2)"></span>
         <span class="famSlideDot" onclick="currentSlide(3)"></span>
         <span class="famSlideDot" onclick="currentSlide(4)"></span>
@@ -73,8 +73,8 @@
     <!-----------------------Countdown Timer-------------------------->
 
       <div class="famCountdown coloredTile">
-          <h1>Revisit New Member Install!</h1>
-          <h2 id="counter"></h2>
+          <h2>Revisit New Member Install!</h2>
+          <!--<h2 id="counter"></h2> -->
           <div align="center">
               <a class="button" href="https://drive.google.com/drive/folders/11lETpAwawk_FnPtoLeEe_Yc4aNKDxFKz" target="_blank" style="background-color:#1D1335">Photo Album</a>
           </div>

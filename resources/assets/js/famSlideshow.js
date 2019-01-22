@@ -19,7 +19,7 @@ function showSlides(n) {
     var slides = document.getElementsByClassName("mySlides");
 
     // Set the array of dots on bottom of slideshow
-    var dots = document.getElementsByClassName("dot");
+    var dots = document.getElementsByClassName("famSlideDot");
 
     // Resets slideIndex to beginning if at final pic
     if (n > slides.length) {slideIndex = 1}
