@@ -14,28 +14,28 @@
         <div style="text-align: center; margin: 5%;">
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/famHeads.jpg') ?>">
-                <div class="famSlideText">Family Heads 2017-2018</div>
+                <img class="famSlideImg" src="<?= asset('images/family/famHeads18.jpg') ?>">
+                <div class="famSlideText">Family Heads 2018-2019</div>
             </div>
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/gAang.jpg') ?>">
-                <div class="famSlideText">GAang GAang</div>
+                <img class="famSlideImg" src="<?= asset('images/family/falcons.jpg') ?>">
+                <div class="famSlideText">Millennial Falcons</div>
             </div>
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/hood.jpg') ?>">
-                <div class="famSlideText">Hundred Acre Hood</div>
+                <img class="famSlideImg" src="<?= asset('images/family/echo.jpg') ?>">
+                <div class="famSlideText">E.C.H.O</div>
             </div>
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/koopaTroopa.jpg') ?>">
-                <div class="famSlideText">Koopa Troopa</div>
+                <img class="famSlideImg" src="<?= asset('images/family/rocket.jpg') ?>">
+                <div class="famSlideText">Team Rocket</div>
             </div>
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/tbt.jpg') ?>">
-                <div class="famSlideText">#TBT</div>
+                <img class="famSlideImg" src="<?= asset('images/family/groot.jpg') ?>">
+                <div class="famSlideText">I am Groot</div>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
 
     <!-- The dots/circles -->
     <div style="text-align:center">
-        <span class="famSlidedot" onclick="currentSlide(1)"></span>
+        <span class="famSlideDot" onclick="currentSlide(1)"></span>
         <span class="famSlideDot" onclick="currentSlide(2)"></span>
         <span class="famSlideDot" onclick="currentSlide(3)"></span>
         <span class="famSlideDot" onclick="currentSlide(4)"></span>
@@ -73,15 +73,17 @@
     <!-----------------------Countdown Timer-------------------------->
 
       <div class="famCountdown coloredTile">
-          <h1>Countdown to family reveal:</h1>
+          <h1>Revisit New Member Install!</h1>
           <h2 id="counter"></h2>
           <div align="center">
-              <a class="button" href="http://ucsdcki.org/events/new-member-installation-2" target="_blank" style="background-color:#1D1335">Sign up for NMI now!</a>
+              <a class="button" href="https://drive.google.com/drive/folders/11lETpAwawk_FnPtoLeEe_Yc4aNKDxFKz" target="_blank" style="background-color:#1D1335">Photo Album</a>
           </div>
       </div>
 
+    <!--
+
         <div class="title-wrapper">
-            <h1 class="title">2017-2018 Families<br> Theme: Blast to the Past</h1>
+            <h1 class="title">2018-2019 Families<br> Theme: Galaxy</h1>
         </div>
 
     <h4 style="text-align:center;">
@@ -91,25 +93,27 @@
     <div class="wrapper">
         <div class="contact-row">
             <div>
-                <img src="<?= asset('images/family/ktHeads.jpg') ?>">
-                <h4><strong>Koopa Troopa</strong></h4>
+                <img src="<?= asset('images/family/falcons.jpg') ?>">
+                <h4><strong>Millennial Falcons</strong></h4>
             </div>
             <div>
-                <img src="<?= asset('images/family/ggHeads.jpg') ?>">
-                <h4><strong>GAang GAang</strong></h4>
+                <img src="<?= asset('images/family/echo.jpg') ?>">
+                <h4><strong>E.C.H.O</strong></h4>
             </div>
         </div>
 
         <div class="contact-row">
             <div>
-                <img src="<?= asset('images/family/tbtHeads.jpg') ?>">
-                <h4><strong>#TBT</strong></h4>
+                <img src="<?= asset('images/family/rocket.jpg') ?>">
+                <h4><strong>Team Rocket</strong></h4>
             </div>
             <div>
-                <img src="<?= asset('images/family/hoodHeads.jpg') ?>">
-                <h4><strong>Hundred Acre Hood</strong></h4>
+                <img src="<?= asset('images/family/groot.jpg') ?>">
+                <h4><strong>I am Groot</strong></h4>
             </div>
         </div>
     </div>
+
+    -->
 @endsection
 
