@@ -23,7 +23,6 @@ elixir(function(mix) {
       'slideshow.js',
       'accordion.js',
       'calendar.js',
-        'modal.js',
       'famSlideshow.js',
       'timer.js',
       '*.js'

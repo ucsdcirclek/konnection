@@ -60,8 +60,8 @@
     display: block;
   }
 
-  .contact-row { //Contacts page cards scroll if too wide
-    overflow-x: scroll;
+  .contact-row {
+    display:block;
   }
 
   .container {
@@ -72,7 +72,7 @@
   //Member recognition slide show
   .contact-row {
     padding: 5px;
-    display: flex;
+    display: block;
 
     div {
       margin: 5px;

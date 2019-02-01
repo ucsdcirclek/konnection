@@ -22,3 +22,19 @@
     border-bottom: 1px solid $light-gray;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  #login {
+
+    #login-form {
+      width: 100%;
+      border-right: 0;
+    }
+
+    #register {
+      border-top: 1px solid $light-gray;
+      padding-top: 5%;
+      width: 100%;
+    }
+  }
+}
