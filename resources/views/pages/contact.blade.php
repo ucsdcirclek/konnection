@@ -87,7 +87,7 @@
             <div>
                 <!-- <img src="{{ asset('images/board/Vanissa2.jpg') }}" /> -->
                 <img src="{{ asset('images/Crobeasts/Piranha_square.png') }}">
-                <p><strong>Vanissa Tsang</strong></p>
+                <p><strong>First Lord of CKI</strong></p>
                 <p>Public Relations</p>
                 <p>pr@ucsdcki.org</p>
             </div>
