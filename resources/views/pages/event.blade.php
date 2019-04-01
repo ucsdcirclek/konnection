@@ -152,11 +152,13 @@
                     </div>
 
                     @if(is_null($event->chair))
-                        <img src="{{ $event->creator->avatar->url() }}">
+                        <!-- <img src="{{ $event->creator->avatar->url() }}"> -->
+                        <img src="{{ asset('images/Crobeasts/Piranha_square.png') }}">
                         <p class="name">{{ $event->creator->first_name }} {{$event->creator->last_name}}</p>
                         <p class="info">{{ $event->creator->phone }}</p>
                     @else
-                        <img src="{{ $event->chair->avatar->url() }}">
+                        <!-- <img src="{{ $event->chair->avatar->url() }}"> -->
+                        <img src="{{ asset('images/Crobeasts/Piranha_square.png') }}">
                         <p class="name">{{ $event->chair->first_name }} {{$event->chair->last_name}}</p>
                         <p class="info">{{ $event->chair->phone }}</p>
                     @endif
@@ -205,7 +207,8 @@
                         <li class="avatar small">
 
                             <div class="avatar-wrapper">
-                                <img src="{{ $registration->user->avatar->url() }}">
+                                <!-- <img src="{{ $registration->user->avatar->url() }}"> -->
+                                <img src="{{ asset('images/Crobeasts/Piranha_square.png') }}">
                                 {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
                                 <div class="overlay">
                                     @if ($registration->driver_status)
@@ -228,7 +231,8 @@
                     @foreach($event->guests as $guestRegistration)
                         <li class="avatar small">
                             <div class="avatar-wrapper">
-                                <img src="/avatars/original/missing.png"/>
+                                <!-- <img src="/avatars/original/missing.png"/> -->
+                                <img src="{{ asset('images/Crobeasts/Piranha_square.png') }}">
                                 {{-- Only allows for one type (of driver, photographer, or writer), driver type takes priority --}}
                                 <div class="overlay">
                                     @if ($guestRegistration->driver_status)
