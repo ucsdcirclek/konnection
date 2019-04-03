@@ -149,6 +149,7 @@ Route::get('TeamFTK', function() { return view( 'pages.impactteams.teamftk'); })
 Route::get('TeamPulse', function() { return view( 'pages.impactteams.teampulse'); });
 Route::get('Team_Paws', function() { return view( 'pages.impactteams.team_paws'); });
 Route::get('Team_Haven', function() { return view( 'pages.impactteams.team_haven'); });
+Route::get('Team_Alice', function() { return view( 'pages.impactteams.team_alice'); });
 
 //Route::get('landing', function() { return view( 'pages.landing'); });
 Route::get('MRP', function() { return view( 'pages.MRP'); });

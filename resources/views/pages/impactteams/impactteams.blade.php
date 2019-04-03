@@ -23,6 +23,27 @@
 
         <div class="commbox">
             <div class="picture_container">
+                <img class src="{{ asset('images/impactteams/team_alice/team_alice.jpg') }}" alt="Avatar">
+            </div>
+            <div class="textbox">
+                <a href="{{ url('Team_Haven') }}">
+                    <h2>Team Alice</h2>
+                </a>
+
+                <!-- <h6 style="color:gray">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
+                  current Impact Team for the quarter-->
+                <h6 style="color:gray">Status: COMPLETED</h6>
+
+                <p></p>
+                <p>ALICE’s ( Alzheimer’s; Learn. Inform. Care. End.) focus is on raising awareness on Alzheimer's Disease.</p>
+                <a href="{{ url('Team_Alice') }}">
+                    <button>Learn more</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="commbox">
+            <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/team_haven/TeamHaven_Thumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
@@ -30,9 +51,9 @@
                     <h2>Team Haven</h2>
                 </a>
 
-                <h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
+               <!-- <h6 style="color:gray">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
                  current Impact Team for the quarter-->
-                <!--<h6 style="color:gray">Status: COMPLETED</h6>-->
+                <h6 style="color:gray">Status: COMPLETED</h6>
 
                 <p></p>
                 <p>Team Haven is focused on spreading awareness on domestic violence, as well as educating the local community!</p>
