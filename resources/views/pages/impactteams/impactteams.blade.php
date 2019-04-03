@@ -26,8 +26,8 @@
                 <img class src="{{ asset('images/impactteams/team_alice/team_alice.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
-                <a href="{{ url('Team_Haven') }}">
-                    <h2>Team Alice</h2>
+                <a href="{{ url('ALICE') }}">
+                    <h2>ALICE</h2>
                 </a>
 
                 <!-- <h6 style="color:gray">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
@@ -36,7 +36,7 @@
 
                 <p></p>
                 <p>ALICE’s ( Alzheimer’s; Learn. Inform. Care. End.) focus is on raising awareness on Alzheimer's Disease.</p>
-                <a href="{{ url('Team_Alice') }}">
+                <a href="{{ url('ALICE') }}">
                     <button>Learn more</button>
                 </a>
             </div>

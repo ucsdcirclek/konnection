@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Team Alice
+    ALICE
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
         <div class="title-wrapper">
             <p></p>
             <p></p>
-            <h1 class="title">What is Team ALICE?</h1>
+            <h1 class="title">What is ALICE?</h1>
         </div>
         <p> Every single year, around half a million people are diagnosed with Alzheimer’s.
             It remains to be one of the leading causes of death in America. ALICE’s ( Alzheimer’s; Learn. Inform. Care.
