@@ -69,8 +69,8 @@
                         <!-- Button code -->
                             <div title="Add to Calendar" class="addeventatc">
                                 Add to Calendar
-                                <span class="start">{{$event->start_time}}</span>
-                                <span class="end">{{$event->end_time}}</span>
+                                <span class="start">{{$event->start_time->setTimezone('America/Los_Angeles')}}</span>
+                                <span class="end">{{$event->end_time->setTimezone('America/Los_Angeles')}}</span>
                                 <span class="title">{{$event->title}}</span>
                                 <span class="description">{{$event->description}}</span>
                                 <span class="location">{{$event->event_location}}</span>
