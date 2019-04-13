@@ -20,6 +20,8 @@
             width: 100%;
         }
     }
+
+
 </style>
 
 @section('title', $event->title)
@@ -46,7 +48,7 @@
         <div id="viewport">
 
             <div class="head">
-
+                <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
                 <div class="event-info">
                     <h2>{{ $event->title }}</h2>
                     <ul>
@@ -64,6 +66,16 @@
                 {{-- Only allow registration if the event is actually open --}}
                 @if($event->isOpen())
                     @if($event->isRegistered(Auth::id()))
+                        <!-- Button code -->
+                            <div title="Add to Calendar" class="addeventatc">
+                                Add to Calendar
+                                <span class="start">{{$event->start_time}}</span>
+                                <span class="end">{{$event->end_time}}</span>
+                                <span class="title">{{$event->title}}</span>
+                                <span class="description">{{$event->description}}</span>
+                                <span class="location">{{$event->event_location}}</span>
+                                <span class="calname">use-title</span>
+                            </div>
                         <h4 style="color:green;">Signup successful!</h4>
                     @endif
                     <div class="signup">
