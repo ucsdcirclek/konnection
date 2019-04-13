@@ -146,7 +146,7 @@
                         </a>
                     </p>
 
-                    <p class="date">{{ $featured->event->start_time->format('F j') }}</p>
+                    <p class="date">{{ $featured->event->setTimezone('America/Los_Angeles')->start_time->format('F j') }}</p>
 
                     <p class="info">
                       {{ $featured->summary }}
