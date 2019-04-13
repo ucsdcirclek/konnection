@@ -57,9 +57,11 @@
                                 {{ $event->start_time->setTimezone('America/Los_Angeles')->format('g:ia') }} to {{ $event->end_time->setTimezone('America/Los_Angeles')->format('g:ia') }}
                             </strong></li>
                         @if($event->event_location)
-                            <li>{{ $event->event_location }}</li>@endif
+                            <a href="https://www.google.com/maps/search/{{ $event->meeting_location }}"> {{$event->meeting_location}}</a>
+                            <!--<li>{{ $event->event_location }}</li>-->@endif
                         @if($event->meeting_location)
-                            <li>Meet at <strong>{{ $event->meeting_location}}</strong></li>@endif
+                            <li>Meet at <b><a href="https://www.google.com/maps/search/{{ $event->meeting_location }}"> {{$event->meeting_location}}</a></b> </li>
+                            <!--<li>Meet at <strong>{{ $event->meeting_location}}</strong></li>-->@endif
                     </ul>
                 </div>
 
