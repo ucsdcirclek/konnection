@@ -206,6 +206,9 @@
                             <img src="{{ asset('images/impactteams/teamftk/Vivian.jpg') }}" />
                         </div>
                         <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/Tri.jpg') }}" />
+                        </div>
+                        <div>
                             <img src="{{ asset('images/halloffame/mr/spotlight/Vanissa.jpg') }}" />
                         </div>
                         <div>
