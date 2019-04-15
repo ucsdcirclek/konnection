@@ -153,10 +153,7 @@ class UsersController extends Controller {
         $image = Image::make(public_path() . $avatarPath);
 
         $image->fit(300);
-        // trying to fix pfp: create folder before writing
-        if(!file_exists(public_path().$avatarPath)){
-            mkdir(public_path().$avatar_path, 666, true);
-        }
+
         $image->save(public_path() . $avatarPath);
 
         return $image;
