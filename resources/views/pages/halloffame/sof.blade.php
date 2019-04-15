@@ -155,12 +155,6 @@
                     <p>1st Year</p>
                     <p>International Business</p>
                 </div>
-                <div>
-                    <img src="{{asset('images/halloffame/mr/sof/Tri.jpg')}}" />
-                    <p><strong>Tri Tran</strong></p>
-                    <p>3rd Year</p>
-                    <p>Mathematics</p>
-                </div>
             </div>
         </div>
 
