@@ -3,18 +3,18 @@ ul.week {
 
   > li.featured {
     background-color: $emphasis-color;
-    color: white;
+    color: black;
 
     h5 {
-      color: white;
-      border-bottom: 1px solid white;
+      color: black;
+      border-bottom: 1px solid black;
     }
 
     .title {
       font-size: 1em;
 
       a {
-        color: white;
+        color: black;
 
         &:hover {
           color: darken(white, 20%);

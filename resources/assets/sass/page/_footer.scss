@@ -17,7 +17,7 @@ footer {
     @include shift(3);
 
     text-align: center;
-    color: white;
+    color: black;
 
     &#credits {
       font-size: .8em;
@@ -27,7 +27,7 @@ footer {
 }
 
 .socialMediaIcons > a {
-  color: white;
+  color: black;
   font-size: 1.5em;
   &:hover {
     color: #999;

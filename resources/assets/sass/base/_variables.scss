@@ -21,6 +21,7 @@ $green: #759936;
 $red: #8B1C23;
 $tan: #CEB28A;
 $white: #FFF;
+$black: #000;
 
 // Colors for "under the sea" theme
 $lightest-gray: #f3f3f3;
@@ -54,6 +55,12 @@ $dark-slate-blue: #4A3F81;
 $old-rose: #A454A2;
 $light-steel-blue: #BDB3DB;
 
+// colors 2019 https://colorhunt.co/palette/42191
+$lightest-blue-2019: #e3fdfd;
+$teal-2019: #cbf1f5;
+$dark-teal-2019: #a6e3e9;
+$turquoise-2019: #71c9ce;
+
 // Event tags sections in CERF creation form
 $brown: #4D2C19;
 $gold: #FFC53A;
@@ -69,6 +76,7 @@ $snapchat: #FFFC00;
 
 // Calendar event type colors
 
+//service: #ed2939; // red for summer
 $service: #6DA592;
 $social: #4A7B9D;
 $committee: #93ACB5;
@@ -77,20 +85,20 @@ $fundraising: #759936;
 $division: #CEB28A;
 
 // Background Colors
-$base-background-color: $dark-slate-blue;
-$home-background-color: $lightest-gray;
+$base-background-color: $white;
+$home-background-color: $teal-2019;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$base-accent-color: $midnight-blue;
-$header-font-color: $base-accent-color;
+$base-font-color: black;
+$base-accent-color: $lightest-blue-2019;
+$header-font-color: $black;
 
 // Link Colors
-$base-link-color: $dark-slate-blue;                    // Button colors.
+$base-link-color: $blue;
 $hover-link-color: $steel-blue-2;
-$base-button-color: $base-link-color;
-$hover-button-color: $steel-blue-2;
-$emphasis-color: $midnight-blue;
+$base-button-color: $dark-teal-2019;
+$hover-button-color: $turquoise-2019;
+$emphasis-color: $teal-2019;
 $hover-dropdown-color: $darker-slate-gray; // Color of drop-down when hovering
 
 // Border color

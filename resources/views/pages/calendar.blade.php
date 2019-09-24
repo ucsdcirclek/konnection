@@ -26,13 +26,9 @@
             }
         }
 
-        .calendar .fc-left h2 {
-            color: #4A3F81;
-        }
 
-        .calendar .fc-day-header {
-            background-color: #4A3F81;
-        }
+
+
     </style>
 
   <div class="mobile-text">
