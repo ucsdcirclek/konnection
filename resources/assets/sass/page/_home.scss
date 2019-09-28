@@ -17,7 +17,7 @@
     @include fill-parent;
     @include row(table);
 
-    @include sharp-gradient($lightest-blue, $base-accent-color); // genius indeed
+    @include sharp-gradient(white, $base-accent-color); // genius indeed
 
     overflow: hidden;
 
@@ -98,7 +98,7 @@
   }
 
   #announcements-view {
-    background-color: $lightest-blue;
+    background-color: white;
 
     padding: 20px 40px 20px 40px;
 

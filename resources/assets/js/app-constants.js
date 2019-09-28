@@ -5,7 +5,9 @@
 var appConstants = {
 
   // Colors of each event type on calendar.
-  'SERVICE_COLOR': '#6DA592',
+
+  'SERVICE_COLOR': '#EA3C53',
+  //'SERVICE_COLOR': '#6DA592',
   'SOCIAL_COLOR': '#4A7B9D',
   'COMMITTEE_COLOR': '#93ACB5',
   'KIWANIS_COLOR': '#A898B3',

@@ -2,7 +2,7 @@
   -webkit-font-smoothing: antialiased;
   background-color: $base-button-color;
   border-radius: $base-border-radius;
-  color: white;
+  color: black;
   display: inline-block;
   font-size: $base-font-size;
   font-weight: bold;
@@ -12,6 +12,6 @@
 
   &:hover {
     background-color: $hover-button-color;
-    color: white;
+    color: black;
   }
 }
