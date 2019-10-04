@@ -105,10 +105,10 @@
 }
 
 a {
-  color: $dark-teal-2019;
+  color: $base-link-color;
 }
 
 a:hover {
-  color: $turquoise-2019;
+  color: darken($base-link-color, 10%);
 }
 

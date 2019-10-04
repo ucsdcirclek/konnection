@@ -60,6 +60,8 @@ $lightest-blue-2019: #e3fdfd;
 $teal-2019: #cbf1f5;
 $dark-teal-2019: #a6e3e9;
 $turquoise-2019: #71c9ce;
+$savannah-lb: #abd4e5;
+$savannah-navy: #004764;
 
 // Event tags sections in CERF creation form
 $brown: #4D2C19;
@@ -75,18 +77,24 @@ $twitter: #00ACED;
 $snapchat: #FFFC00;
 
 // Calendar event type colors
+$service : #F6BCBC;
+$social: #A4CDDD;
+$committee: #869DA6;
+$kiwanis: #ADB5E2;
+$fundraising: #c7efd6;
+$division: #357790;
 
-$service: #EA3C53; // red for summer
+// old colors
 //$service: #6DA592;
-$social: #4A7B9D;
-$committee: #93ACB5;
-$kiwanis: #A898B3;
-$fundraising: #759936;
-$division: #CEB28A;
+//$social: #4A7B9D;
+//$committee: #93ACB5;
+//$kiwanis: #A898B3;
+//$fundraising: #759936;
+//$division: #CEB28A;
 
 // Background Colors
 $base-background-color: $white;
-$home-background-color: $teal-2019;
+$home-background-color: $savannah-lb;
 
 // Font Colors
 $base-font-color: black;
@@ -94,7 +102,7 @@ $base-accent-color: $lightest-blue-2019;
 $header-font-color: $black;
 
 // Link Colors
-$base-link-color: $blue;
+$base-link-color: $savannah-navy;
 $hover-link-color: $steel-blue-2;
 $base-button-color: $dark-teal-2019;
 $hover-button-color: $turquoise-2019;

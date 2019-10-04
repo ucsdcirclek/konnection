@@ -46,10 +46,10 @@
   }
 
   a {
-    color: $emphasis-color;
+    color: $base-link-color;
   }
 
   a:hover {
-    color: lighten($emphasis-color, 10%);
+    color: darken($base-link-color, 10%);
   }
 }

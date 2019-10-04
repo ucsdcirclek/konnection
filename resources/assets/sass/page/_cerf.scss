@@ -30,11 +30,11 @@
 .page-header {
   @include fill-parent;
   height: 120px;
-  background-color: $emphasis-color;
+  background-color: $savannah-navy;
   text-align: center;
 
   h1 {
-    color: black;
+    color: white;
     line-height: 120px;
   }
 }

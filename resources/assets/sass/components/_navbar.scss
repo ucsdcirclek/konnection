@@ -2,9 +2,9 @@
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 70px;
-$nav-background: $teal-2019;
-$nav-font-color: $black;
-$link-hover-color: $dark-teal-2019;
+$nav-background: $savannah-navy;
+$nav-font-color: white;
+$link-hover-color: lighten($nav-background, 10%);
 
 // Outer navigation wrapper
 .navigation {
