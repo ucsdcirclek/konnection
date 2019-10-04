@@ -59,16 +59,17 @@
                 <div>
                     <i class="fas fa-file-signature"></i>
                     <h4>Application</h4>
-                    <p>Follow the link below to fill out our online application. The information will be used to sort you into a <strong>family!</strong></p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdRhGeUtIXZ8I3tbiWcxmyX34WG1enXThVdFRCf9WlBe736A/viewform" target="_blank">
+                    <p>Follow the link below to fill out our online application. The information will be used to sort you into a family!</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhVzJsv56i_t-baYNrSZdFD4qRZUnS6zlf2cbYSrgbJggR6g/viewform?fbclid=IwAR0vKUhTgWzYz9LAKTDxzuo5qTkARflGpo1bhYGnE0MyuafYkrPGbWKM1zI"
+                       target="_blank">
                         <button class="cardBtn">Apply</button>
                     </a>
                 </div>
                 <div>
                     <i class="fas fa-box"></i>
                     <h4>Membership Dues</h4>
-                    <p>Dues cost $45 for the 2018-2019 school year. Pay by cash, check to UCSD Circle K, or venmo @UCSDCircleK. <strong>Dues must be paid by our week 3 GBM</strong>
-                        to be sorted into a family at new member install.
+                    <p>Dues cost $45 for the 2018-2019 school year. Pay by cash, check to UCSD Circle K, or venmo @UCSDCircleK. <!--<strong>Dues must be paid by our week 3 GBM</strong>
+                        to be sorted into a family at new member install.-->
                     </p>
                     <a href="https://venmo.com/UCSDCircleK" target="_blank">
                         <button class="cardBtn">Venmo Page</button>
@@ -79,7 +80,7 @@
                     <h4>CST</h4>
                     <p>Community Service Transportation (CST) will provide free rides to all our service events in the San Diego area. Just fill out their form and
                     you're ready to go!</p>
-                    <a href="https://students.ucsd.edu/student-life/involvement/community/local-ongoing-service/cstvans/orientation.html" target="_blank">
+                    <a href="https://getinvolved.ucsd.edu/service/cstvans/orientation.html" target="_blank">
                         <button class="cardBtn">CST Page</button>
                     </a>
                 </div>
@@ -122,11 +123,11 @@
                 <td><i class="fas fa-close"></i></td>
                 <td><i class="fas fa-check"></i></td>
             </tr>
-            <tr>
+            <!--<tr>
                 <td>Track your MRP hours and status</td>
                 <td><i class="fas fa-close"></i></td>
                 <td><i class="fas fa-check"></i></td>
-            </tr>
+            </tr>-->
             <tr>
                 <td>Change contact information</td>
                 <td><i class="fas fa-close"></i></td>
