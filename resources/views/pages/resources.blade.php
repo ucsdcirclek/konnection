@@ -11,24 +11,24 @@
     <div style="height:425px;width:100%;border:1px solid #ccc;overflow:auto;padding:1em"> -->
 
     <div class="wrapper">
-        <h3><center>Applications</h3></center>
+        <h3>Applications</h3>
         <br/>
         <HR>
         <h4>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdRhGeUtIXZ8I3tbiWcxmyX34WG1enXThVdFRCf9WlBe736A/viewform" target="_blank">Membership Application</a>
+            <a href="https://tinyurl.com/CKIMember2020" target="_blank">Membership Application</a>
         </h4>
         <p> Apply to be a UCSD Circle K member! </p>
 
         <HR>
 
         <h4>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ7Sq_3aCn4SUIfEWy_GPELfJYSIUzLQN8xedkn9feql5C9A/viewform" target="_blank">Big/Little Applications</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9-e3w6pXPDa2yIi67i2-5eIagrGgjT7zMoBcQCxYLfO2Xgg/viewform?fbclid=IwAR2PglYZdyMFC2pr1wB33sHxxilzqBSfURt_a6ZFhuoxE4qFBJc0nCizscI" target="_blank">Big/Little Applications</a>
         </h4>
         <p>Do you want to serve as a mentor/mentee for your fellow Circle K members? Here is your opportunity!</p>
         <p>NOTE: You must be <strong>dues-paid</strong> and have completed <strong>2 service</strong> and <strong>2 social</strong> events this quarter to apply.</p>
-        <p>If you haven’t applied we’re extending the apps for LITTLES ONLY! This is your last chance to be able to get picked up by a big!
-            We're extending the app deadline to Friday November 2nd at 11:59 PM. Do your apps!!</p>
-
+        <p>Deadline is October 25th at 11:59 PM</p>
+    </div>
+<!--
         <HR>
 
         <h4>
@@ -71,7 +71,7 @@
         <p> Are you interested in applying for a Kiwanis member to help you advance in your field of career?
             Fill out an application today and hand it into our President! </p>
 -->
-
+<!--
         <br/>
 
         <h3><center>Forms</h3></center>
@@ -187,7 +187,7 @@
             </p>
         </div>
 
-    </div>
+    </div> -->
 
 @endsection
 
