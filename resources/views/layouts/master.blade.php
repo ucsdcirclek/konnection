@@ -7,6 +7,7 @@
     <meta name="description" content="@yield('description')">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta property="og:image" content = "{{ asset('images/banner.png') }}">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css">
@@ -36,7 +37,7 @@
     @include('layouts.admin')
 
     <div id="header-image">
-        <h1><img alt="UCSD Circle K" src="{{ asset('images/Website Banner.png') }}"></h1>
+        <h1><img alt="UCSD Circle K" src="{{ asset('images/banner.png') }}"></h1>
     </div>
     {{-- End Header --}}
 
