@@ -10,7 +10,7 @@
     <div class="wrapper">
 
     <ul style="list-style-type:disc">
-        <li>You must drive the minimum of 50 miles to be reimbursed.</li>
+        <li>You must drive the minimum of 50 miles each quarter to be reimbursed.</li>
         <li>All District and Kiwanis Family events are reimbursed both ways.</li>
         <li>All Service events are reimbursed both ways unless CST transportation is provided. Drivers will not be reimbursed
             for events with CST regardless of how many members they drive unless CST vans are full.</li>
@@ -21,7 +21,5 @@
         <li>Miles driven will be reimbursed at a flat rate of $0.20/mile regardless of the type of event.</li>
         <li>All reimbursement will be distributed at the end of each quarter by the Treasurer.</li>
     </ul>
-    <br>
-    <iframe style="display:block; margin:auto;" src="https://docs.google.com/forms/d/e/1FAIpQLSeKcgJ6TK2iljPGgKtEgi4BoQTyYJDG1wXljr9ay9cW8hRTZg/viewform?embedded=true" width="640" height="3248" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 @endsection
