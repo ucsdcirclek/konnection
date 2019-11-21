@@ -158,6 +158,61 @@
             </div>
         </div>
 
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'April 2019'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/halloffame/mr/sof/Aidan.png')}}" />
+                    <p><strong>Aidan Lund</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'May 2019'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/halloffame/mr/sof/Alex.png')}}" />
+                    <p><strong>Alex Padayao</strong></p>
+                </div>
+                <div>
+                    <img src="{{ asset('images/halloffame/mr/sof/Quylan.png') }}" />
+                    <p><strong>Quylan Mac</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'October 2019'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/halloffame/mr/sof/Ivan.png')}}" />
+                    <p><strong>Ivan Tran</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'November 2019'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/halloffame/mr/sof/Andrew.png')}}" />
+                    <p><strong>Andrew Ung</strong></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
 
     @endsection

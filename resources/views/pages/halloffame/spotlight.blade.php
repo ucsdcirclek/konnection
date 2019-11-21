@@ -161,5 +161,46 @@
                 </div>
             </div>
         </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'May 2019'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/halloffame/mr/spotlight/Kevin.png')}}" />
+                    <p><strong>Kevin Nguyen</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'October 2019'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/halloffame/mr/spotlight/Ramtin.png')}}" />
+                    <p><strong>Ramtin Azarbad</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'November 2019'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/halloffame/mr/spotlight/Jose.png')}}" />
+                    <p><strong>Jose Tapia Espinosa</strong></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     </div>
 @endsection
