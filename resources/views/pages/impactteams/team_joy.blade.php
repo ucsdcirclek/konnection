@@ -7,10 +7,7 @@
 @section('content')
 
     <div id="background" class="bigbanner"
-         style="background-image: url('/images/impactteams/team_joy/group1.png');background-repeat: no-repeat;">
-        <div id="title" class="bigbannertext">
-            Team Joy
-        </div>
+         style="content: url('/images/impactteams/team_joy/group1.png');    ">
     </div>
 
     <div class="message-box">
