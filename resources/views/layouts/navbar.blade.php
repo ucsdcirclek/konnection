@@ -51,6 +51,7 @@
                         <li><a href="{{url('/MRP') }}">Member Recognition Program</a></li>
                         <li><a href="http://resources.cnhcirclek.org/" target="_blank">CNH District Resources</a></li>
                         <li><a href="https://www.circlek.org/resources" target="_blank">International Resources</a></li>
+                        <li><a href="https://bit.ly/2Pft46g" target="_blank">Cheers</a></li>
                     </ul>
 
                 </li>
