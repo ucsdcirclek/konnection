@@ -14,28 +14,28 @@
         <div style="text-align: center; margin: 5%;">
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/famHeads18.jpg') ?>">
+                <img class="famSlideImg" src="<?= asset('images/family/FamHeads19-20.jpg') ?>">
                 <div class="famSlideText">Family Heads 2018-2019</div>
             </div>
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/falcons.jpg') ?>">
-                <div class="famSlideText">Millennial Falcons</div>
+                <img class="famSlideImg" src="<?= asset('images/family/HLV.jpg') ?>">
+                <div class="famSlideText">Hidden Leaf Village</div>
             </div>
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/echo.jpg') ?>">
-                <div class="famSlideText">E.C.H.O</div>
+                <img class="famSlideImg" src="<?= asset('images/family/GBR.jpg') ?>">
+                <div class="famSlideText">Great Barrier Reef</div>
             </div>
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/rocket.jpg') ?>">
-                <div class="famSlideText">Team Rocket</div>
+                <img class="famSlideImg" src="<?= asset('images/family/Pengu.jpg') ?>">
+                <div class="famSlideText">Club Pengu</div>
             </div>
 
             <div class="mySlides fade">
-                <img class="famSlideImg" src="<?= asset('images/family/groot.jpg') ?>">
-                <div class="famSlideText">I am Groot</div>
+                <img class="famSlideImg" src="<?= asset('images/family/MK.jpg') ?>">
+                <div class="famSlideText">Mushroom Kingdom</div>
             </div>
         </div>
 
