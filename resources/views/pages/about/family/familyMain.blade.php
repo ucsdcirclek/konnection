@@ -15,7 +15,7 @@
 
             <div class="mySlides fade">
                 <img class="famSlideImg" src="<?= asset('images/family/FamHeads19-20.jpg') ?>">
-                <div class="famSlideText">Family Heads 2018-2019</div>
+                <div class="famSlideText">Family Heads 2019-2020</div>
             </div>
 
             <div class="mySlides fade">
