@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "5415f3dd56dff17772eb20dbf073de01",
     "content-hash": "51b6f4a30d860f8f64b5c5979da5cd47",
     "packages": [
         {
@@ -48,7 +47,7 @@
                 "cors",
                 "stack"
             ],
-            "time": "2014-07-28 07:22:35"
+            "time": "2014-07-28T07:22:35+00:00"
         },
         {
             "name": "barryvdh/laravel-cors",
@@ -97,7 +96,7 @@
                 "crossdomain",
                 "laravel"
             ],
-            "time": "2015-12-20 20:32:17"
+            "time": "2015-12-20T20:32:17+00:00"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -151,7 +150,7 @@
                 "class",
                 "preload"
             ],
-            "time": "2015-11-09 22:51:51"
+            "time": "2015-11-09T22:51:51+00:00"
         },
         {
             "name": "cocur/slugify",
@@ -214,7 +213,7 @@
                 "slug",
                 "slugify"
             ],
-            "time": "2016-02-11 09:53:46"
+            "time": "2016-02-11T09:53:46+00:00"
         },
         {
             "name": "codesleeve/laravel-stapler",
@@ -264,7 +263,7 @@
                 "stapler",
                 "upload"
             ],
-            "time": "2016-04-14 21:26:17"
+            "time": "2016-04-14T21:26:17+00:00"
         },
         {
             "name": "codesleeve/stapler",
@@ -317,7 +316,7 @@
                 "s3",
                 "upload"
             ],
-            "time": "2016-01-30 21:39:33"
+            "time": "2016-01-30T21:39:33+00:00"
         },
         {
             "name": "cviebrock/eloquent-sluggable",
@@ -367,7 +366,7 @@
                 "laravel",
                 "slug"
             ],
-            "time": "2016-01-03 21:24:10"
+            "time": "2016-01-03T21:24:10+00:00"
         },
         {
             "name": "dingo/api",
@@ -443,7 +442,7 @@
                 "laravel",
                 "restful"
             ],
-            "time": "2016-04-08 06:28:50"
+            "time": "2016-04-08T06:28:50+00:00"
         },
         {
             "name": "dingo/blueprint",
@@ -499,7 +498,7 @@
                 "docs",
                 "laravel"
             ],
-            "time": "2016-03-31 11:16:28"
+            "time": "2016-03-31T11:16:28+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -532,7 +531,7 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
-            "time": "2014-10-24 07:27:01"
+            "time": "2014-10-24T07:27:01+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -600,7 +599,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2015-08-31 12:32:49"
+            "time": "2015-08-31T12:32:49+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -670,7 +669,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-12-31 16:37:02"
+            "time": "2015-12-31T16:37:02+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -736,7 +735,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-14 22:21:58"
+            "time": "2015-04-14T22:21:58+00:00"
         },
         {
             "name": "doctrine/common",
@@ -809,7 +808,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-12-25 13:18:31"
+            "time": "2015-12-25T13:18:31+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -880,7 +879,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2016-01-05 22:11:12"
+            "time": "2016-01-05T22:11:12+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -947,7 +946,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-11-06 14:35:42"
+            "time": "2015-11-06T14:35:42+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -1001,7 +1000,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-09-09 13:34:57"
+            "time": "2014-09-09T13:34:57+00:00"
         },
         {
             "name": "greggilbert/recaptcha",
@@ -1053,7 +1052,7 @@
                 "laravel5",
                 "recaptcha"
             ],
-            "time": "2016-02-17 12:41:57"
+            "time": "2016-02-17T12:41:57+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1115,7 +1114,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-03-21 20:02:09"
+            "time": "2016-03-21T20:02:09+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1166,7 +1165,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-03-08 01:15:46"
+            "time": "2016-03-08T01:15:46+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1224,7 +1223,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2016-04-13 19:56:01"
+            "time": "2016-04-13T19:56:01+00:00"
         },
         {
             "name": "imagine/imagine",
@@ -1281,7 +1280,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2015-09-19 16:54:05"
+            "time": "2015-09-19T16:54:05+00:00"
         },
         {
             "name": "intervention/image",
@@ -1343,7 +1342,7 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2016-04-26 14:08:40"
+            "time": "2016-04-26T14:08:40+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -1385,7 +1384,7 @@
                 "hashing",
                 "password"
             ],
-            "time": "2014-11-20 16:49:30"
+            "time": "2014-11-20T16:49:30+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1428,7 +1427,7 @@
                     "homepage": "http://www.acci.cz"
                 }
             ],
-            "time": "2014-04-08 15:00:19"
+            "time": "2014-04-08T15:00:19+00:00"
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -1472,10 +1471,10 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-            "time": "2015-04-20 18:58:01"
+            "time": "2015-04-20T18:58:01+00:00"
         },
         {
-            "name": "jeremeamia/SuperClosure",
+            "name": "jeremeamia/superclosure",
             "version": "2.2.0",
             "source": {
                 "type": "git",
@@ -1530,7 +1529,7 @@
                 "serialize",
                 "tokenizer"
             ],
-            "time": "2015-12-05 17:17:57"
+            "time": "2015-12-05T17:17:57+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1659,7 +1658,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-05-17 13:24:40"
+            "time": "2016-05-17T13:24:40+00:00"
         },
         {
             "name": "laravelcollective/html",
@@ -1713,7 +1712,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
-            "time": "2016-01-27 22:29:54"
+            "time": "2016-01-27T22:29:54+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1796,7 +1795,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-04-28 06:53:12"
+            "time": "2016-04-28T06:53:12+00:00"
         },
         {
             "name": "league/fractal",
@@ -1859,19 +1858,19 @@
                 "league",
                 "rest"
             ],
-            "time": "2015-10-07 14:48:58"
+            "time": "2015-10-07T14:48:58+00:00"
         },
         {
             "name": "miljar/php-exif",
             "version": "v0.5.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Miljar/php-exif.git",
+                "url": "https://github.com/PHPExif/php-exif.git",
                 "reference": "fd4d4747e9ea5eeb91502fd40febb24f31f1e323"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Miljar/php-exif/zipball/fd4d4747e9ea5eeb91502fd40febb24f31f1e323",
+                "url": "https://api.github.com/repos/PHPExif/php-exif/zipball/fd4d4747e9ea5eeb91502fd40febb24f31f1e323",
                 "reference": "fd4d4747e9ea5eeb91502fd40febb24f31f1e323",
                 "shasum": ""
             },
@@ -1913,7 +1912,7 @@
                 "jpeg",
                 "tiff"
             ],
-            "time": "2015-08-26 14:01:00"
+            "time": "2015-08-26T14:01:00+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1991,7 +1990,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-04-12 18:29:35"
+            "time": "2016-04-12T18:29:35+00:00"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -2035,7 +2034,7 @@
                 "cron",
                 "schedule"
             ],
-            "time": "2016-01-26 21:23:30"
+            "time": "2016-01-26T21:23:30+00:00"
         },
         {
             "name": "namshi/jose",
@@ -2085,7 +2084,7 @@
                 "jwt",
                 "token"
             ],
-            "time": "2015-06-29 05:41:44"
+            "time": "2015-06-29T05:41:44+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2132,7 +2131,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2015-11-04 20:07:17"
+            "time": "2015-11-04T20:07:17+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2183,7 +2182,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2016-04-19 13:41:41"
+            "time": "2016-04-19T13:41:41+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2231,7 +2230,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-03-18 20:34:03"
+            "time": "2016-03-18T20:34:03+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -2280,7 +2279,7 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
-            "time": "2015-02-03 12:10:50"
+            "time": "2015-02-03T12:10:50+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -2378,7 +2377,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2015-01-28 21:50:33"
+            "time": "2015-01-28T21:50:33+00:00"
         },
         {
             "name": "psr/http-message",
@@ -2427,7 +2426,7 @@
                 "request",
                 "response"
             ],
-            "time": "2015-05-04 20:22:00"
+            "time": "2015-05-04T20:22:00+00:00"
         },
         {
             "name": "psr/log",
@@ -2465,7 +2464,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
+            "time": "2012-12-21T11:40:51+00:00"
         },
         {
             "name": "psy/psysh",
@@ -2537,7 +2536,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2016-03-09 05:03:14"
+            "time": "2016-03-09T05:03:14+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2590,7 +2589,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-05-01 08:45:47"
+            "time": "2016-05-01T08:45:47+00:00"
         },
         {
             "name": "symfony/console",
@@ -2650,7 +2649,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-28 09:48:42"
+            "time": "2016-04-28T09:48:42+00:00"
         },
         {
             "name": "symfony/debug",
@@ -2707,7 +2706,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-30 10:37:34"
+            "time": "2016-03-30T10:37:34+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -2767,7 +2766,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-05-05 06:56:13"
+            "time": "2016-05-05T06:56:13+00:00"
         },
         {
             "name": "symfony/finder",
@@ -2816,20 +2815,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-10 11:13:05"
+            "time": "2016-03-10T11:13:05+00:00"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v2.8.6",
+            "version": "v2.8.52",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "ed9357bf86f041bd69a197742ee22c97989467d7"
+                "reference": "3929d9fe8148d17819ad0178c748b8d339420709"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/ed9357bf86f041bd69a197742ee22c97989467d7",
-                "reference": "ed9357bf86f041bd69a197742ee22c97989467d7",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/3929d9fe8148d17819ad0178c748b8d339420709",
+                "reference": "3929d9fe8148d17819ad0178c748b8d339420709",
                 "shasum": ""
             },
             "require": {
@@ -2871,7 +2870,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-05 16:36:54"
+            "time": "2019-11-12T12:34:41+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -2953,20 +2952,20 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2016-05-09 21:45:36"
+            "time": "2016-05-09T21:45:36+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.1.1",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "1289d16209491b584839022f29257ad859b8532d"
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/1289d16209491b584839022f29257ad859b8532d",
-                "reference": "1289d16209491b584839022f29257ad859b8532d",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7b4aab9743c30be783b73de055d24a39cf4b954f",
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f",
                 "shasum": ""
             },
             "require": {
@@ -2978,7 +2977,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -3012,20 +3011,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2019-11-27T14:18:11+00:00"
         },
         {
             "name": "symfony/polyfill-php54",
-            "version": "v1.1.1",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php54.git",
-                "reference": "9ba741ca01c77282ecf5796c2c1d667f03454ffb"
+                "reference": "dd1618047426412036e98d159940d58a81fc392c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/9ba741ca01c77282ecf5796c2c1d667f03454ffb",
-                "reference": "9ba741ca01c77282ecf5796c2c1d667f03454ffb",
+                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/dd1618047426412036e98d159940d58a81fc392c",
+                "reference": "dd1618047426412036e98d159940d58a81fc392c",
                 "shasum": ""
             },
             "require": {
@@ -3034,7 +3033,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -3070,20 +3069,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-25 19:13:00"
+            "time": "2019-11-27T13:56:44+00:00"
         },
         {
             "name": "symfony/polyfill-php55",
-            "version": "v1.1.1",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php55.git",
-                "reference": "b4f3f07d91702f8f926339fc4fcf81671d8c27e6"
+                "reference": "b0d838f225725e2951af1aafc784d2e5ea7b656e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php55/zipball/b4f3f07d91702f8f926339fc4fcf81671d8c27e6",
-                "reference": "b4f3f07d91702f8f926339fc4fcf81671d8c27e6",
+                "url": "https://api.github.com/repos/symfony/polyfill-php55/zipball/b0d838f225725e2951af1aafc784d2e5ea7b656e",
+                "reference": "b0d838f225725e2951af1aafc784d2e5ea7b656e",
                 "shasum": ""
             },
             "require": {
@@ -3093,7 +3092,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -3126,7 +3125,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2019-11-27T13:56:44+00:00"
         },
         {
             "name": "symfony/polyfill-php56",
@@ -3182,7 +3181,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2016-01-20T09:13:37+00:00"
         },
         {
             "name": "symfony/polyfill-util",
@@ -3234,7 +3233,7 @@
                 "polyfill",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2016-01-20T09:13:37+00:00"
         },
         {
             "name": "symfony/process",
@@ -3283,7 +3282,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-14 15:30:28"
+            "time": "2016-04-14T15:30:28+00:00"
         },
         {
             "name": "symfony/routing",
@@ -3358,7 +3357,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2016-05-03 12:23:49"
+            "time": "2016-05-03T12:23:49+00:00"
         },
         {
             "name": "symfony/translation",
@@ -3422,7 +3421,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-25 01:41:20"
+            "time": "2016-03-25T01:41:20+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -3485,7 +3484,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2016-04-25 11:17:47"
+            "time": "2016-04-25T11:17:47+00:00"
         },
         {
             "name": "tymon/jwt-auth",
@@ -3548,7 +3547,7 @@
                 "laravel",
                 "tymon"
             ],
-            "time": "2016-02-18 09:22:36"
+            "time": "2016-02-18T09:22:36+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3598,7 +3597,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-04-15 10:48:49"
+            "time": "2016-04-15T10:48:49+00:00"
         },
         {
             "name": "zizaco/entrust",
@@ -3665,7 +3664,7 @@
                 "permission",
                 "roles"
             ],
-            "time": "2016-03-05 04:51:31"
+            "time": "2016-03-05T04:51:31+00:00"
         }
     ],
     "packages-dev": [
@@ -3721,7 +3720,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2016-05-11 13:54:43"
+            "time": "2016-05-11T13:54:43+00:00"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -3784,7 +3783,7 @@
                 "phpstorm",
                 "sublime"
             ],
-            "time": "2016-03-03 08:45:00"
+            "time": "2016-03-03T08:45:00+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -3838,7 +3837,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-06-14 21:17:01"
+            "time": "2015-06-14T21:17:01+00:00"
         },
         {
             "name": "fzaninotto/faker",
@@ -3884,7 +3883,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2013-12-16 21:56:48"
+            "time": "2013-12-16T21:56:48+00:00"
         },
         {
             "name": "maximebf/debugbar",
@@ -3945,7 +3944,7 @@
                 "debug",
                 "debugbar"
             ],
-            "time": "2016-01-22 12:22:23"
+            "time": "2016-01-22T12:22:23+00:00"
         },
         {
             "name": "phpspec/php-diff",
@@ -3974,12 +3973,11 @@
             "authors": [
                 {
                     "name": "Chris Boulton",
-                    "homepage": "http://github.com/chrisboulton",
-                    "role": "Original developer"
+                    "homepage": "http://github.com/chrisboulton"
                 }
             ],
             "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
-            "time": "2013-11-01 13:02:21"
+            "time": "2013-11-01T13:02:21+00:00"
         },
         {
             "name": "phpspec/phpspec",
@@ -4057,7 +4055,7 @@
                 "testing",
                 "tests"
             ],
-            "time": "2016-03-20 20:34:32"
+            "time": "2016-03-20T20:34:32+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -4119,7 +4117,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2016-02-15 07:46:21"
+            "time": "2016-02-15T07:46:21+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4181,7 +4179,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-06 15:47:00"
+            "time": "2015-10-06T15:47:00+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -4228,7 +4226,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2015-06-21 13:08:43"
+            "time": "2015-06-21T13:08:43+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -4269,7 +4267,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21 13:50:34"
+            "time": "2015-06-21T13:50:34+00:00"
         },
         {
             "name": "phpunit/php-timer",
@@ -4313,7 +4311,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2016-05-12 18:03:57"
+            "time": "2016-05-12T18:03:57+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -4362,7 +4360,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-09-15 10:49:45"
+            "time": "2015-09-15T10:49:45+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -4434,7 +4432,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-05-17 03:09:28"
+            "time": "2016-05-17T03:09:28+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4490,7 +4488,8 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-10-02 06:51:40"
+            "abandoned": true,
+            "time": "2015-10-02T06:51:40+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -4554,7 +4553,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2015-07-26 15:48:44"
+            "time": "2015-07-26T15:48:44+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -4606,7 +4605,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2015-12-08 07:14:41"
+            "time": "2015-12-08T07:14:41+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -4656,7 +4655,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2016-05-17 03:18:57"
+            "time": "2016-05-17T03:18:57+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -4722,7 +4721,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2015-06-21 07:55:53"
+            "time": "2015-06-21T07:55:53+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -4773,7 +4772,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2015-10-12 03:26:01"
+            "time": "2015-10-12T03:26:01+00:00"
         },
         {
             "name": "sebastian/recursion-context",
@@ -4826,7 +4825,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2015-11-11 19:50:13"
+            "time": "2015-11-11T19:50:13+00:00"
         },
         {
             "name": "sebastian/version",
@@ -4861,7 +4860,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2015-06-21 13:59:46"
+            "time": "2015-06-21T13:59:46+00:00"
         },
         {
             "name": "symfony/class-loader",
@@ -4917,7 +4916,7 @@
             ],
             "description": "Symfony ClassLoader Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-30 10:41:14"
+            "time": "2016-03-30T10:41:14+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -4970,7 +4969,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-04 07:55:57"
+            "time": "2016-03-04T07:55:57+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -5026,7 +5025,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-12 18:09:53"
+            "time": "2016-04-12T18:09:53+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -5075,7 +5074,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-04 07:55:57"
+            "time": "2016-03-04T07:55:57+00:00"
         }
     ],
     "aliases": [],
