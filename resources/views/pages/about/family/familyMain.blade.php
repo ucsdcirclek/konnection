@@ -73,10 +73,10 @@
     <!-----------------------Countdown Timer-------------------------->
 
       <div class="famCountdown coloredTile">
-          <h2>Revisit New Member Install!</h2>
+          <h1>Revisit New Member Install!</h1>
           <!--<h2 id="counter"></h2> -->
           <div align="center">
-              <a class="button" href="https://drive.google.com/drive/folders/11lETpAwawk_FnPtoLeEe_Yc4aNKDxFKz" target="_blank" style="background-color:#1D1335">Photo Album</a>
+              <a class="button" href="https://drive.google.com/drive/folders/1-51kBUM6k3ZezXRNQVUsiHoZwAEdLRsp?usp=sharing" target="_blank" >Photo Album</a>
           </div>
       </div>
 
