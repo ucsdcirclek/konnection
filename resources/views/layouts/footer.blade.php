@@ -1,7 +1,7 @@
 <footer>
     <div id="logos">
         <div class="logo">
-            <a target="_blank" href="http://circlek.org"><img src="{{ asset('images/logos/cki.png') }}"></a>
+            <a target="_blank" href="http://circlek.org"><img src="{{ asset('images/logos/realcki.png') }}"></a>
         </div>
         <div class="logo">
             <a target="_blank" href="http://cnhcirclek.org"><img src="{{ asset('images/logos/cnh.png') }}"></a>

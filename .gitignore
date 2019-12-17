@@ -16,3 +16,5 @@ yarn.lock
 /public/system
 
 
+config/jwt.php
+.env.example

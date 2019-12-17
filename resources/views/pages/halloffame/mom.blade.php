@@ -109,5 +109,24 @@
                 </div>
             </div>
         </div>
+
+        <div class="title-wrapper">
+            @include('layouts.header', array('headerTitle' => 'October 2019'))
+        </div>
+        <div class="mobile-text">
+            <div class="contact-row">
+                <div>
+                    <img src="{{asset('images/halloffame/mr/mom/Zeenah.png')}}" />
+                    <p><strong>Zeenah Iskander</strong></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
     </div>
 @endsection

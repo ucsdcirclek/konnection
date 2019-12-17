@@ -10,7 +10,7 @@
     <div class="wrapper">
 
     <ul style="list-style-type:disc">
-        <li>All qualified miles will be reimbursed, regardless of the total number of miles driven at the end of the quarter.</li>
+        <li>You must drive the minimum of 50 miles each quarter to be reimbursed.</li>
         <li>All District and Kiwanis Family events are reimbursed both ways.</li>
         <li>All Service events are reimbursed both ways unless CST transportation is provided. Drivers will not be reimbursed
             for events with CST regardless of how many members they drive unless CST vans are full.</li>

@@ -18,7 +18,28 @@
     <body>
 
     <div class="wrapper">
+    @include('layouts.header', array('headerTitle' => '2019-2020 Term'))
 
+        <div class="commbox">
+            <div class="picture_container">
+                <img class src="{{ asset('images/impactteams/team_joy/group2.png') }}" alt="Avatar">
+            </div>
+            <div class="textbox">
+                <a href="{{ url('JOY') }}">
+                    <h2>Team JOY</h2>
+                </a>
+
+                <!-- <h6 style="color:gray">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
+                  current Impact Team for the quarter-->
+                <h6 style="color:gray">Status: COMPLETED</h6>
+
+                <p></p>
+                <p>Team JOY, Just Older Youth, is an impact team dedicated to connecting with senior citizens and raising awareness of the problems they face. </p>
+                <a href="{{ url('JOY') }}">
+                    <button>Learn more</button>
+                </a>
+            </div>
+        </div>
         @include('layouts.header', array('headerTitle' => '2018-2019 Term'))
 
         <div class="commbox">
