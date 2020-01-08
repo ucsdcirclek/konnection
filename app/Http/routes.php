@@ -123,6 +123,7 @@ Route::group(['prefix' => 'familysystem'], function()
 Route::get('contact', function() { return view('pages.contact'); });
 Route::get('gallery', function() { return view( 'pages.gallery'); });
 Route::get('resources', function() { return view( 'pages.resources'); });
+Route::get('confessions', function() { return view( 'pages.confessions'); });
 
 Route::get('halloffame', function() { return view( 'pages.halloffame.halloffame'); });
 Route::get('mom', function() { return view( 'pages.halloffame.mom'); });
@@ -207,4 +208,3 @@ $api->version('v1', function($api) {
 
     });
 });
-
