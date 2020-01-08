@@ -26,6 +26,7 @@
                     -1px 1px 0 #000,
                     1px 1px 0 #000;
         }
+
     </style>
     
     <script>
@@ -48,8 +49,7 @@
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Display the result in an element with id="demo"
-            document.getElementById("timer").innerHTML = days + " days " + hours + " hours "
-                + minutes + " min " + seconds + " sec ";
+            document.getElementById("timer").innerHTML = days + " days " + hours + " hours " + minutes + " min " + seconds + " sec ";
 
             document.getElementById("timer").style.fontWeight = "900";
 
@@ -388,9 +388,38 @@
                     </article>
                 @endforeach
           </div>
-        </div>
-      </div>
     </div>
+
+        <div id="Goals-view">
+            <div><h2>Goals</h2></div>
+                    
+                             
+                       <!--  <img src="images/logos/Service.png" style="width:33%;" id="Service"/> -->
+
+                        <p><img src="images/logos/Service.png" style="width: 100%">Service </p>
+
+                        <p><img src="images/logos/Leadership.png" style="width: 100%">Leadership</p>
+
+                        <p><img src="images/logos/Fellowship.png" style="width: 100%">Fellowship</p>
+
+
+                       
+                        <!-- <img src="images/logos/Leadership.png" style="width:33%;" id="Leadership"/>   
+                        
+                        <img src="images/logos/Fellowship.png" style="width:33%;" id="Fellowship"/> -->
+                    
+                        
+                         <h5> 1288 Hours</h5>
+                         <h5> 2039.5 Hours</h5>
+                         <h5> 723 Hours </h5>
+
+                        
+                        
+                 </div>
+         </div>
+    </div>
+   
+
 
 @endsection
 
