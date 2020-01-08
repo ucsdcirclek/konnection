@@ -57,6 +57,9 @@
                 <li>
                     <a href="{{ url('contact') }}">contact</a>
                 </li>
+                <li>
+                    <a href="{{ url('/confessions') }}">confessions</a>
+                </li>
 
 
                 @if (! Auth::check())
@@ -78,9 +81,6 @@
                     </li>
                 @endif
 
-                <li>
-                    <a href="{{ url('/confessions') }}">confessions</a>
-                </li>
 
             </ul>
         </nav>
