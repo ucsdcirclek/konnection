@@ -77,9 +77,12 @@
                         </ul>
                     </li>
                 @endif
+
+                <li>
+                    <a href="{{ url('/confessions') }}">confessions</a>
+                </li>
+
             </ul>
         </nav>
     </div>
 </section>
-
-
