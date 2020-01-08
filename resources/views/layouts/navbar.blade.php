@@ -14,7 +14,7 @@
 <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <i class="fas fa-rocket" style="color:white"></i> <!-- The icon for the mobile nav bar -->
+            <i class="fas fa-globe-americas" style="color:white"></i> <!-- The icon for the mobile nav bar -->
             <a href="{{ url('/') }}">UCSD Circle K</a>
         </div>
         <nav>
