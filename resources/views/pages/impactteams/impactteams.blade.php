@@ -39,7 +39,30 @@
                     <button>Learn more</button>
                 </a>
             </div>
+            </div>
+        
+
+        <div class="commbox">
+            <div class="picture_container">
+                <img class src="{{ asset('images/impactteams/team_dear/Group.jpg') }}" alt="Avatar">
+            </div>
+            <div class="textbox">
+                <a href="{{ url('DEAR') }}">
+                    <h2>Team DEAR</h2>
+                </a>
+
+                <!-- <h6 style="color:gray">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
+                  current Impact Team for the quarter-->
+                <h6 style="color:gray">Status: IN PROGRESS</h6>
+
+                <p></p>
+                <p>Team DEAR (Diabetes Education and Awareness Raising) is an impact team created to educate the UCSD community about the condition, raise funds for JDRF (Juvenile Diabetes Research Foundation), and promote and practice healthy lifestyle choices. </p>
+                <a href="{{ url('DEAR') }}">
+                    <button>Learn more</button>
+                </a>
+            </div>
         </div>
+
         @include('layouts.header', array('headerTitle' => '2018-2019 Term'))
 
         <div class="commbox">

@@ -151,6 +151,7 @@ Route::get('Team_Paws', function() { return view( 'pages.impactteams.team_paws')
 Route::get('Team_Haven', function() { return view( 'pages.impactteams.team_haven'); });
 Route::get('ALICE', function() { return view( 'pages.impactteams.team_alice'); });
 Route::get('JOY', function() { return view( 'pages.impactteams.team_joy'); });
+Route::get('DEAR', function() { return view( 'pages.impactteams.team_dear'); });
 
 //Route::get('landing', function() { return view( 'pages.landing'); });
 Route::get('MRP', function() { return view( 'pages.MRP'); });
