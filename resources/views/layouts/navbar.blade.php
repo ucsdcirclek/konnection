@@ -14,7 +14,7 @@
 <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <i class="fas fa-rocket" style="color:white"></i> <!-- The icon for the mobile nav bar -->
+            <i class="fas fa-globe-americas" style="color:white"></i> <!-- The icon for the mobile nav bar -->
             <a href="{{ url('/') }}">UCSD Circle K</a>
         </div>
         <nav>
@@ -51,11 +51,15 @@
                         <li><a href="{{url('/MRP') }}">Member Recognition Program</a></li>
                         <li><a href="http://resources.cnhcirclek.org/" target="_blank">CNH District Resources</a></li>
                         <li><a href="https://www.circlek.org/resources" target="_blank">International Resources</a></li>
+                        <li><a href="https://bit.ly/2Pft46g" target="_blank">Cheers</a></li>
                     </ul>
 
                 </li>
                 <li>
                     <a href="{{ url('contact') }}">contact</a>
+                </li>
+                <li>
+                    <a href="{{ url('/confessions') }}">confessions</a>
                 </li>
 
 
@@ -77,9 +81,9 @@
                         </ul>
                     </li>
                 @endif
+
+
             </ul>
         </nav>
     </div>
 </section>
-
-
