@@ -398,7 +398,7 @@
 
                         <p><img src="images/logos/Service.png" style="width: 100%">Service </p>
 
-                        <p><img src="images/logos/Leadership.png" style="width: 100%">Leadership</p>
+                        <p><img src="images/logos/Leadership.png" style="width: 100%">Leadershi</p>
 
                         <p><img src="images/logos/Fellowship.png" style="width: 100%">Fellowship</p>
 
