@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <style>
        /*CSS for Mball Timer Countdown*/
        .bgimg {
@@ -28,7 +28,7 @@
         }
 
     </style>
-    
+
     <script>
         // Set the Mball count down date
         var countDownDate = new Date("Nov 19, 2017 00:30:00").getTime();
@@ -61,7 +61,7 @@
         }, 1000);
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    
+
 </head>
 
 @section('title', 'Home')
@@ -200,6 +200,7 @@
 
             <!--Need to change width back when Committees page are done-->
             <div class="member-row" style="width: 100%">
+              <!--
                 <div class="container">
                     <div id="slideshow">
                         <div>
@@ -217,6 +218,9 @@
                         <div>
                             <img src="{{ asset('images/impactteams/teampulse/Sally.jpg') }}" />
                         </div>
+
+                        still need to delete the images below
+
                         <div>
                             <img src="{{ asset('images/Committees/SAAT/Ming.jpg') }}" />
                         </div>
@@ -232,27 +236,48 @@
                         <div>
                             <img src="{{ asset('images/halloffame/mr/mom/Sean.jpg') }}" />
                         </div>
+
+
+
+
                         <div>
                             <img src="{{ asset('images/halloffame/mr/sof/Jack.jpg') }}" />
                         </div>
+
+
                         <div>
                             <img src="{{ asset('images/halloffame/mr/spotlight/Tammy.jpg') }}" />
                         </div>
+
+
+
+
+
+
                         <div>
                             <img src="{{ asset('images/impactteams/teamftk/Fray.jpg') }}" />
                         </div>
                         <div>
                             <img src="{{ asset('images/Committees/SLSSP/Alyssa.jpg') }}" />
                         </div>
+
+
+
                         <div>
                             <img src="{{ asset('images/halloffame/mr/sof/PatrickL.jpg') }}" />
                         </div>
                         <div>
                             <img src="{{ asset('images/Committees/SLSSP/Victoria.jpg') }}" />
                         </div>
+
+
+
                         <div>
                             <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
                         </div>
+
+
+
                         <div>
                             <img src="{{ asset('images/halloffame/mr/sof/Hanna.jpg') }}" />
                         </div>
@@ -268,6 +293,9 @@
                         <div>
                             <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
                         </div>
+
+
+
                         <div>
                             <img src="{{ asset('images/halloffame/mr/spotlight/Braelyn.jpg') }}" />
                         </div>
@@ -277,12 +305,17 @@
                         <div>
                             <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
                         </div>
+
+
+
                         <div>
                             <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
                         </div>
                         <div>
                             <img src="{{ asset('images/halloffame/mr/sof/Riku.jpg') }}" />
                         </div>
+
+
                         <div>
                             <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
                         </div>
@@ -349,6 +382,8 @@
                         </div>
                     </div>
 
+                  -->
+
                     <div class="dropdown">
                         <button style="margin-top: 3%">Committees and Impact Teams</button>
                         <div class="dropdown-content">
@@ -392,8 +427,8 @@
 
         <div id="Goals-view">
             <div><h2>Goals</h2></div>
-                    
-                             
+
+
                        <!--  <img src="images/logos/Service.png" style="width:33%;" id="Service"/> -->
 
                         <p><img src="images/logos/Service.png" style="width: 100%">Service </p>
@@ -403,23 +438,22 @@
                         <p><img src="images/logos/Fellowship.png" style="width: 100%">Fellowship</p>
 
 
-                       
-                        <!-- <img src="images/logos/Leadership.png" style="width:33%;" id="Leadership"/>   
-                        
+
+                        <!-- <img src="images/logos/Leadership.png" style="width:33%;" id="Leadership"/>
+
                         <img src="images/logos/Fellowship.png" style="width:33%;" id="Fellowship"/> -->
-                    
-                        
+
+
                          <h5> 1288 Hours</h5>
                          <h5> 2039.5 Hours</h5>
                          <h5> 723 Hours </h5>
 
-                        
-                        
+
+
                  </div>
          </div>
     </div>
-   
+
 
 
 @endsection
-
