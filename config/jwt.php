@@ -11,7 +11,6 @@ return [
     | A helper command is provided for this: `php artisan jwt:generate`
     |
     */
-
     'secret' => env('JWT_SECRET', 'qLBf5e9wCCwlFXQdpm9kYdW3kmQGj7kq'),
 
     /*
