@@ -123,6 +123,7 @@ Route::group(['prefix' => 'familysystem'], function()
 Route::get('contact', function() { return view('pages.contact'); });
 Route::get('gallery', function() { return view( 'pages.gallery'); });
 Route::get('resources', function() { return view( 'pages.resources'); });
+Route::get('confessions', function() { return view( 'pages.confessions'); });
 
 Route::get('halloffame', function() { return view( 'pages.halloffame.halloffame'); });
 Route::get('mom', function() { return view( 'pages.halloffame.mom'); });
@@ -151,6 +152,7 @@ Route::get('Team_Paws', function() { return view( 'pages.impactteams.team_paws')
 Route::get('Team_Haven', function() { return view( 'pages.impactteams.team_haven'); });
 Route::get('ALICE', function() { return view( 'pages.impactteams.team_alice'); });
 Route::get('JOY', function() { return view( 'pages.impactteams.team_joy'); });
+Route::get('DEAR', function() { return view( 'pages.impactteams.team_dear'); });
 
 //Route::get('landing', function() { return view( 'pages.landing'); });
 Route::get('MRP', function() { return view( 'pages.MRP'); });
@@ -207,4 +209,3 @@ $api->version('v1', function($api) {
 
     });
 });
-
