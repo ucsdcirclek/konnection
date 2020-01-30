@@ -70,19 +70,12 @@
                 </a>
             </div>
         </div>
-<<<<<<< HEAD
-
-        @include('layouts.header', array('headerTitle' => '2018-2019 Term'))
-
-        <div class="commbox">
-=======
         
         <button class="accordion">
             @include('layouts.header', array('headerTitle' => '2018-2019 Term'))
         </button> 
         <div class = "panel">
             <div class="commbox">
->>>>>>> 89bc7f971a252ae3f36722098eda18d4d73a4061
             <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/team_alice/team_alice.jpg') }}" alt="Avatar">
             </div>
