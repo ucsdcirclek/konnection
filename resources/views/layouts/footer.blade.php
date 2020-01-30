@@ -7,8 +7,8 @@
             <a target="_blank" href="http://cnhcirclek.org"><img src="{{ asset('images/logos/cnh.png') }}"></a>
         </div>
         <div class="logo">
-            <a target="_blank" href="http://paradise.cnhcirclek.org/"><img
-                        src="{{ asset('images/logos/paradise.png') }}"></a>
+            <a target="_blank" href="http://www.cnhcirclek.org/divisions/paradise/"><img
+                        src="{{ asset('images/logos/NewParadiseLogo.png') }}"></a>
         </div>
         <div align="center" class="socialMediaIcons">
             <a href="https://www.facebook.com/ucsdcirclek" target="_blank"><i class="fab fa-facebook"></i></a>

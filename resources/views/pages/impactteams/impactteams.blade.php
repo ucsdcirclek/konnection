@@ -6,6 +6,14 @@
 
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Impact Teams'))
+    
+    <head>
+    <style>
+        .accordion{
+            background-color: transparent;
+        }
+    </style>
+    </head>
 
     <div align="center">
         <div class="desc">
@@ -39,10 +47,35 @@
                     <button>Learn more</button>
                 </a>
             </div>
-        </div>
-        @include('layouts.header', array('headerTitle' => '2018-2019 Term'))
+            </div>
+        
 
         <div class="commbox">
+            <div class="picture_container">
+                <img class src="{{ asset('images/impactteams/team_dear/Group.jpg') }}" alt="Avatar">
+            </div>
+            <div class="textbox">
+                <a href="{{ url('DEAR') }}">
+                    <h2>Team DEAR</h2>
+                </a>
+
+                <!-- <h6 style="color:gray">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
+                  current Impact Team for the quarter-->
+                <h6 style="color:gray">Status: IN PROGRESS</h6>
+
+                <p></p>
+                <p>Team DEAR (Diabetes Education and Awareness Raising) is an impact team created to educate the UCSD community about the condition, raise funds for JDRF (Juvenile Diabetes Research Foundation), and promote and practice healthy lifestyle choices. </p>
+                <a href="{{ url('DEAR') }}">
+                    <button>Learn more</button>
+                </a>
+            </div>
+        </div>
+        
+        <button class="accordion">
+            @include('layouts.header', array('headerTitle' => '2018-2019 Term'))
+        </button> 
+        <div class = "panel">
+            <div class="commbox">
             <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/team_alice/team_alice.jpg') }}" alt="Avatar">
             </div>
@@ -61,13 +94,12 @@
                     <button>Learn more</button>
                 </a>
             </div>
-        </div>
-
-        <div class="commbox">
-            <div class="picture_container">
-                <img class src="{{ asset('images/impactteams/team_haven/TeamHaven_Thumb.jpg') }}" alt="Avatar">
             </div>
-            <div class="textbox">
+            <div class="commbox">
+                <div class="picture_container">
+                <img class src="{{ asset('images/impactteams/team_haven/TeamHaven_Thumb.jpg') }}" alt="Avatar">
+                </div>
+                <div class="textbox">
                 <a href="{{ url('Team_Haven') }}">
                     <h2>Team Haven</h2>
                 </a>
@@ -81,97 +113,36 @@
                 <a href="{{ url('Team_Haven') }}">
                     <button>Learn more</button>
                 </a>
+                </div>
+            </div>
+
+            <div class="commbox">
+                <div class="picture_container">
+                    <img class src="{{ asset('images/impactteams/team_paws/Paws_Thumb.png') }}" alt="Avatar">
+                </div>
+                <div class="textbox">
+                    <a href="{{ url('Team_Paws') }}">
+                        <h2>Team Paws</h2>
+                    </a>
+
+                    <h6 style="color:gray">Status: COMPLETED</h6>
+
+                    <p></p>
+                    <p>Team Paws focuses on the health and well being of dogs as well as education in pet care.  </p>
+                    <a href="{{ url('Team_Paws') }}">
+                        <button>Learn more</button>
+                    </a>
+                </div>
             </div>
         </div>
-
-        <div class="commbox">
-            <div class="picture_container">
-                <img class src="{{ asset('images/impactteams/team_paws/Paws_Thumb.png') }}" alt="Avatar">
-            </div>
-            <div class="textbox">
-                <a href="{{ url('Team_Paws') }}">
-                    <h2>Team Paws</h2>
-                </a>
-
-                <h6 style="color:gray">Status: COMPLETED</h6>
-
-                <p></p>
-                <p>Team Paws focuses on the health and well being of dogs as well as education in pet care.  </p>
-                <a href="{{ url('Team_Paws') }}">
-                    <button>Learn more</button>
-                </a>
-            </div>
-        </div>
+        
+        
 
 
-        @include('layouts.header', array('headerTitle' => '2017-2018 Term'))
-
-        <div class="commbox">
-            <div class="picture_container">
-                <img class src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" alt="Avatar">
-            </div>
-            <div class="textbox">
-                <a href="{{ url('TeamPulse') }}">
-                    <h2>Team Pulse</h2>
-                </a>
-
-                <h6 style="color:gray">Status: COMPLETED</h6>
-
-                <p></p>
-                <p>Team Pulse's goal is focused on heart disease awareness and prevention.</p>
-                <a href="{{ url('TeamPulse') }}">
-                    <button>Learn more</button>
-                </a>
-            </div>
-        </div>
-
-        <div class="commbox"> <!-- contains the entire row--> <!-- Team FTK -->
-            <div class="picture_container"> <!-- puts the picture in a box-->
-                <img class src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}" alt="Avatar">
-            </div>
-            <div class="textbox"> <!-- box for adding a description-->
-                <a href="{{ url('TeamFTK') }}">
-                    <h2>Team FTK</h2>
-                </a>
-
-                <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
-                 current Impact Team for the quarter-->
-                <h6 style="color:gray">Status: COMPLETED</h6>
-
-                <p></p>
-                <p>Team FTK’s goal is to work with other charitable organizations and the San Diego community to help
-                    alleviate disadvantaged youths' burdens so they are free to pursue the lives they want.
-                </p>
-                <a href="{{ url('TeamFTK') }}" style="color:white">
-                    <button>Learn more</button>
-                </a>
-            </div>
-        </div>
-
-        <div class="commbox"> <!-- Team Hope -->
-            <div class="picture_container">
-                <img class src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}" alt="Avatar">
-            </div>
-            <div class="textbox">
-                <a href="{{ url('TeamHope') }}">
-                    <h2>Team Hope</h2>
-                </a>
-
-                <!--<h6 style="color:green">Status: CURRENT ACTIVE TEAM</h6> <!-- use this to specify if the impact team is the
-                 current Impact Team for the quarter-->
-                <h6 style="color:gray">Status: COMPLETED</h6>
-
-                <p></p>
-                <p>Team Hope's goal is raising cancer awareness and helping those affected by cancer or any other
-                    debilitating illnesses heal.</p>
-                <a href="{{ url('TeamHope') }}">
-                    <button>Learn more</button>
-                </a>
-            </div>
-        </div>
-
-        @include('layouts.header', array('headerTitle' => '2016-2017 Term'))
-
+        <button class = "accordion">
+            @include('layouts.header', array('headerTitle' => '2016-2017 Term'))
+        </button> 
+        <div class = "panel">
         <div class="commbox"> <!-- Team Smileys -->
             <div class="picture_container">
                 <img class src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" alt="Avatar">
@@ -261,6 +232,9 @@
                 </a>
             </div>
         </div>
+        </div>
+
+        
 
     </div>
     </body>
