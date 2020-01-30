@@ -15,7 +15,7 @@
      padding-top: 30px;
      height: 0;
      overflow: auto; 
-     -webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
+     -webkit-overflow-scrolling:touch; 
      border: solid black 1px;
 } 
 .myIframe iframe {
