@@ -355,7 +355,7 @@
                             <a href="{{ url('committees') }}">Committees</a>
                             <a href="{{ url('impactteams') }}">Impact Teams</a>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
         <!--
@@ -391,31 +391,37 @@
     </div>
 
         <div id="Goals-view">
-            <div><h2>Goals</h2></div>
+            <div id="GoalsTag"><h2>Goals</h2></div>
                     
                              
                        <!--  <img src="images/logos/Service.png" style="width:33%;" id="Service"/> -->
+                        
+                        <div>
+                        <div class="icon">
+                        <img src="images/logos/Service.png" id = "Service"/> 
+                        <h4>Service</h4>
+                        <h5> 1288 Hours</h5>
+                        </div>
 
-                        <p><img src="images/logos/Service.png" style="width: 100%">Service </p>
+                        <div class="icon">
+                        <img src="images/logos/Leadership.png" id = "Leadership"/>
+                        <h4>Leadership</h4>
+                        <h5> 2039.5 Hours</h5>
+                        </div>
 
-                        <p><img src="images/logos/Leadership.png" style="width: 100%">Leadershi</p>
-
-                        <p><img src="images/logos/Fellowship.png" style="width: 100%">Fellowship</p>
-
+                        <div class="icon">
+                        <img src="images/logos/Fellowship.png" id = "Fellowship"/>
+                        <h4>Fellowship</h4>
+                        <h5> 723 Hours </h5>
+                        </div>
+                        </div>
 
                        
                         <!-- <img src="images/logos/Leadership.png" style="width:33%;" id="Leadership"/>   
                         
                         <img src="images/logos/Fellowship.png" style="width:33%;" id="Fellowship"/> -->
-                    
-                        
-                         <h5> 1288 Hours</h5>
-                         <h5> 2039.5 Hours</h5>
-                         <h5> 723 Hours </h5>
-
-                        
-                        
-                 </div>
+                         
+            </div>
          </div>
     </div>
    
