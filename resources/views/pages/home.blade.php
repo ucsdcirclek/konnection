@@ -400,19 +400,19 @@
                         <div class="icon">
                         <img src="images/logos/Service.png" id = "Service"/> 
                         <h4>Service</h4>
-                        <h5> 1288 Hours</h5>
+                        <h5> 2103 Hours</h5>
                         </div>
 
                         <div class="icon">
                         <img src="images/logos/Leadership.png" id = "Leadership"/>
                         <h4>Leadership</h4>
-                        <h5> 2039.5 Hours</h5>
+                        <h5> 2576 Hours</h5>
                         </div>
 
                         <div class="icon">
                         <img src="images/logos/Fellowship.png" id = "Fellowship"/>
                         <h4>Fellowship</h4>
-                        <h5> 723 Hours </h5>
+                        <h5> 1358 Hours </h5>
                         </div>
                         </div>
 
