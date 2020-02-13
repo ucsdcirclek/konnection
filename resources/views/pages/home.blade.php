@@ -198,8 +198,9 @@
        </div>
        -->
 
+
             <!--Need to change width back when Committees page are done-->
-            <div class="member-row" style="width: 100%">
+            <!-- <div class="member-row" style="width: 100%"> -->
               <!--
                 <div class="container">
                     <div id="slideshow">
@@ -218,9 +219,6 @@
                         <div>
                             <img src="{{ asset('images/impactteams/teampulse/Sally.jpg') }}" />
                         </div>
-
-                        still need to delete the images below
-
                         <div>
                             <img src="{{ asset('images/Committees/SAAT/Ming.jpg') }}" />
                         </div>
@@ -236,48 +234,27 @@
                         <div>
                             <img src="{{ asset('images/halloffame/mr/mom/Sean.jpg') }}" />
                         </div>
-
-
-
-
                         <div>
                             <img src="{{ asset('images/halloffame/mr/sof/Jack.jpg') }}" />
                         </div>
-
-
                         <div>
                             <img src="{{ asset('images/halloffame/mr/spotlight/Tammy.jpg') }}" />
                         </div>
-
-
-
-
-
-
                         <div>
                             <img src="{{ asset('images/impactteams/teamftk/Fray.jpg') }}" />
                         </div>
                         <div>
                             <img src="{{ asset('images/Committees/SLSSP/Alyssa.jpg') }}" />
                         </div>
-
-
-
                         <div>
                             <img src="{{ asset('images/halloffame/mr/sof/PatrickL.jpg') }}" />
                         </div>
                         <div>
                             <img src="{{ asset('images/Committees/SLSSP/Victoria.jpg') }}" />
                         </div>
-
-
-
                         <div>
                             <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
                         </div>
-
-
-
                         <div>
                             <img src="{{ asset('images/halloffame/mr/sof/Hanna.jpg') }}" />
                         </div>
@@ -293,9 +270,6 @@
                         <div>
                             <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
                         </div>
-
-
-
                         <div>
                             <img src="{{ asset('images/halloffame/mr/spotlight/Braelyn.jpg') }}" />
                         </div>
@@ -305,17 +279,12 @@
                         <div>
                             <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
                         </div>
-
-
-
                         <div>
                             <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
                         </div>
                         <div>
                             <img src="{{ asset('images/halloffame/mr/sof/Riku.jpg') }}" />
                         </div>
-
-
                         <div>
                             <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
                         </div>
@@ -331,14 +300,28 @@
                         </div>
                     </div>
 
-                    <div class="dropdown">
+-->
+                <div style="margin-left: 30%">
+                    <div class="dropdown" >
                         <button style="margin-top: 3%">Featured Members</button>
                         <div class="dropdown-content">
                             <a href="{{ url('mom') }}">Member of the Month</a>
                             <a href="{{ url('sof') }}">Staff of Fellowship</a>
                             <a href="{{ url('spotlight') }}">Member Spotlight</a>
                         </div>
+
+
+
                     </div>
+                    <div class="dropdown" >
+                    <button style="margin-top: 3%">Committees and Impact Teams</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url('committees') }}">Committees</a>
+                        <a href="{{ url('impactteams') }}">Impact Teams</a>
+                    </div>
+                  </div>
+                </div>
+                    <!--
 
                 </div>
 
@@ -382,17 +365,21 @@
                         </div>
                     </div>
 
-                  -->
+-->
 
-                    <div class="dropdown">
+<!--
+                    <div class="dropdown" style="margin-left: 50%">
                         <button style="margin-top: 3%">Committees and Impact Teams</button>
                         <div class="dropdown-content">
                             <a href="{{ url('committees') }}">Committees</a>
                             <a href="{{ url('impactteams') }}">Impact Teams</a>
                         </div>
-                    </div>
+                    </div> -->
+<!--
                 </div>
             </div>
+          -->
+
         <!--
         <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
                 <div class="bgimg">
@@ -433,7 +420,7 @@
 
                         <p><img src="images/logos/Service.png" style="width: 100%">Service </p>
 
-                        <p><img src="images/logos/Leadership.png" style="width: 100%">Leadershi</p>
+                        <p><img src="images/logos/Leadership.png" style="width: 100%">Leadership</p>
 
                         <p><img src="images/logos/Fellowship.png" style="width: 100%">Fellowship</p>
 
