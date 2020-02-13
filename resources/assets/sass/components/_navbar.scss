@@ -70,6 +70,7 @@ nav {
         }
       } // Dropdown list
       ul li {
+        background-color: $nav-background;
         min-width: 190px;
         a {
           padding: 15px;
