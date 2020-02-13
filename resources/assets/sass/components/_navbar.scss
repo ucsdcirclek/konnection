@@ -12,6 +12,10 @@ $link-hover-color: lighten($nav-background, 10%);
   background: $nav-background;
   //padding-right: 23%;
   text-align: center;
+  background-image: url('../../../../images/stripes.png');
+  background-position: left bottom;
+  background-size: 1080px 100%;
+  background-repeat: no-repeat;
 }
 
 // Logo and branding
@@ -52,7 +56,8 @@ nav {
         display: block;
         padding: 0 20px;
         line-height: $nav-height;
-        background: $nav-background;
+        background: transparent;
+        
         color: $nav-font-color;
         text-decoration: none;
         &:hover {
@@ -119,7 +124,8 @@ nav {
         a {
           padding: 15px;
           line-height: 20px;
-        }
+          background-color: $nav-background
+          }
         ul li a {
           padding-left: 30px;
         }
