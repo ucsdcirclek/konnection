@@ -146,15 +146,21 @@
         color: black;
         line-height: 90px;
     }
-    
+
+    <!-- If the screen is not 500px or bigger, use this as h4 definition -->
     h4 {
+        <!-- Scalable text -->
         font-size:3vw;
     }
+
+    <!-- If the screen is 500px or bigger, use this as h4 definition -->
     @media screen and (min-width: 500px) {
         h4 {
+            <!-- Fixed size text -->
             font-size:26px;
             text-align: center;
         }
+
     }
 
 
@@ -170,20 +176,27 @@
         margin-left:auto; 
         margin-bottom: 50px;
     }
-    
+
+    <!-- If the screen is not 500px or bigger, use this as h4 definition -->
     h5 {
+        <!-- Scalable text (normal text, not bold) -->
         font-size: 3vw;
         font-weight:normal;
     }
+
+    <!-- If the screen is not 500px or bigger, use this as h4 definition -->
     @media screen and (min-width: 500px) {
         h5 {
+            <!-- Fixed size, non-bold text -->
             font-size: 22px;
             font-weight: normal; 
             text-align: center;
         }
+
     }
     
   }
+
 }
 
 .announcements {
