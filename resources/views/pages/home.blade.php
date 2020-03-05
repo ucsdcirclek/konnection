@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <style>
        /*CSS for Mball Timer Countdown*/
        .bgimg {
@@ -28,7 +28,7 @@
         }
 
     </style>
-    
+
     <script>
         // Set the Mball count down date
         var countDownDate = new Date("Nov 19, 2017 00:30:00").getTime();
@@ -61,7 +61,7 @@
         }, 1000);
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    
+
 </head>
 
 @section('title', 'Home')
@@ -198,8 +198,10 @@
        </div>
        -->
 
+
             <!--Need to change width back when Committees page are done-->
-            <div class="member-row" style="width: 100%">
+            <!-- <div class="member-row" style="width: 100%"> -->
+              <!--
                 <div class="container">
                     <div id="slideshow">
                         <div>
@@ -298,14 +300,28 @@
                         </div>
                     </div>
 
-                    <div class="dropdown">
+-->
+                <div style="margin-left: 30%">
+                    <div class="dropdown" >
                         <button style="margin-top: 3%">Featured Members</button>
                         <div class="dropdown-content">
                             <a href="{{ url('mom') }}">Member of the Month</a>
                             <a href="{{ url('sof') }}">Staff of Fellowship</a>
                             <a href="{{ url('spotlight') }}">Member Spotlight</a>
                         </div>
+
+
+
                     </div>
+                    <div class="dropdown" >
+                    <button style="margin-top: 3%">Committees and Impact Teams</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url('committees') }}">Committees</a>
+                        <a href="{{ url('impactteams') }}">Impact Teams</a>
+                    </div>
+                  </div>
+                </div>
+                    <!--
 
                 </div>
 
@@ -349,7 +365,10 @@
                         </div>
                     </div>
 
-                    <div class="dropdown">
+-->
+
+<!--
+                    <div class="dropdown" style="margin-left: 50%">
                         <button style="margin-top: 3%">Committees and Impact Teams</button>
                         <div class="dropdown-content">
                             <a href="{{ url('committees') }}">Committees</a>
@@ -358,6 +377,8 @@
                     </div> 
                 </div>
             </div>
+          -->
+
         <!--
         <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
                 <div class="bgimg">
@@ -392,8 +413,6 @@
 
         <div id="Goals-view">
             <div id="GoalsTag"><h2>Goals</h2></div>
-                    
-                             
                        <!--  <img src="images/logos/Service.png" style="width:33%;" id="Service"/> -->
                         
                         <div>
@@ -416,16 +435,15 @@
                         </div>
                         </div>
 
-                       
-                        <!-- <img src="images/logos/Leadership.png" style="width:33%;" id="Leadership"/>   
-                        
+
+                        <!-- <img src="images/logos/Leadership.png" style="width:33%;" id="Leadership"/>
+
                         <img src="images/logos/Fellowship.png" style="width:33%;" id="Fellowship"/> -->
                          
             </div>
          </div>
     </div>
-   
+
 
 
 @endsection
-
