@@ -195,109 +195,132 @@
                </iframe>
            </div>
        </div>
-   </div>
-   -->
+       -->
 
-        <!--Need to change width back when Committees page are done-->
-        <div class="member-row" style="width: 100%">
-            <div class="container">
-                <div id="slideshow">
-                    <div>
-                        <img src="{{ asset('images/impactteams/teamftk/Vivian.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/sof/Tri.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/spotlight/Vanissa.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/Committees/SAAT/Marne.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/impactteams/teampulse/Sally.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/Committees/SAAT/Ming.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/Committees/SLSSP/Jovonne.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/mom/Stephanie.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/mom/Julie.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/mom/Sean.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/sof/Jack.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/spotlight/Tammy.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/impactteams/teamftk/Fray.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/Committees/SLSSP/Alyssa.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/sof/PatrickL.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/Committees/SLSSP/Victoria.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/sof/Hanna.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/spotlight/Nayeli.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/spotlight/Maricris.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/sof/Phillip.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/spotlight/Braelyn.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/sof/Patrick.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/sof/Riku.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/sof/Justin_D.jpg') }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}"/>
+
+            <!--Need to change width back when Committees page are done-->
+            <!-- <div class="member-row" style="width: 100%"> -->
+              <!--
+                <div class="container">
+                    <div id="slideshow">
+                        <div>
+                            <img src="{{ asset('images/impactteams/teamftk/Vivian.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/Tri.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/spotlight/Vanissa.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/Committees/SAAT/Marne.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/impactteams/teampulse/Sally.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/Committees/SAAT/Ming.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/Committees/SLSSP/Jovonne.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/mom/Stephanie.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/mom/Julie.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/mom/Sean.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/Jack.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/spotlight/Tammy.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/impactteams/teamftk/Fray.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/Committees/SLSSP/Alyssa.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/PatrickL.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/Committees/SLSSP/Victoria.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/impactteams/teampulse/Kylie.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/Hanna.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/spotlight/Nayeli.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/spotlight/Maricris.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/Phillip.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/mom/Aaron.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/spotlight/Braelyn.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/Patrick.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/mom/JoannaT.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/spotlight/Wes.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/Riku.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/spotlight/Alison.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/Justin_D.jpg') }}" />
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/spotlight/Andrew.jpg') }}" />
+                        </div>
+
+                        <div>
+                            <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}" />
+                        </div>
                     </div>
 
-                    <div>
-                        <img src="{{ asset('images/halloffame/mr/sof/Kenneth.jpg') }}"/>
+-->
+                <div style="margin-left: 30%">
+                    <div class="dropdown" >
+                        <button style="margin-top: 3%">Featured Members</button>
+                        <div class="dropdown-content">
+                            <a href="{{ url('mom') }}">Member of the Month</a>
+                            <a href="{{ url('sof') }}">Staff of Fellowship</a>
+                            <a href="{{ url('spotlight') }}">Member Spotlight</a>
+                        </div>
+
+
+
                     </div>
+                    <div class="dropdown" >
+                    <button style="margin-top: 3%">Committees and Impact Teams</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url('committees') }}">Committees</a>
+                        <a href="{{ url('impactteams') }}">Impact Teams</a>
+                    </div>
+                  </div>
                 </div>
-
+                    <!--
                 <div class="dropdown">
                     <button style="margin-top: 3%">Featured Members</button>
                     <div class="dropdown-content">
@@ -423,4 +446,3 @@
 
 
 @endsection
-
