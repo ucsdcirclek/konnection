@@ -137,38 +137,66 @@
     
     
     div {
+        white-space: nowrap;
+        overflow: hidden;
         text-align: center;
     }
     
     h2 {
-      color: black;
-      line-height: 90px;
+        color: black;
+        line-height: 90px;
     }
-    
+
+    <!-- If the screen is not 500px or bigger, use this as h4 definition -->
     h4 {
-        text-align: center;
+        <!-- Scalable text -->
+        font-size:3vw;
+    }
+
+    <!-- If the screen is 500px or bigger, use this as h4 definition -->
+    @media screen and (min-width: 500px) {
+        h4 {
+            <!-- Fixed size text -->
+            font-size:26px;
+            text-align: center;
+        }
+
     }
 
 
     .icon {
-      display: inline-block;
-      font-weight: bold; 
-      font-size: 16pt; 
-      text-align: center; 
-      max-width: 200px;
-      width: 33.3%; 
-      height: auto;
-      margin-right: auto; 
-      margin-left:auto; 
-      margin-bottom: 50px;
+        display: inline-block;
+        font-weight: bold; 
+        font-size: 16pt; 
+        text-align: center; 
+        max-width: 200px;
+        width: 33.3%; 
+        height: auto;
+        margin-right: auto; 
+        margin-left:auto; 
+        margin-bottom: 50px;
     }
 
+    <!-- If the screen is not 500px or bigger, use this as h4 definition -->
     h5 {
-      font-weight: normal; 
-      text-align: center;
+        <!-- Scalable text (normal text, not bold) -->
+        font-size: 3vw;
+        font-weight:normal;
+    }
+
+    <!-- If the screen is not 500px or bigger, use this as h4 definition -->
+    @media screen and (min-width: 500px) {
+        h5 {
+            <!-- Fixed size, non-bold text -->
+            font-size: 22px;
+            font-weight: normal; 
+            text-align: center;
+        }
+
     }
     
   }
+
 }
 
 .announcements {

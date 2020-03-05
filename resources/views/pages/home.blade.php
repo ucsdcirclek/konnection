@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-       /*CSS for Mball Timer Countdown*/
-       .bgimg {
+        /*CSS for Mball Timer Countdown*/
+        .bgimg {
             padding-top: 8px;
             position: relative;
             color: white;
@@ -18,13 +18,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            font-size:50px;
+            font-size: 50px;
             width: 100%;
-            text-shadow:
-                    -1px -1px 0 #000,
-                    1px -1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px 1px 0 #000;
+            text-shadow: -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
         }
 
     </style>
@@ -34,7 +33,7 @@
         var countDownDate = new Date("Nov 19, 2017 00:30:00").getTime();
 
         // Update the count down every 1 second
-        var x = setInterval(function() {
+        var x = setInterval(function () {
 
             // Get todays date and time
             var now = new Date().getTime();
@@ -113,7 +112,8 @@
                     </p>
 
                     <p class="center"><a href="/events">Check out some of our events!</a></p>
-                    <p class="center"><a href="https://issuu.com/ucsdckinewsletter/docs/su_18_newsletter" target="_blank">Check out our newsletters!</a></p>
+                    <p class="center"><a href="https://issuu.com/ucsdckinewsletter/docs/su_18_newsletter"
+                                         target="_blank">Check out our newsletters!</a></p>
                 </div>
 
                 <div class="links">
@@ -122,8 +122,8 @@
 
                 </div>
             </div>
-          @else
-          <div id="welcome-view">
+        @else
+            <div id="welcome-view">
                 <div class="text" style="height: 300px">
                     <h2 class="center" style="margin:10%">Welcome to UCSD Circle K!</h2>
                     <p class="center">Haven't filled out a membership application yet? Fill one out right here!</p>
@@ -149,7 +149,7 @@
                     <p class="date">{{ $featured->event->start_time->setTimezone('America/Los_Angeles')->format('F j') }}</p>
 
                     <p class="info">
-                      {{ $featured->summary }}
+                        {{ $featured->summary }}
                     </p>
                 </li>
                 @foreach ($upcoming as $day => $events)
@@ -182,18 +182,17 @@
             </ul>
         </div>
 
-            <!--
-       <div class="center">
-           <div class="mobile-text">
-               <h2 style="text-align: center;padding-top: 3%">2016-2017 Term Recap Video</h2>
-               <p style="text-align: center;">Look back on a year of service, leadership, and fellowship!</p>
-           </div>
-           <div class="videoWrapper">
-               <div style="position:relative;height:0;padding-bottom:47.25%;text-align: center">
-                   <iframe width="800" height="480"
-                           src="https://www.youtube.com/embed/oDkApQZZgFU?">
-                   </iframe>
-               </div>
+        <!--
+   <div class="center">
+       <div class="mobile-text">
+           <h2 style="text-align: center;padding-top: 3%">2016-2017 Term Recap Video</h2>
+           <p style="text-align: center;">Look back on a year of service, leadership, and fellowship!</p>
+       </div>
+       <div class="videoWrapper">
+           <div style="position:relative;height:0;padding-bottom:47.25%;text-align: center">
+               <iframe width="800" height="480"
+                       src="https://www.youtube.com/embed/oDkApQZZgFU?">
+               </iframe>
            </div>
        </div>
        -->
@@ -322,64 +321,67 @@
                   </div>
                 </div>
                     <!--
-
+                <div class="dropdown">
+                    <button style="margin-top: 3%">Featured Members</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url('mom') }}">Member of the Month</a>
+                        <a href="{{ url('sof') }}">Staff of Fellowship</a>
+                        <a href="{{ url('spotlight') }}">Member Spotlight</a>
+                    </div>
                 </div>
 
-                <div class="container">
-                    <div id="slideshow2">
-                        <div>
-                            <img src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/Committees/Key2College/K2CThumb1718.jpg') }}"/>
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/Committees/SAAT/SAATThumb1718.JPG') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/Committees/LSFP/LSFP1718Thumb2.jpg') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/impactteams/greenteam/GreenTeamThumb.jpg') }}" />
-                        </div>
-                        <div>
-                            <img src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}" />
-                        </div>
+            </div>
+
+            <div class="container">
+                <div id="slideshow2">
+                    <div>
+                        <img src="{{ asset('images/Committees/MBall/MBallThumb.jpg') }}"/>
                     </div>
+                    <div>
+                        <img src="{{ asset('images/Committees/SLSSP/SLSSPThumb17182.jpg') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/Committees/Key2College/K2CThumb1718.jpg') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/Committees/SAAT/SAATThumb1718.JPG') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/Committees/TechTeam/TechThumb.png') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/Committees/LSFP/LSFP1718Thumb2.jpg') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/impactteams/teampulse/TeamPulseThumb.jpg') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/impactteams/teamftk/FTKThumb.jpg') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/impactteams/teamhope/TeamHopeThumb.jpg') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/impactteams/greenteam/GreenTeamThumb.jpg') }}"/>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/impactteams/carpevitam/CarpeVitamThumb5.jpg') }}"/>
+                    </div>
+                </div>
 
--->
-
-<!--
-                    <div class="dropdown" style="margin-left: 50%">
-                        <button style="margin-top: 3%">Committees and Impact Teams</button>
-                        <div class="dropdown-content">
-                            <a href="{{ url('committees') }}">Committees</a>
-                            <a href="{{ url('impactteams') }}">Impact Teams</a>
-                        </div>
-                    </div> 
+                <div class="dropdown">
+                    <button style="margin-top: 3%">Committees and Impact Teams</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url('committees') }}">Committees</a>
+                        <a href="{{ url('impactteams') }}">Impact Teams</a>
+                    </div>
                 </div>
             </div>
-          -->
-
-        <!--
+        </div>
+    <!--
         <a target="_blank" href="http://mball2017.weebly.com/tickets.html">
                 <div class="bgimg">
                     <img src="{{asset('images/MballGraphic_Large.jpg')}}"/></a>
@@ -392,56 +394,53 @@
     -->
 
 
-            <div class="mobile-text">
-        <div id="announcements-view">
-            <div><h2>Announcements</h2></div>
+        <div class="mobile-text">
+            <div id="announcements-view">
+                <div><h2>Announcements</h2></div>
 
-            <div class="announcements">
-                @foreach ($posts as $post)
-                    <article>
-                        <h3>{{ $post->title }}</h3>
+                <div class="announcements">
+                    @foreach ($posts as $post)
+                        <article>
+                            <h3>{{ $post->title }}</h3>
 
-                        <p class="date">{{ $post->created_at->setTimezone('America/Los_Angeles')->format('l, F n, Y') }}</p>
+                            <p class="date">{{ $post->created_at->setTimezone('America/Los_Angeles')->format('l, F n, Y') }}</p>
 
-                        <p>
-                            {!! $post->content !!}
-                        </p>
-                    </article>
-                @endforeach
-          </div>
-    </div>
+                            <p>
+                                {!! $post->content !!}
+                            </p>
+                        </article>
+                    @endforeach
+                </div>
+            </div>
 
-        <div id="Goals-view">
-            <div id="GoalsTag"><h2>Goals</h2></div>
-                       <!--  <img src="images/logos/Service.png" style="width:33%;" id="Service"/> -->
-                        
-                        <div>
-                        <div class="icon">
-                        <img src="images/logos/Service.png" id = "Service"/> 
+            <div id="Goals-view">
+                <div id="GoalsTag"><h2>Goals</h2></div>
+
+                <div>
+                    <div class="icon">
+                        <img src="images/logos/Service.png" id="Service"/>
                         <h4>Service</h4>
                         <h5> 2103 Hours</h5>
-                        </div>
+                    </div>
 
-                        <div class="icon">
-                        <img src="images/logos/Leadership.png" id = "Leadership"/>
+                    <div class="icon">
+                        <img src="images/logos/Leadership.png" id="Leadership"/>
                         <h4>Leadership</h4>
                         <h5> 2576 Hours</h5>
-                        </div>
+                    </div>
 
-                        <div class="icon">
-                        <img src="images/logos/Fellowship.png" id = "Fellowship"/>
+                    <div class="icon">
+                        <img src="images/logos/Fellowship.png" id="Fellowship"/>
                         <h4>Fellowship</h4>
                         <h5> 1358 Hours </h5>
-                        </div>
-                        </div>
+                    </div>
 
+                </div>
 
-                        <!-- <img src="images/logos/Leadership.png" style="width:33%;" id="Leadership"/>
-
-                        <img src="images/logos/Fellowship.png" style="width:33%;" id="Fellowship"/> -->
-                         
             </div>
-         </div>
+
+        </div>
+
     </div>
 
 
