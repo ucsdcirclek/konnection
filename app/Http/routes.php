@@ -139,8 +139,7 @@ Route::get('TechTeam', function() { return view( 'pages.committees.techteam'); }
 Route::get('SAAT', function() { return view( 'pages.committees.SAAT'); });
 Route::get('LSFP', function() { return view( 'pages.committees.LSFP'); });
 
-
-Route::get('impactteams', function() { return view( 'pages.impactteams.impactteams'); });
+Route::get('landing', function() { return view( 'pages.impactteams.impactteams'); });
 Route::get('CarpeVitam', function() { return view( 'pages.impactteams.carpevitam'); });
 Route::get('GreenTeam', function() { return view( 'pages.impactteams.greenteam'); });
 Route::get('TeamHope', function() { return view( 'pages.impactteams.teamhope'); });
@@ -155,7 +154,7 @@ Route::get('JOY', function() { return view( 'pages.impactteams.team_joy'); });
 Route::get('DEAR', function() { return view( 'pages.impactteams.team_dear'); });
 
 //Route::get('landing', function() { return view( 'pages.landing'); });
-Route::get('MRP', function() { return view( 'pages.MRP'); });
+//Route::get('MRP', function() { return view( 'pages.MRP'); });
 
 
 

@@ -6,12 +6,15 @@ $nav-background: $savannah-navy;
 $nav-font-color: white;
 $link-hover-color: lighten($nav-background, 10%);
 
+
+
 // Outer navigation wrapper
 .navigation {
   height: $nav-height;
   background: $nav-background;
-  //padding-right: 23%;
+  padding-left: 23%;
   text-align: center;
+  width: 1000px;
 }
 
 // Logo and branding
@@ -32,7 +35,7 @@ $link-hover-color: lighten($nav-background, 10%);
 
 // Container with no padding for navbar
 .nav-container {
-  max-width: $content-width;
+width: 1000px;
   margin: 0 auto;
 }
 
