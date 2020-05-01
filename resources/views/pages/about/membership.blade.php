@@ -16,6 +16,7 @@
     th:first-child {
         text-align:left;
     }
+
 </style>
 
 @section('content')
@@ -52,9 +53,15 @@
         </div>
 
         <div class="coloredTile">
-            <h2>Ready to join?</h2>
-            <h4>Becoming an official member is as easy as 1-2-3</h4>
-
+            <h1>Ready to join?</h1>
+            <h3>Becoming an official member is as easy as 1-2-3</h3>
+            <p>Key Points for the CST Quiz:
+                <br> A. Rides can be booked until 11:59 pm the day before
+                <br>    B. Cancel Rides up to 1 hour before pick up time
+                <br>    C. Drivers will only wait 5 minutes
+                <br>    D. MAX # of missed rides = 3
+                <br>    E. Must Bring UCSD ID
+                <br>    F. Questions - contact servicevans@ucsd.edu</p>
             <div class="membershipRow">
                 <div>
                     <i class="fas fa-file-signature"></i>
@@ -68,7 +75,7 @@
                 <div>
                     <i class="fas fa-box"></i>
                     <h4>Membership Dues</h4>
-                    <p>Dues cost $45 for the 2018-2019 school year. Pay by cash, check to UCSD Circle K, or venmo @UCSDCircleK. <!--<strong>Dues must be paid by our week 3 GBM</strong>
+                    <p>Dues cost $45 for the 2020-2021 school year. Pay by cash, check to UCSD Circle K, or venmo @UCSDCircleK. <!--<strong>Dues must be paid by our week 3 GBM</strong>
                         to be sorted into a family at new member install.-->
                     </p>
                     <a href="https://venmo.com/UCSDCircleK" target="_blank">
@@ -85,8 +92,9 @@
                     </a>
                 </div>
             </div>
-            <h4 id="memPerks">Official members of UCSD Circle K will be sorted into a family, be able to join committees, earn awards, access free rides to all events, eat free lunch
-            at Kiwanis Luncheon, have a big or little, access district events, and run for board!</h4>
+
+            <h3 id="memPerks">Official members of UCSD Circle K will be sorted into a family, be able to join committees, earn awards, access free rides to all events, eat free lunch
+            at Kiwanis Luncheon, have a big or little, access district events, and run for board!</h3>
         </div>
 
         <h2>Website account</h2>
