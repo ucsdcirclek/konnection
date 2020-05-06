@@ -69,7 +69,7 @@
         <label for="last_name">Last Name</label>
         {!! \Form::text('last_name') !!}
 
-        <label for="avatar">Avatar (Please insert square photo or it will be distorted) </label>
+        <label for="avatar">Avatar </label>
         {!! \Form::file('avatar') !!}
 
         {!! \Form::submit('Save Settings', ['class' => 'button']) !!}
