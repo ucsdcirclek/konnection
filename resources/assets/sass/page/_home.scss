@@ -10,9 +10,14 @@
       padding-bottom: .3em;
       margin-bottom: .3em;
       border-bottom: 1px solid $light-gray;
+
+
     }
+
+
   }
-  
+
+
   #welcome-view {
     @include fill-parent;
     @include row(table);
@@ -177,14 +182,14 @@
         margin-bottom: 50px;
     }
 
-    //<!-- If the screen is not 500px or bigger, use this as h4 definition -->
+    // If the screen is not 500px or bigger, use this as h4 definition
     h5 {
        // <!-- Scalable text (normal text, not bold) -->
         font-size: 3vw;
         font-weight:normal;
     }
 
-    //<!-- If the screen is not 500px or bigger, use this as h4 definition -->
+    // If the screen is not 500px or bigger, use this as h4 definition
     @media screen and (min-width: 500px) {
         h5 {
             //<!-- Fixed size, non-bold text -->
@@ -197,6 +202,22 @@
     
   }
 
+  // If the screen is not 500px or bigger, use this as h4 definition
+  .button-wrapper {
+    style="display: flex;
+    align-items: center;
+    justify-content: center;"
+
+  }
+  // If the screen is 500px or bigger, use this as h4 definition
+  @media screen and (min-width: 500px) {
+    .button-wrapper {
+      style="display: flex;
+      align-items: center;
+      justify-content: center;"
+
+    }
+  }
 }
 
 .announcements {
@@ -249,6 +270,8 @@
 //ul.week {
   //height:50%;
 //}
+
+
 
 .dropdown {
   display: inline-block;

@@ -300,18 +300,19 @@
                     </div>
 
 -->
-                <div style="margin-left: 30%">
-                    <div class="dropdown" >
+                <div class="button-wrapper">
+
+                    <!-- Featured Members Button -->
+                    <div class="dropdown">
                         <button style="margin-top: 3%">Featured Members</button>
                         <div class="dropdown-content">
                             <a href="{{ url('mom') }}">Member of the Month</a>
                             <a href="{{ url('sof') }}">Staff of Fellowship</a>
                             <a href="{{ url('spotlight') }}">Member Spotlight</a>
                         </div>
-
-
-
                     </div>
+
+                    <!-- Committees and Impact Teams Button -->
                     <div class="dropdown" >
                     <button style="margin-top: 3%">Committees and Impact Teams</button>
                     <div class="dropdown-content">
@@ -319,6 +320,7 @@
                         <a href="{{ url('impactteams') }}">Impact Teams</a>
                     </div>
                   </div>
+
                 </div>
                     <!--
                 <div class="dropdown">

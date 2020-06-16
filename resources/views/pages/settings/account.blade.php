@@ -10,7 +10,7 @@
 
     <div class="profile-row">
         <div>
-            <img src="{{ $user->avatar->url() }}" />
+            <img src="{{ $user->avatar->url() }}" style = "object-fit: cover" />
             <p> {{$user->first_name . " " . $user->last_name}}</p>
         </div>
         <div>
@@ -69,7 +69,7 @@
         <label for="last_name">Last Name</label>
         {!! \Form::text('last_name') !!}
 
-        <label for="avatar">Avatar</label>
+        <label for="avatar">Avatar </label>
         {!! \Form::file('avatar') !!}
 
         {!! \Form::submit('Save Settings', ['class' => 'button']) !!}
