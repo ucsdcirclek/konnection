@@ -204,16 +204,9 @@
 
   // If the screen is not 500px or bigger, use this as h4 definition
   .button-wrapper {
-<<<<<<< HEAD
-    style="display: flex;
-    align-items: center;
-    justify-content: center;"
-=======
     display: flex;
     align-items: center;
     justify-content: center;
->>>>>>> 89efae252703630b732bc1cd11e40c7c60be307b
-
   }
   // If the screen is 500px or bigger, use this as h4 definition
   @media screen and (min-width: 500px) {
