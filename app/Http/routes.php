@@ -119,9 +119,10 @@ Route::group(['prefix' => 'familysystem'], function()
     Route::get('family3', function() { return view('pages.about.family.family3'); });
     Route::get('family4', function() { return view('pages.about.family.family4'); });
 });
+Route::get('about/familysystem', function() { return view('pages.about.family.familyMain'); });
 
 Route::get('contact', function() { return view('pages.contact'); });
-Route::get('gallery', function() { return view( 'pages.gallery'); });
+Route::get('about/gallery', function() { return view( 'pages.about.gallery'); });
 Route::get('resources', function() { return view( 'pages.resources'); });
 Route::get('confessions', function() { return view( 'pages.confessions'); });
 
