@@ -33,7 +33,7 @@
                 <img class src="{{ asset('images/impactteams/team_joy/group2.png') }}" alt="Avatar">
             </div>
             <div class="textbox">
-                <a href="{{ url('JOY') }}">
+                <a href="{{ url('impactteams/JOY') }}">
                     <h2>Team JOY</h2>
                 </a>
 
@@ -43,7 +43,7 @@
 
                 <p></p>
                 <p>Team JOY, Just Older Youth, is an impact team dedicated to connecting with senior citizens and raising awareness of the problems they face. </p>
-                <a href="{{ url('JOY') }}">
+                <a href="{{ url('impactteams/JOY') }}">
                     <button>Learn more</button>
                 </a>
             </div>
@@ -55,7 +55,7 @@
                 <img class src="{{ asset('images/impactteams/team_dear/Group.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
-                <a href="{{ url('DEAR') }}">
+                <a href="{{ url('impactteams/DEAR') }}">
                     <h2>Team DEAR</h2>
                 </a>
 
@@ -65,7 +65,7 @@
 
                 <p></p>
                 <p>Team DEAR (Diabetes Education and Awareness Raising) is an impact team created to educate the UCSD community about the condition, raise funds for JDRF (Juvenile Diabetes Research Foundation), and promote and practice healthy lifestyle choices. </p>
-                <a href="{{ url('DEAR') }}">
+                <a href="{{ url('impactteams/DEAR') }}">
                     <button>Learn more</button>
                 </a>
             </div>
@@ -80,7 +80,7 @@
                 <img class src="{{ asset('images/impactteams/team_alice/team_alice.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
-                <a href="{{ url('ALICE') }}">
+                <a href="{{ url('impactteams/ALICE') }}">
                     <h2>ALICE</h2>
                 </a>
 
@@ -90,7 +90,7 @@
 
                 <p></p>
                 <p>ALICE’s ( Alzheimer’s; Learn. Inform. Care. End.) focus is on raising awareness on Alzheimer's Disease.</p>
-                <a href="{{ url('ALICE') }}">
+                <a href="{{ url('impactteams/ALICE') }}">
                     <button>Learn more</button>
                 </a>
             </div>
@@ -100,7 +100,7 @@
                 <img class src="{{ asset('images/impactteams/team_haven/TeamHaven_Thumb.jpg') }}" alt="Avatar">
                 </div>
                 <div class="textbox">
-                <a href="{{ url('Team_Haven') }}">
+                <a href="{{ url('impactteams/Team_Haven') }}">
                     <h2>Team Haven</h2>
                 </a>
 
@@ -110,7 +110,7 @@
 
                 <p></p>
                 <p>Team Haven is focused on spreading awareness on domestic violence, as well as educating the local community!</p>
-                <a href="{{ url('Team_Haven') }}">
+                <a href="{{ url('impactteams/Team_Haven') }}">
                     <button>Learn more</button>
                 </a>
                 </div>
@@ -121,7 +121,7 @@
                     <img class src="{{ asset('images/impactteams/team_paws/Paws_Thumb.png') }}" alt="Avatar">
                 </div>
                 <div class="textbox">
-                    <a href="{{ url('Team_Paws') }}">
+                    <a href="{{ url('impactteams/Team_Paws') }}">
                         <h2>Team Paws</h2>
                     </a>
 
@@ -129,7 +129,7 @@
 
                     <p></p>
                     <p>Team Paws focuses on the health and well being of dogs as well as education in pet care.  </p>
-                    <a href="{{ url('Team_Paws') }}">
+                    <a href="{{ url('impactteams/Team_Paws') }}">
                         <button>Learn more</button>
                     </a>
                 </div>
@@ -148,7 +148,7 @@
                 <img class src="{{ asset('images/impactteams/teamsmileys/TeamSmileysThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
-                <a href="{{ url('TeamSmileys') }}">
+                <a href="{{ url('impactteams/TeamSmileys') }}">
                     <h2>Team Smileys</h2>
                 </a>
 
@@ -158,7 +158,7 @@
 
                 <p></p>
                 <p>Team Smileys' goal is dedicated to making people happy and improving their mental well being.</p>
-                <a href={{ url('TeamSmileys') }}>
+                <a href={{ url('impactteams/TeamSmileys') }}>
                     <button>Learn more</button>
                 </a>
             </div>
@@ -169,7 +169,7 @@
                 <img class src="{{ asset('images/impactteams/teamtails/TeamTailsThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
-                <a href="{{ url('TeamTails') }}">
+                <a href="{{ url('impactteams/TeamTails') }}">
                     <h2>Team Tails</h2>
                 </a>
 
@@ -181,7 +181,7 @@
                 <p>Team Tails' goal is to set up reoccurring volunteering events as well as projects with local animal
                     shelter community.
                 </p>
-                <a href="{{ url('TeamTails') }}">
+                <a href="{{ url('impactteams/TeamTails') }}">
                     <button>Learn more</button>
                 </a>
             </div>
@@ -192,7 +192,7 @@
                 <img class src="{{ asset('images/impactteams/greenteam/GreenTeamThumb.jpg') }}" alt="Avatar">
             </div>
             <div class="textbox">
-                <a href="{{ url('GreenTeam') }}">
+                <a href="{{ url('impactteams/GreenTeam') }}">
                     <h2>Green Team</h2>
                 </a>
 
@@ -227,7 +227,7 @@
                 <p>Carpe Vitam's goal is to raise awareness for Mental Health Awareness Month as well as providing a
                     slow paced environment to develop the team's leadership skills.
                 </p>
-                <a href="{{ url('CarpeVitam') }}">
+                <a href="{{ url('impactteams/CarpeVitam') }}">
                     <button>Learn more</button>
                 </a>
             </div>

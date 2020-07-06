@@ -36,12 +36,7 @@
                 <p>Vice President of Administration</p>
                 <p>vpa@ucsdcki.org</p>
             </div>
-            <div>
-                <img src="{{ asset('images/board/Summer.jpg') }}" />
-                <p><strong>Summer Joshi</strong></p>
-                <p>Vice President of Service</p>
-                <p>vps@ucsdcki.org</p>
-            </div>
+
         </div>
         <div class="contact-row">
             <div>

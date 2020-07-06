@@ -29,6 +29,7 @@
 
 
 
+<<<<<<< HEAD
 
    <div class="wrapper" > 
      <div class="myIframe" > 
@@ -36,4 +37,12 @@
       </div> 
        <!-- style= height:800px;width:1000px; -->
   </div> 
+=======
+    <div class="wrapper">
+        <div class="title-wrapper">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd78-0NLUtVLGpGrqD_Aa03ysAaWIpRQJfRbmsMOduXhLPeJA/viewform"
+                  style="height:100%;width:100%;min-height:800px;"></iframe>
+        </div>
+    </div>
+>>>>>>> d4e935957fdd4aa4223f797f4ca2cd8d53fb7b45
 @endsection
