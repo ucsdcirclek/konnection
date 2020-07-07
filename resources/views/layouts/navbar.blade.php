@@ -29,8 +29,8 @@
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
                         <li><a href="{{ url('about/club') }}">Club</a></li>
-                        <li><a href="{{ url('familysystem/landing') }}">Family System</a></li>
-                        <li><a href="{{ url('gallery') }}">Gallery</a></li>
+                        <li><a href="{{ url('about/familysystem') }}">Family System</a></li>
+                        <li><a href="{{ url('about/gallery') }}"">Gallery</a></li>
                         <li><a href="{{ url('about/district') }}">District</a></li>
                         <li><a href="{{ url('about/membership') }}">Membership</a></li>
                         <li><a target="_blank" href="http://www.kiwanis.org">Kiwanis</a></li>
