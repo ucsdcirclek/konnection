@@ -34,44 +34,32 @@
             1px 1px 0 #000;
         }
 
-        /********** Large devices only **********/
-        @media (min-width: 1200px) {
-            #featMemButtonRow {
-                height: auto;
+        #featMemButtonRow {
+            height: auto;
 
-            }
         }
 
-        /********** Medium devices only **********/
-        @media (min-width: 992px) and (max-width: 1199px) {
-            #featMemButtonRow {
-                height: auto;
-
-            }
-        }
-
-        /********** Small devices only **********/
-        @media (min-width: 768px) and (max-width: 991px) {
-            #featMemButtonRow {
-                height: auto;
-            }
-
+        #featMemButtonRow div div div button {
+            height: 40px;
+            font-size: 11px;
         }
 
         /********** Extra small devices only **********/
         @media (max-width: 767px) {
             #featMemButtonRow {
+                width: 400px;
                 height: auto;
-
-
             }
-            #featMemButtonRow div div:nth-child(2){
-                margin-top: 5px;
+
+            #featMemButtonRow .row {
+                width: 400px;
+            }
+
+            #featMemButtonRow div div div button{
+                width: 150px;
             }
 
         }
-
-
 
     </style>
 
@@ -349,8 +337,8 @@
 
 -->
                 <div id="featMemButtonRow" class="container" style="height=auto">
-                    <div class="row">
-                        <div class="col-sm-6">
+                    <div class="row" style="margin: 0">
+                        <div class="col-xs-6">
                             <!-- Featured Members Button -->
                             <div class="dropdown">
                                 <button>Featured Members</button>
@@ -362,10 +350,10 @@
                             </div>
                         </div> <!-- End of button col 1 -->
 
-                        <div class="col-sm-6">
+                        <div class="col-xs-6">
                             <!-- Committees and Impact Teams Button -->
                             <div class="dropdown">
-                                <button>Committees and Impact Teams</button>
+                                <button>Committees <br>and Impact Teams</button>
                                 <div class="dropdown-content">
                                     <a href="{{ url('committees') }}">Committees</a>
                                     <a href="{{ url('impactteams') }}">Impact Teams</a>
