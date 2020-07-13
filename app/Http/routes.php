@@ -105,7 +105,6 @@ Route::group(['prefix' => 'about'], function()
         Route::get('tenets', function() { return view('pages.about.club.tenets'); });
     });
 
-    Route::get('drivers', function() { return view('pages.about.drivers'); });
     Route::get('district', function() { return view('pages.about.district'); });
     Route::get('division', function() { return view('pages.about.division'); });
     Route::get('membership', function() { return view('pages.about.membership'); });
@@ -121,6 +120,7 @@ Route::group(['prefix' => 'familysystem'], function()
 });
 Route::get('about/familysystem', function() { return view('pages.about.family.familyMain'); });
 
+Route::get('drivers', function() { return view('pages.drivers'); });
 Route::get('contact', function() { return view('pages.contact'); });
 Route::get('about/gallery', function() { return view( 'pages.about.gallery'); });
 Route::get('resources', function() { return view( 'pages.resources'); });
