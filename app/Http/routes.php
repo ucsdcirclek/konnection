@@ -107,7 +107,6 @@ Route::group(['prefix' => 'about'], function()
 
     Route::get('drivers', function() { return view('pages.about.drivers'); });
     Route::get('district', function() { return view('pages.about.district'); });
-    Route::get('division', function() { return view('pages.about.division'); });
     Route::get('membership', function() { return view('pages.about.membership'); });
 });
 
