@@ -34,33 +34,6 @@
             1px 1px 0 #000;
         }
 
-        #featMemButtonRow {
-            height: auto;
-
-        }
-
-        #featMemButtonRow div div div button {
-            height: 40px;
-            font-size: 11px;
-        }
-
-        /********** Extra small devices only **********/
-        @media (max-width: 767px) {
-            #featMemButtonRow {
-                width: 400px;
-                height: auto;
-            }
-
-            #featMemButtonRow .row {
-                width: 400px;
-            }
-
-            #featMemButtonRow div div div button{
-                width: 150px;
-            }
-
-        }
-
     </style>
 
     <script>
