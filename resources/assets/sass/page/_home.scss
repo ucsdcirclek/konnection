@@ -314,45 +314,4 @@ div {
   }
 }
 
-#featMemButtonRow {
-  height: auto;
-
-}
-
-#featMemButtonRow div div div button {
-  height: 40px;
-  font-size: 11px;
-}
-
-/********** Large devices only **********/
-@media (min-width: 1200px) {
-
-}
-
-/********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
-
-}
-
-/********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-
-}
-
-/********** Extra small devices only **********/
-@media (max-width: 767px) {
-  #featMemButtonRow {
-    width: 400px;
-    height: auto;
-  }
-
-  #featMemButtonRow .row {
-    width: 400px;
-  }
-
-  #featMemButtonRow div div div button{
-    width: 150px;
-  }
-
-}
 

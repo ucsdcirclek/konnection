@@ -2,14 +2,8 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     <style>
         /*CSS for Mball Timer Countdown*/
@@ -32,6 +26,24 @@
             1px -1px 0 #000,
             -1px 1px 0 #000,
             1px 1px 0 #000;
+        }
+
+
+        #featMemButtonRow {
+            height: auto;
+
+        }
+
+        #featMemButtonRow div div div button {
+            height: 40px;
+            font-size: 11px;
+        }
+
+        #dropdown1 {
+            left: 50% !important;
+            right: auto !important;
+            text-align: center;
+            transform: translate(-50%, 0) !important;
         }
 
     </style>
@@ -311,10 +323,10 @@
 -->
                 <div id="featMemButtonRow" class="container" style="height=auto">
                     <div class="row" style="margin: 0">
-                        <div class="col-xs-6">
+                        <div class="col-sm-6" style="width: 50%">
                             <!-- Featured Members Button -->
-                            <div class="dropdown">
-                                <button>Featured Members</button>
+                            <div id="dropdown1" class="dropdown">
+                                <button style="margin-left: auto">Featured Members</button>
                                 <div class="dropdown-content">
                                     <a href="{{ url('mom') }}">Member of the Month</a>
                                     <a href="{{ url('sof') }}">Staff of Fellowship</a>
@@ -323,9 +335,9 @@
                             </div>
                         </div> <!-- End of button col 1 -->
 
-                        <div class="col-xs-6">
+                        <div class="col-sm-6"style="width: 50%">
                             <!-- Committees and Impact Teams Button -->
-                            <div class="dropdown">
+                            <div id="dropdown1" class="dropdown">
                                 <button>Committees <br>and Impact Teams</button>
                                 <div class="dropdown-content">
                                     <a href="{{ url('committees') }}">Committees</a>
