@@ -29,22 +29,7 @@
         }
 
 
-        #featMemButtonRow {
-            height: auto;
 
-        }
-
-        #featMemButtonRow div div div button {
-            height: 40px;
-            font-size: 11px;
-        }
-
-        #dropdown1 {
-            left: 50% !important;
-            right: auto !important;
-            text-align: center;
-            transform: translate(-50%, 0) !important;
-        }
 
     </style>
 
