@@ -38,7 +38,7 @@
             <p id="title1">Tech Team Lead</p>
         </div>
         <div>
-            <img id="image2" src="{{ asset('images/Committees/MBall/Felix.jpg') }}" />
+            <img id="image2" src="{{ asset('images/board/Felix.jpg') }}" />
             <p id="name2"><strong>Felix Chu</strong></p>
             <p id="title2">Tech Team Member</p>
         </div>
@@ -64,14 +64,12 @@
     <button class="accordion">2018-2019</button> <!--Create a new accordion for each year -->
     <div class="panel">
         <strong>Tech Team Committee Head</strong>
-        <p>Weijin Xu</p>
-        <strong>Developers</strong>
         <p>Carl Dungca</p>
-        <p>Ryan Lemon</p>
-        <p>Jay Wang</p>
-        <p>Samarth Aggarwal</p>
-        <p>Jane Wu</p>
-        <p>Stephanie Tonnu</p>
+        <strong>Developers</strong>
+        <p>Helen Thio</p>
+        <p>Levi Friley</p>
+        <p>Angel Obie</p>
+        <p>Johnny Luong</p>
     </div>
 
     <button class="accordion">2017-2018</button> <!--Create a new accordion for each year -->
