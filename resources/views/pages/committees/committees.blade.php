@@ -7,6 +7,30 @@
 @section('content')
     @include('layouts.header', array('headerTitle' => 'Committees'))
 
+        <div class="commbox"> <!-- UCSD CKI Tech Team -->
+            <div class="picture_container">
+                <img class src="{{ asset('images/Committees/TechTeam/TTCover2.jpg') }}" alt="Avatar">
+            </div>
+            <div class="textbox">
+                <a href="{{ url('TechTeam') }}"></a>
+                <h2>UCSD CKI Tech Team</h2>
+
+                <h6 style="color:green">Status: ACTIVE</h6>
+                <!-- <h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 4/18/18)</h6> -->
+                <!-- <h6 style="color:gray">Status: INACTIVE</h6> -->
+
+                <p></p>
+                <p>UCSD CKI's tech team works to maintain and improve the club website.</p>
+                <a id="" class="button" href={{ url('TechTeam') }}>
+                    Learn More
+                </a>
+
+                <a id="disabled" class="button">
+                    Apply
+                </a>
+            </div>
+        </div>
+
         <div class="commbox"> <!-- contains the entire row--> <!-- MBall committee -->
             <div class="picture_container"> <!-- puts the picture in a box-->
                 <img class src="{{ asset('images/Committees/MBall/MBallCover1819.jpg') }}" alt="Avatar">
@@ -59,31 +83,6 @@
                 <!-- Application-->
                 <!--href="https://docs.google.com/document/d/1ZpD1nq598Xh73avxwSBJCMTTSbxHKGyS141npbLe3jQ/edit"
                    target="_blank"-->
-                
-                <a id="disabled" class="button">
-                    Apply
-                </a>
-            </div>
-        </div>
-
-        <div class="commbox"> <!-- UCSD CKI Tech Team -->
-            <div class="picture_container">
-                <img class src="{{ asset('images/Committees/TechTeam/TTCover2.jpg') }}" alt="Avatar">
-            </div>
-            <div class="textbox">
-              <!--  <a href="{{ url('TechTeam') }}"></a> -->
-                    <h2>UCSD CKI Tech Team</h2>
-
-                <h6 style="color:green">Status: ACTIVE</h6>
-               <!-- <h6 style="color:darkcyan">Status: ACCEPTING APPLICATIONS (until 4/18/18)</h6> -->
-                <!-- <h6 style="color:gray">Status: INACTIVE</h6> -->
-
-                <p></p>
-                <p>UCSD CKI's tech team works to maintain and improve the club website.</p>
-              <!--  <a href={{ url('TechTeam') }}></a> -->
-              <a id="disabled" class="button">
-                    Learn More
-                </a>  
                 
                 <a id="disabled" class="button">
                     Apply

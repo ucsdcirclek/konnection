@@ -2,6 +2,8 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     <style>
         /*CSS for Mball Timer Countdown*/
@@ -62,6 +64,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 
 </head>
+
 
 @section('title', 'Home')
 
@@ -300,28 +303,33 @@
                     </div>
 
 -->
-                <div class="button-wrapper">
+                <div id="featMemButtonRow" class="container" style="height=auto">
+                    <div class="row" style="margin: 0">
+                        <div class="col-sm-6" style="width: 50%">
+                            <!-- Featured Members Button -->
+                            <div id="dropdown1" class="dropdown">
+                                <button style="margin-left: auto">Featured Members</button>
+                                <div class="dropdown-content">
+                                    <a href="{{ url('mom') }}">Member of the Month</a>
+                                    <a href="{{ url('sof') }}">Staff of Fellowship</a>
+                                    <a href="{{ url('spotlight') }}">Member Spotlight</a>
+                                </div>
+                            </div>
+                        </div> <!-- End of button col 1 -->
 
-                    <!-- Featured Members Button -->
-                    <div class="dropdown">
-                        <button style="margin-top: 3%">Featured Members</button>
-                        <div class="dropdown-content">
-                            <a href="{{ url('mom') }}">Member of the Month</a>
-                            <a href="{{ url('sof') }}">Staff of Fellowship</a>
-                            <a href="{{ url('spotlight') }}">Member Spotlight</a>
-                        </div>
-                    </div>
+                        <div class="col-sm-6"style="width: 50%">
+                            <!-- Committees and Impact Teams Button -->
+                            <div id="dropdown1" class="dropdown">
+                                <button>Committees <br>and Impact Teams</button>
+                                <div class="dropdown-content">
+                                    <a href="{{ url('committees') }}">Committees</a>
+                                    <a href="{{ url('impactteams') }}">Impact Teams</a>
+                                </div>
+                            </div>
+                        </div> <!-- End of button col 2 -->
 
-                    <!-- Committees and Impact Teams Button -->
-                    <div class="dropdown" >
-                    <button style="margin-top: 3%">Committees and Impact Teams</button>
-                    <div class="dropdown-content">
-                        <a href="{{ url('committees') }}">Committees</a>
-                        <a href="{{ url('impactteams') }}">Impact Teams</a>
-                    </div>
-                  </div>
-
-                </div>
+                    </div> <!-- End of button row -->
+                </div> <!-- End of button container -->
                     <!--
                 <div class="dropdown">
                     <button style="margin-top: 3%">Featured Members</button>

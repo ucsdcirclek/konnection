@@ -9,7 +9,7 @@
     <div id="background" class="bigbanner"
          style="background-image: url('/images/Committees/TechTeam/TTCover2.jpg');background-repeat: no-repeat;">
         <div id="title" class="bigbannertext">
-            Tech Team 2018-2019
+            Tech Team 2020-2021
         </div>
     </div>
 
@@ -33,32 +33,27 @@
 
     <div id="row1" class="contact-row">
         <div>
-            <img id="image1" src="{{ asset('images/board/Carl2.jpg') }}" />
-            <p id="name1"><strong>Carl Dungca</strong></p>
+            <img id="image1" src="{{ asset('images/board/Jerome.jpg') }}" />
+            <p id="name1"><strong>Jerome Lam</strong></p>
             <p id="title1">Tech Team Lead</p>
         </div>
         <div>
-            <img id="image2" src="{{ asset('images/Committees/MBall/Helen.jpg') }}" />
-            <p id="name2"><strong>Helen Thio</strong></p>
-            <p id="title2">Designer</p>
+            <img id="image2" src="{{ asset('images/Committees/MBall/Felix.jpg') }}" />
+            <p id="name2"><strong>Felix Chu</strong></p>
+            <p id="title2">Tech Team Member</p>
         </div>
         <div>
-            <img id="image3" src="{{ asset('images/Committees/TechTeam/Levi.jpg') }}" />
-            <p id="name3"><strong>Levi Friley</strong></p>
-            <p id="title3">Content Developer</p>
+            <img id="image3" src="{{ asset('images/Committees/TechTeam/Vikram.jpg') }}" />
+            <p id="name3"><strong>Vikram Kelkar</strong></p>
+            <p id="title3">Tech Team Member</p>
         </div>
     </div>
 
     <div id="row2" class="contact-row">
         <div>
-            <img id="image4" src="{{ asset('images/Committees/TechTeam/Angel.jpg') }}" />
-            <p id="name4"><strong>Angel Obie</strong></p>
-            <p id="title4">Feature Developer</p>
-        </div>
-        <div>
-            <img id="image5" src="{{ asset('images/Committees/TechTeam/Johnny.jpg') }}" />
-            <p id="name5"><strong>Johnny Luong</strong></p>
-            <p id="title5">Back-end Developer</p>
+            <img id="image4" src="{{ asset('images/Committees/TechTeam/Samuel.jpg') }}" />
+            <p id="name4"><strong>Samuel Liu</strong></p>
+            <p id="title4">Tech Team Member</p>
         </div>
 
     </div>
@@ -66,6 +61,18 @@
 <div class="title-wrapper">
     <h1 class="title">Past Members</h1>
 </div>
+    <button class="accordion">2018-2019</button> <!--Create a new accordion for each year -->
+    <div class="panel">
+        <strong>Tech Team Committee Head</strong>
+        <p>Weijin Xu</p>
+        <strong>Developers</strong>
+        <p>Carl Dungca</p>
+        <p>Ryan Lemon</p>
+        <p>Jay Wang</p>
+        <p>Samarth Aggarwal</p>
+        <p>Jane Wu</p>
+        <p>Stephanie Tonnu</p>
+    </div>
 
     <button class="accordion">2017-2018</button> <!--Create a new accordion for each year -->
     <div class="panel">

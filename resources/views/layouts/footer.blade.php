@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <p>© 2017-2019 UC San Diego Circle K International.</p>
+    <p>© 2017-2020 UC San Diego Circle K International.</p>
 
 
     {{--
