@@ -8,6 +8,7 @@
             height: 18%;
 
         }
+
     }
 </style>
 
@@ -25,7 +26,7 @@
                 </li>
 
                 <li>
-                    <a>about</a>
+                    <a style="color: white">about</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
                         <li><a href="{{ url('about/club') }}">Club</a></li>
@@ -43,7 +44,7 @@
 
 
                 <li>
-                    <a>resources</a>
+                    <a style="color: white">resources</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('/resources') }}">Applications & Forms</a></li>
                         <li><a href="{{ url('/bulletin') }}">Bulletin</a></li>
@@ -65,7 +66,7 @@
 
                 @if (! Auth::check())
                     <li>
-                        <a>account <i class="fa fa-user"></i></a>
+                        <a style="color: white">account <i class="fa fa-user"></i></a>
                         <ul class="nav-dropdown">
                             <li class="nav-link"><a href="{{ url('/auth/login') }}">login</a></li>
                             <li><a href="{{ url('about/membership') }}">Membership</a></li>
@@ -73,7 +74,7 @@
                     </li>
                 @else
                     <li>
-                    <a>account <i class="fa fa-user"></i></a>
+                    <a style="color: white">account <i class="fa fa-user"></i></a>
                         <ul class="nav-dropdown">
                             <li><a href="{{ url('about/membership') }}">Membership</a></li>
                             <li><a href="{{ url('settings') }}">View Account</a></li>

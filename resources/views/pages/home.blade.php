@@ -28,9 +28,6 @@
             1px 1px 0 #000;
         }
 
-
-
-
     </style>
 
     <script>
