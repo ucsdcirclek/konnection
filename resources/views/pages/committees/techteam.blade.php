@@ -38,7 +38,7 @@
             <p id="title1">Tech Team Lead</p>
         </div>
         <div>
-            <img id="image2" src="{{ asset('images/board/Felix.jpg') }}" />
+            <img id="image2" src="{{ asset('images/Committees/TechTeam/Felix.jpg') }}" />
             <p id="name2"><strong>Felix Chu</strong></p>
             <p id="title2">Tech Team Member</p>
         </div>
