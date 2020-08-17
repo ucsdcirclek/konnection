@@ -25,7 +25,7 @@
                     Learn More
                 </a>
 
-                <a id="disabled" class="button">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKfDKVtQL_A7n4KIqR7uw5pk4oOSY1S6aaaAsFsjmycoSoOg/viewform?usp=sf_link" class="button">
                     Apply
                 </a>
             </div>
