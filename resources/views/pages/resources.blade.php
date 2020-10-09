@@ -15,7 +15,7 @@
         <br/>
         <HR>
         <h4>
-            <a href="https://tinyurl.com/CKIMember2020" target="_blank">Membership Application</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQKFtTjYOs6yOsqtHAEMbHIOt3V3NrYWLm41V6Xyk0nE7vyw/viewform?usp=sf_link" target="_blank">Membership Application</a>
         </h4>
         <p> Apply to be a UCSD Circle K member! </p>
 
@@ -190,5 +190,3 @@
     </div> -->
 
 @endsection
-
-
