@@ -67,7 +67,7 @@
                     <i class="fas fa-file-signature"></i>
                     <h4>Application</h4>
                     <p>Follow the link below to fill out our online application. The information will be used to sort you into a family!</p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhVzJsv56i_t-baYNrSZdFD4qRZUnS6zlf2cbYSrgbJggR6g/viewform?fbclid=IwAR0vKUhTgWzYz9LAKTDxzuo5qTkARflGpo1bhYGnE0MyuafYkrPGbWKM1zI"
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQKFtTjYOs6yOsqtHAEMbHIOt3V3NrYWLm41V6Xyk0nE7vyw/viewform?usp=sf_link"
                        target="_blank">
                         <button class="cardBtn">Apply</button>
                     </a>
@@ -75,7 +75,7 @@
                 <div>
                     <i class="fas fa-box"></i>
                     <h4>Membership Dues</h4>
-                    <p>Dues cost $45 for the 2020-2021 school year. Pay by cash, check to UCSD Circle K, or venmo @UCSDCircleK. <!--<strong>Dues must be paid by our week 3 GBM</strong>
+                    <p>Dues cost $35 for the 2020-2021 school year. Pay by cash, check to UCSD Circle K, or venmo @UCSDCircleK. <!--<strong>Dues must be paid by our week 3 GBM</strong>
                         to be sorted into a family at new member install.-->
                     </p>
                     <a href="https://venmo.com/UCSDCircleK" target="_blank">
