@@ -26,7 +26,7 @@
     </div>
     <div class="wrapper">
         <div class="title-wrapper">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmDXFaPcWjtOGIJsb3GSrHloy5IwgYDW5r5_30CJQkKHbpUg/viewform?usp=sf_link"
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmDXFaPcWjtOGIJsb3GSrHloy5IwgYDW5r5_30CJQkKHbpUg/viewform"
                   style="height:100%;width:100%;min-height:800px;"></iframe>
         </div>
     </div>
