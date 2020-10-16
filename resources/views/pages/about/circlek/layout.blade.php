@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('layouts.header', array('headerTitle' => 'About Circle K'))
+    @include('layouts.header', array('headerTitle' => 'Circle K'))
 
     <div id="about" class="wrapper">
         <div id="sidebar">
