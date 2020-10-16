@@ -22,11 +22,11 @@
             <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
             <ul class="nav-list">
                 <li>
-                    <a href="{{ url('/') }}">home</a>
+                    <a href="{{ url('/') }}">Home</a>
                 </li>
 
                 <li>
-                    <a style="color: white">about</a>
+                    <a style="color: white">About</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
                         <li><a href="{{ url('about/familysystem') }}">Family System</a></li>
@@ -35,42 +35,38 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{{ url('/events') }}">calendar</a>
+                    <a href="{{ url('/events') }}">Calendar</a>
                 </li>
 
 
                 <li>
-                    <a style="color: white">resources</a>
+                    <a style="color: white">Resources</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('/resources') }}">Applications & Forms</a></li>
-                        <li><a href="{{ url('/bulletin') }}">Bulletin</a></li>
                         <li><a href="{{ url('/drivers') }}">Driving Reimbursement</a></li>
                         <li><a href="{{url('/MRP') }}">Member Recognition Program</a></li>
-                        <li><a href="http://resources.cnhcirclek.org/" target="_blank">CNH District Resources</a></li>
-                        <li><a href="https://www.circlek.org/resources" target="_blank">International Resources</a></li>
-                        <li><a href="https://bit.ly/2Pft46g" target="_blank">Cheers</a></li>
                     </ul>
 
                 </li>
                 <li>
-                    <a href="{{ url('contact') }}">contact</a>
+                    <a href="{{ url('contact') }}">Contact</a>
                 </li>
                 <li>
-                    <a href="{{ url('/confessions') }}">confessions</a>
+                    <a href="{{ url('/confessions') }}">Confessions</a>
                 </li>
 
 
                 @if (! Auth::check())
                     <li>
-                        <a style="color: white">account <i class="fa fa-user"></i></a>
+                        <a style="color: white">Account <i class="fa fa-user"></i></a>
                         <ul class="nav-dropdown">
-                            <li class="nav-link"><a href="{{ url('/auth/login') }}">login</a></li>
+                            <li class="nav-link"><a href="{{ url('/auth/login') }}">Login</a></li>
                             <li><a href="{{ url('about/membership') }}">Membership</a></li>
                         </ul>
                     </li>
                 @else
                     <li>
-                    <a style="color: white">account <i class="fa fa-user"></i></a>
+                    <a style="color: white">Account <i class="fa fa-user"></i></a>
                         <ul class="nav-dropdown">
                             <li><a href="{{ url('about/membership') }}">Membership</a></li>
                             <li><a href="{{ url('settings') }}">View Account</a></li>
