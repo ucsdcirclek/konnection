@@ -12,7 +12,13 @@
             <hr>
             <div class="page"><a href="{{ url('about/circlek/structure') }}">Structure</a></div>
             <hr>
-            <div class="page"><a href="{{ url('about/circlek/tenets') }}">Tenets</a></div>
+            <div class="page"><a href="{{ url('about/circlek/UCSD') }}">UCSD</a></div>
+            <hr>
+            <div class="page"><a href="{{ url('about/circlek/district') }}">District</a></div>
+            <hr>
+            <div class="page"><a target="_blank" href="http://www.kiwanis.org">Kiwanis</a></div>
+            <hr>
+            <div calss="page"><a target="_blank" href="http://www.kiwanisclublajolla.org/">La Jolla Kiwanis</a></div>
         </div>
         <div id="main">
             @yield('about-content')

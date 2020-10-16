@@ -1,7 +1,7 @@
 // Navigation Variables
 $content-width: 1000px;
 $breakpoint: 799px;
-$nav-height: 70px;
+$nav-height: 50px;
 $nav-background: $savannah-navy;
 $nav-font-color: white;
 $link-hover-color: lighten($nav-background, 10%);
@@ -57,7 +57,7 @@ nav {
         padding: 0 20px;
         line-height: $nav-height;
         background: transparent;
-        
+
         color: $nav-font-color;
         text-decoration: none;
         &:hover {
