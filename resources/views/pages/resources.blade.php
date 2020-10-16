@@ -21,13 +21,13 @@
 
         <HR>
 
-        <h4>
+    <!--    <h4>
             <a target="_blank">Big/Little Applications</a>
         </h4>
         <p>Do you want to serve as a mentor/mentee for your fellow Circle K members? Here is your opportunity!</p>
         <p>NOTE: You must be <strong>dues-paid</strong> and have completed <strong>2 service</strong> and <strong>2 social</strong> events this quarter to apply.</p>
         <p>Deadline is October 25th at 11:59 PM</p>
-    </div>
+    </div> -->
 <!--
         <HR>
 

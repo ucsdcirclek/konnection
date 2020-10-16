@@ -11,6 +11,27 @@
           devoted to helping universities join a global network of responsible
           citizens and leaders with a lifelong commitment to service.</p>
 
+        <h2>History</h2>
+          <p>CKI began in 1936 as Kiwanis club service project to provide an
+            opportunity for ambitious young men to acquire a college education
+            by assisting them, with financial problems by means of scholarship
+            or part-time employment. Today, CKI boasts a membership of over
+            13,000 collegians on more than 500 campuses worldwide. Embodied by
+            its tenets of leadership, fellowship, and service at club, district,
+            and international levels, CKI continues to grow as the largest
+            collegiate service organization!</p>
+
+          <h4>Notable Events</h4>
+
+          <p> <b>1936</b> Circle K concept first presented
+              <br><b>1947</b> First CKI club chartered
+              <br><b>1949</b> CKI becomes an international organization
+              <br><b>1957</b> First CKI district is established
+              <br><b>1971</b> Females welcomed into CKI
+              <br><b>1977</b> CKI is chartered at UC San Diego
+              <br><b>1982</b> CKI membership surpasses 14,500 members
+              <br><b>2005</b> 50th anniversary of CKI </p>
+
         <h2>Tenets</h2>
         <h4>Service</h4>
           <p>UCSD Circle K holds multiple weekly service events and you do not
