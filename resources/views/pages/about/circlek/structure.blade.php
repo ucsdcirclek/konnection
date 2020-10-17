@@ -20,7 +20,7 @@
       Colombia, Dominican Republic, Ecuador, Jamaica, Malaysia, México, Nigeria,
        Panama, Philippines, St. Lucia, Suriname, Taiwan and the United States.</p>
 
-    <h2>Club</h2>
+    <h4>Club</h4>
     <p>This level is comprised of members within a particular school or
       university. Here, a board of officers, executive board and appointed Board
       runs the operations of the club.Executive Board positions include: President,
@@ -29,7 +29,7 @@
       Family Chair, Public Relations Chair, Member Relations Chair, Member Development
       and Education Chair, Fellowship Chair, Service Chair, and Technology Chair.</p>
 
-    <h2>Division</h2>
+    <h4>Division</h4>
     <p>Each CKI division is composed of clubs within a close demographic area.
        UCSD Circle K is part of <b>Paradise Division</b>, one of the eight divisions
        of Cal-Nev-Ha and is made up of seven schools ranging from California to
@@ -37,7 +37,7 @@
 
     <p>Paradise division's website can be found <a target="_blank" href="http://paradise.cnhcirclek.org/"><b>here</b></a></p>
 
-    <h4 class="clubheader">Paradise Clubs</h4>
+    <h5 class="clubheader">Paradise Clubs</h5>
     <table>
         <tr>
             <td> Palomar College</td>
@@ -54,7 +54,7 @@
         </tr>
     </table>
 
-    <h2>District</h2>
+    <h4>District</h4>
     <p>Each division then falls under a district which is usually bounded by
       state lines. During the annual district convention, delegates from all clubs
       within a district elect a Governor Secretary and Treasurer to serve on the
@@ -78,12 +78,12 @@
       </ul>
     </p>
 
-    <h2>Sub-region</h2>
+    <h4>Sub-region</h4>
     <p>Every sub-region is a collective of bordering districts based on size,
       demographic, and cultures. Every year at the International Convention the
       sub-region elects a Trustee to be the voice and the bridge to CKI international.</p>
 
-    <h2>International</h2>
+    <h4>International</h4>
 
     <p>Circle K International comprises 30 districts total. At this level,
       there is an International President and Vice President as well as 7

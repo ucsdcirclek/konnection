@@ -29,9 +29,10 @@
                     <a style="color: white">About</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('about/circlek') }}">Circle K</a></li>
-                        <li><a href="{{ url('about/familysystem') }}">Family System</a></li>
-                        <li><a href="{{ url('about/gallery') }}">Gallery</a></li>
                         <li><a href="{{ url('about/membership') }}">Membership</a></li>
+                        <li><a href="{{ url('about/familysystem') }}">Family System</a></li>
+                        <li><a href="{{url('about/MRP') }}">Member Recognition Program</a></li>
+                        <li><a href="{{ url('about/gallery') }}">Gallery</a></li>
                     </ul>
                 </li>
                 <li>
@@ -43,17 +44,13 @@
                     <a style="color: white">Resources</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('/resources') }}">Applications & Forms</a></li>
-                        <li><a href="{{ url('/drivers') }}">Driving Reimbursement</a></li>
-                        <li><a href="{{url('/MRP') }}">Member Recognition Program</a></li>
                     </ul>
 
                 </li>
                 <li>
                     <a href="{{ url('contact') }}">Contact</a>
                 </li>
-                <li>
-                    <a href="{{ url('/confessions') }}">Confessions</a>
-                </li>
+
 
 
                 @if (! Auth::check())

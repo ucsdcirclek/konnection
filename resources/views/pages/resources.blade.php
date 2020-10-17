@@ -14,13 +14,17 @@
         <h3>Applications</h3>
         <br/>
         <HR>
-        <h4>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQKFtTjYOs6yOsqtHAEMbHIOt3V3NrYWLm41V6Xyk0nE7vyw/viewform?usp=sf_link" target="_blank">Membership Application</a>
-        </h4>
-        <p> Apply to be a UCSD Circle K member! </p>
+        <h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSdQKFtTjYOs6yOsqtHAEMbHIOt3V3NrYWLm41V6Xyk0nE7vyw/viewform?usp=sf_link" target="_blank">Membership Application</a></h4>
+        <p>Apply to be a UCSD Circle K member!</p>
 
         <HR>
+        <h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSd78-0NLUtVLGpGrqD_Aa03ysAaWIpRQJfRbmsMOduXhLPeJA/viewform" target="_blank">Confessions</a></h4>
+        <p>Submit your confessions! If you want it featured during GBM, keep it appropriate.
+          If not, board will still see them, but we won't tell. 😉 </p>
 
+        <HR>
+        <h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSdmDXFaPcWjtOGIJsb3GSrHloy5IwgYDW5r5_30CJQkKHbpUg/viewform" target="_blank">Seeds of Love</a></h4>
+        <p>Send in your appreciation for anyone and they'll get a shoutout! </p>
     <!--    <h4>
             <a target="_blank">Big/Little Applications</a>
         </h4>

@@ -93,21 +93,15 @@ Route::group(['prefix' => 'about'], function()
     Route::group(['prefix' => 'circlek'], function()
     {
         Route::get('/', function() { return view('pages.about.circlek.general'); });
-        Route::get('history', function() { return view('pages.about.circlek.history'); });
         Route::get('structure', function() { return view('pages.about.circlek.structure'); });
-        Route::get('tenets', function() { return view('pages.about.circlek.tenets'); });
-});
-
-    Route::group(['prefix' => 'club'], function()
-    {
-        Route::get('/', function() { return view('pages.about.club.general'); });
-        Route::get('causes', function() { return view('pages.about.club.causes'); });
-        Route::get('tenets', function() { return view('pages.about.club.tenets'); });
+        Route::get('ourclub', function() { return view('pages.about.circlek.our'); });
+        Route::get('policies', function() { return view('pages.about.circlek.policies'); });
     });
-
+    Route::get('gallery', function() { return view( 'pages.about.gallery'); });
     Route::get('district', function() { return view('pages.about.district'); });
     Route::get('division', function() { return view('pages.about.division'); });
     Route::get('membership', function() { return view('pages.about.membership'); });
+    Route::get('MRP', function() { return view( 'pages.about.MRP'); });
 });
 
 Route::group(['prefix' => 'familysystem'], function()
@@ -120,11 +114,8 @@ Route::group(['prefix' => 'familysystem'], function()
 });
 Route::get('about/familysystem', function() { return view('pages.about.family.familyMain'); });
 
-Route::get('drivers', function() { return view('pages.drivers'); });
 Route::get('contact', function() { return view('pages.contact'); });
-Route::get('about/gallery', function() { return view( 'pages.about.gallery'); });
 Route::get('resources', function() { return view( 'pages.resources'); });
-Route::get('confessions', function() { return view( 'pages.confessions'); });
 
 Route::get('halloffame', function() { return view( 'pages.halloffame.halloffame'); });
 Route::get('mom', function() { return view( 'pages.halloffame.mom'); });
@@ -156,7 +147,6 @@ Route::get('JOY', function() { return view( 'pages.impactteams.team_joy'); });
 Route::get('DEAR', function() { return view( 'pages.impactteams.team_dear'); });
 
 //Route::get('landing', function() { return view( 'pages.landing'); });
-Route::get('MRP', function() { return view( 'pages.MRP'); });
 
 
 
