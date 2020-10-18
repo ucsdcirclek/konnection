@@ -44,6 +44,8 @@
                     <a style="color: white">Resources</a>
                     <ul class="nav-dropdown">
                         <li><a href="{{ url('/resources') }}">Applications & Forms</a></li>
+                        <li><a href="{{ url('/impactteams') }}">Impact Teams</a></li>
+                        <li><a href="{{ url('/committees') }}">Committees</a></li>
                     </ul>
 
                 </li>
