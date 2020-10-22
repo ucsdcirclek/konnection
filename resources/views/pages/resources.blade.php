@@ -18,6 +18,14 @@
         <p>Apply to be a UCSD Circle K member!</p>
 
         <HR>
+        <h4><a href="https://forms.gle/awLFZ8SjN5aGu3Dx6" target="_blank">Big/Little Application</a></h4>
+        <p>What is the Big/Little program?
+          The Big/Little program serves as a great way for club members to connect with each
+          other on an individual level. Based on the responses they give on this application,
+          a "little" (a new member, typically) is to be matched with a "big" (returning member),
+          who will serve as their mentor and friend both inside and outside of Circle K.</p>
+
+        <HR>
         <h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSd78-0NLUtVLGpGrqD_Aa03ysAaWIpRQJfRbmsMOduXhLPeJA/viewform" target="_blank">Confessions</a></h4>
         <p>Submit your confessions! If you want it featured during GBM, keep it appropriate.
           If not, board will still see them, but we won't tell. 😉 </p>
@@ -33,6 +41,7 @@
           filling out the application please send to vps@ucsdcki.org, and if you
           have any questions feel free to ask to that email or message Ramtin Azarbad
           on Facebook!</p>
+
     <!--    <h4>
             <a target="_blank">Big/Little Applications</a>
         </h4>
