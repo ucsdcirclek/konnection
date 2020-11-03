@@ -26,6 +26,11 @@
           who will serve as their mentor and friend both inside and outside of Circle K.</p>
 
         <HR>
+        <h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSe5e65QAet4wdfJaypE4Z3y2MDxUWcMPEYeVfhWaeFEVZKSWQ/viewform?fbclid=IwAR1Y7xlGo5jrGCItjUgMD1SITcLduTeNax14HRshq1kApfb51A6ggtS0_-Q" target="_blank">Impact Team Fall 2020 Application</a></h4>
+        <p>We will be crocheting stuffed animals to raffle off for this impact team and all proceeds will
+        go to Evidence Action in order to reduce extreme global poverty! You can become a part of the production team or the marketing team. So come join now!</p>
+
+        <HR>
         <h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSd78-0NLUtVLGpGrqD_Aa03ysAaWIpRQJfRbmsMOduXhLPeJA/viewform" target="_blank">Confessions</a></h4>
         <p>Submit your confessions! If you want it featured during GBM, keep it appropriate.
           If not, board will still see them, but we won't tell. 😉 </p>
@@ -33,14 +38,6 @@
         <HR>
         <h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSdmDXFaPcWjtOGIJsb3GSrHloy5IwgYDW5r5_30CJQkKHbpUg/viewform?usp=sf_link" target="_blank">Seeds of Love</a></h4>
         <p>Send in your appreciation for anyone and they'll get a shoutout! </p>
-
-        <HR>
-        <h4><a href="https://docs.google.com/document/d/1mvlTHmxj9u52KxtmNQzpGDUHr2eOpNQ2a5WfjwQovAE/edit?usp=sharing" target="_blank">Impact Team Leadership Fall 2020</a></h4>
-        <p>Passionate about any service events? Want to get experience leading a
-          team of students? Then come apply to be an Impact Team leader!!! After
-          filling out the application please send to vps@ucsdcki.org, and if you
-          have any questions feel free to ask to that email or message Ramtin Azarbad
-          on Facebook!</p>
 
     <!--    <h4>
             <a target="_blank">Big/Little Applications</a>
