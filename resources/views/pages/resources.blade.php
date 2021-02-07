@@ -31,7 +31,7 @@
         go to Evidence Action in order to reduce extreme global poverty! You can become a part of the production team or the marketing team. So come join now!</p>
 
         <HR>
-        <h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSd78-0NLUtVLGpGrqD_Aa03ysAaWIpRQJfRbmsMOduXhLPeJA/viewform" target="_blank">Confessions</a></h4>
+        <h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSfd-dDf26QT7xDNas4pW6yJhxZF4Ng-OHa7iuR0fZDfgNayNw/viewform" target="_blank">Confessions</a></h4>
         <p>Submit your confessions! If you want it featured during GBM, keep it appropriate.
           If not, board will still see them, but we won't tell. 😉 </p>
 
